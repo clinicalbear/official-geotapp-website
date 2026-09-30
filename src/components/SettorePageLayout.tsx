@@ -53,7 +53,7 @@ const SETTORE_BG: Record<SettoreSlug, { img: string; pos: string }> = {
 
 const RISORSE_LABELS: Record<string, string> = {
   it: 'Guide e articoli →', en: 'Guides & articles →', de: 'Leitfäden & Artikel →',
-  fr: 'Guides & articles →', es: 'Guías y artículos →', pt: 'Guias & artigos →',
+  fr: 'Guides et articles →', es: 'Guías y artículos →', pt: 'Guias & artigos →',
   nl: 'Gidsen en artikelen →', da: 'Vejledninger & artikler →',
   sv: 'Guider & artiklar →', nb: 'Guider & artikler →', ru: 'Руководства & статьи →',
 };
@@ -92,6 +92,7 @@ const CLASSIC_CLOCKIN: Record<string, string> = {
   it: 'App di timbratura classica',
   en: 'Classic clock-in app',
   de: 'Klassische Stempel-App',
+  fr: 'Application de pointage classique',
   nl: 'Klassieke registratie-app',
 };
 
@@ -185,7 +186,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
     'en-ie': { pulizie: 'Cleaning companies', installatori: 'Installers', sicurezza: 'Security services', elettricisti: 'Electricians', idraulici: 'Plumbers', termoidraulici: 'Heating engineers', edilizia: 'Construction', impianti: 'Mechanical & Electrical', manutenzione: 'Maintenance', 'impresa-di-pulizie': 'Cleaning company' },
     'en-ca': { pulizie: 'Cleaning companies', installatori: 'Installers', sicurezza: 'Security services', elettricisti: 'Electricians', idraulici: 'Plumbers', termoidraulici: 'Heating engineers', edilizia: 'Construction', impianti: 'Mechanical & Electrical', manutenzione: 'Maintenance', 'impresa-di-pulizie': 'Cleaning company' },
     de: { pulizie: 'Reinigungsunternehmen', installatori: 'Installateure', sicurezza: 'Sicherheitsdienste', elettricisti: 'Elektriker', idraulici: 'Klempner', termoidraulici: 'Heizungsinstallateure', edilizia: 'Bauwesen', impianti: 'Anlagenbau', manutenzione: 'Wartung', 'impresa-di-pulizie': 'Reinigungsunternehmen' },
-    fr: { pulizie: 'Entreprises de nettoyage', installatori: 'Installateurs', sicurezza: 'Services de sécurité', elettricisti: 'Électriciens', idraulici: 'Plombiers', termoidraulici: 'Plombiers-chauffagistes', edilizia: 'Construction', impianti: 'Installations', manutenzione: 'Maintenance', 'impresa-di-pulizie': 'Entreprise de nettoyage' },
+    fr: { pulizie: 'Entreprises de nettoyage', installatori: 'Installateurs', sicurezza: 'Services de sécurité', elettricisti: 'Électriciens', idraulici: 'Plombiers', termoidraulici: 'Plombiers-chauffagistes', edilizia: 'BTP', impianti: 'Installations', manutenzione: 'Maintenance', 'impresa-di-pulizie': 'Entreprise de nettoyage' },
     es: { pulizie: 'Empresas de limpieza', installatori: 'Instaladores', sicurezza: 'Servicios de seguridad', elettricisti: 'Electricistas', idraulici: 'Fontaneros', termoidraulici: 'Fontaneros calefactores', edilizia: 'Construcción', impianti: 'Instalaciones', manutenzione: 'Mantenimiento', 'impresa-di-pulizie': 'Empresa de limpieza' },
     pt: { pulizie: 'Empresas de limpeza', installatori: 'Instaladores', sicurezza: 'Serviços de segurança', elettricisti: 'Eletricistas', idraulici: 'Canalizadores', termoidraulici: 'Técnicos de aquecimento', edilizia: 'Construção', impianti: 'Instalações', manutenzione: 'Manutenção', 'impresa-di-pulizie': 'Empresa de limpeza' },
     nl: { pulizie: 'Schoonmaakbedrijven', installatori: 'Installateurs', sicurezza: 'Beveiligingsdiensten', elettricisti: 'Elektriciens', idraulici: 'Loodgieters', termoidraulici: 'CV-monteurs', edilizia: 'Bouw', impianti: 'Installaties', manutenzione: 'Onderhoud', 'impresa-di-pulizie': 'Schoonmaakbedrijf' },
@@ -233,6 +234,14 @@ export default function SettorePageLayout({ content, locale, settore, children }
     de: [
       { href: '/blog/de/2026/04/22/muster-datenschutzerklaerung-gps-mitarbeiterortung-2026/',
         label: 'DSGVO-Muster-Datenschutzerklärung: GPS-Mitarbeiterortung 2026' },
+    ],
+    fr: [
+      { href: '/blog/fr/2026/06/04/geolocalisation-salaries-cnil/',
+        label: 'Géolocalisation des salariés : ce que la CNIL autorise vraiment' },
+      { href: '/blog/fr/2026/07/03/modele-information-geolocalisation-salaries-gps/',
+        label: 'Modèle d’information géolocalisation salariés GPS 2026' },
+      { href: '/blog/fr/2026/06/17/gps-salaries-cse-information-ne-suffit-pas/',
+        label: 'GPS et CSE : informer les représentants ne suffit pas' },
     ],
     nl: [
       { href: '/blog/nl/2026/06/03/gps-tracking-medewerkers-avg/',

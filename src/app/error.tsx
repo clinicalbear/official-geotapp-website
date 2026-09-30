@@ -6,7 +6,7 @@ const T: Record<string, { title: string; desc: string; retry: string }> = {
   it: { title: 'Qualcosa è andato storto!', desc: 'Ci scusiamo, si è verificato un errore imprevisto.', retry: 'Riprova' },
   en: { title: 'Something went wrong!', desc: 'We apologise, an unexpected error occurred.', retry: 'Try again' },
   de: { title: 'Etwas ist schiefgelaufen!', desc: 'Entschuldigung, ein unerwarteter Fehler ist aufgetreten.', retry: 'Erneut versuchen' },
-  fr: { title: 'Une erreur est survenue !', desc: 'Nous nous excusons, une erreur inattendue s\'est produite.', retry: 'Réessayer' },
+  fr: { title: 'Une erreur est survenue !', desc: 'Nous nous excusons, une erreur inattendue s\'est produite.', retry: 'Réessayer' },
   es: { title: '¡Algo salió mal!', desc: 'Lo sentimos, se ha producido un error inesperado.', retry: 'Reintentar' },
   nl: { title: 'Er is iets misgegaan!', desc: 'Excuses, er is een onverwachte fout opgetreden.', retry: 'Opnieuw proberen' },
   pt: { title: 'Algo correu mal!', desc: 'Pedimos desculpa, ocorreu um erro inesperado.', retry: 'Tentar novamente' },

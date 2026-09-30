@@ -8,7 +8,7 @@ export interface RegionalFaqItem {
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
   de: 'Vorschriften und Nachweise in Deutschland',
-  fr: 'Conformité en France',
+  fr: 'Règles et documents',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
   nl: 'Regels en documentatie in Nederland',
@@ -50,16 +50,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   fr: [
     {
-      q: 'Temps et déplacements selon la convention de la métallurgie ?',
-      a: 'Heures par technicien et par chantier, indemnités de déplacement et d\'astreinte et conservation des données, enregistrées à chaque intervention.',
+      q: 'Heures et déplacements dans une entreprise d\'installation ?',
+      a: 'GeoTapp enregistre à chaque pointage l\'arrivée, les pauses et le départ avec la position et l\'heure, par technicien et par affaire, et les exporte en Excel ou CSV pour votre gestionnaire de paie. L\'application de la convention collective (majorations, indemnités) et le calcul de la paie restent à la charge de votre gestionnaire de paie et de l\'entreprise.',
     },
     {
-      q: 'RGPD et CNIL pour la géolocalisation des installateurs ?',
-      a: 'Géolocalisation limitée au temps de travail, information préalable, intérêt légitime et consultation du CSE, selon les lignes directrices CNIL.',
+      q: 'Géolocalisation des installateurs : RGPD et représentants du personnel ?',
+      a: 'La position n\'est enregistrée qu\'au pointage et pour les photos de preuve, jamais en continu, et l\'information aux salariés se signe dans l\'app avant le premier pointage. La base juridique (intérêt légitime) et, là où ils sont requis, l\'information et la consultation des représentants du personnel relèvent de l\'employeur.',
     },
     {
-      q: 'Qualification Qualibat et attestations ?',
-      a: 'Rattachement des interventions à la qualification (Qualibat/RGE) du technicien, avec l\'historique à l\'appui des attestations.',
+      q: 'Qualifications des installateurs et attestations ?',
+      a: 'GeoTapp ne vérifie pas les qualifications ni les habilitations des installateurs et ne produit pas d\'attestation. Il enregistre l\'heure, la position, les photos et les notes de chaque intervention, à joindre à la documentation de l\'installation.',
     },
   ],
   es: [

@@ -24,7 +24,7 @@ const COPY: Record<string, Copy> = {
   it: { title: 'Una domanda veloce', body: '2 minuti per dirci la tua sul lavoro sul campo. Anonimo, niente email.', cta: 'Partecipa al sondaggio' },
   en: { title: 'Quick question', body: '2 minutes to share your take on field work. Anonymous, no email.', cta: 'Take the survey' },
   de: { title: 'Kurze Frage', body: '2 Minuten für Ihre Meinung zur Arbeit vor Ort. Anonym, keine E-Mail.', cta: 'Zur Umfrage' },
-  fr: { title: 'Une question rapide', body: '2 minutes pour ton avis sur le travail terrain. Anonyme, sans e-mail.', cta: 'Participer' },
+  fr: { title: 'Une question rapide', body: '2 minutes pour nous donner votre avis sur le travail sur le terrain. Anonyme, sans e-mail.', cta: 'Répondre à l’enquête' },
   nl: { title: 'Een korte vraag', body: '2 minuten om ons uw mening te geven over werk in het veld. Anoniem, geen e-mailadres.', cta: 'Doe mee aan de enquête' },
   es: { title: 'Una pregunta rápida', body: '2 minutos para tu opinión sobre el trabajo de campo. Anónimo, sin correo.', cta: 'Participar' },
   pt: { title: 'Uma pergunta rápida', body: '2 minutos para a tua opinião sobre o trabalho no terreno. Anónimo, sem email.', cta: 'Participar' },
@@ -135,7 +135,7 @@ export default function SurveyInvite() {
         }}>
           <Image src="/LogoGeoTapp.webp" alt="GeoTapp" width={140} height={48}
             style={{ filter: 'brightness(0) invert(1)', height: '36px', width: 'auto' }} />
-          <button onClick={dismiss} aria-label="Close" style={{
+          <button onClick={dismiss} aria-label={(document.documentElement.lang || '').toLowerCase().startsWith('fr') ? 'Fermer' : 'Close'} style={{
             background: 'rgba(247,249,252,0.25)', border: 'none', borderRadius: '50%',
             width: 30, height: 30, display: 'flex', alignItems: 'center', justifyContent: 'center',
             color: '#fff', fontSize: 18, cursor: 'pointer', lineHeight: 1,

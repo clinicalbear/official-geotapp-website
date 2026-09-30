@@ -8,7 +8,7 @@ export interface RegionalFaqItem {
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
   de: 'Vorschriften und Nachweise in Deutschland',
-  fr: 'Conformité en France',
+  fr: 'Règles et justificatifs en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
   nl: 'Regels en documentatie in Nederland',
@@ -50,16 +50,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   fr: [
     {
-      q: 'Heures et déplacements selon la convention de la métallurgie ?',
-      a: 'Heures par plombier et par chantier, indemnités de déplacement et d\'astreinte et conservation des données, enregistrées à chaque intervention.',
+      q: "Heures et interventions des plombiers-chauffagistes ?",
+      a: "À chaque pointage, GeoTapp enregistre arrivée, pauses et départ avec position et heure, par plombier et par chantier, et les exporte en Excel ou CSV pour votre comptable ou gestionnaire de paie. L'application de la convention collective (majorations, indemnités) et l'établissement de la paie restent de son ressort et de celui de l'entreprise.",
     },
     {
-      q: 'RGPD et CNIL pour la géolocalisation des plombiers ?',
-      a: 'Géolocalisation limitée au temps de travail, information préalable, intérêt légitime et consultation du CSE, selon les lignes directrices CNIL.',
+      q: "Géolocalisation des plombiers : RGPD et CNIL ?",
+      a: "La position n'est enregistrée qu'au pointage et avec les photos de preuve, jamais en continu, et l'information aux salariés est signée dans l'appli avant de pointer. Reste à l'employeur de vérifier ce que le RGPD (intérêt légitime) et la consultation du CSE exigent dans son cas.",
     },
     {
-      q: 'Qualification gaz (PG) et Qualibat ?',
-      a: 'Rattachement des interventions gaz à l\'appellation Professionnel Gaz (PG) et aux qualifications Qualibat, avec l\'historique de validité.',
+      q: "Interventions gaz : qualification PG et Qualibat ?",
+      a: "GeoTapp ne vérifie aucune qualification, gaz comprise (Professionnel Gaz, Qualibat), et ne produit aucune attestation. Il enregistre l'heure, la position et les photos de chaque intervention sur les installations sanitaires et gaz, que vous pouvez joindre au dossier de l'installation.",
     },
   ],
   es: [

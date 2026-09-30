@@ -8,7 +8,7 @@ export interface RegionalFaqItem {
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
   de: 'Vorschriften und Nachweise in Deutschland',
-  fr: 'Conformité en France',
+  fr: 'Règles et documents',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
   nl: 'Regels en documentatie in Nederland',
@@ -50,16 +50,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   fr: [
     {
-      q: 'Vacations et heures selon la convention prévention-sécurité ?',
-      a: 'Heures par agent et par site, majorations de nuit et jours fériés et conservation des données, avec couverture des vacations mise à jour à chaque pointage.',
+      q: 'Vacations et heures dans la sécurité privée ?',
+      a: 'GeoTapp enregistre à chaque pointage l\'arrivée, les pauses et le départ par agent et par service, avec la position et l\'heure, et les exporte en Excel ou CSV pour votre gestionnaire de paie. Les majorations de nuit et de jours fériés et l\'application de la convention collective restent à la charge de votre gestionnaire de paie et de l\'entreprise.',
     },
     {
-      q: 'RGPD et CNIL pour la géolocalisation des agents ?',
-      a: 'Géolocalisation limitée au temps de travail, information préalable, intérêt légitime et consultation du CSE, selon les lignes directrices CNIL.',
+      q: 'Géolocalisation des agents de sécurité : RGPD et représentants du personnel ?',
+      a: 'La position n\'est enregistrée qu\'au pointage et pour les photos de preuve, jamais en continu, et l\'information aux salariés se signe dans l\'app avant le premier pointage. La base juridique (intérêt légitime) et, là où ils sont requis, l\'information et la consultation des représentants du personnel relèvent de l\'employeur.',
     },
     {
-      q: 'Autorisation CNAPS et carte professionnelle ?',
-      a: 'Rattachement des vacations aux agents détenant la carte professionnelle CNAPS valide (Livre VI du Code de la sécurité intérieure), avec historique de validité.',
+      q: 'Agréments, cartes professionnelles et autorisations ?',
+      a: 'GeoTapp ne gère ni les autorisations, ni les cartes professionnelles, ni les démarches auprès des autorités. Il enregistre qui a pointé, où et quand pour chaque service, et cet historique peut être montré au client.',
     },
   ],
   es: [

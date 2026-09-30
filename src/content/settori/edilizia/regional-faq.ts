@@ -8,7 +8,7 @@ export interface RegionalFaqItem {
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
   de: 'Vorschriften und Nachweise in Deutschland',
-  fr: 'Conformité en France',
+  fr: 'Règles et justificatifs en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
   nl: 'Regels en documentatie in Nederland',
@@ -50,16 +50,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   fr: [
     {
-      q: 'Pointage et carte BTP sur le chantier ?',
-      a: 'Heures par chantier et par compagnon, rattachées à la carte d\'identification professionnelle BTP et à la caisse de congés CIBTP, enregistrées sur site.',
+      q: "Pointage sur le chantier : carte BTP et caisse de congés ?",
+      a: "GeoTapp n'est pas relié à la carte d'identification professionnelle BTP ni à la caisse de congés et ne produit aucune déclaration. Il enregistre heures et présences par compagnon et par chantier, exportables en Excel ou CSV, qui servent de base à vos déclarations : celles-ci restent du ressort de l'entreprise et de son comptable ou gestionnaire de paie.",
     },
     {
-      q: 'RGPD et CNIL pour la géolocalisation des compagnons ?',
-      a: 'Géolocalisation limitée au temps de travail et au chantier, information préalable, intérêt légitime et consultation du CSE, selon les lignes directrices CNIL.',
+      q: "Géolocalisation sur le chantier : RGPD et CNIL ?",
+      a: "La position n'est enregistrée qu'au pointage et avec les photos de preuve, jamais en continu, et l'information aux salariés est signée dans l'appli avant de pointer. Reste à l'employeur de vérifier ce que le RGPD (intérêt légitime) et la consultation du CSE exigent dans son cas.",
     },
     {
-      q: 'Preuve face à la solidarité financière en cas de sous-traitance ?',
-      a: 'Historique d\'heures et de salaire par sous-traitant pour répondre à l\'obligation de vigilance et à la solidarité financière du donneur d\'ordre.',
+      q: "Justificatifs en cas de sous-traitance et de solidarité financière ?",
+      a: "GeoTapp ne contrôle ni les salaires ni les obligations de vigilance du donneur d'ordre. Il enregistre qui a pointé, où et à quelle heure sur chaque chantier, y compris pour les équipes des sous-traitants, et cet historique peut être montré au maître d'ouvrage. Les obligations documentaires restent à la charge de l'entreprise.",
     },
   ],
   es: [

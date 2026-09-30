@@ -8,7 +8,7 @@ export interface RegionalFaqItem {
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
   de: 'Vorschriften und Nachweise in Deutschland',
-  fr: 'Conformité en France',
+  fr: 'Règles et documents',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
   nl: 'Regels en documentatie in Nederland',
@@ -50,16 +50,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   fr: [
     {
-      q: 'Quel suivi du temps impose la convention collective de la propreté (IDCC 3043) ?',
-      a: 'Heures par site, majorations dimanche et nuit, prime d\'expérience et le transfert de personnel (annexe 7) lors d\'un changement de prestataire, enregistrés à chaque vacation.',
+      q: 'Quel suivi des horaires pour une entreprise de nettoyage ?',
+      a: 'GeoTapp enregistre les heures, les pauses et les départs par agent et par site, avec la position et l\'heure, et les exporte en Excel ou CSV pour votre gestionnaire de paie. Les majorations de nuit et de jours fériés, les minima conventionnels et l\'application de la convention collective restent à la charge de votre gestionnaire de paie et de l\'entreprise.',
     },
     {
-      q: 'RGPD et CNIL pour la géolocalisation des agents de propreté ?',
-      a: 'Information préalable, base de l\'intérêt légitime, consultation du CSE et respect des lignes directrices CNIL : pas de suivi hors temps de travail et finalité proportionnée.',
+      q: 'Géolocalisation des agents de nettoyage : RGPD et représentants du personnel ?',
+      a: 'La position n\'est enregistrée qu\'au pointage et pour les photos de preuve, jamais en continu, et l\'information aux salariés se signe dans l\'app avant le premier pointage. La base juridique (intérêt légitime) et, là où ils sont requis, l\'information et la consultation des représentants du personnel relèvent de l\'employeur.',
     },
     {
-      q: 'SMIC et minima de branche par agent ?',
-      a: 'Rapprochement heures-salaire contre le SMIC et la grille de la convention propreté, avec historique des primes et de l\'ancienneté par salarié.',
+      q: 'Changement de prestataire et minima conventionnels ?',
+      a: 'GeoTapp ne gère ni le transfert de personnel ni les minima conventionnels. Il conserve l\'historique des heures et des présences de chaque agent, exportable en Excel ou CSV : l\'application de la convention collective reste à la charge de votre gestionnaire de paie.',
     },
   ],
   es: [

@@ -32,9 +32,9 @@ const META: Record<string, { title: string; description: string }> = {
       'Fichaje con GPS y control de geocerca, protección anti-spoofing, modo offline que sincroniza al volver la señal, cifrado AES-256 y datos en tiempo real.',
   },
   fr: {
-    title: 'Fonctionnalités GeoTapp : pointage GPS, hors ligne, chiffrement',
+    title: 'Fonctionnalités GeoTapp : pointage et rapports scellés',
     description:
-      'Pointage GPS avec contrôle de géorepérage et anti-spoofing, mode hors ligne synchronisé au retour du réseau, chiffrement AES-256 et données en temps réel.',
+      'Position relevée uniquement au pointage, fausses positions refusées, pointages conservés même sans réseau, rapports scellés que le client vérifie seul, données en Europe.',
   },
   pt: {
     title: 'Funcionalidades GeoTapp: ponto GPS, modo offline e encriptação',

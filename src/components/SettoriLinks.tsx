@@ -18,7 +18,7 @@ const SETTORE_NAMES: Record<SettoreSlug, Record<string, string>> = {
   },
   installatori: {
     it: 'Installatori e tecnici', en: 'Installers & field service', de: 'Installateure & Außendienst',
-    fr: 'Installateurs & terrain', es: 'Instaladores y técnicos de campo', pt: 'Instaladores e técnicos',
+    fr: 'Installateurs et techniciens de terrain', es: 'Instaladores y técnicos de campo', pt: 'Instaladores e técnicos',
     nl: 'Installateurs en monteurs', da: 'Installatører & serviceteknikere', sv: 'Installatörer & fältservice',
     nb: 'Installatører & felttjeneste', ru: 'Монтажники и выездные техники',
   },

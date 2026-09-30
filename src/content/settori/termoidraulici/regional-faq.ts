@@ -8,7 +8,7 @@ export interface RegionalFaqItem {
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
   de: 'Vorschriften und Nachweise in Deutschland',
-  fr: 'Conformité en France',
+  fr: 'Règles et documents',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
   nl: 'Regels en documentatie in Nederland',
@@ -50,16 +50,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   fr: [
     {
-      q: 'Heures et astreintes selon la convention de la métallurgie ?',
-      a: 'Heures par technicien et par chantier, indemnités d\'astreinte et de déplacement et conservation des données, enregistrées à chaque intervention sur chaudière.',
+      q: 'Heures et interventions dans le chauffage ?',
+      a: 'GeoTapp enregistre à chaque pointage l\'arrivée, les pauses et le départ avec la position et l\'heure, par technicien et par affaire, et les exporte en Excel ou CSV pour votre gestionnaire de paie. L\'application de la convention collective (majorations, indemnités) et le calcul de la paie restent à la charge de votre gestionnaire de paie et de l\'entreprise.',
     },
     {
-      q: 'RGPD et CNIL pour la géolocalisation des chauffagistes ?',
-      a: 'Géolocalisation limitée au temps de travail, information préalable, intérêt légitime et consultation du CSE, selon les lignes directrices CNIL.',
+      q: 'Géolocalisation des chauffagistes : RGPD et représentants du personnel ?',
+      a: 'La position n\'est enregistrée qu\'au pointage et pour les photos de preuve, jamais en continu, et l\'information aux salariés se signe dans l\'app avant le premier pointage. La base juridique (intérêt légitime) et, là où ils sont requis, l\'information et la consultation des représentants du personnel relèvent de l\'employeur.',
     },
     {
-      q: 'Attestation de capacité fluides frigorigènes ?',
-      a: 'Rattachement des interventions sur fluides frigorigènes à l\'attestation de capacité (règlement F-Gas), avec l\'historique de validité.',
+      q: 'Fluides frigorigènes et attestations de capacité ?',
+      a: 'GeoTapp ne gère ni les attestations de capacité ni les carnets d\'entretien des installations. Il enregistre l\'heure, la position, les photos et les notes de chaque intervention sur chaudières et installations de chauffage, à joindre à la documentation de l\'installation.',
     },
   ],
   es: [

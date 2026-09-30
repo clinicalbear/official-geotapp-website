@@ -43,7 +43,8 @@ interface VerifierContentProps {
 
 // Widget di verifica vero, invariato: upload, chiamata /api/verify-report,
 // esito. Nessuna riga di logica toccata, solo il contenitore intorno cambia.
-function OnlineVerifier({ copy }: { copy: VerifierCopy }) {
+function OnlineVerifier({ copy, locale }: { copy: VerifierCopy; locale: AppLocale }) {
+  const fr = locale.split('-')[0] === 'fr';
   const [status, setStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
   const [result, setResult] = useState<Record<string, unknown> | null>(null);
   const [errorMsg, setErrorMsg] = useState('');
@@ -105,7 +106,7 @@ function OnlineVerifier({ copy }: { copy: VerifierCopy }) {
       <p className="text-xs text-slate-600 text-center mt-3">{copy.online_verify_privacy_note}</p>
 
       {status === 'loading' && (
-        <div className="mt-6 text-center text-slate-600 animate-pulse">Verifica in corso…</div>
+        <div className="mt-6 text-center text-slate-600 animate-pulse">{fr ? 'Vérification en cours…' : 'Verifica in corso…'}</div>
       )}
 
       {status === 'error' && (
@@ -127,14 +128,14 @@ function OnlineVerifier({ copy }: { copy: VerifierCopy }) {
             </div>
             <div className="grid grid-cols-2 gap-2 text-sm text-slate-700 font-mono">
               {!!(result.companyIdentity && (result.companyIdentity as Record<string, unknown>).companyId) && (
-                <><span className="text-slate-600">Azienda</span><span>{String((result.companyIdentity as Record<string, unknown>).companyName ?? (result.companyIdentity as Record<string, unknown>).companyId)}</span></>
+                <><span className="text-slate-600">{fr ? 'Entreprise' : 'Azienda'}</span><span>{String((result.companyIdentity as Record<string, unknown>).companyName ?? (result.companyIdentity as Record<string, unknown>).companyId)}</span></>
               )}
               {!!(result.companyIdentity && (result.companyIdentity as Record<string, unknown>).reportId) && (
                 <><span className="text-slate-600">Report ID</span><span className="truncate">{String((result.companyIdentity as Record<string, unknown>).reportId)}</span></>
               )}
-              <span className="text-slate-600">Integrità</span>
+              <span className="text-slate-600">{fr ? 'Intégrité' : 'Integrità'}</span>
               <span>{String(result.integrityLevel).toUpperCase()}</span>
-              <span className="text-slate-600">Firma</span>
+              <span className="text-slate-600">{fr ? 'Signature' : 'Firma'}</span>
               <span>{String(result.signatureStatus ?? 'absent')}</span>
             </div>
           </div>
@@ -149,7 +150,7 @@ const NO_REPORT_HANDY: Record<string, string> = {
   en: 'No report handy? Download this real sample and try the verifier right away.',
   de: 'Sie haben keinen Bericht zur Hand? Laden Sie dieses echte Beispiel herunter und probieren Sie den Verifier gleich aus.',
   nl: 'Geen rapport bij de hand? Download dit echte voorbeeld en probeer de verifier meteen uit.',
-  fr: 'Pas de rapport sous la main ? Téléchargez cet exemple réel et essayez tout de suite le vérificateur.',
+  fr: 'Pas de rapport sous la main ? Téléchargez cet exemple réel et essayez tout de suite le vérificateur.',
   es: '¿No tiene un informe a mano? Descargue este ejemplo real y pruebe el verificador ahora mismo.',
   pt: 'Não tem um relatório à mão? Descarregue este exemplo real e experimente já o verificador.',
   da: 'Har du ikke en rapport ved hånden? Download dette rigtige eksempel og prøv verifikatoren med det samme.',
@@ -274,6 +275,8 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
               ? `# Bericht-ZIP prüfen\nnpx geotapp-report-verify report.zip\n\n# JSON-Ausgabe zur Einbindung\nnpx geotapp-report-verify report.zip --json`
               : locale.split('-')[0] === 'nl'
               ? `# Rapport-ZIP controleren\nnpx geotapp-report-verify report.zip\n\n# JSON-uitvoer voor integratie\nnpx geotapp-report-verify report.zip --json`
+              : locale.split('-')[0] === 'fr'
+              ? `# Vérifier un rapport ZIP\nnpx geotapp-report-verify report.zip\n\n# Sortie JSON pour l'intégration\nnpx geotapp-report-verify report.zip --json`
               : `# Verify a report ZIP\nnpx geotapp-report-verify report.zip\n\n# JSON output for integration\nnpx geotapp-report-verify report.zip --json`}</pre>
           </div>
           <div className="l-code">
@@ -296,7 +299,7 @@ console.log(result.integrityLevel);`}</pre>
           <h2 className="r">{copy.online_verify_title}</h2>
           <p>{copy.online_verify_desc}</p>
         </div>
-        <OnlineVerifier copy={copy} />
+        <OnlineVerifier copy={copy} locale={locale} />
         <div style={{ marginTop: 40 }}>
           <p style={{ textAlign: 'center', fontSize: 14, color: '#475467', marginBottom: 16 }}>
             {NO_REPORT_HANDY[locale] ?? NO_REPORT_HANDY[locale.split('-')[0]] ?? NO_REPORT_HANDY.en}

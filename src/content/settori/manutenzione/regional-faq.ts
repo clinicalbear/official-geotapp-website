@@ -8,7 +8,7 @@ export interface RegionalFaqItem {
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
   de: 'Vorschriften und Nachweise in Deutschland',
-  fr: 'Conformité en France',
+  fr: 'Règles et documents',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
   nl: 'Regels en documentatie in Nederland',
@@ -50,16 +50,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   fr: [
     {
-      q: 'Heures et interventions multisites selon la convention applicable ?',
-      a: 'Heures par technicien et par site, indemnités de déplacement et d\'astreinte et conservation des données, enregistrées à chaque intervention de maintenance.',
+      q: 'Heures des interventions de maintenance multisites ?',
+      a: 'GeoTapp enregistre à chaque pointage l\'arrivée, les pauses et le départ avec la position et l\'heure, par technicien et par site, et les exporte en Excel ou CSV pour votre gestionnaire de paie. L\'application de la convention collective (majorations, indemnités) et le calcul de la paie restent à la charge de votre gestionnaire de paie et de l\'entreprise.',
     },
     {
-      q: 'RGPD et CNIL pour la géolocalisation des techniciens ?',
-      a: 'Géolocalisation limitée au temps de travail, information préalable, intérêt légitime et consultation du CSE, selon les lignes directrices CNIL.',
+      q: 'Géolocalisation des techniciens de maintenance : RGPD et représentants du personnel ?',
+      a: 'La position n\'est enregistrée qu\'au pointage et pour les photos de preuve, jamais en continu, et l\'information aux salariés se signe dans l\'app avant le premier pointage. La base juridique (intérêt légitime) et, là où ils sont requis, l\'information et la consultation des représentants du personnel relèvent de l\'employeur.',
     },
     {
-      q: 'Sécurité au travail et vérifications réglementaires ?',
-      a: 'Rattachement du document unique (DUERP) et des vérifications périodiques à la qualification du technicien, avec historique par site.',
+      q: 'Sécurité au travail et vérifications périodiques ?',
+      a: 'GeoTapp ne gère ni l\'aptitude du personnel ni le document d\'évaluation des risques. Il enregistre chaque visite avec l\'heure, la position et la photo et conserve l\'historique par site et par technicien, que vous pouvez montrer au client.',
     },
   ],
   es: [

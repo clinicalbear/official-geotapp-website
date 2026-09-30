@@ -28,10 +28,10 @@ const COPY: Record<string, {
     { title: 'Unabhängige Überprüfung', sub: 'Der Kunde prüft, ganz ohne Konto' },
   ], sectors: 'Reinigung · Bau · Sicherheit · Installateure · Wartung · Anlagentechnik' },
   fr: { headline: 'La preuve du travail sur le terrain, vérifiable par tous', claims: [
-    { title: 'Toute altération est détectable', sub: 'Sceau cryptographique sur chaque intervention' },
-    { title: 'Pointage GPS réel', sub: 'Lieu et heure enregistrés sur place' },
+    { title: 'Toute modification ultérieure se voit', sub: 'Sceau cryptographique sur chaque rapport' },
+    { title: 'Pointage avec position GPS', sub: 'Lieu et heure enregistrés sur place' },
     { title: 'Vérification indépendante', sub: 'Le client vérifie, sans compte' },
-  ], sectors: 'Nettoyage · BTP · Sécurité · Installateurs · Maintenance · CVC' },
+  ], sectors: 'Nettoyage · BTP · Sécurité · Installateurs · Maintenance · Installations' },
   es: { headline: 'La prueba del trabajo de campo, verificable por cualquiera', claims: [
     { title: 'Toda alteración es detectable', sub: 'Sello criptográfico en cada intervención' },
     { title: 'Fichaje GPS real', sub: 'Ubicación y hora registradas in situ' },
@@ -80,7 +80,7 @@ export default function TrustBar({ locale }: { locale: string }) {
   return (
     <section
       ref={ref}
-      aria-label={locale === 'nl' ? 'Vertrouwenssignalen' : 'Trust signals'}
+      aria-label={locale === 'nl' ? 'Vertrouwenssignalen' : locale === 'fr' ? 'Points de confiance' : 'Trust signals'}
       className="r relative overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, #f7f9fc 0%, #f2f4f7 50%, #f7f9fc 100%)',

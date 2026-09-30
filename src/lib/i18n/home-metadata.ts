@@ -57,8 +57,8 @@ export const HOME_META: Record<string, { title: string; description: string }> =
     description: 'Software für Teams im Außendienst: GeoTapp erfasst bei jeder Buchung Standort, Zeiten und Fotos und versiegelt sie in einem Bericht, den der Kunde selbst prüft.',
   },
   fr: {
-    title: 'Logiciel GPS terrain : prouvez vos interventions | GeoTapp',
-    description: 'Client conteste ? GeoTapp enregistre GPS, heure, photos et rapport aux modifications traçables. Prouvez le travail effectué et soyez payé sans discussion.',
+    title: 'Logiciel GPS terrain : prouvez vos interventions | GeoTapp',
+    description: 'Logiciel pour équipes de terrain : à chaque pointage, GeoTapp enregistre position, horaires et photos et les scelle dans un rapport que le client vérifie seul.',
   },
   es: {
     title: 'Software GPS operarios: prueba cada trabajo | GeoTapp',

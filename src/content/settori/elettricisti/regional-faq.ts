@@ -8,7 +8,7 @@ export interface RegionalFaqItem {
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
   de: 'Vorschriften und Nachweise in Deutschland',
-  fr: 'Conformité en France',
+  fr: 'Règles et justificatifs en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
   nl: 'Regels en documentatie in Nederland',
@@ -50,16 +50,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   fr: [
     {
-      q: 'Heures et astreintes selon la convention de la métallurgie ?',
-      a: 'Heures par électricien et par chantier, indemnités d\'astreinte et de déplacement et conservation des données, enregistrées à chaque intervention.',
+      q: "Heures et astreintes des électriciens ?",
+      a: "À chaque pointage, GeoTapp enregistre arrivée, pauses et départ avec position et heure, par électricien et par chantier, et les exporte en Excel ou CSV pour votre comptable ou gestionnaire de paie. L'application de la convention collective (majorations, indemnités) et l'établissement de la paie restent de son ressort et de celui de l'entreprise.",
     },
     {
-      q: 'RGPD et CNIL pour la géolocalisation des électriciens ?',
-      a: 'Géolocalisation limitée au temps de travail, information préalable, intérêt légitime et consultation du CSE, selon les lignes directrices CNIL.',
+      q: "Géolocalisation des électriciens : RGPD et CNIL ?",
+      a: "La position n'est enregistrée qu'au pointage et avec les photos de preuve, jamais en continu, et l'information aux salariés est signée dans l'appli avant de pointer. Reste à l'employeur de vérifier ce que le RGPD (intérêt légitime) et la consultation du CSE exigent dans son cas.",
     },
     {
-      q: 'Habilitation électrique NF C 18-510 ?',
-      a: 'Rattachement de chaque intervention à l\'habilitation électrique du salarié (NF C 18-510), avec l\'historique de validité.',
+      q: "Habilitation électrique (NF C 18-510) ?",
+      a: "GeoTapp ne vérifie ni les habilitations électriques ni leur validité et ne produit aucun titre d'habilitation. Il enregistre l'heure, la position et les photos de chaque intervention, que le technicien peut joindre à sa propre documentation.",
     },
   ],
   es: [

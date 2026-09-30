@@ -68,7 +68,7 @@ const ANCHOR: Record<string, string> = {
   it: 'Approfondisci il confronto sul blog',
   en: 'Read the in-depth comparison on the blog',
   de: 'Den ausführlichen Vergleich im Blog lesen',
-  fr: 'Lire la comparaison detaillee sur le blog',
+  fr: 'Lire la comparaison détaillée sur le blog',
   es: 'Leer la comparativa detallada en el blog',
   pt: 'Ler a comparacao detalhada no blog',
   nl: 'Lees de uitgebreide vergelijking op de blog',

@@ -40,7 +40,7 @@ describe('traduzioni tedesche delle schede-paese', () => {
   });
 
   it('le altre lingue continuano a leggere il testo della scheda', () => {
-    expect(loc('CNIL, presentare un reclamo', 'fr')).toBe('CNIL, presentare un reclamo');
+    expect(loc('CNIL, presentare un reclamo', 'es')).toBe('CNIL, presentare un reclamo');
     expect(loc('CNIL, presentare un reclamo', 'de')).toBe('CNIL, Beschwerde einreichen');
   });
 });

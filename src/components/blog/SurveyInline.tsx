@@ -36,7 +36,7 @@ const COPY: Record<string, Copy> = {
   },
   fr: {
     kicker: 'Observatoire de la preuve du travail',
-    title: 'On vous a déjà contesté un travail que vous aviez fait ?',
+    title: 'On vous a déjà contesté un travail que vous aviez fait ?',
     body: 'Nous recueillons ce qui se passe vraiment sur le terrain, partout en Europe. Deux minutes, anonyme, rien d’obligatoire.',
     cta: 'Donnez votre avis',
   },

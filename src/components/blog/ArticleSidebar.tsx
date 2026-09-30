@@ -22,7 +22,7 @@ const SIDEBAR_LABELS: Record<string, {
   it: { toc: 'In questo articolo', cta_title: 'Prova GeoTapp gratis', cta_desc: '14 giorni di prova gratuita. Nessuna carta di credito. Setup in 2 minuti.', cta_btn: 'Inizia ora', share: 'Condividi', copied: 'Copiato!', product_desc: 'Scopri come GeoTapp risolve questo problema', product_btn: 'Scopri di più' },
   en: { toc: 'In this article', cta_title: 'Try GeoTapp free', cta_desc: '14-day free trial. No credit card required. Setup in 2 minutes.', cta_btn: 'Start now', share: 'Share', copied: 'Copied!', product_desc: 'See how GeoTapp solves this problem', product_btn: 'Learn more' },
   de: { toc: 'In diesem Artikel', cta_title: 'GeoTapp kostenlos testen', cta_desc: '14 Tage kostenlos. Keine Kreditkarte. Setup in 2 Minuten.', cta_btn: 'Jetzt starten', share: 'Teilen', copied: 'Kopiert!', product_desc: 'So löst GeoTapp dieses Problem', product_btn: 'Mehr erfahren' },
-  fr: { toc: 'Dans cet article', cta_title: 'Essayez GeoTapp', cta_desc: '14 jours gratuits. Sans carte bancaire. Pret en 2 minutes.', cta_btn: 'Commencer', share: 'Partager', copied: 'Copie !', product_desc: 'Decouvrez comment GeoTapp resout ce probleme', product_btn: 'En savoir plus' },
+  fr: { toc: 'Dans cet article', cta_title: 'Essayez GeoTapp', cta_desc: '14 jours gratuits. Sans carte bancaire. Prêt en 2 minutes.', cta_btn: 'Commencer', share: 'Partager', copied: 'Copié !', product_desc: 'Découvrez comment GeoTapp résout ce problème', product_btn: 'En savoir plus' },
   nl: { toc: 'In dit artikel', cta_title: 'Probeer GeoTapp gratis', cta_desc: '14 dagen gratis proberen. Geen creditcard. Klaar in 2 minuten.', cta_btn: 'Nu starten', share: 'Delen', copied: 'Gekopieerd!', product_desc: 'Ontdek hoe GeoTapp dit probleem oplost', product_btn: 'Meer informatie' },
   es: { toc: 'En este artículo', cta_title: 'Prueba GeoTapp gratis', cta_desc: '14 días gratis. Sin tarjeta de crédito. Listo en 2 minutos.', cta_btn: 'Empieza ahora', share: 'Compartir', copied: '¡Copiado!', product_desc: 'Descubre cómo GeoTapp resuelve esto', product_btn: 'Saber más' },
   pt: { toc: 'Neste artigo', cta_title: 'Experimenta o GeoTapp grátis', cta_desc: '14 dias grátis. Sem cartão de crédito. Pronto em 2 minutos.', cta_btn: 'Começar agora', share: 'Partilhar', copied: 'Copiado!', product_desc: 'Descobre como o GeoTapp resolve isto', product_btn: 'Saber mais' },
@@ -38,7 +38,7 @@ const EU_BADGE: Record<string, { title: string; desc: string }> = {
   en: { title: 'Your data stays in Europe', desc: 'Clock-ins, photos and records on EU servers.' },
   de: { title: 'Ihre Daten bleiben in Europa', desc: 'Zeiterfassung, Fotos und Daten auf EU-Servern.' },
   nl: { title: 'Uw gegevens blijven in Europa', desc: 'Registraties, foto\'s en gegevens op servers in de EU.' },
-  fr: { title: 'Vos données restent en Europe', desc: 'Pointages, photos et données sur serveurs UE.' },
+  fr: { title: 'Vos données restent en Europe', desc: 'Pointages, photos et données sur des serveurs dans l’UE.' },
   es: { title: 'Tus datos se quedan en Europa', desc: 'Fichajes, fotos y datos en servidores de la UE.' },
   pt: { title: 'Os teus dados ficam na Europa', desc: 'Registos, fotos e dados em servidores da UE.' },
   da: { title: 'Dine data bliver i Europa', desc: 'Registreringer, fotos og data på EU-servere.' },
@@ -115,7 +115,7 @@ function ShareButtons({ title, copiedLabel, locale }: { title: string; copiedLab
       ))}
       <button
         onClick={handleCopy}
-        aria-label={locale === 'nl' ? 'Link kopiëren' : 'Copy link'}
+        aria-label={locale === 'nl' ? 'Link kopiëren' : locale === 'fr' ? 'Copier le lien' : 'Copy link'}
         className={`p-2 rounded-lg transition-all duration-200 ${copied ? 'text-green-500 bg-green-50' : 'text-slate-400 hover:bg-slate-50'}`}
         onMouseEnter={(e) => { if (!copied) e.currentTarget.style.color = '#22B573'; }}
         onMouseLeave={(e) => { if (!copied) e.currentTarget.style.color = ''; }}

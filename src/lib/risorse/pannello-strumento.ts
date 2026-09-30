@@ -39,7 +39,7 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
     },
     fr: {
       title: "Pourquoi il vous faut une note d'information",
-      p1: "Si vous relevez la position de vos salariés, même seulement au pointage, l'art. 13 du RGPD vous demande de le leur dire par écrit avant de commencer : qui traite les données, dans quel but, quand la position est relevée et combien de temps elle est conservée. Sans ce document, même le système le plus respectueux part déjà en tort.",
+      p1: "Si vous relevez la position de vos salariés, même seulement au pointage, l'art. 13 du RGPD vous demande de le leur dire par écrit avant de commencer : qui traite les données, dans quel but, quand la position est relevée et combien de temps elle est conservée. Sans ce document, même le système le plus respectueux part déjà en tort.",
       p2: 'Le générateur prend vos informations, votre logo et vos réponses et met en page un projet de note en PDF, prêt à passer chez votre conseil et à remettre aux équipes. Tout se passe dans votre navigateur, et le point de départ tient en une minute.',
     },
     es: {
@@ -96,7 +96,7 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
     },
     fr: {
       title: 'Ce que ce calculateur vous dit',
-      p1: "Chaque pays sanctionne à sa façon un GPS hors des clous : pourcentages du chiffre d'affaires ici, montants fixes là, et la somme réelle dépend aussi de ce que vous avez déjà mis en ordre. Les plafonds affichés viennent des textes et des décisions réelles de 39 pays, vérifiés à la source.",
+      p1: "Chaque pays sanctionne à sa façon un GPS hors des clous : pourcentages du chiffre d'affaires ici, montants fixes là, et la somme réelle dépend aussi de ce que vous avez déjà mis en ordre. Les plafonds affichés viennent des textes et des décisions réelles de 39 pays, vérifiés à la source.",
       p2: "Choisissez le pays, cochez ce qui est déjà en règle chez vous et voyez l'amende maximale réellement prononcée là-bas et l'exposition qui vous reste. Mieux vaut l'apprendre sur cette page que dans un procès-verbal.",
     },
     es: {
@@ -153,8 +153,8 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
     },
     fr: {
       title: 'Pourquoi vous poser ces questions',
-      p1: "Présences, position, photos de chantier : ce sont des données personnelles de vos salariés, et la conformité n'est pas un label qu'on achète une fois, c'est une série d'habitudes qu'on a ou qu'on n'a pas. Les neuf questions visent les points où les entreprises de terrain trébuchent le plus souvent.",
-      p2: 'Répondez avec franchise : à la fin vous avez un score, les zones où intervenir et les ressources liées pour y remédier. Aucune réponse ne quitte votre navigateur, le test travaille pour vous, pas pour nous.',
+      p1: "Présences, position, photos de chantier : ce sont des données personnelles de vos salariés, et la conformité n'est pas un label qu'on achète une fois, c'est une série d'habitudes qu'on a ou qu'on n'a pas. Les neuf questions visent les points où les entreprises de terrain trébuchent le plus souvent.",
+      p2: 'Répondez avec franchise : à la fin vous avez un score, les zones où intervenir et les ressources liées pour y remédier. Aucune réponse ne quitte votre navigateur, le test travaille pour vous, pas pour nous.',
     },
     es: {
       title: 'Por qué hacerte estas preguntas',
@@ -210,8 +210,8 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
     },
     fr: {
       title: 'À quoi sert une politique de conservation',
-      p1: "Le RGPD ne vous dit pas combien de temps garder bulletins de paie, pointages ou certificats médicaux : il vous demande de le décider, de l'écrire et de vous y tenir. C'est la limitation de la conservation, et c'est l'un des premiers points qu'un contrôle regarde.",
-      p2: "Choisissez le pays et les types de données que vous gérez sur le personnel : l'outil compose le tableau avec les durées conseillées, la note qui les justifie et le PDF à joindre à votre registre des traitements. Pour les pièces comptables, les durées légales du pays choisi s'appliquent.",
+      p1: "Le RGPD ne vous dit pas combien de temps garder bulletins de paie, pointages ou certificats médicaux : il vous demande de le décider, de l'écrire et de vous y tenir. C'est la limitation de la conservation, et c'est l'un des premiers points qu'un contrôle regarde.",
+      p2: "Choisissez le pays et les types de données que vous gérez sur le personnel : l'outil compose le tableau avec les durées conseillées, la note qui les justifie et le PDF à joindre à votre registre des traitements. Pour les pièces comptables, les durées légales du pays choisi s'appliquent.",
     },
     es: {
       title: 'Para qué sirve una política de conservación',

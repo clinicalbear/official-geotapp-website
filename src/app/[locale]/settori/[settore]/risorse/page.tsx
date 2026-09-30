@@ -40,7 +40,7 @@ const SETTORE_CONFIG: Record<string, {
       it: { title: 'Gestione presenze imprese di pulizie: guida e risorse - GeoTapp', description: 'Come gestire presenze, turni e interventi nelle imprese di pulizie con timbratura GPS. Guide pratiche per responsabili operativi.', heading: 'Gestione presenze nelle imprese di pulizie' },
       en: { title: 'GPS clock-ins for cleaning companies: guides - GeoTapp', description: 'How to manage attendance, shifts and jobs in cleaning companies with GPS clock-ins. Practical guides for operations managers.', heading: 'Attendance tracking for cleaning companies' },
       de: { title: 'GPS-Zeiterfassung für Reinigungsunternehmen: Leitfäden - GeoTapp', description: 'Anwesenheit, Schichten und Einsätze in Reinigungsunternehmen mit GPS-Zeiterfassung verwalten. Praxisnahe Leitfäden für Betriebsleiter.', heading: 'Anwesenheitsverwaltung in Reinigungsunternehmen' },
-      fr: { title: 'Gestion des présences en entreprise de nettoyage : guide - GeoTapp', description: 'Comment gérer les présences, les équipes et les interventions dans les entreprises de nettoyage avec le pointage GPS.', heading: 'Gestion des présences en entreprise de nettoyage' },
+      fr: { title: 'Gestion des présences en entreprise de nettoyage : guide - GeoTapp', description: 'Comment gérer les présences, les équipes et les interventions dans les entreprises de nettoyage avec le pointage GPS.', heading: 'Gestion des présences en entreprise de nettoyage' },
       es: { title: 'Control de presencia en empresas de limpieza: guía - GeoTapp', description: 'Cómo gestionar presencias, turnos e intervenciones en empresas de limpieza con fichaje GPS. Guías prácticas.', heading: 'Control de presencia en empresas de limpieza' },
       pt: { title: 'Recursos para empresas de limpeza - GeoTapp', description: 'Artigos e guias para gerir presenças e intervenções em empresas de limpeza.', heading: 'Recursos para empresas de limpeza' },
       nl: { title: 'Aanwezigheidsbeheer in schoonmaakbedrijven: gids - GeoTapp', description: 'Hoe u aanwezigheid, diensten en klussen beheert bij schoonmaakbedrijven met registratie met gps. Praktische gidsen voor operationeel verantwoordelijken.', heading: 'Aanwezigheidsbeheer bij schoonmaakbedrijven' },
@@ -151,6 +151,28 @@ const SETTORE_CONFIG: Record<string, {
           ],
         },
       ],
+      fr: [
+        {
+          h2: 'Le problème opérationnel qui ralentit les entreprises de nettoyage',
+          body: 'Quiconque dirige une entreprise de nettoyage de plus de 5 personnes connaît ces problèmes : vous ne savez pas si l\'agent est arrivé à 7 h 00 ou à 7 h 45, le client vous appelle pour savoir si l\'équipe est venue hier, et les feuilles de présence ne tombent jamais juste. Le problème n\'est pas la bonne volonté des gens, c\'est que les systèmes traditionnels ne fonctionnent pas quand les équipes changent de site chaque jour.',
+        },
+        {
+          h2: 'Comment fonctionne le pointage GPS pour les entreprises de nettoyage',
+          body: 'Le pointage GPS permet aux agents d\'enregistrer leur arrivée et leur départ directement depuis leur smartphone, avec la position relevée à cet instant, et uniquement à cet instant. Il ne demande aucun matériel fixe et fonctionne sur n\'importe quel site. Le responsable voit les pointages dès qu\'ils arrivent et peut exporter les rapports pour le client en fin de mois. GeoTapp TimeTracker ajoute les photos de preuve des travaux terminés et la communication avec le coordinateur depuis le même téléphone.',
+          productLink: true,
+        },
+        {
+          h2: 'Ce qu\'il faut vérifier avant de choisir un logiciel pour entreprise de nettoyage',
+          body: 'Tous les logiciels de gestion des présences ne conviennent pas au travail sur des sites dispersés. Avant de choisir, vérifiez qu\'il prend en charge :',
+          listItems: [
+            'Le pointage depuis un smartphone, sans matériel supplémentaire',
+            'Une position relevée et contrôlée au moment du pointage, jamais en continu',
+            'La possibilité de joindre des photos aux interventions',
+            'Des rapports exportables pour le client final',
+            'Une communication interne intégrée entre les agents et le bureau',
+          ],
+        },
+      ],
     },
     product: {
       name: 'GeoTapp TimeTracker',
@@ -164,7 +186,7 @@ const SETTORE_CONFIG: Record<string, {
       it: { title: 'Gestione interventi per installatori e tecnici: guida - GeoTapp', description: 'Come gestire ordini di lavoro, tecnici sul campo e reportistica per aziende di installazione. Guide operative.', heading: 'Gestione interventi per installatori e tecnici' },
       en: { title: 'Field service management for installers: guides - GeoTapp', description: 'How to manage work orders, field technicians and reporting for installation and service companies.', heading: 'Field service management for installers' },
       de: { title: 'Außendienstmanagement für Installateure: Leitfäden - GeoTapp', description: 'Wie Sie Arbeitsaufträge, Techniker im Außendienst und Berichte für Installations- und Servicebetriebe verwalten. Praxisnahe Leitfäden.', heading: 'Außendienstmanagement für Installateure' },
-      fr: { title: 'Gestion des interventions pour installateurs : guide - GeoTapp', description: 'Comment gérer les ordres de travail, les techniciens terrain et la reportique pour les entreprises d\'installation.', heading: 'Gestion des interventions pour installateurs' },
+      fr: { title: 'Gestion des interventions pour installateurs : guide - GeoTapp', description: 'Comment gérer les ordres de travail, les techniciens terrain et les rapports pour les entreprises d\'installation.', heading: 'Gestion des interventions pour installateurs' },
       es: { title: 'Gestión de intervenciones para instaladores: guía - GeoTapp', description: 'Cómo gestionar órdenes de trabajo, técnicos de campo y reportes para empresas de instalación.', heading: 'Gestión de intervenciones para instaladores' },
       pt: { title: 'Recursos para instaladores - GeoTapp', description: 'Artigos e guias para instaladores e empresas com técnicos de campo.', heading: 'Recursos para instaladores' },
       nl: { title: 'Klusbeheer voor installateurs en monteurs: gids - GeoTapp', description: 'Hoe u werkbonnen, monteurs in het veld en rapportage beheert voor installatiebedrijven. Operationele gidsen.', heading: 'Klusbeheer voor installateurs en monteurs' },
@@ -177,7 +199,7 @@ const SETTORE_CONFIG: Record<string, {
       it: 'Coordinare tecnici sul campo significa sapere quale intervento è stato appena chiuso e cosa è rimasto in sospeso, senza rincorrere nessuno al telefono. Con telefonate e messaggi WhatsApp il quadro è sempre incompleto: gli aggiornamenti arrivano in ritardo, le priorità cambiano senza che l\'ufficio lo sappia e la documentazione per il cliente è sempre un problema. Questi articoli raccolgono le pratiche operative più efficaci per aziende con tecnici sul campo.',
       en: 'Coordinating field technicians means knowing which jobs have just been closed and what is still pending, without chasing anyone by phone. With phone calls and WhatsApp the picture is always incomplete: updates arrive late, priorities shift without the office knowing, and client documentation is always a last-minute scramble. These guides cover effective operational practices for field service companies.',
       de: 'Techniker im Außendienst zu koordinieren heißt zu wissen, welcher Einsatz gerade abgeschlossen wurde und was noch offen ist, ohne jemandem telefonisch nachzulaufen. Mit Anrufen und WhatsApp-Nachrichten bleibt das Bild immer unvollständig: Updates kommen zu spät, Prioritäten ändern sich, ohne dass das Büro es erfährt, und die Unterlagen für den Kunden sind immer ein Problem. Diese Leitfäden behandeln bewährte Abläufe für Außendienstbetriebe.',
-      fr: 'Coordonner des techniciens terrain signifie savoir à tout moment qui se trouve où, quelles interventions viennent d\'être clôturées et ce qui reste en suspens. Avec les appels et WhatsApp, le tableau est toujours incomplet. Ces guides couvrent les meilleures pratiques pour les entreprises avec techniciens terrain.',
+      fr: 'Coordonner des techniciens de terrain, c\'est savoir quelle intervention vient d\'être clôturée et ce qui reste en suspens, sans courir après personne au téléphone. Avec les appels et WhatsApp, le tableau reste toujours incomplet : les mises à jour arrivent en retard, les priorités changent sans que le bureau le sache et la documentation pour le client est toujours un problème. Ces guides couvrent les bonnes pratiques opérationnelles pour les entreprises avec des techniciens de terrain.',
       es: 'Coordinar técnicos de campo significa saber en todo momento quién está dónde, qué intervenciones acaban de cerrarse y qué sigue pendiente. Con llamadas y WhatsApp el panorama siempre es incompleto. Estas guías recogen las mejores prácticas para empresas con técnicos de campo.',
       pt: 'Coordinating field technicians means knowing at any moment who is where, which jobs have just been closed, and what\'s still pending. These guides cover effective operational practices for field service companies.',
       nl: 'Monteurs in het veld coördineren betekent weten welke klus net is afgesloten en wat er nog openstaat, zonder iemand telefonisch achterna te zitten. Met telefoontjes en WhatsApp-berichten is het beeld altijd onvolledig: de updates komen te laat, de prioriteiten veranderen zonder dat het kantoor het weet en de documentatie voor de klant is altijd een probleem. Deze artikelen bundelen de meest effectieve operationele werkwijzen voor bedrijven met monteurs in het veld.',
@@ -275,6 +297,28 @@ const SETTORE_CONFIG: Record<string, {
           ],
         },
       ],
+      fr: [
+        {
+          h2: 'Le problème de coordination dans les entreprises avec des techniciens sur le terrain',
+          body: 'Quand un technicien clôt une intervention et que le bureau ne l\'apprend qu\'en fin de journée, il ne sait pas s\'il faut envoyer du renfort ou clôturer le dossier. Quand la documentation est sur papier ou par message, reconstituer l\'historique d\'un client prend des heures, et la coordination par téléphone mange une partie de la journée qu\'on pourrait récupérer.',
+        },
+        {
+          h2: 'Comment gérer les ordres de travail et les interventions sans appels',
+          body: 'Un système numérique de gestion des interventions permet d\'assigner les ordres de travail directement au smartphone du technicien, avec priorité, consignes et historique du client déjà inclus. Le technicien travaille avec l\'app GeoTapp TimeTracker : il pointe, prend les photos de preuve et écrit ses notes, et le rapport se compose tout seul. Depuis le bureau, GeoTapp Flow assigne les interventions, reçoit les pointages dès qu\'ils arrivent et envoie au client le rapport scellé.',
+          productLink: true,
+        },
+        {
+          h2: 'Ce que doit savoir faire un logiciel pour installateurs et techniciens de terrain',
+          body: 'Avant de choisir un outil de gestion pour votre équipe de techniciens, vérifiez qu\'il prend en charge :',
+          listItems: [
+            'L\'assignation et la modification des interventions à distance',
+            'Une position enregistrée uniquement aux pointages, jamais en continu',
+            'Des photos de preuve liées à l\'intervention',
+            'Un rapport automatique pour chaque intervention clôturée',
+            'L\'historique complet des interventions par client',
+          ],
+        },
+      ],
     },
     product: {
       name: 'GeoTapp Flow',
@@ -288,7 +332,7 @@ const SETTORE_CONFIG: Record<string, {
       it: { title: 'Gestione presenze e documentazione per servizi di sicurezza - GeoTapp', description: 'Come documentare presenze, controlli e anomalie nei servizi di sicurezza, con la posizione solo alle timbrature.', heading: 'Gestione presenze e documentazione nei servizi di sicurezza' },
       en: { title: 'Attendance and documentation for security services - GeoTapp', description: 'How to document attendance, checks and incidents in security services, with position recorded only at clock-in.', heading: 'Attendance and documentation in security services' },
       de: { title: 'Anwesenheit und Dokumentation für Sicherheitsdienste - GeoTapp', description: 'Wie Sie Anwesenheit, Kontrollen und Vorfälle in Sicherheitsdiensten dokumentieren, mit der Position nur bei den Stempelungen.', heading: 'Anwesenheit und Dokumentation bei Sicherheitsdiensten' },
-      fr: { title: 'Gestion des présences et traçabilité pour la sécurité - GeoTapp', description: 'Comment gérer agents, rondes et documentation dans les services de sécurité avec GPS en temps réel.', heading: 'Gestion des présences dans les services de sécurité' },
+      fr: { title: 'Présences et documentation pour les services de sécurité - GeoTapp', description: 'Comment documenter présences, contrôles et incidents dans les services de sécurité, avec la position enregistrée uniquement aux pointages.', heading: 'Présences et documentation dans les services de sécurité' },
       es: { title: 'Control de presencia y trazabilidad en servicios de seguridad - GeoTapp', description: 'Cómo gestionar agentes, rondas y documentación en servicios de seguridad con GPS en tiempo real.', heading: 'Control de presencia en servicios de seguridad' },
       pt: { title: 'Recursos para serviços de segurança - GeoTapp', description: 'Artigos e guias para empresas de segurança e vigilância.', heading: 'Recursos para serviços de segurança' },
       nl: { title: 'Aanwezigheid en documentatie voor beveiligingsdiensten - GeoTapp', description: 'Hoe u aanwezigheid, controles en afwijkingen bij beveiligingsdiensten documenteert, met de locatie alleen bij de registraties.', heading: 'Aanwezigheidsbeheer en documentatie bij beveiligingsdiensten' },
@@ -301,7 +345,7 @@ const SETTORE_CONFIG: Record<string, {
       it: 'Nelle aziende di sicurezza ogni turno e ogni controllo vanno documentati, e ogni anomalia va segnalata subito. Con telefonate e report cartacei, la centrale operativa ha sempre un quadro parziale e in ritardo. Questi articoli affrontano i temi operativi più rilevanti per responsabili di servizi di sicurezza.',
       en: 'In security companies every shift and every check must be documented, and every incident must be reported straight away. With phone calls and paper reports, the control room always has a partial and delayed picture. These guides cover the most relevant operational topics for security service managers.',
       de: 'In Sicherheitsunternehmen müssen jede Schicht und jede Kontrolle dokumentiert und jede Auffälligkeit sofort gemeldet werden. Mit Anrufen und Berichten auf Papier hat die Einsatzzentrale immer ein unvollständiges und verspätetes Bild. Diese Leitfäden behandeln die wichtigsten operativen Themen für Leiter von Sicherheitsdiensten.',
-      fr: 'Dans les entreprises de sécurité, chaque ronde doit être documentée, chaque agent doit être localisable et chaque anomalie doit être signalée immédiatement. Avec des systèmes basés sur les appels ou le papier, la centrale a toujours une vision partielle. Ces guides couvrent les thèmes opérationnels essentiels pour les responsables de sécurité.',
+      fr: 'Dans les entreprises de sécurité, chaque vacation et chaque contrôle doivent être documentés, et chaque anomalie signalée tout de suite. Avec des appels et des rapports sur papier, la centrale a toujours une vision partielle et tardive. Ces guides couvrent les thèmes opérationnels essentiels pour les responsables de services de sécurité.',
       es: 'En las empresas de seguridad cada ronda debe documentarse, cada agente debe ser localizable y cada incidencia debe reportarse de inmediato. Con sistemas basados en llamadas o papel, la central siempre tiene un panorama parcial. Estas guías abordan los temas operativos más relevantes para responsables de seguridad.',
       pt: 'In security companies every patrol must be documented, every agent must be locatable, and every incident must be reported immediately. These guides cover the most relevant operational topics for security service managers.',
       nl: 'Bij beveiligingsbedrijven moeten elke dienst en elke controle worden gedocumenteerd, en elke afwijking moet meteen worden gemeld. Met telefoontjes en papieren rapporten heeft de meldkamer altijd een onvolledig en vertraagd beeld. Deze artikelen behandelen de meest relevante operationele onderwerpen voor verantwoordelijken van beveiligingsdiensten.',
@@ -396,6 +440,28 @@ const SETTORE_CONFIG: Record<string, {
             'Melding van afwijkingen met foto en locatie',
             'Verzegelde rapportage, exporteerbaar voor de eindklant',
             'Melding als een dienst open blijft staan',
+          ],
+        },
+      ],
+      fr: [
+        {
+          h2: 'Les défis opérationnels des services de sécurité et de surveillance',
+          body: 'Sans système numérique, la centrale ne sait pas si un agent a pris son service au bon poste, si un contrôle a été fait ou s\'il y a eu une anomalie, tant que quelqu\'un n\'appelle pas. Le client final n\'a aucune preuve concrète du service, et en cas de contestation il n\'y a rien à montrer. Pour une société de sécurité, pouvoir documenter le service fait partie du service lui-même.',
+        },
+        {
+          h2: 'Comment documenter le service sans surveiller les agents',
+          body: 'Les agents pointent la prise et la fin de service depuis leur smartphone et, aux points de contrôle, prennent la photo de preuve : chaque geste enregistre l\'heure et la position, et entre deux gestes rien n\'est enregistré automatiquement. La centrale voit les pointages dès qu\'ils arrivent et reçoit les signalements avec photos. GeoTapp TimeTracker est conçu pour cela : présences avec la position au pointage, photos des contrôles et messages avec la centrale.',
+          productLink: true,
+        },
+        {
+          h2: 'Ce que doit garantir le logiciel pour les services de sécurité',
+          body: 'Pour choisir un outil de gestion opérationnelle des services de sécurité, vérifiez qu\'il prend en charge :',
+          listItems: [
+            'La prise et la fin de service avec position et heure enregistrées',
+            'Des photos de preuve avec heure et position aux points de contrôle',
+            'Le signalement d\'anomalies avec photo et géolocalisation',
+            'Des rapports scellés exportables pour le client final',
+            'Une alerte si une vacation reste ouverte',
           ],
         },
       ],
@@ -518,7 +584,7 @@ const GPS_CALLOUT: Record<string, { text: string; cta: string }> = {
   it: { text: 'Mandi squadre all’estero? Lo strumento gratuito GPS lavoratori UE ti dice cosa serve per essere in regola, Paese per Paese.', cta: 'Apri la guida →' },
   en: { text: 'Sending crews abroad? The free GPS on workers in the EU tool shows what you need to be compliant, country by country.', cta: 'Open the guide →' },
   de: { text: 'Schicken Sie Teams ins Ausland? Das kostenlose Werkzeug zu GPS bei Beschäftigten in der EU zeigt Ihnen Land für Land, was Sie brauchen, um auf der sicheren Seite zu sein.', cta: 'Zum Leitfaden →' },
-  fr: { text: 'Vous envoyez des équipes à l’étranger ? L’outil gratuit GPS sur les travailleurs en UE indique ce qu’il faut, pays par pays.', cta: 'Ouvrir le guide →' },
+  fr: { text: 'Vous envoyez des équipes à l’étranger ? L’outil gratuit GPS sur les travailleurs en UE indique ce qu’il faut, pays par pays.', cta: 'Ouvrir le guide →' },
   es: { text: '¿Envías equipos al extranjero? La herramienta gratuita GPS para trabajadores en la UE indica qué necesitas, país por país.', cta: 'Abrir la guía →' },
   pt: { text: 'Envias equipas para o estrangeiro? A ferramenta gratuita GPS dos trabalhadores na UE mostra o que precisas, país a país.', cta: 'Abrir o guia →' },
   nl: { text: 'Stuurt u teams naar het buitenland? Met het gratis hulpmiddel gps bij werknemers in de EU ziet u per land wat nodig is om in orde te zijn.', cta: 'Open de gids →' },
@@ -539,7 +605,7 @@ const END_BG: Record<string, string> = {
 
 // Ritmo chiaro/caldo delle sezioni, come nel mockup generale.
 function secTone(i: number): string {
-  return i % 2 === 0 ? 'sec' : 'sec warm';
+  return i % 2 === 0 ? 'sec' : 'sec warm';
 }
 
 export default async function RisorseSettorePage({ params }: { params: Promise<Params> }) {
@@ -648,9 +714,9 @@ export default async function RisorseSettorePage({ params }: { params: Promise<P
 
         <section className={secTone(sections.length + 1)}>
           <div className="w">
-            {posts.length === 0 ? (
+            {posts.length === 0 ? (
               <p>{emptyLabel}</p>
-            ) : (
+            ) : (
               <div className="res">
                 {posts.map((post, i) => (
                   <Link key={post.id} href={post.url} className={`r d${(i % 4) + 1}`}>

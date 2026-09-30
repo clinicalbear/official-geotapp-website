@@ -17,6 +17,11 @@ const META: Record<string, { title: string; description: string }> = {
     description:
       'Stellen Sie einen Antrag zur Löschung Ihres GeoTapp-Kontos und Ihrer persönlichen Daten. Wir bearbeiten alle Anfragen innerhalb von 30 Tagen gemäß DSGVO.',
   },
+  fr: {
+    title: 'Demander la suppression du compte | GeoTapp',
+    description:
+      'Envoyez une demande pour supprimer votre compte GeoTapp et vos données personnelles. Nous traitons chaque demande sous 30 jours, comme le prévoit le RGPD.',
+  },
   nl: {
     title: 'Accountverwijdering aanvragen | GeoTapp',
     description:

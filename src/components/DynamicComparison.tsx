@@ -35,6 +35,7 @@ interface Props {
 // Etichette accessibili del segno di spunta e della croce, per lingua (le altre ricadono sull'inglese).
 const YES_NO: Record<string, [string, string]> = {
   de: ['Ja', 'Nein'],
+  fr: ['Oui', 'Non'],
   nl: ['Ja', 'Nee'],
 };
 

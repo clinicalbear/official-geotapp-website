@@ -48,6 +48,8 @@ const CAROUSEL_SLIDES = [
     label_de: 'Dashboard mit Kennzahlen und Einsatzmodulen',
     alt_nl: 'GeoTapp Flow - Dashboard met kengetallen en operationele modules',
     label_nl: 'Dashboard met kengetallen en operationele modules',
+    alt_fr: 'GeoTapp Flow - Tableau de bord avec indicateurs et modules opérationnels',
+    label_fr: 'Tableau de bord et modules opérationnels',
   },
   {
     src: '/screen_live_map.webp',
@@ -59,6 +61,8 @@ const CAROUSEL_SLIDES = [
     label_de: 'Karte der bei den Buchungen erfassten Standorte',
     alt_nl: 'GeoTapp Flow - Kaart met de locaties die bij de registraties zijn vastgelegd',
     label_nl: 'Kaart van de locaties die bij de registraties zijn vastgelegd',
+    alt_fr: 'GeoTapp Flow - Carte des positions enregistrées lors des pointages',
+    label_fr: 'Carte des positions enregistrées lors des pointages',
   },
   {
     src: '/schermataFlow.webp',
@@ -70,6 +74,8 @@ const CAROUSEL_SLIDES = [
     label_de: 'Einsatzübersicht',
     alt_nl: 'GeoTapp Flow - Operationeel paneel',
     label_nl: 'Operationeel overzicht',
+    alt_fr: 'GeoTapp Flow - Tableau de bord opérationnel',
+    label_fr: 'Tableau de bord opérationnel',
   },
 ];
 
@@ -151,6 +157,27 @@ const FLOW_COPY: Record<string, FlowCopy> = {
     legalKicker: 'Regeln vor Ort',
     trial: 'Flow 14 Tage kostenlos testen',
   },
+  fr: {
+    statusLabel: 'Où il s\'utilise',
+    releaseNote: 'Flow est une application web : vous l\'utilisez depuis le navigateur, sur ordinateur et tablette, sans rien installer. Les équipes sur le terrain utilisent GeoTapp TimeTracker, l\'application disponible sur Google Play et l\'App Store, et ce qu\'elles pointent arrive dans Flow.',
+    doesTitle: 'Ce que fait GeoTapp Flow',
+    doesSub: 'C\'est l\'outil de gestion du bureau, et il rassemble aussi la preuve de ce que l\'équipe a fait : planification, travail sur le terrain, décompte final et rapports pour le client.',
+    cards: [
+      { title: 'Centre opérationnel et outil de gestion', description: 'Flow donne au bureau un seul environnement pour les clients, les chantiers, le calendrier, les documents, les congés et absences, l\'administration et la coordination des équipes.' },
+      { title: 'Des preuves à montrer au client', description: 'Photos, notes et pointages recueillis sur le terrain restent rattachés au chantier : le bureau répond avec des faits, pas avec des suppositions.' },
+      { title: 'Historique du chantier et export', description: 'Pour chaque chantier, vous pouvez télécharger le dossier avec la chronologie des événements, les pointages avec leurs positions et les photos, et envoyer au client le rapport scellé.' },
+      { title: 'Facturation plus rapide', description: 'Devis, factures et la connexion avec Fatture in Cloud travaillent sur les données réelles du chantier : le décompte final se fait plus vite et on discute moins.' },
+    ],
+    blocks: [
+      { title: 'Pensé pour le bureau, l\'administration et la coordination', description: 'Flow s\'adresse aux dirigeants, à l\'administration et aux responsables qui veulent moins de discussions internes, des rôles plus clairs et une vision nette du travail accompli.' },
+      { title: 'Relié à TimeTracker', description: 'Pointages, photos de preuve et avancement du chantier arrivent dans Flow dès que l\'opérateur les enregistre, prêts pour le rapport et pour le décompte final.' },
+    ],
+    complianceKicker: 'Information GPS',
+    complianceTagline: 'D\'abord on signe l\'information, ensuite on pointe.*',
+    complianceFootnote: '* La loi (art. 13 du RGPD et, en Italie, art. 4 du Statut des travailleurs) impose d\'informer chaque salarié avant de le géolocaliser. Si le logiciel laisse cette étape à l\'employeur, le risque reste pour lui. GeoTapp prépare l\'information personnalisée, la fait signer pour prise de connaissance dans l\'application et ne laisse pas pointer tant qu\'elle n\'est pas signée.',
+    legalKicker: 'Réglementation locale',
+    trial: 'Essayez Flow gratuitement pendant 14 jours',
+  },
   nl: {
     statusLabel: 'Waar u het gebruikt',
     releaseNote: 'Flow is een webapp: u gebruikt hem in de browser, op computer en tablet, zonder iets te installeren. Wie in het veld werkt, gebruikt GeoTapp TimeTracker, de app die beschikbaar is op Google Play en de App Store, en wat daar wordt geregistreerd, komt in Flow aan.',
@@ -174,7 +201,7 @@ const FLOW_COPY: Record<string, FlowCopy> = {
   },
 };
 
-function ScreenCarousel({ isItalian, isGerman = false, isDutch = false }: { isItalian: boolean; isGerman?: boolean; isDutch?: boolean }) {
+function ScreenCarousel({ isItalian, isGerman = false, isDutch = false, isFrench = false }: { isItalian: boolean; isGerman?: boolean; isDutch?: boolean; isFrench?: boolean }) {
   const [current, setCurrent] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
   const total = CAROUSEL_SLIDES.length;
@@ -201,7 +228,7 @@ function ScreenCarousel({ isItalian, isGerman = false, isDutch = false }: { isIt
   return (
     <>
       <div className="bar">
-        <i /><i /><i /><b>{isItalian ? slide.label_it : isGerman ? slide.label_de : isDutch ? slide.label_nl : slide.label_en}</b>
+        <i /><i /><i /><b>{isItalian ? slide.label_it : isGerman ? slide.label_de : isDutch ? slide.label_nl : isFrench ? slide.label_fr : slide.label_en}</b>
       </div>
       {isDesktop ? (
         <AnimatePresence mode="wait">
@@ -209,7 +236,7 @@ function ScreenCarousel({ isItalian, isGerman = false, isDutch = false }: { isIt
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={slide.src}
-              alt={isItalian ? slide.alt_it : isGerman ? slide.alt_de : isDutch ? slide.alt_nl : slide.alt_en}
+              alt={isItalian ? slide.alt_it : isGerman ? slide.alt_de : isDutch ? slide.alt_nl : isFrench ? slide.alt_fr : slide.alt_en}
               loading={current === 0 ? 'eager' : 'lazy'}
               fetchPriority={current === 0 ? 'high' : 'auto'}
             />
@@ -219,15 +246,15 @@ function ScreenCarousel({ isItalian, isGerman = false, isDutch = false }: { isIt
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={CAROUSEL_SLIDES[0].src}
-          alt={isItalian ? CAROUSEL_SLIDES[0].alt_it : isGerman ? CAROUSEL_SLIDES[0].alt_de : isDutch ? CAROUSEL_SLIDES[0].alt_nl : CAROUSEL_SLIDES[0].alt_en}
+          alt={isItalian ? CAROUSEL_SLIDES[0].alt_it : isGerman ? CAROUSEL_SLIDES[0].alt_de : isDutch ? CAROUSEL_SLIDES[0].alt_nl : isFrench ? CAROUSEL_SLIDES[0].alt_fr : CAROUSEL_SLIDES[0].alt_en}
           loading="eager"
           fetchPriority="high"
         />
       )}
-      <button type="button" onClick={prev} className="l-shot-nav l-shot-prev" aria-label={isItalian ? 'Precedente' : isGerman ? 'Zurück' : isDutch ? 'Vorige' : 'Previous'}>
+      <button type="button" onClick={prev} className="l-shot-nav l-shot-prev" aria-label={isItalian ? 'Precedente' : isGerman ? 'Zurück' : isDutch ? 'Vorige' : isFrench ? 'Précédent' : 'Previous'}>
         <ArrowRight size={18} style={{ transform: 'rotate(180deg)' }} />
       </button>
-      <button type="button" onClick={next} className="l-shot-nav l-shot-next" aria-label={isItalian ? 'Successiva' : isGerman ? 'Weiter' : isDutch ? 'Volgende' : 'Next'}>
+      <button type="button" onClick={next} className="l-shot-nav l-shot-next" aria-label={isItalian ? 'Successiva' : isGerman ? 'Weiter' : isDutch ? 'Volgende' : isFrench ? 'Suivant' : 'Next'}>
         <ArrowRight size={18} />
       </button>
       <div className="l-shot-dots">
@@ -237,7 +264,7 @@ function ScreenCarousel({ isItalian, isGerman = false, isDutch = false }: { isIt
             type="button"
             onClick={() => setCurrent(i)}
             className={i === current ? 'on' : ''}
-            aria-label={`${isItalian ? 'Schermata' : isGerman ? 'Ansicht' : isDutch ? 'Weergave' : 'Slide'} ${i + 1}`}
+            aria-label={`${isItalian ? 'Schermata' : isGerman ? 'Ansicht' : isDutch ? 'Weergave' : isFrench ? 'Vue' : 'Slide'} ${i + 1}`}
           />
         ))}
       </div>
@@ -275,11 +302,11 @@ const GPS_PRIVACY_CONTENT: Record<string, {
     tags: ['DSGVO Art. 13', 'Betriebsrat (BetrVG § 87)', 'Als zur Kenntnis genommen bestätigt', 'Dokument archiviert', 'Kein Stempeln vor der Bestätigung', 'Kein Papier'],
   },
   fr: {
-    title: 'Autorisation GPS automatique pour chaque salarié',
-    p1: 'Lorsque vous invitez un nouveau salarié, Flow génère automatiquement l\'avis de confidentialité GPS conforme au RGPD et l\'envoie pour signature numérique. Le salarié remplit ses données, lit le document et signe en un clic, tout en ligne, sans papier.',
-    p2: 'Le PDF signé est archivé automatiquement et vous voyez en temps réel qui a signé et qui ne l\'a pas fait. Plus de feuilles volantes, plus de risque de sanctions : chaque consentement est tracé avec date, heure et signature numérique.',
-    legal: 'Conforme au RGPD et aux recommandations de la CNIL sur la géolocalisation des salariés. Le dispositif respecte le Code du travail (art. L.1121-1) et le principe de proportionnalité : pas de suivi continu, uniquement au pointage.',
-    tags: ['RGPD conforme', 'CNIL', 'Code du travail', 'Signature numérique', 'PDF archivé', 'Zéro papier'],
+    title: 'L\'information GPS, pour chaque salarié',
+    p1: 'Quand vous invitez un nouveau salarié, Flow prépare l\'information sur la géolocalisation avec les données de votre entreprise et la lui envoie. Le salarié renseigne ses données, lit le document et le signe pour prise de connaissance, le tout depuis son téléphone, sans papier. Tant qu\'il ne l\'a pas signée, l\'application ne le laisse pas pointer.',
+    p2: 'Le document signé reste archivé, et dans Flow vous voyez qui a signé et qui ne l\'a pas fait. Fini les feuilles volantes : chaque signature est enregistrée avec la date et l\'heure. La signature prouve que l\'information a été remise ; ce n\'est pas un consentement, et il n\'est pas nécessaire qu\'elle en soit un.',
+    legal: 'En France, le comité social et économique doit être informé et consulté avant la mise en place de moyens permettant de contrôler l\'activité des salariés (Code du travail, art. L. 2312-38) : cette étape reste à la charge de l\'employeur. GeoTapp est conçu pour rester dans ce cadre : position uniquement au pointage, jamais en continu.',
+    tags: ['RGPD art. 13', 'CSE (Code du travail)', 'Signature pour prise de connaissance', 'Document archivé', 'Pas de pointage avant la signature', 'Zéro papier'],
   },
   nl: {
     title: 'De GPS-privacyverklaring, voor elke medewerker',
@@ -469,7 +496,7 @@ export default function GeoTappApp() {
 
       {/* SCHERMATA VERA */}
       <section className="shot"><div className="wn"><div className="frame r-s">
-        <div className="browser"><ScreenCarousel isItalian={isItalian} isGerman={currentLocale === 'de'} isDutch={currentLocale === 'nl'} /></div>
+        <div className="browser"><ScreenCarousel isItalian={isItalian} isGerman={currentLocale === 'de'} isDutch={currentLocale === 'nl'} isFrench={currentLocale === 'fr'} /></div>
       </div></div></section>
 
       {/* IL GIRO COMPLETO — entra dall'atto in cui la prova arriva in ufficio da
@@ -564,7 +591,7 @@ export default function GeoTappApp() {
         <div className="r-s d1" style={{ display: 'flex', justifyContent: 'center' }}>
           <div className="sheet">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/verifier-report.webp" alt={currentLocale === 'it' ? 'Report sigillato GeoTapp' : currentLocale === 'de' ? 'Versiegelter GeoTapp-Bericht' : 'GeoTapp sealed report'} loading="lazy" />
+            <img src="/verifier-report.webp" alt={currentLocale === 'it' ? 'Report sigillato GeoTapp' : currentLocale === 'de' ? 'Versiegelter GeoTapp-Bericht' : currentLocale === 'fr' ? 'Rapport scellé GeoTapp' : currentLocale === 'nl' ? 'Verzegeld GeoTapp-rapport' : 'GeoTapp sealed report'} loading="lazy" />
           </div>
         </div>
       </div></div></section>

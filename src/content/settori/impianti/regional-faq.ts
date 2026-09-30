@@ -8,7 +8,7 @@ export interface RegionalFaqItem {
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
   de: 'Vorschriften und Nachweise in Deutschland',
-  fr: 'Conformité en France',
+  fr: 'Règles et justificatifs en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
   nl: 'Regels en documentatie in Nederland',
@@ -50,16 +50,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   fr: [
     {
-      q: 'Heures et déplacements selon la convention de la métallurgie ?',
-      a: 'Heures par technicien et par installation, indemnités de déplacement et d\'astreinte et conservation des données, enregistrées à chaque intervention.',
+      q: "Heures et chantiers des installateurs ?",
+      a: "À chaque pointage, GeoTapp enregistre arrivée, pauses et départ avec position et heure, par technicien et par installation, et les exporte en Excel ou CSV pour votre comptable ou gestionnaire de paie. L'application de la convention collective (majorations, indemnités) et l'établissement de la paie restent de son ressort et de celui de l'entreprise.",
     },
     {
-      q: 'RGPD et CNIL pour la géolocalisation des techniciens ?',
-      a: 'Géolocalisation limitée au temps de travail, information préalable, intérêt légitime et consultation du CSE, selon les lignes directrices CNIL.',
+      q: "Géolocalisation des techniciens : RGPD et CNIL ?",
+      a: "La position n'est enregistrée qu'au pointage et avec les photos de preuve, jamais en continu, et l'information aux salariés est signée dans l'appli avant de pointer. Reste à l'employeur de vérifier ce que le RGPD (intérêt légitime) et la consultation du CSE exigent dans son cas.",
     },
     {
-      q: 'Vérifications périodiques et qualifications ?',
-      a: 'Rattachement des interventions de maintenance et des vérifications réglementaires à la qualification du technicien, avec l\'historique de validité.',
+      q: "Vérifications périodiques réglementaires ?",
+      a: "GeoTapp ne gère ni les qualifications des techniciens ni les vérifications périodiques réglementaires. Il enregistre l'heure, la position, les photos et les notes de chaque intervention et de chaque contrôle, que vous pouvez joindre au dossier de vérification.",
     },
   ],
   es: [

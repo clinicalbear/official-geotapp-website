@@ -218,23 +218,23 @@ const TESTI: Record<string, Testi> = {
   fr: {
     sealedTitle: 'Document scellé',
     sealedBody:
-      'Ce document est signé électroniquement et vérifiable. Chaque événement est chaîné au précédent : si une ligne, une heure ou une photo change, la vérification échoue.',
+      'Ce document est signé électroniquement et vérifiable. Chaque événement est chaîné au précédent : si une ligne, une heure ou une photo change, la vérification échoue.',
     draftTitle: 'Document non scellé',
     draftBody:
-      'Ce document ne porte pas la signature électronique : il ne fait pas foi et ne peut pas être vérifié.',
+      'Ce document ne porte pas la signature électronique : il ne fait pas foi et ne peut pas être vérifié.',
     issuedBy: 'Émis par',
     job: 'Chantier',
     sealedOn: 'Scellé le',
     downloadPackage: 'Télécharger le paquet signé',
     downloadPackageHint:
-      "C'est l'original : il contient le document, l'historique, les photos et le sceau.",
+      "C'est l'original : il contient le document, l'historique, les photos et le sceau.",
     downloadPdf: 'Télécharger le PDF lisible',
     fingerprint: 'Empreinte du paquet',
     linkLife:
-      "Le lien vers le fichier dure dix minutes. Le code imprimé n'expire jamais : il suffit de rouvrir cette page.",
+      "Le lien vers le fichier dure dix minutes. Le code figurant sur le document n'expire jamais : il suffit de rouvrir cette page.",
     verifyTitle: 'Vérifier sans nous faire confiance',
     verifyBody:
-      'Le paquet se vérifie même sans GeoTapp, avec le vérificateur ouvert : il recalcule les empreintes et contrôle la signature.',
+      'Le paquet se vérifie même sans GeoTapp, avec le vérificateur ouvert : il recalcule les empreintes et contrôle la signature.',
     verifyCta: 'Aller à la vérification',
     surveyTitle: 'Une question à ceux qui commandent le travail',
     surveyBody:
@@ -245,10 +245,10 @@ const TESTI: Record<string, Testi> = {
       "Ce document a existé, mais son émetteur a révoqué le lien. Pour en obtenir une copie, il faut la demander à l'entreprise qui a fait le travail.",
     expiredTitle: 'Document plus disponible',
     expiredBody:
-      'Ce document a existé et sa durée de conservation est écoulée : cinq ans après la date des travaux, le paquet est supprimé, comme l’exige la protection des données. Il n’existe plus de copie à demander.',
+      'Ce document a existé et sa durée de conservation est écoulée : cinq ans après la date des travaux, le paquet est supprimé, comme l’exige le droit de la protection des données. Il n’existe plus de copie à demander.',
     unknownTitle: 'Code introuvable',
     unknownBody:
-      'Le code ne correspond à aucun document. Vérifiez les huit caractères : S et 5, Z et 2 se confondent facilement.',
+      'Le code ne correspond à aucun document. Vérifiez les huit caractères : S et 5, Z et 2 se confondent facilement.',
   },
   es: {
     sealedTitle: 'Documento sellado',

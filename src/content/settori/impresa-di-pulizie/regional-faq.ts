@@ -8,7 +8,7 @@ export interface RegionalFaqItem {
 export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
   de: 'Vorschriften und Nachweise in Deutschland',
-  fr: 'Conformité en France',
+  fr: 'Règles et justificatifs en France',
   es: 'Cumplimiento normativo en España',
   pt: 'Conformidade em Portugal',
   nl: 'Regels en documentatie in Nederland',
@@ -50,16 +50,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   fr: [
     {
-      q: 'Quels justificatifs impose la convention de la propreté (IDCC 3043) ?',
-      a: 'Heures par site, majorations dimanche et nuit et historique d\'ancienneté par salarié, ainsi que le transfert de personnel (annexe 7) en cas de reprise de marché.',
+      q: "Quels justificatifs d'heures pour une entreprise de propreté ?",
+      a: "GeoTapp enregistre heures, pauses et départs par agent et par site, avec position et heure, et les exporte en Excel ou CSV pour votre comptable ou gestionnaire de paie. Majorations de dimanche et de nuit, paie et contrôles restent de son ressort et de celui de l'entreprise, qui dispose ainsi d'un relevé d'horaires comme point de départ.",
     },
     {
-      q: 'Comment respecter le RGPD et la CNIL pour la géolocalisation ?',
-      a: 'Géolocalisation limitée au temps de travail, information préalable, intérêt légitime et consultation du CSE, en s\'appuyant sur les lignes directrices de la CNIL.',
+      q: "Géolocalisation des agents de propreté : RGPD et CNIL ?",
+      a: "La position n'est enregistrée qu'au pointage et avec les photos de preuve, jamais en continu, et l'information aux salariés est signée dans l'appli avant de pointer. Reste à l'employeur de vérifier ce que le RGPD (intérêt légitime) et la consultation du CSE exigent dans son cas.",
     },
     {
-      q: 'Comment prouver le respect du SMIC et des minima ?',
-      a: 'Rapprochement heures-salaire contre le SMIC et la grille de branche, avec historique des primes et de l\'ancienneté par agent.',
+      q: "Comment gérer une reprise de marché (transfert de personnel) ?",
+      a: "GeoTapp ne gère ni le transfert du personnel ni la convention collective en cas de reprise de marché. Il conserve l'historique des heures et des présences de chaque agent, exportable en Excel ou CSV : l'application de la convention reste du ressort du comptable ou du gestionnaire de paie.",
     },
   ],
   es: [

@@ -2,205 +2,206 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App pour Entreprise de Nettoyage : Gestion GPS des Équipes & Preuve de Service | GeoTapp',
-    description:
-      'Gérez équipes de nettoyage, plannings et présences avec pointage GPS scellé. Preuves de service automatiques, moins de litiges. App conçue pour le RGPD.',
+    title: "Appli pour entreprise de propreté : équipes et GPS | GeoTapp",
+    description: "Gérez équipes, vacations et présences avec des pointages GPS. Preuves de service automatiques, à montrer quand un client conteste. Conçu pour le RGPD.",
   },
 
   hero: {
-    badge: 'App pour entreprises de nettoyage et multiservices',
-    h1_line1: 'Votre entreprise de nettoyage,',
-    h1_line2: 'suivie à chaque service.',
-    subtitle:
-      'Pointage GPS, preuves de service automatiques et gestion des plannings dans une seule app. Fini les tableurs, moins de litiges. Le client conteste ? Envoyez le rapport et la discussion est close.',
-    cta_primary: 'Essayez-le sur un vrai contrat',
-    cta_note: "14 jours, jusqu'à 50 intervenants sur le terrain, sans carte bancaire.",
+    badge: "Appli pour entreprises de propreté et multiservices",
+    h1_line1: "Votre entreprise de propreté,",
+    h1_line2: "gérée pointage après pointage.",
+    subtitle: "Pointages GPS, preuves de service automatiques et gestion des vacations dans une seule appli. Plus de tableurs. Un client se plaint ? Vous envoyez le rapport au lieu de vous expliquer de vive voix.",
+    cta_primary: "Essayez-le sur un vrai contrat",
+    cta_note: "14 jours, jusqu'à 50 agents sur le terrain, sans carte bancaire.",
   },
 
   pain: {
-    title: 'Problèmes que nous résolvons chaque jour',
+    title: "Les problèmes que nous résolvons chaque jour",
     items: [
       {
-        title: 'Les clients contestent les heures travaillées ?',
-        desc: 'Chaque pointage est vérifié par GPS et horodaté. Envoyez le rapport et la discussion se termine en trente secondes.',
+        title: "Les clients contestent les heures effectuées ?",
+        desc: "Chaque pointage enregistre la position et l'heure. Vous envoyez le rapport et le client peut le contrôler seul.",
       },
       {
-        title: 'Les feuilles de présence papier sont peu fiables ?',
-        desc: 'Suivi automatique depuis le smartphone, aucune saisie manuelle. Les données sont ce qu\'elles sont, et toute modification est détectable.',
+        title: "Les feuilles de présence papier ne sont pas fiables ?",
+        desc: "Des pointages depuis le smartphone, sans saisie manuelle. La donnée reste telle qu'elle a été enregistrée : toute modification est détectable.",
       },
       {
-        title: 'Difficile de coordonner plusieurs équipes ?',
-        desc: 'Voyez où chacun a pointé, sur tous les sites, depuis un tableau de bord unique mis à jour à chaque service. Aucun appel.',
+        title: "Difficile de coordonner plusieurs équipes ?",
+        desc: "Vous voyez qui a pointé, et où, sur tous les sites, depuis un seul écran. Sans coups de fil.",
       },
     ],
   },
 
   prima_dopo: {
-    title: 'Ce qui se passe maintenant. Ce qui se passe avec GeoTapp.',
+    title: "Ce qui se passe aujourd'hui. Ce qui se passe avec GeoTapp.",
     prima: [
-      'Le client appelle et dit que les sanitaires n\'ont pas été nettoyés.',
-      'L\'agent dit "Je l\'ai fait". Le client dit "Non, vous ne l\'avez pas fait".',
-      'Vous n\'avez rien pour prouver quoi que ce soit.',
-      'La discussion traîne pendant des jours. Parfois vous perdez le contrat.',
+      "Le client appelle et dit que les toilettes n'ont pas été nettoyées.",
+      "L'agent dit « je l'ai fait ». Le client dit « non, vous ne l'avez pas fait ».",
+      "Vous n'avez rien en main pour prouver quoi que ce soit.",
+      "La discussion dure des jours. Parfois, vous perdez le contrat.",
     ],
     dopo: [
-      'Le client appelle et dit que les sanitaires n\'ont pas été nettoyés.',
-      'Vous ouvrez le rapport d\'intervention : photo des sanitaires propres, heure, GPS.',
-      'Vous l\'envoyez. La discussion se termine en trente secondes.',
-      'Le contrat est en sécurité. L\'agent est protégé.',
+      "Le client appelle et dit que les toilettes n'ont pas été nettoyées.",
+      "Vous ouvrez le rapport d'intervention : photo des toilettes propres, heure, position.",
+      "Vous le lui envoyez, et il le vérifie lui-même.",
+      "Vous avez de quoi montrer ce qui s'est passé. L'agent aussi.",
     ],
   },
 
   workflow: {
-    title: 'Comment ça fonctionne',
-    subtitle: 'Trois étapes simples. Zéro papier. Zéro appels.',
+    title: "Comment ça marche",
+    subtitle: "Trois étapes simples. Zéro papier. Zéro coup de fil.",
     steps: [
       {
-        title: 'L\'agent pointe avec GPS',
-        desc: 'Ouvre et ferme son service depuis le smartphone. GeoTapp enregistre les coordonnées GPS réelles, photos et horodatage, entièrement automatique, et toute modification est détectable.',
+        title: "L'agent pointe sur site",
+        desc: "Il ouvre et clôt sa vacation depuis son smartphone. GeoTapp enregistre la position et l'heure à cet instant et, si besoin, des photos de preuve. Entre deux pointages, rien n'est enregistré automatiquement.",
       },
       {
-        title: 'Le responsable voit chaque pointage dès qu\'il arrive',
-        desc: 'Un seul tableau de bord pour tous les sites. Sachez exactement qui est sur place, où et depuis quand, sans courir après personne.',
+        title: "Le responsable voit chaque pointage dès qu'il arrive",
+        desc: "Un seul écran pour tous les sites. Vous voyez qui a pointé, où et à quelle heure, sans courir après personne.",
       },
       {
-        title: 'Le rapport est prêt automatiquement',
-        desc: 'À la fin du service, le système génère un rapport scellé avec GPS, photos et signature numérique. Envoyez-le au client, vérifiable de manière autonome.',
+        title: "Le rapport est prêt automatiquement",
+        desc: "En fin de vacation, le système génère un rapport scellé avec GPS, photos et sceau. Envoyez-le au client, qui peut le vérifier en toute autonomie.",
       },
     ],
   },
 
   differenza: {
-    title: 'Pointage vs Preuve de service.',
-    subtitle: 'La plupart des apps enregistrent des horaires. GeoTapp produit des preuves pour votre client.',
+    title: "Pointage ou preuve de service.",
+    subtitle: "La plupart des applis enregistrent des horaires. GeoTapp produit des preuves pour votre client.",
     rows: [
       {
-        label: 'Ce qui est enregistré',
-        competitor: 'Heure de pointage entrée/sortie',
-        geotapp: 'Heure + GPS vérifié + photos + tâches effectuées',
+        label: "Ce qui est enregistré",
+        competitor: "Heure d'entrée et de sortie",
+        geotapp: "Heure + position au pointage + photos + tâches réalisées",
       },
       {
-        label: 'Qui peut vérifier',
-        competitor: 'Seulement votre bureau',
-        geotapp: 'Vous, le donneur d\'ordre, un tiers, en autonomie',
+        label: "Qui peut vérifier",
+        competitor: "Uniquement votre bureau",
+        geotapp: "Vous, le client, un tiers, en toute autonomie",
       },
       {
-        label: 'En cas de litige',
-        competitor: 'Données non défendables',
-        geotapp: 'Rapport scellé, toute modification détectable',
+        label: "En cas de contestation",
+        competitor: "Uniquement votre parole",
+        geotapp: "Rapport scellé, toute modification est détectable",
       },
       {
-        label: 'Preuve photographique',
-        competitor: 'Absente ou déconnectée',
-        geotapp: 'Jointe au rapport avec horodatage et GPS',
+        label: "Photos de preuve",
+        competitor: "Absentes ou déconnectées",
+        geotapp: "Jointes au rapport avec horodatage et GPS",
       },
       {
-        label: 'Conformité RGPD',
-        competitor: 'Souvent à vérifier',
-        geotapp: 'Conçu pour rester dans le cadre du RGPD, formulaires inclus',
+        label: "Conformité RGPD",
+        competitor: "Souvent à vérifier",
+        geotapp: "Conçu pour rester dans le cadre du RGPD, modèles de documents inclus",
       },
     ],
   },
 
   features: {
-    title: 'App pour entreprise de nettoyage : preuves de service, pas juste du pointage.',
+    title: "Appli pour entreprise de propreté : des preuves de service, pas seulement des pointages.",
     items: [
       {
-        title: 'Preuves de service automatiques',
-        desc: 'Chaque intervention terminée génère un rapport avec GPS, photos et horodatage. Le client le reçoit et vérifie de manière autonome.',
+        title: "Preuves de service automatiques",
+        desc: "Chaque intervention terminée génère un rapport avec GPS, photos et horodatage. Le client le reçoit et le vérifie seul, sans accès à votre système.",
       },
       {
-        title: 'Contrôle réel sur tous les sites',
-        desc: 'Voyez qui est actif où, sur tous les bâtiments, mis à jour à chaque pointage. Aucun appel, aucun e-mail.',
+        title: "Une vision claire de tous les sites",
+        desc: "Vous voyez qui a pointé, et où, dans tous les bâtiments, à mesure que chaque pointage arrive. Pas de coups de fil, pas d'e-mails. Entre deux pointages, rien n'est enregistré automatiquement.",
       },
       {
-        title: 'Rapports défendables partout',
-        desc: 'Chaque rapport est signé numériquement, et toute modification est détectable. Un client, un inspecteur ou un avocat peut le vérifier lui-même.',
+        title: "Des rapports que chacun peut contrôler",
+        desc: "Chaque rapport est scellé, et toute modification est détectable. Un client, un inspecteur ou un conseil peut le vérifier en toute autonomie.",
       },
       {
-        title: 'Gestion des plannings et équipes',
-        desc: 'Assignez des services, gérez les missions et recevez des alertes automatiques si une intervention n\'est pas ouverte ou fermée à temps.',
+        title: "Gestion des vacations et des équipes",
+        desc: "Assignez les vacations, gérez les chantiers et recevez une alerte si une vacation reste ouverte.",
       },
       {
-        title: 'Documentation photographique',
-        desc: 'Les agents photographient directement depuis l\'app. Chaque image est géolocalisée avec horodatage, preuve visuelle du travail effectué.',
+        title: "Documentation photographique",
+        desc: "Les agents prennent des photos directement depuis l'appli. Chaque image porte l'heure et la position : une preuve visuelle du travail accompli.",
       },
       {
-        title: 'Votre personnel est protégé',
-        desc: 'Un rapport vérifiable protège aussi l\'agent contre les accusations infondées. Le bon travail est prouvé par les données.',
+        title: "Votre personnel est protégé",
+        desc: "Un rapport vérifiable donne aussi à l'agent de quoi répondre aux accusations infondées. Un travail bien fait se démontre avec des données.",
       },
     ],
   },
 
   testimonial: {
-    quote:
-      'Depuis que nous utilisons GeoTapp, les litiges clients se résolvent en une minute. Nous envoyons le rapport avec photos et GPS, et la discussion s\'arrête là. Nous n\'avons perdu aucun contrat en un an.',
-    author: 'Sophie M.',
-    role: 'Gérante, entreprise de nettoyage industriel - France',
+    quote: "Quand un client conteste une prestation, nous envoyons le rapport avec photos et position et il le contrôle lui-même.",
+    author: "Sabine M.",
+    role: "Dirigeante, entreprise de propreté",
   },
 
   faq: {
-    title: 'Questions fréquentes',
-    subtitle: 'Ce qu\'on nous demande le plus souvent avant de commencer.',
+    title: "Questions fréquentes",
+    subtitle: "Ce qu'on nous demande le plus souvent avant de commencer.",
     items: [
       {
-        q: 'Comment fonctionne le pointage GPS pour les entreprises de nettoyage ?',
-        a: 'L\'agent pointe entrée et sortie depuis son smartphone. GeoTapp enregistre les coordonnées GPS à ce moment, pas de saisie manuelle. Chaque pointage est scellé avec horodatage et position vérifiable par le donneur d\'ordre.',
+        q: "Comment fonctionne le pointage GPS pour les entreprises de propreté ?",
+        a: "L'agent pointe son arrivée et son départ depuis son smartphone. GeoTapp enregistre la position GPS à cet instant, sans saisie manuelle. Chaque pointage figure dans le rapport scellé avec horodatage et position, que le client peut vérifier.",
       },
       {
-        q: 'Puis-je prouver au client que le service a été effectué ?',
-        a: 'Oui. GeoTapp génère automatiquement un rapport scellé avec GPS, photos et horodatage à chaque fin d\'intervention. Le client le reçoit et vérifie de manière autonome.',
+        q: "Puis-je prouver au client que la prestation a été réalisée ?",
+        a: "Oui. GeoTapp génère automatiquement un rapport scellé avec GPS, photos et horodatage à la fin de chaque intervention. Le client le reçoit et le vérifie seul, sans accès à votre système.",
       },
       {
-        q: 'GeoTapp est-il conçu pour respecter le RGPD sur la géolocalisation des salariés ?',
-        a: 'Oui. GeoTapp ne géolocalise que pendant les heures de travail actives, inclut les formulaires d\'information aux salariés et ne collecte aucune donnée inutile.',
+        q: "GeoTapp est-il conçu pour rester dans le cadre du RGPD pour la géolocalisation des salariés ?",
+        a: "GeoTapp est conçu pour rester dans le cadre des règles de protection des données : il n'enregistre la position que lorsque l'agent pointe (début, pause, fin) ou prend une photo de preuve, fait signer l'information aux salariés dans l'appli avant le premier pointage et ne collecte aucune donnée inutile. Rien n'est enregistré automatiquement entre-temps.",
       },
       {
-        q: 'Comment gérer des équipes réparties sur plusieurs sites ?',
-        a: 'Avec GeoTapp Flow vous avez un seul tableau de bord pour tous les sites. Voyez qui est actif où, mis à jour à chaque pointage, assignez des missions et recevez des alertes automatiques.',
+        q: "Comment gérer des équipes réparties sur plusieurs sites ?",
+        a: "Avec GeoTapp Flow, vous avez un seul écran pour tous les sites. Vous voyez qui a pointé et où, vous assignez des chantiers et vous recevez une alerte si une vacation reste ouverte.",
       },
       {
-        q: 'Les feuilles de présence papier sont-elles encore nécessaires ?',
-        a: 'Non. GeoTapp remplace entièrement les feuilles de présence par un suivi GPS automatique depuis le smartphone. Les données sont exportables pour le traitement de la paie.',
+        q: "Les feuilles de présence papier sont-elles encore nécessaires ?",
+        a: "Non. GeoTapp remplace les feuilles de présence papier par des pointages depuis le smartphone. Les données s'exportent en Excel ou CSV pour le traitement de la paie.",
       },
       {
-        q: 'Combien coûte GeoTapp pour une entreprise de nettoyage ?',
-        a: 'Les plans démarrent à quelques euros par agent par mois. Essai gratuit de 14 jours, sans engagement.',
+        q: "Combien coûte GeoTapp pour une entreprise de propreté ?",
+        a: "GeoTapp Flow démarre à 39 € par mois ; chaque agent équipé de l'appli TimeTracker coûte 3 € de plus par mois (2,50 € à partir du 26e poste). L'abonnement court sur 12 mois minimum. Les prix sont hors TVA. Vous pouvez l'essayer gratuitement pendant 14 jours, sans carte bancaire.",
+      },
+      {
+        q: "GeoTapp fait-il du suivi GPS des agents ?",
+        a: "Pas de suivi en continu. L'agent pointe son arrivée et son départ depuis son smartphone et chaque pointage est lié à une position GPS et à un horodatage, enregistrés à cet instant (début, pause, fin) et lorsqu'une photo de preuve est prise. C'est une position pour prouver la présence, pas de la surveillance : rien n'est enregistré automatiquement entre-temps, et l'appli ne demande pas l'autorisation de localisation en arrière-plan.",
       },
     ],
   },
 
   cta: {
-    title: 'Vos agents font du bon travail. Faites en sorte que le client le voie.',
-    subtitle:
-      'Chaque intervention devient une preuve de service vérifiable. Moins de litiges, moins de contrats perdus.',
-    primary: 'Commencez gratuitement !',
-    secondary: 'Voir les Tarifs',
+    title: "Vos agents font du bon travail. Faites en sorte que le client le voie.",
+    subtitle: "Chaque intervention devient un rapport que vous pouvez montrer, et que le client peut vérifier seul.",
+    primary: "Essayer gratuitement pendant 14 jours",
+    secondary: "Voir les tarifs",
   },
 
   pricing_hint: {
-    label: 'À partir de',
-    per: 'agent/mois',
-    note: 'Essai gratuit 14 jours',
+    label: "Postes TimeTracker à partir de",
+    per: "par agent et par mois, en plus de l'offre Flow à partir de 39 € par mois (hors TVA)",
+    note: "Essai gratuit de 14 jours",
   },
 
-  schema_sector_name: 'Entreprise de Nettoyage',
+  schema_sector_name: "Entreprise de propreté",
 
   schema_faq: [
     {
-      question: 'Comment fonctionne le pointage GPS pour les entreprises de nettoyage ?',
-      answer:
-        'L\'agent pointe depuis son smartphone. GeoTapp enregistre les coordonnées GPS, pas de saisie manuelle. Chaque pointage est scellé avec horodatage et position vérifiable par le donneur d\'ordre.',
+      question: "Comment fonctionne le pointage GPS pour les entreprises de propreté ?",
+      answer: "L'agent pointe son arrivée et son départ depuis son smartphone. GeoTapp enregistre la position GPS à cet instant, sans saisie manuelle. Chaque pointage figure dans le rapport scellé avec horodatage et position, que le client peut vérifier.",
     },
     {
-      question: 'Puis-je prouver au client que le service a été effectué ?',
-      answer:
-        'Oui. GeoTapp génère automatiquement un rapport scellé avec GPS, photos et horodatage. Le client le reçoit et vérifie de manière autonome.',
+      question: "Puis-je prouver au client que la prestation a été réalisée ?",
+      answer: "Oui. GeoTapp génère automatiquement un rapport scellé avec GPS, photos et horodatage. Le client le reçoit et le vérifie seul.",
     },
     {
-      question: 'GeoTapp est-il conçu pour respecter le RGPD sur la géolocalisation des salariés ?',
-      answer:
-        'Oui. GeoTapp ne géolocalise que pendant les heures de travail actives, inclut les formulaires d\'information aux salariés et ne collecte aucune donnée inutile.',
+      question: "GeoTapp est-il conçu pour rester dans le cadre du RGPD pour la géolocalisation des salariés ?",
+      answer: "GeoTapp est conçu pour rester dans le cadre des règles de protection des données : il n'enregistre la position que lorsque l'agent pointe (début, pause, fin) ou prend une photo de preuve, fait signer l'information aux salariés dans l'appli avant le premier pointage et ne collecte aucune donnée inutile. Rien n'est enregistré automatiquement entre-temps.",
+    },
+    {
+      question: "GeoTapp fait-il du suivi GPS des agents ?",
+      answer: "Pas de suivi en continu. L'agent pointe son arrivée et son départ depuis son smartphone et chaque pointage est lié à une position GPS et à un horodatage, enregistrés à cet instant (début, pause, fin) et lorsqu'une photo de preuve est prise. Rien n'est enregistré automatiquement entre-temps.",
     },
   ],
 };

@@ -418,6 +418,22 @@ export const NON_IN_VETRINA = new Set<string>([
   'geotapp-vs-hubstaff-2026-surveillance-vs-certificering',
   'geotapp-vs-clockify-2026-tijdregistratie-certificering',
   'fotobewijs-werkbonnen-schoonmaakbedrijven-2026',
+  // Versioni francesi: titoli che promettono esiti, conformita' o prova che la scheda claim
+  // vieta («certification», «infalsifiable», «valeur légale», «bloquer les litiges»,
+  // «conforme», «rester en règle», «qui est sur le chantier maintenant»). Aggiunte il 30/09/2026.
+  'geotapp-vs-hubstaff-2026-surveillance-vs-certification',
+  'geotapp-vs-clockify-2026-comparaison-pointage-certification',
+  'rapport-intervention-infalsifiable',
+  'rapport-intervention-non-falsifiable',
+  'prouver-travail-execute-client',
+  'contestation-client-nettoyage-non-realise',
+  'obligation-preuve-service-nettoyage-logiciel',
+  'suivi-temps-equipe-mobile-rgpd',
+  'tracking-gps-agents-securite-rgpd',
+  'avis-confidentialite-gps-salaries-automatique-geotapp-flow',
+  'rapport-numerique-electricien',
+  'application-tracking-equipe-mobile-france',
+  'application-presence-chantier-gps',
 ]);
 
 export function filterPosts<T extends WpIndexEntry>(

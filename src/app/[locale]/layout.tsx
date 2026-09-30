@@ -89,18 +89,17 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
   },
   fr: {
     description:
-      'GeoTapp génère des preuves vérifiables du travail effectué sur le terrain : rapports scellés avec données GPS réelles, preuves photographiques horodatées et documentation aux modifications traçables, vérifiable par n\'importe qui.',
+      'GeoTapp est un logiciel qui prouve le travail de terrain : à chaque pointage, il enregistre la position et l\'heure, recueille des photos de preuve et referme le tout dans un rapport scellé que le client peut vérifier seul. La position n\'est relevée qu\'au pointage, jamais en continu.',
     featureList: [
-      'Rapports de travail aux modifications traçables, vérifiables indépendamment par n\'importe qui',
-      'Preuves photographiques liées au timestamp GPS et à l\'intervention',
-      'Documentation d\'intervention : toute modification est détectable',
-      'Preuve du travail : evidence objective pour chaque intervention terrain',
-      'Pointage vérifiable par GPS',
-      'Gestion des ordres de travail et interventions',
-      'Conforme RGPD, pas de suivi continu',
-      'Application mobile Android et iOS (Flutter)',
+      'Rapports scellés : toute modification ultérieure est détectable, et chacun peut les vérifier sans compte',
+      'Photos de preuve liées à l\'heure, à la position et à l\'intervention',
+      'Pointage avec position à l\'arrivée, aux pauses et au départ',
+      'Pas de suivi continu : entre deux pointages, rien n\'est enregistré automatiquement',
+      'Gestion des chantiers, des équipes et des interventions depuis le bureau (GeoTapp Flow, web)',
+      'Application native pour les opérateurs de terrain sur Android et iOS (GeoTapp TimeTracker)',
+      'Vérificateur gratuit, y compris hors ligne (GeoTapp Verifier)',
     ],
-    offersDescription: 'Essai gratuit 14 jours, plans payants à partir de {price}/opérateur/mois via Stripe',
+    offersDescription: 'Essai gratuit de 14 jours, sans carte. Ensuite, un abonnement GeoTapp Flow et des postes TimeTracker à partir de {price} par opérateur et par mois, durée minimale de 12 mois',
   },
   es: {
     description:
