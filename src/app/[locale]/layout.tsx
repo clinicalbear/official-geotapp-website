@@ -103,18 +103,17 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
   },
   es: {
     description:
-      'GeoTapp genera pruebas verificables del trabajo realizado en campo: informes sellados con datos GPS reales, evidencias fotográficas con marca de tiempo y documentación con alteraciones detectables que cualquiera puede verificar.',
+      'GeoTapp es el software para demostrar el trabajo en campo: en cada fichaje registra ubicación y hora, recoge las fotos de prueba y lo cierra todo en un informe sellado que el cliente verifica por sí mismo. La ubicación se registra solo cuando el trabajador ficha, nunca de forma continua.',
     featureList: [
-      'Informes de trabajo con alteraciones detectables, verificables independientemente por cualquiera',
-      'Evidencias fotográficas vinculadas a timestamp GPS y trabajo',
-      'Documentación de intervenciones: cualquier cambio es detectable',
-      'Prueba del trabajo: evidencia objetiva para cada intervención en campo',
-      'Fichaje verificable por GPS',
-      'Gestión de órdenes de trabajo e intervenciones',
-      'Conforme RGPD, sin seguimiento continuo',
-      'App móvil para Android e iOS (Flutter)',
+      'Informes sellados: cualquier modificación posterior es detectable, y cualquiera puede verificarlos sin cuenta',
+      'Fotos de prueba vinculadas a la hora, la ubicación y la obra',
+      'Fichaje con ubicación en la entrada, las pausas y la salida',
+      'Sin seguimiento continuo: entre un fichaje y otro no se registra nada de forma automática',
+      'Gestión de obras, equipos e intervenciones desde la oficina (GeoTapp Flow, web)',
+      'Aplicación nativa para los operarios en Android e iOS (GeoTapp TimeTracker)',
+      'Verificador gratuito, también sin conexión (GeoTapp Verifier)',
     ],
-    offersDescription: 'Prueba gratuita 14 días, planes de pago desde {price}/operador/mes via Stripe',
+    offersDescription: 'Prueba gratuita de 14 días sin tarjeta. Después, GeoTapp Flow desde 39 € al mes y los puestos de TimeTracker desde {price} por operario al mes, suscripción mínima de 12 meses',
   },
   pt: {
     description:

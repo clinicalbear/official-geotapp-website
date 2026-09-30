@@ -5,20 +5,20 @@
 // Rigenerato l'ultima volta: 2026-09-30
 
 export const CONTENT_DATES: Record<string, string> = {
-  "settori/pulizie": "2026-09-30",
-  "settori/installatori": "2026-09-30",
-  "settori/sicurezza": "2026-09-30",
-  "settori/elettricisti": "2026-09-30",
-  "settori/idraulici": "2026-09-30",
-  "settori/termoidraulici": "2026-09-30",
-  "settori/edilizia": "2026-09-30",
-  "settori/impianti": "2026-09-30",
-  "settori/manutenzione": "2026-09-30",
-  "products/geotapp-flow": "2026-09-30",
-  "products/geotapp-timetracker": "2026-09-30",
-  "products/geotapp-verifier": "2026-09-30",
-  "cos-e-geotapp": "2026-09-30",
-  "pricing": "2026-09-30",
+  "settori/pulizie": "2026-10-01",
+  "settori/installatori": "2026-10-01",
+  "settori/sicurezza": "2026-10-01",
+  "settori/elettricisti": "2026-10-01",
+  "settori/idraulici": "2026-10-01",
+  "settori/termoidraulici": "2026-10-01",
+  "settori/edilizia": "2026-10-01",
+  "settori/impianti": "2026-10-01",
+  "settori/manutenzione": "2026-10-01",
+  "products/geotapp-flow": "2026-10-01",
+  "products/geotapp-timetracker": "2026-10-01",
+  "products/geotapp-verifier": "2026-10-01",
+  "cos-e-geotapp": "2026-10-01",
+  "pricing": "2026-10-01",
   "roi-calculator": "2026-09-30"
 };
 

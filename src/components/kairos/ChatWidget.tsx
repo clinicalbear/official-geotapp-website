@@ -14,7 +14,7 @@ interface Message {
   suggestions?: string[];
 }
 
-const ARIA_CLOSE: Record<string, string> = { de: 'Chat schließen', it: 'Chiudi la chat', nl: 'Chat sluiten', fr: 'Fermer le chat' };
+const ARIA_CLOSE: Record<string, string> = { de: 'Chat schließen', it: 'Chiudi la chat', nl: 'Chat sluiten', fr: 'Fermer le chat', es: 'Cerrar el chat' };
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);

@@ -9,7 +9,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
   de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Règles et documents',
-  es: 'Cumplimiento normativo en España',
+  es: 'Normativa y documentación en España',
   pt: 'Conformidade em Portugal',
   nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
@@ -64,16 +64,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   es: [
     {
-      q: '¿Qué registro de jornada exige el convenio de limpieza de edificios?',
-      a: 'Registro diario obligatorio (art. 34.9 ET, RD-ley 8/2019) por trabajador y centro, plus de domingo y nocturnidad y la subrogación de personal al cambiar de contrata, capturado en cada turno.',
+      q: '¿Qué registro de horarios conviene en una empresa de limpieza?',
+      a: 'GeoTapp registra horas, pausas y salidas por trabajador y por centro, con posición y hora, y las exporta a Excel o CSV para tu gestoría o asesor laboral. Los pluses de nocturnidad y festivos, las tablas salariales del convenio y la aplicación del convenio siguen siendo cosa de la gestoría y de la empresa.',
     },
     {
-      q: '¿RGPD y AEPD para la geolocalización de operarios?',
-      a: 'Información previa, interés legítimo y el art. 90 LOPDGDD: geolocalización solo durante la jornada y de forma proporcionada, con derecho de acceso del trabajador.',
+      q: '¿Geolocalización de limpiadores: RGPD y AEPD?',
+      a: 'La posición solo se registra al fichar y con las fotos de prueba, nunca de forma continua, y la información a los trabajadores se firma en la app antes de fichar. Corresponde a la empresa comprobar qué exigen en su caso el RGPD (interés legítimo), el art. 90 LOPDGDD y la información a la representación de los trabajadores.',
     },
     {
-      q: '¿SMI y tablas salariales del convenio por operario?',
-      a: 'Conciliación horas-salario frente al SMI y a las tablas del convenio sectorial de limpieza, con histórico de antigüedad y pluses por trabajador.',
+      q: '¿Subrogación al cambiar de contrata y tablas salariales?',
+      a: 'GeoTapp no gestiona la subrogación del personal ni las tablas salariales. Conserva el historial de horas y presencias de cada trabajador, exportable a Excel o CSV: la aplicación del convenio sigue siendo cosa de la gestoría.',
     },
   ],
   pt: [

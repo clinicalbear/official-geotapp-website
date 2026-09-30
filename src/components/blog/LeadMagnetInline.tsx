@@ -94,7 +94,7 @@ export const LEAD_MAGNETS: Record<string, LeadMagnetAsset> = {
       },
       es: {
         title: 'Descarga la plantilla gratuita de aviso de privacidad GPS para España',
-        desc: 'Modelo de aviso de privacidad para la geolocalización de empleados, conforme al art. 13 del RGPD, con la base jurídica y la autoridad de control del país. Rellena los campos en blanco y hazlo revisar por tu asesor.',
+        desc: 'Modelo de aviso de privacidad para la geolocalización de empleados, construido sobre el contenido del art. 13 del RGPD, con la base jurídica y la autoridad de control del país. Rellena los campos en blanco y hazlo revisar por tu asesor.',
         download: 'Descargar la plantilla (PDF)',
         newsletterPrompt: '¿Quieres también las próximas guías prácticas sobre GPS y gestión de equipos de campo? Deja tu correo (opcional).',
         placeholder: 'Tu correo',

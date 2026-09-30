@@ -36,6 +36,7 @@ interface Props {
 const YES_NO: Record<string, [string, string]> = {
   de: ['Ja', 'Nein'],
   fr: ['Oui', 'Non'],
+  es: ['Sí', 'No'],
   nl: ['Ja', 'Nee'],
 };
 

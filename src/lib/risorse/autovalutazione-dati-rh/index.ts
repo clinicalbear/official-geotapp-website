@@ -214,7 +214,7 @@ const CONTENUTI: Record<AvLocale, AvContenuto> = {
     ] },
   },
   es: {
-    heading: '¿Cumples con los datos de tus empleados?',
+    heading: '¿Estás en regla con los datos de tus empleados?',
     intro: 'Nueve preguntas rápidas para ver cómo estás en la protección de los datos del personal: fichajes, ubicación, fotos de obra. Responde con sinceridad — nada sale de tu navegador, esta página no registra nada. Al final obtienes una puntuación y las áreas en las que trabajar.',
     opt: { si: 'Sí', parziale: 'En parte', no: 'No' },
     vediRisultato: 'Ver el resultado',

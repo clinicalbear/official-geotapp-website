@@ -112,6 +112,29 @@ const TT_COPY: Record<string, TtCopy> = {
     trial: 'Commencez l\'essai gratuit de 14 jours',
     availableOn: 'Disponible sur',
   },
+  es: {
+    statusLabel: 'Dónde se usa',
+    releaseNote: 'TimeTracker es una aplicación nativa, disponible en Google Play y App Store: requiere Android 8.0 o posterior, o iOS 26.2 o posterior. Lo que registra el operario llega a Flow en cuanto hay cobertura.',
+    mobileKicker: 'Aplicación para el teléfono',
+    downloadTitle: 'Descarga GeoTapp TimeTracker',
+    downloadSub: 'Disponible en Google Play y en App Store.',
+    doesTitle: 'Qué hace GeoTapp TimeTracker',
+    doesSub: 'No solo la asistencia: recoge sobre el terreno las pruebas del trabajo, que la oficina usa para el informe y que el cliente puede verificar.',
+    highlights: [
+      { title: 'Fichajes con ubicación y hora', description: 'La entrada, las pausas y la salida registran la ubicación, la dirección y la hora en el momento en que el operario ficha. Entre un fichaje y otro no se registra nada de forma automática.' },
+      { title: 'Pruebas que el cliente puede comprobar', description: 'Los operarios hacen fotos, añaden notas y envían las pruebas del trabajo vinculadas a la obra. Van a parar al informe sellado que el cliente verifica por sí mismo.' },
+      { title: 'Un historial que la oficina puede usar', description: 'Lo que se recoge sobre el terreno llega a Flow y sirve enseguida para el informe al cliente, la cronología de la obra y la liquidación final.' },
+      { title: 'Uso del coche, recibos y reembolsos', description: 'El operario declara el uso del coche durante el turno, registra repostajes y gastos con la foto del recibo, y la oficina los aprueba.' },
+    ],
+    workflow: [
+      { title: 'Mucho más que un simple fichaje', description: 'TimeTracker incluye el detalle de la obra, informes, comunicaciones, solicitudes de vacaciones y permisos, y sesiones de trabajo: no solo asistencia.' },
+      { title: 'Terreno, oficina y cliente sobre los mismos datos', description: 'El trabajo sobre el terreno no se queda aislado: la oficina sigue el avance, revisa las pruebas y responde al cliente con hechos.' },
+    ],
+    complianceTagline: 'Primero se firma la información, después se ficha.*',
+    complianceFootnote: '* Por ley hay que informar a cada trabajador antes de geolocalizarlo. GeoTapp prepara la información, la hace firmar como enterado en la aplicación y no deja fichar hasta que está firmada.',
+    trial: 'Empieza la prueba gratuita de 14 días',
+    availableOn: 'Disponible en',
+  },
   nl: {
     statusLabel: 'Waar u het gebruikt',
     releaseNote: 'TimeTracker is een native app, beschikbaar op Google Play en de App Store: vereist Android 8.0 of nieuwer, of iOS 26.2 of nieuwer. Wat de medewerker registreert, komt in Flow aan zodra er netwerk is.',
@@ -392,7 +415,7 @@ export default function GeoTappApp() {
         <div className="r-s d1" style={{ display: 'flex', justifyContent: 'center' }}>
           <div className="sheet">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/verifier-report.webp" alt={currentLocale === 'it' ? 'Report sigillato GeoTapp' : currentLocale === 'de' ? 'Versiegelter GeoTapp-Bericht' : currentLocale === 'fr' ? 'Rapport scellé GeoTapp' : currentLocale === 'nl' ? 'Verzegeld GeoTapp-rapport' : 'GeoTapp sealed report'} loading="lazy" />
+            <img src="/verifier-report.webp" alt={currentLocale === 'it' ? 'Report sigillato GeoTapp' : currentLocale === 'de' ? 'Versiegelter GeoTapp-Bericht' : currentLocale === 'fr' ? 'Rapport scellé GeoTapp' : currentLocale === 'nl' ? 'Verzegeld GeoTapp-rapport' : currentLocale === 'es' ? 'Informe sellado de GeoTapp' : 'GeoTapp sealed report'} loading="lazy" />
           </div>
         </div>
       </div></div></section>

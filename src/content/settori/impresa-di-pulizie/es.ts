@@ -2,35 +2,33 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App para Empresa de Limpieza: Gestión GPS de Equipos y Prueba de Servicio | GeoTapp',
-    description:
-      'Gestiona equipos de limpieza, turnos y asistencia con fichajes GPS sellados. Pruebas automáticas de servicio, menos disputas. App diseñada para el RGPD.',
+    title: 'App para empresas de limpieza: equipos y GPS | GeoTapp',
+    description: 'Gestiona equipos, turnos y asistencia con fichajes GPS. Pruebas de servicio automáticas para cuando un cliente discute. Pensada para el RGPD.',
   },
 
   hero: {
-    badge: 'App para empresas de limpieza y multiservicio',
+    badge: 'App para empresas de limpieza y multiservicios',
     h1_line1: 'Tu empresa de limpieza,',
-    h1_line2: 'controlada sin llamadas.',
-    subtitle:
-      'Fichajes GPS, pruebas de servicio automáticas y gestión de turnos en una sola app. Sin hojas de cálculo, sin disputas. ¿El cliente reclama? Envía el informe y la discusión termina.',
+    h1_line2: 'gestionada fichaje a fichaje.',
+    subtitle: 'Fichajes GPS, pruebas de servicio automáticas y gestión de turnos en una sola app. Cero Excel, menos discusiones. ¿El cliente se queja? Envías el informe en lugar de discutir de palabra.',
     cta_primary: 'Pruébalo en un contrato real',
-    cta_note: '14 días, hasta 50 operarios de campo, sin tarjeta de crédito.',
+    cta_note: '14 días, hasta 50 operarios sobre el terreno, sin tarjeta de crédito.',
   },
 
   pain: {
     title: 'Problemas que resolvemos cada día',
     items: [
       {
-        title: '¿Los clientes disputan las horas trabajadas?',
-        desc: 'Cada fichaje es verificado por GPS y tiene marca de tiempo. Envía el informe y la discusión termina en treinta segundos.',
+        title: '¿Los clientes discuten las horas trabajadas?',
+        desc: 'Cada fichaje registra la posición y la hora. Envías el informe y el cliente puede comprobarlo él mismo.',
       },
       {
-        title: '¿Las hojas de presencia en papel son poco fiables?',
-        desc: 'Seguimiento automático desde el smartphone, sin entradas manuales. El dato es lo que es, y no se puede cambiar.',
+        title: '¿Los partes de asistencia en papel no son fiables?',
+        desc: 'Fichajes desde el smartphone, sin introducir nada a mano. El dato queda tal como se registró: cualquier modificación es detectable.',
       },
       {
-        title: '¿Difícil coordinar varios equipos?',
-        desc: 'Mira quién ha fichado en cada sede, desde un único panel actualizado a cada fichaje. Sin llamadas.',
+        title: '¿Cuesta coordinar varios equipos?',
+        desc: 'Ves quién ha fichado, y dónde, en todos los centros, desde un único panel. Sin llamadas.',
       },
     ],
   },
@@ -38,16 +36,16 @@ const content: SettoreContent = {
   prima_dopo: {
     title: 'Lo que pasa ahora. Lo que pasa con GeoTapp.',
     prima: [
-      'El cliente llama y dice que el baño no se limpió.',
-      'El operario dice "Lo hice". El cliente dice "No lo hizo".',
-      'No tienes nada para demostrar nada.',
-      'La discusión se alarga durante días. A veces pierdes el contrato.',
+      'El cliente llama y dice que no han limpiado el baño.',
+      'El operario dice «lo hice». El cliente dice «no lo hizo».',
+      'No tienes nada en la mano para demostrar nada.',
+      'La discusión dura días. A veces pierdes el contrato.',
     ],
     dopo: [
-      'El cliente llama y dice que el baño no se limpió.',
-      'Abres el informe de la intervención: foto del baño limpio, hora, GPS.',
-      'Lo envías. La discusión termina en treinta segundos.',
-      'El contrato está a salvo. El operario está protegido.',
+      'El cliente llama y dice que no han limpiado el baño.',
+      'Abres el informe del servicio: foto del baño limpio, hora, posición.',
+      'Se lo envías, y lo comprueba él mismo.',
+      'Tienes algo que mostrar. El operario también.',
     ],
   },
 
@@ -56,38 +54,38 @@ const content: SettoreContent = {
     subtitle: 'Tres pasos sencillos. Cero papel. Cero llamadas.',
     steps: [
       {
-        title: 'El operario ficha con GPS',
-        desc: 'Abre y cierra su turno desde el smartphone. GeoTapp registra coordenadas GPS reales, fotos y marca de tiempo, todo automático y sellado.',
+        title: 'El operario ficha en el centro',
+        desc: 'Abre y cierra el turno desde el smartphone. GeoTapp registra la posición y la hora en ese momento y, si hace falta, fotos de prueba. Entre un fichaje y otro no registra nada de forma automática.',
       },
       {
-        title: 'El responsable lo sabe en cuanto se ficha',
-        desc: 'Un panel para todas las sedes. Sabes exactamente quién está en cada sitio, dónde y desde cuándo, sin perseguir a nadie.',
+        title: 'El responsable ve cada fichaje en cuanto llega',
+        desc: 'Un único panel para todos los centros. Ves quién ha fichado, dónde y a qué hora, sin perseguir a nadie.',
       },
       {
         title: 'El informe está listo automáticamente',
-        desc: 'Al final del turno, el sistema genera un informe sellado con GPS, fotos y firma digital. Envíalo al cliente, verificable de forma autónoma.',
+        desc: 'Al final del turno, el sistema genera un informe sellado con GPS, fotos y sello criptográfico. Envíaselo al cliente, que puede verificarlo de forma autónoma.',
       },
     ],
   },
 
   differenza: {
-    title: 'Fichaje vs Prueba de servicio.',
-    subtitle: 'La mayoría de las apps registran horarios. GeoTapp produce pruebas para tu cliente.',
+    title: 'Fichaje o prueba de servicio.',
+    subtitle: 'La mayoría de las apps registra horarios. GeoTapp produce pruebas para tu cliente.',
     rows: [
       {
         label: 'Qué registra',
-        competitor: 'Hora de entrada/salida',
-        geotapp: 'Hora + GPS verificado + fotos + tareas realizadas',
+        competitor: 'Hora de entrada y salida',
+        geotapp: 'Hora + posición en el fichaje + fotos + tareas realizadas',
       },
       {
         label: 'Quién puede verificar',
         competitor: 'Solo tu oficina',
-        geotapp: 'Tú, el cliente, un tercero, de forma independiente',
+        geotapp: 'Tú, el cliente, un tercero, de forma autónoma',
       },
       {
-        label: 'En caso de disputa',
-        competitor: 'Datos no defendibles',
-        geotapp: 'Informe sellado, cualquier cambio es detectable',
+        label: 'En caso de discusión',
+        competitor: 'Solo tu palabra',
+        geotapp: 'Informe sellado, cualquier modificación es detectable',
       },
       {
         label: 'Prueba fotográfica',
@@ -95,112 +93,115 @@ const content: SettoreContent = {
         geotapp: 'Adjunta al informe con marca de tiempo y GPS',
       },
       {
-        label: 'Conformidad RGPD',
-        competitor: 'Frecuentemente por verificar',
-        geotapp: 'Diseñado para el RGPD, con modelo de información incluido',
+        label: 'Protección de datos (RGPD)',
+        competitor: 'A menudo por comprobar',
+        geotapp: 'Construido para moverse dentro de los límites del RGPD, con modelos de documentación incluidos',
       },
     ],
   },
 
   features: {
-    title: 'App para empresa de limpieza: pruebas de servicio, no solo fichajes.',
+    title: 'App para empresas de limpieza: pruebas de servicio, no solo fichajes.',
     items: [
       {
         title: 'Pruebas de servicio automáticas',
-        desc: 'Cada intervención completada genera un informe con GPS, fotos y marca de tiempo. El cliente lo recibe y verifica de forma autónoma.',
+        desc: 'Cada servicio cerrado genera un informe con GPS, fotos y marca de tiempo. El cliente lo recibe y lo verifica solo, sin acceso a tu sistema.',
       },
       {
-        title: 'Control real sobre todas las sedes',
-        desc: 'Mira quién ha fichado y dónde, en todos los edificios, actualizado a cada fichaje. Sin llamadas, sin emails.',
+        title: 'Visión clara de todos los centros',
+        desc: 'Ves quién ha fichado, y dónde, en todos los edificios, según va llegando cada fichaje. Sin llamadas, sin correos. Entre un fichaje y otro no se registra nada de forma automática.',
       },
       {
-        title: 'Informes defendibles en cualquier ámbito',
-        desc: 'Cada informe está firmado digitalmente y cualquier cambio es detectable. Un cliente, un inspector o un abogado pueden comprobarlo por su cuenta.',
+        title: 'Informes que cualquiera puede comprobar',
+        desc: 'Cada informe está sellado y cualquier modificación es detectable. Un cliente, un inspector o un abogado puede verificarlo de forma autónoma.',
       },
       {
         title: 'Gestión de turnos y equipos',
-        desc: 'Asigna turnos, gestiona encargos y recibe alertas automáticas si una intervención no se abre o cierra a tiempo.',
+        desc: 'Asigna turnos, gestiona contratos y recibe un aviso si un turno se queda abierto.',
       },
       {
         title: 'Documentación fotográfica',
-        desc: 'Los operarios toman fotos directamente desde la app. Cada imagen está geolocalizada con marca de tiempo, prueba visual del trabajo realizado.',
+        desc: 'Los operarios hacen fotos directamente desde la app. Cada imagen lleva la hora y la posición: una prueba visual del trabajo realizado.',
       },
       {
         title: 'Tu personal está protegido',
-        desc: 'Un informe verificable protege también al operario frente a acusaciones infundadas. El buen trabajo se demuestra con datos.',
+        desc: 'Un informe verificable da también al operario con qué responder a acusaciones infundadas. Quien trabaja bien lo demuestra con los datos.',
       },
     ],
   },
 
   testimonial: {
-    quote:
-      'Desde que usamos GeoTapp, las disputas con clientes se resuelven en un minuto. Enviamos el informe con fotos y GPS, y la discusión termina ahí. No hemos perdido ni un contrato en un año.',
-    author: 'Rosa M.',
-    role: 'Propietaria, empresa de limpieza industrial - España',
+    quote: 'Cuando un cliente discute un servicio, enviamos el informe con fotos y posición y lo comprueba él mismo.',
+    author: 'Roberta M.',
+    role: 'Gerente, empresa de limpieza',
   },
 
   faq: {
     title: 'Preguntas frecuentes',
-    subtitle: 'Lo que nos preguntan más a menudo antes de empezar.',
+    subtitle: 'Lo que más nos preguntan antes de empezar.',
     items: [
       {
         q: '¿Cómo funciona el fichaje GPS para empresas de limpieza?',
-        a: 'El operario ficha entrada y salida desde el smartphone. GeoTapp registra las coordenadas GPS en ese momento, no se introducen a mano. Cada fichaje es sellado con marca de tiempo y posición verificable por el cliente.',
+        a: 'El operario ficha entrada y salida desde el smartphone. GeoTapp registra la posición GPS en ese momento, sin introducirla a mano. Cada fichaje figura en el informe sellado con marca de tiempo y posición, que el cliente puede verificar.',
       },
       {
-        q: '¿Puedo mostrar al cliente pruebas verificables del servicio?',
-        a: 'Sí. GeoTapp genera automáticamente un informe sellado con GPS, fotos y marca de tiempo al final de cada intervención. El cliente lo recibe y verifica de forma autónoma.',
+        q: '¿Puedo demostrar al cliente que el servicio se ha realizado?',
+        a: 'Sí. GeoTapp genera automáticamente un informe sellado con GPS, fotos y marca de tiempo al terminar cada servicio. El cliente lo recibe y lo verifica solo, sin acceso a tu sistema.',
       },
       {
-        q: '¿GeoTapp cumple con el RGPD para la geolocalización de empleados?',
-        a: 'GeoTapp está diseñado para encajar en el RGPD: solo geolocaliza durante las horas de trabajo activas, incluye el modelo de información al trabajador y no recopila datos innecesarios.',
+        q: '¿GeoTapp está pensado para moverse dentro del RGPD en la geolocalización de los empleados?',
+        a: 'GeoTapp está construido para moverse dentro de los límites de las normas de protección de datos: registra la posición solo cuando el operario ficha (inicio, pausa, fin) o hace una foto de prueba, hace firmar el aviso informativo a los empleados en la app antes del primer fichaje y no recoge datos innecesarios. Entre un fichaje y otro no se registra nada de forma automática.',
       },
       {
-        q: '¿Cómo gestiono equipos en varias sedes a la vez?',
-        a: 'Con GeoTapp Flow tienes un panel único para todas las sedes. Ves quién ha fichado y dónde, en cuanto sucede, asignas encargos y recibes alertas automáticas.',
+        q: '¿Cómo gestiono equipos repartidos en varios centros a la vez?',
+        a: 'Con GeoTapp Flow tienes un único panel para todos los centros. Ves quién ha fichado y dónde, puedes asignar contratos y recibir un aviso si un turno se queda abierto.',
       },
       {
-        q: '¿Siguen siendo necesarias las hojas de presencia en papel?',
-        a: 'No. GeoTapp sustituye completamente las hojas de presencia por seguimiento GPS automático desde el smartphone. Los datos son exportables para nóminas.',
+        q: '¿Siguen haciendo falta los partes de asistencia en papel?',
+        a: 'No. GeoTapp sustituye los partes de asistencia en papel por fichajes desde el smartphone. Los datos se exportan en Excel o CSV para procesar las nóminas.',
       },
       {
         q: '¿Cuánto cuesta GeoTapp para una empresa de limpieza?',
-        a: 'Los planes empiezan desde pocos euros por operario al mes. Prueba gratis 14 días, sin compromiso.',
+        a: 'GeoTapp Flow empieza en 39 € al mes; cada operario con la app TimeTracker cuesta 3 € más al mes (2,50 € a partir del puesto 26). La suscripción dura 12 meses como mínimo. Los precios no incluyen IVA. Puedes probarlo gratis durante 14 días, sin tarjeta de crédito.',
+      },
+      {
+        q: '¿GeoTapp hace seguimiento GPS de los operarios?',
+        a: 'No hay seguimiento continuo. El operario ficha entrada y salida desde el smartphone y cada fichaje queda vinculado a una posición GPS y a una marca de tiempo, registradas en ese momento (inicio, pausa, fin) y cuando se hace una foto de prueba. Es una posición para demostrar la presencia, no vigilancia: entre un fichaje y otro no se registra nada de forma automática, y la app no pide permiso de ubicación en segundo plano.',
       },
     ],
   },
 
   cta: {
     title: 'Tus operarios trabajan bien. Haz que el cliente lo vea.',
-    subtitle:
-      'Cada intervención se convierte en prueba de servicio verificable. Menos disputas, contratos más seguros.',
-    primary: '¡Empieza gratis ahora!',
-    secondary: 'Ver Precios',
+    subtitle: 'Cada servicio se convierte en un informe que puedes mostrar y que el cliente puede verificar solo.',
+    primary: 'Empezar prueba gratuita de 14 días',
+    secondary: 'Ver precios',
   },
 
   pricing_hint: {
-    label: 'Desde',
-    per: 'operario/mes',
+    label: 'Puestos TimeTracker desde',
+    per: 'por operario al mes, más el plan Flow desde 39 € al mes (IVA no incluido)',
     note: 'Prueba gratuita de 14 días',
   },
 
-  schema_sector_name: 'Empresa de Limpieza',
+  schema_sector_name: 'Empresa de limpieza',
 
   schema_faq: [
     {
       question: '¿Cómo funciona el fichaje GPS para empresas de limpieza?',
-      answer:
-        'El operario ficha desde el smartphone. GeoTapp registra coordenadas GPS, no se introducen a mano. Cada fichaje es sellado con marca de tiempo y posición verificable por el cliente.',
+      answer: 'El operario ficha entrada y salida desde el smartphone. GeoTapp registra la posición GPS en ese momento, sin introducirla a mano. Cada fichaje figura en el informe sellado con marca de tiempo y posición, que el cliente puede verificar.',
     },
     {
-      question: '¿Puedo mostrar al cliente pruebas verificables del servicio?',
-      answer:
-        'Sí. GeoTapp genera automáticamente un informe sellado con GPS, fotos y marca de tiempo. El cliente lo recibe y verifica de forma autónoma.',
+      question: '¿Puedo demostrar al cliente que el servicio se ha realizado?',
+      answer: 'Sí. GeoTapp genera automáticamente un informe sellado con GPS, fotos y marca de tiempo. El cliente lo recibe y lo verifica solo.',
     },
     {
-      question: '¿GeoTapp cumple con el RGPD para la geolocalización de empleados?',
-      answer:
-        'GeoTapp está diseñado para encajar en el RGPD: solo geolocaliza durante las horas de trabajo activas, incluye el modelo de información al trabajador y no recopila datos innecesarios.',
+      question: '¿GeoTapp está pensado para moverse dentro del RGPD en la geolocalización de los empleados?',
+      answer: 'GeoTapp está construido para moverse dentro de los límites de las normas de protección de datos: registra la posición solo cuando el operario ficha (inicio, pausa, fin) o hace una foto de prueba, hace firmar el aviso informativo a los empleados en la app antes del primer fichaje y no recoge datos innecesarios. Entre un fichaje y otro no se registra nada de forma automática.',
+    },
+    {
+      question: '¿GeoTapp hace seguimiento GPS de los operarios?',
+      answer: 'No hay seguimiento continuo. El operario ficha entrada y salida desde el smartphone y cada fichaje queda vinculado a una posición GPS y a una marca de tiempo, registradas en ese momento (inicio, pausa, fin) y cuando se hace una foto de prueba. Entre un fichaje y otro no se registra nada de forma automática.',
     },
   ],
 };

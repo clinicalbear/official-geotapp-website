@@ -62,7 +62,7 @@ export const HOME_META: Record<string, { title: string; description: string }> =
   },
   es: {
     title: 'Software GPS operarios: prueba cada trabajo | GeoTapp',
-    description: '¿Cliente reclama? GeoTapp registra GPS, hora, fotos e informe con alteraciones detectables. Demuestra el trabajo hecho y cobra sin discusiones.',
+    description: 'Software para equipos de campo: en cada fichaje, GeoTapp registra ubicación, horas y fotos y los sella en un informe que el cliente verifica por su cuenta.',
   },
   pt: {
     title: 'Software GPS campo: prove cada serviço | GeoTapp',

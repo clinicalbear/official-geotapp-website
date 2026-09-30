@@ -280,7 +280,7 @@ const TESTI: Record<string, Testi> = {
       'Este documento existió, pero quien lo emitió revocó el enlace. Para obtener una copia hay que pedirla a la empresa que hizo el trabajo.',
     expiredTitle: 'Documento ya no disponible',
     expiredBody:
-      'Este documento existió y ha agotado su periodo de conservación: cinco años después de la fecha del trabajo el paquete se elimina, como exige la protección de datos. Ya no queda ninguna copia que pedir.',
+      'Este documento existió y ha agotado su periodo de conservación: cinco años después de la fecha del trabajo el paquete se elimina, como exige la normativa de protección de datos. Ya no queda ninguna copia que pedir.',
     unknownTitle: 'Código no encontrado',
     unknownBody:
       'El código no corresponde a ningún documento. Conviene revisar los ocho caracteres: la S y el 5, la Z y el 2 se confunden con facilidad.',

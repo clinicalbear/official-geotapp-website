@@ -9,7 +9,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
   de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Règles et documents',
-  es: 'Cumplimiento normativo en España',
+  es: 'Normativa y documentación en España',
   pt: 'Conformidade em Portugal',
   nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
@@ -64,16 +64,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   es: [
     {
-      q: '¿Turnos y horas según el convenio de empresas de seguridad?',
-      a: 'Registro diario (art. 34.9 ET) por vigilante y servicio, pluses de nocturnidad y festivos y conservación de datos, con cobertura de turnos actualizada en cada fichaje.',
+      q: '¿Turnos y horas de los vigilantes?',
+      a: 'GeoTapp registra en cada fichaje entrada, pausas y salida con posición y hora, por vigilante y por servicio, y las exporta a Excel o CSV para tu gestoría o asesor laboral. Los pluses de nocturnidad y festivos y la aplicación del convenio colectivo siguen siendo cosa de la gestoría y de la empresa.',
     },
     {
-      q: '¿RGPD y AEPD para la geolocalización de vigilantes?',
-      a: 'Geolocalización solo durante la jornada, con información previa, interés legítimo y el art. 90 LOPDGDD, con derecho de acceso del trabajador.',
+      q: '¿Geolocalización de vigilantes: RGPD y AEPD?',
+      a: 'La posición solo se registra al fichar y con las fotos de prueba, nunca de forma continua, y la información a los trabajadores se firma en la app antes de fichar. Corresponde a la empresa comprobar qué exigen en su caso el RGPD (interés legítimo), el art. 90 LOPDGDD y la información a la representación de los trabajadores.',
     },
     {
-      q: '¿Ley 5/2014 de Seguridad Privada y TIP del vigilante?',
-      a: 'Asociación de cada servicio a vigilantes con Tarjeta de Identidad Profesional (TIP) en vigor, conforme a la Ley 5/2014, con historial de validez.',
+      q: '¿Habilitaciones, TIP y autorizaciones?',
+      a: 'GeoTapp no gestiona las autorizaciones, la Tarjeta de Identidad Profesional (TIP) ni los trámites ante las autoridades de la Ley 5/2014. Registra quién ha fichado, dónde y cuándo en cada servicio, y ese historial puede mostrarse al cliente.',
     },
   ],
   pt: [

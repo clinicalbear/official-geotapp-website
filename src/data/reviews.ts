@@ -76,6 +76,7 @@ export const REVIEWS: Review[] = [
       en: { meta: 'Medical sales representative · Medical devices · Self-employed' },
       de: { meta: 'Medizinprodukteberaterin · Medizinprodukte · Selbstständig' },
       fr: { meta: 'Déléguée médicale · Dispositifs médicaux · Indépendante' },
+      es: { meta: 'Visitadora médica · Productos sanitarios · Autónoma' },
       nl: { meta: 'Medisch vertegenwoordiger · Medische hulpmiddelen · Zelfstandig' },
     },
     original: {
@@ -153,6 +154,7 @@ export const REVIEWS: Review[] = [
       en: { meta: 'Events services · 51-200 employees' },
       de: { name: 'Von Capterra verifizierte Bewertung', meta: 'Veranstaltungsdienste · 51–200 Mitarbeitende' },
       fr: { name: 'Avis vérifié par Capterra', meta: 'Services événementiels · 51-200 salariés' },
+      es: { name: 'Reseña verificada por Capterra', meta: 'Servicios para eventos · 51-200 empleados' },
       nl: { name: 'Door Capterra geverifieerde reviewer', meta: 'Evenementendiensten · 51-200 medewerkers' },
     },
     original: {

@@ -9,7 +9,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
   de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Règles et justificatifs en France',
-  es: 'Cumplimiento normativo en España',
+  es: 'Normativa y documentación en España',
   pt: 'Conformidade em Portugal',
   nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
@@ -64,16 +64,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   es: [
     {
-      q: '¿Registro de jornada, TPC y Libro de Subcontratación?',
-      a: 'Registro diario (art. 34.9 ET) por trabajador y obra, vinculado a la Tarjeta Profesional de la Construcción y al Libro de Subcontratación, capturado en obra.',
+      q: '¿Fichaje en obra, TPC y Libro de Subcontratación?',
+      a: 'GeoTapp no está conectado a la Tarjeta Profesional de la Construcción ni al Libro de Subcontratación y no genera ninguna declaración. Registra horas y presencia por trabajador y por obra, exportables a Excel o CSV, que sirven de base para tus propios registros: el registro de jornada (art. 34.9 ET) y el resto de la documentación siguen siendo responsabilidad de la empresa y de su gestoría.',
     },
     {
-      q: '¿RGPD y AEPD para la geolocalización en obra?',
-      a: 'Geolocalización solo durante la jornada y la obra, con información previa, interés legítimo y el art. 90 LOPDGDD, con derecho de acceso del trabajador.',
+      q: '¿Geolocalización en obra: RGPD y AEPD?',
+      a: 'La posición solo se registra al fichar y con las fotos de prueba, nunca de forma continua, y la información a los trabajadores se firma en la app antes de fichar. Corresponde a la empresa comprobar qué exigen en su caso el RGPD (interés legítimo), el art. 90 LOPDGDD y la información a la representación de los trabajadores.',
     },
     {
-      q: '¿Acreditación REA y responsabilidad en subcontratación?',
-      a: 'Historial de horas y salario por subcontrata para el Registro de Empresas Acreditadas (REA) y la cadena de subcontratación de la Ley 32/2006.',
+      q: '¿Justificantes en la subcontratación y el REA?',
+      a: 'GeoTapp no controla salarios ni gestiona la acreditación en el Registro de Empresas Acreditadas (REA) ni las obligaciones de la Ley 32/2006. Registra quién ha fichado, dónde y a qué hora en cada obra, también para los equipos de las subcontratas, y ese historial puede mostrarse a la promotora. Las obligaciones documentales siguen siendo de la empresa.',
     },
   ],
   pt: [

@@ -2,35 +2,35 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App Mantenimiento: Gestión de Equipos e Intervenciones con GPS | GeoTapp',
+    title: 'App de mantenimiento: equipos e intervenciones con GPS | GeoTapp',
     description:
-      'Gestiona equipos de mantenimiento con GPS: intervenciones, turnos, pruebas de servicio. Historial completo por instalación o sede del cliente. Prueba GeoTapp gratis.',
+      'Gestiona equipos de mantenimiento con GPS: intervenciones, turnos, pruebas de servicio. Historial completo por sede del cliente. Prueba GeoTapp gratis.',
   },
 
   hero: {
     badge: 'App para equipos de mantenimiento',
     h1_line1: 'Tu equipo de mantenimiento,',
-    h1_line2: 'siempre bajo control.',
+    h1_line2: 'cada visita documentada.',
     subtitle:
-      'Registra intervenciones, planifica turnos y documenta cada visita con GPS real y pruebas fotográficas. Historial completo por instalación y cliente, sin introducción manual de datos.',
+      'Registra las intervenciones, planifica los turnos y documenta cada visita con la ubicación al fichar y fotos de prueba. Historial completo por instalación y cliente, sin introducir nada a mano.',
     cta_primary: 'Prueba GeoTapp gratis durante 14 días',
-    cta_note: 'Sin compromiso. Sin tarjeta de crédito.',
+    cta_note: 'La prueba no te compromete a nada. No hace falta tarjeta de crédito.',
   },
 
   pain: {
     title: 'Problemas que resolvemos cada día',
     items: [
       {
-        title: '¿Cómo documentas las visitas de mantenimiento periódicas?',
-        desc: 'Informe automático con GPS, horas y fotos por cada visita. Historial completo y descargable, sin introducción manual.',
+        title: '¿Cómo documentas las intervenciones periódicas?',
+        desc: 'Informe automático con GPS, horas y fotos de cada visita. El historial está completo y se puede descargar, sin introducir nada a mano.',
       },
       {
-        title: '¿Los técnicos llegan realmente a tiempo?',
-        desc: 'Verificación en cuanto el técnico ficha, sin llamadas. GPS y hora de llegada ya están disponibles en tu panel, por cada sede.',
+        title: '¿Los técnicos llegan de verdad a la hora prevista?',
+        desc: 'Lo ves en cuanto el técnico ficha, sin llamadas: la hora y la ubicación de llegada ya están en Flow, para cada sede.',
       },
       {
-        title: '¿Cómo demuestras el servicio prestado?',
-        desc: 'Historial completo descargable por sede del cliente: fechas, horas, GPS y fotos. El cliente verifica por su cuenta, sin acceso a tu sistema.',
+        title: '¿Cómo demuestras a tus clientes el servicio prestado?',
+        desc: 'Historial completo descargable por sede: fechas, horas, GPS y fotos. El cliente lo verifica por su cuenta, sin acceder a tu sistema.',
       },
     ],
   },
@@ -40,84 +40,84 @@ const content: SettoreContent = {
     subtitle: 'Tres pasos sencillos. Cero papel. Cero llamadas.',
     steps: [
       {
-        title: 'El técnico ficha GPS al llegar',
-        desc: 'Abre la intervención desde su smartphone. GeoTapp registra coordenadas GPS reales, marca de tiempo y fotos, todo automático y sellado.',
+        title: 'El técnico ficha con GPS al llegar a la sede',
+        desc: 'Abre la intervención desde el teléfono. GeoTapp registra la hora y la ubicación en ese momento, y las fotos de prueba. Entre un fichaje y otro no registra nada de forma automática.',
       },
       {
         title: 'Las horas y la intervención se registran automáticamente',
-        desc: 'Cada minuto trabajado se asocia a la sede y al tipo de intervención. El responsable ve el estado de cada visita en cuanto el técnico ficha.',
+        desc: 'Las horas trabajadas se asocian a la sede y al tipo de intervención. En cada fichaje, el responsable ve el estado de cada visita.',
       },
       {
-        title: 'El cliente recibe el informe firmado digitalmente',
-        desc: 'Al finalizar la intervención, el sistema genera un informe con GPS, horas y firma digital. El cliente lo verifica de forma autónoma.',
+        title: 'El cliente recibe el informe sellado',
+        desc: 'Al terminar la intervención, el sistema genera un informe con GPS, horas y sello. El cliente lo verifica por su cuenta, sin acceso a tu sistema de gestión.',
       },
     ],
   },
 
   features: {
-    title: 'App de mantenimiento: control total sobre cada intervención.',
+    title: 'App de mantenimiento: cada intervención documentada.',
     items: [
       {
-        title: 'Presencia verificada por GPS',
-        desc: 'Cada llegada y salida queda sellada con GPS real, marca de tiempo y sede asignada. Defendible ante el cliente y ante inspecciones.',
+        title: 'Presencias con ubicación y hora',
+        desc: 'Cada llegada, pausa y salida se registra con la ubicación, la hora y la sede asignada, y acaba en el informe sellado. Para mostrarlo al cliente o a la inspección de trabajo cuando haga falta.',
       },
       {
         title: 'Historial de mantenimiento por instalación',
-        desc: 'Cada intervención está vinculada a la sede o instalación. El historial completo es consultable y descargable.',
+        desc: 'Cada intervención está ligada a la sede o a la instalación. El historial completo se puede consultar y descargar, para ti y para el cliente.',
       },
       {
         title: 'Informes automáticos y sellados',
-        desc: 'Tras cada intervención, el sistema genera un informe sellado: horas, GPS, fotos y firma digital.',
+        desc: 'Al terminar la intervención, el sistema genera un informe sellado: horas, ubicaciones, fotos y sello. El cliente puede verificarlo por su cuenta.',
       },
       {
-        title: 'Planificación de equipos',
-        desc: 'Asigna intervenciones, gestiona turnos y recibe alertas automáticas si una tarea no se abre o cierra a tiempo.',
+        title: 'Planificación de turnos y equipos',
+        desc: 'Asigna intervenciones, gestiona los turnos y recibe un aviso si una jornada se queda abierta.',
       },
       {
         title: 'Documentación fotográfica',
-        desc: 'Los técnicos toman fotos directamente desde la app: antes, durante y después de la intervención. Cada imagen está geolocalizada con marca de tiempo.',
+        desc: 'Los técnicos hacen fotos directamente desde la app: antes, durante y después de la intervención. Cada imagen está geolocalizada y con marca de tiempo.',
       },
       {
-        title: 'Fichaje en un toque',
-        desc: 'El técnico ficha la llegada con GPS, marca las pausas y cierra la intervención con un toque. Cada foto tomada queda vinculada a la intervención y a sus horarios.',
+        title: 'Fichaje con un toque',
+        desc: 'El técnico ficha la llegada con GPS, marca las pausas y cierra la intervención con un toque. Cada foto que hace queda ligada a la intervención y a sus horarios.',
       },
     ],
   },
 
   testimonial: {
     quote:
-      'Con GeoTapp cada visita de mantenimiento queda registrada. Los clientes ven el historial completo por instalación y ya no hay discusiones sobre horas o trabajos realizados.',
+      'Con GeoTapp cada intervención de mantenimiento queda documentada, y a los clientes les enviamos el informe de cada visita.',
     author: 'Andrés L.',
-    role: 'Responsable de mantenimiento, facility management - España',
+    role: 'Responsable de mantenimiento, facility management - Centro de Italia',
   },
 
   faq: {
     title: 'Preguntas frecuentes',
-    subtitle: 'Lo que nos preguntan más a menudo antes de empezar.',
+    subtitle: 'Lo que más nos preguntan antes de empezar.',
     items: [
       {
-        q: '¿Cómo se documentan las visitas de mantenimiento periódicas?',
-        a: 'GeoTapp genera automáticamente un informe por visita con GPS, horas y fotos. Historial completo por instalación o sede del cliente, sin introducción manual.',
+        q: '¿Cómo documentas las intervenciones periódicas de mantenimiento?',
+        a: 'GeoTapp genera automáticamente un informe de cada visita con GPS, horas y fotos. El historial está completo y se puede descargar por instalación o por sede del cliente, sin introducir nada a mano.',
       },
       {
-        q: '¿Los técnicos llegan realmente a tiempo?',
-        a: 'Con GeoTapp puedes verificar la hora de llegada y la posición GPS de cada técnico en cuanto ficha. Sin necesidad de llamar.',
+        q: '¿Los técnicos llegan de verdad a la hora prevista?',
+        a: 'Con GeoTapp ves la hora de llegada y la ubicación de cada técnico en el momento en que ficha. Sin llamadas: el dato ya está en Flow.',
       },
       {
-        q: '¿Cómo demuestro al cliente el servicio de mantenimiento prestado?',
-        a: 'GeoTapp mantiene un historial completo descargable por sede del cliente: fechas, horas, GPS y fotos. El cliente verifica por su cuenta.',
+        q: '¿Cómo demuestro a los clientes el servicio de mantenimiento prestado?',
+        a: 'GeoTapp mantiene un historial completo descargable por cada sede de cliente: fechas, horas, GPS y fotos de cada intervención. Al cliente le envías el informe sellado, que verifica por su cuenta sin acceder a tu sistema.',
       },
       {
-        q: '¿Funciona GeoTapp para mantenimiento de instalaciones y facility management?',
-        a: 'Sí. GeoTapp es utilizado por empresas de mantenimiento, facility management y organizaciones con equipos distribuidos. La plataforma escala de 3 a 300 técnicos.',
+        q: '¿GeoTapp funciona para el mantenimiento de instalaciones y facility management?',
+        a: 'Sí. GeoTapp lo usan empresas de mantenimiento, de facility management y empresas con equipos repartidos en varias sedes. Sirve desde un equipo de pocas personas hasta una empresa con cientos de técnicos.',
       },
       {
-        q: '¿GeoTapp cumple con el RGPD?',
-        a: 'GeoTapp está diseñado para encajar en el RGPD: solo geolocaliza durante las horas de trabajo activas, incluye el modelo de información al trabajador y no recopila datos innecesarios.',
+        q: '¿GeoTapp cumple el RGPD en la geolocalización?',
+        a: 'GeoTapp está diseñado para moverse dentro del RGPD: registra la ubicación solo cuando el técnico ficha (entrada, pausas, salida) o hace una foto de prueba, hace firmar la información a los empleados en la app antes del primer fichaje y no recoge datos innecesarios.',
       },
       {
         q: '¿Cuánto cuesta GeoTapp para una empresa de mantenimiento?',
-        a: 'Los planes empiezan desde pocos euros por técnico al mes. Prueba gratis 14 días, sin compromiso.',
+        a: 'GeoTapp Flow cuesta desde 39 € al mes; los puestos TimeTracker para los técnicos cuestan 3 € al mes cada uno hasta 25. Suscripción con duración mínima de 12 meses. Antes puedes probarlo gratis durante 14 días, sin tarjeta. Precios sin IVA.',
       },
     ],
   },
@@ -125,14 +125,14 @@ const content: SettoreContent = {
   cta: {
     title: 'Cada intervención de mantenimiento merece una prueba. GeoTapp la genera.',
     subtitle:
-      'Informes verificables, GPS real, historial completo por instalación. Tu trabajo se vuelve defendible.',
-    primary: '¡Empieza gratis ahora!',
-    secondary: 'Ver Precios',
+      'Informes verificables, ubicación en los fichajes, historial completo de cada instalación.',
+    primary: 'Prueba gratis durante 14 días',
+    secondary: 'Ver precios',
   },
 
   pricing_hint: {
-    label: 'Desde',
-    per: 'técnico/mes',
+    label: 'Puestos TimeTracker desde',
+    per: 'por operario al mes, más el plan Flow desde 39 € al mes',
     note: 'Prueba gratuita de 14 días',
   },
 
@@ -140,19 +140,19 @@ const content: SettoreContent = {
 
   schema_faq: [
     {
-      question: '¿Cómo se documentan las visitas de mantenimiento periódicas?',
+      question: '¿Cómo documentas las intervenciones periódicas de mantenimiento?',
       answer:
-        'GeoTapp genera automáticamente un informe por visita con GPS, horas y fotos. Historial completo por instalación o sede del cliente.',
+        'GeoTapp genera automáticamente un informe de cada visita con GPS, horas y fotos. El historial está completo y se puede descargar por instalación o por sede del cliente, sin introducir nada a mano.',
     },
     {
-      question: '¿Los técnicos llegan realmente a tiempo?',
+      question: '¿Los técnicos llegan de verdad a la hora prevista?',
       answer:
-        'Con GeoTapp puedes verificar la hora de llegada y la posición GPS de cada técnico en cuanto ficha. Los datos ya están en tu panel.',
+        'Con GeoTapp ves la hora de llegada y la ubicación de cada técnico en el momento en que ficha. El dato ya está en Flow, sin llamadas.',
     },
     {
-      question: '¿Cómo demuestro el servicio de mantenimiento prestado?',
+      question: '¿Cómo demuestro a los clientes el servicio de mantenimiento prestado?',
       answer:
-        'GeoTapp mantiene un historial completo descargable por sede del cliente: fechas, horas, GPS y fotos. El cliente verifica por su cuenta.',
+        'GeoTapp mantiene un historial completo descargable por cada sede de cliente: fechas, horas, GPS y fotos de cada intervención. Al cliente le envías el informe sellado, que verifica por su cuenta.',
     },
   ],
 };

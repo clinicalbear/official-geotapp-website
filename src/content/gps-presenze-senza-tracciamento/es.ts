@@ -1,12 +1,12 @@
 import type { PresenzeCopy } from './types';
 
 const es: PresenzeCopy = {
-  metaTitle: '¿Se puede usar el GPS para el fichaje sin vigilar a los empleados? - GeoTapp',
+  metaTitle: 'Fichaje por GPS sin vigilar a empleados: ¿se puede? - GeoTapp',
   metaDesc:
-    'Sí, si la posición solo se registra al fichar. Qué dictaminó un tribunal italiano en 2026, qué sancionan realmente las autoridades de protección de datos, y qué registra un sistema de fichaje por GPS conforme.',
+    'Sí, si la posición solo se registra al fichar. Qué dijo el Tribunal de Cosenza en 2026, qué sancionan las autoridades y qué registra GeoTapp.',
   h1: '¿Se puede usar el GPS para el fichaje sin vigilar a los empleados?',
   lede:
-    'Sí. Un sistema que solo capta la posición en el momento exacto en que un trabajador ficha la entrada, una pausa o la salida no vigila a la persona: documenta un hecho. Es exactamente la distinción que confirmó un tribunal italiano en 2026, y coincide con lo que realmente sancionan las autoridades de protección de datos: el seguimiento continuo, no el registro puntual de la posición.',
+    'Sí. Un sistema que solo capta la posición en el momento exacto en que un trabajador ficha la entrada, una pausa o la salida no vigila a la persona: documenta un hecho. Lo reconoció un tribunal italiano en 2026, y lo confirman las resoluciones de las autoridades de protección de datos, que sancionan el seguimiento continuo, no el registro puntual de la posición.',
   updatedLabel: 'Actualizado el 25 de septiembre de 2026',
   sections: [
     {
@@ -20,14 +20,14 @@ const es: PresenzeCopy = {
     {
       heading: 'Qué registra GeoTapp, y qué no registra',
       paragraphs: [
-        'GeoTapp solo capta la posición cuando el trabajador realiza una acción concreta: fichar la entrada, iniciar o terminar cada pausa, fichar la salida, más un punto por cada foto de prueba del trabajo. Entre un fichaje y otro no se registra nada de forma automática: ningún rastro de desplazamientos, ningún seguimiento en segundo plano, ninguna posición recogida sin conocimiento del trabajador.',
+        'GeoTapp solo registra la posición cuando la persona trabajadora realiza una acción concreta: entrada, inicio y fin de cada pausa, salida, más un punto por cada foto de prueba del trabajo. Entre un fichaje y otro no se registra nada de forma automática: ningún rastro de desplazamientos, ningún seguimiento en segundo plano, ninguna posición recogida sin conocimiento del trabajador.',
       ],
     },
     {
-      heading: 'Cómo puede comprobarlo un representante sindical, un abogado laboralista o un DPD sin preguntarnos nada',
+      heading: 'Cómo puede comprobarlo un representante sindical, un asesor laboral o un DPD sin preguntarnos nada',
       paragraphs: [
         'No hace falta fiarse de nuestra palabra: se puede comprobar de forma independiente. En la aplicación Android, el manifiesto solo declara los permisos ACCESS_FINE_LOCATION y ACCESS_COARSE_LOCATION. No se solicita ACCESS_BACKGROUND_LOCATION, el permiso necesario para seguir a un empleado con la aplicación cerrada, y no existe ningún servicio en primer plano dedicado a la ubicación: sin ese permiso, el sistema operativo simplemente no entrega la posición a una aplicación que no está abierta en pantalla. En iOS, la aplicación solo solicita la autorización "mientras se usa la app" (requestWhenInUseAuthorization), nunca la autorización de seguimiento en segundo plano.',
-        'Es una comprobación que un representante de los trabajadores, un abogado laboralista o un delegado de protección de datos puede hacer por sí mismo en pocos minutos, leyendo el manifiesto de la aplicación o la etiqueta de privacidad publicada por la tienda de apps, incluso antes de leer la información que le entrega la empresa.',
+        'Es una comprobación que un representante de los trabajadores, un asesor laboral o un delegado de protección de datos puede hacer por sí mismo en pocos minutos, leyendo el manifiesto de la aplicación o la etiqueta de privacidad publicada por la tienda de apps, incluso antes de leer la información que le entrega la empresa.',
       ],
     },
     {
@@ -69,7 +69,7 @@ const es: PresenzeCopy = {
     'Reglamento (UE) 2016/679 (RGPD), arts. 5, 6, 12 a 14, 25',
   ],
   disclaimer:
-    'Esta página describe principios generales, verificables en la fuente, y no constituye asesoramiento legal: para tu situación específica, consulta con un abogado laboralista o un delegado de protección de datos.',
+    'Esta página describe principios generales, verificables en la fuente, y no constituye asesoramiento legal: para tu situación específica, consúltala con un profesional del derecho laboral o un delegado de protección de datos.',
   faq: {
     title: 'Preguntas frecuentes',
     items: [

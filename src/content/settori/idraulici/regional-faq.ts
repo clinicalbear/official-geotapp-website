@@ -9,7 +9,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
   de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Règles et justificatifs en France',
-  es: 'Cumplimiento normativo en España',
+  es: 'Normativa y documentación en España',
   pt: 'Conformidade em Portugal',
   nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
@@ -64,16 +64,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   es: [
     {
-      q: '¿Jornada y desplazamientos según el convenio del metal?',
-      a: 'Registro diario (art. 34.9 ET) por fontanero y obra, dietas y disponibilidad y conservación de datos, capturado en cada intervención.',
+      q: '¿Horas e intervenciones de los fontaneros?',
+      a: 'GeoTapp registra en cada fichaje entrada, pausas y salida con posición y hora, por fontanero y por obra, y las exporta a Excel o CSV para tu gestoría o asesor laboral. La aplicación del convenio colectivo (pluses, dietas) y la elaboración de la nómina siguen siendo cosa de la gestoría y de la empresa.',
     },
     {
-      q: '¿RGPD y AEPD para la geolocalización de fontaneros?',
-      a: 'Geolocalización solo durante la jornada, con información previa, interés legítimo y el art. 90 LOPDGDD, con derecho de acceso del trabajador.',
+      q: '¿Geolocalización de fontaneros: RGPD y AEPD?',
+      a: 'La posición solo se registra al fichar y con las fotos de prueba, nunca de forma continua, y la información a los trabajadores se firma en la app antes de fichar. Corresponde a la empresa comprobar qué exigen en su caso el RGPD (interés legítimo), el art. 90 LOPDGDD y la información a la representación de los trabajadores.',
     },
     {
-      q: '¿Carné de instalador de gas (RITE / reglamento del gas)?',
-      a: 'Asociación de cada intervención de gas al carné de instalador habilitado, con el historial de soporte al certificado de instalación.',
+      q: '¿Intervenciones de gas y carné de instalador?',
+      a: 'GeoTapp no verifica ninguna habilitación, tampoco la de gas, ni genera certificados de instalación. Registra la hora, la posición y las fotos de cada intervención en instalaciones de agua y gas, que puedes adjuntar al expediente de la instalación.',
     },
   ],
   pt: [

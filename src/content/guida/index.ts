@@ -11,8 +11,9 @@ import en from './en';
 import de from './de';
 import nl from './nl';
 import fr from './fr';
+import es from './es';
 
-const GUIDE: Record<string, string> = { it, en, de, nl, fr };
+const GUIDE: Record<string, string> = { it, en, de, nl, fr, es };
 
 export function guidaPer(locale: string): string {
   return GUIDE[locale] ?? GUIDE[locale.split('-')[0]] ?? GUIDE.en;

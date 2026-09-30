@@ -120,7 +120,7 @@ const T: Record<InfLocale, Template> = {
       { titolo: '8. Autoridad de control', testo: 'Autoridad de control competente para reclamaciones: {autorita} ({paese}).' },
     ],
     dpoLine: 'Delegado de Protección de Datos (DPO): {dpo}.',
-    chiusura: 'Esta información es un borrador generado automáticamente y no constituye asesoramiento legal. Revísela con un profesional antes de usarla.',
+    chiusura: 'Esta información es un borrador generado automáticamente y no constituye asesoramiento legal. Revísala con un profesional antes de usarla.',
   },
   nl: {
     titolo: 'Privacyverklaring over de verwerking van locatiegegevens van werknemers',

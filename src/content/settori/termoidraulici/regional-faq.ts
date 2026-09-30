@@ -9,7 +9,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
   de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Règles et documents',
-  es: 'Cumplimiento normativo en España',
+  es: 'Normativa y documentación en España',
   pt: 'Conformidade em Portugal',
   nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
@@ -64,16 +64,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   es: [
     {
-      q: '¿Jornada y disponibilidad según el convenio del metal?',
-      a: 'Registro diario (art. 34.9 ET) por técnico y obra, pluses de disponibilidad y dietas y conservación de datos, capturado en cada intervención en calderas.',
+      q: '¿Horas e intervenciones en calefacción?',
+      a: 'GeoTapp registra en cada fichaje entrada, pausas y salida con posición y hora, por técnico y por obra, y las exporta a Excel o CSV para tu gestoría o asesor laboral. La aplicación del convenio colectivo (pluses, dietas) y la elaboración de la nómina siguen siendo cosa de la gestoría y de la empresa.',
     },
     {
-      q: '¿RGPD y AEPD para la geolocalización de técnicos de calefacción?',
-      a: 'Geolocalización solo durante la jornada, con información previa, interés legítimo y el art. 90 LOPDGDD, con derecho de acceso del trabajador.',
+      q: '¿Geolocalización de técnicos de calefacción: RGPD y AEPD?',
+      a: 'La posición solo se registra al fichar y con las fotos de prueba, nunca de forma continua, y la información a los trabajadores se firma en la app antes de fichar. Corresponde a la empresa comprobar qué exigen en su caso el RGPD (interés legítimo), el art. 90 LOPDGDD y la información a la representación de los trabajadores.',
     },
     {
-      q: '¿Carné de gases fluorados (RD 115/2017)?',
-      a: 'Asociación de cada intervención con gases fluorados al carné de manipulador habilitado, con el historial de soporte y el RITE.',
+      q: '¿Gases fluorados y carné de manipulador?',
+      a: 'GeoTapp no gestiona los carnés de manipulador de gases fluorados ni los libros de mantenimiento de las instalaciones. Registra la hora, la posición, las fotos y las notas de cada intervención en calderas e instalaciones de calefacción, para adjuntarlas a la documentación de la instalación.',
     },
   ],
   pt: [

@@ -27,9 +27,9 @@ const META: Record<string, { title: string; description: string }> = {
       'Standort nur beim Stempeln, falsche Standorte werden abgewiesen, Buchungen auch ohne Netz gespeichert, versiegelte Berichte, die der Kunde selbst prüft, Daten in Europa.',
   },
   es: {
-    title: 'Funciones de GeoTapp: fichaje GPS, modo offline y cifrado',
+    title: 'GeoTapp: fichaje con ubicación e informes sellados',
     description:
-      'Fichaje con GPS y control de geocerca, protección anti-spoofing, modo offline que sincroniza al volver la señal, cifrado AES-256 y datos en tiempo real.',
+      'Ubicación solo cuando se ficha, ubicaciones falsas rechazadas, fichajes guardados aunque no haya cobertura, informes sellados que el cliente verifica por sí mismo, datos en Europa.',
   },
   fr: {
     title: 'Fonctionnalités GeoTapp : pointage et rapports scellés',

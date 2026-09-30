@@ -434,6 +434,27 @@ export const NON_IN_VETRINA = new Set<string>([
   'rapport-numerique-electricien',
   'application-tracking-equipe-mobile-france',
   'application-presence-chantier-gps',
+  // Versiones en espanol: titulos o extractos que prometen cumplimiento o conformidad («conforme a la LOPDGDD»,
+  // «cumplimiento RD 8/2019», «así cumples»), «certificación», «GPS verificado», «registro blindado»,
+  // «quién está dentro ahora mismo» o evitar sanciones, que la scheda claim vieta. Aggiunte il 01/10/2026.
+  'geotapp-vs-hubstaff-2026-vigilancia-vs-certificacion',
+  'geotapp-vs-clockify-2026-comparacion-tiempo-certificacion',
+  'informacion-geolocalizacion-fichaje-gps-empleados',
+  'modelo-informacion-gps-empleados',
+  'geolocalizacion-empleados-informacion-rgpd-2026',
+  'geolocalizacion-empleados-lopdgdd-2026-evitar-sanciones-aepd',
+  'gdpr-geolocalizacion-trabajadores-espana-2026',
+  'software-gestion-guardias-seguridad-espana-2026',
+  'fichaje-gps-construccion-espana-2026-estatuto-lopdgdd',
+  'app-control-empleados-limpieza-espana-2026-guia',
+  'como-reducir-disputas-clientes-empresa-limpieza-2026',
+  'app-fichaje-gps-trabajadores-campo-2026',
+  'software-empresa-limpieza-2026-guia',
+  'app-geolocalizacion-instaladores-2026-guia',
+  'app-geolocalizacion-instaladores-2026',
+  'registro-jornada-temporeros-verano',
+  'agosto-obra-presencia-seguridad',
+  'sanciones-control-laboral-europa-lecciones',
 ]);
 
 export function filterPosts<T extends WpIndexEntry>(

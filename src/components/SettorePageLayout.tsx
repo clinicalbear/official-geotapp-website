@@ -93,6 +93,7 @@ const CLASSIC_CLOCKIN: Record<string, string> = {
   en: 'Classic clock-in app',
   de: 'Klassische Stempel-App',
   fr: 'Application de pointage classique',
+  es: 'App de fichaje clásica',
   nl: 'Klassieke registratie-app',
 };
 
@@ -187,7 +188,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
     'en-ca': { pulizie: 'Cleaning companies', installatori: 'Installers', sicurezza: 'Security services', elettricisti: 'Electricians', idraulici: 'Plumbers', termoidraulici: 'Heating engineers', edilizia: 'Construction', impianti: 'Mechanical & Electrical', manutenzione: 'Maintenance', 'impresa-di-pulizie': 'Cleaning company' },
     de: { pulizie: 'Reinigungsunternehmen', installatori: 'Installateure', sicurezza: 'Sicherheitsdienste', elettricisti: 'Elektriker', idraulici: 'Klempner', termoidraulici: 'Heizungsinstallateure', edilizia: 'Bauwesen', impianti: 'Anlagenbau', manutenzione: 'Wartung', 'impresa-di-pulizie': 'Reinigungsunternehmen' },
     fr: { pulizie: 'Entreprises de nettoyage', installatori: 'Installateurs', sicurezza: 'Services de sécurité', elettricisti: 'Électriciens', idraulici: 'Plombiers', termoidraulici: 'Plombiers-chauffagistes', edilizia: 'BTP', impianti: 'Installations', manutenzione: 'Maintenance', 'impresa-di-pulizie': 'Entreprise de nettoyage' },
-    es: { pulizie: 'Empresas de limpieza', installatori: 'Instaladores', sicurezza: 'Servicios de seguridad', elettricisti: 'Electricistas', idraulici: 'Fontaneros', termoidraulici: 'Fontaneros calefactores', edilizia: 'Construcción', impianti: 'Instalaciones', manutenzione: 'Mantenimiento', 'impresa-di-pulizie': 'Empresa de limpieza' },
+    es: { pulizie: 'Empresas de limpieza', installatori: 'Instaladores', sicurezza: 'Servicios de seguridad', elettricisti: 'Electricistas', idraulici: 'Fontaneros', termoidraulici: 'Fontaneros y calefactores', edilizia: 'Construcción', impianti: 'Instalaciones', manutenzione: 'Mantenimiento', 'impresa-di-pulizie': 'Empresa de limpieza' },
     pt: { pulizie: 'Empresas de limpeza', installatori: 'Instaladores', sicurezza: 'Serviços de segurança', elettricisti: 'Eletricistas', idraulici: 'Canalizadores', termoidraulici: 'Técnicos de aquecimento', edilizia: 'Construção', impianti: 'Instalações', manutenzione: 'Manutenção', 'impresa-di-pulizie': 'Empresa de limpeza' },
     nl: { pulizie: 'Schoonmaakbedrijven', installatori: 'Installateurs', sicurezza: 'Beveiligingsdiensten', elettricisti: 'Elektriciens', idraulici: 'Loodgieters', termoidraulici: 'CV-monteurs', edilizia: 'Bouw', impianti: 'Installaties', manutenzione: 'Onderhoud', 'impresa-di-pulizie': 'Schoonmaakbedrijf' },
     da: { pulizie: 'Rengøringsvirksomheder', installatori: 'Installatører', sicurezza: 'Sikkerhedstjenester', elettricisti: 'Elektrikere', idraulici: 'VVS-installatører', termoidraulici: 'Varmeinstallatører', edilizia: 'Byggeri', impianti: 'Installationer', manutenzione: 'Vedligeholdelse', 'impresa-di-pulizie': 'Rengøringsfirma' },
@@ -251,6 +252,9 @@ export default function SettorePageLayout({ content, locale, settore, children }
       { href: '/blog/nl/2026/09/14/or-instemmingsrecht-personeelsvolgsysteem/',
         label: 'Wanneer moet de OR instemmen met een personeelsvolgsysteem' },
     ],
+    // Spagnolo: nessun articolo sulle norme in produzione (i due sul RGPD/LOPDGDD sono fuori vetrina).
+    // Lista vuota = il blocco non esce, invece di linkare l'articolo inglese sull'ICO.
+    es: [],
   };
   // Le 6 locale che NON hanno articoli normative tradotti ricadono su EN.
   const normLinks = NORM_LINKS[locale]
@@ -565,9 +569,9 @@ export default function SettorePageLayout({ content, locale, settore, children }
                 <div className="row"><span><Camera size={13} style={{ display: 'inline', marginRight: 6, verticalAlign: -2, opacity: .7 }} />{sl.mockup_photos ?? 'Photos'}</span><span>{sl.mockup_photos_count ?? '3 photos'}</span></div>
               </div>
               <div className="mock r-s d2">
-                <div className="row"><span>Operatore</span><span>Mario R.</span></div>
-                <div className="row"><span>Apertura</span><span>08:47:03</span></div>
-                <div className="row"><span>Chiusura</span><span>11:22:41</span></div>
+                <div className="row"><span>{sl.mockup_operator ?? 'Operatore'}</span><span>Mario R.</span></div>
+                <div className="row"><span>{sl.mockup_opening ?? 'Apertura'}</span><span>08:47:03</span></div>
+                <div className="row"><span>{sl.mockup_closing ?? 'Chiusura'}</span><span>11:22:41</span></div>
                 <p style={{ marginTop: 16, fontSize: 13, color: 'var(--lime)', fontWeight: 600 }}>
                   <ShieldCheck size={14} style={{ display: 'inline', marginRight: 6, verticalAlign: -2 }} />
                   {sl.mockup_sealed ?? 'Sealed after closure'}

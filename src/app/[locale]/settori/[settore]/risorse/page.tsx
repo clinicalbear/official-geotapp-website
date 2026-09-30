@@ -173,6 +173,28 @@ const SETTORE_CONFIG: Record<string, {
           ],
         },
       ],
+      es: [
+        {
+          h2: 'El problema operativo que frena a las empresas de limpieza',
+          body: 'Quien dirige una empresa de limpieza con más de 5 trabajadores conoce estos problemas: no sabes si la persona llegó a las 7:00 o a las 7:45, el cliente te llama para saber si el equipo estuvo ayer y las hojas de presencia nunca cuadran. El problema no es la voluntad de las personas, sino que los sistemas tradicionales no funcionan cuando los equipos cambian de centro cada día.',
+        },
+        {
+          h2: 'Cómo funciona el fichaje con GPS en las empresas de limpieza',
+          body: 'El fichaje con GPS permite a los trabajadores registrar la entrada y la salida directamente desde el smartphone, con la posición registrada en ese momento y solo en ese momento. No requiere hardware fijo y funciona en cualquier centro de trabajo. El responsable ve los fichajes en cuanto llegan y puede exportar los informes para el cliente a final de mes. GeoTapp TimeTracker añade las fotos de prueba de los trabajos terminados y la comunicación con el coordinador desde el mismo teléfono.',
+          productLink: true,
+        },
+        {
+          h2: 'Qué comprobar antes de elegir un software para empresas de limpieza',
+          body: 'No todos los programas de control de presencia sirven para trabajar en centros dispersos. Antes de elegir, comprueba que admita:',
+          listItems: [
+            'Fichaje desde el smartphone, sin hardware adicional',
+            'Una posición registrada y comprobada en el momento del fichaje, nunca de forma continua',
+            'La posibilidad de adjuntar fotos a las intervenciones',
+            'Informes exportables para el cliente final',
+            'Comunicación interna integrada entre los trabajadores y la oficina',
+          ],
+        },
+      ],
     },
     product: {
       name: 'GeoTapp TimeTracker',
@@ -200,7 +222,7 @@ const SETTORE_CONFIG: Record<string, {
       en: 'Coordinating field technicians means knowing which jobs have just been closed and what is still pending, without chasing anyone by phone. With phone calls and WhatsApp the picture is always incomplete: updates arrive late, priorities shift without the office knowing, and client documentation is always a last-minute scramble. These guides cover effective operational practices for field service companies.',
       de: 'Techniker im Außendienst zu koordinieren heißt zu wissen, welcher Einsatz gerade abgeschlossen wurde und was noch offen ist, ohne jemandem telefonisch nachzulaufen. Mit Anrufen und WhatsApp-Nachrichten bleibt das Bild immer unvollständig: Updates kommen zu spät, Prioritäten ändern sich, ohne dass das Büro es erfährt, und die Unterlagen für den Kunden sind immer ein Problem. Diese Leitfäden behandeln bewährte Abläufe für Außendienstbetriebe.',
       fr: 'Coordonner des techniciens de terrain, c\'est savoir quelle intervention vient d\'être clôturée et ce qui reste en suspens, sans courir après personne au téléphone. Avec les appels et WhatsApp, le tableau reste toujours incomplet : les mises à jour arrivent en retard, les priorités changent sans que le bureau le sache et la documentation pour le client est toujours un problème. Ces guides couvrent les bonnes pratiques opérationnelles pour les entreprises avec des techniciens de terrain.',
-      es: 'Coordinar técnicos de campo significa saber en todo momento quién está dónde, qué intervenciones acaban de cerrarse y qué sigue pendiente. Con llamadas y WhatsApp el panorama siempre es incompleto. Estas guías recogen las mejores prácticas para empresas con técnicos de campo.',
+      es: 'Coordinar técnicos de campo es saber qué intervención se acaba de cerrar y qué sigue pendiente, sin ir detrás de nadie por teléfono. Con llamadas y mensajes de WhatsApp el panorama siempre es incompleto: las actualizaciones llegan tarde, las prioridades cambian sin que la oficina lo sepa y la documentación para el cliente siempre es un problema. Estas guías recogen las prácticas operativas más eficaces para empresas con técnicos de campo.',
       pt: 'Coordinating field technicians means knowing at any moment who is where, which jobs have just been closed, and what\'s still pending. These guides cover effective operational practices for field service companies.',
       nl: 'Monteurs in het veld coördineren betekent weten welke klus net is afgesloten en wat er nog openstaat, zonder iemand telefonisch achterna te zitten. Met telefoontjes en WhatsApp-berichten is het beeld altijd onvolledig: de updates komen te laat, de prioriteiten veranderen zonder dat het kantoor het weet en de documentatie voor de klant is altijd een probleem. Deze artikelen bundelen de meest effectieve operationele werkwijzen voor bedrijven met monteurs in het veld.',
       da: 'Coordinating field technicians means knowing at any moment who is where, which jobs have just been closed, and what\'s still pending. These guides cover effective operational practices for field service companies.',
@@ -319,6 +341,28 @@ const SETTORE_CONFIG: Record<string, {
           ],
         },
       ],
+      es: [
+        {
+          h2: 'El problema de coordinación en las empresas con técnicos de campo',
+          body: 'Cuando un técnico cierra una intervención y la oficina se entera solo al final del día, no sabe si enviar refuerzos o cerrar el expediente. Cuando la documentación es en papel o por mensaje, reconstruir el historial de un cliente lleva horas, y la coordinación por teléfono se come una parte de la jornada que se podría recuperar.',
+        },
+        {
+          h2: 'Cómo gestionar órdenes de trabajo e intervenciones sin llamadas',
+          body: 'Un sistema digital de gestión de intervenciones permite asignar órdenes de trabajo directamente al smartphone del técnico, con prioridad, instrucciones e historial del cliente ya incluidos. El técnico trabaja con la app GeoTapp TimeTracker: ficha, hace las fotos de prueba y escribe las notas, y el informe se compone solo. Desde la oficina, GeoTapp Flow asigna las intervenciones, recibe los fichajes en cuanto llegan y envía al cliente el informe sellado.',
+          productLink: true,
+        },
+        {
+          h2: 'Qué debe saber hacer un software para instaladores y técnicos de campo',
+          body: 'Antes de elegir una herramienta de gestión para tu equipo de técnicos, comprueba que admita:',
+          listItems: [
+            'La asignación y la modificación de las intervenciones a distancia',
+            'Una posición registrada solo en los fichajes, nunca de forma continua',
+            'Fotos de prueba vinculadas a la intervención',
+            'Un informe automático por cada intervención cerrada',
+            'El historial completo de intervenciones por cliente',
+          ],
+        },
+      ],
     },
     product: {
       name: 'GeoTapp Flow',
@@ -333,7 +377,7 @@ const SETTORE_CONFIG: Record<string, {
       en: { title: 'Attendance and documentation for security services - GeoTapp', description: 'How to document attendance, checks and incidents in security services, with position recorded only at clock-in.', heading: 'Attendance and documentation in security services' },
       de: { title: 'Anwesenheit und Dokumentation für Sicherheitsdienste - GeoTapp', description: 'Wie Sie Anwesenheit, Kontrollen und Vorfälle in Sicherheitsdiensten dokumentieren, mit der Position nur bei den Stempelungen.', heading: 'Anwesenheit und Dokumentation bei Sicherheitsdiensten' },
       fr: { title: 'Présences et documentation pour les services de sécurité - GeoTapp', description: 'Comment documenter présences, contrôles et incidents dans les services de sécurité, avec la position enregistrée uniquement aux pointages.', heading: 'Présences et documentation dans les services de sécurité' },
-      es: { title: 'Control de presencia y trazabilidad en servicios de seguridad - GeoTapp', description: 'Cómo gestionar agentes, rondas y documentación en servicios de seguridad con GPS en tiempo real.', heading: 'Control de presencia en servicios de seguridad' },
+      es: { title: 'Presencias y documentación en seguridad privada - GeoTapp', description: 'Cómo documentar presencias, controles e incidencias en servicios de seguridad, con la posición registrada solo al fichar.', heading: 'Presencias y documentación en los servicios de seguridad' },
       pt: { title: 'Recursos para serviços de segurança - GeoTapp', description: 'Artigos e guias para empresas de segurança e vigilância.', heading: 'Recursos para serviços de segurança' },
       nl: { title: 'Aanwezigheid en documentatie voor beveiligingsdiensten - GeoTapp', description: 'Hoe u aanwezigheid, controles en afwijkingen bij beveiligingsdiensten documenteert, met de locatie alleen bij de registraties.', heading: 'Aanwezigheidsbeheer en documentatie bij beveiligingsdiensten' },
       da: { title: 'Ressourcer til sikkerhedstjenester - GeoTapp', description: 'Artikler og guides til sikkerheds- og overvågningsvirksomheder.', heading: 'Ressourcer til sikkerhedstjenester' },
@@ -346,7 +390,7 @@ const SETTORE_CONFIG: Record<string, {
       en: 'In security companies every shift and every check must be documented, and every incident must be reported straight away. With phone calls and paper reports, the control room always has a partial and delayed picture. These guides cover the most relevant operational topics for security service managers.',
       de: 'In Sicherheitsunternehmen müssen jede Schicht und jede Kontrolle dokumentiert und jede Auffälligkeit sofort gemeldet werden. Mit Anrufen und Berichten auf Papier hat die Einsatzzentrale immer ein unvollständiges und verspätetes Bild. Diese Leitfäden behandeln die wichtigsten operativen Themen für Leiter von Sicherheitsdiensten.',
       fr: 'Dans les entreprises de sécurité, chaque vacation et chaque contrôle doivent être documentés, et chaque anomalie signalée tout de suite. Avec des appels et des rapports sur papier, la centrale a toujours une vision partielle et tardive. Ces guides couvrent les thèmes opérationnels essentiels pour les responsables de services de sécurité.',
-      es: 'En las empresas de seguridad cada ronda debe documentarse, cada agente debe ser localizable y cada incidencia debe reportarse de inmediato. Con sistemas basados en llamadas o papel, la central siempre tiene un panorama parcial. Estas guías abordan los temas operativos más relevantes para responsables de seguridad.',
+      es: 'En las empresas de seguridad cada turno y cada control deben documentarse, y cada incidencia debe comunicarse enseguida. Con llamadas e informes en papel, la central siempre tiene un panorama parcial y tardío. Estas guías abordan los temas operativos más relevantes para responsables de servicios de seguridad.',
       pt: 'In security companies every patrol must be documented, every agent must be locatable, and every incident must be reported immediately. These guides cover the most relevant operational topics for security service managers.',
       nl: 'Bij beveiligingsbedrijven moeten elke dienst en elke controle worden gedocumenteerd, en elke afwijking moet meteen worden gemeld. Met telefoontjes en papieren rapporten heeft de meldkamer altijd een onvolledig en vertraagd beeld. Deze artikelen behandelen de meest relevante operationele onderwerpen voor verantwoordelijken van beveiligingsdiensten.',
       da: 'In security companies every patrol must be documented, every agent must be locatable, and every incident must be reported immediately. These guides cover the most relevant operational topics for security service managers.',
@@ -462,6 +506,28 @@ const SETTORE_CONFIG: Record<string, {
             'Le signalement d\'anomalies avec photo et géolocalisation',
             'Des rapports scellés exportables pour le client final',
             'Une alerte si une vacation reste ouverte',
+          ],
+        },
+      ],
+      es: [
+        {
+          h2: 'Los retos operativos de los servicios de seguridad y vigilancia',
+          body: 'Sin un sistema digital, la central no sabe si un vigilante ha empezado el servicio en el puesto correcto, si se ha hecho un control o si ha habido una incidencia, hasta que alguien llama. El cliente final no tiene pruebas concretas del servicio y, en caso de disputa, no hay nada que mostrar. Para una empresa de seguridad, poder documentar el servicio forma parte del propio servicio.',
+        },
+        {
+          h2: 'Cómo se documenta el servicio sin vigilar a los vigilantes',
+          body: 'Los vigilantes fichan el inicio y el fin del servicio desde el smartphone y, en los puntos de control, hacen la foto de prueba: cada gesto registra hora y posición, y entre un gesto y otro no se registra nada de forma automática. La central ve los fichajes en cuanto llegan y recibe los avisos con fotos. GeoTapp TimeTracker está pensado para esto: presencias con la posición al fichar, fotos de los controles y mensajes con la central.',
+          productLink: true,
+        },
+        {
+          h2: 'Qué debe garantizar el software para servicios de seguridad',
+          body: 'Para elegir una herramienta de gestión operativa de servicios de seguridad, comprueba que admita:',
+          listItems: [
+            'Inicio y fin de servicio con posición y hora registradas',
+            'Fotos de prueba con hora y posición en los puntos de control',
+            'Aviso de incidencias con foto y la posición en ese momento',
+            'Informes sellados exportables para el cliente final',
+            'Una alerta si un servicio queda abierto',
           ],
         },
       ],

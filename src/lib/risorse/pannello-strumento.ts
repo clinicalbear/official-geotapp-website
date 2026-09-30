@@ -158,7 +158,7 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
     },
     es: {
       title: 'Por qué hacerte estas preguntas',
-      p1: 'Presencias, ubicación, fotos de obra: son datos personales de tus trabajadores, y el cumplimiento no es un sello que se compra una vez, es una serie de hábitos que se tienen o no se tienen. Las nueve preguntas apuntan a los puntos donde más tropiezan las empresas con equipos de campo.',
+      p1: 'Fichajes, ubicación, fotos de obra: son datos personales de tus trabajadores, y el cumplimiento no es un sello que se compra una vez, es una serie de hábitos que se tienen o no se tienen. Las nueve preguntas apuntan a los puntos donde más tropiezan las empresas con equipos de campo.',
       p2: 'Responde con sinceridad: al final tienes una puntuación, las áreas donde intervenir y los recursos enlazados para arreglarlas. Ninguna respuesta sale de tu navegador, el test trabaja para ti, no para nosotros.',
     },
     nl: {

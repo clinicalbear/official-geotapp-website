@@ -9,7 +9,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   it: 'Conformità normativa in Italia',
   de: 'Vorschriften und Nachweise in Deutschland',
   fr: 'Règles et justificatifs en France',
-  es: 'Cumplimiento normativo en España',
+  es: 'Normativa y documentación en España',
   pt: 'Conformidade em Portugal',
   nl: 'Regels en documentatie in Nederland',
   'en-us': 'Regional rules and records',
@@ -64,16 +64,16 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
   ],
   es: [
     {
-      q: '¿Jornada y disponibilidad según el convenio del metal?',
-      a: 'Registro diario (art. 34.9 ET) por electricista y obra, pluses de disponibilidad y dietas y conservación de datos, capturado en cada intervención.',
+      q: '¿Horas y disponibilidad de los electricistas?',
+      a: 'GeoTapp registra en cada fichaje entrada, pausas y salida con posición y hora, por electricista y por obra, y las exporta a Excel o CSV para tu gestoría o asesor laboral. La aplicación del convenio colectivo (pluses, dietas) y la elaboración de la nómina siguen siendo cosa de la gestoría y de la empresa.',
     },
     {
-      q: '¿RGPD y AEPD para la geolocalización de electricistas?',
-      a: 'Geolocalización solo durante la jornada, con información previa, interés legítimo y el art. 90 LOPDGDD, con derecho de acceso del trabajador.',
+      q: '¿Geolocalización de electricistas: RGPD y AEPD?',
+      a: 'La posición solo se registra al fichar y con las fotos de prueba, nunca de forma continua, y la información a los trabajadores se firma en la app antes de fichar. Corresponde a la empresa comprobar qué exigen en su caso el RGPD (interés legítimo), el art. 90 LOPDGDD y la información a la representación de los trabajadores.',
     },
     {
       q: '¿REBT y carné de instalador electricista?',
-      a: 'Asociación de cada intervención al carné de instalador electricista (REBT), con el historial de soporte al boletín de instalación.',
+      a: 'GeoTapp no verifica los carnés ni las habilitaciones del REBT ni genera el boletín de instalación. Registra la hora, la posición y las fotos de cada intervención, que el técnico puede adjuntar a su propia documentación.',
     },
   ],
   pt: [
