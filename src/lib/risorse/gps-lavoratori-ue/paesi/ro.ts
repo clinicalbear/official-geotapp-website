@@ -96,7 +96,7 @@ export const romania: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "quando si usano sistemi di monitoraggio tramite mezzi di comunicazione elettronica (l'ANSPDCP applica l'art. 5 anche al GPS, caso Tehnoplus) e i dati dei dipendenti sono trattati per l'interesse legittimo del datore, il trattamento è ammesso solo se il datore ha dato ai lavoratori un'informazione preventiva obbligatoria, completa ed esplicita.",
+        it: "Quando si usano sistemi di monitoraggio tramite mezzi di comunicazione elettronica (l'ANSPDCP applica l'art. 5 anche al GPS, caso Tehnoplus) e i dati dei dipendenti sono trattati per l'interesse legittimo del datore, il trattamento è ammesso solo se il datore ha dato ai lavoratori un'informazione preventiva obbligatoria, completa ed esplicita.",
         en: "where monitoring systems using electronic communication means are used (the ANSPDCP applies art. 5 to GPS as well, Tehnoplus case) and employee data are processed for the employer's legitimate interest, the processing is permitted only if the employer has given the workers mandatory, complete and explicit prior information.",
         de: 'werden Überwachungssysteme mit elektronischen Kommunikationsmitteln eingesetzt (die ANSPDCP wendet Art. 5 auch auf GPS an, Fall Tehnoplus) und werden Beschäftigtendaten zur Wahrung des berechtigten Interesses des Arbeitgebers verarbeitet, ist die Verarbeitung nur zulässig, wenn der Arbeitgeber die Arbeitnehmer zuvor verpflichtend, vollständig und ausdrücklich informiert hat.',
         fr: "lorsque des systèmes de surveillance par moyens de communication électronique sont utilisés (l'ANSPDCP applique l'art. 5 aussi au GPS, affaire Tehnoplus) et que les données des salariés sont traitées pour l'intérêt légitime de l'employeur, le traitement n'est admis que si l'employeur a donné aux travailleurs une information préalable obligatoire, complète et explicite.",
@@ -116,7 +116,7 @@ export const romania: SchedaPaese = {
       },
       risposta: 'dipende',
       dettaglio: {
-        it: 'prima di introdurre i sistemi di monitoraggio il datore deve consultare il sindacato o, se del caso, i rappresentanti dei dipendenti. Vale dove esistono.',
+        it: 'Prima di introdurre i sistemi di monitoraggio il datore deve consultare il sindacato o, se del caso, i rappresentanti dei dipendenti. Vale dove esistono.',
         en: 'before introducing the monitoring systems the employer must consult the trade union or, where applicable, the employees representatives. It applies where they exist.',
         de: 'vor der Einführung der Überwachungssysteme muss der Arbeitgeber die Gewerkschaft oder gegebenenfalls die Arbeitnehmervertreter anhören. Dies gilt, wo solche vorhanden sind.',
         fr: "avant d'introduire les systèmes de surveillance, l'employeur doit consulter le syndicat ou, le cas échéant, les représentants des salariés. Cela s'appliqué là où ils existent.",
@@ -136,7 +136,7 @@ export const romania: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "la legge subordina il monitoraggio alle condizioni dell'art. 5, ma non a un'autorizzazione preventiva dell'ANSPDCP.",
+        it: "La legge subordina il monitoraggio alle condizioni dell'art. 5, ma non a un'autorizzazione preventiva dell'ANSPDCP.",
         en: "the law makes monitoring subject to the conditions of art. 5, but not to a prior authorisation from the ANSPDCP.",
         de: 'das Gesetz unterwirft die Überwachung den Bedingungen des Art. 5, jedoch keiner vorherigen Genehmigung durch die ANSPDCP.',
         fr: "la loi subordonne la surveillance aux conditions de l'art. 5, mais non à une autorisation préalable de l'ANSPDCP.",
@@ -156,7 +156,7 @@ export const romania: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "il monitoraggio è ammesso solo se altre forme meno intrusive non si sono già rivelate efficaci e se l'interesse legittimo del datore prevale sui diritti dei lavoratori.",
+        it: "Il monitoraggio è ammesso solo se altre forme meno intrusive non si sono già rivelate efficaci e se l'interesse legittimo del datore prevale sui diritti dei lavoratori.",
         en: "monitoring is permitted only if other less intrusive forms have not already proven effective and if the legitimate interest of the employer prevails over the rights of the workers.",
         de: 'die Überwachung ist nur zulässig, wenn andere weniger eingreifende Formen sich nicht bereits als wirksam erwiesen haben und wenn das berechtigte Interesse des Arbeitgebers gegenüber den Rechten der Arbeitnehmer überwiegt.',
         fr: "la surveillance n'est admise que si d'autres formes moins intrusives ne se sont pas déjà révélées efficaces et si l'intérêt légitime de l'employeur prévaut sur les droits des travailleurs.",
@@ -176,7 +176,7 @@ export const romania: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'la durata di conservazione deve essere proporzionata allo scopo e non superiore a 30 giorni, salvo casi previsti dalla legge o debitamente giustificati.',
+        it: 'La durata di conservazione deve essere proporzionata allo scopo e non superiore a 30 giorni, salvo casi previsti dalla legge o debitamente giustificati.',
         en: 'the retention period must be proportionate to the purpose and no longer than 30 days, save for cases provided for by law or duly justified.',
         de: 'die Speicherdauer muss dem Zweck angemessen sein und 30 Tage nicht überschreiten, außer in gesetzlich vorgesehenen oder ordnungsgemäß begründeten Fällen.',
         fr: 'la durée de conservation doit être proportionnée à la finalité et ne pas dépasser 30 jours, sauf dans les cas prévus par la loi ou dûment justifiés.',
@@ -196,7 +196,7 @@ export const romania: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "la lista nazionale rende obbligatoria la valutazione d'impatto per il monitoraggio sistematico su larga scala di persone vulnerabili (inclusi i dipendenti) e per il trattamento sistematico di dati di localizzazione.",
+        it: "La lista nazionale rende obbligatoria la valutazione d'impatto per il monitoraggio sistematico su larga scala di persone vulnerabili (inclusi i dipendenti) e per il trattamento sistematico di dati di localizzazione.",
         en: 'the national list makes the impact assessment mandatory for the large-scale systematic monitoring of vulnerable persons (including employees) and for the systematic processing of location data.',
         de: 'die nationale Liste macht die Folgenabschätzung verpflichtend für die systematische groß angelegte Überwachung schutzbedürftiger Personen (einschließlich der Beschäftigten) und für die systematische Verarbeitung von Standortdaten.',
         fr: "la liste nationale rend l'analyse d'impact obligatoire pour la surveillance systématique à grande échelle de personnes vulnérables (y compris les salariés) et pour le traitement systématique de données de localisation.",
@@ -266,7 +266,7 @@ export const romania: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        it: 'Se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: l’informativa consegnata prima non basta.',
         en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
         de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
         fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',

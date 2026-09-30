@@ -145,7 +145,7 @@ export const bielorussia: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Base = di norma il consenso (modello consent-centric, diverso dal GDPR)',
+        it: 'Base = di norma il consenso (modello incentrato sul consenso, diverso dal GDPR)',
         en: "Legal basis = as a rule, consent (consent-centric model, different from the GDPR)",
         de: 'Rechtsgrundlage = in der Regel die Einwilligung (auf Einwilligung ausgerichtetes Modell, anders als die DSGVO)',
         fr: "Base = en règle generale le consentement (modèle centré sur le consentement, différent du RGPD)",
@@ -264,7 +264,7 @@ export const bielorussia: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        it: 'Se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: l’informativa consegnata prima non basta.',
         en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
         de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
         fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
@@ -295,7 +295,7 @@ export const bielorussia: SchedaPaese = {
       nl: 'tot ongeveer 200 basiseenheden (ongeveer 2.600 euro), naast de mogelijke strafrechtelijke aansprakelijkheid',
     },
     casoCitato: {
-      it: "Non risulta una decisione bielorussa specifica è pubblicata sul GPS sui dipendenti, e la trasparenza sull'applicazione è limitata. Le sanzioni amministrative massime per violazioni sui dati arrivano a circa 200 unità base (circa 2.600 euro), ma questo tetto vale per la diffusione illecita; per la raccolta o conservazione illecita si arriva a 50 unità base (da 4 a 100 se commessa da chi conosce i dati per lavoro), con possibile responsabilità penale nei casi più gravi.",
+      it: "Non risulta una decisione bielorussa specifica pubblicata sul GPS sui dipendenti, e la trasparenza sull'applicazione è limitata. Le sanzioni amministrative massime per violazioni sui dati arrivano a circa 200 unità base (circa 2.600 euro), ma questo tetto vale per la diffusione illecita; per la raccolta o conservazione illecita si arriva a 50 unità base (da 4 a 100 se commessa da chi conosce i dati per lavoro), con possibile responsabilità penale nei casi più gravi.",
       en: "There is no specific, published Belarusian decision on GPS on employees, and transparency over enforcement is limited. The maximum administrative penalties for data violations reach about 200 base units (around 2,600 euros), but that ceiling applies to unlawful dissemination; unlawful collection or storage is punished with up to 50 base units (4 to 100 if committed by someone who knows the data through work), with possible criminal liability in the most serious cases.",
       de: "Eine spezifische, veröffentlichte belarussische Entscheidung zu GPS bei Mitarbeitern ist nicht ersichtlich, und die Transparenz über die Durchsetzung ist begrenzt. Die höchsten verwaltungsrechtlichen Sanktionen für Datenverstöße erreichen etwa 200 Basiseinheiten (rund 2.600 Euro), doch diese Obergrenze gilt für die unrechtmäßige Verbreitung; für unrechtmäßiges Erheben oder Speichern sind bis zu 50 Basiseinheiten vorgesehen (4 bis 100, wenn der Täter die Daten beruflich kennt), mit möglicher strafrechtlicher Haftung in den schwersten Fällen.",
       fr: "Il n'existe pas de décision biélorusse spécifique et publiée sur le GPS appliquée aux salaries, et la transparence sur l'application des règles est limitée. Les sanctions administratives maximales pour les violations relatives aux données atteignent environ 200 unités de base (environ 2 600 euros), mais ce plafond vise la diffusion illicite ; la collecte ou la conservation illicite est punie jusqu'à 50 unités de base (de 4 à 100 si l'auteur connaît les données par son travail), avec une possible responsabilité pénale dans les cas les plus graves.",

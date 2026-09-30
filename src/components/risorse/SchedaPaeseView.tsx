@@ -195,7 +195,7 @@ export default function SchedaPaeseView({
           <p className="kk k"><s></s>{dict.h1Selettore}</p>
           <h1>
             {titoloPaese}
-            {titoloResto && <><br /><em>{titoloResto}</em></>}
+            {titoloResto && <><span className="sr-only">: </span><br /><em>{titoloResto}</em></>}
           </h1>
           <p className="lede">{dict.aggiornatoIl} {formatDate(scheda.aggiornatoIl, locale)}</p>
           <div className="acts">

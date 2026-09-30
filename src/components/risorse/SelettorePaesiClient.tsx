@@ -89,19 +89,12 @@ export default function SelettorePaesiClient({
 
   return (
     <main className={`container mx-auto max-w-6xl px-4 ${embed ? 'relative py-6 pb-12' : 'py-12 md:py-16'}`}>
-      <header className={embed ? 'mb-6 text-center' : 'mb-10 text-center'}>
-        {/* Fuori dall'embed la H1 della pagina e' nella testata: qui il titolo scende a H2 per non duplicare il tag. */}
-        {embed ? (
+      {/* Fuori dall'embed titolo e introduzione stanno gia' nella testata della pagina: qui non si ripetono. */}
+      {embed && (
+        <header className="mb-6 text-center">
           <h1 className="font-bold text-slate-900 max-w-3xl mx-auto text-xl md:text-2xl mb-1">{h1}</h1>
-        ) : (
-          <h2 className="font-bold text-slate-900 max-w-3xl mx-auto text-3xl md:text-4xl mb-4">{h1}</h2>
-        )}
-        {!embed && (
-          <p className="text-slate-600 text-lg leading-relaxed max-w-3xl mx-auto">
-            {dict.introSelettore}
-          </p>
-        )}
-      </header>
+        </header>
+      )}
 
       {/* Selettore accessibile: percorso primario, sempre usabile da tastiera. */}
       <div className="mb-10 max-w-md mx-auto">

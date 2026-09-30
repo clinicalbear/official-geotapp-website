@@ -110,7 +110,7 @@ export const lettonia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'Il datore deve, prima di iniziare il trattamento, valutare il bilanciamento tra il proprio interesse è quello del lavoratore, e informarlo prima che inizi a usare il veicolo, in modo trasparente e in linguaggio semplice.',
+        it: 'Il datore deve, prima di iniziare il trattamento, valutare il bilanciamento tra il proprio interesse e quello del lavoratore, e informarlo prima che inizi a usare il veicolo, in modo trasparente e in linguaggio semplice.',
         en: 'Before starting the processing, the employer must assess the balance between its own interest and the worker\'s interest, and must inform the worker before they begin using the vehicle, in a transparent way and in plain language.',
         de: 'Der Arbeitgeber muss vor Beginn der Verarbeitung die Abwägung zwischen seinem eigenen Interesse und dem des Beschäftigten vornehmen und den Beschäftigten informieren, bevor dieser das Fahrzeug benutzt, transparent und in einfacher Sprache.',
         fr: "Avant de commencer le traitement, l'employeur doit évaluer la mise en balance entre son propre intérêt et celui du salarie, et l'informer avant qu'il ne commence a utiliser le véhicule, de manière transparente et en langage simple.",
@@ -130,7 +130,7 @@ export const lettonia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'Di regola la base e l\'interesse legittimo del datore (in alcuni casi un obbligo di legge, come per i tachigrafi); il consenso del lavoratore si può usare solo in casi eccezionali, per lo squilibrio di potere tra datore e lavoratore.',
+        it: 'Di regola la base è l\'interesse legittimo del datore (in alcuni casi un obbligo di legge, come per i tachigrafi); il consenso del lavoratore si può usare solo in casi eccezionali, per lo squilibrio di potere tra datore e lavoratore.',
         en: "As a rule the basis is the employer's legitimate interest (in some cases a legal obligation, as with tachographs); the worker's consent can be used only in exceptional cases, because of the power imbalance between employer and worker.",
         de: 'In der Regel ist die Grundlage das berechtigte Interesse des Arbeitgebers (in manchen Fällen eine rechtliche Verpflichtung, etwa bei Fahrtschreibern); die Einwilligung des Beschäftigten kommt wegen des Machtungleichgewichts zwischen Arbeitgeber und Beschäftigtem nur in Ausnahmefällen in Betracht.',
         fr: "En règle générale, la base est l'intérêt légitime de l'employeur (dans certains cas une obligation légale, comme pour les tachygraphes) ; le consentement du salarié ne peut être utilisé que dans des cas exceptionnels, en raison du déséquilibre de pouvoir entre employeur et salarié.",
@@ -150,7 +150,7 @@ export const lettonia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: 'La legge lettone sul trattamento dei dati non prevede un\'autorizzazione preventiva del DVI; il titolare valuta da se la liceità.',
+        it: 'La legge lettone sul trattamento dei dati non prevede un\'autorizzazione preventiva del DVI; il titolare valuta da sé la liceità.',
         en: 'Latvian data processing law does not provide for a prior authorisation by the DVI; the controller assesses lawfulness on its own.',
         de: 'Das lettische Datenschutzrecht sieht keine vorherige Genehmigung durch die DVI vor; der Verantwortliche beurteilt die Rechtmäßigkeit selbst.',
         fr: "La loi lettone sur le traitement des données ne prévoit pas d'autorisation préalable de la DVI; le responsable du traitement évalue lui-même la licéité.",
@@ -170,7 +170,7 @@ export const lettonia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'Il datore non ha base ne diritto di trattare i dati per il periodo in cui il lavoratore usa il veicolo per scopi privati. Deve inoltre chiedersi se lo scopo si raggiunga con mezzi meno invasivi (per contare i chilometri non serve registrare la posizione) e non può usare per un altro scopo i dati raccolti per uno (per esempio, i dati di un antifurto per controllare l\'efficienza dell\'autista).',
+        it: 'Il datore non ha base né diritto di trattare i dati per il periodo in cui il lavoratore usa il veicolo per scopi privati. Deve inoltre chiedersi se lo scopo si raggiunga con mezzi meno invasivi (per contare i chilometri non serve registrare la posizione) e non può usare per un altro scopo i dati raccolti per uno (per esempio, i dati di un antifurto per controllare l\'efficienza dell\'autista).',
         en: "The employer has neither a basis nor a right to process data for the period in which the worker uses the vehicle for private purposes. It must also ask whether the purpose can be reached by less intrusive means (to count kilometres there is no need to record location) and may not use data collected for one purpose for another (for example, anti-theft data to check the driver's efficiency).",
         de: 'Der Arbeitgeber hat weder eine Grundlage noch ein Recht, Daten für den Zeitraum zu verarbeiten, in dem der Beschäftigte das Fahrzeug für private Zwecke nutzt. Er muss außerdem prüfen, ob der Zweck mit milderen Mitteln erreichbar ist (zum Zählen der Kilometer muss der Standort nicht erfasst werden), und darf für einen Zweck erhobene Daten nicht für einen anderen verwenden (zum Beispiel Diebstahlschutz-Daten, um die Effizienz des Fahrers zu kontrollieren).',
         fr: "L'employeur n'a ni base ni droit de traiter les données pour la période pendant laquelle le salarié utilise le véhicule à des fins privées. Il doit aussi se demander si la finalité peut être atteinte par des moyens moins intrusifs (pour compter les kilomètres, il n'est pas nécessaire d'enregistrer la position) et ne peut pas utiliser pour une finalité les données collectées pour une autre (par exemple, les données d'un antivol pour contrôler l'efficacité du conducteur).",
@@ -260,7 +260,7 @@ export const lettonia: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        it: 'Se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: l’informativa consegnata prima non basta.',
         en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
         de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
         fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
@@ -291,7 +291,7 @@ export const lettonia: SchedaPaese = {
       nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
     },
     casoCitato: {
-      it: 'Non risulta una multa del DVI specifica è pubblicata per il GPS sui dipendenti. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).',
+      it: 'Non risulta una multa del DVI specifica pubblicata per il GPS sui dipendenti. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).',
       en: 'There is no specific, published DVI fine for GPS tracking of employees. The penalty risk remains the general one under the GDPR (Art. 83).',
       de: 'Es ist keine spezifische, veröffentlichte Geldbuße der DVI für GPS-Tracking von Beschäftigten bekannt. Das Sanktionsrisiko bleibt das allgemeine der DSGVO (Art. 83).',
       fr: "Il n'existe pas d'amende de la DVI spécifique et publiée pour le suivi GPS des salaries. Le risque de sanction reste celui, général, du RGPD (art. 83).",

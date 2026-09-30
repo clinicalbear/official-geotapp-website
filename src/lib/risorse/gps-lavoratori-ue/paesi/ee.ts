@@ -96,7 +96,7 @@ export const estonia: SchedaPaese = {
     urlFonte: FONTE_AKI_RECLAMO.url,
     verificatoIl: '2026-06-15',
     note: {
-      it: "L'Estonia ha un'unica autorità nazionale, l'AKI; nessuna ripartizione regionale. Particolarità: le multe GDPR passano per la procedura per contravvenzioni; dal novembre 2023 il tetto e allineato al GDPR.",
+      it: "L'Estonia ha un'unica autorità nazionale, l'AKI; nessuna ripartizione regionale. Particolarità: le multe GDPR passano per la procedura per contravvenzioni; il tetto delle multe è quello del GDPR.",
       en: 'Estonia has a single national authority, the AKI; no regional division. A particularity: GDPR fines go through the misdemeanour procedure; since November 2023 the cap is aligned with the GDPR.',
       de: 'Estland hat eine einzige nationale Behörde, die AKI; keine regionale Aufteilung. Eine Besonderheit: DSGVO-Geldbußen laufen über das Ordnungswidrigkeitenverfahren; seit November 2023 ist die Obergrenze an die DSGVO angeglichen.',
       fr: "L'Estonie a une seule autorité nationale, l'AKI; aucune répartition régionale. Une particularité: les amendes RGPD passent par la procédure pour contraventions; depuis novembre 2023 le plafond est aligne sur le RGPD.",
@@ -117,7 +117,7 @@ export const estonia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il datore deve spiegare ai lavoratori su quale base giuridica e installato il GPS; nel rapporto di lavoro il consenso non è di norma una base valida per lo squilibrio di potere, è la base e di regola il legittimo interesse (con una relativa analisi) oppure l'esecuzione del contratto di lavoro.",
+        it: "Il datore deve spiegare ai lavoratori su quale base giuridica è installato il GPS; nel rapporto di lavoro il consenso non è di norma una base valida per lo squilibrio di potere: la base è di regola il legittimo interesse (con una relativa analisi) oppure l'esecuzione del contratto di lavoro.",
         en: 'The employer must explain to workers on which legal basis the GPS is installed; in the employment relationship consent is not normally a valid basis because of the power imbalance, and the basis is as a rule legitimate interest (with a supporting analysis) or performance of the employment contract.',
         de: 'Der Arbeitgeber muss den Beschäftigten erläutern, auf welcher Rechtsgrundlage das GPS installiert ist; im Arbeitsverhältnis ist die Einwilligung wegen des Machtungleichgewichts in der Regel keine gültige Grundlage, die Grundlage ist regelmäßig das berechtigte Interesse (mit entsprechender Analyse) oder die Erfüllung des Arbeitsvertrags.',
         fr: "L'employeur doit expliquer aux salariés sur quelle base juridique le GPS est installé ; dans la relation de travail le consentement n'est généralement pas une base valable en raison du déséquilibre de pouvoir, et la base est en règle générale l'intérêt légitime (avec une analyse à l'appui) ou l'exécution du contrat de travail.",
@@ -157,7 +157,7 @@ export const estonia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "Non serve un'autorizzazione preventiva dell'AKI; il titolare valuta da se base giuridica e proporzionalità.",
+        it: "Non serve un'autorizzazione preventiva dell'AKI; il titolare valuta da sé base giuridica e proporzionalità.",
         en: 'No prior authorisation from the AKI is required; the controller assesses the legal basis and proportionality on its own.',
         de: 'Eine vorherige Genehmigung der AKI ist nicht erforderlich; der Verantwortliche beurteilt Rechtsgrundlage und Verhältnismäßigkeit selbst.',
         fr: "Aucune autorisation préalable de l'AKI n'est nécessaire; le responsable du traitement évalue lui-même la base juridique et la proportionnalité.",
@@ -267,7 +267,7 @@ export const estonia: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        it: 'Se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: l’informativa consegnata prima non basta.',
         en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
         de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
         fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
@@ -298,7 +298,7 @@ export const estonia: SchedaPaese = {
       nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
     },
     casoCitato: {
-      it: "Non risulta una multa dell'AKI specifica è pubblicata per il GPS sui dipendenti. In Estonia le multe GDPR passano per la procedura per contravvenzioni, di cui l'AKI è l'organo extragiudiziale; il tetto della legge estone (art. 65 della legge sulla protezione dei dati) coincide con quello del GDPR: fino a 20 milioni di euro o 4% del fatturato mondiale. Dal 1 novembre 2023 queste contravvenzioni si prescrivono in tre anni. L'AKI ha pubblicato indicazioni specifiche su videosorveglianza, GPS e altri strumenti di controllo dei dipendenti.",
+      it: "Non risulta una multa dell'AKI specifica pubblicata per il GPS sui dipendenti. In Estonia le multe GDPR passano per la procedura per contravvenzioni, di cui l'AKI è l'organo extragiudiziale; il tetto della legge estone (art. 65 della legge sulla protezione dei dati) coincide con quello del GDPR: fino a 20 milioni di euro o 4% del fatturato mondiale. Dal 1° novembre 2023 queste contravvenzioni si prescrivono in tre anni. L'AKI ha pubblicato indicazioni specifiche su videosorveglianza, GPS e altri strumenti di controllo dei dipendenti.",
       en: "There is no specific, published AKI fine for GPS on employees. In Estonia GDPR fines go through the misdemeanour procedure, in which the AKI is the out-of-court body; the cap in Estonian law (Personal Data Protection Act, § 65) matches the GDPR: up to 20 million euro or 4% of worldwide turnover. Since 1 November 2023 these misdemeanours are subject to a three-year limitation period. The AKI has published specific guidance on video surveillance, GPS and other tools for monitoring employees.",
       de: "Eine spezifische, veröffentlichte Geldbuße der AKI für GPS bei Beschäftigten ist nicht bekannt. In Estland laufen DSGVO-Geldbußen über das Ordnungswidrigkeitenverfahren, in dem die AKI die außergerichtliche Stelle ist; die Obergrenze im estnischen Recht (Datenschutzgesetz, § 65) entspricht der DSGVO: bis zu 20 Millionen Euro oder 4% des weltweiten Umsatzes. Seit dem 1. November 2023 verjähren diese Ordnungswidrigkeiten nach drei Jahren. Die AKI hat konkrete Hinweise zu Videoüberwachung, GPS und anderen Kontrollmitteln für Beschäftigte veröffentlicht.",
       fr: "Aucune amende de l'AKI spécifique et publiée pour le GPS sur les salaries n'apparait. En Estonie les amendes RGPD passent par la procédure pour contraventions, dont l'AKI est l'organe extrajudiciaire ; le plafond de la loi estonienne (loi sur la protection des données personnelles, § 65) correspond à celui du RGPD : jusqu'à 20 millions d'euros ou 4 % du chiffre d'affaires mondial. Depuis le 1er novembre 2023, ces contraventions se prescrivent par trois ans. L'AKI a publié des indications précises sur la vidéosurveillance, le GPS et d'autres outils de contrôle des salariés.",

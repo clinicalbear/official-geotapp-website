@@ -70,7 +70,7 @@ export const lituania: SchedaPaese = {
 
   autoritaCompetente: {
     ente: {
-      it: 'VDAI (Valstybine duomenu apsaugos inspekcija, Garante lituano)',
+      it: 'VDAI (Valstybinė duomenų apsaugos inspekcija, Garante lituano)',
       en: 'VDAI (Valstybine duomenu apsaugos inspekcija, Lithuanian data protection authority)',
       de: 'VDAI (Valstybine duomenu apsaugos inspekcija, litauische Datenschutzbehörde)',
       fr: 'VDAI (Valstybine duomenu apsaugos inspekcija, autorité lituanienne de protection des données)',
@@ -98,7 +98,7 @@ export const lituania: SchedaPaese = {
   checklist: [
     {
       voce: {
-        it: 'Informazione preventiva è chiara ai lavoratori sul tracciamento (GDPR art. 13)',
+        it: 'Informazione preventiva e chiara ai lavoratori sul tracciamento (GDPR art. 13)',
         en: 'Clear prior information to workers about tracking (GDPR art. 13)',
         de: 'Klare vorherige Information der Arbeitnehmer über die Ortung (DSGVO Art. 13)',
         fr: 'Information préalable et claire des travailleurs sur le suivi (RGPD art. 13)',
@@ -147,7 +147,7 @@ export const lituania: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'Il monitoraggio è ammesso solo con uno scopo reale e giustificato; la base e l\'interesse legittimo, non il consenso, che nel rapporto di lavoro di norma non è liberamente prestato (WP249: e molto improbabile che il consenso sia una base valida).',
+        it: 'Il monitoraggio è ammesso solo con uno scopo reale e giustificato; la base è l\'interesse legittimo, non il consenso, che nel rapporto di lavoro di norma non è liberamente prestato (WP249: e molto improbabile che il consenso sia una base valida).',
         en: 'Monitoring is allowed only for a real and justified purpose; the basis is legitimate interest, not consent, which in the employment relationship is normally not freely given (WP249: consent is highly unlikely to be a valid basis).',
         de: 'Die Überwachung ist nur für einen tatsächlichen und gerechtfertigten Zweck zulässig; die Grundlage ist das berechtigte Interesse, nicht die Einwilligung, die im Arbeitsverhältnis in der Regel nicht freiwillig erteilt wird (WP249: Einwilligung ist höchst unwahrscheinlich eine gültige Grundlage).',
         fr: "La surveillance n est admise que pour une finalité réelle et justifiée; la base est l intérêt légitime, et non le consentement, qui dans la relation de travail n est en général pas librement donné (WP249 : le consentement est très improbable comme base valable).",
@@ -167,7 +167,7 @@ export const lituania: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'Il tracciamento del veicolo va sospeso fuori dall\'orario di lavoro o il lavoratore deve poterlo disattivare; per il WP249 e improbabile che esista una base giuridica per localizzare il veicolo fuori dall\'orario di lavoro, e il trattamento e eccessivo quando serve solo a controllare il lavoro, che si potrebbe controllare con altri mezzi.',
+        it: 'Il tracciamento del veicolo va sospeso fuori dall\'orario di lavoro o il lavoratore deve poterlo disattivare; per il WP249 è improbabile che esista una base giuridica per localizzare il veicolo fuori dall\'orario di lavoro, e il trattamento è eccessivo quando serve solo a controllare il lavoro, che si potrebbe controllare con altri mezzi.',
         en: 'Vehicle tracking must be suspended outside working hours or the worker must be able to switch it off; under WP249 a legal basis for locating the vehicle outside working hours is unlikely, and the processing is excessive when its sole purpose is to monitor the work, which could be monitored by other means.',
         de: 'Die Fahrzeugverfolgung muss außerhalb der Arbeitszeit ausgesetzt werden oder der Arbeitnehmer muss sie abschalten können; nach WP249 ist eine Rechtsgrundlage für die Ortung des Fahrzeugs außerhalb der Arbeitszeit unwahrscheinlich, und die Verarbeitung ist übermäßig, wenn sie allein der Kontrolle der Arbeit dient, die sich auch anders kontrollieren ließe.',
         fr: "Le suivi du véhicule doit être suspendu en dehors des heures de travail ou le travailleur doit pouvoir le désactiver; selon le WP249, une base juridique pour localiser le véhicule en dehors des heures de travail est improbable, et le traitement est excessif lorsqu'il ne sert qu'à contrôler le travail, qui pourrait l'être par d'autres moyens.",
@@ -257,7 +257,7 @@ export const lituania: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        it: 'Se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: l’informativa consegnata prima non basta.',
         en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
         de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
         fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
@@ -288,7 +288,7 @@ export const lituania: SchedaPaese = {
       nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
     },
     casoCitato: {
-      it: 'Non risulta una multa del VDAI specifica è pubblicata per il GPS sui dipendenti. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).',
+      it: 'Non risulta una multa del VDAI specifica pubblicata per il GPS sui dipendenti. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).',
       en: 'There is no specific, published VDAI fine for GPS on employees. The sanction risk remains the general one under the GDPR (Art. 83).',
       de: 'Es gibt kein spezifisches, veröffentlichtes VDAI-Bußgeld zu GPS bei Beschäftigten. Das Sanktionsrisiko bleibt das allgemeine der DSGVO (Art. 83).',
       fr: "Il n'existe pas d'amende du VDAI spécifique et publiée pour le GPS des salaries. Le risque de sanction reste celui, général, du RGPD (art. 83).",

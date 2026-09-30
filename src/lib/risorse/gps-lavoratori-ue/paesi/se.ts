@@ -112,7 +112,7 @@ export const svezia: SchedaPaese = {
       },
       risposta: 'dipende',
       dettaglio: {
-        it: 'Il datore vincolato da un contratto collettivo deve, di propria iniziativa, negoziare con il sindacato prima di una modifica importante (come introdurre un sistema di monitoraggio o GPS). Vale dove il datore e vincolato da un contratto collettivo.',
+        it: 'Il datore vincolato da un contratto collettivo deve, di propria iniziativa, negoziare con il sindacato prima di una modifica importante (come introdurre un sistema di monitoraggio o GPS). Vale dove il datore è vincolato da un contratto collettivo.',
         en: 'An employer bound by a collective agreement must, on its own initiative, negotiate with the union before a major change (such as introducing a monitoring or GPS system). This applies where the employer is bound by a collective agreement.',
         de: 'Ein durch einen Tarifvertrag gebundener Arbeitgeber muss von sich aus mit der Gewerkschaft verhandeln, bevor er eine wesentliche Änderung vornimmt (etwa die Einführung eines Uberwachungs- oder GPS-Systems). Dies gilt, wenn der Arbeitgeber an einen Tarifvertrag gebunden ist.',
         fr: "L'employeur lie par une convention collective doit, de sa propre initiative, négocier avec le syndicat avant un changement important (comme l'introduction d'un système de surveillance ou de GPS). Cela vaut lorsque l'employeur est lie par une convention collective.",
@@ -132,7 +132,7 @@ export const svezia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "Non esiste un regime di autorizzazione preventiva dell'IMY per il GPS sui dipendenti; vale la responsabilizzazione (il datore documenta da se base giuridica e bilanciamento).",
+        it: "Non esiste un regime di autorizzazione preventiva dell'IMY per il GPS sui dipendenti; vale la responsabilizzazione (il datore documenta da sé base giuridica e bilanciamento).",
         en: 'There is no prior-authorisation regime by the IMY for GPS on employees; accountability applies (the employer documents the legal basis and balancing test itself).',
         de: 'Es gibt kein vorheriges Genehmigungsverfahren der IMY für GPS bei Beschäftigten; es gilt die Rechenschaftspflicht (der Arbeitgeber dokumentiert Rechtsgrundlage und Interessenabwägung selbst).',
         fr: "Il n'existe pas de régime d'autorisation préalable de l'IMY pour le GPS sur les salaries; le principe de responsabilité s'appliqué (l'employeur documente lui-même la base juridique et la mise en balance).",
@@ -192,7 +192,7 @@ export const svezia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Serve una valutazione d'impatto quando il trattamento comporta una sorveglianza sistematica dei dipendenti ed e probabile un rischio elevato per i loro diritti.",
+        it: "Serve una valutazione d'impatto quando il trattamento comporta una sorveglianza sistematica dei dipendenti ed è probabile un rischio elevato per i loro diritti.",
         en: 'An impact assessment is needed when the processing involves systematic monitoring of employees and a high risk to their rights is likely.',
         de: 'Eine Folgenabschätzung ist erforderlich, wenn die Verarbeitung eine systematische Überwachung der Beschäftigten umfasst und ein hohes Risiko für ihre Rechte wahrscheinlich ist.',
         fr: "Une analyse d'impact est nécessaire lorsque le traitement implique une surveillance systématique des salaries et qu'un risque élevé pour leurs droits est probable.",
@@ -240,7 +240,7 @@ export const svezia: SchedaPaese = {
     {
       passo: 4,
       descrizione: {
-        it: 'Svolgi la valutazione d\'impatto se il monitoraggio e sistematico.',
+        it: 'Svolgi la valutazione d\'impatto se il monitoraggio è sistematico.',
         en: 'Carry out the impact assessment if the monitoring is systematic.',
         de: 'Führen Sie die Folgenabschätzung durch, wenn die Überwachung systematisch ist.',
         fr: "Réalisez l'analyse d'impact si la surveillance est systématique.",
@@ -262,7 +262,7 @@ export const svezia: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        it: 'Se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: l’informativa consegnata prima non basta.',
         en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
         de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
         fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
@@ -293,7 +293,7 @@ export const svezia: SchedaPaese = {
       nl: '200.000 SEK (ongeveer 17.500 euro)',
     },
     casoCitato: {
-      it: "Datainspektionen (oggi IMY) contro il Comune di Skelleftea (decisione del 20 agosto 2019, confermata dai tribunali): una scuola usava il riconoscimento facciale tramite telecamera per registrare le presenze degli studenti, trattamento biometrico illecito (il consenso non è valido nel rapporto di dipendenza). Non è un caso di GPS, ma è il caso faro svedese sul monitoraggio biometrico delle presenze.",
+      it: "Datainspektionen (oggi IMY) contro il Comune di Skellefteå (decisione del 20 agosto 2019, confermata dai tribunali): una scuola usava il riconoscimento facciale tramite telecamera per registrare le presenze degli studenti, trattamento biometrico illecito (il consenso non è valido nel rapporto di dipendenza). Non è un caso di GPS, ma è il caso svedese più importante sul monitoraggio biometrico delle presenze.",
       en: 'Datainspektionen (today IMY) v. the Municipality of Skelleftea (decision of 20 August 2019, upheld by the courts): a school used camera-based facial recognition to record student attendance, an unlawful biometric processing (consent is not valid in a relationship of dependence). It is not a GPS case, but it is the landmark Swedish case on biometric attendance monitoring.',
       de: 'Datainspektionen (heute IMY) gegen die Gemeinde Skelleftea (Beschluss vom 20. August 2019, von den Gerichten bestätigt): Eine Schule nutzte kamerabasierte Gesichtserkennung, um die Anwesenheit der Schüler zu erfassen, eine unzulässige biometrische Verarbeitung (die Einwilligung ist im Abhangigkeitsverhaltnis nicht gültig). Es ist kein GPS-Fall, aber der wegweisende schwedische Fall zur biometrischen Anwesenheitserfassung.',
       fr: "Datainspektionen (aujourd'hui IMY) contre la commune de Skelleftea (décision du 20 août 2019, confirmée par les tribunaux): une école utilisait la reconnaissance faciale par caméra pour enregistrer la présence des élèves, un traitement biométrique illicite (le consentement n'est pas valable dans un lien de subordination). Ce n'est pas une affaire de GPS, mais c'est l'affaire phare suédoise sur le contrôle biométrique des présences.",

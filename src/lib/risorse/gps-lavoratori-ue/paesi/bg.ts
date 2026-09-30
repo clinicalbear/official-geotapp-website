@@ -134,7 +134,7 @@ export const bulgaria: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: 'Non serve un\'autorizzazione preventiva del CPDP; il titolare adotta da se le regole interne e svolge la DPIA quando richiesta.',
+        it: 'Non serve un\'autorizzazione preventiva del CPDP; il titolare adotta da sé le regole interne e svolge la DPIA quando richiesta.',
         en: 'No prior authorisation from the CPDP is required; the controller adopts the internal rules itself and carries out the DPIA when required.',
         de: 'Eine vorherige Genehmigung der CPDP ist nicht erforderlich; der Verantwortliche erlässt die internen Regeln selbst und führt die DSFA durch, wenn sie erforderlich ist.',
         fr: "Aucune autorisation préalable de la CPDP n'est requise; le responsable du traitement adopte lui-même les règles internes et réalisé l'AIPD lorsqu'elle est requise.",
@@ -244,7 +244,7 @@ export const bulgaria: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        it: 'Se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: l’informativa consegnata prima non basta.',
         en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
         de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
         fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
@@ -275,7 +275,7 @@ export const bulgaria: SchedaPaese = {
       nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
     },
     casoCitato: {
-      it: 'Non risulta una multa del CPDP specifica è pubblicata per il GPS sui dipendenti. In un parere del 24 novembre 2023 il CPDP ha ritenuto inammissibile il riuso delle registrazioni di videosorveglianza per valutare il rendimento dei dipendenti di LUKOIL Bulgaria (riuso incompatibile, art. 6 par. 4 GDPR), senza multa. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).',
+      it: 'Non risulta una multa del CPDP specifica pubblicata per il GPS sui dipendenti. In un parere del 24 novembre 2023 il CPDP ha ritenuto inammissibile il riuso delle registrazioni di videosorveglianza per valutare il rendimento dei dipendenti di LUKOIL Bulgaria (riuso incompatibile, art. 6 par. 4 GDPR), senza multa. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).',
       en: 'There is no specific, published CPDP fine for GPS on employees. In an opinion of 24 November 2023, the CPDP held that the reuse of video surveillance recordings to assess the performance of LUKOIL Bulgaria employees was inadmissible (incompatible reuse, art. 6 para. 4 GDPR), without a fine. The sanction risk remains the general one under the GDPR (art. 83).',
       de: 'Es gibt keine spezifische, veröffentlichte Geldbuße der CPDP für GPS bei Beschäftigten. In einer Stellungnahme vom 24. November 2023 hielt die CPDP die Weiterverwendung von Videoüberwachungsaufzeichnungen zur Bewertung der Leistung von Beschäftigten von LUKOIL Bulgarien für unzulässig (unvereinbare Weiterverwendung, Art. 6 Abs. 4 DSGVO), ohne Geldbuße. Das Sanktionsrisiko bleibt das allgemeine der DSGVO (Art. 83).',
       fr: "Il n'existe pas d'amende spécifique et publiée de la CPDP pour le GPS sur les salaries. Dans un avis du 24 novembre 2023, la CPDP a estime inadmissible la réutilisation des enregistrements de vidéosurveillance pour évaluer le rendement des salaries de LUKOIL Bulgarie (réutilisation incompatible, art. 6 par. 4 RGPD), sans amende. Le risque de sanction reste celui, général, du RGPD (art. 83).",

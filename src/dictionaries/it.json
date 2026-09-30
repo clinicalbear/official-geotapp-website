@@ -61,7 +61,7 @@
       },
       "sanzioni": {
         "title": "Calcolatore sanzioni GPS",
-        "desc": "Scegli il Paese e scopri quanto rischi a monitorare i lavoratori: sanzione massima reale e adempimenti che ti espongono."
+        "desc": "Scegli il Paese e scopri quanto rischi a monitorare i lavoratori: la multa più alta davvero inflitta, o il massimo di legge, e gli adempimenti che ti espongono."
       },
       "osservatorio": {
         "title": "Osservatorio europeo",
@@ -1234,7 +1234,7 @@
     "metaTitleSelettore": "GPS e monitoraggio dei lavoratori in Europa: cosa serve per essere a norma, paese per paese",
     "metaDescSelettore": "Scegli il Paese e scopri cosa serve per mettere a norma GPS e monitoraggio dei lavoratori: adempimenti, procedura, autorità e modello da scaricare.",
     "h1Selettore": "GPS e monitoraggio dei lavoratori, paese per paese",
-    "introSelettore": "Stessa Europa, regole diverse. Mandi una squadra a montare, pulire o sorvegliare in un altro Paese e dai per scontato che le regole su GPS e controllo dei lavoratori siano quelle di casa. Non lo sono. Ogni Stato ha le sue, e valgono dove si lavora: la tua azienda italiana con un cantiere in Germania segue quelle tedesche, anche se gli operai sono li solo in trasferta. Scegli la destinazione e ti diciamo cosa serve per essere a norma: gli adempimenti, la procedura, a chi rivolgerti e il modello da scaricare.",
+    "introSelettore": "Stessa Europa, regole diverse. Mandi una squadra a montare, pulire o sorvegliare in un altro Paese e dai per scontato che le regole su GPS e controllo dei lavoratori siano quelle di casa. Non lo sono. Ogni Stato ha le sue, e valgono dove si lavora: la tua azienda italiana con un cantiere in Germania segue quelle tedesche, anche se gli operai sono lì solo in trasferta. Scegli la destinazione e ti diciamo cosa serve per essere a norma: gli adempimenti, la procedura, a chi rivolgerti e il modello da scaricare.",
     "scegliPaese": "Scegli il Paese",
     "inArrivo": "In arrivo",
     "inArrivoNota": "Stiamo preparando la scheda di questo paese.",
@@ -1259,14 +1259,14 @@
     "autoritaCompetente": "Autorità competente",
     "disclaimer": "Questa è una risorsa informativa, non una consulenza legale. Prima di attivare un sistema di monitoraggio fai verificare la tua situazione da un professionista.",
     "ctaTitolo": "Vuoi uno strumento pensato per il GDPR?",
-    "ctaTesto": "GeoTapp registra la posizione solo quando si timbra, mai in continuo, e fa firmare l'informativa nell'app prima della prima timbratura. Provalo gratis.",
+    "ctaTesto": "GeoTapp registra la posizione solo quando si timbra o si scatta una foto di prova, mai in continuo, e fa firmare l'informativa nell'app prima della prima timbratura. Provalo gratis.",
     "ctaBottone": "Prova GeoTapp gratis",
     "faq": {
       "title": "Domande frequenti",
       "items": [
         {
           "q": "Posso usare il GPS per controllare i miei dipendenti mentre lavorano?",
-          "a": "Il GPS sul lavoro è legale quasi ovunque in Europa, a una condizione: deve servire a organizzare e provare il lavoro, non a sorvegliare la persona. La differenza la fa il come. Registrare la posizione alla timbratura, quando l'operatore apre e chiude un intervento, è cosa ben diversa dal seguirlo in tempo reale tutta la giornata. La prima quasi sempre si può fare nel modo giusto, la seconda quasi mai. Cosa voglia dire \"nel modo giusto\" però cambia da Paese a Paese, e non è solo questione di documenti: a volte serve un accordo con le rappresentanze dei lavoratori o una base giuridica precisa. La scheda del tuo Paese, qui sopra, dice cosa serve davvero."
+          "a": "Il GPS sul lavoro è legale quasi ovunque in Europa, a una condizione: deve servire a organizzare e provare il lavoro, non a sorvegliare la persona. La differenza la fa il come. Registrare la posizione alla timbratura, quando l'operatore entra, va in pausa ed esce, è cosa ben diversa dal seguirlo in tempo reale tutta la giornata. La prima quasi sempre si può fare nel modo giusto, la seconda quasi mai. Cosa voglia dire \"nel modo giusto\" però cambia da Paese a Paese, e non è solo questione di documenti: a volte serve un accordo con le rappresentanze dei lavoratori o una base giuridica precisa. La scheda del tuo Paese, qui sopra, dice cosa serve davvero."
         },
         {
           "q": "Valgono le regole del mio Paese o di quello dove mando la squadra?",
@@ -1282,11 +1282,11 @@
         },
         {
           "q": "Cosa rischio se attivo un sistema senza essere a norma?",
-          "a": "Dipende dal Paese, ma le sanzioni del GDPR arrivano a cifre che nessuna piccola azienda vuole vedere, e in alcuni Stati ci sono anche conseguenze sul piano del diritto del lavoro. Il problema vero, però, spesso non è la multa: è che i dati raccolti male diventano inutilizzabili proprio quando ti servirebbero, in una causa o davanti a un cliente che contesta. Sulla scheda di ogni Paese trovi la sanzione massima reale e i casi citati."
+          "a": "Dipende dal Paese, ma le sanzioni del GDPR arrivano a cifre che nessuna piccola azienda vuole vedere, e in alcuni Stati ci sono anche conseguenze sul piano del diritto del lavoro. Il problema vero, però, spesso non è la multa: è che i dati raccolti male diventano inutilizzabili proprio quando ti servirebbero, in una causa o davanti a un cliente che contesta. Sulla scheda di ogni Paese trovi il massimo previsto dalla legge e, dove esiste, la multa davvero inflitta in un caso reale."
         },
         {
           "q": "GeoTapp è un sistema di sorveglianza?",
-          "a": "No, ed è stato sviluppato apposta per non esserlo. Lo strumento registra la posizione solo alla timbratura, quando l'operatore apre o chiude un lavoro, mai in continuo, e produce l'informativa da far firmare. Serve a provare cosa è stato fatto e dove, non a guardare le persone. È la differenza tra una prova del lavoro e un guinzaglio."
+          "a": "No, non è pensato per sorvegliare. Registra la posizione a ogni timbratura (entrata, pausa, uscita) e quando si scatta una foto di prova; fra una timbratura e l'altra non registra nulla. E produce l'informativa da far firmare. Serve a provare cosa è stato fatto e dove, non a guardare le persone. È la differenza tra una prova del lavoro e un guinzaglio."
         }
       ]
     },
@@ -1302,7 +1302,7 @@
         },
         {
           "titolo": "Solo i dati necessari, e solo quando servono",
-          "testo": "È il principio di minimizzazione (art. 5.1.c). Rilevare la posizione all'inizio e alla fine del lavoro documenta; rilevarla ogni minuto sorveglia, ed è il motivo più ricorrente delle sanzioni in Europa."
+          "testo": "È il principio di minimizzazione (art. 5.1.c). Rilevare la posizione all'inizio e alla fine del lavoro documenta; rilevarla ogni minuto sorveglia la persona."
         },
         {
           "titolo": "Trasparenza prima, non dopo",
@@ -1313,7 +1313,7 @@
           "testo": "I dati si tengono per il periodo necessario alla finalità, deciso e scritto in anticipo, non 'finché servono' (art. 5.1.e)."
         },
         {
-          "titolo": "Valutazione d'impatto quando il rischio e alto",
+          "titolo": "Valutazione d'impatto quando il rischio è alto",
           "testo": "Il monitoraggio sistematico dei lavoratori rientra tipicamente nei casi che richiedono una DPIA (art. 35), da fare prima di accendere il sistema, non a posteriori."
         },
         {
@@ -1321,13 +1321,13 @@
           "testo": "È la limitazione della finalità (art. 5.1.b). Posizioni raccolte per documentare il lavoro non diventano automaticamente prove per un procedimento disciplinare."
         }
       ],
-      "nota": "Poi c'è l'articolo 88 del GDPR, che lascia a ogni Stato la facolta di aggiungere regole proprie sul trattamento dei dati nel rapporto di lavoro. È per questo che esistono le schede-paese qui sotto: cambia chi deve autorizzare, non il principio."
+      "nota": "Poi c'è l'articolo 88 del GDPR, che lascia a ogni Stato la facoltà di aggiungere regole proprie sul trattamento dei dati nel rapporto di lavoro. È per questo che esistono le schede-paese qui sotto: cambia chi deve autorizzare, non il principio."
     },
     "sanzioneTipoCasoGps": "da un caso GPS reale",
-    "sanzioneTipoCasoAffine": "caso affine, non GPS",
-    "sanzioneTipoMassimale": "massimale di legge, non una multa inflitta",
+    "sanzioneTipoCasoAffine": "caso affine, non sul GPS dei dipendenti",
+    "sanzioneTipoMassimale": "massimo previsto dalla legge",
     "fonteNonUfficialeEtichetta": "fonte non ufficiale",
-    "fonteNonUfficialeAvviso": "Questo dato non proviene da una fonte ufficiale. Qui sotto trovi il collegamento diretto alla fonte che abbiamo usato. Non potendo verificarla presso l'autorita competente, non possiamo garantirne correttezza e coerenza.",
+    "fonteNonUfficialeAvviso": "Questo dato non proviene da una fonte ufficiale. Qui sotto trovi il collegamento diretto alla fonte che abbiamo usato. Non potendo verificarla presso l'autorità competente, non possiamo garantirne correttezza e coerenza.",
     "fonteNonUfficialeTipo_studio_legale": "studio legale",
     "fonteNonUfficialeTipo_stampa": "testata giornalistica",
     "fonteNonUfficialeTipo_banca_dati": "banca dati giuridica privata",
@@ -1335,7 +1335,7 @@
   },
   "sanzioniGps": {
     "metaTitle": "Calcolatore sanzioni GPS: quanto rischi a tracciare i lavoratori, Paese per Paese",
-    "metaDesc": "Scegli il Paese e scopri la sanzione massima reale per il monitoraggio GPS dei lavoratori e quali adempimenti ti espongono. Dati verificati, 39 Paesi europei.",
+    "metaDesc": "Scegli il Paese e scopri la multa più alta davvero inflitta, o il massimo di legge, per il monitoraggio GPS dei lavoratori e quali adempimenti ti espongono. Dati verificati, 39 Paesi europei.",
     "h1": "Quanto rischi a tracciare i lavoratori?",
     "intro": "Scegli il Paese, guarda la sanzione più alta (quella davvero inflitta, dove c'è un caso pubblico, altrimenti il massimo previsto dalla legge: la scheda dice quale) e spunta cosa hai già in regola: ti diciamo a quanto sei esposto. Dati verificati alla fonte, 39 Paesi.",
     "sanzioneMax": "Sanzione massima",

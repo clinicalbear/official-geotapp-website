@@ -108,7 +108,7 @@ export const grecia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'il datore deve informare i lavoratori sullo scopo del trattamento, sul tipo di dati registrati e sul tempo di conservazione.',
+        it: 'Il datore deve informare i lavoratori sullo scopo del trattamento, sul tipo di dati registrati e sul tempo di conservazione.',
         en: 'the employer must inform workers about the purpose of the processing, the type of data recorded and the retention period.',
         de: 'Der Arbeitgeber muss die Arbeitnehmer über den Zweck der Verarbeitung, die Art der erfassten Daten und die Speicherdauer informieren.',
         fr: "l'employeur doit informer les travailleurs de la finalité du traitement, du type de données enregistrées et de la durée de conservation.",
@@ -128,7 +128,7 @@ export const grecia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "per l'HDPA l'installazione di un sistema di geolocalizzazione non lede la sfera privata del lavoratore quando non mira a sorvegliarlo; va limitata all'orario di lavoro e a un percorso predefinito.",
+        it: "Per l'HDPA l'installazione di un sistema di geolocalizzazione non lede la sfera privata del lavoratore quando non mira a sorvegliarlo; va limitata all'orario di lavoro e a un percorso predefinito.",
         en: "according to the HDPA, installing a geolocation system does not infringe the worker's private sphere when it does not aim to monitor them; it must be limited to working hours and a predefined route.",
         de: 'Nach Auffassung der HDPA verletzt die Installation eines Geolokalisierungssystems die Privatsphäre des Arbeitnehmers nicht, wenn es nicht auf dessen Überwachung abzielt; es muss auf die Arbeitszeit und eine vordefinierte Route begrenzt werden.',
         fr: "pour l'HDPA, l'installation d'un système de géolocalisation ne porte pas atteinte à la sphère privée du travailleur lorsqu'elle ne vise pas à le surveiller; elle doit être limitée aux heures de travail et à un itinéraire prédéfini.",
@@ -148,7 +148,7 @@ export const grecia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "non serve un'autorizzazione preventiva dell'HDPA; la consultazione preventiva è prevista solo se la DPIA evidenzia un rischio residuo elevato.",
+        it: "Non serve un'autorizzazione preventiva dell'HDPA; la consultazione preventiva è prevista solo se la DPIA evidenzia un rischio residuo elevato.",
         en: 'no prior authorisation from the HDPA is required; prior consultation is only foreseen if the DPIA reveals a high residual risk.',
         de: 'Eine vorherige Genehmigung der HDPA ist nicht erforderlich; eine vorherige Konsultation ist nur vorgesehen, wenn die DSFA ein hohes Restrisiko aufzeigt.',
         fr: "aucune autorisation préalable de l'HDPA n'est nécessaire; la consultation préalable n'est prévue que si l'AIPD met en évidence un risque résiduel élevé.",
@@ -168,7 +168,7 @@ export const grecia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "per l'HDPA il sistema è conforme se il lavoratore segue un percorso predefinito in orari di lavoro determinati, la geolocalizzazione avviene entro quel percorso e il veicolo non è usato fuori orario; i dati sono conservati solo per il tempo necessario e comunque non oltre un mese; si adottano misure di sicurezza, accesso solo a persone autorizzate e tecniche di pseudonimizzazione o cifratura; il lavoratore ha diritto di accesso ai dati. Se il sistema è installato solo per aiutare il lavoratore a trovare la destinazione, deve servire esclusivamente a questo e il lavoratore può disattivarlo quando vuole.",
+        it: "Per l'HDPA il sistema è conforme se il lavoratore segue un percorso predefinito in orari di lavoro determinati, la geolocalizzazione avviene entro quel percorso e il veicolo non è usato fuori orario; i dati sono conservati solo per il tempo necessario e comunque non oltre un mese; si adottano misure di sicurezza, accesso solo a persone autorizzate e tecniche di pseudonimizzazione o cifratura; il lavoratore ha diritto di accesso ai dati. Se il sistema è installato solo per aiutare il lavoratore a trovare la destinazione, deve servire esclusivamente a questo e il lavoratore può disattivarlo quando vuole.",
         en: 'according to the HDPA the system is compliant if the worker follows a predefined route during specific working hours, the geolocation takes place within that route and the vehicle is not used outside working hours; data are kept only as long as necessary and in any case no longer than one month; security measures apply, access is limited to authorised persons and pseudonymisation or encryption techniques are used; the worker has a right of access to the data. If the system is installed only to help the worker find the destination, it must serve exclusively that purpose and the worker may deactivate it whenever they wish.',
         de: 'Nach Auffassung der HDPA ist das System konform, wenn der Arbeitnehmer während bestimmter Arbeitszeiten eine vorbestimmte Route befährt, die Geolokalisierung innerhalb dieser Route erfolgt und das Fahrzeug nicht außerhalb der Arbeitszeit genutzt wird; die Daten werden nur so lange wie nötig und jedenfalls nicht länger als einen Monat gespeichert; es gelten Sicherheitsmaßnahmen, der Zugriff ist auf befugte Personen beschränkt und es werden Pseudonymisierungs- oder Verschlüsselungstechniken eingesetzt; der Arbeitnehmer hat ein Zugriffsrecht auf die Daten. Wird das System nur installiert, um dem Arbeitnehmer das Auffinden des Ziels zu erleichtern, muss es ausschließlich diesem Zweck dienen und der Arbeitnehmer kann es jederzeit deaktivieren.',
         fr: "selon l'HDPA, le système est conforme si le travailleur suit un parcours prédéfini pendant des heures de travail déterminées, si la géolocalisation s'effectue dans les limites de ce parcours et si le véhicule n'est pas utilisé en dehors des heures de travail; les données ne sont conservées que le temps nécessaire et en tout cas pas plus d'un mois; des mesures de sécurité sont prises, l'accès est réservé aux personnes autorisées et des techniques de pseudonymisation ou de chiffrement sont appliquées; le travailleur dispose d'un droit d'accès aux données. Si le système est installé uniquement pour aider le travailleur à trouver sa destination, il doit servir exclusivement à cela et le travailleur peut le désactiver quand il le souhaite.",
@@ -188,7 +188,7 @@ export const grecia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "la lista HDPA include il monitoraggio sistematico della posizione dei dipendenti tra i trattamenti che richiedono una valutazione d'impatto.",
+        it: "La lista HDPA include il monitoraggio sistematico della posizione dei dipendenti tra i trattamenti che richiedono una valutazione d'impatto.",
         en: 'the HDPA list includes the systematic monitoring of employees location among the processing operations that require an impact assessment.',
         de: 'Die HDPA-Liste führt die systematische Überwachung des Standorts der Beschäftigten unter den Verarbeitungen auf, die eine Folgenabschätzung erfordern.',
         fr: "la liste de l'HDPA inclut la surveillance systématique de la localisation des employés parmi les traitements nécessitant une analyse d'impact.",
@@ -208,7 +208,7 @@ export const grecia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "l'art. 27 ammette il trattamento dei dati dei lavoratori per il contratto di lavoro solo se strettamente necessario; il consenso può essere usato solo in via eccezionale e, per giudicare se è libero, si tiene conto della dipendenza del lavoratore e delle circostanze (deve essere scritto o elettronico, distinguibile dal contratto, con l'informazione sul diritto di revoca). In ogni caso il titolare applica i principi dell'art. 5 GDPR (art. 27 c. 5).",
+        it: "L'art. 27 ammette il trattamento dei dati dei lavoratori per il contratto di lavoro solo se strettamente necessario; il consenso può essere usato solo in via eccezionale e, per giudicare se è libero, si tiene conto della dipendenza del lavoratore e delle circostanze (deve essere scritto o elettronico, distinguibile dal contratto, con l'informazione sul diritto di revoca). In ogni caso il titolare applica i principi dell'art. 5 GDPR (art. 27 c. 5).",
         en: 'art. 27 allows the processing of workers\' data for the employment contract only where strictly necessary; consent may be used only by way of exception and, in judging whether it is freely given, the worker\'s dependence and the circumstances are taken into account (it must be written or electronic, clearly distinguishable from the contract, with information on the right to withdraw). In any case the controller applies the principles of art. 5 GDPR (art. 27(5)).',
         de: 'Art. 27 erlaubt die Verarbeitung von Beschäftigtendaten für den Arbeitsvertrag nur, wenn sie unbedingt erforderlich ist; die Einwilligung darf nur ausnahmsweise verwendet werden, und bei der Beurteilung ihrer Freiwilligkeit werden die Abhängigkeit des Arbeitnehmers und die Umstände berücksichtigt (sie muss schriftlich oder elektronisch erfolgen, vom Vertrag klar unterscheidbar sein und die Information über das Widerrufsrecht enthalten). In jedem Fall wendet der Verantwortliche die Grundsätze des Art. 5 DSGVO an (Art. 27 Abs. 5).',
         fr: "l'art. 27 n'admet le traitement des données des travailleurs pour le contrat de travail que s'il est strictement nécessaire; le consentement ne peut être utilisé qu'à titre exceptionnel et, pour apprécier s'il est libre, on tient compte de la dépendance du travailleur et des circonstances (il doit être écrit ou électronique, clairement distinct du contrat, avec l'information sur le droit de retrait). Dans tous les cas, le responsable applique les principes de l'art. 5 RGPD (art. 27 par. 5).",
@@ -278,7 +278,7 @@ export const grecia: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        it: 'Se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: l’informativa consegnata prima non basta.',
         en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
         de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
         fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',

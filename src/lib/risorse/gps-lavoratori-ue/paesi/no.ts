@@ -100,7 +100,7 @@ export const norvegia: SchedaPaese = {
   checklist: [
     {
       voce: {
-        it: 'Motivo oggettivo (saklig grunn) e non sproporzionato (Arbeidsmiljoloven § 9-1)',
+        it: 'Motivo oggettivo (saklig grunn) e non sproporzionato (Arbeidsmiljøloven § 9-1)',
         en: 'Objective reason (saklig grunn) and not disproportionate (Arbeidsmiljoloven § 9-1)',
         de: 'Sachlicher Grund (saklig grunn) und nicht unverhältnismäßig (Arbeidsmiljoloven § 9-1)',
         fr: 'Motif objectif (saklig grunn) et non disproportionné (Arbeidsmiljoloven § 9-1)',
@@ -129,7 +129,7 @@ export const norvegia: SchedaPaese = {
       },
       risposta: 'dipende',
       dettaglio: {
-        it: 'Il datore deve discutere il più presto possibile la misura con i rappresentanti dei lavoratori. Vale dove esistono rappresentanti (tillitsvalgte).',
+        it: 'Il datore deve discutere il prima possibile la misura con i rappresentanti dei lavoratori. Vale dove esistono rappresentanti (tillitsvalgte).',
         en: 'The employer must discuss the measure with the employee representatives as soon as possible. This applies where representatives (tillitsvalgte) exist.',
         de: 'Der Arbeitgeber muss die Maßnahme so früh wie möglich mit den Arbeitnehmervertretern erörtern. Dies gilt, wo Vertreter (tillitsvalgte) vorhanden sind.',
         fr: "L'employeur doit discuter de la mesure avec les représentants du personnel le plus tôt possible. Cela vaut la ou des représentants (tillitsvalgte) existent.",
@@ -149,7 +149,7 @@ export const norvegia: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: 'Il capitolo 9 non prevede alcuna autorizzazione preventiva del Datatilsynet; la liceità e responsabilità del titolare.',
+        it: 'Il capitolo 9 non prevede alcuna autorizzazione preventiva del Datatilsynet; la liceità è responsabilità del titolare.',
         en: 'Chapter 9 provides for no prior authorization from the Datatilsynet; lawfulness is the responsibility of the controller.',
         de: 'Kapitel 9 sieht keine vorherige Genehmigung des Datatilsynet vor; die Rechtmäßigkeit liegt in der Verantwortung des Verantwortlichen.',
         fr: 'Le chapitre 9 ne prévoit aucune autorisation préalable du Datatilsynet; la licéité releve de la responsabilité du responsable du traitement.',
@@ -169,7 +169,7 @@ export const norvegia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'Prima di attivare, il datore informa i lavoratori su scopo della misura, conseguenze pratiche (come sara svolta) e durata prevista.',
+        it: 'Prima di attivare, il datore informa i lavoratori su scopo della misura, conseguenze pratiche (come sarà svolta) e durata prevista.',
         en: 'Before activating it, the employer informs the workers about the purpose of the measure, the practical consequences (how it will be carried out) and the expected duration.',
         de: 'Vor der Aktivierung informiert der Arbeitgeber die Arbeitnehmer über den Zweck der Maßnahme, die praktischen Folgen (wie sie durchgeführt wird) und die voraussichtliche Dauer.',
         fr: "Avant de l'activer, l'employeur informe les travailleurs de la finalité de la mesure, des conséquences pratiques (comment elle sera mise en oeuvre) et de la durée prévue.",
@@ -189,7 +189,7 @@ export const norvegia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'Il GPS sui veicoli e normalmente una misura di controllo: lo scopo va specificato, e i dati raccolti non possono essere riusati per valutare il rendimento dei dipendenti.',
+        it: 'Il GPS sui veicoli è normalmente una misura di controllo: lo scopo va specificato, e i dati raccolti non possono essere riusati per valutare il rendimento dei dipendenti.',
         en: 'GPS on vehicles is normally a control measure: the purpose must be specified, and the collected data cannot be reused to assess employees performance.',
         de: 'GPS in Fahrzeugen ist normalerweise eine Kontrollmaßnahme: Der Zweck muss angegeben werden, und die erhobenen Daten dürfen nicht zur Bewertung der Leistung der Arbeitnehmer weiterverwendet werden.',
         fr: 'Le GPS sur les véhicules est normalement une mesure de contrôle: la finalité doit être precisee, et les données collectées ne peuvent pas être reutilisees pour évaluer le rendement des salaries.',
@@ -235,7 +235,7 @@ export const norvegia: SchedaPaese = {
     {
       passo: 2,
       descrizione: {
-        it: 'Se esistono rappresentanti dei lavoratori, discuti con loro il più presto possibile la misura (§ 9-2).',
+        it: 'Se esistono rappresentanti dei lavoratori, discuti con loro il prima possibile la misura (§ 9-2).',
         en: 'If employee representatives exist, discuss the measure with them as soon as possible (§ 9-2).',
         de: 'Wenn es Arbeitnehmervertreter gibt, erörtern Sie die Maßnahme so früh wie möglich mit ihnen (§ 9-2).',
         fr: "Si des représentants du personnel existent, discutez de la mesure avec eux le plus tôt possible (§ 9-2).",
@@ -279,7 +279,7 @@ export const norvegia: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        it: 'Se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: l’informativa consegnata prima non basta.',
         en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
         de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
         fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
@@ -310,7 +310,7 @@ export const norvegia: SchedaPaese = {
       nl: '100.000 NOK (ongeveer 8.500 euro)',
     },
     casoCitato: {
-      it: "Personvernnemnda, PVN-2017-07: un datore confrontava i dati GPS del veicolo aziendale con i fogli ore del dipendente, a sua insaputa, per controllare se avesse lavorato le ore dichiarate, riusando i dati per un nuovo scopo senza base giuridica. Deciso sotto la vecchia legge pre-GDPR, ma il principio (vietato riusare il GPS per controllare le ore) e confermato dalle linee guida attuali del Datatilsynet.",
+      it: "Personvernnemnda, PVN-2017-07: un datore confrontava i dati GPS del veicolo aziendale con i fogli ore del dipendente, a sua insaputa, per controllare se avesse lavorato le ore dichiarate, riusando i dati per un nuovo scopo senza base giuridica. Deciso sotto la vecchia legge pre-GDPR, ma il principio (vietato riusare il GPS per controllare le ore) è confermato dalle linee guida attuali del Datatilsynet.",
       en: "Personvernnemnda, PVN-2017-07: an employer compared the GPS data of the company vehicle with the employee's timesheets, without the employee's knowledge, to check whether they had worked the declared hours, reusing the data for a new purpose without a legal basis. Decided under the old pre-GDPR law, but the principle (reusing GPS to check working hours is prohibited) is confirmed by the Datatilsynet's current guidelines.",
       de: 'Personvernnemnda, PVN-2017-07: Ein Arbeitgeber verglich die GPS-Daten des Firmenfahrzeugs ohne Wissen des Arbeitnehmers mit dessen Stundenzetteln, um zu prüfen, ob dieser die angegebenen Stunden gearbeitet hatte, und verwendete die Daten ohne Rechtsgrundlage für einen neuen Zweck weiter. Entschieden nach dem alten Recht vor der DSGVO, aber der Grundsatz (die Weiterverwendung von GPS zur Kontrolle der Arbeitszeiten ist verboten) wird durch die aktuellen Leitlinien des Datatilsynet bestätigt.',
       fr: "Personvernnemnda, PVN-2017-07: un employeur comparait les données GPS du véhicule de l'entreprise avec les feuilles d'heures du salarie, a son insu, pour vérifier s'il avait effectué les heures déclarées, réutilisant les données pour une nouvelle finalité sans base légale. Décidé sous l'ancienne loi antérieure au RGPD, mais le principe (la réutilisation du GPS pour contrôler les heures est interdite) est confirmé par les lignes directrices actuelles du Datatilsynet.",

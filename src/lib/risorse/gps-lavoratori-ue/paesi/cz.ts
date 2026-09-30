@@ -93,7 +93,7 @@ export const repubblicaCeca: SchedaPaese = {
   checklist: [
     {
       voce: {
-        it: 'Informazione diretta ai lavoratori su portata e modalità del monitoraggio (Zakonik prace art. 316)',
+        it: 'Informazione diretta ai lavoratori su portata e modalità del monitoraggio (Zákoník práce art. 316)',
         en: 'Direct information to workers on the scope and manner of the monitoring (Zakonik prace art. 316)',
         de: 'Direkte Information der Arbeitnehmer über Umfang und Art der Überwachung (Zakonik prace Art. 316)',
         fr: 'Information directe des travailleurs sur la portée et les modalités de la surveillance (Zakonik prace art. 316)',
@@ -182,7 +182,7 @@ export const repubblicaCeca: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "Nella lista UOOU il monitoraggio di movimento e posizione delle persone (coordinate) e' uno dei criteri; il monitoraggio dei lavoratori conta solo se ne segue il movimento o l'attività' in modo continuo. La DPIA scatta quando, in più', ricorrono almeno un'altra caratteristica critica oppure cinque significative.",
+        it: "Nella lista UOOU il monitoraggio di movimento e posizione delle persone (coordinate) è uno dei criteri; il monitoraggio dei lavoratori conta solo se ne segue il movimento o l'attività in modo continuo. La DPIA è obbligatoria quando, oltre a questo, il trattamento ha almeno un'altra caratteristica che l'UOOU considera critica, oppure cinque caratteristiche che considera significative.",
         en: 'In the UOOU list, monitoring the movement and location of persons (coordinates) is one of the criteria; monitoring workers counts only if it tracks their movement or continuously follows their activity. A DPIA is triggered when, in addition, at least one other critical characteristic or five significant ones apply.',
         de: 'In der UOOU-Liste ist die Überwachung von Bewegung und Standort von Personen (Koordinaten) eines der Kriterien; die Überwachung von Beschäftigten zählt nur, wenn sie deren Bewegung verfolgt oder ihre Tätigkeit laufend beobachtet. Eine DSFA ist erforderlich, wenn zusätzlich mindestens ein weiteres kritisches oder fünf bedeutende Merkmale zutreffen.',
         fr: "Dans la liste UOOU, la surveillance des déplacements et de la position des personnes (coordonnées) est l'un des critères; la surveillance des travailleurs ne compte que si elle suit leurs déplacements ou leur activité en continu. Une AIPD est requise lorsque s'ajoutent au moins une autre caractéristique critique ou cinq caractéristiques significatives.",
@@ -252,7 +252,7 @@ export const repubblicaCeca: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        it: 'Se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: l’informativa consegnata prima non basta.',
         en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
         de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
         fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
@@ -283,7 +283,7 @@ export const repubblicaCeca: SchedaPaese = {
       nl: '80.000 CZK (ongeveer 3.200 euro)',
     },
     casoCitato: {
-      it: "UOOU contro Ceska posta (Poste Ceche): tra marzo 2012 e febbraio 2013 l'azienda aveva dotato 7.770 portalettere di localizzatori GPS che registravano l'intero percorso durante il turno; trattamento sproporzionato, durato troppo a lungo e su troppe persone. Multa 80.000 CZK. Deciso sotto la vecchia legge pre-GDPR, ma il principio resta.",
+      it: "UOOU contro Česká pošta (Poste Ceche): tra marzo 2012 e febbraio 2013 l'azienda aveva dotato 7.770 portalettere di localizzatori GPS che registravano l'intero percorso durante il turno; trattamento sproporzionato, durato troppo a lungo e su troppe persone. Multa 80.000 CZK (circa 3.200 euro). Deciso sotto la vecchia legge pre-GDPR, ma il principio resta.",
       en: 'UOOU v. Ceska posta (Czech Post): between March 2012 and February 2013 the company had equipped 7,770 postal carriers with GPS trackers that recorded the entire route during the shift; processing that was disproportionate, lasted too long and covered too many people. Fine 80,000 CZK. Decided under the old pre-GDPR law, but the principle stands.',
       de: 'UOOU gegen Ceska posta (Tschechische Post): zwischen März 2012 und Februar 2013 hatte das Unternehmen 7.770 Briefträger mit GPS-Ortern ausgestattet, die während der Schicht die gesamte Route aufzeichneten; eine unverhältnismäßige Verarbeitung, die zu lange dauerte und zu viele Personen betraf. Bußgeld 80.000 CZK. Entschieden nach dem alten Recht vor der DSGVO, doch der Grundsatz bleibt bestehen.',
       fr: "UOOU contre Ceska posta (La Poste tchèque): entre mars 2012 et février 2013, l'entreprise avait équipé 7 770 facteurs de traceurs GPS qui enregistraient tout le trajet pendant le service; un traitement disproportionné, ayant duré trop longtemps et portant sur trop de personnes. Amende 80 000 CZK. Décidé sous l'ancienne loi antérieure au RGPD, mais le principe demeure.",

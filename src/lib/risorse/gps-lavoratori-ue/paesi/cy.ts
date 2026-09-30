@@ -115,7 +115,7 @@ export const cipro: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "il lavoratore va informato prima dell'inizio del monitoraggio su titolare, finalità e base giuridica; non esiste una legge cipriota specifica sul GPS, vale il quadro GDPR e la Legge 125(I)/2018.",
+        it: "Il lavoratore va informato prima dell'inizio del monitoraggio su titolare, finalità e base giuridica; non esiste una legge cipriota specifica sul GPS, vale il quadro GDPR e la Legge 125(I)/2018.",
         en: 'the worker must be informed before monitoring begins about the controller, purposes and legal basis; there is no specific Cypriot law on GPS, the GDPR framework and Law 125(I)/2018 apply.',
         de: 'die beschäftigte Person ist vor Beginn der Überwachung über den Verantwortlichen, die Zwecke und die Rechtsgrundlage zu informieren; es gibt kein spezifisches zypriotisches GPS-Gesetz, es gelten der DSGVO-Rahmen und das Gesetz 125(I)/2018.',
         fr: "le travailleur doit être informe avant le début de la surveillance sur le responsable, les finalités et la base juridique; il n'existe pas de loi chypriote spécifique sur le GPS, le cadre du RGPD et la Loi 125(I)/2018 s'appliquent.",
@@ -135,7 +135,7 @@ export const cipro: SchedaPaese = {
       },
       risposta: 'no',
       dettaglio: {
-        it: "non serve un'autorizzazione preventiva del Garante; con il GDPR il vecchio regime di notifica è stato abolito.",
+        it: "Non serve un'autorizzazione preventiva del Garante; con il GDPR il vecchio regime di notifica è stato abolito.",
         en: 'no prior authorisation from the Commissioner is needed; with the GDPR the old notification regime has been abolished.',
         de: 'eine vorherige Genehmigung des Commissioner ist nicht erforderlich; mit der DSGVO wurde das alte Meldesystem abgeschafft.',
         fr: "aucune autorisation préalable du Commissioner n'est requise; avec le RGPD l'ancien régime de notification a été aboli.",
@@ -155,7 +155,7 @@ export const cipro: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "nel rapporto di lavoro il consenso non è liberamente prestato; la base usuale è l'interesse legittimo, con un test di bilanciamento documentato che non prevalga sui diritti dei lavoratori.",
+        it: "Nel rapporto di lavoro il consenso non è liberamente prestato; la base usuale è l'interesse legittimo, con un test di bilanciamento documentato che non prevalga sui diritti dei lavoratori.",
         en: 'in the employment relationship consent is not freely given; the usual basis is legitimate interest, with a documented balancing test that does not override the workers rights.',
         de: 'im Arbeitsverhältnis wird die Einwilligung nicht freiwillig erteilt; die übliche Grundlage ist das berechtigte Interesse, mit einer dokumentierten Abwägung, die die Rechte der Beschäftigten nicht überwiegt.',
         fr: "dans la relation de travail le consentement n'est pas librement donne; la base habituelle est l'intérêt légitime, avec un test de mise en balance documente qui ne prévaut pas sur les droits des travailleurs.",
@@ -175,7 +175,7 @@ export const cipro: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'il tracciamento GPS continuo è sempre attivo viola la minimizzazione; va limitato a quanto necessario (orario di lavoro, rischio effettivo).',
+        it: 'Il tracciamento GPS continuo è sempre attivo viola la minimizzazione; va limitato a quanto necessario (orario di lavoro, rischio effettivo).',
         en: 'continuous, always-on GPS tracking breaches data minimisation; it must be limited to what is necessary (working hours, actual risk).',
         de: 'kontinuierliche, dauerhaft aktive GPS-Ortung verstößt gegen die Datenminimierung; sie ist auf das Notwendige zu beschränken (Arbeitszeit, tatsächliches Risiko).',
         fr: "le suivi GPS continu et toujours actif viole la minimisation; il doit être limite a ce qui est nécessaire (temps de travail, risque effectif).",
@@ -195,7 +195,7 @@ export const cipro: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'una DPIA è necessaria quando il monitoraggio dei dipendenti e sistematico; il Garante valuta caso per caso la proporzionalità.',
+        it: 'Una DPIA è necessaria quando il monitoraggio dei dipendenti è sistematico; il Garante valuta caso per caso la proporzionalità.',
         en: 'a DPIA is required when employee monitoring is systematic; the Commissioner assesses proportionality case by case.',
         de: 'eine DSFA ist erforderlich, wenn die Überwachung der Beschäftigten systematisch ist; der Commissioner prüft die Verhältnismäßigkeit im Einzelfall.',
         fr: "une AIPD est nécessaire lorsque la surveillance des salaries est systématique; le Commissioner apprécie la proportionnalité au cas par cas.",
@@ -265,7 +265,7 @@ export const cipro: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'In caso di cambio di sistema: se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: quella consegnata prima non basta.',
+        it: 'Se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: l’informativa consegnata prima non basta.',
         en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
         de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
         fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
@@ -296,7 +296,7 @@ export const cipro: SchedaPaese = {
       nl: '82.000 EUR',
     },
     casoCitato: {
-      it: "Garante cipriota contro il Gruppo Louis (decisione del 25 ottobre 2019): uso di uno strumento automatico (Bradford Factor) per profilare le assenze per malattia di 818 dipendenti, senza base giuridica valida e su dati sanitari (artt. 6 e 9 GDPR); il bilanciamento dell'interesse legittimo è fallito. Multa complessiva 82.000 euro (70.000 + 10.000 + 2.000 a tre società del gruppo). Non è un caso di GPS, ma è la sanzione faro cipriota sul monitoraggio dei dipendenti.",
+      it: "Garante cipriota contro il Gruppo Louis (decisione del 25 ottobre 2019): uso di uno strumento automatico (Bradford Factor) per profilare le assenze per malattia di 818 dipendenti, senza base giuridica valida e su dati sanitari (artt. 6 e 9 GDPR); il bilanciamento dell'interesse legittimo è fallito. Multa complessiva 82.000 euro (70.000 + 10.000 + 2.000 a tre società del gruppo). Non è un caso di GPS, ma è la sanzione cipriota più importante sul monitoraggio dei dipendenti.",
       en: "Cypriot Commissioner against the Louis Group (decision of 25 October 2019): use of an automated tool (Bradford Factor) to profile the sick-leave absences of 818 employees, without a valid legal basis and over health data (arts. 6 and 9 GDPR); the legitimate-interest balancing failed. Total fine 82,000 euros (70,000 + 10,000 + 2,000 against three companies of the group). It is not a GPS case, but it is the landmark Cypriot penalty on employee monitoring.",
       de: "Zypriotischer Commissioner gegen die Louis-Gruppe (Entscheidung vom 25. Oktober 2019): Einsatz eines automatisierten Instruments (Bradford Factor) zur Profilbildung der krankheitsbedingten Fehlzeiten von 818 Beschäftigten, ohne gültige Rechtsgrundlage und über Gesundheitsdaten (Art. 6 und 9 DSGVO); die Abwägung des berechtigten Interesses ist gescheitert. Gesamtbußgeld 82.000 Euro (70.000 + 10.000 + 2.000 gegen drei Gesellschaften der Gruppe). Es ist kein GPS-Fall, aber die zypriotische Leitsanktion zur Überwachung von Beschäftigten.",
       fr: "Commissioner chypriote contre le Groupe Louis (décision du 25 octobre 2019): utilisation d'un outil automatise (Bradford Factor) pour profiler les absences pour maladie de 818 salaries, sans base juridique valable et sur des données de santé (art. 6 et 9 RGPD); la mise en balance de l'intérêt légitime a échoue. Amende totale de 82 000 euros (70 000 + 10 000 + 2 000 contre trois sociétés du groupe). Ce n'est pas un cas de GPS, mais c'est la sanction phare chypriote sur la surveillance des salaries.",
