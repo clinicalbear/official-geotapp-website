@@ -37,6 +37,11 @@ const FONTE_VDAI_SERVIZI = {
   titolo: 'VDAI (Garante lituano), servizi e reclami',
   url: 'https://vdai.lrv.lt/en/services/',
 };
+const FONTE_ADTAI_5 = {
+  titolo: 'Legge lituana sulla protezione giuridica dei dati personali (ADTAĮ), art. 5 c. 4, testo consolidato',
+  url: 'https://www.infolex.lt/ta/51494',
+  nonUfficiale: 'banca-dati' as const,
+};
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR)',
   url: 'https://eur-lex.europa.eu/eli/reg/2016/679/oj',
@@ -98,23 +103,23 @@ export const lituania: SchedaPaese = {
   checklist: [
     {
       voce: {
-        it: 'Informazione preventiva e chiara ai lavoratori sul tracciamento (GDPR art. 13)',
-        en: 'Clear prior information to workers about tracking (GDPR art. 13)',
-        de: 'Klare vorherige Information der Arbeitnehmer über die Ortung (DSGVO Art. 13)',
-        fr: 'Information préalable et claire des travailleurs sur le suivi (RGPD art. 13)',
-        es: 'Información previa y clara a los trabajadores sobre el seguimiento (RGPD art. 13)',
-        nl: 'Duidelijke voorafgaande informatie aan werknemers over het volgen (AVG art. 13)',
+        it: 'Informazione preventiva e chiara ai lavoratori sul tracciamento (GDPR art. 13) e informazione scritta con firma o comunque provabile (ADTAĮ art. 5 c. 4)',
+        en: 'Clear prior information to workers about tracking (GDPR art. 13) and written information acknowledged by signature or otherwise provable (ADTAĮ art. 5(4))',
+        de: 'Klare vorherige Information der Arbeitnehmer über die Ortung (DSGVO Art. 13) und schriftliche Information gegen Unterschrift oder auf andere nachweisbare Weise (ADTAĮ Art. 5 Abs. 4)',
+        fr: 'Information préalable et claire des travailleurs sur le suivi (RGPD art. 13) et information écrite contre signature ou autrement prouvable (ADTAĮ art. 5, al. 4)',
+        es: 'Información previa y clara a los trabajadores sobre el seguimiento (RGPD art. 13) e información por escrito con firma o de otro modo acreditable (ADTAĮ art. 5, ap. 4)',
+        nl: 'Duidelijke voorafgaande informatie aan werknemers over het volgen (AVG art. 13) en schriftelijke informatie tegen handtekening of op een andere aantoonbare manier (ADTAĮ art. 5, lid 4)',
       },
       risposta: 'si',
       dettaglio: {
-        it: "Il datore deve dire chiaramente ai lavoratori che sul veicolo aziendale c'è un dispositivo di localizzazione e che i loro spostamenti vengono registrati, prima di cominciare (GDPR art. 13; parere WP249 del Gruppo art. 29, ripreso dall'EDPB). L'art. 27 del Codice del lavoro lituano tutela la vita privata e i dati dei lavoratori e la segretezza della loro corrispondenza personale, ma non contiene una regola specifica sul tracciamento.",
-        en: "The employer must clearly tell workers that a tracking device is installed in the company vehicle and that their movements are recorded, before it starts (GDPR art. 13; Article 29 Working Party opinion WP249, endorsed by the EDPB). Article 27 of the Lithuanian Labour Code protects workers' private life and data and the secrecy of their personal correspondence, but contains no specific rule on tracking.",
-        de: 'Der Arbeitgeber muss den Arbeitnehmern vor Beginn klar mitteilen, dass im Dienstfahrzeug ein Ortungsgerät eingebaut ist und ihre Bewegungen aufgezeichnet werden (DSGVO Art. 13; Stellungnahme WP249 der Artikel-29-Gruppe, vom EDSA übernommen). Artikel 27 des litauischen Arbeitsgesetzbuchs schützt Privatleben und Daten der Arbeitnehmer und das Geheimnis ihrer persönlichen Korrespondenz, enthält aber keine eigene Regel zur Ortung.',
-        fr: "L'employeur doit indiquer clairement aux travailleurs, avant le début, qu'un dispositif de localisation est installé dans le véhicule de l'entreprise et que leurs déplacements sont enregistrés (RGPD art. 13 ; avis WP249 du groupe de l'article 29, repris par le CEPD). L'article 27 du Code du travail lituanien protège la vie privée et les données des travailleurs et le secret de leur correspondance personnelle, mais ne contient pas de règle spécifique sur le suivi.",
-        es: 'El empleador debe informar claramente a los trabajadores, antes de empezar, de que en el vehículo de la empresa hay un dispositivo de localización y de que sus desplazamientos se registran (RGPD art. 13; dictamen WP249 del Grupo del artículo 29, asumido por el CEPD). El artículo 27 del Código del trabajo lituano protege la vida privada y los datos de los trabajadores y el secreto de su correspondencia personal, pero no contiene una regla específica sobre el seguimiento.',
-        nl: 'De werkgever moet de werknemers vóór de start duidelijk laten weten dat in het bedrijfsvoertuig een volgsysteem zit en dat hun bewegingen worden vastgelegd (AVG art. 13; advies WP249 van de Groep artikel 29, overgenomen door het EDPB). Artikel 27 van het Litouwse Arbeidswetboek beschermt het privéleven en de gegevens van werknemers en het geheim van hun persoonlijke correspondentie, maar bevat geen specifieke regel over het volgen.',
+        it: "Il datore deve dire chiaramente ai lavoratori che sul veicolo aziendale c'è un dispositivo di localizzazione e che i loro spostamenti vengono registrati, prima di cominciare (GDPR art. 13; parere WP249 del Gruppo art. 29, ripreso dall'EDPB). L'art. 27 del Codice del lavoro lituano tutela la vita privata e i dati dei lavoratori e la segretezza della loro corrispondenza personale, ma non contiene una regola specifica sul tracciamento. La legge lituana sulla protezione giuridica dei dati personali (ADTAĮ, art. 5 c. 4, testo in vigore dal 1° luglio 2024) lo dice in modo esplicito: quando si trattano dati sul monitoraggio del comportamento, della posizione o degli spostamenti dei lavoratori, questi vanno informati per iscritto con firma o in un altro modo che provi l'avvenuta informazione, fornendo le informazioni dell'art. 13, par. 1 e 2, GDPR.",
+        en: "The employer must clearly tell workers that a tracking device is installed in the company vehicle and that their movements are recorded, before it starts (GDPR art. 13; Article 29 Working Party opinion WP249, endorsed by the EDPB). Article 27 of the Lithuanian Labour Code protects workers' private life and data and the secrecy of their personal correspondence, but contains no specific rule on tracking. The Lithuanian Law on the Legal Protection of Personal Data (ADTAĮ, art. 5(4), text in force since 1 July 2024) says so explicitly: when data on monitoring workers' behaviour, location or movement is processed, the workers must be informed in writing against signature or in another way that proves they were informed, with the information required by GDPR art. 13(1) and (2).",
+        de: 'Der Arbeitgeber muss den Arbeitnehmern vor Beginn klar mitteilen, dass im Dienstfahrzeug ein Ortungsgerät eingebaut ist und ihre Bewegungen aufgezeichnet werden (DSGVO Art. 13; Stellungnahme WP249 der Artikel-29-Gruppe, vom EDSA übernommen). Artikel 27 des litauischen Arbeitsgesetzbuchs schützt Privatleben und Daten der Arbeitnehmer und das Geheimnis ihrer persönlichen Korrespondenz, enthält aber keine eigene Regel zur Ortung. Das litauische Gesetz über den rechtlichen Schutz personenbezogener Daten (ADTAĮ, Art. 5 Abs. 4, in Kraft seit dem 1. Juli 2024) sagt es ausdrücklich: Werden Daten zur Überwachung von Verhalten, Standort oder Bewegung der Arbeitnehmer verarbeitet, sind diese schriftlich gegen Unterschrift oder auf eine andere nachweisbare Weise zu informieren, mit den Angaben nach Art. 13 Abs. 1 und 2 DSGVO.',
+        fr: "L'employeur doit indiquer clairement aux travailleurs, avant le début, qu'un dispositif de localisation est installé dans le véhicule de l'entreprise et que leurs déplacements sont enregistrés (RGPD art. 13 ; avis WP249 du groupe de l'article 29, repris par le CEPD). L'article 27 du Code du travail lituanien protège la vie privée et les données des travailleurs et le secret de leur correspondance personnelle, mais ne contient pas de règle spécifique sur le suivi. La loi lituanienne sur la protection juridique des données personnelles (ADTAĮ, art. 5, al. 4, en vigueur depuis le 1er juillet 2024) le dit expressément : lorsque sont traitées des données de suivi du comportement, de la position ou des déplacements des travailleurs, ceux-ci doivent être informés par écrit contre signature ou d'une autre manière qui prouve l'information, avec les éléments de l'art. 13, par. 1 et 2, du RGPD.",
+        es: 'El empleador debe informar claramente a los trabajadores, antes de empezar, de que en el vehículo de la empresa hay un dispositivo de localización y de que sus desplazamientos se registran (RGPD art. 13; dictamen WP249 del Grupo del artículo 29, asumido por el CEPD). El artículo 27 del Código del trabajo lituano protege la vida privada y los datos de los trabajadores y el secreto de su correspondencia personal, pero no contiene una regla específica sobre el seguimiento. La ley lituana de protección jurídica de los datos personales (ADTAĮ, art. 5, ap. 4, en vigor desde el 1 de julio de 2024) lo dice expresamente: cuando se tratan datos de seguimiento del comportamiento, la ubicación o los desplazamientos de los trabajadores, hay que informarles por escrito con firma o de otro modo que acredite la información, con los datos del art. 13, ap. 1 y 2, del RGPD.',
+        nl: 'De werkgever moet de werknemers vóór de start duidelijk laten weten dat in het bedrijfsvoertuig een volgsysteem zit en dat hun bewegingen worden vastgelegd (AVG art. 13; advies WP249 van de Groep artikel 29, overgenomen door het EDPB). Artikel 27 van het Litouwse Arbeidswetboek beschermt het privéleven en de gegevens van werknemers en het geheim van hun persoonlijke correspondentie, maar bevat geen specifieke regel over het volgen. De Litouwse wet op de rechtsbescherming van persoonsgegevens (ADTAĮ, art. 5, lid 4, in werking sinds 1 juli 2024) zegt het uitdrukkelijk: wanneer gegevens over het volgen van gedrag, locatie of verplaatsingen van werknemers worden verwerkt, moeten zij schriftelijk tegen handtekening of op een andere aantoonbare manier worden geïnformeerd, met de informatie van art. 13, lid 1 en 2, AVG.',
       },
-      fonte: FONTE_WP249,
+      fonte: FONTE_ADTAI_5,
     },
     {
       voce: {
@@ -147,7 +152,7 @@ export const lituania: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'Il monitoraggio è ammesso solo con uno scopo reale e giustificato; la base è l\'interesse legittimo, non il consenso, che nel rapporto di lavoro di norma non è liberamente prestato (WP249: e molto improbabile che il consenso sia una base valida).',
+        it: 'Il monitoraggio è ammesso solo con uno scopo reale e giustificato; la base è l\'interesse legittimo, non il consenso, che nel rapporto di lavoro di norma non è liberamente prestato (WP249: è molto improbabile che il consenso sia una base valida).',
         en: 'Monitoring is allowed only for a real and justified purpose; the basis is legitimate interest, not consent, which in the employment relationship is normally not freely given (WP249: consent is highly unlikely to be a valid basis).',
         de: 'Die Überwachung ist nur für einen tatsächlichen und gerechtfertigten Zweck zulässig; die Grundlage ist das berechtigte Interesse, nicht die Einwilligung, die im Arbeitsverhältnis in der Regel nicht freiwillig erteilt wird (WP249: Einwilligung ist höchst unwahrscheinlich eine gültige Grundlage).',
         fr: "La surveillance n est admise que pour une finalité réelle et justifiée; la base est l intérêt légitime, et non le consentement, qui dans la relation de travail n est en général pas librement donné (WP249 : le consentement est très improbable comme base valable).",
@@ -300,6 +305,7 @@ export const lituania: SchedaPaese = {
   },
 
   fonti: [
+    FONTE_ADTAI_5,
     FONTE_WP249,
     FONTE_VDAI_DPIA,
     FONTE_VDAI_CORRISPONDENZA,

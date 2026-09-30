@@ -62,7 +62,11 @@ describe('tipoImporto', () => {
     // 'caso-affine'. Il caso citato (Pioneer Hi-Bred, 120.000 euro) e' telematica
     // sullo stile di guida, e il Garante ha accertato che non erano trattati
     // dati di geolocalizzazione: la scheda lo dice da sola.
-    expect(conta).toEqual({ 'caso-gps': 10, 'caso-affine': 10, massimale: 19 });
+    // Aggiornato di proposito il 30/09/2026 (bis): la Repubblica Ceca passa da
+    // 'caso-gps' a 'massimale'. Il caso Ceska posta e' provato dalla relazione
+    // UOOU 2012 e dalla sentenza 6 A 42/2013, ma la cifra di 80.000 CZK compare
+    // solo su epravo.cz: stessa regola applicata ad AL e SK il 17/08.
+    expect(conta).toEqual({ 'caso-gps': 9, 'caso-affine': 10, massimale: 20 });
   });
 
   it('la maggioranza delle schede NON poggia su un caso GPS: e il motivo per cui la qualifica esiste', () => {

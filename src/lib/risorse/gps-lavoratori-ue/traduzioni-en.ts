@@ -11,6 +11,12 @@
  * resta in italiano nella pagina inglese: il test `traduzioni-en.test.ts` lo segnala.
  */
 export const TESTI_EN: Readonly<Record<string, string>> = {
+  "Legge lituana sulla protezione giuridica dei dati personali (ADTAĮ), art. 5 c. 4, testo consolidato":
+    "Lithuanian Law on the Legal Protection of Personal Data (ADTAĮ), art. 5(4), consolidated text",
+  "UOOU, relazione annuale 2012, controllo su Česká pošta (monitoraggio degli spostamenti dei portalettere)":
+    "UOOU, annual report 2012, inspection of Česká pošta (monitoring of postal carriers' movements)",
+  "CNPD, Deliberação 2019/494 (norme della Lei 58/2019 disapplicate)":
+    "CNPD, Deliberação 2019/494 (provisions of Law 58/2019 disapplied)",
   "Garante Privacy, Provvedimento n. 7 del 16 gennaio 2025 (doc-web 10112287)":
     "Garante Privacy, decision no. 7 of 16 January 2025 (doc-web 10112287)",
   "Garante Privacy, Provvedimento n. 755 del 18 dicembre 2025, n. 10213711 (Pioneer Hi-Bred Italia Sementi)":
@@ -225,8 +231,8 @@ export const TESTI_EN: Readonly<Record<string, string>> = {
     "UOOU, submit a report",
   "Tribunale municipale di Praga 6 A 42/2013 (Ceska posta, GPS sui portalettere), sentenza":
     "Municipal Court in Prague, 6 A 42/2013 (Ceska posta, GPS on postal carriers), judgment",
-  "epravo.cz, GPS monitoring zamestnancu podruhe (riporta la multa di 80.000 CZK e i 7.770 dipendenti)":
-    "epravo.cz, GPS monitoring zamestnancu podruhe (reports the CZK 80,000 fine and the 7,770 employees)",
+  "epravo.cz, GPS monitoring zamestnancu podruhe (riporta una multa di 80.000 CZK e 7.770 portalettere, non confermati da fonti ufficiali)":
+    "epravo.cz, GPS monitoring zaměstnanců podruhé (reports a fine of 80,000 CZK and 7,770 postal carriers, not confirmed by official sources)",
   "UOOU, relazione annuale 2014, controlli su Skoda Auto e Plzensky Prazdroj (GPS nei veicoli aziendali)":
     "UOOU, 2014 annual report, inspections of Skoda Auto and Plzensky Prazdroj (GPS in company vehicles)",
   "HDPA (Garante greco), FAQ sui rapporti di lavoro (geolocalizzazione)":

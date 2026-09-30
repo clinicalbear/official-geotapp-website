@@ -28,6 +28,10 @@ const FONTE_LEI_58_28 = {
   titolo: 'Lei 58/2019, art. 28 (relazioni di lavoro)',
   url: 'https://files.dre.pt/1s/2019/08/15100/0000300040.pdf',
 };
+const FONTE_CNPD_494 = {
+  titolo: 'CNPD, Deliberação 2019/494 (norme della Lei 58/2019 disapplicate)',
+  url: 'https://www.cnpd.pt/bin/decisoes/Delib/DEL_2019_494.pdf',
+};
 const FONTE_CNPD_VIDEOVIGILANCIA = {
   titolo:
     'CNPD, videovigilanza: nel contesto lavorativo restano le condizioni del Codice del lavoro, senza l\'autorizzazione della CNPD',
@@ -129,12 +133,12 @@ export const portogallo: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: "La sorveglianza a distanza non può servire a controllare la prestazione professionale; è ammessa solo per la protezione e sicurezza di persone e beni o per particolari esigenze dell'attività.",
-        en: 'Remote surveillance may not be used to monitor professional performance; it is allowed only for the protection and safety of people and property or for particular needs of the activity.',
-        de: 'Die Fernüberwachung darf nicht zur Kontrolle der beruflichen Leistung dienen; sie ist nur zum Schutz und zur Sicherheit von Personen und Sachen oder für besondere Erfordernisse der Tätigkeit zulässig.',
-        fr: 'La surveillance a distance ne peut servir a contrôler la prestation professionnelle; elle n\'est admise que pour la protection et la securite des personnes et des biens ou pour des besoins particuliers de l\'activité.',
-        es: 'La vigilancia a distancia no puede servir para controlar la prestación profesional; solo se admite para la protección y seguridad de personas y bienes o para necesidades particulares de la actividad.',
-        nl: 'Toezicht op afstand mag niet dienen om de professionele prestaties te controleren; het is alleen toegestaan voor de bescherming en veiligheid van personen en goederen of voor bijzondere behoeften van de activiteit.',
+        it: "La sorveglianza a distanza non può servire a controllare la prestazione professionale; è ammessa solo per la protezione e sicurezza di persone e beni o per particolari esigenze dell'attività. I dati registrati con mezzi tecnologici di sorveglianza a distanza (art. 20 CT) sono utilizzabili solo nel processo penale e, per la responsabilità disciplinare, solo nella misura in cui lo sono nel processo penale (Lei 58/2019, art. 28, nn. 4 e 5). La CNPD non ha disapplicato questi due commi: della norma ha disapplicato solo il n. 3, lett. a (Deliberação 2019/494).",
+        en: 'Remote surveillance may not be used to monitor professional performance; it is allowed only for the protection and safety of people and property or for particular needs of the activity. Data recorded through remote surveillance technology (art. 20 CT) may be used only in criminal proceedings and, for disciplinary liability, only to the extent that it is used in criminal proceedings (Law 58/2019, art. 28(4) and (5)). The CNPD has not disapplied these two paragraphs: of that article it disapplied only paragraph 3(a) (Deliberation 2019/494).',
+        de: 'Die Fernüberwachung darf nicht zur Kontrolle der beruflichen Leistung dienen; sie ist nur zum Schutz und zur Sicherheit von Personen und Sachen oder für besondere Erfordernisse der Tätigkeit zulässig. Mit technischen Mitteln der Fernüberwachung aufgezeichnete Daten (Art. 20 CT) dürfen nur im Strafverfahren verwendet werden und für die disziplinarische Verantwortung nur, soweit sie im Strafverfahren verwendet werden (Gesetz 58/2019, Art. 28 Nr. 4 und 5). Die CNPD hat diese beiden Absätze nicht für unanwendbar erklärt: Von der Vorschrift hat sie nur Nr. 3 Buchst. a nicht angewandt (Beschluss 2019/494).',
+        fr: 'La surveillance a distance ne peut servir a contrôler la prestation professionnelle; elle n\'est admise que pour la protection et la securite des personnes et des biens ou pour des besoins particuliers de l\'activité. Les données enregistrées par des moyens technologiques de surveillance à distance (art. 20 CT) ne peuvent être utilisées que dans le procès pénal et, pour la responsabilité disciplinaire, seulement dans la mesure où elles le sont dans le procès pénal (loi 58/2019, art. 28, nos 4 et 5). La CNPD n\'a pas écarté ces deux alinéas : de cet article, elle n\'a écarté que le no 3, point a (délibération 2019/494).',
+        es: 'La vigilancia a distancia no puede servir para controlar la prestación profesional; solo se admite para la protección y seguridad de personas y bienes o para necesidades particulares de la actividad. Los datos registrados con medios tecnológicos de vigilancia a distancia (art. 20 CT) solo pueden utilizarse en el proceso penal y, para la responsabilidad disciplinaria, solo en la medida en que lo sean en el proceso penal (Ley 58/2019, art. 28, núms. 4 y 5). La CNPD no ha inaplicado estos dos apartados: de ese artículo solo inaplicó el núm. 3, letra a (Deliberación 2019/494).',
+        nl: 'Toezicht op afstand mag niet dienen om de professionele prestaties te controleren; het is alleen toegestaan voor de bescherming en veiligheid van personen en goederen of voor bijzondere behoeften van de activiteit. Gegevens die met technologische middelen voor toezicht op afstand zijn vastgelegd (art. 20 CT) mogen alleen in de strafprocedure worden gebruikt en, voor tuchtrechtelijke aansprakelijkheid, alleen voor zover ze in de strafprocedure worden gebruikt (wet 58/2019, art. 28, nrs. 4 en 5). De CNPD heeft deze twee leden niet buiten toepassing gelaten: van dat artikel liet zij alleen nr. 3, onder a, buiten toepassing (besluit 2019/494).',
       },
       fonte: FONTE_CT_20,
     },
@@ -322,6 +326,8 @@ export const portogallo: SchedaPaese = {
   },
 
   fonti: [
+    FONTE_LEI_58_28,
+    FONTE_CNPD_494,
     FONTE_CT_20,
     FONTE_CNPD_7680,
     FONTE_LEI_58_28,

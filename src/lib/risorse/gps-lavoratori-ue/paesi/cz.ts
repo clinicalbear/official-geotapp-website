@@ -35,12 +35,16 @@ const FONTE_UOOU_CESKA_POSTA = {
   titolo: 'Tribunale municipale di Praga 6 A 42/2013 (Ceska posta, GPS sui portalettere), sentenza',
   url: 'https://www.nssoud.cz/stazeni-dokumentu?filepath=EVIDENCNI_LIST/2013/6A_42_2013_48_20170614165604_prevedeno.pdf',
 };
+const FONTE_UOOU_VZ2012 = {
+  titolo: 'UOOU, relazione annuale 2012, controllo su Česká pošta (monitoraggio degli spostamenti dei portalettere)',
+  url: 'https://uoou.gov.cz/media/vyrocni-zpravy/dokumenty/vz-2012.pdf',
+};
 const FONTE_UOOU_VZ2014 = {
   titolo: 'UOOU, relazione annuale 2014, controlli su Skoda Auto e Plzensky Prazdroj (GPS nei veicoli aziendali)',
   url: 'https://uoou.gov.cz/media/vyrocni-zpravy/dokumenty/vz-2014.pdf',
 };
 const FONTE_EPRAVO_CESKA_POSTA = {
-  titolo: 'epravo.cz, GPS monitoring zamestnancu podruhe (riporta la multa di 80.000 CZK e i 7.770 dipendenti)',
+  titolo: 'epravo.cz, GPS monitoring zamestnancu podruhe (riporta una multa di 80.000 CZK e 7.770 portalettere, non confermati da fonti ufficiali)',
   url: 'https://www.epravo.cz/top/clanky/gps-monitoring-zamestnancu-podruhe-106141.html',
   nonUfficiale: 'stampa' as const,
 };
@@ -275,23 +279,23 @@ export const repubblicaCeca: SchedaPaese = {
 
   sanzioneMax: {
     importo: {
-      it: '80.000 CZK (circa 3.200 euro)',
-      en: '80,000 CZK (about 3,200 euros)',
-      de: '80.000 CZK (etwa 3.200 Euro)',
-      fr: '80 000 CZK (environ 3 200 euros)',
-      es: '80.000 CZK (unos 3.200 euros)',
-      nl: '80.000 CZK (ongeveer 3.200 euro)',
+      it: 'fino a 20 milioni di euro o 4% del fatturato (GDPR)',
+      en: 'up to 20 million euros or 4% of turnover (GDPR)',
+      de: 'bis zu 20 Millionen Euro oder 4% des Umsatzes (DSGVO)',
+      fr: "jusqu'à 20 millions d'euros ou 4% du chiffre d'affaires (RGPD)",
+      es: 'hasta 20 millones de euros o el 4% de la facturación (RGPD)',
+      nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
     },
     casoCitato: {
-      it: "UOOU contro Česká pošta (Poste Ceche): tra marzo 2012 e febbraio 2013 l'azienda aveva dotato 7.770 portalettere di localizzatori GPS che registravano l'intero percorso durante il turno; trattamento sproporzionato, durato troppo a lungo e su troppe persone. Multa 80.000 CZK (circa 3.200 euro). Deciso sotto la vecchia legge pre-GDPR, ma il principio resta.",
-      en: 'UOOU v. Ceska posta (Czech Post): between March 2012 and February 2013 the company had equipped 7,770 postal carriers with GPS trackers that recorded the entire route during the shift; processing that was disproportionate, lasted too long and covered too many people. Fine 80,000 CZK. Decided under the old pre-GDPR law, but the principle stands.',
-      de: 'UOOU gegen Ceska posta (Tschechische Post): zwischen März 2012 und Februar 2013 hatte das Unternehmen 7.770 Briefträger mit GPS-Ortern ausgestattet, die während der Schicht die gesamte Route aufzeichneten; eine unverhältnismäßige Verarbeitung, die zu lange dauerte und zu viele Personen betraf. Bußgeld 80.000 CZK. Entschieden nach dem alten Recht vor der DSGVO, doch der Grundsatz bleibt bestehen.',
-      fr: "UOOU contre Ceska posta (La Poste tchèque): entre mars 2012 et février 2013, l'entreprise avait équipé 7 770 facteurs de traceurs GPS qui enregistraient tout le trajet pendant le service; un traitement disproportionné, ayant duré trop longtemps et portant sur trop de personnes. Amende 80 000 CZK. Décidé sous l'ancienne loi antérieure au RGPD, mais le principe demeure.",
-      es: 'UOOU contra Ceska posta (Correos Checos): entre marzo de 2012 y febrero de 2013 la empresa había dotado a 7.770 carteros de localizadores GPS que registraban todo el recorrido durante el turno; un tratamiento desproporcionado, que duró demasiado tiempo y afectó a demasiadas personas. Multa de 80.000 CZK. Resuelto bajo la antigua ley anterior al RGPD, pero el principio se mantiene.',
-      nl: 'UOOU tegen Ceska posta (Tsjechische Post): tussen maart 2012 en februari 2013 had het bedrijf 7.770 postbodes uitgerust met GPS-trackers die de volledige route tijdens de dienst registreerden; een onevenredige verwerking die te lang duurde en te veel mensen betrof. Boete 80.000 CZK. Beslist onder de oude wet van voor de AVG, maar het beginsel blijft overeind.',
+      it: "Il caso di riferimento è l'UOOU contro Česká pošta (Poste Ceche). Il controllo, dal 25 aprile al 25 settembre 2012, ha accertato la violazione del § 5 c. 2 della vecchia legge sulla protezione dei dati: mancava una base giuridica per monitorare in modo sistematico gli spostamenti dei portalettere nei loro distretti (relazione annuale UOOU 2012). Le misure correttive imposte dall'UOOU sono state confermate nel 2017 dal Tribunale municipale di Praga (6 A 42/2013), che parla di 7.777 distretti di recapito. Secondo epravo.cz (fonte non ufficiale) la multa fu di 80.000 CZK: la cifra non compare nelle fonti ufficiali che abbiamo aperto, per questo mostriamo il massimale del GDPR. Il caso è anteriore al GDPR, ma il principio resta.",
+      en: "The reference case is UOOU v. Česká pošta (Czech Post). The inspection, from 25 April to 25 September 2012, found a breach of § 5(2) of the old data protection law: there was no legal basis for systematically monitoring the movements of postal carriers in their districts (UOOU annual report 2012). The corrective measures imposed by the UOOU were upheld in 2017 by the Prague Municipal Court (6 A 42/2013), which refers to 7,777 delivery districts. According to epravo.cz (not an official source) the fine was 80,000 CZK: the figure does not appear in the official sources we opened, which is why we show the GDPR maximum. The case predates the GDPR, but the principle stands.",
+      de: "Der Referenzfall ist UOOU gegen Česká pošta (Tschechische Post). Die Kontrolle vom 25. April bis 25. September 2012 stellte einen Verstoß gegen § 5 Abs. 2 des alten Datenschutzgesetzes fest: Es fehlte eine Rechtsgrundlage für die systematische Überwachung der Bewegungen der Briefträger in ihren Bezirken (UOOU-Jahresbericht 2012). Die von der UOOU angeordneten Abhilfemaßnahmen bestätigte 2017 das Stadtgericht Prag (6 A 42/2013), das von 7.777 Zustellbezirken spricht. Laut epravo.cz (keine amtliche Quelle) betrug das Bußgeld 80.000 CZK: Die Zahl steht in keiner der amtlichen Quellen, die wir geöffnet haben, deshalb zeigen wir den Höchstbetrag der DSGVO. Der Fall liegt vor der DSGVO, doch der Grundsatz bleibt bestehen.",
+      fr: "Le cas de référence est UOOU contre Česká pošta (La Poste tchèque). Le contrôle, du 25 avril au 25 septembre 2012, a constaté une violation du § 5, al. 2, de l'ancienne loi sur la protection des données : il n'y avait pas de base juridique pour surveiller de manière systématique les déplacements des facteurs dans leurs secteurs (rapport annuel UOOU 2012). Les mesures correctrices imposées par l'UOOU ont été confirmées en 2017 par le tribunal municipal de Prague (6 A 42/2013), qui parle de 7 777 secteurs de distribution. Selon epravo.cz (source non officielle), l'amende était de 80 000 CZK : ce chiffre ne figure pas dans les sources officielles que nous avons ouvertes, c'est pourquoi nous affichons le plafond du RGPD. Le cas est antérieur au RGPD, mais le principe demeure.",
+      es: "El caso de referencia es UOOU contra Česká pošta (Correos Checos). La inspección, del 25 de abril al 25 de septiembre de 2012, constató una infracción del § 5, ap. 2, de la antigua ley de protección de datos: no había base jurídica para vigilar de forma sistemática los desplazamientos de los carteros en sus distritos (informe anual de la UOOU de 2012). Las medidas correctoras impuestas por la UOOU fueron confirmadas en 2017 por el Tribunal municipal de Praga (6 A 42/2013), que habla de 7.777 distritos de reparto. Según epravo.cz (fuente no oficial) la multa fue de 80.000 CZK: la cifra no aparece en las fuentes oficiales que hemos abierto, por eso mostramos el máximo del RGPD. El caso es anterior al RGPD, pero el principio se mantiene.",
+      nl: "De referentiezaak is UOOU tegen Česká pošta (Tsjechische Post). De controle van 25 april tot 25 september 2012 stelde een schending vast van § 5, lid 2, van de oude gegevensbeschermingswet: er was geen rechtsgrond om de verplaatsingen van postbodes in hun wijken stelselmatig te volgen (jaarverslag UOOU 2012). De door de UOOU opgelegde corrigerende maatregelen werden in 2017 bevestigd door de gemeentelijke rechtbank van Praag (6 A 42/2013), die spreekt van 7.777 bestelwijken. Volgens epravo.cz (geen officiële bron) bedroeg de boete 80.000 CZK: dat bedrag staat niet in de officiële bronnen die we hebben geopend, daarom tonen we het maximum van de AVG. De zaak dateert van voor de AVG, maar het beginsel blijft overeind.",
     },
-    urlFonte: FONTE_UOOU_CESKA_POSTA.url,
-    tipoImporto: 'caso-gps',
+    urlFonte: FONTE_UOOU_VZ2012.url,
+    tipoImporto: 'massimale',
   },
 
   fonti: [
@@ -299,6 +303,7 @@ export const repubblicaCeca: SchedaPaese = {
     FONTE_UOOU_GPS,
     FONTE_UOOU_DPIA,
     FONTE_UOOU_SEGNALAZIONE,
+    FONTE_UOOU_VZ2012,
     FONTE_UOOU_CESKA_POSTA,
     FONTE_EPRAVO_CESKA_POSTA,
     FONTE_UOOU_VZ2014,
