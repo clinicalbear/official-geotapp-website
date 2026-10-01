@@ -114,6 +114,14 @@ export default function Home({ locale, jrSlot, fqSlot }: { locale?: string; jrSl
   const L = L_COPY[currentLocale] ?? L_COPY.en;
   const VG = dict.videoGiro;
 
+  // 01/10/2026: media recensioni, usata sia nella riga di fiducia desktop in hero
+  // sia (aggiunta ora) nella barra sticky mobile. Stesso calcolo di REVIEWS_COPY
+  // piu' in basso in "voci": un solo posto dove si calcola, due posti dove si legge.
+  const reviewsAvg = REVIEWS.reduce((s, r) => s + r.rating, 0) / REVIEWS.length;
+  const reviewsAvgStr = reviewsAvg.toLocaleString(currentLocale, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  const reviewsCopy = REVIEWS_COPY[currentLocale] ?? REVIEWS_COPY.en;
+  const trustLineText = reviewsCopy.aggregateLine.replace('{avg}', reviewsAvgStr).replace('{count}', String(REVIEWS.length));
+
   // La sequenza parte sulla prima scena; le successive le accende HomeEffetti.
   const scene = 0;
 
@@ -243,17 +251,10 @@ export default function Home({ locale, jrSlot, fqSlot }: { locale?: string; jrSl
                 aggregato, con link a quella sezione. Nascosta su mobile (vedi
                 l-mockup.css): l'hero e' a 100svh e gia' al limite, vedi i
                 commenti su .pnote qui sopra. */}
-            {(() => {
-              const avg = REVIEWS.reduce((s, r) => s + r.rating, 0) / REVIEWS.length;
-              const avgStr = avg.toLocaleString(currentLocale, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
-              const rc = REVIEWS_COPY[currentLocale] ?? REVIEWS_COPY.en;
-              return (
-                <a href="#recensioni" className="trustline" data-traccia="trust_badge_click" data-fonte="homepage_hero">
-                  <span aria-hidden="true" className="stars">★★★★★</span>
-                  <span>{rc.aggregateLine.replace('{avg}', avgStr).replace('{count}', String(REVIEWS.length))}</span>
-                </a>
-              );
-            })()}
+            <a href="#recensioni" className="trustline" data-traccia="trust_badge_click" data-fonte="homepage_hero">
+              <span aria-hidden="true" className="stars">★★★★★</span>
+              <span>{trustLineText}</span>
+            </a>
           </div>
           {/* Il fatto tecnico che regge tutto il resto, a tutta larghezza sotto le
               CTA perche' si veda: la seconda meta' nomina l'autorita' del mercato
@@ -524,20 +525,13 @@ export default function Home({ locale, jrSlot, fqSlot }: { locale?: string; jrSl
       {/* ── voci: le recensioni vere ── */}
       <section id="recensioni" className="rev" style={{ scrollMarginTop: 90 }}><div className="wn">
         <p className="kk k r">{L.chi}</p>
-        {(() => {
-          const rc = REVIEWS_COPY[currentLocale] ?? REVIEWS_COPY.en;
-          const avg = REVIEWS.reduce((s, r) => s + r.rating, 0) / REVIEWS.length;
-          const avgStr = avg.toLocaleString(currentLocale, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
-          return (
-            <div className="r d1" style={{ marginBottom: 40 }}>
-              <h2 style={{ fontSize: 'clamp(24px,2.8vw,44px)', marginBottom: 12 }}>{rc.heading}</h2>
-              <p style={{ color: 'rgba(247,249,252,.66)', margin: 0 }}>{rc.subheading}</p>
-              <p className="k" style={{ color: '#22B573', fontSize: 12, marginTop: 10 }}>
-                {rc.aggregateLine.replace('{avg}', avgStr).replace('{count}', String(REVIEWS.length))}
-              </p>
-            </div>
-          );
-        })()}
+        <div className="r d1" style={{ marginBottom: 40 }}>
+          <h2 style={{ fontSize: 'clamp(24px,2.8vw,44px)', marginBottom: 12 }}>{reviewsCopy.heading}</h2>
+          <p style={{ color: 'rgba(247,249,252,.66)', margin: 0 }}>{reviewsCopy.subheading}</p>
+          <p className="k" style={{ color: '#22B573', fontSize: 12, marginTop: 10 }}>
+            {trustLineText}
+          </p>
+        </div>
         {REVIEWS.map((r, i) => {
           const { text } = resolveReviewText(r, currentLocale);
           const { name, meta } = reviewerLine(r, currentLocale);
@@ -621,6 +615,19 @@ export default function Home({ locale, jrSlot, fqSlot }: { locale?: string; jrSl
         id="sticky-mobile-cta"
         className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur-sm border-t border-slate-200 px-4 py-3 shadow-2xl"
       >
+        {/* 01/10/2026: su mobile la riga di fiducia della hero e' nascosta (100svh gia'
+            al limite, vedi i commenti su .pnote/.trustline in l-mockup.css). Questa barra
+            sticky invece vive FUORI dalla hero, a spazio fisso suo: la stessa prova reale
+            (dati da src/data/reviews.ts) ci sta senza toccare il layout fragile sopra. */}
+        <a
+          href="#recensioni"
+          className="flex items-center justify-center gap-1.5 mb-1"
+          data-traccia="trust_badge_click"
+          data-fonte="homepage_sticky"
+        >
+          <span aria-hidden="true" className="text-[11px] leading-none text-[#22B573]">★★★★★</span>
+          <span className="text-[11px] text-slate-500">{trustLineText}</span>
+        </a>
         <p className="text-xs text-slate-500 text-center mb-1">
           {(dict.landing as any)?.sticky_cta_subtitle ?? '14 giorni gratis, nessuna carta di credito'}
         </p>
