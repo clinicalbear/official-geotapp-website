@@ -5,7 +5,7 @@ const it: VerifierCopy = {
   hero_title: 'I tuoi report di lavoro\nsono verificabili.',
   hero_subtitle:
     'GeoTapp Verifier controlla che un report di GeoTapp non sia stato modificato dopo il sigillo, e che a emetterlo sia stato davvero GeoTapp. È gratuito, per te e per i tuoi clienti, e funziona anche offline.',
-  hero_cta_primary: 'Prova GeoTapp gratis',
+  hero_cta_primary: 'Inizia la prova gratuita di 14 giorni',
   hero_cta_secondary: 'Scopri come funziona',
   terminal_integrity: 'Catena degli eventi: INTEGRA',
   terminal_timestamps: 'Ora del sigillo: DAL SERVER',
@@ -108,7 +108,7 @@ const it: VerifierCopy = {
   cta_title: 'Inizia a produrre report verificabili.',
   cta_subtitle:
     'Con report che il cliente può verificare da solo, quando qualcuno contesta hai una prova da mostrare invece di una parola contro l\'altra.',
-  cta_primary: 'Prova GeoTapp gratis',
+  cta_primary: 'Inizia la prova gratuita di 14 giorni',
   cta_flow: 'Scopri GeoTapp Flow',
   cta_timetracker: 'Scopri GeoTapp TimeTracker',
   faq_badge: 'Domande frequenti',
