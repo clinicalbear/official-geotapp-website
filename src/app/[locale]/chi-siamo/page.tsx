@@ -14,7 +14,7 @@ const CHI_SIAMO_META: Record<string, { title: string; description: string }> = {
   da: { title: 'Om os - GeoTapp-teamet | GeoTapp', description: 'GeoTapp er en italiensk software til at dokumentere arbejdet i marken. Lær vores mission at kende: at gøre hver opgave verificerbar og mindske tvister.' },
   sv: { title: 'Om oss - GeoTapp-teamet | GeoTapp', description: 'GeoTapp är en italiensk mjukvara för att visa upp arbetet i fält. Läs om vårt uppdrag: att göra varje uppdrag verifierbart och minska tvisterna för företag med personal i rörelse.' },
   nb: { title: 'Om oss - GeoTapp-teamet | GeoTapp', description: 'GeoTapp er en italiensk programvare for å dokumentere arbeidet ute i felt. Les om oppdraget vårt: å gjøre hvert oppdrag verifiserbart og redusere tvister.' },
-  ru: { title: 'О нас, Команда GeoTapp | GeoTapp', description: 'GeoTapp - SaaS для верификации полевых работ. Узнайте о нашей миссии: сделать каждый выезд доказуемым и сократить споры для компаний с мобильными операторами.' },
+  ru: { title: 'О нас - Команда GeoTapp | GeoTapp', description: 'GeoTapp — итальянское программное обеспечение для подтверждения выездных работ. Наша миссия: сделать каждый выезд проверяемым и сократить споры в компаниях с выездными сотрудниками.' },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

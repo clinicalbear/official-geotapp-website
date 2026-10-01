@@ -316,7 +316,7 @@ const META_TEXTS: Record<string, { title: string; description: string }> = {
   da: { title: 'GeoTapp - Officielle links', description: 'Positioner, fotos og verificerbare rapporter. Prøv gratis i 14 dage, uden kreditkort.' },
   sv: { title: 'GeoTapp - Officiella länkar', description: 'Positioner, foton och rapporter som går att verifiera. Prova gratis i 14 dagar, utan kreditkort.' },
   nb: { title: 'GeoTapp - Offisielle lenker', description: 'Posisjoner, bilder og verifiserbare rapporter. Prøv gratis i 14 dager, uten kredittkort.' },
-  ru: { title: 'GeoTapp, Официальные ссылки', description: 'GPS-доказательства, фото и проверяемые отчёты. Бесплатный пробный период, без карты.' },
+  ru: { title: 'GeoTapp - официальные ссылки', description: 'GPS-доказательства, фото и проверяемые отчёты. 14 дней бесплатной пробной версии, без карты.' },
 };
 
 // ─── Metadata ─────────────────────────────────────────────────────────────────

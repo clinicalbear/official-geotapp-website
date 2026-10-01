@@ -23,7 +23,7 @@ const META: Record<string, { title: string; description: string }> = {
   da: { title: 'GeoTapp vs Blink - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Blink: stempling eller verificerbart bevis? Sammenligning af positionskontrol ved stempling, forseglede rapporter og bevisfotos til rengøringsfirmaer.' },
   sv: { title: 'GeoTapp vs Blink - Jämförelse 2026 | GeoTapp', description: 'GeoTapp vs Blink: tidrapportering eller verifierbart bevis? Jämförelse av positionskontroll vid instämpling, förseglade rapporter och bevisfoton för städföretag.' },
   nb: { title: 'GeoTapp vs Blink - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Blink: stempling eller verifiserbart bevis? Sammenligning av posisjonskontroll ved stempling, forseglede rapporter og bevisbilder for renholdsbedrifter.' },
-  ru: { title: 'GeoTapp vs Blink - Sravnenie 2026 | GeoTapp', description: 'GeoTapp vs Blink: uchet vremeni ili zapechatyvanie? Sravnenie anti-spoofing GPS i kriptograficheski zapechatannyh otchetov.' },
+  ru: { title: 'GeoTapp vs Blink - Сравнение 2026 | GeoTapp', description: 'GeoTapp vs Blink: отметка времени или проверяемое доказательство? Сравнение контроля местоположения при отметке, запечатанных отчётов и фото-подтверждений для клининговых компаний.' },
 };
 
 type FaqItem = { q: string; a: string };
@@ -90,10 +90,10 @@ const FAQ: Record<string, FaqItem[]> = {
     { q: 'Blink er mye brukt blant tyske renholdsbedrifter. Hvorfor velge GeoTapp?', a: 'Blink er sterkt på stempling og teamkommunikasjon for renhold i Tyskland. Men hvis du må vise kunden bevisene for tjenesten i en rapport der enhver senere endring kan oppdages, trenger du GeoTapp. Ulike verktøy for ulike problemer.' },
   ],
   ru: [
-    { q: 'В чём главное отличие GeoTapp от Blink?', a: 'Blink, ведущее ПО для учёта рабочего времени в немецком клининге зданий: GPS, QR-код, NFC, управление задачами и командное общение. GeoTapp идёт дальше: это система опечатывания, которая документирует каждый выезд с анти-спуфинговым GPS и криптографически опечатанными фотографиями. Заказчик проверяет отчёт сам.' },
-    { q: 'Есть ли у Blink анти-спуфинговый GPS?', a: 'Нет. Blink сравнивает GPS-позицию с заданным местом работы, но не проверяет, реальна ли позиция или подделана. GeoTapp выявляет попытки подделки.' },
-    { q: 'Может ли заказчик проверить отчёты Blink?', a: 'Blink создаёт внутренние отчёты. GeoTapp создаёт отчёты с криптографической печатью, которые заказчик может независимо проверить на публичном портале.' },
-    { q: 'Blink, номер 1 в клининге зданий. Почему выбрать GeoTapp?', a: 'Blink превосходно справляется с учётом времени и командным общением в немецком клининге. Но если вам нужно доказать заказчику, что услуга была выполнена, с доказательствами, в которых любое изменение заметно, нужен GeoTapp. Это разные инструменты для разных задач.' },
+    { q: 'В чём главное отличие GeoTapp от Blink?', a: 'Blink — широко распространённое ПО среди клининговых компаний в Германии: GPS, QR-код, NFC, управление задачами и командное общение. GeoTapp делает другое: документирует каждый выезд местоположением, проверенным при отметке, и фото-подтверждением, и закрывает это запечатанным отчётом, который заказчик проверяет сам.' },
+    { q: 'Проверяет ли Blink, что позиция не подделана?', a: 'Среди заявленных функций Blink есть сравнение позиции с заданным местом работы, но не проверка на подделку. GeoTapp при отметке отклоняет позиции, смоделированные приложениями для подмены координат, слишком неточные позиции и невозможные перемещения.' },
+    { q: 'Может ли заказчик проверить отчёты Blink?', a: 'Blink создаёт внутренние отчёты. GeoTapp создаёт отчёты с криптографической печатью, которые заказчик может проверить независимо.' },
+    { q: 'Blink широко распространён в клининге зданий. Почему выбрать GeoTapp?', a: 'Blink силён в отметке времени и командном общении для клининга в Германии. Но если вам нужно показать заказчику доказательства услуги, в отчёте, где любое последующее изменение заметно, нужен GeoTapp. Это разные инструменты для разных задач.' },
   ],
 };
 
@@ -109,7 +109,7 @@ const ROWS_LABELS: Record<string, string[]> = {
   da: ['Positionskontrol ved stempling (afviser simulerede positioner)','Kryptografisk forseglet rapport','Uafhængig verificering af kunden','Fotos med SHA-256-fingeraftryk i rapporten','Position registreres kun ved stempling','GPS-stempling','Stempling med QR-kode / NFC','Opgavestyring','Teamkommunikation','Digitale tjeklister','App Android/iOS','Specialiseret i bygningsrengøring','GPS-information underskrevet i appen, før man stempler*'],
   sv: ['Positionskontroll vid instämpling (avvisar simulerade positioner)','Kryptografiskt förseglad rapport','Oberoende verifiering av kunden','Foton med SHA-256-fingeravtryck i rapporten','Positionen registreras bara vid instämpling','GPS-instämpling','Instämpling med QR-kod / NFC','Uppgiftshantering','Teamkommunikation','Digitala checklistor','Android-/iOS-app','Specialiserad på byggnadsstädning','GPS-information signerad i appen innan man stämplar in*'],
   nb: ['Posisjonskontroll ved stempling (avviser simulerte posisjoner)','Kryptografisk forseglet rapport','Uavhengig verifisering fra kunden','Bilder med SHA-256-fingeravtrykk i rapporten','Posisjon registreres bare ved stempling','GPS-stempling','Stempling med QR-kode / NFC','Oppgavestyring','Teamkommunikasjon','Digitale sjekklister','App Android/iOS','Spesialisert på bygningsrenhold','GPS-informasjon signert i appen før man stempler*'],
-  ru: ['Анти-спуфинг GPS (выявляет подделанные позиции)','Криптографически опечатанный отчёт','Независимая проверка заказчиком','Фото с криптографической хеш-цепочкой','Соответствие GDPR','Учёт времени по GPS','Отметка по QR-коду / NFC','Управление задачами','Командное общение','Цифровые чек-листы','Приложение Android/iOS','Специализация на клининге зданий','Автоматическое уведомление о GPS с цифровой подписью*'],
+  ru: ['Контроль местоположения при отметке (отклоняет смоделированные позиции)','Криптографически запечатанный отчёт','Независимая проверка заказчиком','Фото с отпечатком SHA-256 в отчёте','Местоположение фиксируется только при отметке','Отметка по GPS','Отметка по QR-коду / NFC','Управление задачами','Командное общение','Цифровые чек-листы','Приложение Android/iOS','Специализация на клининге зданий','Уведомление о GPS, подписанное в приложении перед отметкой*'],
 };
 
 // Valori riverificati sul prodotto il 30/09/2026: niente QR/NFC, niente checklist; i prezzi sono pubblici.
@@ -278,18 +278,18 @@ const T: Record<string, Copy> = {
   },
   ru: {
     badge: 'Сравнение приложений', h1sub: 'учёт времени или запечатывание?',
-    desc: 'Blink, ПО номер 1 для клининга зданий в Германии: GPS, QR-код, NFC, управление задачами и командное общение. GeoTapp запечатывает каждый выезд анти-спуфинговым GPS, криптографически опечатанными фотографиями и отчётами, которые заказчик проверяет сам.',
+    desc: 'Blink — широко распространённое ПО среди клининговых компаний в Германии: GPS, QR-код, NFC, управление задачами и командное общение. GeoTapp запечатывает каждый выезд: местоположение проверяется при отметке, фото-подтверждения и отчёт, который заказчик проверяет сам.',
     summary: 'Коротко:',
-    summaryText: 'Blink превосходно справляется с учётом времени и командным общением для клининга в Германии. Но GPS не проверяется (нет анти-спуфинга), фотографии не опечатываются криптографически, а отчёты не проверяемы заказчиком. GeoTapp закрывает именно эти пробелы.',
-    noteTitle: 'Отметка по GPS, это не проверка GPS',
-    noteText: 'Blink сравнивает GPS-позицию с заданным местом работы. Но если работник подделает GPS бесплатным приложением, Blink этого не обнаружит. GeoTapp использует анти-спуфинговую технологию, которая сопоставляет несколько сигналов для выявления поддельных позиций. Кроме того, каждое фото опечатывается криптографической хеш-цепочкой.',
+    summaryText: 'Blink силён в отметке времени и командном общении для клининга в Германии. Но среди его заявленных функций нет проверки позиции на подделку, запечатанных в отчёте фото и проверки со стороны заказчика. Именно эти три вещи закрывает GeoTapp.',
+    noteTitle: 'Отметка по GPS — это не проверка GPS',
+    noteText: 'Сравнение позиции с местом работы показывает, попадает ли координата в нужное место, но не то, настоящая ли она: позицию можно подделать бесплатным приложением. GeoTapp при отметке отклоняет смоделированные позиции, слишком неточные и невозможные перемещения. Кроме того, каждое фото попадает в отчёт со своим отпечатком SHA-256: если кто-то его изменит, проверка это покажет.',
     features: 'Сравнение ключевых функций', feat: 'Функция', diff: 'Два разных инструмента',
     cta: 'Хотите увидеть GeoTapp в действии?',
-    ctaDesc: 'Покажем, как выезд превращается в проверяемое доказательство, за 10 минут, без обязательств.',
-    ctaBtn: 'Начните бесплатно!',
-    geo: ['Анти-спуфинг GPS: выявляет поддельные позиции','Фото опечатаны криптографической хеш-цепочкой','Отчёт с проверяемой криптографической печатью','Заказчик проверяет сам на публичном портале','Не только клининг, все отрасли с выездными сотрудниками'],
-    comp: ['ПО номер 1 для клининга в Германии','Учёт времени по GPS + QR-код + NFC','Управление задачами и цифровые чек-листы','Встроенное командное общение','Нет анти-спуфинга, нет криптографической печати'],
-    footnote: '* По закону (GDPR ст. 13) каждый сотрудник должен подписать уведомление о конфиденциальности перед геолокацией. Большинство GPS-программ это не обеспечивают: юридический риск остаётся на работодателе. GeoTapp автоматически создаёт персональное уведомление, даёт сотруднику подписать его цифровой подписью и блокирует доступ к GPS, пока оно не подписано. Ни одна другая программа на рынке этого не делает.',
+    ctaDesc: 'Попробуйте на реальной работе: 14 дней бесплатно, без банковской карты.',
+    ctaBtn: 'Начать бесплатную пробную версию',
+    geo: ['При отметке отклоняет смоделированные позиции','Фото с отпечатком SHA-256 в отчёте','Отчёт с проверяемой криптографической печатью','Заказчик проверяет сам, онлайн или с офлайн-верификатором','Не только клининг: все отрасли с выездными сотрудниками'],
+    comp: ['Широко распространено для клининга в Германии','Отметка по GPS + QR-код + NFC','Управление задачами и цифровые чек-листы','Встроенное командное общение','Нет запечатанного отчёта, который может проверить заказчик'],
+    footnote: '* По закону (ст. 13 GDPR и, в Италии, ст. 4 Статута трудящихся) каждый сотрудник должен быть проинформирован, прежде чем за ним начнут следить по GPS. Если программа оставляет этот шаг на усмотрение работодателя, риск остаётся на нём. GeoTapp готовит персональное уведомление, даёт сотруднику подписать его в приложении для подтверждения ознакомления и не позволяет отмечаться, пока оно не подписано.',
   },
 };
 

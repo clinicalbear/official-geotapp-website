@@ -52,6 +52,11 @@ const META: Record<string, { title: string; description: string }> = {
     description:
       'Dien een verzoek in om uw GeoTapp-account en uw persoonsgegevens te verwijderen. We behandelen elk verzoek binnen 30 dagen, zoals de AVG voorschrijft.',
   },
+  ru: {
+    title: 'Запрос на удаление аккаунта | GeoTapp',
+    description:
+      'Отправьте запрос на удаление аккаунта GeoTapp и ваших персональных данных. Мы обрабатываем каждый запрос в течение 30 дней, как того требует GDPR.',
+  },
 };
 
 export async function generateMetadata({

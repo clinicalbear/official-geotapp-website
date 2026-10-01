@@ -23,7 +23,7 @@ const META: Record<string, { title: string; description: string }> = {
   da: { title: 'GeoTapp vs Libemax - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Libemax: geofence eller kontrol af falsk position? Sammenligning af stempling, forseglede rapporter og bevisfotos.' },
   sv: { title: 'GeoTapp vs Libemax - Jämförelse 2026 | GeoTapp', description: 'GeoTapp vs närvaroappen Libemax: geofence eller kontroll av falsk position? Jämförelse av instämpling, kryptografiskt förseglade rapporter och bevisfoton där varje senare ändring går att upptäcka.' },
   nb: { title: 'GeoTapp vs Libemax - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Libemax: geofence eller kontroll av falsk posisjon? Sammenligning av stempling, forseglede rapporter og bevisbilder.' },
-  ru: { title: 'GeoTapp vs Libemax, Сравнение 2026 | GeoTapp', description: 'GeoTapp vs Libemax: geofence или анти-спуфинг? Сравните проверенный GPS, криптографически опечатанные отчёты и фотодоказательства, в которых любое изменение заметно.' },
+  ru: { title: 'GeoTapp vs Libemax - Сравнение 2026 | GeoTapp', description: 'GeoTapp vs Libemax: учёт присутствия — геозона или проверка на поддельную позицию? Сравнение отметки времени, криптографически запечатанных отчётов и фото-подтверждений, в которых любое изменение заметно.' },
 };
 
 type FaqItem = { q: string; a: string };
@@ -90,10 +90,10 @@ const FAQ: Record<string, FaqItem[]> = {
     { q: 'GeoTapp eller Libemax for sosiale kooperativer og renholdsbedrifter?', a: 'Hvis målet bare er oppmøteregistrering med NFC og geofence, er Libemax et solid valg. Hvis målet er å ha dokumentasjon å vise fram når en kunde bestrider arbeidet, med rapporter der enhver senere endring kan oppdages, trenger du GeoTapp: kunden kontrollerer alt selv, uten å måtte ta deg på ordet.' },
   ],
   ru: [
-    { q: 'В чём разница между геозоной Libemax и анти-спуфингом GeoTapp?', a: 'Геозона Libemax лишь проверяет, находится ли устройство внутри заданного периметра, но саму GPS-позицию можно подделать бесплатным приложением. Анти-спуфинг GeoTapp идёт дальше: он сопоставляет несколько сигналов, чтобы убедиться, что позиция настоящая, а не смоделированная. Это разница между тем, чтобы проверить, где телефон якобы находится, и тем, чтобы убедиться, где он на самом деле.' },
-    { q: 'У Libemax 200 000 загрузок. Надёжен ли GeoTapp?', a: 'Libemax, отличное приложение для учёта присутствия с устоявшейся базой пользователей. GeoTapp решает другую задачу: он запечатывает работу доказательствами, в которых любое изменение заметно. Это две разные категории, как сравнивать секундомер с нотариусом.' },
-    { q: 'Почему фотографии GeoTapp отличаются от фотографий Libemax?', a: 'Libemax позволяет прикреплять фото к отчётам. GeoTapp опечатывает каждое фото криптографической хеш-цепочкой в самый момент съёмки: если кто-то изменит фото хотя бы на один пиксель, печать ломается и система это обнаруживает. Фотографии GeoTapp, это проверяемые доказательства, а не простые вложения.' },
-    { q: 'GeoTapp или Libemax для социальных кооперативов и клининговых компаний?', a: 'Если цель, только учёт присутствия с NFC и геозоной, Libemax, надёжный выбор. Если цель, устранить претензии клиентов с помощью проверяемых отчётов и доказательств, в которых любое изменение заметно, GeoTapp, единственное решение, потому что заказчик может проверить всё сам, не веря вам на слово.' },
+    { q: 'В чём разница между геозоной Libemax и проверкой позиции у GeoTapp?', a: 'Геозона Libemax лишь проверяет, находится ли устройство внутри заданного периметра, но саму GPS-позицию можно подделать бесплатным приложением. GeoTapp идёт дальше: при отметке он также проверяет позицию и отклоняет смоделированные приложениями для подмены координат, слишком неточные и невозможные перемещения. Это разница между тем, чтобы проверить, где телефон якобы находится, и тем, чтобы убедиться, что эти данные правдоподобны.' },
+    { q: 'У Libemax 200 000 загрузок. Надёжен ли GeoTapp?', a: 'Libemax — отличное приложение для учёта присутствия с устоявшейся базой пользователей. GeoTapp решает другую задачу: он не просто фиксирует присутствие, а запечатывает работу в отчёте, где любое последующее изменение заметно. Это две разные категории инструментов.' },
+    { q: 'Почему фотографии GeoTapp отличаются от фотографий Libemax?', a: 'Libemax позволяет прикреплять фото к отчётам. В GeoTapp каждое фото попадает в отчёт со своим отпечатком SHA-256, запечатанным вместе с остальными данными: если кто-то изменит фото хотя бы на один пиксель, проверка это покажет. Фотографии GeoTapp — это проверяемые доказательства, а не простые вложения.' },
+    { q: 'GeoTapp или Libemax для социальных кооперативов и клининговых компаний?', a: 'Если цель — только учёт присутствия с NFC и геозоной, Libemax — надёжный выбор. Если цель — иметь доказательство на случай, когда клиент оспаривает работу, с отчётом, в котором любое последующее изменение заметно, нужен GeoTapp: заказчик проверяет всё сам, не веря вам на слово.' },
   ],
 };
 
@@ -109,7 +109,7 @@ const ROWS_LABELS: Record<string, string[]> = {
   da: ['Positionskontrol ved stempling (afviser simulerede positioner)','Kryptografisk forseglet rapport','Uafhængig verificering af kunden','Fotos med SHA-256-fingeraftryk i rapporten','Position registreres kun ved stempling','GPS-stempling','Stempling med QR-kode / NFC / Bluetooth','Geofence (perimeter)','Tjeklister og audit','Mobilapp Android/iOS','Dashboard til teamstyring','Brancher: rengøring, byggeri, kooperativer','GPS-information underskrevet i appen, før man stempler*'],
   sv: ['Positionskontroll vid instämpling (avvisar simulerade positioner)','Kryptografiskt förseglad rapport','Oberoende verifiering av kunden','Foton med SHA-256-fingeravtryck i rapporten','Positionen registreras bara vid instämpling','GPS-instämpling','Instämpling med QR-kod / NFC / Bluetooth','Geofence (perimeter)','Checklistor och granskningar','Mobilapp för Android/iOS','Instrumentpanel för teamhantering','Branscher: städning, bygg, kooperativ','GPS-information signerad i appen innan man stämplar in*'],
   nb: ['Posisjonskontroll ved stempling (avviser simulerte posisjoner)','Kryptografisk forseglet rapport','Uavhengig verifisering fra kunden','Bilder med SHA-256-fingeravtrykk i rapporten','Posisjon registreres bare ved stempling','GPS-stempling','Stempling med QR-kode / NFC / Bluetooth','Geofence (perimeter)','Sjekklister og revisjon','Mobilapp Android/iOS','Dashbord for teamstyring','Bransjer: renhold, bygg, kooperativer','GPS-informasjon signert i appen før man stempler*'],
-  ru: ['Анти-спуфинг GPS (выявляет подделанные позиции)','Криптографически опечатанный отчёт','Независимая проверка заказчиком','Фото с криптографической хеш-цепочкой','Соответствие GDPR','Отметка по GPS','Отметка по QR-коду / NFC / Bluetooth','Геозона (периметр)','Чек-листы и аудиты','Мобильное приложение Android/iOS','Панель управления командой','Отрасли: клининг, строительство, кооперативы','Автоматическое уведомление о GPS с цифровой подписью*'],
+  ru: ['Контроль местоположения при отметке (отклоняет смоделированные позиции)','Криптографически запечатанный отчёт','Независимая проверка заказчиком','Фото с отпечатком SHA-256 в отчёте','Местоположение фиксируется только при отметке','Отметка по GPS','Отметка по QR-коду / NFC / Bluetooth','Геозона (периметр)','Чек-листы и аудиты','Мобильное приложение Android/iOS','Панель управления командой','Отрасли: клининг, строительство, кооперативы','Уведомление о GPS, подписанное в приложении перед отметкой*'],
 };
 
 // Valori riverificati sul prodotto il 30/09/2026: niente QR/NFC, niente checklist; i prezzi sono pubblici.
@@ -130,7 +130,7 @@ const TABLE_TAKEAWAY: Record<string, string> = {
   da: 'Kort sagt: Libemax kontrollerer fremmødet med geofence; GeoTapp tilføjer kontrollen af falsk position ved stempling, den forseglede rapport og kundens egen verificering, lavet til, når nogen bestrider arbejdet.',
   sv: 'Kort sagt: Libemax kontrollerar närvaro med en geofence; GeoTapp lägger till kontrollen av falsk position vid instämpling, den förseglade rapporten och kundens verifiering, byggt för när någon ifrågasätter arbetet.',
   nb: 'Kort sagt: Libemax kontrollerer oppmøtet med geofence; GeoTapp legger til kontrollen av falsk posisjon ved stempling, den forseglede rapporten og kundens egen verifisering, laget for når noen bestrider arbeidet.',
-  ru: 'Коротко: Libemax проверяет присутствие через геозону; GeoTapp добавляет защиту GPS от подмены, защищённый отчёт и проверку заказчиком, рассчитанные выдержать спор.',
+  ru: 'Коротко: Libemax проверяет присутствие через геозону; GeoTapp добавляет проверку позиции на подделку при отметке, запечатанный отчёт и проверку заказчиком, рассчитанные выдержать спор.',
 };
 
 type Copy = {
@@ -297,19 +297,19 @@ const T: Record<string, Copy> = {
     footnote: '* Ifølge loven (GDPR art. 13 og, i Italia, art. 4 i arbeidstakerloven, Statuto dei Lavoratori) må hver ansatt informeres før vedkommende geolokaliseres. Overlater programvaren dette trinnet til arbeidsgiveren, blir risikoen hos arbeidsgiveren. GeoTapp forbereder den personlige informasjonen, får den signert i appen som bekreftelse på at den er lest, og lar ikke den ansatte stemple før den er signert.',
   },
   ru: {
-    badge: 'Сравнение приложений', h1sub: 'geofence или анти-спуфинг?',
-    desc: 'Libemax, самое скачиваемое приложение для учёта присутствия в Италии, более 200 000 загрузок. GeoTapp, это система опечатывания работы с анти-спуфинговым GPS и отчётами, в которых любое изменение заметно. Два принципиально разных подхода к одной задаче.',
+    badge: 'Сравнение приложений', h1sub: 'геозона или проверка на поддельную позицию?',
+    desc: 'Libemax — самое скачиваемое приложение для учёта присутствия в Италии, более 200 000 загрузок. GeoTapp — это система доказательства работы: она проверяет местоположение при отметке и закрывает всё в отчёте, где любое последующее изменение заметно. Два разных подхода к одной задаче.',
     summary: 'Коротко:',
-    summaryText: 'Libemax превосходно справляется с учётом присутствия множеством методов (GPS, QR, NFC, Bluetooth, геозона). Но геозона проверяет только периметр, а не то, реальна ли позиция. GeoTapp идёт дальше: анти-спуфинг проверяет подлинность GPS, фотографии опечатываются криптографически, а отчёт можно проверить, заказчик проверяет его сам.',
-    noteTitle: 'Геозона, это не анти-спуфинг',
-    noteText: 'Геозона Libemax проверяет, находится ли смартфон внутри заданного периметра. Но если GPS-позицию подделать приложением, геозону тоже обманывают: телефон утверждает, что он внутри периметра, даже если он за километры. Анти-спуфинг GeoTapp выявляет именно это: он проверяет, что GPS-сигнал подлинный, а не просто что координаты попадают в область.',
+    summaryText: 'Libemax превосходно справляется с учётом присутствия множеством методов (GPS, QR, NFC, Bluetooth, геозона). Но геозона проверяет только периметр, а не то, реальна ли позиция. При отметке GeoTapp отклоняет смоделированные позиции; фотографии попадают в отчёт со своим отпечатком, а заказчик проверяет отчёт сам.',
+    noteTitle: 'Периметр не говорит, настоящая ли позиция',
+    noteText: 'Геозона проверяет, находится ли смартфон внутри заданного периметра. Но если позицию подделать приложением, геозону тоже обманывают: телефон утверждает, что он внутри периметра, даже если он за километры. GeoTapp при отметке проверяет именно это: отклоняет смоделированные позиции, слишком неточные и невозможные перемещения, а не только координаты вне зоны.',
     features: 'Сравнение ключевых функций', feat: 'Функция', diff: 'Две разные философии',
     cta: 'Хотите увидеть GeoTapp в действии?',
-    ctaDesc: 'Покажем, как работа превращается в проверяемое доказательство, за 10 минут, без обязательств.',
-    ctaBtn: 'Начните бесплатно!',
-    geo: ['Анти-спуфинг GPS: проверяет, что позиция реальна','Фото опечатаны криптографической хеш-цепочкой','Отчёт с проверяемой криптографической печатью','Заказчик проверяет сам','Проверяемое доказательство, а не просто учёт присутствия'],
-    comp: ['200 000+ загрузок, 6 000+ компаний','GPS + QR + NFC + Bluetooth + геозона','Геозона: проверяет периметр (не подлинность GPS)','Чек-листы и аудиты для стройплощадок','Учёт присутствия, а не проверяемое доказательство'],
-    footnote: '* По закону (GDPR ст. 13) каждый сотрудник должен подписать уведомление о конфиденциальности перед геолокацией. Большинство GPS-программ это не обеспечивают: юридический риск остаётся на работодателе. GeoTapp автоматически создаёт персональное уведомление, даёт сотруднику подписать его цифровой подписью и блокирует доступ к GPS, пока оно не подписано. Ни одна другая программа на рынке этого не делает.',
+    ctaDesc: 'Попробуйте на реальной работе: 14 дней бесплатно, без банковской карты.',
+    ctaBtn: 'Начать бесплатную пробную версию',
+    geo: ['При отметке отклоняет смоделированные позиции','Фото с отпечатком SHA-256 в отчёте','Отчёт с проверяемой криптографической печатью','Заказчик проверяет сам','Проверяемое доказательство, а не просто учёт присутствия'],
+    comp: ['200 000+ загрузок, 6 000+ компаний','GPS + QR + NFC + Bluetooth + геозона','Геозона: проверяет периметр, а не то, реальна ли позиция','Чек-листы и аудиты для стройплощадок','Учёт присутствия, а не проверяемое доказательство'],
+    footnote: '* По закону (ст. 13 GDPR и, в Италии, ст. 4 Статута трудящихся) каждый сотрудник должен быть проинформирован, прежде чем за ним начнут следить по GPS. Если программа оставляет этот шаг на усмотрение работодателя, риск остаётся на нём. GeoTapp готовит персональное уведомление, даёт сотруднику подписать его в приложении для подтверждения ознакомления и не позволяет отмечаться, пока оно не подписано.',
   },
 };
 

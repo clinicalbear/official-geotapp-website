@@ -22,6 +22,7 @@ export const COMPARISON_BLOG_LINKS: Record<string, Record<string, string>> = {
     da: '/blog/da/2026/07/24/geotapp-vs-clockify-2026-fremmode-sammenligning/',
     sv: '/blog/sv/2026/07/24/geotapp-vs-clockify-2026-narvaro-jamforelse/',
     nb: '/blog/nb/2026/07/24/geotapp-vs-clockify-2026-oppmote-sammenligning/',
+    ru: '/blog/ru/2026/07/24/geotapp-vs-clockify-2026-sravnenie-ucheta/',
   },
   connecteam: {
     it: '/blog/2026/05/19/geotapp-vs-connecteam-2026-confronto-app-squadre-campo/',
@@ -34,6 +35,7 @@ export const COMPARISON_BLOG_LINKS: Record<string, Record<string, string>> = {
     da: '/blog/da/2026/07/24/geotapp-vs-connecteam-2026-fremmode-sammenligning/',
     sv: '/blog/sv/2026/07/24/geotapp-vs-connecteam-2026-narvaro-jamforelse/',
     nb: '/blog/nb/2026/07/24/geotapp-vs-connecteam-2026-oppmote-sammenligning/',
+    ru: '/blog/ru/2026/07/24/geotapp-vs-connecteam-2026-sravnenie-ucheta/',
   },
   hubstaff: {
     it: '/blog/2026/05/21/geotapp-vs-hubstaff-2026-sorveglianza-vs-certificazione/',
@@ -46,6 +48,7 @@ export const COMPARISON_BLOG_LINKS: Record<string, Record<string, string>> = {
     da: '/blog/da/2026/07/24/geotapp-vs-hubstaff-2026-overvaagning-vs-bevis/',
     sv: '/blog/sv/2026/07/24/geotapp-vs-hubstaff-2026-overvakning-vs-bevis/',
     nb: '/blog/nb/2026/07/24/geotapp-vs-hubstaff-2026-overvaaking-vs-bevis/',
+    ru: '/blog/ru/2026/07/24/geotapp-vs-hubstaff-2026-slezhka-vs-dokazatelstvo/',
   },
   jibble: {
     it: '/blog/2026/05/18/geotapp-vs-jibble-2026-confronto-app-presenze/',
@@ -58,6 +61,7 @@ export const COMPARISON_BLOG_LINKS: Record<string, Record<string, string>> = {
     da: '/blog/da/2026/07/24/geotapp-vs-jibble-2026-fremmode-sammenligning/',
     sv: '/blog/sv/2026/07/24/geotapp-vs-jibble-2026-narvaro-jamforelse/',
     nb: '/blog/nb/2026/07/24/geotapp-vs-jibble-2026-oppmote-sammenligning/',
+    ru: '/blog/ru/2026/07/24/geotapp-vs-jibble-2026-sravnenie-ucheta/',
   },
   libemax: {
     // Libemax ha l'articolo IT (piu' quello NL del 24/07/2026), ed e' la pagina con piu' citazioni AI del sito.
@@ -67,6 +71,7 @@ export const COMPARISON_BLOG_LINKS: Record<string, Record<string, string>> = {
     da: '/blog/da/2026/07/24/geotapp-vs-libemax-2026-fremmode-sammenligning/',
     sv: '/blog/sv/2026/07/24/geotapp-vs-libemax-2026-narvaro-jamforelse/',
     nb: '/blog/nb/2026/07/24/geotapp-vs-libemax-2026-oppmote-sammenligning/',
+    ru: '/blog/ru/2026/07/24/geotapp-vs-libemax-2026-sravnenie-ucheta/',
   },
   picaponto: {
     it: '/blog/2026/07/16/geotapp-vs-picaponto-2026-confronto-app-presenze/',
@@ -84,10 +89,12 @@ export const COMPARISON_BLOG_LINKS: Record<string, Record<string, string>> = {
   nobadge: {
     sv: '/blog/sv/2026/07/24/geotapp-vs-nobadge-2026-stampling-vs-bevis/',
     nb: '/blog/nb/2026/07/24/geotapp-vs-nobadge-2026-stempling-vs-bevis-nb/',
+    ru: '/blog/ru/2026/07/24/geotapp-vs-nobadge-2026-otmetka-vs-dokazatelstvo/',
   },
   personio: {
     sv: '/blog/sv/2026/07/24/geotapp-vs-personio-2026-personal-vs-bevis/',
     nb: '/blog/nb/2026/07/24/geotapp-vs-personio-2026-bemanning-vs-bevis/',
+    ru: '/blog/ru/2026/07/24/geotapp-vs-personio-2026-personal-vs-dokazatelstvo/',
   },
   sage: {
     sv: '/blog/sv/2026/07/24/geotapp-vs-sage-2026-ekonomi-vs-bevis/',
@@ -96,6 +103,7 @@ export const COMPARISON_BLOG_LINKS: Record<string, Record<string, string>> = {
   blink: {
     sv: '/blog/sv/2026/07/24/geotapp-vs-blink-2026-stampling-vs-bevis/',
     nb: '/blog/nb/2026/07/24/geotapp-vs-blink-2026-stempling-vs-bevis-nb/',
+    ru: '/blog/ru/2026/07/24/geotapp-vs-blink-2026-otmetka-vs-dokazatelstvo/',
   },
 };
 
@@ -111,7 +119,7 @@ const ANCHOR: Record<string, string> = {
   sv: 'Läs den fördjupade jämförelsen på bloggen',
   nb: 'Les den grundige sammenligningen på bloggen',
   da: 'Læs den dybdegående sammenligning på bloggen',
-  ru: 'Chitat podrobnoe sravnenie v bloge',
+  ru: 'Читать подробный разбор в блоге',
 };
 
 /** Ritorna { href, label } per la lingua data, o null se non c'e' un articolo. */

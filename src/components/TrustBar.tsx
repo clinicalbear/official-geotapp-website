@@ -48,7 +48,7 @@ const COPY: Record<string, {
     { title: 'Onafhankelijke controle', sub: 'De klant controleert, zonder account' },
   ], sectors: 'Schoonmaak · Bouw · Beveiliging · Installateurs · Onderhoud · Installaties' },
   ru: { headline: 'Доказательство полевой работы, которое может проверить каждый', claims: [
-    { title: 'Любое изменение заметно', sub: 'Криптографическая печать на каждом выезде' },
+    { title: 'Любое изменение заметно', sub: 'Криптографическая печать на каждом отчёте' },
     { title: 'Реальная GPS-отметка', sub: 'Место и время фиксируются на объекте' },
     { title: 'Независимая проверка', sub: 'Клиент проверяет без аккаунта' },
   ], sectors: 'Уборка · Строительство · Охрана · Монтаж · Обслуживание · ОВК' },
@@ -80,7 +80,7 @@ export default function TrustBar({ locale }: { locale: string }) {
   return (
     <section
       ref={ref}
-      aria-label={locale === 'nl' ? 'Vertrouwenssignalen' : locale === 'fr' ? 'Points de confiance' : locale === 'es' ? 'Puntos de confianza' : locale === 'pt' ? 'Pontos de confiança' : locale === 'da' ? 'Tillidssignaler' : locale === 'sv' ? 'Förtroendesignaler' : locale === 'nb' ? 'Tillitssignaler' : 'Trust signals'}
+      aria-label={locale === 'nl' ? 'Vertrouwenssignalen' : locale === 'fr' ? 'Points de confiance' : locale === 'es' ? 'Puntos de confianza' : locale === 'pt' ? 'Pontos de confiança' : locale === 'da' ? 'Tillidssignaler' : locale === 'sv' ? 'Förtroendesignaler' : locale === 'nb' ? 'Tillitssignaler' : locale === 'ru' ? 'Сигналы доверия' : 'Trust signals'}
       className="r relative overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, #f7f9fc 0%, #f2f4f7 50%, #f7f9fc 100%)',

@@ -14,6 +14,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   nl: 'Regels en documentatie in Nederland',
   da: 'Regler og dokumentation i Danmark',
   nb: 'Regler og dokumentasjon i Norge',
+  ru: 'Нормативные требования и документация в России',
   sv: 'Regler och dokumentation i Sverige',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
@@ -133,6 +134,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Fluorholdige gasser og teknikerens sertifikater?',
       a: 'GeoTapp håndterer verken sertifikater for arbeid med fluorholdige gasser eller anleggenes serviceregistre. Det registrerer klokkeslett, posisjon, bilder og notater for hvert oppdrag på kjeler og varmeanlegg, som du kan legge ved anleggets dokumentasjon.',
+    },
+  ],
+  ru: [
+    {
+      q: 'Как учитывать часы и выезды в сантехническо-отопительной компании?',
+      a: 'GeoTapp фиксирует при каждой отметке приход, перерывы и уход с местоположением и временем, по каждому технику и наряду, и экспортирует их в Excel или CSV для бухгалтера по зарплате. Применение трудового законодательства (надбавки, нормы рабочего времени) и расчёт зарплаты остаются за бухгалтером и компанией.',
+    },
+    {
+      q: 'Геолокация техников: 152-ФЗ и согласие работника?',
+      a: 'Местоположение фиксируется только при отметке (приход, перерывы, уход) или при фотодоказательстве, никогда непрерывно, и работник подписывает уведомление в приложении перед первой отметкой. Правовое основание обработки персональных данных по 152-ФЗ и необходимость согласия или уведомления работника остаются на усмотрение работодателя.',
+    },
+    {
+      q: 'Допуски и аттестации на газовое и отопительное оборудование — это GeoTapp отслеживает?',
+      a: 'Нет. GeoTapp не ведёт учёт допусков, аттестаций техников или сертификатов на газовое и отопительное оборудование и не формирует связанные с ними документы. Он фиксирует время, местоположение, фото и заметки каждого выезда на котлы и системы отопления, которые можно приложить к документации объекта. Сами допуски и их учёт остаются за компанией.',
     },
   ],
   sv: [

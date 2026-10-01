@@ -55,7 +55,7 @@ const RISORSE_LABELS: Record<string, string> = {
   it: 'Guide e articoli →', en: 'Guides & articles →', de: 'Leitfäden & Artikel →',
   fr: 'Guides et articles →', es: 'Guías y artículos →', pt: 'Guias e artigos →',
   nl: 'Gidsen en artikelen →', da: 'Vejledninger og artikler →',
-  sv: 'Guider och artiklar →', nb: 'Guider & artikler →', ru: 'Руководства & статьи →',
+  sv: 'Guider och artiklar →', nb: 'Guider & artikler →', ru: 'Руководства и статьи →',
 };
 
 /** Tabella comparativa a 3 colonne (etichetta, comparatore, GeoTapp),
@@ -99,6 +99,7 @@ const CLASSIC_CLOCKIN: Record<string, string> = {
   da: 'Klassisk stemplings-app',
   sv: 'Klassisk stämplingsapp',
   nb: 'Klassisk stemplingsapp',
+  ru: 'Обычное приложение для отметки времени',
 };
 
 // Etichette dell'anteprima report che il dizionario danese non ha (senza, la pagina mostrerebbe l'italiano).
@@ -107,10 +108,14 @@ const MOCKUP_FALLBACK_DA = { operator: 'Medarbejder', opening: 'Start', closing:
 const MOCKUP_FALLBACK_SV = { operator: 'Medarbetare', opening: 'Start', closing: 'Slut' };
 // Idem per il norvegese (bokmal).
 const MOCKUP_FALLBACK_NB = { operator: 'Ansatt', opening: 'Start', closing: 'Slutt' };
+// Idem per il russo: ru.json non ha ancora queste chiavi in settore_layout, e senza
+// questo fallback la pagina russa mostrava "Operatore/Apertura/Chiusura" in italiano.
+const MOCKUP_FALLBACK_RU = { operator: 'Оператор', opening: 'Начало', closing: 'Окончание' };
 const mockupFallback = (locale: string, key: 'operator' | 'opening' | 'closing', it: string) =>
   locale === 'da' ? MOCKUP_FALLBACK_DA[key]
     : locale === 'sv' ? MOCKUP_FALLBACK_SV[key]
     : locale === 'nb' ? MOCKUP_FALLBACK_NB[key]
+    : locale === 'ru' ? MOCKUP_FALLBACK_RU[key]
     : it;
 
 export default function SettorePageLayout({ content, locale, settore, children }: Props) {
@@ -292,6 +297,10 @@ export default function SettorePageLayout({ content, locale, settore, children }
       { href: 'https://www.datatilsynet.no/personvern-pa-ulike-omrader/personvern-pa-arbeidsplassen/overvaking-kjoretoy/',
         label: 'Datatilsynet: overvåking av kjøretøy og GPS' },
     ],
+    // Russo: nessuna fonte normativa russa specifica e verificabile in produzione.
+    // Lista vuota = il blocco non esce, invece di linkare l'articolo inglese sull'ICO
+    // (che non ha alcuna rilevanza per un lettore russo/bielorusso/kazako).
+    ru: [],
   };
   // Le 6 locale che NON hanno articoli normative tradotti ricadono su EN.
   const normLinks = NORM_LINKS[locale]

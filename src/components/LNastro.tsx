@@ -21,6 +21,7 @@ const VOCI: Record<string, string[]> = {
   nb: ['POSISJON KUN VED STEMPLING', 'FORSEGLET RAPPORT', 'UAVHENGIG VERIFISERING', 'INGEN LØPENDE SPORING', 'DATA I EUROPA', 'VERIFISERING OGSÅ OFFLINE'],
   nl: ['LOCATIE ALLEEN BIJ DE REGISTRATIE', 'VERZEGELD RAPPORT', 'ONAFHANKELIJKE CONTROLE', 'GEEN DOORLOPENDE TRACKING', 'GEGEVENS IN EUROPA', 'CONTROLE OOK OFFLINE'],
   en: ['LOCATION ONLY AT CLOCK-IN', 'SEALED REPORT', 'INDEPENDENT VERIFICATION', 'NO CONTINUOUS TRACKING', 'DATA IN EUROPE', 'VERIFIES OFFLINE TOO'],
+  ru: ['МЕСТОПОЛОЖЕНИЕ ТОЛЬКО ПРИ ОТМЕТКЕ', 'ЗАПЕЧАТАННЫЙ ОТЧЁТ', 'НЕЗАВИСИМАЯ ПРОВЕРКА', 'БЕЗ НЕПРЕРЫВНОГО ОТСЛЕЖИВАНИЯ', 'ДАННЫЕ В ЕВРОПЕ', 'ПРОВЕРКА ТАКЖЕ ОФЛАЙН'],
 };
 
 const COLORI: Voce[1][] = ['', 'g', 'b', '', 'g', 'b'];

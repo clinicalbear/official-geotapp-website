@@ -280,13 +280,13 @@ const UI: Record<string, UIStrings> = {
   ru: {
     badge: 'Верификация работ на объекте',
     h1a: 'GPS-доказательства, фото и отчёты', h1b: 'проверяемые. На месте.',
-    sub: 'Подтверждайте каждое задание в реальном времени. Без карты, без сомнений, без споров.',
+    sub: 'Каждый выезд превращается в запечатанный отчёт, который клиент проверяет сам. Без бумаги, без сомнений.',
     ctaPrimary: 'Попробуйте GeoTapp бесплатно',
-    ctaPrimaryNote: 'Только email · Без карты · Готово за 30 секунд',
-    ctaSecondary: 'Заказать демо',
-    trust1: 'Проверенный GPS', trust2: 'Фото в реальном времени', trust3: 'Подписанные отчёты',
+    ctaPrimaryNote: 'Только email · Без карты · Готово за 2 минуты',
+    ctaSecondary: 'Напишите нам',
+    trust1: 'Геопозиция при отметке', trust2: 'Фото с отметкой времени', trust3: 'Запечатанные отчёты',
     sectorEyebrow: 'Для вашей отрасли', sectorTitle: 'Отраслевые решения',
-    sectorPulizie: 'Клининговые компании', sectorPulizieDesc: 'Учёт работ и смен',
+    sectorPulizie: 'Клининговые компании', sectorPulizieDesc: 'Выезды и смены задокументированы',
     sectorInstallatori: 'Монтажники и техники', sectorInstallatoriDesc: 'Проверяемые отчёты по каждому заданию',
     sectorSicurezza: 'Безопасность и охрана', sectorSicurezzaDesc: 'Обходы, посты и операционное подтверждение',
     sectorFallback: 'Другая отрасль? Попробуйте бесплатно →',
@@ -294,7 +294,7 @@ const UI: Record<string, UIStrings> = {
     blogLabel: 'Из блога', blogTitle: 'Материалы и статьи', blogAll: 'Все →', blogEmpty: 'Статьи скоро.',
     bottomEyebrow: 'Готовы начать?',
     bottomTitle: 'Попробуйте сегодня же на объекте',
-    bottomSub: 'Создайте аккаунт за 30 секунд · Без карты',
+    bottomSub: 'Создайте аккаунт за 2 минуты · Без карты',
     bottomCta: 'Начать бесплатно',
     quickLabel: 'Полезные ссылки',
     pricing: 'Цены и планы', contact: 'Связаться с нами', mainSite: 'На главный сайт',
@@ -453,7 +453,7 @@ const FEATURED: Record<string, { label: string; sub: string }> = {
   da: { label: 'Omtalt i AZ Big Media', sub: 'Michele Angelo Petraroli om workflow-automatisering: bevis frem for overvågning' },
   sv: { label: 'Omnämnda i AZ Big Media', sub: 'Michele Angelo Petraroli om automatisering av arbetsflöden: bevis före övervakning' },
   nb: { label: 'Omtalt i AZ Big Media', sub: 'Michele Angelo Petraroli om automatisering av arbeidsflyt: bevis fremfor overvåking' },
-  ru: { label: 'О нас пишет AZ Big Media', sub: 'Микеле об автоматизации процессов' },
+  ru: { label: 'О нас пишет AZ Big Media', sub: 'Микеле Анджело Петрароли об автоматизации процессов: подтверждение вместо слежки' },
 };
 
 export default function LinksClient({ articles, locale = 'it', variant = 'legacy' }: Props) {

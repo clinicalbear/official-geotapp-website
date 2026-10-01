@@ -2,8 +2,8 @@
  * Risolve un `TestoLoc` nella lingua della pagina.
  *
  * Catena di fallback: lingua richiesta -> inglese -> italiano. L'inglese fa da
- * lingua-ponte per le locale del sito senza traduzione propria (ru e
- * le varianti en-*), in modo coerente con i dizionari della cornice. Una `string`
+ * lingua-ponte solo per le varianti en-* (che usano comunque l'inglese come
+ * lingua reale), in modo coerente con i dizionari della cornice. Una `string`
  * semplice e' trattata come italiano (master).
  */
 
@@ -18,6 +18,7 @@ import { TESTI_PT } from './traduzioni-pt';
 import { TESTI_DA } from './traduzioni-da';
 import { TESTI_SV } from './traduzioni-sv';
 import { TESTI_NB } from './traduzioni-nb';
+import { TESTI_RU } from './traduzioni-ru';
 import { britishToVariant } from '@/lib/i18n/en-spelling';
 
 export function loc(testo: TestoLoc, locale: AppLocale): string {
@@ -27,8 +28,8 @@ export function loc(testo: TestoLoc, locale: AppLocale): string {
 
 function locFallback(testo: TestoLoc, locale: AppLocale): string {
   if (typeof testo === 'string') {
-    // Stringa semplice = italiano. Per le lingue inglesi, per il tedesco, per l'olandese, per il francese, per lo spagnolo, per il portoghese, per il danese, per lo svedese e per il norvegese i titoli
-    // delle fonti e i nomi dei contatti hanno la resa in ./traduzioni-en.ts, ./traduzioni-de.ts, ./traduzioni-nl.ts, ./traduzioni-fr.ts, ./traduzioni-es.ts, ./traduzioni-pt.ts, ./traduzioni-da.ts, ./traduzioni-sv.ts e ./traduzioni-nb.ts.
+    // Stringa semplice = italiano. Per le lingue inglesi, per il tedesco, per l'olandese, per il francese, per lo spagnolo, per il portoghese, per il danese, per lo svedese, per il norvegese e per il russo i titoli
+    // delle fonti e i nomi dei contatti hanno la resa in ./traduzioni-en.ts, ./traduzioni-de.ts, ./traduzioni-nl.ts, ./traduzioni-fr.ts, ./traduzioni-es.ts, ./traduzioni-pt.ts, ./traduzioni-da.ts, ./traduzioni-sv.ts, ./traduzioni-nb.ts e ./traduzioni-ru.ts.
     if (locale === 'de') return TESTI_DE[testo] ?? testo;
     if (locale === 'nl') return TESTI_NL[testo] ?? testo;
     if (locale === 'fr') return TESTI_FR[testo] ?? testo;
@@ -37,6 +38,7 @@ function locFallback(testo: TestoLoc, locale: AppLocale): string {
     if (locale === 'da') return TESTI_DA[testo] ?? testo;
     if (locale === 'sv') return TESTI_SV[testo] ?? testo;
     if (locale === 'nb') return TESTI_NB[testo] ?? testo;
+    if (locale === 'ru') return TESTI_RU[testo] ?? testo;
     return locale === 'en' || locale.startsWith('en-') ? (TESTI_EN[testo] ?? testo) : testo;
   }
   return testo[locale] ?? testo.en ?? testo.it;

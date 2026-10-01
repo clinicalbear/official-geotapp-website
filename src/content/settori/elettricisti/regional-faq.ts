@@ -15,6 +15,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   da: 'Regler og dokumentation i Danmark',
   nb: 'Regler og dokumentasjon i Norge',
   sv: 'Regler och dokumentation i Sverige',
+  ru: 'Нормы и документы в России',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -133,6 +134,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Autorisasjon og dokumentasjon av elektriske anlegg?',
       a: 'GeoTapp verifiserer verken autorisasjoner eller kvalifikasjoner og lager ingen installasjonsdokumentasjon. Det registrerer klokkeslett, posisjon og bilder av hvert oppdrag, som teknikeren kan legge ved sin egen dokumentasjon.',
+    },
+  ],
+  ru: [
+    {
+      q: 'Часы, дежурства и разъезды электриков?',
+      a: 'При каждой отметке GeoTapp фиксирует приход, перерывы и уход с местоположением и временем, по каждому электрику и по каждому объекту, и экспортирует данные в Excel или CSV для вашего бухгалтера или расчётчика зарплаты. Применение трудового договора или коллективного соглашения (надбавки, компенсации) и сам расчёт зарплаты остаются в ведении бухгалтера и компании.',
+    },
+    {
+      q: 'Геолокация электриков и защита персональных данных?',
+      a: 'Местоположение фиксируется только при отметке и при фотографиях-доказательствах, никогда непрерывно, а уведомление для сотрудников подписывается в приложении перед первой отметкой. Какие именно требования местного законодательства о персональных данных (например, 152-ФЗ в России или соответствующий закон в Беларуси и Казахстане) применимы в вашем случае, должна определить сама компания.',
+    },
+    {
+      q: 'Допуски электриков и сертификация электромонтажных работ?',
+      a: 'GeoTapp не проверяет группы допуска по электробезопасности и не выдаёт акты или сертификаты соответствия электромонтажных работ. Приложение фиксирует время, местоположение и фото каждого выезда, которые техник может приложить к собственной документации.',
     },
   ],
   sv: [

@@ -14,6 +14,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   nl: 'Regels en documentatie in Nederland',
   da: 'Regler og dokumentation i Danmark',
   nb: 'Regler og dokumentasjon i Norge',
+  ru: 'Нормативные требования и документация в России',
   sv: 'Regler och dokumentation i Sverige',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
@@ -133,6 +134,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Bytte av leverandør og minstelønnssatser?',
       a: 'GeoTapp håndterer verken overdragelse av ansatte ved bytte av leverandør eller minstelønnssatser. Det lagrer historikken over timer og tilstedeværelse for hver ansatt, som kan eksporteres til Excel eller CSV: anvendelsen av tariffavtalen forblir hos regnskapsføreren.',
+    },
+  ],
+  ru: [
+    {
+      q: 'Как учитывать часы и объекты клининговой компании?',
+      a: 'GeoTapp фиксирует при каждой отметке приход, перерывы и уход с местоположением и временем, по каждому сотруднику и объекту, и экспортирует их в Excel или CSV для бухгалтера по зарплате. Применение трудового законодательства (надбавки, нормы рабочего времени) и расчёт зарплаты остаются за бухгалтером и компанией.',
+    },
+    {
+      q: 'Геолокация сотрудников клининга: 152-ФЗ и согласие работника?',
+      a: 'Местоположение фиксируется только при отметке (приход, перерывы, уход) или при фотодоказательстве, никогда непрерывно, и работник подписывает уведомление в приложении перед первой отметкой. Правовое основание обработки персональных данных по 152-ФЗ и необходимость согласия или уведомления работника остаются на усмотрение работодателя.',
+    },
+    {
+      q: 'СанПиН и профстандарт уборщика — это GeoTapp отслеживает?',
+      a: 'Нет. GeoTapp не ведёт учёт соответствия СанПиН, профстандарту уборщика или других отраслевых сертификатов и не формирует связанные с ними документы. Он фиксирует время, местоположение и фото каждой уборки, которые можно приложить к собственной документации компании. Сами сертификаты и их учёт остаются за компанией.',
     },
   ],
   sv: [

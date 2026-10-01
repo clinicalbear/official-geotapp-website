@@ -42,7 +42,7 @@ const DIFF_COPY: Record<string, { h2_1: string; h2_2: string; desc: string; link
   da: { h2_1: 'Stempelapps registrerer timerne.', h2_2: 'GeoTapp giver dig også beviset.', desc: 'Stempling med GPS, kunder, hold: det gør vi også. Forskellen ses, når kunden bestrider noget: med et Excel-ark skal du forklare dig, med GeoTapp viser du en forseglet rapport, som enhver kan verificere, og hvor enhver senere ændring kan opdages.', link: 'Se forskellen' },
   sv: { h2_1: 'Stämpelappar registrerar timmarna.', h2_2: 'GeoTapp ger dig också beviset.', desc: 'Stämpling med GPS, kunder, team: det gör vi också. Skillnaden syns när kunden ifrågasätter något: med ett Excel-blad måste du förklara dig, med GeoTapp visar du en förseglad rapport som vem som helst kan kontrollera och där varje senare ändring går att upptäcka.', link: 'Se skillnaden' },
   nb: { h2_1: 'Stemple-apper registrerer timene.', h2_2: 'GeoTapp gir deg også beviset.', desc: 'Stempling med GPS, kunder, team: det gjør vi også. Forskjellen ser du når kunden bestrider noe: med et Excel-ark må du forklare deg, med GeoTapp viser du en forseglet rapport som alle kan kontrollere, og der enhver senere endring kan oppdages.', link: 'Se forskjellen' },
-  ru: { h2_1: 'Всё, что делают они, делаем и мы.', h2_2: 'Но то, что делаем мы, они не могут.', desc: 'GPS-трекинг, CRM, управление командами: да, всё это мы делаем. Но когда клиент оспаривает вашу работу, другие оставляют вас одного. Мы даём вам запечатанный отчёт, в котором любое изменение обнаруживается, и это завершает спор.', link: 'Увидеть разницу' },
+  ru: { h2_1: 'Приложения для учёта времени фиксируют часы.', h2_2: 'GeoTapp даёт вам ещё и доказательство.', desc: 'Отметка с местоположением, клиенты, команды: это умеем и мы. Разница видна, когда клиент оспаривает работу: с таблицей Excel приходится объяснять, а с GeoTapp вы показываете запечатанный отчёт, который может проверить кто угодно и в котором любое последующее изменение обнаруживается.', link: 'Увидеть разницу' },
 };
 
 /** Testi nuovi introdotti dal mockup (apertura + occhielli + conto). */
@@ -72,7 +72,7 @@ const L_COPY: Record<string, LCopy> = {
 /** Evidenzia una parte del titolo in verde GeoTapp (per pannello). */
 const EV_WORD: Record<string, string> = {
   it: 'fidino', en: 'trust', de: 'vertrauen', fr: 'confiance', es: 'conf\u00eden',
-  pt: 'confiem', nl: 'vertrouwen', da: 'stoler', sv: 'litar', nb: 'stoler', ru: '\u0432\u0435\u0440\u0438\u043b\u0438',
+  pt: 'confiem', nl: 'vertrouwen', da: 'stoler', sv: 'litar', nb: 'stoler', ru: '\u0434\u043e\u0432\u0435\u0440\u044f\u043b\u0438',
 };
 function evidenzia(title: string, mode: 'ultima' | 'seconda-frase' | 'parola', locale?: string) {
   if (mode === 'ultima') {

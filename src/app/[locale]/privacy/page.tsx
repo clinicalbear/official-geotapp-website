@@ -15,7 +15,7 @@ const META: Record<string, { title: string; description: string; pageTitle: stri
   da: { title: 'Privatlivspolitik | GeoTapp', description: 'Hvordan GeoTapp indsamler, bruger og beskytter personoplysninger: hvad der registreres, hvor længe, hvor dataene opbevares, og hvilke rettigheder du har efter GDPR.', pageTitle: 'Privatlivspolitik', subtitle: 'Version 1.3 - 30. september 2026' },
   nb: { title: 'Personvernerklæring | GeoTapp', description: 'Hvordan GeoTapp samler inn, bruker og beskytter personopplysninger: hva som registreres, hvor lenge, hvor dataene ligger, og hvilke rettigheter du har etter GDPR.', pageTitle: 'Personvernerklæring', subtitle: 'Versjon 1.3 - 30. september 2026' },
   sv: { title: 'Integritetspolicy | GeoTapp', description: 'Hur GeoTapp samlar in, använder och skyddar personuppgifter: vad som registreras, hur länge, var uppgifterna finns och vilka rättigheter du har enligt GDPR.', pageTitle: 'Integritetspolicy', subtitle: 'Version 1.3 - 30 september 2026' },
-  ru: { title: 'Политика конфиденциальности | GeoTapp', description: 'Политика конфиденциальности GeoTapp: как мы собираем, используем и защищаем ваши персональные данные в соответствии с GDPR.', pageTitle: 'Политика конфиденциальности', subtitle: 'Версия 1.2 - 3 сентября 2026 г.' },
+  ru: { title: 'Политика конфиденциальности | GeoTapp', description: 'Как GeoTapp собирает, использует и защищает персональные данные: что фиксируется, как долго, где хранятся данные и какие у вас права по GDPR.', pageTitle: 'Политика конфиденциальности', subtitle: 'Версия 1.3 - 30 сентября 2026' },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

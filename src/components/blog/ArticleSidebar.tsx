@@ -115,7 +115,7 @@ function ShareButtons({ title, copiedLabel, locale }: { title: string; copiedLab
       ))}
       <button
         onClick={handleCopy}
-        aria-label={locale === 'nl' ? 'Link kopiëren' : locale === 'fr' ? 'Copier le lien' : locale === 'es' ? 'Copiar enlace' : locale === 'pt' ? 'Copiar ligação' : locale === 'da' ? 'Kopiér link' : locale === 'nb' ? 'Kopier lenke' : locale === 'sv' ? 'Kopiera länk' : 'Copy link'}
+        aria-label={locale === 'nl' ? 'Link kopiëren' : locale === 'fr' ? 'Copier le lien' : locale === 'es' ? 'Copiar enlace' : locale === 'pt' ? 'Copiar ligação' : locale === 'da' ? 'Kopiér link' : locale === 'nb' ? 'Kopier lenke' : locale === 'sv' ? 'Kopiera länk' : locale === 'ru' ? 'Скопировать ссылку' : 'Copy link'}
         className={`p-2 rounded-lg transition-all duration-200 ${copied ? 'text-green-500 bg-green-50' : 'text-slate-400 hover:bg-slate-50'}`}
         onMouseEnter={(e) => { if (!copied) e.currentTarget.style.color = '#22B573'; }}
         onMouseLeave={(e) => { if (!copied) e.currentTarget.style.color = ''; }}

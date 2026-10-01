@@ -15,6 +15,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   da: 'Regler og dokumentation i Danmark',
   nb: 'Regler og dokumentasjon i Norge',
   sv: 'Regler och dokumentation i Sverige',
+  ru: 'Нормативные требования и документация',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -147,6 +148,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Behörigheter och dokumentation av installationen?',
       a: 'GeoTapp kontrollerar inga behörigheter och skapar ingen installationsdokumentation eller intyg. Det registrerar tid, position, foton och anteckningar för varje uppdrag, som du kan foga till anläggningens dokumentation.',
+    },
+  ],
+  ru: [
+    {
+      q: 'Учёт часов и экспорт данных для бухгалтерии?',
+      a: 'GeoTapp фиксирует при каждой отметке приход, перерывы и уход с позицией и временем, по технику и по заказу, и экспортирует их в Excel или CSV для вашего бухгалтера. Применение трудового законодательства (доплаты, компенсации) и расчёт зарплаты остаются на стороне компании и её бухгалтера.',
+    },
+    {
+      q: 'Геолокация техников: согласие сотрудников и защита данных?',
+      a: 'Позиция фиксируется только при отметке и при доказательных фото, никогда непрерывно, а уведомление для сотрудников подписывается в приложении перед первой отметкой. Какая правовая основа и какое согласие требуются в вашей стране — решает работодатель, опираясь на местное законодательство о защите данных.',
+    },
+    {
+      q: 'Квалификация и допуски монтажников?',
+      a: 'GeoTapp не проверяет квалификации, допуски или аттестации монтажников и не выдаёт сертификаты соответствия. Он фиксирует время, позицию, фото и заметки каждого выезда, которые можно приложить к собственной документации по объекту.',
     },
   ],
   'en-us': [

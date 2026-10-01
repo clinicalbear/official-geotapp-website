@@ -62,9 +62,9 @@ const META: Record<string, { title: string; description: string }> = {
       'Posisjon bare ved stempling, falske posisjoner avvises, stemplinger lagres også uten dekning, forseglede rapporter som kunden selv kontrollerer, data i Europa.',
   },
   ru: {
-    title: 'Функции GeoTapp: отметка по GPS, офлайн-режим, шифрование',
+    title: 'Функции GeoTapp: GPS-отметка и запечатанные отчёты',
     description:
-      'Отметка начала и конца смены по GPS с проверкой геозоны и защитой от подмены, офлайн-режим с синхронизацией, шифрование AES-256 и данные в реальном времени.',
+      'GPS-позиция фиксируется только при отметке, ложные координаты отклоняются, отметки сохраняются даже без сети, запечатанные отчёты клиент проверяет сам, данные хранятся в Европе.',
   },
 };
 

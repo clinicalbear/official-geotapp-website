@@ -15,7 +15,7 @@ const TERMS_META: Record<string, { title: string; description: string; pageTitle
   da: { title: 'Servicevilkår | GeoTapp', description: 'GeoTapps generelle servicevilkår: priser, mindste varighed på 12 måneder, tilladt brug, kryptering, ansvar og rettigheder.', pageTitle: 'Servicevilkår', subtitle: 'Version 1.6 - 30. september 2026' },
   sv: { title: 'Användarvillkor | GeoTapp', description: 'GeoTapps allmänna servicevillkor: priser, minsta avtalstid på 12 månader, tillåten användning, kryptering, ansvar och rättigheter.', pageTitle: 'Användarvillkor', subtitle: 'Version 1.6 - 30 september 2026' },
   nb: { title: 'Bruksvilkår | GeoTapp', description: 'GeoTapps generelle tjenestevilkår: priser, minste varighet på 12 måneder, tillatt bruk, kryptering, ansvar og rettigheter.', pageTitle: 'Bruksvilkår', subtitle: 'Versjon 1.6 - 30. september 2026' },
-  ru: { title: 'Условия использования | GeoTapp', description: 'Общие условия обслуживания GeoTapp: использование платформы, подписки, ответственность и права пользователей.', pageTitle: 'Условия использования', subtitle: 'Версия 1.5 - сентябрь 2026 г.' },
+  ru: { title: 'Условия использования | GeoTapp', description: 'Условия использования GeoTapp: цены, минимальный срок 12 месяцев, разрешённое использование, шифрование, ответственность и права.', pageTitle: 'Условия использования', subtitle: 'Версия 1.6 - 30 сентября 2026' },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

@@ -15,6 +15,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   da: 'Regler og dokumentation i Danmark',
   nb: 'Regler og dokumentasjon i Norge',
   sv: 'Regler och dokumentation i Sverige',
+  ru: 'Нормы и документация',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -147,6 +148,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Godkännanden och tillstånd?',
       a: 'GeoTapp hanterar varken väktares godkännanden eller ärenden hos myndigheterna. Det registrerar vem som har stämplat, var och när på varje uppdrag, och den historiken kan du visa kunden.',
+    },
+  ],
+  ru: [
+    {
+      q: 'Смены и часы для охранных предприятий?',
+      a: 'GeoTapp фиксирует при каждой отметке приход, перерывы и уход по каждому охраннику и посту, с позицией и временем, и выгружает их в Excel или CSV для вашего бухгалтера по зарплате. Ночные и праздничные надбавки и применение трудового законодательства остаются на стороне бухгалтера и компании.',
+    },
+    {
+      q: 'Геолокация охранников: GDPR и местные нормы защиты данных?',
+      a: 'Позиция фиксируется только при отметке и при фото-подтверждениях, никогда непрерывно, а уведомление для сотрудников подписывается в приложении до первой отметки. Компания сама проверяет, что именно требуют в её случае GDPR (законный интерес) и местное законодательство о защите данных.',
+    },
+    {
+      q: 'Лицензии и допуски охранников?',
+      a: 'GeoTapp не ведёт лицензии, удостоверения охранника и не занимается обращениями в контролирующие органы. Система фиксирует, кто, где и когда отметился по каждому посту, и эту историю можно показать заказчику.',
     },
   ],
   'en-us': [

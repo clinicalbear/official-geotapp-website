@@ -26,7 +26,7 @@ const flowMeta: Record<string, { title: string; description: string }> = {
   sv: { title: 'GeoTapp Flow: styrning av uppdrag och team', description: 'Kontorets webbapp för företag med tekniker på fältet: kunder, uppdrag, team, arbetspass, fakturor och förseglade rapporter som kunden själv kan kontrollera.' },
   da: { title: 'GeoTapp Flow - Styring af opgaver og hold i marken', description: 'Kontorets webapp til virksomheder med teknikere i marken: kunder, opgaver, hold, vagter, fakturaer og forseglede rapporter, som kunden selv kan verificere.' },
   nb: { title: 'GeoTapp Flow: styring av oppdrag og team i felt', description: 'Kontorets nettapp for bedrifter med teknikere i felt: kunder, oppdrag, team, vakter, fakturaer og forseglede rapporter som kunden selv kan kontrollere.' },
-  ru: { title: 'GeoTapp Flow, Оперативное Управление Интервенциями', description: 'GeoTapp Flow, операционная система для компаний с выездными техниками. Управляйте заказами, назначайте задачи и формируйте проверяемые отчёты.' },
+  ru: { title: 'GeoTapp Flow - управление заказами и бригадами на выезде', description: 'Веб-приложение для офиса компаний с выездными техниками: клиенты, заказы, бригады, смены, счета и запечатанные отчёты, которые клиент проверяет сам.' },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -194,6 +194,20 @@ const FLOW_FAQ: Record<string, object> = {
       { '@type': 'Question', name: 'Hur tilldelar jag uppdrag till team i GeoTapp Flow?', acceptedAnswer: { '@type': 'Answer', text: 'Du skapar uppdraget från kontoret och tilldelar teknikern eller teamet, och medarbetaren hittar det i appen TimeTracker. När uppdraget är avslutat kommer rapporten tillbaka i Flow, redan verifierbar, utan att du behöver jaga någon för att höra hur det gick.' } },
     ],
   },
+  ru: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Что такое GeoTapp Flow?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp Flow — это веб-приложение для офиса компаний с выездными техниками. Оно позволяет создавать заказы, назначать задачи, следить за выполнением и отправлять клиенту запечатанные отчёты, которые он может проверить сам.' } },
+      { '@type': 'Question', name: 'Что происходит, если нет связи?', acceptedAnswer: { '@type': 'Answer', text: 'Flow, панель офиса, работает в браузере и требует подключения к интернету. В TimeTracker, приложении техников, если нет связи, отметка остаётся сохранённой на телефоне и отправляется сама, когда связь возвращается, с тем временем, в которое она была сделана.' } },
+      { '@type': 'Question', name: 'GeoTapp Flow интегрируется с другими системами управления?', acceptedAnswer: { '@type': 'Answer', text: 'Да: Flow экспортирует данные для выставления счетов и расчёта зарплаты и подключается к Fatture in Cloud. Для других систем управления интеграция рассматривается по запросу.' } },
+      { '@type': 'Question', name: 'Сколько техников может обслуживать GeoTapp Flow?', acceptedAnswer: { '@type': 'Answer', text: 'От тарифа Solo с одним пользователем в офисе до тарифа Business с неограниченным числом бригад на нескольких объектах. Места TimeTracker для операторов добавляются отдельно, в зависимости от тарифа.' } },
+      { '@type': 'Question', name: 'Может ли клиент доверять отчётам, созданным Flow?', acceptedAnswer: { '@type': 'Answer', text: 'Ему не нужно доверять: он может проверить. Отчёты GeoTapp запечатаны криптографически, и клиент проверяет их целостность сам с помощью GeoTapp Verifier, без доступа к вашему аккаунту. Проверка показывает, был ли документ изменён; сама по себе она не является абсолютным доказательством факта и не заменяет юридическую консультацию.' } },
+      { '@type': 'Question', name: 'Показывает ли GeoTapp Flow местоположение техников в режиме реального времени?', acceptedAnswer: { '@type': 'Answer', text: 'Нет, и это не случайность. Местоположение фиксируется только когда техник делает отметку (начало, перерывы, конец смены) или делает фото-доказательство, никогда непрерывно: Flow сообщает вам, что работа началась в нужном месте и в нужное время, а не заставляет вас весь день следить за точкой на карте. Это разница между доказательством работы и слежкой.' } },
+      { '@type': 'Question', name: 'Для каких компаний создан GeoTapp Flow?', acceptedAnswer: { '@type': 'Answer', text: 'Для тех, чьи бригады работают вне офиса: клининговые компании, охрана, обслуживание, монтажники, электрики, сантехники и многопрофильные компании. Если ваши сотрудники проводят день на объекте, а не в офисе, Flow создан именно для этого.' } },
+      { '@type': 'Question', name: 'Как назначить заказы бригадам в GeoTapp Flow?', acceptedAnswer: { '@type': 'Answer', text: 'Вы создаёте заказ в офисе, назначаете техника или бригаду, и сотрудник находит его в приложении TimeTracker. После завершения работ отчёт возвращается в Flow, уже готовый к проверке, и вам не нужно никого искать, чтобы узнать, как всё прошло.' } },
+    ],
+  },
 };
 
 const FLOW_DESCRIPTION: Record<string, string> = {
@@ -207,7 +221,7 @@ const FLOW_DESCRIPTION: Record<string, string> = {
   da: 'GeoTapp Flow er kontorets webapp til virksomheder med teknikere i marken: opret opgaver, tildel arbejde, følg fremdriften og send kunden forseglede rapporter, som kunden selv kan verificere.',
   sv: 'GeoTapp Flow är kontorets webbapp för företag med tekniker på fältet: skapa uppdrag, tilldela arbete, följ framstegen och skicka kunden förseglade rapporter som kunden själv kan kontrollera.',
   nb: 'GeoTapp Flow er kontorets nettapp for bedrifter med teknikere i felt: opprett oppdrag, tildel arbeid, følg framdriften og send kunden forseglede rapporter som kunden selv kan kontrollere.',
-  ru: 'GeoTapp Flow, операционная платформа управления для компаний с выездными техниками: создавайте заказы, назначайте задачи, отслеживайте прогресс и формируйте запечатанные проверяемые отчёты в реальном времени.',
+  ru: 'GeoTapp Flow — операционная платформа для компаний с выездными техниками: создавайте заказы, назначайте задачи, отслеживайте прогресс и формируйте запечатанные отчёты, которые клиент может проверить сам.',
 };
 
 const FLOW_FEATURES: Record<string, string[]> = {
@@ -310,6 +324,16 @@ const FLOW_FEATURES: Record<string, string[]> = {
     'Inbyggd koppling till GeoTapp TimeTracker och Verifier',
     'Dataexport för fakturering och löneunderlag',
     'GPS-information som bekräftas som läst i appen före första stämplingen',
+  ],
+  ru: [
+    'Управление заказами и работами на нескольких объектах',
+    'Назначение задач техникам на выезде',
+    'Пошаговое отслеживание хода работ',
+    'Криптографически запечатанные и независимо проверяемые отчёты',
+    'Фотодоказательства с указанием времени и местоположения',
+    'Встроенная интеграция с GeoTapp TimeTracker и Verifier',
+    'Экспорт данных для выставления счетов и расчёта зарплаты',
+    'Уведомление о GPS, подтверждаемое в приложении перед первой отметкой',
   ],
 };
 

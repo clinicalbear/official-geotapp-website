@@ -23,7 +23,7 @@ const META: Record<string, { title: string; description: string }> = {
   da: { title: 'GeoTapp vs Connecteam - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: hvilken skal du vælge til medarbejdere i marken? Sammenligning af dokumentation, position ved stempling og forseglede rapporter.' },
   sv: { title: 'GeoTapp vs Connecteam - Jämförelse 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: vilket ska du välja för fältserviceföretag? Jämförelse av arbetsbevis, position vid instämpling, förseglade rapporter och kundens verifiering.' },
   nb: { title: 'GeoTapp vs Connecteam - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: hvilken bør du velge for ansatte ute i felt? Sammenligning av dokumentasjon, posisjon ved stempling og forseglede rapporter.' },
-  ru: { title: 'GeoTapp vs Connecteam, Сравнение 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: что выбрать для компаний с выездными сотрудниками? Полное сравнение по доказательствам работы, проверенному GPS, опечатанным отчётам и опечатыванию выездов.' },
+  ru: { title: 'GeoTapp vs Connecteam - Сравнение 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: что выбрать для компаний с выездными сотрудниками? Сравнение по доказательству работы, местоположению при отметке, запечатанным отчётам и проверке со стороны заказчика.' },
 };
 
 type FaqItem = { q: string; a: string };
@@ -90,9 +90,9 @@ const FAQ: Record<string, FaqItem[]> = {
     { q: 'Kan jeg bruke GeoTapp sammen med Connecteam?', a: 'Ja. GeoTapp konsentrerer seg om dokumentasjon av oppdragene; Connecteam kan fortsette å styre intern kommunikasjon og planlegging. De to verktøyene løser ulike problemer.' },
   ],
   ru: [
-    { q: 'В чём главная разница между GeoTapp и Connecteam?', a: 'Connecteam, это инструмент для коммуникации и управления персоналом. GeoTapp, это система опечатывания работы: она создаёт опечатанные отчёты с проверенным GPS и фотодоказательствами, которые заказчик может проверить сам, без доступа к вашему аккаунту.' },
-    { q: 'Есть ли в Connecteam проверка GPS?', a: 'Connecteam записывает GPS-позицию, но данные не опечатаны криптографически и не проверяемы третьими сторонами. GeoTapp создаёт отчёты с криптографическим хешем: заказчик может убедиться, что данные не изменялись после закрытия выезда.' },
-    { q: 'GeoTapp или Connecteam для клининговых и facility-management компаний?', a: 'GeoTapp создан специально для отраслей, где доказательство выполненной работы критично (клининг, обслуживание, facility). Проверяемые отчёты GeoTapp разрешают претензии мгновенно, функция, которой нет в Connecteam.' },
+    { q: 'В чём главная разница между GeoTapp и Connecteam?', a: 'Connecteam — это инструмент для коммуникации и управления персоналом. GeoTapp — это система проверяемого доказательства работы: она создаёт запечатанные отчёты с местоположением, временем и фотодоказательствами, которые заказчик может проверить сам, без доступа к вашему аккаунту.' },
+    { q: 'Запечатывает ли Connecteam местоположение?', a: 'Connecteam записывает GPS-позицию, но данные не попадают в запечатанный отчёт, проверяемый третьими сторонами. GeoTapp создаёт отчёты с криптографическим хешем: заказчик может убедиться, что данные не изменялись после закрытия выезда.' },
+    { q: 'GeoTapp или Connecteam для клининговых и facility-management компаний?', a: 'GeoTapp создан специально для отраслей, где доказательство выполненной работы критично (клининг, обслуживание, facility). Когда приходит претензия, GeoTapp даёт вам запечатанный отчёт, который заказчик проверяет сам: функция, которой нет в Connecteam.' },
     { q: 'Можно ли использовать GeoTapp вместе с Connecteam?', a: 'Да. GeoTapp сосредоточен на опечатывании выездов и создании проверяемых доказательств; Connecteam может и дальше заниматься внутренней коммуникацией и планированием. Эти два инструмента решают разные задачи.' },
   ],
 };
@@ -109,7 +109,7 @@ const ROWS_LABELS: Record<string, string[]> = {
   da: ['Position ved stempling, forseglet i rapporten','Rapport med kryptografisk hash, enhver ændring kan opdages','Uafhængig verificering af kunden','Bevisfotos knyttet til GPS og tidsstempel','Basal fremmøderegistrering','Mobilapp Android/iOS','Dashboard til teamstyring','Egen intern beskedfunktion','Position registreres kun ved stempling, aldrig løbende','GPS-information underskrevet i appen, før man stempler*'],
   sv: ['Position vid instämpling, förseglad i rapporten','Rapport med kryptografisk hash, varje ändring går att upptäcka','Oberoende verifiering av kunden','Bevisfoton kopplade till GPS och tidsstämpel','Enkel närvaroregistrering','Mobilapp för Android/iOS','Instrumentpanel för teamhantering','Inbyggd meddelandefunktion','Positionen registreras bara vid instämpling, aldrig löpande','GPS-information signerad i appen innan man stämplar in*'],
   nb: ['Posisjon ved stempling, forseglet i rapporten','Rapport med kryptografisk hash, enhver endring kan oppdages','Uavhengig verifisering fra kunden','Bevisbilder knyttet til GPS og tidsstempel','Enkel oppmøteregistrering','Mobilapp Android/iOS','Dashbord for teamstyring','Egen intern meldingsfunksjon','Posisjon registreres bare ved stempling, aldri løpende','GPS-informasjon signert i appen før man stempler*'],
-  ru: ['Проверенный и опечатанный GPS','Отчёты с криптографическим хешем, любое изменение заметно','Независимая проверка заказчиком','Фотодоказательства, привязанные к GPS и метке времени','Базовый учёт присутствия','Мобильное приложение Android/iOS','Панель управления командой','Встроенный обмен сообщениями','Геолокация в соответствии с GDPR','Автоматическое уведомление о GPS с цифровой подписью*'],
+  ru: ['Местоположение при отметке, запечатанное в отчёте','Отчёты с криптографическим хешем, любое изменение заметно','Независимая проверка заказчиком','Фотодоказательства, привязанные к GPS и метке времени','Базовый учёт присутствия','Мобильное приложение Android/iOS','Панель управления командой','Встроенный обмен сообщениями','Местоположение фиксируется только при отметке, никогда не отслеживается непрерывно','Уведомление о GPS, подписанное в приложении перед отметкой*'],
 };
 
 const ROWS_GEO =  [true,true,true,true,true,true,true,true,true,true];
@@ -284,16 +284,16 @@ const T: Record<string, Copy> = {
     badge: 'Сравнение приложений', h1sub: 'что выбрать для вашей отрасли?',
     desc: 'Connecteam управляет коммуникацией команды. GeoTapp запечатывает выполненную работу проверяемыми доказательствами. Это разные инструменты, вот почему.',
     summary: 'Коротко:',
-    summaryText: 'Если вам нужно показать клиенту проверяемые доказательства работы, проверяемыми GPS-доказательствами, отчётами, в которых любое изменение заметно, и фотографиями с меткой времени - GeoTapp подходящий инструмент. Connecteam не создаёт проверяемых доказательств: это инструмент для коммуникации и планирования, а не платформа для опечатывания.',
-    features: 'Сравнение ключевых функций', feat: 'Функция', diff: 'Разница, которая важна: проверяемые доказательства vs коммуникация',
-    geo: ['Каждый выезд создаёт опечатанный отчёт с GPS и фото','Заказчик сам проверяет подлинность отчёта','Данные подписаны криптографически, любое изменение заметно','Создан, чтобы разрешать претензии надёжными доказательствами','Соответствие GDPR для геолокации сотрудников'],
-    comp: ['Отлично для внутренней коммуникации и сообщений команды','Записывает присутствие, но без криптографической печати','Данные нельзя независимо проверить третьим сторонам','Ориентирован на планирование и управление персоналом','Не создаёт надёжных доказательств при споре'],
-    footnote: '* По закону (GDPR ст. 13) каждый сотрудник должен подписать уведомление о конфиденциальности перед геолокацией. Большинство GPS-программ это не обеспечивают: юридический риск остаётся на работодателе. GeoTapp автоматически создаёт персональное уведомление, даёт сотруднику подписать его цифровой подписью и блокирует доступ к GPS, пока оно не подписано. Ни одна другая программа на рынке этого не делает.',
+    summaryText: 'Если вам нужно показать клиенту доказательства работы — с местоположением и временем каждой отметки, фото-подтверждениями и отчётом, в котором любое последующее изменение заметно, — GeoTapp подходящий инструмент. Connecteam создан для коммуникации и смен, а не для создания проверяемых доказательств.',
+    features: 'Сравнение ключевых функций', feat: 'Функция', diff: 'Разница, которая важна: проверяемые доказательства или коммуникация',
+    geo: ['Каждый выезд создаёт запечатанный отчёт с местоположением и фото','Заказчик сам проверяет, что отчёт не был изменён','Отчёт запечатан криптографически: любое последующее изменение заметно','Создан, чтобы дать доказательство, когда кто-то оспаривает работу','Местоположение фиксируется только при отметке, никогда не отслеживается непрерывно'],
+    comp: ['Отлично для внутренней коммуникации и сообщений команды','Записывает присутствие, но без криптографической печати','Данные нельзя независимо проверить третьим сторонам','Ориентирован на планирование и управление персоналом','Нет запечатанного отчёта, который можно показать заказчику'],
+    footnote: '* По закону (ст. 13 GDPR и, в Италии, ст. 4 Статута трудящихся) каждый сотрудник должен быть проинформирован, прежде чем за ним начнут следить по GPS. Если программа оставляет этот шаг на усмотрение работодателя, риск остаётся на нём. GeoTapp готовит персональное уведомление, даёт сотруднику подписать его в приложении для подтверждения ознакомления и не позволяет отмечаться, пока оно не подписано.',
     whenTitle: 'Когда выбирать GeoTapp',
     when: ['Вы управляете клининговой, facility-management или мультисервисной компанией','Ваши клиенты оспаривают выполнение выездов','Вам нужны геопривязанные фотодоказательства для каждого выезда','Вы подлежите трудовым проверкам или договорным аудитам','Вам нужны отчёты, которые заказчик может проверить сам'],
     cta: 'Хотите увидеть GeoTapp в действии?',
-    ctaDesc: 'Покажем, как выезд превращается в проверяемое доказательство, за 20 минут, без обязательств.',
-    ctaBtn: 'Начните бесплатно!',
+    ctaDesc: 'Попробуйте на реальной работе: 14 дней бесплатно, без банковской карты.',
+    ctaBtn: 'Начать бесплатную пробную версию',
   },
 };
 

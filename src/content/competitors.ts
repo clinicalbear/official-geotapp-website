@@ -161,7 +161,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     da: 'Styring af opgaver på flere lokationer',
     sv: 'Hantering av uppdrag på flera platser',
     nb: 'Styring av oppdrag på flere steder',
-    ru: 'Управление мультисайтовыми работами',
+    ru: 'Управление заказами на нескольких объектах',
   },
   gdpr_geo_compliance: {
     it: 'Posizione solo alla timbratura, mai in continuo',
@@ -174,7 +174,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     da: 'Position kun ved stempling, aldrig løbende',
     sv: 'Position bara vid instämpling, aldrig löpande',
     nb: 'Posisjon bare ved stempling, aldri løpende',
-    ru: 'GDPR-совместимая геолокация',
+    ru: 'Позиция фиксируется только при отметке, никогда непрерывно',
   },
   auto_gps_notice_signed: {
     it: 'Informativa GPS firmata nell\'app prima di timbrare',
@@ -187,7 +187,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     da: 'GPS-information underskrevet i appen, før man stempler',
     sv: 'GPS-information signerad i appen innan man stämplar in',
     nb: 'GPS-informasjon signert i appen før man stempler',
-    ru: 'Авто GPS-уведомление с подписью',
+    ru: 'Уведомление о GPS, подписанное в приложении перед отметкой',
   },
 };
 
@@ -240,6 +240,7 @@ export const COMPETITORS: Competitor[] = [
       da: 'Kommunikation, personalestyring og stempling i én app til dem, der arbejder udenfor kontoret. Meget udbredt i USA.',
       sv: 'Kommunikation, personalhantering och instämpling i en app för dem som arbetar utanför kontoret. Mycket utbredd i USA.',
       nb: 'Kommunikasjon, personaladministrasjon og stempling i én app for dem som jobber utenfor kontoret. Svært utbredt i USA.',
+      ru: 'Коммуникация, управление персоналом и учёт времени в одном приложении для тех, кто работает не за столом в офисе. Широко распространено в США.',
     },
     features: {
       gps_verified_at_site: false,
@@ -272,6 +273,7 @@ export const COMPETITORS: Competitor[] = [
       da: 'Tidsregistrering med skærmbilleder og overvågning af aktiviteten. Lavet til fjernteams ved computeren, ikke til arbejde i marken.',
       sv: 'Tidrapportering med skärmdumpar och aktivitetsövervakning. Byggt för distansteam vid en dator, inte för fältarbete.',
       nb: 'Tidsregistrering med skjermbilder og aktivitetsovervåking. Laget for fjernteam ved en datamaskin, ikke for arbeid ute i felt.',
+      ru: 'Учёт времени со скриншотами и мониторингом активности. Создано для удалённых команд за компьютером, а не для работы в поле.',
     },
     features: {
       gps_verified_at_site: false,
@@ -304,6 +306,7 @@ export const COMPETITORS: Competitor[] = [
       da: 'Gratis og ubegrænset tidsregistrering. Fremragende til freelancere og kontorer, mindre egnet til arbejde i marken.',
       sv: 'Gratis, obegränsad tidrapportering. Utmärkt för frilansare och kontor, mindre lämplig för fältarbete.',
       nb: 'Gratis og ubegrenset tidsregistrering. Utmerket for frilansere og kontorer, mindre egnet for arbeid ute i felt.',
+      ru: 'Бесплатный и неограниченный учёт времени. Отлично подходит фрилансерам и офисам, плохо — для выездной работы.',
     },
     features: {
       gps_verified_at_site: false,
@@ -336,6 +339,7 @@ export const COMPETITORS: Competitor[] = [
       da: 'Fremmøde med ansigtsgenkendelse og basis-GPS. Generøs gratis plan, men intet bevis for det udførte arbejde.',
       sv: 'Närvaro med ansiktsigenkänning och enkel GPS. Generös gratisplan, men inget bevis på utfört arbete.',
       nb: 'Oppmøte med ansiktsgjenkjenning og enkel GPS. Raus gratisplan, men ingen dokumentasjon på utført arbeid.',
+      ru: 'Учёт присутствия с распознаванием лица и базовым GPS. Щедрый бесплатный тариф, но без подтверждения выполненной работы.',
     },
     features: {
       gps_verified_at_site: false,
@@ -368,6 +372,7 @@ export const COMPETITORS: Competitor[] = [
       da: 'Komplet HR-suite: medarbejderregister, fravær, onboarding og løn. Ikke lavet til dokumentation af arbejdet i marken.',
       sv: 'Komplett HR-svit: personalregister, frånvaro, introduktion och lön. Inte byggd för arbetsbevis i fält.',
       nb: 'Komplett HR-løsning: personalregister, fravær, onboarding og lønn. Ikke laget for å dokumentere arbeid ute i felt.',
+      ru: 'Полноценная HR-платформа: личные дела, отсутствия, адаптация и зарплата. Не создана для подтверждения выездной работы.',
     },
     features: {
       gps_verified_at_site: false,
@@ -400,6 +405,7 @@ export const COMPETITORS: Competitor[] = [
       da: 'Virksomhedssystem: bogføring, fakturering, løn og HR (Sage HR). Ikke lavet til dokumentation af arbejdet i marken.',
       sv: 'Affärssvit: bokföring, fakturering, lön och HR (Sage HR). Inte byggd för arbetsbevis i fält.',
       nb: 'Forretningssystem: regnskap, fakturering, lønn og HR (Sage HR). Ikke laget for å dokumentere arbeid ute i felt.',
+      ru: 'Бизнес-платформа: бухгалтерия, счета, зарплата и HR (Sage HR). Не создана для подтверждения выездной работы.',
     },
     features: {
       gps_verified_at_site: false,
@@ -432,6 +438,7 @@ export const COMPETITORS: Competitor[] = [
       da: 'Meget udbredt italiensk app til fremmøderegistrering: GPS, QR, NFC og geofence. Ingen forseglet rapport til kunden.',
       sv: 'Mycket utbredd italiensk närvaroapp: GPS, QR, NFC och geofence. Ingen förseglad rapport till kunden.',
       nb: 'Svært utbredt italiensk app for oppmøteregistrering: GPS, QR, NFC og geofence. Ingen forseglet rapport til kunden.',
+      ru: 'Широко распространённое в Италии приложение учёта присутствия: GPS, QR, NFC и геозоны. Без запечатанного отчёта для заказчика.',
     },
     features: {
       gps_verified_at_site: true, // ha GPS ma non sealed/timestamped come GeoTapp
@@ -464,6 +471,7 @@ export const COMPETITORS: Competitor[] = [
       da: 'Tysk software til rengøringsfirmaer: stempling, opgaver og teamkommunikation. Ingen forseglet rapport til kunden.',
       sv: 'Tysk programvara för städföretag: instämpling, uppgifter och teamkommunikation. Ingen förseglad rapport till kunden.',
       nb: 'Tysk programvare for renholdsbedrifter: stempling, oppgaver og teamkommunikasjon. Ingen forseglet rapport til kunden.',
+      ru: 'Немецкое ПО для клининговых компаний: отметка времени, задачи и переписка команды. Без запечатанного отчёта для заказчика.',
     },
     features: {
       gps_verified_at_site: false,
@@ -496,6 +504,7 @@ export const COMPETITORS: Competitor[] = [
       da: 'Italiensk digital stempling med GPS og QR-kode. Enkel og let, men uden bevisfotos og uden segl.',
       sv: 'Italiensk digital instämpling med GPS och QR-kod. Enkel och lättviktig, men utan bevisfoton och sigill.',
       nb: 'Italiensk digital stempling med GPS og QR-kode. Enkel og lett, men uten bevisbilder og uten segl.',
+      ru: 'Итальянская цифровая система отметки времени с GPS и QR-кодом. Простая и лёгкая, но без фото подтверждения и без запечатывания.',
     },
     features: {
       gps_verified_at_site: true,
@@ -528,6 +537,7 @@ export const COMPETITORS: Competitor[] = [
       da: 'Den italienske HR-suite par excellence, fra fremmøde til lønseddel. Stempling med geofence og NFC-badge, intet bevis til kunden.',
       sv: 'En mycket utbredd italiensk HR-svit, från närvaro till lönespecifikation. Instämpling med geofence och NFC-kort, inget bevis till kunden.',
       nb: 'Den italienske HR-løsningen par excellence, fra oppmøte til lønnsslipp. Stempling med geofence og NFC-kort, ingen dokumentasjon til kunden.',
+      ru: 'Широко распространённая в Италии HR-платформа — от учёта присутствия до расчётного листка. Отметка по геозоне и NFC-пропуска, без подтверждения для заказчика.',
     },
     features: {
       gps_verified_at_site: true,
@@ -560,6 +570,7 @@ export const COMPETITORS: Competitor[] = [
       da: 'Spansk HR-platform til små og mellemstore virksomheder, med styr på ferie og fravær. Valgfri geolokalisering ved stempling, uden kontrol af simulerede positioner.',
       sv: 'Spansk HR-plattform för små och medelstora företag, som håller ordning på ledighet och frånvaro. Valfri geolokalisering vid instämpling, utan kontroll av falska positioner.',
       nb: 'Spansk HR-plattform for små og mellomstore bedrifter, med orden på ferie og fravær. Valgfri geolokalisering ved stempling, uten kontroll av simulerte posisjoner.',
+      ru: 'Испанская HR-платформа для малого и среднего бизнеса, наводящая порядок в отпусках и отсутствиях. Необязательная геолокация при отметке, без проверки на поддельные координаты.',
     },
     features: {
       gps_verified_at_site: true,

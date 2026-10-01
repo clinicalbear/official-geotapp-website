@@ -66,6 +66,7 @@ const FOUNDER_ALT: Record<string, string> = {
   da: 'Michele Angelo Petraroli, grundlægger af GeoTapp',
   sv: 'Michele Angelo Petraroli, grundare av GeoTapp',
   nb: 'Michele Angelo Petraroli, grunnlegger av GeoTapp',
+  ru: 'Микеле Анджело Петрароли, основатель GeoTapp',
 };
 const FOUNDER_ALT_STAGE: Record<string, string> = {
   it: 'Michele Angelo Petraroli, fondatore di GeoTapp, sul palco',
@@ -78,8 +79,9 @@ const FOUNDER_ALT_STAGE: Record<string, string> = {
   da: 'Michele Angelo Petraroli, grundlægger af GeoTapp, på scenen',
   sv: 'Michele Angelo Petraroli, grundare av GeoTapp, på scen',
   nb: 'Michele Angelo Petraroli, grunnlegger av GeoTapp, på scenen',
+  ru: 'Микеле Анджело Петрароли, основатель GeoTapp, на сцене',
 };
-const COPY_LABEL: Record<string, string> = { it: 'Copia', en: 'Copy', de: 'Kopieren', nl: 'Kopiëren', fr: 'Copier', es: 'Copiar', pt: 'Copiar', da: 'Kopiér', sv: 'Kopiera', nb: 'Kopier' };
+const COPY_LABEL: Record<string, string> = { it: 'Copia', en: 'Copy', de: 'Kopieren', nl: 'Kopiëren', fr: 'Copier', es: 'Copiar', pt: 'Copiar', da: 'Kopiér', sv: 'Kopiera', nb: 'Kopier', ru: 'Копировать' };
 
 /** "Presenti su": stessa etichetta gia' pubblicata in HomeClient.tsx. */
 // Data ISO 'YYYY-MM-DD' → visualizzazione 'dd-MM-YYYY'. L'ISO resta nei dati (ordinamento).

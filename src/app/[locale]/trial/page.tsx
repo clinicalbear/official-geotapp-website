@@ -12,7 +12,7 @@ const TRIAL_META: Record<string, { title: string; description: string }> = {
   da: { title: 'Prøv GeoTapp gratis i 14 dage | GeoTapp', description: 'Prøv GeoTapp gratis i 14 dage uden kreditkort: stemplinger med position, bevisfotos og rapporter, som kunden selv verificerer, fra første dag.' },
   sv: { title: 'Prova GeoTapp gratis i 14 dagar | GeoTapp', description: 'Prova GeoTapp gratis i 14 dagar utan kreditkort: stämplingar med position, bevisfoton och rapporter som kunden själv kontrollerar, från första dagen.' },
   nb: { title: 'Prøv GeoTapp gratis i 14 dager | GeoTapp', description: 'Prøv GeoTapp gratis i 14 dager uten kredittkort: stemplinger med posisjon, bevisbilder og rapporter som kunden selv kontrollerer, fra første dag.' },
-  ru: { title: 'Начните бесплатный 14-дневный пробный период - GeoTapp', description: 'Попробуйте GeoTapp бесплатно 14 дней, без кредитной карты. Управляйте посещаемостью, выездами и клиентами с первого дня.' },
+  ru: { title: 'Начните бесплатный 14-дневный пробный период - GeoTapp', description: 'Попробуйте GeoTapp бесплатно 14 дней, без банковской карты: отметки с геопозицией, фотоподтверждения и отчёты, которые клиент проверяет сам, с первого дня.' },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

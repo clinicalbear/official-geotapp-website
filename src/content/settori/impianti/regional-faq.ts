@@ -15,6 +15,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   da: 'Regler og dokumentation i Danmark',
   nb: 'Regler og dokumentasjon i Norge',
   sv: 'Regler och dokumentation i Sverige',
+  ru: 'Нормы и документы в России',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -133,6 +134,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Periodiske lovpålagte kontroller?',
       a: 'GeoTapp styrer verken teknikernes autorisasjoner eller de periodiske lovpålagte kontrollene. Det registrerer klokkeslett, posisjon, bilder og notater for hvert oppdrag og hver kontroll, som du kan legge ved kontrollens dokumentasjon.',
+    },
+  ],
+  ru: [
+    {
+      q: 'Часы и заказы техников-монтажников?',
+      a: 'При каждой отметке GeoTapp фиксирует приход, перерывы и уход с местоположением и временем, по каждому технику и по каждому объекту, и экспортирует данные в Excel или CSV для вашего бухгалтера или расчётчика зарплаты. Применение трудового договора (надбавки, компенсации) и сам расчёт зарплаты остаются в ведении бухгалтера и компании.',
+    },
+    {
+      q: 'Геолокация техников и защита персональных данных?',
+      a: 'Местоположение фиксируется только при отметке и при фотографиях-доказательствах, никогда непрерывно, а уведомление для сотрудников подписывается в приложении перед первой отметкой. Какие именно требования местного законодательства о персональных данных (например, 152-ФЗ в России или соответствующий закон в Беларуси и Казахстане) применимы в вашем случае, должна определить сама компания.',
+    },
+    {
+      q: 'Периодические регламентные проверки оборудования?',
+      a: 'GeoTapp не управляет допусками техников и не заменяет периодические регламентные проверки оборудования. Приложение фиксирует время, местоположение, фото и заметки каждого выезда и каждой проверки, которые можно приложить к документации по проверке.',
     },
   ],
   sv: [

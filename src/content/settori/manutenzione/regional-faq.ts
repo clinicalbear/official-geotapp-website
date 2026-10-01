@@ -15,6 +15,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   da: 'Regler og dokumentation i Danmark',
   nb: 'Regler og dokumentasjon i Norge',
   sv: 'Regler och dokumentation i Sverige',
+  ru: 'Нормативные требования и документация',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -147,6 +148,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Arbetsmiljö och periodiska kontroller?',
       a: 'GeoTapp hanterar varken medarbetarnas lämplighet eller arbetsmiljödokumentationen. Det registrerar varje besök med tid, position och foto och sparar historiken per plats och per tekniker, som du kan visa kunden.',
+    },
+  ],
+  ru: [
+    {
+      q: 'Учёт часов на нескольких объектах и экспорт данных?',
+      a: 'GeoTapp фиксирует при каждой отметке приход, перерывы и уход с позицией и временем, по технику и по объекту, и экспортирует их в Excel или CSV для вашего бухгалтера. Применение трудового законодательства (доплаты, компенсации) и расчёт зарплаты остаются на стороне компании и её бухгалтера.',
+    },
+    {
+      q: 'Геолокация техников по обслуживанию: согласие и защита данных?',
+      a: 'Позиция фиксируется только при отметке и при доказательных фото, никогда непрерывно, а уведомление для сотрудников подписывается в приложении перед первой отметкой. Какая правовая основа и какое согласие требуются в вашей стране — решает работодатель, опираясь на местное законодательство о защите данных.',
+    },
+    {
+      q: 'Охрана труда и периодические проверки?',
+      a: 'GeoTapp не управляет допуском персонала к работе и не ведёт оценку рисков. Он фиксирует каждый визит со временем, позицией и фото и хранит историю по объекту и по технику, которую можно показать клиенту.',
     },
   ],
   'en-us': [

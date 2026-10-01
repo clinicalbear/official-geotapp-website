@@ -15,6 +15,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   da: 'Regler og dokumentation i Danmark',
   nb: 'Regler og dokumentasjon i Norge',
   sv: 'Regler och dokumentation i Sverige',
+  ru: 'Что фиксирует GeoTapp, а что остаётся за вами',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -133,6 +134,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Hvordan håndteres bytte av renholdsleverandør?',
       a: 'GeoTapp håndterer verken virksomhetsoverdragelse eller overføring av ansatte ved bytte av leverandør. Det lagrer historikken over timer og oppmøte for hver ansatt, som kan eksporteres til Excel eller CSV: anvendelsen av tariffavtalen forblir hos regnskapsføreren.',
+    },
+  ],
+  ru: [
+    {
+      q: 'Что нужно для подтверждения часов и присутствия в клининговой компании?',
+      a: 'GeoTapp фиксирует часы, паузы и уход по каждому сотруднику и по каждому объекту, с позицией и временем, и экспортирует данные в Excel или CSV для вашего бухгалтера или расчётного отдела. Надбавки за ночные смены и праздники, расчёт зарплаты и проверки остаются за компанией, которая получает готовый учёт времени как основу.',
+    },
+    {
+      q: 'Геолокация клинингового персонала: что с персональными данными?',
+      a: 'Позиция фиксируется только при отметке (приход, пауза, уход) и при фотодоказательствах, никогда непрерывно, а уведомление для сотрудников подписывается в приложении перед первой отметкой. Какие именно требования законодательства о персональных данных применимы в вашем случае, определяет сама компания.',
+    },
+    {
+      q: 'Как учитывается смена подрядчика по клинингу?',
+      a: 'GeoTapp не управляет переводом сотрудников и не применяет отраслевые тарифные условия при смене подрядчика. Приложение сохраняет историю часов и присутствия каждого сотрудника, которую можно экспортировать в Excel или CSV: применение тарифных условий остаётся за бухгалтером компании.',
     },
   ],
   sv: [

@@ -15,7 +15,7 @@ const HEADLINES: Record<string, string> = {
   es: 'Mantente al día sobre el futuro del trabajo',
   pt: 'Fique a par do futuro do trabalho',
   nl: 'Blijf op de hoogte van de toekomst van het werk',
-  ru: 'Будь в курсе новостей отрасли',
+  ru: 'Будьте в курсе новостей отрасли',
   da: 'Følg med i fremtidens arbejdsliv',
   sv: 'Håll dig uppdaterad om framtidens arbetsliv',
   nb: 'Følg med på fremtidens arbeidsliv',
@@ -136,7 +136,7 @@ export default function NewsletterModal({ locale }: { locale: string }) {
           />
           <button
             onClick={dismiss}
-            aria-label={locale === 'nl' ? 'Sluiten' : locale === 'fr' ? 'Fermer' : locale === 'es' ? 'Cerrar' : locale === 'pt' ? 'Fechar' : locale === 'da' ? 'Luk' : locale === 'sv' ? 'Stäng' : locale === 'nb' ? 'Lukk' : 'Close'}
+            aria-label={locale === 'nl' ? 'Sluiten' : locale === 'fr' ? 'Fermer' : locale === 'es' ? 'Cerrar' : locale === 'pt' ? 'Fechar' : locale === 'da' ? 'Luk' : locale === 'sv' ? 'Stäng' : locale === 'nb' ? 'Lukk' : locale === 'ru' ? 'Закрыть' : 'Close'}
             style={{
               background: 'rgba(247,249,252,0.25)',
               border: 'none',

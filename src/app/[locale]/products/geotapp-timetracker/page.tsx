@@ -25,7 +25,7 @@ const appMeta: Record<string, { title: string; description: string }> = {
   sv: { title: 'GeoTapp TimeTracker: stämpelapp för team på fältet', description: 'Positionen sparas vid start, rast och slut, och inget automatiskt där emellan. Foton hör till uppdraget. 14 dagar gratis.' },
   da: { title: 'GeoTapp TimeTracker: stempel-app med GPS til hold i marken', description: 'Positionen registreres ved start, pause og slut, og intet automatisk imellem. Fotos hænger på opgaven. 14 dage gratis.' },
   nb: { title: 'GeoTapp TimeTracker: stemple-app med GPS for team i felt', description: 'Posisjonen registreres ved start, pause og slutt, og ingenting automatisk imellom. Bildene knyttes til oppdraget. 14 dager gratis.' },
-  ru: { title: 'GeoTapp TimeTracker: GPS-учёт времени для выездных техников', description: 'GeoTapp TimeTracker, мобильное приложение для выездных техников. GPS отметки, фотодоказательства, еженедельные отчёты и синхронизация с Flow в реальном времени.' },
+  ru: { title: 'GeoTapp TimeTracker: GPS-учёт времени для выездных техников', description: 'Геопозиция фиксируется при начале смены, перерыве и завершении — и ничего автоматически между ними. Фото привязаны к заказу. 14 дней бесплатно.' },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -163,6 +163,17 @@ const APP_FAQ: Record<string, object> = {
       { '@type': 'Question', name: 'Hur är det med dataskyddet (GDPR) i GeoTapp TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'Appen är byggd för att hålla sig inom ramarna: den sparar positionen bara när medarbetaren stämplar (start, raster, slut) eller tar ett bevisfoto, aldrig löpande, och ber inte ens om tillstånd att läsa positionen i bakgrunden. Medarbetaren kan se sina stämplingar och sina rapporter i appen. Information och, där det behövs, samråd med de anställdas företrädare är fortsatt arbetsgivarens ansvar.' } },
     ],
   },
+  ru: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Что такое GeoTapp TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp TimeTracker — это мобильное приложение для техников, которое фиксирует присутствие, задачи и фотодоказательства прямо на объекте. Всё это попадает в запечатанный отчёт, который клиент проверяет сам с помощью GeoTapp Verifier.' } },
+      { '@type': 'Question', name: 'Что происходит, если нет связи?', acceptedAnswer: { '@type': 'Answer', text: 'Отметка остаётся сохранённой на телефоне и отправляется сама, когда связь возвращается, с тем временем, в которое она была сделана. Пока она не пришла, в Flow её не видно.' } },
+      { '@type': 'Question', name: 'Чем GeoTapp TimeTracker отличается от обычного приложения для учёта времени?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp TimeTracker — это не просто отметка времени: каждая смена, с её местоположениями, фотодоказательствами и заметками, попадает в отчёт, запечатанный криптографическими отпечатками. Клиент проверяет его сам: любое последующее изменение, даже со стороны администратора, обнаруживается.' } },
+      { '@type': 'Question', name: 'Работает ли GeoTapp TimeTracker на Android и iOS?', acceptedAnswer: { '@type': 'Answer', text: 'Да. Приложение доступно в Google Play и App Store. Требуется Android 8.0 или новее, либо iOS 26.2 или новее.' } },
+      { '@type': 'Question', name: 'Соответствует ли GeoTapp TimeTracker требованиям GDPR?', acceptedAnswer: { '@type': 'Answer', text: 'Он создан так, чтобы оставаться в этих рамках: местоположение фиксируется только когда сотрудник делает отметку (начало, перерывы, конец смены) или делает фото-доказательство, никогда непрерывно, и приложение даже не запрашивает разрешение на чтение местоположения в фоновом режиме. Сотрудник видит свои отметки и отчёты в приложении. Уведомление и, где это требуется, согласование с профсоюзом остаются обязанностью работодателя.' } },
+    ],
+  },
 };
 
 const APP_DESCRIPTION: Record<string, string> = {
@@ -176,7 +187,7 @@ const APP_DESCRIPTION: Record<string, string> = {
   sv: 'GeoTapp TimeTracker är den inbyggda Android- och iOS-appen för tekniker på fältet: stämpling med position, bevisfoton, anteckningar och veckorapporter, kopplad till GeoTapp Flow. Om det saknas täckning sparas stämplingarna på telefonen och skickas när signalen kommer tillbaka.',
   da: 'GeoTapp TimeTracker er den native Android- og iOS-app til teknikere i marken: stempling med position, bevisfotos, noter og ugentlige rapporter, forbundet med GeoTapp Flow. Hvis der ikke er net, gemmes stemplingerne på telefonen og sendes, så snart signalet vender tilbage.',
   nb: 'GeoTapp TimeTracker er den native Android- og iOS-appen for teknikere i felt: stempling med posisjon, bevisbilder, notater og ukentlige rapporter, koblet til GeoTapp Flow. Hvis det ikke er nett, lagres stemplingene på telefonen og sendes så snart signalet er tilbake.',
-  ru: 'GeoTapp TimeTracker, мобильное приложение для выездных техников: верифицированные GPS-отметки, фотодоказательства, еженедельные отчёты и синхронизация с GeoTapp Flow в реальном времени. Работает офлайн.',
+  ru: 'GeoTapp TimeTracker — мобильное приложение для выездных техников: отметки с контролируемой геопозицией, фотодоказательства, еженедельные отчёты и передача данных в GeoTapp Flow. Работает офлайн.',
 };
 
 const APP_FEATURES: Record<string, string[]> = {
@@ -279,6 +290,16 @@ const APP_FEATURES: Record<string, string[]> = {
     'Inbyggd koppling till GeoTapp Flow',
     'Finns på Google Play och App Store',
     'Position bara när medarbetaren stämplar eller tar ett bevisfoto, aldrig löpande',
+  ],
+  ru: [
+    'Контролируемое местоположение при отметке, симулированные координаты отклоняются',
+    'Фотодоказательства с отметкой времени и GPS',
+    'Работает офлайн и синхронизируется автоматически',
+    'Криптографически запечатанные отчёты',
+    'Уведомление о GPS, подтверждаемое в приложении перед отметкой',
+    'Встроенная интеграция с GeoTapp Flow',
+    'Доступно в Google Play и App Store',
+    'Создано с учётом GDPR: местоположение только при отметке',
   ],
 };
 

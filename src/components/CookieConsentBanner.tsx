@@ -213,7 +213,7 @@ const TEXTS: Record<string, Texts> = {
     modalTitle: 'Настройки cookie',
     modalIntro: 'Выберите, какие категории включить. Вы можете изменить своё решение в любой момент.',
     catNecessary: 'Необходимые',
-    catNecessaryDesc: 'Вход, язык, безопасность. Без них сайт не работает.',
+    catNecessaryDesc: 'Язык, страна, безопасность. Без них сайт не работает.',
     alwaysOn: 'всегда включены',
     catAnalytics: 'Аналитика',
     catAnalyticsDesc: 'Google Analytics: понимать, какие страницы работают. Анонимные данные. Без рекламы.',

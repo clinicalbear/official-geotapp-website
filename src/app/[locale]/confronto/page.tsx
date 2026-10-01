@@ -57,8 +57,8 @@ const META: Record<string, { title: string; description: string }> = {
     description: 'Sammenlign GeoTapp med Connecteam, Clockify, Hubstaff, Zucchetti og andre: hva hver enkelt registrerer, og hvem som dokumenterer arbeidet.',
   },
   ru: {
-    title: 'GeoTapp vs конкуренты, Полные сравнения | GeoTapp',
-    description: 'Сравните GeoTapp с Connecteam, Clockify, Hubstaff и другими. Узнайте, почему GeoTapp, правильный выбор для компаний с сотрудниками на выезде, которым нужно запечатать выполненную работу.',
+    title: 'GeoTapp и альтернативы - полные сравнения | GeoTapp',
+    description: 'Сравните GeoTapp с Connecteam, Clockify, Hubstaff, Zucchetti и другими: что фиксирует каждый из них и кто создаёт доказательство работы, которое клиент проверяет сам.',
   },
 };
 
@@ -73,7 +73,7 @@ const COPY: Record<string, Record<string, string>> = {
   da: { badge: 'Sammenligninger', title_suffix: 'alternativerne', intro: 'Ikke alle apps gør det samme. Mange registrerer timer og position; GeoTapp lukker hver opgave i en forseglet rapport, som kunden selv verificerer.', cta_title: 'Det bedste bevis er at prøve det.', cta_desc: 'Prøv det på en rigtig opgave: 14 dage gratis, uden kreditkort.', cta_btn: 'Start gratis prøveperiode', breadcrumb: 'Sammenligninger' },
   sv: { badge: 'Jämförelser', title_suffix: 'alternativen', intro: 'Alla appar gör inte samma sak. Många registrerar timmar och position; GeoTapp avslutar varje uppdrag i en förseglad rapport som kunden själv verifierar.', cta_title: 'Det bästa beviset är att prova.', cta_desc: 'Prova på ett riktigt uppdrag: 14 dagar gratis, utan kreditkort.', cta_btn: 'Starta den kostnadsfria provperioden', breadcrumb: 'Jämförelser' },
   nb: { badge: 'Sammenligninger', title_suffix: 'alternativene', intro: 'Ikke alle apper gjør det samme. Mange registrerer timer og posisjon; GeoTapp avslutter hvert oppdrag i en forseglet rapport som kunden selv verifiserer.', cta_title: 'Det beste beviset er å prøve det.', cta_desc: 'Prøv det på et ekte oppdrag: 14 dager gratis, uten kredittkort.', cta_btn: 'Start gratis prøveperiode', breadcrumb: 'Sammenligninger' },
-  ru: { badge: 'Сравнения', title_suffix: 'альтернативы', intro: 'Не все приложения одинаковы. GeoTapp, единственная система, которая создаёт проверяемые доказательства выполненной работы, а не просто фиксирует часы и местоположение.', cta_title: 'Лучшее доказательство, увидеть вживую.', cta_desc: 'Покажем, как работа превращается в проверяемое доказательство, за 20 минут, без обязательств.', cta_btn: 'Начните бесплатно!', breadcrumb: 'Сравнения' },
+  ru: { badge: 'Сравнения', title_suffix: 'альтернативы', intro: 'Не все приложения делают одно и то же. Многие фиксируют только часы и местоположение; GeoTapp закрывает каждую работу запечатанным отчётом, который клиент проверяет сам.', cta_title: 'Лучшее доказательство — попробовать самому.', cta_desc: 'Попробуйте на реальной работе: 14 дней бесплатно, без банковской карты.', cta_btn: 'Начать бесплатную пробную версию', breadcrumb: 'Сравнения' },
 };
 
 const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
@@ -89,7 +89,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
     da: { tagline: 'Teamkommunikation eller dokumentation af opgaverne', highlight: 'Connecteam styrer kommunikationen. GeoTapp laver verificerbar dokumentation af arbejdet.' },
     sv: { tagline: 'Teamkommunikation eller bevis på utförda uppdrag', highlight: 'Connecteam hanterar kommunikationen. GeoTapp tar fram verifierbara arbetsbevis.' },
     nb: { tagline: 'Teamkommunikasjon eller dokumentasjon av oppdragene', highlight: 'Connecteam håndterer kommunikasjonen. GeoTapp lager verifiserbar dokumentasjon av arbeidet.' },
-    ru: { tagline: 'Командное общение vs сертификация работы', highlight: 'Connecteam управляет общением. GeoTapp создаёт проверяемые доказательства работы.' },
+    ru: { tagline: 'Командное общение или доказательство выполненной работы', highlight: 'Connecteam управляет общением. GeoTapp создаёт проверяемые доказательства работы.' },
   } as any,
   {
     slug: 'geotapp-vs-clockify', competitor: 'Clockify',
@@ -103,7 +103,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
     da: { tagline: 'Registrere tiden eller dokumentere arbejdet', highlight: 'Clockify registrerer timerne. GeoTapp forsegler hver opgave med position, tid og fotos.' },
     sv: { tagline: 'Registrera tid eller bevisa arbetet', highlight: 'Clockify registrerar timmar. GeoTapp förseglar varje uppdrag med plats, tid och foton.' },
     nb: { tagline: 'Registrere tiden eller dokumentere arbeidet', highlight: 'Clockify registrerer timene. GeoTapp forsegler hvert oppdrag med posisjon, tid og bilder.' },
-    ru: { tagline: 'Учёт времени vs доказательство выполненной работы', highlight: 'Clockify учитывает часы. GeoTapp запечатывает каждую работу опечатанным GPS и фото.' },
+    ru: { tagline: 'Учёт времени или доказательство выполненной работы', highlight: 'Clockify учитывает часы. GeoTapp запечатывает каждую работу с местоположением, временем и фото.' },
   } as any,
   {
     slug: 'geotapp-vs-jibble', competitor: 'Jibble',
@@ -117,7 +117,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
     da: { tagline: 'Tælle fremmøde eller dokumentere arbejdet', highlight: 'Jibble tæller fremmøde med ansigt og basis-GPS. GeoTapp dokumenterer hver opgave med forseglet position, tid og fotos.' },
     sv: { tagline: 'Registrera närvaro eller bevisa arbetet', highlight: 'Jibble loggar närvaro med ansikte och enkel GPS. GeoTapp bevisar varje uppdrag med förseglad plats, tid och foton.' },
     nb: { tagline: 'Registrere oppmøte eller dokumentere arbeidet', highlight: 'Jibble registrerer oppmøte med ansikt og enkel GPS. GeoTapp dokumenterer hvert oppdrag med forseglet posisjon, tid og bilder.' },
-    ru: { tagline: 'Учёт присутствия vs доказательство работы', highlight: 'Jibble отмечает присутствие по лицу и базовому GPS. GeoTapp доказывает каждую работу опечатанным GPS и фото.' },
+    ru: { tagline: 'Учёт присутствия или доказательство работы', highlight: 'Jibble отмечает присутствие по лицу и базовому GPS. GeoTapp доказывает каждую работу запечатанными местоположением, временем и фото.' },
   } as any,
   {
     slug: 'geotapp-vs-personio', competitor: 'Personio',
@@ -131,7 +131,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
     da: { tagline: 'Styre personalet eller dokumentere arbejdet i marken', highlight: 'Personio styrer personale, ferie og løn. GeoTapp dokumenterer arbejdet i marken med forseglet position, tid og fotos. De supplerer hinanden.' },
     sv: { tagline: 'Hantera personal eller bevisa fältarbete', highlight: 'Personio hanterar personal, ledighet och lön. GeoTapp bevisar fältarbete med förseglad plats, tid och foton. De fungerar sida vid sida.' },
     nb: { tagline: 'Administrere personalet eller dokumentere arbeidet ute i felt', highlight: 'Personio styrer personal, ferie og lønn. GeoTapp dokumenterer arbeidet ute i felt med forseglet posisjon, tid og bilder. De utfyller hverandre.' },
-    ru: { tagline: 'Управление HR vs доказательство работы в поле', highlight: 'Personio ведёт HR, отсутствия и зарплату. GeoTapp доказывает работу в поле опечатанным GPS и фото. Дополняют друг друга.' },
+    ru: { tagline: 'Управление персоналом или доказательство работы в поле', highlight: 'Personio ведёт кадры, отсутствия и зарплату. GeoTapp доказывает работу в поле запечатанными местоположением, временем и фото. Дополняют друг друга.' },
   } as any,
   {
     slug: 'geotapp-vs-sage', competitor: 'Sage',
@@ -145,7 +145,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
     da: { tagline: 'Virksomhedssystem og løn eller dokumentation af arbejdet', highlight: 'Sage styrer bogføring og løn. GeoTapp dokumenterer arbejdet i marken med forseglet position, tid og fotos. De supplerer hinanden.' },
     sv: { tagline: 'Affärssvit och lön eller arbetsbevis', highlight: 'Sage hanterar bokföring och lön. GeoTapp bevisar fältarbete med förseglad plats, tid och foton. De fungerar sida vid sida.' },
     nb: { tagline: 'Forretningssystem og lønn eller dokumentasjon av arbeidet', highlight: 'Sage styrer regnskap og lønn. GeoTapp dokumenterer arbeidet ute i felt med forseglet posisjon, tid og bilder. De utfyller hverandre.' },
-    ru: { tagline: 'Бизнес-система и зарплата vs доказательство работы', highlight: 'Sage ведёт бухгалтерию и зарплату. GeoTapp доказывает работу в поле опечатанным GPS и фото. Дополняют друг друга.' },
+    ru: { tagline: 'Бизнес-система и зарплата или доказательство работы', highlight: 'Sage ведёт бухгалтерию и зарплату. GeoTapp доказывает работу в поле запечатанными местоположением, временем и фото. Дополняют друг друга.' },
   } as any,
   {
     slug: 'geotapp-vs-hubstaff', competitor: 'Hubstaff',
@@ -159,7 +159,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
     da: { tagline: 'Overvåge folk eller dokumentere arbejdet', highlight: 'Hubstaff overvåger fjernarbejdere. GeoTapp forsegler opgaverne i marken, uden løbende sporing.' },
     sv: { tagline: 'Övervaka människor eller bevisa arbetet', highlight: 'Hubstaff övervakar distansarbetare. GeoTapp förseglar uppdrag i fält, utan löpande spårning.' },
     nb: { tagline: 'Overvåke folk eller dokumentere arbeidet', highlight: 'Hubstaff overvåker fjernarbeidere. GeoTapp forsegler oppdragene ute i felt, uten løpende sporing.' },
-    ru: { tagline: 'Удалённый мониторинг vs полевая сертификация', highlight: 'Hubstaff следит за удалёнными сотрудниками. GeoTapp запечатывает работников на выезде, соответствует GDPR.' },
+    ru: { tagline: 'Удалённый мониторинг или доказательство работы', highlight: 'Hubstaff следит за удалёнными сотрудниками. GeoTapp запечатывает работу на выезде, без непрерывного отслеживания.' },
   } as any,
   {
     slug: 'geotapp-vs-nobadge', competitor: 'NoBadge',
@@ -173,7 +173,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
     da: { tagline: 'Stemple fremmøde eller dokumentere opgaverne', highlight: 'NoBadge registrerer fremmøde. GeoTapp kontrollerer positionen ved stempling og forsegler arbejdet i verificerbare rapporter.' },
     sv: { tagline: 'Stämpla in eller bevisa uppdragen', highlight: 'NoBadge registrerar närvaro. GeoTapp kontrollerar positionen vid instämpling och förseglar arbetet i verifierbara rapporter.' },
     nb: { tagline: 'Stemple oppmøte eller dokumentere oppdragene', highlight: 'NoBadge registrerer oppmøte. GeoTapp kontrollerer posisjonen ved stempling og forsegler arbeidet i verifiserbare rapporter.' },
-    ru: { tagline: 'Учёт присутствия vs сертификация работы', highlight: 'NoBadge фиксирует присутствие. GeoTapp запечатывает работу с анти-спуфинг GPS и проверяемыми отчётами.' },
+    ru: { tagline: 'Учёт присутствия или доказательство работы', highlight: 'NoBadge фиксирует присутствие. GeoTapp проверяет местоположение при отметке и запечатывает работу в проверяемых отчётах.' },
   } as any,
   {
     slug: 'geotapp-vs-libemax', competitor: 'Libemax',
@@ -187,7 +187,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
     da: { tagline: 'Geofence eller kontrol af falsk position', highlight: 'Libemax bruger geofence til stempling. GeoTapp afviser ved stempling også simulerede positioner: to forskellige kontroller.' },
     sv: { tagline: 'Geofence eller kontroll av falsk position', highlight: 'Libemax använder en geofence för instämpling. GeoTapp avvisar vid instämpling också simulerade positioner: två olika kontroller.' },
     nb: { tagline: 'Geofence eller kontroll av falsk posisjon', highlight: 'Libemax bruker geofence til stempling. GeoTapp avviser ved stempling også simulerte posisjoner: to ulike kontroller.' },
-    ru: { tagline: 'Геозона vs анти-спуфинг GPS', highlight: 'Libemax использует геозону. GeoTapp проверяет подлинность GPS с помощью анти-спуфинга, два разных уровня безопасности.' },
+    ru: { tagline: 'Геозона или проверка подлинности GPS', highlight: 'Libemax использует геозону для отметки. GeoTapp при отметке также отклоняет смоделированные координаты: два разных вида проверки.' },
   } as any,
   {
     slug: 'geotapp-vs-picaponto', competitor: 'PicaPonto',
@@ -201,7 +201,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
     da: { tagline: 'Registrere eller dokumentere', highlight: 'PicaPonto registrerer fremmøde billigt med mange stemplingsmetoder. GeoTapp laver en forseglet rapport, som kunden selv verificerer.' },
     sv: { tagline: 'Registrera eller bevisa', highlight: 'PicaPonto registrerar närvaro billigt med många instämplingsmetoder. GeoTapp tar fram en förseglad rapport som kunden själv verifierar.' },
     nb: { tagline: 'Registrere eller dokumentere', highlight: 'PicaPonto registrerer oppmøte rimelig med mange stemplingsmåter. GeoTapp lager en forseglet rapport som kunden selv verifiserer.' },
-    ru: { tagline: 'Учитывать vs доказывать', highlight: 'PicaPonto дёшево учитывает присутствие многими методами. GeoTapp создаёт запечатанный отчёт, который клиент проверяет сам.' },
+    ru: { tagline: 'Учитывать или доказывать', highlight: 'PicaPonto дёшево учитывает присутствие многими методами. GeoTapp создаёт запечатанный отчёт, который клиент проверяет сам.' },
   } as any,
   {
     slug: 'geotapp-vs-blink', competitor: 'Blink',
@@ -215,7 +215,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
     da: { tagline: 'Tysk rengøringssoftware eller dokumentation i marken', highlight: 'Blink er meget udbredt inden for rengøring i Tyskland. GeoTapp tilføjer positionskontrol ved stempling og verificerbare rapporter.' },
     sv: { tagline: 'Tysk städprogramvara eller bevis i fält', highlight: 'Blink är mycket utbrett inom städning i Tyskland. GeoTapp lägger till positionskontroll vid instämpling och verifierbara rapporter.' },
     nb: { tagline: 'Tysk renholdsprogramvare eller dokumentasjon ute i felt', highlight: 'Blink er svært utbredt innen renhold i Tyskland. GeoTapp legger til kontroll av posisjonen ved stempling og verifiserbare rapporter.' },
-    ru: { tagline: 'ПО для клининга DE vs полевая сертификация', highlight: 'Blink, №1 для клининга в Германии. GeoTapp добавляет анти-спуфинг и проверяемые отчёты.' },
+    ru: { tagline: 'Немецкое ПО для клининга или доказательство на месте', highlight: 'Blink широко распространён в клининге в Германии. GeoTapp добавляет проверку местоположения при отметке и проверяемые отчёты.' },
   } as any,
   {
     slug: 'geotapp-vs-zucchetti', competitor: 'Zucchetti',
@@ -229,7 +229,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
     da: { tagline: 'Personalesystem eller dokumentation af arbejdet', highlight: 'Zucchetti dækker hele personaleadministrationen, fra fremmøde til lønseddel. GeoTapp laver dokumentationen, som kunden selv verificerer.' },
     sv: { tagline: 'Personalsvit eller arbetsbevis', highlight: 'Zucchetti täcker hela personaladministrationen, från närvaro till lönespecifikation. GeoTapp tar fram beviset som kunden själv verifierar.' },
     nb: { tagline: 'Personalsystem eller dokumentasjon av arbeidet', highlight: 'Zucchetti dekker hele personaladministrasjonen, fra oppmøte til lønnsslipp. GeoTapp lager dokumentasjonen som kunden selv verifiserer.' },
-    ru: { tagline: 'HR-система vs доказательство работы', highlight: 'Zucchetti закрывает весь персонал, от табеля до расчётного листка. GeoTapp даёт доказательство, которое заказчик проверяет сам.' },
+    ru: { tagline: 'HR-система или доказательство работы', highlight: 'Zucchetti закрывает весь персонал, от табеля до расчётного листка. GeoTapp даёт доказательство, которое заказчик проверяет сам.' },
   } as any,
   {
     slug: 'geotapp-vs-factorial', competitor: 'Factorial',
@@ -243,7 +243,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
     da: { tagline: 'Personalestyring eller verificerbar dokumentation i marken', highlight: 'Factorial holder styr på ferie, fravær og lønsedler. GeoTapp dokumenterer opgaven, når kunden bestrider ydelsen.' },
     sv: { tagline: 'Personalhantering eller verifierbart bevis i fält', highlight: 'Factorial håller ordning på semester, frånvaro och lönespecifikationer. GeoTapp dokumenterar uppdraget när kunden ifrågasätter tjänsten.' },
     nb: { tagline: 'Personaladministrasjon eller verifiserbar dokumentasjon ute i felt', highlight: 'Factorial holder orden på ferie, fravær og lønnsslipper. GeoTapp dokumenterer oppdraget når kunden bestrider tjenesten.' },
-    ru: { tagline: 'HR-платформа vs полевая сертификация', highlight: 'Factorial держит в порядке отпуска, отсутствия и расчётные листки. GeoTapp защищает счёт, когда заказчик оспаривает услугу.' },
+    ru: { tagline: 'Управление персоналом или проверяемое доказательство на месте', highlight: 'Factorial держит в порядке отпуска, отсутствия и расчётные листки. GeoTapp документирует работу, когда заказчик оспаривает услугу.' },
   } as any,
 ];
 
@@ -285,7 +285,7 @@ export default async function ConfrontoIndexPage({ params }: { params: Promise<{
     da: '🆕 Dynamisk sammenligning: alle konkurrenter på én side',
     sv: '🆕 Dynamisk jämförelse: alla konkurrenter på en sida',
     nb: '🆕 Dynamisk sammenligning: alle konkurrenter på én side',
-    ru: '🆕 Динамическое сравнение, все конкуренты на одной странице',
+    ru: '🆕 Динамическое сравнение: все конкуренты на одной странице',
   }[locale.startsWith('en-') ? 'en' : locale] ?? '🆕 Dynamic comparison: all competitors on one page';
 
   const dynamicSubtitle = {
@@ -299,7 +299,7 @@ export default async function ConfrontoIndexPage({ params }: { params: Promise<{
     da: 'Vælg en konkurrent og se tabellen med 12 funktioner. Alle alternativerne sammenlignet ét sted.',
     sv: 'Välj en konkurrent och se tabellen med 12 funktioner. Alla alternativen jämförda på ett ställe.',
     nb: 'Velg en konkurrent og se tabellen med 12 funksjoner. Alle alternativene sammenlignet på ett sted.',
-    ru: 'Выбор конкурента + таблица из 12 функций в реальном времени. Все альтернативы в одном месте.',
+    ru: 'Выберите конкурента и посмотрите таблицу из 12 функций. Все альтернативы сравнены в одном месте.',
   }[locale.startsWith('en-') ? 'en' : locale] ?? 'Pick a competitor and see a table of 12 features.';
 
   return (

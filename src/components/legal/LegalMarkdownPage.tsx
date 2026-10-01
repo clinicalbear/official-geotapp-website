@@ -41,7 +41,7 @@ const LEGAL_NAV_LABELS: Record<LegalSlug, Record<string, string>> = {
     it: 'Informativa Cookie', en: 'Cookie Policy', de: 'Cookie-Richtlinie',
     fr: 'Politique de cookies', es: 'Política de cookies', pt: 'Política de cookies',
     nl: 'Cookieverklaring', da: 'Cookiepolitik', nb: 'Retningslinjer for informasjonskapsler',
-    sv: 'Cookiepolicy', ru: 'Политика использования файлов cookie',
+    sv: 'Cookiepolicy', ru: 'Информация об использовании cookie',
   },
 };
 

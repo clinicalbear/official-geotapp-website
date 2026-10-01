@@ -243,13 +243,13 @@ export default function SurveyForm({ locale }: { locale: string }) {
 
       {side && !complete && (
         <p className="mt-3 text-center text-sm text-slate-400">
-          {key === 'it' ? 'Rispondi a tutte le domande per inviare.' : key === 'pt' ? 'Responda a todas as perguntas para enviar.' : key === 'da' ? 'Besvar alle spørgsmål for at sende.' : key === 'sv' ? 'Svara på alla frågor för att skicka.' : key === 'nb' ? 'Svar på alle spørsmålene for å sende.' : 'Please answer all questions to submit.'}
+          {key === 'it' ? 'Rispondi a tutte le domande per inviare.' : key === 'pt' ? 'Responda a todas as perguntas para enviar.' : key === 'da' ? 'Besvar alle spørgsmål for at sende.' : key === 'sv' ? 'Svara på alla frågor för att skicka.' : key === 'nb' ? 'Svar på alle spørsmålene for å sende.' : key === 'ru' ? 'Ответьте на все вопросы, чтобы отправить.' : 'Please answer all questions to submit.'}
         </p>
       )}
 
       {status === 'error' && (
         <p className="mt-3 text-center text-sm text-red-500">
-          {key === 'it' ? 'Qualcosa non ha funzionato. Riprova.' : key === 'pt' ? 'Algo correu mal. Tente novamente.' : key === 'da' ? 'Noget gik galt. Prøv igen.' : key === 'sv' ? 'Något gick fel. Försök igen.' : key === 'nb' ? 'Noe gikk galt. Prøv igjen.' : 'Something went wrong. Please try again.'}
+          {key === 'it' ? 'Qualcosa non ha funzionato. Riprova.' : key === 'pt' ? 'Algo correu mal. Tente novamente.' : key === 'da' ? 'Noget gik galt. Prøv igen.' : key === 'sv' ? 'Något gick fel. Försök igen.' : key === 'nb' ? 'Noe gikk galt. Prøv igjen.' : key === 'ru' ? 'Что-то пошло не так. Попробуйте снова.' : 'Something went wrong. Please try again.'}
         </p>
       )}
     </form>

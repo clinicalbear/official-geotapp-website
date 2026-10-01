@@ -15,6 +15,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   da: 'Regler og dokumentation i Danmark',
   nb: 'Regler og dokumentasjon i Norge',
   sv: 'Regler och dokumentation i Sverige',
+  ru: 'Нормы и документация',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -147,6 +148,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: "Underentreprenörer och arbetsmiljö på byggarbetsplatsen?",
       a: "GeoTapp hanterar inga arbetsmiljödokument och bedömer inte medarbetarnas lämplighet. Det registrerar vem som har stämplat, var och när på varje byggarbetsplats, även för underentreprenörernas lag, och den historiken kan visas för projektledningen. Dokumentationsskyldigheterna ligger kvar hos företaget.",
+    },
+  ],
+  ru: [
+    {
+      q: 'Часы и тарифные соглашения на стройплощадке?',
+      a: 'GeoTapp не применяет никакое тарифное соглашение и не рассчитывает надбавки. Система фиксирует часы и присутствие по каждому сотруднику и по каждой стройплощадке, которые можно выгрузить в Excel или CSV и использовать как основу для собственных расчётов. Расчёт зарплаты и применение тарифного соглашения остаются на стороне компании и её бухгалтера.',
+    },
+    {
+      q: 'Геолокация на стройплощадке: GDPR и местные нормы защиты данных?',
+      a: 'Позиция фиксируется только при отметке и при фото-подтверждениях, никогда непрерывно, а уведомление для сотрудников подписывается в приложении до первой отметки. Компания сама проверяет, что именно требуют в её случае GDPR (законный интерес) и местное законодательство о защите данных.',
+    },
+    {
+      q: 'Субподрядчики и охрана труда на стройплощадке?',
+      a: 'GeoTapp не ведёт документы по охране труда, такие как планы безопасности стройплощадки, и не оценивает квалификацию персонала. Система фиксирует, кто, где и когда отметился на каждой стройплощадке, включая бригады субподрядчиков, и эту историю можно показать руководству проекта. Обязанности по документации в сфере охраны труда остаются на стороне компании.',
     },
   ],
   'en-us': [

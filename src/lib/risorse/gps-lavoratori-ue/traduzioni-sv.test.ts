@@ -35,7 +35,7 @@ describe('traduzioni svedesi delle schede-paese', () => {
   });
 
   it('le altre lingue continuano a leggere il testo della scheda', () => {
-    expect(loc('CNIL, presentare un reclamo', 'ru')).toBe('CNIL, presentare un reclamo');
+    expect(loc('CNIL, presentare un reclamo', 'it')).toBe('CNIL, presentare un reclamo');
     expect(loc('CNIL, presentare un reclamo', 'sv')).toBe('CNIL, lämna in ett klagomål');
   });
 });

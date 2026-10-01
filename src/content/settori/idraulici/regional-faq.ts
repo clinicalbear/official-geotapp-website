@@ -15,6 +15,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   da: 'Regler og dokumentation i Danmark',
   nb: 'Regler og dokumentasjon i Norge',
   sv: 'Regler och dokumentation i Sverige',
+  ru: 'Что фиксирует GeoTapp, а что остаётся за вами',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -133,6 +134,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Gassarbeid og autoriserte rørleggere?',
       a: 'GeoTapp verifiserer ingen autorisasjoner, heller ikke for gassarbeid, og lager ingen installasjonsdokumentasjon. Det registrerer klokkeslett, posisjon og bilder av hvert oppdrag på vann- og gassinstallasjoner, som du kan legge ved anleggets dokumentasjon.',
+    },
+  ],
+  ru: [
+    {
+      q: 'Как подтвердить часы и объекты сантехнических выездов?',
+      a: 'При каждой отметке GeoTapp фиксирует приход, паузы и уход с позицией и временем, по каждому сантехнику и по каждому заказу, и экспортирует данные в Excel или CSV для вашего бухгалтера или расчётного отдела. Применение трудового законодательства (надбавки, компенсации) и расчёт зарплаты остаются за компанией.',
+    },
+    {
+      q: 'Геолокация сантехников: что с персональными данными?',
+      a: 'Позиция фиксируется только при отметке (приход, пауза, уход) и при фотодоказательствах, никогда непрерывно, а уведомление для сотрудников подписывается в приложении перед первой отметкой. Какие именно требования законодательства о персональных данных применимы в вашем случае, определяет сама компания.',
+    },
+    {
+      q: 'Работы с газом и водой: допуски и лицензии сантехника?',
+      a: 'GeoTapp не проверяет допуски и лицензии, в том числе для работ с газом, и не формирует акты соответствия объекта нормам. Приложение фиксирует время, позицию и фото каждого выезда на сантехнические и газовые системы, которые можно приложить к документации объекта.',
     },
   ],
   sv: [
