@@ -143,7 +143,7 @@ const FLOW_COPY: Record<string, FlowCopy> = {
     complianceTagline: 'Prima si firma l\'informativa, poi si timbra.*',
     complianceFootnote: '* Per legge (art. 13 GDPR e, in Italia, art. 4 dello Statuto dei Lavoratori) ogni dipendente va informato prima di essere geolocalizzato. Se il software lascia questo passaggio al titolare, il rischio resta a lui. GeoTapp prepara l\'informativa personalizzata, la fa firmare per presa visione nell\'app e non lascia timbrare finché non è firmata.',
     legalKicker: 'Normativa locale',
-    trial: 'Prova Flow gratis per 14 giorni',
+    trial: 'Inizia la prova gratuita di 14 giorni',
   },
   en: {
     statusLabel: 'Where it is used',

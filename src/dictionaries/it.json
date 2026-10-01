@@ -533,6 +533,22 @@
           "label": "Idraulici"
         },
         {
+          "value": "termoidraulici",
+          "label": "Termoidraulici"
+        },
+        {
+          "value": "edilizia",
+          "label": "Edilizia"
+        },
+        {
+          "value": "manutenzione",
+          "label": "Manutenzione"
+        },
+        {
+          "value": "impianti",
+          "label": "Impianti"
+        },
+        {
           "value": "altro",
           "label": "Altro settore"
         }
