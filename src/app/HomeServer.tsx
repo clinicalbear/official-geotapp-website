@@ -236,6 +236,24 @@ export default function Home({ locale, jrSlot, fqSlot }: { locale?: string; jrSl
                 {dict.landing.hero_cta_report}
               </a>
             </div>
+            {/* 01/10/2026: "Credibilita' 3/10" nel test dei 5 secondi — sopra la
+                piega non c'era nessuna prova terza, solo le funzioni dichiarate
+                da noi. Stessi dati reali gia' usati piu' in basso in "voci" (le
+                4 recensioni vere, Capterra+Trustpilot): qui solo il numero
+                aggregato, con link a quella sezione. Nascosta su mobile (vedi
+                l-mockup.css): l'hero e' a 100svh e gia' al limite, vedi i
+                commenti su .pnote qui sopra. */}
+            {(() => {
+              const avg = REVIEWS.reduce((s, r) => s + r.rating, 0) / REVIEWS.length;
+              const avgStr = avg.toLocaleString(currentLocale, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+              const rc = REVIEWS_COPY[currentLocale] ?? REVIEWS_COPY.en;
+              return (
+                <a href="#recensioni" className="trustline" data-traccia="trust_badge_click" data-fonte="homepage_hero">
+                  <span aria-hidden="true" className="stars">★★★★★</span>
+                  <span>{rc.aggregateLine.replace('{avg}', avgStr).replace('{count}', String(REVIEWS.length))}</span>
+                </a>
+              );
+            })()}
           </div>
           {/* Il fatto tecnico che regge tutto il resto, a tutta larghezza sotto le
               CTA perche' si veda: la seconda meta' nomina l'autorita' del mercato
@@ -504,7 +522,7 @@ export default function Home({ locale, jrSlot, fqSlot }: { locale?: string; jrSl
       </div></section>
 
       {/* ── voci: le recensioni vere ── */}
-      <section className="rev"><div className="wn">
+      <section id="recensioni" className="rev" style={{ scrollMarginTop: 90 }}><div className="wn">
         <p className="kk k r">{L.chi}</p>
         {(() => {
           const rc = REVIEWS_COPY[currentLocale] ?? REVIEWS_COPY.en;

@@ -812,6 +812,11 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
 .lp-home .pnote i{font-style:normal;color:var(--ink);background:var(--lime);
   width:24px;height:24px;border-radius:50%;display:grid;place-content:center;font-size:13px;font-weight:700;flex:0 0 auto}
 .lp-home .pnote b{color:var(--lime);font-weight:600}
+.lp-home .trustline{display:inline-flex;align-items:center;gap:9px;margin-top:22px;
+  font-size:14px;color:rgba(247,249,252,.78);text-decoration:none;
+  opacity:0;animation:fadeu 1s 2.2s cubic-bezier(.2,.8,.25,1) forwards}
+.lp-home .trustline:hover{color:#fff}
+.lp-home .trustline .stars{color:var(--lime);letter-spacing:1px;font-size:15px}
 @media(max-width:900px){
   /* Su mobile la pillola a riga singola diventava tre righe impilate, alta 158px,
      e finiva sotto il banner cookie: il claim non si vedeva proprio. Qui il testo
@@ -836,6 +841,9 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
   /* Stesso motivo della riga sopra: niente spazio verticale da dare via su
      mobile. La riga pubblico/mestieri resta solo su schermi larghi. */
   .lp-home .op .aud{display:none}
+  /* Stesso budget verticale: niente spazio da dare alla riga di fiducia
+     sotto le CTA, l'hero e' gia' al limite su mobile (vedi sopra). */
+  .lp-home .trustline{display:none}
   .lp-home .pnote{font-size:13.5px;padding:11px 54px 11px 15px}
 }
 .lp-home .b1{background:var(--seal);color:var(--ink);padding:17px 34px;border-radius:99px;font-size:15.5px;font-weight:500; transition:transform .3s cubic-bezier(.2,.8,.25,1),box-shadow .3s}
