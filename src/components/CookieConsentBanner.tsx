@@ -384,9 +384,13 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
             position: 'fixed',
             inset: 0,
             zIndex: 9999,
-            background: 'rgba(11, 23, 54, 0.6)',
-            backdropFilter: 'blur(4px)',
-            WebkitBackdropFilter: 'blur(4px)',
+            // 01/10/2026: era blur(4px) + 0.6 di scurimento, che rendeva la hero
+            // sotto illeggibile anche nei pochi secondi prima della scelta (trovato
+            // nel giro di chiarezza). La scelta resta obbligata uguale (vedi nota
+            // sopra); si vede solo meglio cosa c'e' dietro mentre si decide.
+            background: 'rgba(11, 23, 54, 0.4)',
+            backdropFilter: 'blur(1.5px)',
+            WebkitBackdropFilter: 'blur(1.5px)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',

@@ -113,22 +113,23 @@ export default function SurveyInvite() {
   if (!visible) return null;
   const c = pickCopy();
 
+  // 01/10/2026: era un modale centrale con sfondo scurito a tutto schermo,
+  // che fermava la lettura di qualunque pagina si stesse scorrendo (trovato
+  // nel giro di chiarezza: interrompeva esattamente come il banner cookie).
+  // Il sondaggio resta visibile e cliccabile uguale, ma come scheda in
+  // angolo: non copre il resto della pagina, si chiude allo stesso modo
+  // (X, Esc, o il link), e chi non è interessato continua a leggere sotto.
   return (
-    <>
-      <div
-        onClick={dismiss}
-        style={{ position: 'fixed', inset: 0, background: 'rgba(11,23,54,0.55)', zIndex: 9998 }}
-      />
-      <div
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="survey-modal-title"
-        style={{
-          position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
-          width: 'min(440px, calc(100vw - 32px))', background: '#f7f9fc', borderRadius: 16,
-          overflow: 'hidden', zIndex: 9999, boxShadow: '0 20px 60px rgba(11,23,54,0.25)',
-        }}
-      >
+    <div
+      role="dialog"
+      aria-modal="false"
+      aria-labelledby="survey-modal-title"
+      className="fixed inset-x-4 bottom-4 mx-auto w-[calc(100vw-32px)] sm:inset-x-auto sm:right-4 sm:left-auto sm:mx-0 sm:w-[380px]"
+      style={{
+        background: '#f7f9fc', borderRadius: 16,
+        overflow: 'hidden', zIndex: 9997, boxShadow: '0 12px 36px rgba(11,23,54,0.28)',
+      }}
+    >
         <div style={{
           background: 'linear-gradient(135deg, #66d97a 0%, #46bdc0 50%, #19b5d8 100%)',
           padding: '18px 22px', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
@@ -154,6 +155,5 @@ export default function SurveyInvite() {
           }}>{c.cta}</a>
         </div>
       </div>
-    </>
   );
 }

@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
 
@@ -11,11 +12,25 @@ interface ChatBubbleProps {
 
 export default function ChatBubble({ onClick }: ChatBubbleProps) {
   const locale = getLocaleFromPathname(usePathname()) ?? 'it';
+  // Sotto i 900px la bolla a bottom-28 cade sopra la riga di prova subito
+  // sopra la barra sticky del trial (fatto, audit 01/10/2026): la si mostra
+  // solo dopo il primo scroll, quando quella riga è già sparita dalla vista.
+  // Da 900px in su (md:) la bolla sta più in basso e non copre mai nulla:
+  // lì resta visibile da subito, come prima.
+  const [revealedOnMobile, setRevealedOnMobile] = useState(false);
+  useEffect(() => {
+    if (window.scrollY > 150) { setRevealedOnMobile(true); return; }
+    const onScroll = () => {
+      if (window.scrollY > 150) { setRevealedOnMobile(true); window.removeEventListener('scroll', onScroll); }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
   return (
     <button
       onClick={onClick}
       aria-label={ARIA_OPEN[locale] ?? 'Chat with Kairos'}
-      className="fixed bottom-28 right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary shadow-lg transition-transform hover:scale-110 md:bottom-6 md:right-6"
+      className={`fixed bottom-28 right-4 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary shadow-lg transition-all hover:scale-110 md:bottom-6 md:right-6 md:opacity-100 md:pointer-events-auto ${revealedOnMobile ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
     >
       {/* Hourglass icon - Kairos = god of time */}
       <svg
