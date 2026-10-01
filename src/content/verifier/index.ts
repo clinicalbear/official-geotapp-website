@@ -15,6 +15,7 @@ const map: Partial<Record<AppLocale, () => Promise<{ default: VerifierCopy }>>> 
   fr: () => import('./fr'),
   es: () => import('./es'),
   pt: () => import('./pt'),
+  da: () => import('./da'),
 };
 
 export async function getVerifierCopy(locale: AppLocale): Promise<VerifierCopy> {

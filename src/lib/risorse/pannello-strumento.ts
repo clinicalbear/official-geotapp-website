@@ -58,9 +58,9 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
       p2: 'O gerador pega nos seus dados, no seu logótipo e nas suas respostas e compõe um rascunho de informação em PDF, pronto para o seu consultor afinar e para entregar às equipas. Tudo acontece no seu navegador, e o ponto de partida fica pronto num minuto.',
     },
     da: {
-      title: 'Derfor skal du bruge en oplysningstekst',
+      title: 'Derfor skal du bruge en privatlivsmeddelelse',
       p1: "Registrerer du dine medarbejderes position, om så kun ved indstempling, kræver GDPR's art. 13, at du fortæller dem det skriftligt, før du går i gang: hvem der behandler oplysningerne, med hvilket formål, hvornår positionen registreres, og hvor længe den gemmes. Uden det dokument starter selv det pæneste system allerede med en mangel.",
-      p2: 'Generatoren tager dine oplysninger, dit logo og dine svar og sætter et udkast op som pdf, klar til at din rådgiver finpudser det, og dine hold får det udleveret. Alt sker i din browser, og udgangspunktet står klar på et minut.',
+      p2: 'Generatoren tager dine oplysninger, dit logo og dine svar og sætter et udkast op som pdf, klar til, at din rådgiver kan finpudse det, og dine hold kan få det udleveret. Alt sker i din browser, og udgangspunktet står klar på et minut.',
     },
     sv: {
       title: 'Därför behöver du en informationstext',
@@ -116,7 +116,7 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
     },
     da: {
       title: 'Det fortæller beregneren dig',
-      p1: 'Hvert land straffer gps uden styr på reglerne på sin egen måde: nogle regner procenter af omsætningen, andre giver faste beløb, og det reelle tal afhænger også af, hvor meget du allerede har på plads. Maksimumbeløbene her stammer fra lovene og faktiske afgørelser i 39 lande, efterprøvet ved kilden.',
+      p1: 'Hvert land straffer GPS, der ikke følger reglerne, på sin egen måde: nogle regner procenter af omsætningen, andre giver faste beløb, og det reelle tal afhænger også af, hvor meget du allerede har på plads. Maksimumbeløbene her stammer fra lovene og faktiske afgørelser i 39 lande, efterprøvet ved kilden.',
       p2: 'Vælg landet, sæt hak ved det, du allerede har i orden, og se den højeste bøde, der reelt er givet dér, og den risiko, du har tilbage. Bedre at få det at vide på denne side end i en tilsynsrapport.',
     },
     sv: {
@@ -173,7 +173,7 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
     },
     da: {
       title: 'Derfor skal du stille dig selv spørgsmålene',
-      p1: 'Fremmøde, position, fotos fra pladsen: alt sammen persondata om dine medarbejdere, og efterlevelse er ikke et mærke, man køber én gang, men en række vaner, man har eller ikke har. De ni spørgsmål rammer de steder, hvor virksomheder med hold i marken oftest snubler.',
+      p1: 'Fremmøde, position, fotos fra pladsen: alt sammen persondata om dine medarbejdere, og efterlevelse er ikke et mærke, man køber én gang, men en række vaner, man har eller ikke har. De ni spørgsmål rammer de punkter, hvor virksomheder med hold i marken oftest snubler.',
       p2: 'Svar ærligt: til sidst får du en score, områderne at tage fat på og de tilhørende ressourcer til at rette op. Intet svar forlader din browser, testen arbejder for dig, ikke for os.',
     },
     sv: {
@@ -230,7 +230,7 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
     },
     da: {
       title: 'Det bruger du en opbevaringspolitik til',
-      p1: 'GDPR fortæller dig ikke, hvor længe lønsedler, stempeltider eller attester skal gemmes: Den kræver, at du beslutter det, skriver det ned og holder det. Det hedder opbevaringsbegrænsning, og det er noget af det første, et tilsyn kigger på.',
+      p1: 'GDPR fortæller dig ikke, hvor længe lønsedler, stempeltider eller lægeattester skal gemmes: den kræver, at du beslutter det, skriver det ned og holder det. Det hedder opbevaringsbegrænsning, og det er noget af det første, et tilsyn kigger på.',
       p2: 'Vælg land og de typer personaledata, du håndterer: værktøjet stiller tabellen op med anbefalede frister, en note der begrunder dem, og en pdf til din fortegnelse over behandlinger. For regnskabsbilag gælder lovfristerne i det land, du vælger.',
     },
     sv: {

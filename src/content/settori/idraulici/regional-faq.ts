@@ -12,6 +12,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   es: 'Normativa y documentación en España',
   pt: 'Regras e documentação em Portugal',
   nl: 'Regels en documentatie in Nederland',
+  da: 'Regler og dokumentation i Danmark',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -102,6 +103,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Gas- en watertechniek: erkenningen en keurmerken?',
       a: 'GeoTapp controleert geen erkenningen of keurmerken, ook niet voor gaswerkzaamheden, en maakt geen bewijzen van vakbekwaamheid. Het legt tijd, locatie en foto\'s van elke klus aan sanitaire en gasinstallaties vast, die bij de documentatie van de installatie kunnen worden gevoegd.',
+    },
+  ],
+  da: [
+    {
+      q: 'Timer og opgaver for VVS-installatører?',
+      a: 'GeoTapp registrerer ved hver stempling ind, pauser og ud med position og klokkeslæt, pr. VVS-installatør og pr. sag, og eksporterer dem til Excel eller CSV til din bogholder eller dit lønkontor. Anvendelsen af overenskomsten (tillæg, godtgørelser) og lønbehandlingen forbliver hos bogholderen og virksomheden.',
+    },
+    {
+      q: 'Geolokalisering af VVS-installatører: GDPR og Datatilsynet?',
+      a: 'Positionen registreres kun ved stempling og med bevisfotos, aldrig løbende, og oplysningerne til medarbejderne underskrives i appen, før der stemples. Det er virksomheden, der selv skal undersøge, hvad GDPR (legitim interesse), databeskyttelsesloven og Datatilsynets vejledning kræver i netop jeres tilfælde.',
+    },
+    {
+      q: 'Gasarbejde og autoriserede VVS-installatører?',
+      a: 'GeoTapp verificerer ingen autorisationer, heller ikke til gasarbejde, og laver ingen installationsdokumentation. Det registrerer klokkeslæt, position og fotos af hver opgave på vand- og gasinstallationer, som du kan vedlægge anlæggets dokumentation.',
     },
   ],
   'en-us': [

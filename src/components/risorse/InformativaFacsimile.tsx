@@ -115,8 +115,8 @@ const COPY: Record<InfLocale, Copy> = {
     footer: 'Rascunho gerado gratuitamente com a GeoTapp',
   },
   da: {
-    title: 'Hent den gratis GDPR-skabelon til GPS-privatlivspolitik for {paese}',
-    desc: 'Skabelon til privatlivspolitik for geolokalisering af medarbejdere, i overensstemmelse med GDPR art. 13, med landets retsgrundlag og tilsynsmyndighed. Udfyld de tomme felter, og få den tjekket af din rådgiver.',
+    title: 'Hent den gratis skabelon til privatlivsinformation om GPS for {paese}',
+    desc: 'Skabelon til privatlivsinformation om geolokalisering af medarbejdere, bygget på indholdet, som art. 13 i GDPR kræver, med landets retsgrundlag og tilsynsmyndighed. Udfyld de tomme felter, og lad din rådgiver gennemgå den.',
     download: 'Hent skabelonen (PDF)',
     prompt: 'Vil du også have de næste praktiske guides om GPS og styring af feltteams? Efterlad din e-mail (valgfrit).',
     placeholder: 'Din e-mail',

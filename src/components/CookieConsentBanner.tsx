@@ -159,7 +159,7 @@ const TEXTS: Record<string, Texts> = {
     modalTitle: 'Cookie-præferencer',
     modalIntro: 'Vælg hvilke kategorier du vil aktivere. Du kan ændre mening når som helst.',
     catNecessary: 'Nødvendige',
-    catNecessaryDesc: 'Login, sprog, sikkerhed. Uden disse virker siden ikke.',
+    catNecessaryDesc: 'Sprog, land, sikkerhed. Uden disse virker siden ikke.',
     alwaysOn: 'altid aktive',
     catAnalytics: 'Analyse',
     catAnalyticsDesc: 'Google Analytics: forstå hvilke sider der virker. Anonyme data. Ingen reklamer.',

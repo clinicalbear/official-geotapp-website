@@ -12,6 +12,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   es: 'Normativa y documentación en España',
   pt: 'Regras e documentação em Portugal',
   nl: 'Regels en documentatie in Nederland',
+  da: 'Regler og dokumentation i Danmark',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -102,6 +103,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Verklaringen bij onderaanneming, ketenaansprakelijkheid en G-rekening?',
       a: 'GeoTapp controleert geen lonen en beheert de G-rekening, de ketenaansprakelijkheid of de toets op grond van de WAADI niet. Het legt vast wie wanneer en waar heeft geregistreerd, ook voor de ploegen van onderaannemers, en die historie kunt u aan de opdrachtgever tonen. De verplichtingen rond documentatie blijven bij het bedrijf.',
+    },
+  ],
+  da: [
+    {
+      q: 'Timer og overenskomst på byggepladsen?',
+      a: 'GeoTapp anvender ingen overenskomst og beregner ikke tillæg. Det registrerer timer og fremmøde pr. medarbejder og pr. byggeplads, som kan eksporteres til Excel eller CSV og bruges som grundlag for jeres egne registreringer. Lønbehandling og overenskomstens anvendelse forbliver hos virksomheden og dens bogholder.',
+    },
+    {
+      q: 'Geolokalisering på byggepladsen: GDPR og Datatilsynet?',
+      a: 'Positionen registreres kun ved stempling og med bevisfotos, aldrig løbende, og oplysningerne til medarbejderne underskrives i appen, før der stemples. Det er virksomheden, der selv skal undersøge, hvad GDPR (legitim interesse), databeskyttelsesloven og Datatilsynets vejledning kræver i netop jeres tilfælde.',
+    },
+    {
+      q: 'Underentreprenører og arbejdsmiljø på byggepladsen?',
+      a: 'GeoTapp håndterer ikke arbejdsmiljødokumenter som APV eller planer for byggepladsen og vurderer ikke medarbejdernes egnethed. Det registrerer, hvem der har stemplet, hvor og hvornår på hver byggeplads, også for underentreprenørernes hold, og den historik kan vises til byggeledelsen. Dokumentationspligterne efter arbejdsmiljøloven forbliver hos virksomheden.',
     },
   ],
   'en-us': [

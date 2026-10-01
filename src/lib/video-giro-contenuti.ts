@@ -347,7 +347,7 @@ export const GIRO_CONTENUTI: Record<LinguaGiro, ContenutoGiro> = {
     ],
     chiusa: "Arbejdet efterlader et dokument, som enhver kan kontrollere — også om mange år, uden at spørge os.",
     trascrizione: [
-      { da: 0.3, testo: "Én vagt, optaget live." },
+      { da: 0.3, testo: "Én vagt, optaget, mens den sker." },
       { da: 3.3, testo: "På pladsen åbner ét tryk vagten." },
       { da: 5.514, testo: "Fem sekunder senere viser skærmen på kontoret ham allerede i arbejde." },
       { da: 10.288, testo: "Ingen rørte noget." },

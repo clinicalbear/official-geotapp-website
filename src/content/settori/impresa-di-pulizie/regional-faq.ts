@@ -12,6 +12,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   es: 'Normativa y documentación en España',
   pt: 'Regras e documentação em Portugal',
   nl: 'Regels en documentatie in Nederland',
+  da: 'Regler og dokumentation i Danmark',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -102,6 +103,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Cao Schoonmaak en het minimumloon in de schoonmaak?',
       a: 'GeoTapp berekent geen loon en past de cao voor het schoonmaak- en glazenwassersbedrijf niet toe. Het legt begin, pauzes en einde bij het registreren vast en bewaart uren en aanwezigheid per medewerker, te exporteren als Excel- of CSV-bestand. De toepassing van de regels blijft bij het bedrijf en zijn adviseur. GeoTapp is geen juridisch advies.',
+    },
+  ],
+  da: [
+    {
+      q: 'Hvad skal man bruge til at vise timer og fremmøde i et rengøringsfirma?',
+      a: 'GeoTapp registrerer timer, pauser og afgange pr. medarbejder og pr. sted, med position og klokkeslæt, og eksporterer dem til Excel eller CSV til din bogholder eller dit lønkontor. Tillæg for aften, nat og helligdage, lønbehandling og tilsyn forbliver hos bogholderen og virksomheden, som dermed har en tidsregistrering at tage udgangspunkt i.',
+    },
+    {
+      q: 'Geolokalisering af rengøringsmedarbejdere: GDPR og Datatilsynet?',
+      a: 'Positionen registreres kun ved stempling og med bevisfotos, aldrig løbende, og oplysningerne til medarbejderne underskrives i appen, før der stemples. Det er virksomheden, der selv skal undersøge, hvad GDPR (legitim interesse), databeskyttelsesloven og Datatilsynets vejledning kræver i netop jeres tilfælde.',
+    },
+    {
+      q: 'Hvordan håndteres skift af rengøringsleverandør?',
+      a: 'GeoTapp håndterer hverken virksomhedsoverdragelse eller overførsel af medarbejdere ved skift af leverandør. Det gemmer historikken over timer og fremmøde for hver medarbejder, som kan eksporteres til Excel eller CSV: anvendelsen af overenskomsten forbliver hos bogholderen.',
     },
   ],
   'en-us': [

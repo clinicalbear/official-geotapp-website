@@ -53,10 +53,10 @@ const COPY: Record<string, {
     { title: 'Независимая проверка', sub: 'Клиент проверяет без аккаунта' },
   ], sectors: 'Уборка · Строительство · Охрана · Монтаж · Обслуживание · ОВК' },
   da: { headline: 'Bevis for feltarbejde, som alle kan verificere', claims: [
-    { title: 'Enhver ændring er synlig', sub: 'Kryptografisk segl på hvert job' },
-    { title: 'Ægte GPS-stempling', sub: 'Sted og tid registreret på stedet' },
+    { title: 'Enhver senere ændring kan ses', sub: 'Kryptografisk segl på hver rapport' },
+    { title: 'Stempling med GPS-position', sub: 'Sted og tidspunkt registreret på stedet' },
     { title: 'Uafhængig verificering', sub: 'Kunden tjekker, uden konto' },
-  ], sectors: 'Rengøring · Byggeri · Sikkerhed · Installatører · Vedligeholdelse · VVS' },
+  ], sectors: 'Rengøring · Byggeri · Sikkerhed · Installatører · Vedligeholdelse · Tekniske anlæg' },
   sv: { headline: 'Bevis på fältarbete, verifierbart av vem som helst', claims: [
     { title: 'Varje ändring är synlig', sub: 'Kryptografiskt sigill på varje jobb' },
     { title: 'Äkta GPS-stämpling', sub: 'Plats och tid registreras på plats' },
@@ -80,7 +80,7 @@ export default function TrustBar({ locale }: { locale: string }) {
   return (
     <section
       ref={ref}
-      aria-label={locale === 'nl' ? 'Vertrouwenssignalen' : locale === 'fr' ? 'Points de confiance' : locale === 'es' ? 'Puntos de confianza' : locale === 'pt' ? 'Pontos de confiança' : 'Trust signals'}
+      aria-label={locale === 'nl' ? 'Vertrouwenssignalen' : locale === 'fr' ? 'Points de confiance' : locale === 'es' ? 'Puntos de confianza' : locale === 'pt' ? 'Pontos de confiança' : locale === 'da' ? 'Tillidssignaler' : 'Trust signals'}
       className="r relative overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, #f7f9fc 0%, #f2f4f7 50%, #f7f9fc 100%)',

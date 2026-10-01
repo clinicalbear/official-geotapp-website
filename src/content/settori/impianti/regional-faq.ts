@@ -12,6 +12,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   es: 'Normativa y documentación en España',
   pt: 'Regras e documentação em Portugal',
   nl: 'Regels en documentatie in Nederland',
+  da: 'Regler og dokumentation i Danmark',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -102,6 +103,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Periodieke keuringen van arbeidsmiddelen en installaties?',
       a: 'GeoTapp beheert noch de bekwaamheid van de personen noch de periodieke keuringen van arbeidsmiddelen op grond van het Arbobesluit. Het legt tijd, locatie, foto\'s en notities van elke klus en elke controle vast, die bij de keuringsdocumentatie kunnen worden gevoegd.',
+    },
+  ],
+  da: [
+    {
+      q: 'Timer og sager for teknikere?',
+      a: 'GeoTapp registrerer ved hver stempling ind, pauser og ud med position og klokkeslæt, pr. tekniker og pr. anlæg, og eksporterer dem til Excel eller CSV til din bogholder eller dit lønkontor. Anvendelsen af overenskomsten (tillæg, godtgørelser) og lønbehandlingen forbliver hos bogholderen og virksomheden.',
+    },
+    {
+      q: 'Geolokalisering af teknikere: GDPR og Datatilsynet?',
+      a: 'Positionen registreres kun ved stempling og med bevisfotos, aldrig løbende, og oplysningerne til medarbejderne underskrives i appen, før der stemples. Det er virksomheden, der selv skal undersøge, hvad GDPR (legitim interesse), databeskyttelsesloven og Datatilsynets vejledning kræver i netop jeres tilfælde.',
+    },
+    {
+      q: 'Periodiske lovpligtige eftersyn?',
+      a: 'GeoTapp styrer hverken teknikernes autorisationer eller de periodiske lovpligtige eftersyn. Det registrerer klokkeslæt, position, fotos og noter for hver opgave og hvert eftersyn, som du kan vedlægge eftersynets dokumentation.',
     },
   ],
   'en-us': [

@@ -28,7 +28,7 @@ const COPY: Record<string, Copy> = {
   nl: { title: 'Een korte vraag', body: '2 minuten om ons uw mening te geven over werk in het veld. Anoniem, geen e-mailadres.', cta: 'Doe mee aan de enquête' },
   es: { title: 'Una pregunta rápida', body: '2 minutos para contarnos tu opinión sobre el trabajo de campo. Anónimo, sin correo.', cta: 'Responder la encuesta' },
   pt: { title: 'Uma pergunta rápida', body: '2 minutos para nos dizer o que pensa sobre o trabalho no terreno. Anónimo, sem email.', cta: 'Responder ao inquérito' },
-  da: { title: 'Et hurtigt spørgsmål', body: '2 minutter til din mening om markarbejde. Anonymt, ingen e-mail.', cta: 'Deltag' },
+  da: { title: 'Et hurtigt spørgsmål', body: '2 minutter til at fortælle os, hvad du mener om arbejdet i marken. Anonymt, ingen e-mail.', cta: 'Besvar spørgeskemaet' },
   sv: { title: 'En snabb fråga', body: '2 minuter för din syn på fältarbete. Anonymt, ingen e-post.', cta: 'Delta' },
   nb: { title: 'Et raskt spørsmål', body: '2 minutter for din mening om feltarbeid. Anonymt, ingen e-post.', cta: 'Delta' },
   ru: { title: 'Быстрый вопрос', body: '2 минуты, чтобы поделиться мнением о выездной работе. Анонимно, без почты.', cta: 'Пройти опрос' },
@@ -135,7 +135,7 @@ export default function SurveyInvite() {
         }}>
           <Image src="/LogoGeoTapp.webp" alt="GeoTapp" width={140} height={48}
             style={{ filter: 'brightness(0) invert(1)', height: '36px', width: 'auto' }} />
-          <button onClick={dismiss} aria-label={(() => { const l = (document.documentElement.lang || '').toLowerCase(); return l.startsWith('fr') ? 'Fermer' : l.startsWith('es') ? 'Cerrar' : l.startsWith('pt') ? 'Fechar' : 'Close'; })()} style={{
+          <button onClick={dismiss} aria-label={(() => { const l = (document.documentElement.lang || '').toLowerCase(); return l.startsWith('fr') ? 'Fermer' : l.startsWith('es') ? 'Cerrar' : l.startsWith('pt') ? 'Fechar' : l.startsWith('da') ? 'Luk' : 'Close'; })()} style={{
             background: 'rgba(247,249,252,0.25)', border: 'none', borderRadius: '50%',
             width: 30, height: 30, display: 'flex', alignItems: 'center', justifyContent: 'center',
             color: '#fff', fontSize: 18, cursor: 'pointer', lineHeight: 1,

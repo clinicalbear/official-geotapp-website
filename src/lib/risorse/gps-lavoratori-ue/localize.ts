@@ -15,6 +15,7 @@ import { TESTI_NL } from './traduzioni-nl';
 import { TESTI_FR } from './traduzioni-fr';
 import { TESTI_ES } from './traduzioni-es';
 import { TESTI_PT } from './traduzioni-pt';
+import { TESTI_DA } from './traduzioni-da';
 import { britishToVariant } from '@/lib/i18n/en-spelling';
 
 export function loc(testo: TestoLoc, locale: AppLocale): string {
@@ -24,13 +25,14 @@ export function loc(testo: TestoLoc, locale: AppLocale): string {
 
 function locFallback(testo: TestoLoc, locale: AppLocale): string {
   if (typeof testo === 'string') {
-    // Stringa semplice = italiano. Per le lingue inglesi, per il tedesco, per l'olandese, per il francese, per lo spagnolo e per il portoghese i titoli
-    // delle fonti e i nomi dei contatti hanno la resa in ./traduzioni-en.ts, ./traduzioni-de.ts, ./traduzioni-nl.ts, ./traduzioni-fr.ts, ./traduzioni-es.ts e ./traduzioni-pt.ts.
+    // Stringa semplice = italiano. Per le lingue inglesi, per il tedesco, per l'olandese, per il francese, per lo spagnolo, per il portoghese e per il danese i titoli
+    // delle fonti e i nomi dei contatti hanno la resa in ./traduzioni-en.ts, ./traduzioni-de.ts, ./traduzioni-nl.ts, ./traduzioni-fr.ts, ./traduzioni-es.ts, ./traduzioni-pt.ts e ./traduzioni-da.ts.
     if (locale === 'de') return TESTI_DE[testo] ?? testo;
     if (locale === 'nl') return TESTI_NL[testo] ?? testo;
     if (locale === 'fr') return TESTI_FR[testo] ?? testo;
     if (locale === 'es') return TESTI_ES[testo] ?? testo;
     if (locale === 'pt') return TESTI_PT[testo] ?? testo;
+    if (locale === 'da') return TESTI_DA[testo] ?? testo;
     return locale === 'en' || locale.startsWith('en-') ? (TESTI_EN[testo] ?? testo) : testo;
   }
   return testo[locale] ?? testo.en ?? testo.it;

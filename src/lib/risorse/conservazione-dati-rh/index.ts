@@ -362,14 +362,14 @@ const CONTENUTI: Record<CdLocale, CdContenuto> = {
       { id: 'presenze', nome: 'Fremmøde og stemplinger', durata: 'Ansættelsens varighed + forældelsesfrister for lønkrav (ofte op til 5 år)', nota: 'De dokumenterer arbejdstimer og skyldig løn: perioden følger dit lands forældelsesregler.' },
       { id: 'geolocalizzazione', nome: 'Geolokaliseringsdata', durata: 'Så kort som muligt (vejledende: 12 måneder); helst kun stemplingspunktet, ikke det løbende spor', nota: 'Det er det mest følsomme datum: opbevar det strengt nødvendige og slet, så snart det ikke længere tjener formålet.' },
       { id: 'foto', nome: 'Opgavefotos / arbejdsbevis', durata: 'Så længe det er nødvendigt for tvister eller garanti (vejledende: 12-24 måneder eller kundekontraktens varighed)', nota: 'Behold dem, så længe de tjener som bevis for det udførte arbejde, slet eller anonymiser dem derefter.' },
-      { id: 'comunicazioni', nome: 'Tjenstlig kommunikation (chat, beskeder)', durata: 'Vejledende: 6-12 måneder', nota: 'Undgå at opbevare samtaler ud over den tid, der er nyttig for arbejdets organisering.' },
+      { id: 'comunicazioni', nome: 'Arbejdsrelateret kommunikation (chat, beskeder)', durata: 'Vejledende: 6-12 måneder', nota: 'Undgå at opbevare samtaler ud over den tid, der er nyttig for arbejdets organisering.' },
       { id: 'valutazioni', nome: 'Vurderinger og advarsler', durata: 'Ansættelsens varighed + ankefrister', nota: 'Behold dem kun, hvis de er knyttet til sager eller forpligtelser; slet dem, der ikke længere er relevante.' },
       { id: 'documenti', nome: 'Kontraktdokumenter og lønsedler', durata: 'I henhold til regnskabs- og skatteregler (vejledende: 5-10 år)', nota: 'Perioden fastsættes af dit lands regnskabs-/skattelovgivning.', perPaese: true },
     ],
     faq: { title: 'Ofte stillede spørgsmål', items: [
-      { q: 'Er perioderne bindende?', a: 'Nej, de er vejledende: et fornuftigt udgangspunkt. For regnskabsdokumenter bruger vi loven i det land, du vælger; for resten er princippet at opbevare data i det mindst nødvendige. Tjek altid din konkrete situation.' },
+      { q: 'Er perioderne bindende?', a: 'Nej, de er vejledende: et fornuftigt udgangspunkt. For regnskabsdokumenter bruger vi loven i det land, du vælger; for resten er princippet kun at opbevare data, så længe det er nødvendigt. Tjek altid din konkrete situation.' },
       { q: 'Forbliver mine data private?', a: 'Ja. Tabellen genereres helt i din browser: hverken virksomhedsnavn eller logo sendes til en server.' },
-      { q: 'Hvorfor er det bedre at opbevare mindre?', a: 'Jo længere du opbevarer data, jo større er risikoen ved et brud, og jo sværere er det at begrunde behovet. At slette ved udløb er en del af compliance, ikke et ekstra.' },
+      { q: 'Hvorfor er det bedre at opbevare mindre?', a: 'Jo længere du opbevarer data, jo større er risikoen ved et brud, og jo sværere er det at begrunde behovet. At slette ved udløb hører med til en god databehandling, det er ikke et ekstra.' },
     ] },
   },
   sv: {

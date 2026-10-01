@@ -12,6 +12,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   es: 'Normativa y documentación en España',
   pt: 'Normas e registos em Portugal',
   nl: 'Regels en documentatie in Nederland',
+  da: 'Regler og dokumentation i Danmark',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -102,6 +103,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Erkenningen van installateurs en bewijzen van vakbekwaamheid?',
       a: 'GeoTapp controleert geen diploma\'s of erkenningen van installateurs en houdt geen bewijzen van vakbekwaamheid bij. Het legt tijd, locatie, foto\'s en notities van elke klus vast, die bij de documentatie van de installatie kunnen worden gevoegd.',
+    },
+  ],
+  da: [
+    {
+      q: 'Timer og rejser i installationsvirksomheden?',
+      a: 'GeoTapp registrerer ved hver stempling ind, pauser og ud med position og klokkeslæt, pr. tekniker og pr. sag, og eksporterer dem til Excel eller CSV til din bogholder eller dit lønkontor. Anvendelsen af overenskomsten (tillæg, godtgørelser) og lønbehandlingen forbliver hos bogholderen og virksomheden.',
+    },
+    {
+      q: 'Geolokalisering af installatører: GDPR og Datatilsynet?',
+      a: 'Positionen registreres kun ved stempling og med bevisfotos, aldrig løbende, og oplysningerne til medarbejderne underskrives i appen, før der stemples. Det er virksomheden, der selv skal undersøge, hvad GDPR (legitim interesse), databeskyttelsesloven og Datatilsynets vejledning kræver i netop jeres tilfælde.',
+    },
+    {
+      q: 'Autorisationer og dokumentation af installationen?',
+      a: 'GeoTapp verificerer ingen autorisationer og laver ingen installationsdokumentation eller overensstemmelseserklæringer. Det registrerer klokkeslæt, position, fotos og noter for hver opgave, som du kan vedlægge anlæggets dokumentation.',
     },
   ],
   'en-us': [

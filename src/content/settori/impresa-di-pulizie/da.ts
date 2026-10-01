@@ -2,205 +2,214 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App til Rengøringsfirma: GPS-Teamstyring & Servicebevis | GeoTapp',
+    title: 'App til rengøringsfirmaer: hold med GPS | GeoTapp',
     description:
-      'Styr rengøringsteams, vagtplaner og fremmøde med GPS-stemplinger. Automatisk servicebevis, færre kundetvister. App bygget til at holde sig inden for GDPR.',
+      'Styr hold, vagter og fremmøde med GPS-stemplinger. Servicebeviser, der laves automatisk, når en kunde bestrider noget. App bygget med GDPR for øje.',
   },
 
   hero: {
     badge: 'App til rengøringsfirmaer og multiservice',
     h1_line1: 'Dit rengøringsfirma,',
-    h1_line2: 'styret ved hver stempling.',
+    h1_line2: 'styret, stempling efter stempling.',
     subtitle:
-      'GPS-stempling, automatisk servicebevis og vagtstyring i én app. Ingen regneark, færre tvister. Kunden klager? Send rapporten, og diskussionen afklares med det samme.',
+      'GPS-stemplinger, automatiske servicebeviser og vagtstyring i én app. Ingen regneark, færre tvister. Bestrider kunden noget? Send rapporten i stedet for at diskutere.',
     cta_primary: 'Prøv det på en rigtig kontrakt',
-    cta_note: '14 dage, op til 50 medarbejdere i marken, uden kreditkort.',
+    cta_note: '14 dage, op til 50 medarbejdere i felten, uden kreditkort.',
   },
 
   pain: {
     title: 'Problemer vi løser hver dag',
     items: [
       {
-        title: 'Kunder bestrider de arbejdede timer?',
-        desc: 'Hver stempling er GPS-verificeret og tidsstemplet. Send rapporten, og diskussionen afklares på tredive sekunder.',
+        title: 'Bestrider kunderne de arbejdede timer?',
+        desc: 'Hver stempling registrerer position og klokkeslæt. Send rapporten, og kunden kan selv verificere den.',
       },
       {
-        title: 'Papirtimesedler er upålidelige?',
-        desc: 'Automatisk registrering fra smartphonen, ingen manuelle indtastninger. Dataene forsegles automatisk, og enhver ændring forbliver synlig.',
+        title: 'Er papirtimesedlerne upålidelige?',
+        desc: 'Stemplinger fra smartphonen, uden noget indtastet i hånden. Data står, som de blev registreret: enhver ændring kan opdages.',
       },
       {
-        title: 'Svært at koordinere flere teams?',
-        desc: 'Se, så snart der stemples, hvor alle er, på alle lokationer, fra ét dashboard. Ingen opkald.',
+        title: 'Er det svært at koordinere flere hold?',
+        desc: 'Du ser, hvem der har stemplet, og hvor, på alle steder, i ét dashboard. Ingen telefonopkald.',
       },
     ],
   },
 
   prima_dopo: {
-    title: 'Hvad der sker nu. Hvad der sker med GeoTapp.',
+    title: 'Sådan er det nu. Sådan er det med GeoTapp.',
     prima: [
-      'Kunden ringer og siger, at badeværelset ikke er gjort rent.',
-      'Rengøringsmedarbejderen siger "Det har jeg gjort". Kunden siger "Nej, det har du ikke".',
-      'Du har intet at bevise noget med.',
+      'Kunden ringer og siger, at toilettet ikke er blevet gjort rent.',
+      'Medarbejderen siger: «Det har jeg gjort.» Kunden siger: «Nej, det har du ikke.»',
+      'Du har intet i hånden til at bevise noget.',
       'Diskussionen trækker ud i dagevis. Nogle gange mister du kontrakten.',
     ],
     dopo: [
-      'Kunden ringer og siger, at badeværelset ikke er gjort rent.',
-      'Du åbner opgaverapporten: foto af det rene badeværelse, tidspunkt, GPS.',
-      'Du sender den. Diskussionen afklares på tredive sekunder.',
-      'Kontrakten er sikker. Medarbejderen er beskyttet.',
+      'Kunden ringer og siger, at toilettet ikke er blevet gjort rent.',
+      'Du åbner rapporten for opgaven: foto af det rene toilet, klokkeslæt, position.',
+      'Du sender den til kunden, og kunden verificerer den selv.',
+      'Du har noget at vise. Medarbejderen har også noget i hånden.',
     ],
   },
 
   workflow: {
-    title: 'Sådan virker det',
-    subtitle: 'Tre enkle trin. Nul papir. Nul opkald.',
+    title: 'Sådan fungerer det',
+    subtitle: 'Tre enkle trin. Intet papir. Ingen opkald.',
     steps: [
       {
-        title: 'Medarbejderen stempler med GPS',
-        desc: 'Åbner og lukker vagten fra sin smartphone. GeoTapp registrerer ægte GPS-koordinater, fotos og tidsstempel, fuldautomatisk; enhver ændring forbliver synlig.',
+        title: 'Medarbejderen stempler ind på stedet',
+        desc: 'Åbner og lukker vagten fra smartphonen. GeoTapp registrerer position og klokkeslæt i det øjeblik og, hvis det er nødvendigt, bevisfotos. Mellem to stemplinger registreres der intet automatisk.',
       },
       {
-        title: 'Lederen ser det, så snart der stemples',
-        desc: 'Ét dashboard for alle lokationer. Vid præcis hvem der er på stedet, hvor og siden hvornår, uden at jage nogen.',
+        title: 'Lederen ser hver stempling, så snart den kommer',
+        desc: 'Ét dashboard for alle steder. Du ser, hvem der har stemplet, hvor og hvornår, uden at jagte nogen.',
       },
       {
         title: 'Rapporten er klar automatisk',
-        desc: 'Ved vagtens afslutning genererer systemet en forseglet rapport med GPS, fotos og digital signatur. Send den til kunden, uafhængigt verificerbar.',
+        desc: 'Ved vagtens afslutning laver systemet en forseglet rapport med GPS, fotos og kryptografisk segl. Send den til kunden, som selv kan verificere den.',
       },
     ],
   },
 
   differenza: {
-    title: 'Stempling vs Servicebevis.',
-    subtitle: 'De fleste apps registrerer tider. GeoTapp producerer beviser for din kunde.',
+    title: 'Stempling eller servicebevis.',
+    subtitle: 'De fleste apps registrerer klokkeslæt. GeoTapp producerer beviser til din kunde.',
     rows: [
       {
-        label: 'Hvad det registrerer',
-        competitor: 'Ind-/udstemplingstid',
-        geotapp: 'Tid + verificeret GPS + fotos + udførte opgaver',
+        label: 'Hvad registreres',
+        competitor: 'Ind- og udstemplingstidspunkt',
+        geotapp: 'Klokkeslæt + position ved stemplingen + fotos + udført arbejde',
       },
       {
         label: 'Hvem kan verificere',
         competitor: 'Kun dit kontor',
-        geotapp: 'Dig, kunden, en tredjepart, selvstændigt',
+        geotapp: 'Dig selv, kunden eller en tredjepart, uafhængigt',
       },
       {
-        label: 'Ved tvister',
-        competitor: 'Data ikke forsvarlige',
-        geotapp: 'Forseglet rapport, enhver ændring synlig',
+        label: 'Ved uenighed',
+        competitor: 'Kun dit ord',
+        geotapp: 'Forseglet rapport, enhver ændring kan opdages',
       },
       {
-        label: 'Fotodokumentation',
-        competitor: 'Manglende eller frakoblet',
-        geotapp: 'Vedhæftet rapport med tidsstempel og GPS',
+        label: 'Fotobevis',
+        competitor: 'Fraværende eller løsrevet',
+        geotapp: 'Vedlagt rapporten med tidsstempel og GPS',
       },
       {
-        label: 'GDPR-overholdelse',
-        competitor: 'Ofte at kontrollere',
-        geotapp: 'Bygget til at holde sig inden for GDPR, formularer inkluderet',
+        label: 'GDPR',
+        competitor: 'Ofte uafklaret',
+        geotapp: 'Bygget til at holde sig inden for rammerne af GDPR, blanketter inkluderet',
       },
     ],
   },
 
   features: {
-    title: 'App til rengøringsfirma: servicebevis, ikke bare stempling.',
+    title: 'App til rengøringsfirmaer: servicebeviser, ikke kun stemplinger.',
     items: [
       {
-        title: 'Automatisk servicebevis',
-        desc: 'Hver afsluttet opgave genererer en rapport med GPS, fotos og tidsstempel. Kunden modtager den og verificerer selvstændigt.',
+        title: 'Automatiske servicebeviser',
+        desc: 'Hver afsluttet opgave laver en rapport med GPS, fotos og tidsstempel. Kunden modtager den og verificerer den selv, uden adgang til dit system.',
       },
       {
-        title: 'Reel kontrol over alle lokationer',
-        desc: 'Se, så snart der stemples, hvem der er aktiv hvor, på alle bygninger samtidig. Ingen opkald, ingen e-mails.',
+        title: 'Overblik over alle steder',
+        desc: 'Du ser, hvem der har stemplet, og hvor, i alle bygninger, efterhånden som hver stempling kommer. Ingen opkald, ingen e-mails. Mellem to stemplinger registreres der intet automatisk.',
       },
       {
-        title: 'Forsvarlige rapporter overalt',
-        desc: 'Hver rapport er digitalt signeret og enhver ændring kan spores. En kunde, en inspektør eller en advokat kan selv kontrollere den.',
+        title: 'Rapporter, som alle kan verificere',
+        desc: 'Hver rapport er forseglet, og enhver ændring kan opdages. En kunde, en inspektør eller en advokat kan verificere den uafhængigt.',
       },
       {
-        title: 'Vagt- og teamstyring',
-        desc: 'Tildel vagter, styr opgaver og modtag automatiske advarsler, hvis en opgave ikke åbnes eller lukkes til tiden.',
+        title: 'Styring af vagter og hold',
+        desc: 'Tildel vagter, styr kontrakter, og få en advarsel, hvis en vagt står åben.',
       },
       {
         title: 'Fotodokumentation',
-        desc: 'Medarbejdere tager fotos direkte fra appen. Hvert billede er geotagget med tidsstempel, visuelt bevis for det udførte arbejde.',
+        desc: 'Medarbejderne tager fotos direkte fra appen. Hvert billede har klokkeslæt og position: et visuelt bevis på det udførte arbejde.',
       },
       {
-        title: 'Dit personale er beskyttet',
-        desc: 'En verificerbar rapport beskytter også medarbejderen mod grundløse anklager. Godt arbejde bevises af data.',
+        title: 'Dine medarbejdere er beskyttet',
+        desc: 'En verificerbar rapport giver også medarbejderen noget at svare med på ubegrundede beskyldninger. Den, der arbejder godt, viser det med data.',
       },
     ],
   },
 
   testimonial: {
     quote:
-      'Siden vi begyndte at bruge GeoTapp, løses kundetvister på et minut. Vi sender rapporten med fotos og GPS, og diskussionen afklares med det samme. Vi mister sjældent en kontrakt nu.',
-    author: 'Susanne M.',
-    role: 'Ejer, erhvervsrengøringsfirma - Danmark',
+      'Når en kunde bestrider en opgave, sender vi rapporten med fotos og position, og kunden verificerer den selv.',
+    author: 'Rosa M.',
+    role: 'Indehaver, rengøringsfirma',
   },
 
   faq: {
     title: 'Ofte stillede spørgsmål',
-    subtitle: 'Det vi oftest bliver spurgt om før start.',
+    subtitle: 'Det, vi oftest bliver spurgt om, før man går i gang.',
     items: [
       {
-        q: 'Hvordan virker GPS-stempling for rengøringsfirmaer?',
-        a: 'Medarbejderen stempler ind og ud fra sin smartphone. GeoTapp registrerer GPS-koordinaterne i det øjeblik, ikke indtastet manuelt. Hver stempling er forseglet med tidsstempel og position verificerbar af kunden.',
+        q: 'Hvordan fungerer GPS-stempling for rengøringsfirmaer?',
+        a: 'Medarbejderen stempler ind og ud fra smartphonen. GeoTapp registrerer GPS-positionen i det øjeblik, og den er ikke indtastet i hånden. Hver stempling indgår i den forseglede rapport med tidsstempel og position, som kunden kan verificere.',
       },
       {
-        q: 'Kan jeg bevise over for kunden, at servicen blev udført?',
-        a: 'Ja. GeoTapp genererer automatisk en forseglet rapport med GPS, fotos og tidsstempel efter hver opgave. Kunden modtager den og verificerer selvstændigt.',
+        q: 'Kan jeg bevise over for kunden, at opgaven er udført?',
+        a: 'Ja. GeoTapp laver automatisk en forseglet rapport med GPS, fotos og tidsstempel, når opgaven er færdig. Kunden modtager den og verificerer den selv, uden adgang til dit system.',
       },
       {
-        q: 'Er GeoTapp GDPR-kompatibel til GPS-registrering af medarbejdere?',
-        a: 'Ja, GeoTapp er bygget til at holde sig inden for GDPR: det sporer kun placering i aktiv arbejdstid, inkluderer skabeloner til medarbejderinformation og indsamler ikke unødvendige data.',
+        q: 'Er GeoTapp bygget til at holde sig inden for GDPR ved geolokalisering af medarbejdere?',
+        a: 'GeoTapp er bygget til at holde sig inden for rammerne af databeskyttelsesreglerne (GDPR): det registrerer kun positionen, når medarbejderen stempler (start, pause, slut) eller tager et bevisfoto, lader medarbejderne underskrive oplysningerne i appen før den første stempling og indsamler ingen unødvendige data. Mellem to stemplinger registreres der intet automatisk.',
       },
       {
-        q: 'Hvordan styrer jeg teams på flere lokationer samtidig?',
-        a: 'Med GeoTapp Flow har du ét dashboard for alle lokationer. Se, så snart der stemples, hvem der er aktiv hvor, tildel opgaver og modtag automatiske advarsler.',
+        q: 'Hvordan styrer jeg hold fordelt på flere steder på samme tid?',
+        a: 'Med GeoTapp Flow har du ét dashboard for alle steder. Du ser, hvem der har stemplet, og hvor, kan tildele kontrakter og få en advarsel, hvis en vagt står åben.',
       },
       {
         q: 'Er papirtimesedler stadig nødvendige?',
-        a: 'Nej. GeoTapp erstatter papirtimesedler fuldstændigt med automatisk GPS-registrering fra smartphones. Data kan eksporteres til lønbehandling.',
+        a: 'Nej. GeoTapp erstatter papirtimesedlerne med stemplinger fra smartphonen. Data kan eksporteres til Excel eller CSV til lønbehandlingen.',
       },
       {
         q: 'Hvad koster GeoTapp for et rengøringsfirma?',
-        a: 'Planerne starter fra få euro per medarbejder per måned. Prøv gratis i 14 dage, uden binding.',
+        a: 'GeoTapp Flow starter ved 39 € om måneden; hver medarbejder med TimeTracker-appen koster 3 € om måneden ekstra (2,50 € fra den 26. plads). Abonnementet har en mindste varighed på 12 måneder. Priserne er ekskl. moms. Du kan prøve gratis i 14 dage, uden kreditkort.',
+      },
+      {
+        q: 'GPS-sporer GeoTapp medarbejderne?',
+        a: 'Der er ingen løbende sporing. Medarbejderen stempler ind og ud fra smartphonen, og hver stempling knyttes til en GPS-position og et tidsstempel, som registreres i det øjeblik (start, pause, slut) og når der tages et bevisfoto. Det er en position, der skal vise fremmøde, ikke overvågning: mellem to stemplinger registreres der intet automatisk, og appen beder ikke om tilladelse til position i baggrunden.',
       },
     ],
   },
 
   cta: {
-    title: 'Dine medarbejdere gør godt arbejde. Sørg for, at kunden ser det.',
+    title: 'Dine medarbejdere arbejder godt. Sørg for, at kunden kan se det.',
     subtitle:
-      'Hver opgave bliver til verificerbart servicebevis, med færre tvister og færre tabte kontrakter.',
-    primary: 'Start gratis nu!',
-    secondary: 'Se Priser',
+      'Hver opgave bliver til en rapport, du kan vise, og som kunden selv kan verificere.',
+    primary: 'Start gratis prøveperiode',
+    secondary: 'Se priserne',
   },
 
   pricing_hint: {
-    label: 'Fra',
-    per: 'medarbejder/måned',
-    note: '14 dages gratis prøveperiode',
+    label: 'TimeTracker-pladser fra',
+    per: 'pr. medarbejder om måneden, plus Flow-planen fra 39 € om måneden (ekskl. moms)',
+    note: 'Gratis prøveperiode i 14 dage',
   },
 
   schema_sector_name: 'Rengøringsfirma',
 
   schema_faq: [
     {
-      question: 'Hvordan virker GPS-stempling for rengøringsfirmaer?',
+      question: 'Hvordan fungerer GPS-stempling for rengøringsfirmaer?',
       answer:
-        'Medarbejderen stempler fra sin smartphone. GeoTapp registrerer GPS-koordinater, ikke manuelt indtastet. Hver stempling er forseglet med tidsstempel og position verificerbar af kunden.',
+        'Medarbejderen stempler ind og ud fra smartphonen. GeoTapp registrerer GPS-positionen i det øjeblik, og den er ikke indtastet i hånden. Hver stempling indgår i den forseglede rapport med tidsstempel og position, som kunden kan verificere.',
     },
     {
-      question: 'Kan jeg bevise over for kunden, at servicen blev udført?',
+      question: 'Kan jeg bevise over for kunden, at opgaven er udført?',
       answer:
-        'Ja. GeoTapp genererer automatisk en forseglet rapport med GPS, fotos og tidsstempel. Kunden modtager den og verificerer selvstændigt.',
+        'Ja. GeoTapp laver automatisk en forseglet rapport med GPS, fotos og tidsstempel. Kunden modtager den og verificerer den selv.',
     },
     {
-      question: 'Er GeoTapp GDPR-kompatibel til GPS-registrering af medarbejdere?',
+      question: 'Er GeoTapp bygget til at holde sig inden for GDPR ved geolokalisering af medarbejdere?',
       answer:
-        'Ja, GeoTapp er bygget til at holde sig inden for GDPR: det sporer kun placering i aktiv arbejdstid, inkluderer skabeloner til medarbejderinformation og indsamler ikke unødvendige data.',
+        'GeoTapp er bygget til at holde sig inden for rammerne af databeskyttelsesreglerne (GDPR): det registrerer kun positionen, når medarbejderen stempler (start, pause, slut) eller tager et bevisfoto, lader medarbejderne underskrive oplysningerne i appen før den første stempling og indsamler ingen unødvendige data. Mellem to stemplinger registreres der intet automatisk.',
+    },
+    {
+      question: 'GPS-sporer GeoTapp medarbejderne?',
+      answer:
+        'Der er ingen løbende sporing. Medarbejderen stempler ind og ud fra smartphonen, og hver stempling knyttes til en GPS-position og et tidsstempel, som registreres i det øjeblik (start, pause, slut) og når der tages et bevisfoto. Mellem to stemplinger registreres der intet automatisk.',
     },
   ],
 };

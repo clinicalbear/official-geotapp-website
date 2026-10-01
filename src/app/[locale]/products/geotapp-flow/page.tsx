@@ -24,7 +24,7 @@ const flowMeta: Record<string, { title: string; description: string }> = {
   nl: { title: 'GeoTapp Flow - Operationeel beheer van klussen en teams', description: 'De webapp van het kantoor voor bedrijven met monteurs in het veld: klanten, opdrachten, teams, diensten, facturen en verzegelde rapporten die de klant zelf controleert.' },
   pt: { title: 'GeoTapp Flow - Gestão de intervenções e equipas', description: 'A aplicação web do escritório para empresas com técnicos no terreno: obras, equipas, faturas e relatórios selados que o cliente verifica sozinho.' },
   sv: { title: 'GeoTapp Flow - Operativ Hantering av Interventioner', description: 'GeoTapp Flow är det operativa systemet för företag med fälttekniker. Hantera uppdrag, tilldela uppgifter och skapa verifierbara rapporter.' },
-  da: { title: 'GeoTapp Flow - Operationel Håndtering af Interventioner', description: 'GeoTapp Flow er det operative system for virksomheder med serviceteknikere. Administrer opgaver, tildel arbejde og generer verificerbare rapporter.' },
+  da: { title: 'GeoTapp Flow - Styring af opgaver og hold i marken', description: 'Kontorets webapp til virksomheder med teknikere i marken: kunder, opgaver, hold, vagter, fakturaer og forseglede rapporter, som kunden selv kan verificere.' },
   nb: { title: 'GeoTapp Flow - Operativ Håndtering av Intervensjoner', description: 'GeoTapp Flow er det operative systemet for bedrifter med serviceteknikere. Administrer oppdrag, tildel oppgaver og generer verifiserbare rapporter.' },
   ru: { title: 'GeoTapp Flow, Оперативное Управление Интервенциями', description: 'GeoTapp Flow, операционная система для компаний с выездными техниками. Управляйте заказами, назначайте задачи и формируйте проверяемые отчёты.' },
 };
@@ -152,6 +152,20 @@ const FLOW_FAQ: Record<string, object> = {
       { '@type': 'Question', name: 'Hoe wijs ik opdrachten toe aan teams met GeoTapp Flow?', acceptedAnswer: { '@type': 'Answer', text: 'U maakt de opdracht aan op kantoor, wijst de monteur of het team toe, en de medewerker vindt hem in de TimeTracker-app. Is de klus afgesloten, dan komt het rapport terug in Flow, al te controleren, zonder iemand achterna te hoeven zitten om te weten hoe het is gegaan.' } },
     ],
   },
+  da: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Hvad er GeoTapp Flow?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp Flow er kontorets webapp til virksomheder med teknikere i marken. Du kan oprette opgaver, tildele arbejde, følge fremdriften og sende kunden forseglede rapporter, som kunden selv kan verificere.' } },
+      { '@type': 'Question', name: 'Hvad sker der, hvis der ikke er net?', acceptedAnswer: { '@type': 'Answer', text: 'Flow, kontorets panel, bruges i browseren og kræver forbindelse. I TimeTracker, teknikernes app, bliver stemplingen gemt på telefonen, hvis der ikke er net, og sendes af sig selv, når signalet vender tilbage, med det klokkeslæt, den blev foretaget på.' } },
+      { '@type': 'Question', name: 'Kan GeoTapp Flow kobles til andre administrationsprogrammer?', acceptedAnswer: { '@type': 'Answer', text: 'Ja: Flow eksporterer data til fakturering og lønbehandling (Excel/CSV) og kan kobles til Fatture in Cloud. Til andre administrationsprogrammer vurderes en integration efter aftale.' } },
+      { '@type': 'Question', name: 'Hvor mange teknikere kan GeoTapp Flow administrere?', acceptedAnswer: { '@type': 'Answer', text: 'Fra planen Solo med én bruger på kontoret til planen Business med ubegrænsede hold på flere arbejdssteder. TimeTracker-pladserne til medarbejderne kommer til særskilt, afhængigt af planen.' } },
+      { '@type': 'Question', name: 'Kan kunden stole på rapporterne fra Flow?', acceptedAnswer: { '@type': 'Answer', text: 'Kunden behøver ikke stole på dem: kunden kan kontrollere dem. GeoTapp-rapporter er forseglet kryptografisk, og kunden kontrollerer selv, at de er uændrede, med GeoTapp Verifier, uden adgang til din konto. Kontrollen viser, om dokumentet er blevet ændret; i sig selv er den hverken et absolut bevis for det faktiske forhold eller juridisk rådgivning.' } },
+      { '@type': 'Question', name: 'Viser GeoTapp Flow, hvor teknikerne er?', acceptedAnswer: { '@type': 'Answer', text: 'Nej, og det er ikke en forglemmelse. Positionen registreres kun, når teknikeren stempler (start, pauser, slut) eller tager et bevisfoto, aldrig løbende: Flow fortæller dig, at arbejdet startede det rigtige sted og hvornår, men lader dig ikke følge en prik på et kort hele dagen. Det er forskellen på dokumentation af arbejdet og overvågning.' } },
+      { '@type': 'Question', name: 'Til hvilke virksomheder er GeoTapp Flow lavet?', acceptedAnswer: { '@type': 'Answer', text: 'Til virksomheder med hold, der arbejder uden for kontoret: rengøring, vagtselskaber, vedligeholdelse, installatører, elektrikere, blikkenslagere og multiservicefirmaer. Hvis dine medarbejdere tilbringer dagen i marken og ikke på kontoret, er Flow lavet til dig.' } },
+      { '@type': 'Question', name: 'Hvordan tildeler jeg opgaver til hold i GeoTapp Flow?', acceptedAnswer: { '@type': 'Answer', text: 'Du opretter opgaven fra kontoret, tildeler teknikeren eller holdet, og medarbejderen finder den i TimeTracker-appen. Når opgaven er afsluttet, kommer rapporten tilbage i Flow, allerede verificerbar, uden at du skal løbe nogen efter for at høre, hvordan det gik.' } },
+    ],
+  },
 };
 
 const FLOW_DESCRIPTION: Record<string, string> = {
@@ -162,7 +176,7 @@ const FLOW_DESCRIPTION: Record<string, string> = {
   es: 'GeoTapp Flow es la aplicación web de la oficina para empresas con técnicos sobre el terreno: crea obras, asigna tareas, sigue el avance y envía al cliente informes sellados que verifica por sí mismo.',
   nl: 'GeoTapp Flow is het operationele systeem voor bedrijven met monteurs in het veld: maak opdrachten aan, wijs taken toe, volg de voortgang en maak verzegelde, controleerbare rapporten.',
   pt: 'O GeoTapp Flow é a aplicação web do escritório para empresas com técnicos no terreno: crie obras, atribua tarefas, acompanhe o avanço e envie ao cliente relatórios selados que este verifica sozinho.',
-  da: 'GeoTapp Flow er den operationelle administrationsplatform til virksomheder med serviceteknikere: opret opgaver, tildel arbejde, overvåg fremskridt og generér forseglede, verificerbare rapporter i realtid.',
+  da: 'GeoTapp Flow er kontorets webapp til virksomheder med teknikere i marken: opret opgaver, tildel arbejde, følg fremdriften og send kunden forseglede rapporter, som kunden selv kan verificere.',
   sv: 'GeoTapp Flow är den operativa hanteringsplattformen för företag med fälttekniker: skapa uppdrag, tilldela uppgifter, övervaka framsteg och generera förseglade, verifierbara rapporter i realtid.',
   nb: 'GeoTapp Flow er den operative administrasjonsplattformen for bedrifter med serviceteknikere: opprett oppdrag, tildel oppgaver, overvåk fremdrift og generer forseglede, verifiserbare rapporter i sanntid.',
   ru: 'GeoTapp Flow, операционная платформа управления для компаний с выездными техниками: создавайте заказы, назначайте задачи, отслеживайте прогресс и формируйте запечатанные проверяемые отчёты в реальном времени.',
@@ -239,6 +253,16 @@ const FLOW_FEATURES: Record<string, string[]> = {
     'Export van gegevens voor facturering en salarissen',
     'Gebouwd met het oog op de AVG, GPS-privacyverklaring digitaal ondertekend',
   ],
+  da: [
+    'Styring af opgaver og indsatser på flere arbejdssteder',
+    'Opgavetildeling til teknikere i marken',
+    'Arbejdets fremdrift fulgt trin for trin',
+    'Kryptografisk forseglede rapporter, der kan verificeres uafhængigt',
+    'Bevisfotos med tidspunkt og position',
+    'Indbygget integration med GeoTapp TimeTracker og Verifier',
+    'Dataeksport til fakturering og lønbehandling',
+    'GPS-information, der i appen bekræftes som læst, før den første stempling',
+  ],
 };
 
 function buildFlowSoftware(locale: AppLocale) {
@@ -289,6 +313,8 @@ function buildFlowSoftware(locale: AppLocale) {
         ? `Prueba gratuita de 14 días. Planes de pago desde ${soloMonthly.formatted} al mes (Flow Solo), IVA no incluido.`
         : locale === 'pt'
         ? `Teste gratuito de 14 dias. Planos pagos a partir de ${soloMonthly.formatted} por mês (Flow Solo), IVA não incluído.`
+        : locale === 'da'
+        ? `14 dages gratis prøveperiode. Betalte planer fra ${soloMonthly.formatted} om måneden (Flow Solo), ekskl. moms.`
         : `14-day free trial. Paid plans from ${soloMonthly.formatted} per month (Flow Solo).`,
     },
     publisher: { '@id': 'https://geotapp.com/#organization' },

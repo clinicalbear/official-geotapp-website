@@ -39,6 +39,7 @@ const YES_NO: Record<string, [string, string]> = {
   es: ['Sí', 'No'],
   nl: ['Ja', 'Nee'],
   pt: ['Sim', 'Não'],
+  da: ['Ja', 'Nej'],
 };
 
 export function DynamicComparison({ locale, copy, initialId }: Props) {

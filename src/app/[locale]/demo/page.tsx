@@ -10,7 +10,7 @@ const DEMO_META: Record<string, { title: string; description: string }> = {
   pt: { title: 'Agende uma demo gratuita do GeoTapp, 30 minutos | GeoTapp', description: 'Veja como o GeoTapp reduz as contestações sobre as horas e torna cada intervenção verificável. Demo gratuita de 30 minutos com a nossa equipa.' },
   nl: { title: 'Boek een gratis GeoTapp-demo, 30 minuten | GeoTapp', description: 'Ontdek hoe GeoTapp geschillen over uren voorkomt en elke klus gedocumenteerd maakt. Gratis demo van 30 minuten met ons team.' },
   ru: { title: 'Записаться на бесплатное демо GeoTapp, 30 минут | GeoTapp', description: 'Узнайте, как GeoTapp устраняет споры по часам и делает каждый выезд верифицируемым. Бесплатное 30-минутное демо.' },
-  da: { title: 'Book Gratis GeoTapp Demo, 30 Minutter | GeoTapp', description: 'Se hvordan GeoTapp stopper timetvister og gør hvert feltjob verificerbart. Gratis 30-minutters demo.' },
+  da: { title: 'Book en gratis GeoTapp-demo, 30 minutter | GeoTapp', description: 'Se, hvordan GeoTapp får færre tvister om timerne og gør hver opgave dokumenteret. Gratis demo på 30 minutter med vores team.' },
   sv: { title: 'Boka Gratis GeoTapp Demo, 30 Minuter | GeoTapp', description: 'Se hur GeoTapp stoppar arbetstidstvister och gör varje fältuppdrag verifierbart. Gratis 30-minuters demo.' },
   nb: { title: 'Bestill Gratis GeoTapp Demo, 30 Minutter | GeoTapp', description: 'Se hvordan GeoTapp stopper timekonflikter og gjør hvert feltoppdrag verifiserbart. Gratis 30-minutters demo.' },
 };

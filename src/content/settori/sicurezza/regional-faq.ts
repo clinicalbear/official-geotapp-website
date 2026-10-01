@@ -12,6 +12,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   es: 'Normativa y documentación en España',
   pt: 'Normas e registos em Portugal',
   nl: 'Regels en documentatie in Nederland',
+  da: 'Regler og dokumentation i Danmark',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -102,6 +103,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Vergunning en legitimatiebewijs volgens de Wpbr?',
       a: 'GeoTapp beheert geen vergunningen, legitimatiebewijzen of opleidingseisen op grond van de Wet particuliere beveiligingsorganisaties en recherchebureaus (Wpbr) en doet geen meldingen aan autoriteiten. Het legt vast wie wanneer en waar voor elke dienst heeft geregistreerd, en die historie kunt u aan de klant tonen.',
+    },
+  ],
+  da: [
+    {
+      q: 'Vagter og timer for vagtselskaber?',
+      a: 'GeoTapp registrerer ved hver stempling ind, pauser og ud pr. vagt og pr. opgave, med position og klokkeslæt, og eksporterer dem til Excel eller CSV til din bogholder eller dit lønkontor. Anvendelsen af overenskomsten (tillæg for nat og helligdage) og lønbehandlingen forbliver hos bogholderen og virksomheden.',
+    },
+    {
+      q: 'Geolokalisering af vagter: GDPR og Datatilsynet?',
+      a: 'Positionen registreres kun ved stempling og med bevisfotos, aldrig løbende, og oplysningerne til medarbejderne underskrives i appen, før der stemples. Det er virksomheden, der selv skal undersøge, hvad GDPR (legitim interesse), databeskyttelsesloven og Datatilsynets vejledning kræver i netop jeres tilfælde.',
+    },
+    {
+      q: 'Godkendelser og autorisationer?',
+      a: 'GeoTapp håndterer hverken vagtgodkendelser eller sager over for myndighederne. Det registrerer, hvem der har stemplet, hvor og hvornår på hver opgave, og den historik kan du vise kunden.',
     },
   ],
   'en-us': [

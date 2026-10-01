@@ -12,6 +12,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   es: 'Normativa y documentación en España',
   pt: 'Regras e documentação em Portugal',
   nl: 'Regels en documentatie in Nederland',
+  da: 'Regler og dokumentation i Danmark',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -102,6 +103,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'NEN 3140 en de kwalificaties van elektrotechnisch personeel?',
       a: 'GeoTapp controleert de kwalificaties van elektrotechnisch personeel niet en voert de keuringen volgens NEN 3140 niet uit, en maakt geen keuringsrapporten. Het legt tijd, locatie en foto\'s van elke klus vast, die de monteur bij zijn eigen documentatie kan voegen.',
+    },
+  ],
+  da: [
+    {
+      q: 'Timer, rådighed og kørsel for elektrikere?',
+      a: 'GeoTapp registrerer ved hver stempling ind, pauser og ud med position og klokkeslæt, pr. elektriker og pr. byggeplads, og eksporterer dem til Excel eller CSV til din bogholder eller dit lønkontor. Anvendelsen af overenskomsten (tillæg, godtgørelser) og lønbehandlingen forbliver hos bogholderen og virksomheden.',
+    },
+    {
+      q: 'Geolokalisering af elektrikere: GDPR og Datatilsynet?',
+      a: 'Positionen registreres kun ved stempling og med bevisfotos, aldrig løbende, og oplysningerne til medarbejderne underskrives i appen, før der stemples. Det er virksomheden, der selv skal undersøge, hvad GDPR (legitim interesse), databeskyttelsesloven og Datatilsynets vejledning kræver i netop jeres tilfælde.',
+    },
+    {
+      q: 'El-autorisation og dokumentation af el-installationer?',
+      a: 'GeoTapp verificerer hverken autorisationer eller kvalifikationer og laver ingen installationsdokumentation. Det registrerer klokkeslæt, position og fotos af hver opgave, som teknikeren kan vedlægge sin egen dokumentation.',
     },
   ],
   'en-us': [

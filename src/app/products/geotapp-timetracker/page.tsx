@@ -204,6 +204,29 @@ const TT_COPY: Record<string, TtCopy> = {
     trial: 'Start the 14-day free trial',
     availableOn: 'Available on',
   },
+  da: {
+    statusLabel: 'Hvor det bruges',
+    releaseNote: 'TimeTracker er en native app på Google Play og i App Store: den kræver Android 8.0 eller nyere, eller iOS 26.2 eller nyere. Det, medarbejderen registrerer, kommer frem i Flow, så snart der er net.',
+    mobileKicker: 'App til telefonen',
+    downloadTitle: 'Hent GeoTapp TimeTracker',
+    downloadSub: 'Findes på Google Play og i App Store.',
+    doesTitle: 'Hvad GeoTapp TimeTracker gør',
+    doesSub: 'Ikke kun fremmøde: den samler dokumentationen for arbejdet i marken, som kontoret bruger til rapporten, og som kunden kan verificere.',
+    highlights: [
+      { title: 'Stemplinger med position og klokkeslæt', description: 'Start, pauser og slut registrerer position, adresse og klokkeslæt i det øjeblik, medarbejderen stempler. Mellem to stemplinger registreres intet automatisk.' },
+      { title: 'Dokumentation, kunden kan kontrollere', description: 'Medarbejderne tager fotos, tilføjer noter og sender dokumentation for arbejdet, knyttet til opgaven. Det ender i den forseglede rapport, som kunden selv verificerer.' },
+      { title: 'En historik, kontoret kan bruge', description: 'Det, der samles i marken, kommer frem i Flow og bruges straks til rapporten til kunden, opgavens forløb og den endelige opgørelse.' },
+      { title: 'Brug af bil, kvitteringer og udlæg', description: 'Medarbejderen angiver brug af bil i vagten, registrerer tankning og udgifter med et foto af kvitteringen, og kontoret godkender dem.' },
+    ],
+    workflow: [
+      { title: 'Meget mere end en almindelig stempling', description: 'TimeTracker omfatter opgavens detaljer, rapporter, beskeder, ønsker om ferie og fravær og arbejdssessioner: ikke kun fremmøde.' },
+      { title: 'Marken, kontoret og kunden på de samme data', description: 'Arbejdet i marken står ikke alene: kontoret følger fremdriften, ser dokumentationen og svarer kunden med fakta.' },
+    ],
+    complianceTagline: 'Først bekræftes informationen, så stempler man.*',
+    complianceFootnote: '* Efter GDPR skal hver medarbejder informeres, før medarbejderens position registreres. GeoTapp forbereder informationen, får den bekræftet som læst i appen og lader ikke medarbejderen stemple, før den er bekræftet.',
+    trial: 'Start den gratis prøveperiode på 14 dage',
+    availableOn: 'Findes på',
+  },
 };
 
 export default function GeoTappApp() {
@@ -438,7 +461,7 @@ export default function GeoTappApp() {
         <div className="r-s d1" style={{ display: 'flex', justifyContent: 'center' }}>
           <div className="sheet">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/verifier-report.webp" alt={currentLocale === 'it' ? 'Report sigillato GeoTapp' : currentLocale === 'de' ? 'Versiegelter GeoTapp-Bericht' : currentLocale === 'fr' ? 'Rapport scellé GeoTapp' : currentLocale === 'nl' ? 'Verzegeld GeoTapp-rapport' : currentLocale === 'es' ? 'Informe sellado de GeoTapp' : currentLocale === 'pt' ? 'Relatório selado GeoTapp' : 'GeoTapp sealed report'} loading="lazy" />
+            <img src="/verifier-report.webp" alt={currentLocale === 'it' ? 'Report sigillato GeoTapp' : currentLocale === 'de' ? 'Versiegelter GeoTapp-Bericht' : currentLocale === 'fr' ? 'Rapport scellé GeoTapp' : currentLocale === 'nl' ? 'Verzegeld GeoTapp-rapport' : currentLocale === 'es' ? 'Informe sellado de GeoTapp' : currentLocale === 'pt' ? 'Relatório selado GeoTapp' : currentLocale === 'da' ? 'Forseglet GeoTapp-rapport' : 'GeoTapp sealed report'} loading="lazy" />
           </div>
         </div>
       </div></div></section>

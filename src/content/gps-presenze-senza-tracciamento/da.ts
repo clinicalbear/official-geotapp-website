@@ -3,7 +3,7 @@ import type { PresenzeCopy } from './types';
 const da: PresenzeCopy = {
   metaTitle: 'Kan GPS bruges til fremmøde uden at spore medarbejdere? - GeoTapp',
   metaDesc:
-    'Ja, hvis positionen kun registreres ved stempling. Hvad en italiensk domstol afgjorde i 2026, hvad tilsynsmyndigheder reelt straffer, og hvad et lovligt GPS-fremmøde-system registrerer.',
+    'Ja, hvis positionen kun registreres ved stempling. Hvad en italiensk domstol afgjorde i 2026, hvad tilsynsmyndigheder faktisk straffer, og hvad et GPS-system til fremmøde egentlig registrerer.',
   h1: 'Kan GPS bruges til fremmøde uden at spore medarbejdere?',
   lede:
     'Ja. Et system, der kun registrerer position i det præcise øjeblik en medarbejder stempler ind, holder pause eller stempler ud, overvåger ikke personen kontinuerligt: det dokumenterer et faktum. Det er præcis den skelnen, som en italiensk domstol bekræftede i 2026, og den stemmer overens med det, tilsynsmyndigheder faktisk straffer: kontinuerlig sporing, ikke det enkeltstående positionsopslag.',
@@ -20,14 +20,14 @@ const da: PresenzeCopy = {
     {
       heading: 'Hvad registrerer GeoTapp, og hvad registrerer det ikke',
       paragraphs: [
-        'GeoTapp registrerer kun positionen, når en medarbejder foretager en konkret handling: stempler ind, starter eller afslutter en pause, stempler ud, plus ét punkt pr. arbejdsbevis-foto. Mellem to stemplinger registreres intet automatisk: intet spor af bevægelser, ingen sporing i baggrunden, ingen position indsamlet uden medarbejderens vidende.',
+        'GeoTapp registrerer kun positionen, når en medarbejder foretager en konkret handling: stempler ind, starter eller afslutter en pause, stempler ud, plus ét punkt pr. bevisfoto. Mellem to stemplinger registreres intet automatisk: intet spor af bevægelser, ingen sporing i baggrunden, ingen position indsamlet uden medarbejderens vidende.',
       ],
     },
     {
-      heading: 'Sådan kan en tillidsrepræsentant, en arbejdsretsadvokat eller en DPO tjekke det uden at spørge os om noget',
+      heading: 'Sådan kan en rådgiver eller en fagforeningsrepræsentant tjekke det uden at spørge os om noget',
       paragraphs: [
-        'Man behøver ikke tage vores ord for det: det kan efterprøves uafhængigt. I Android-appen erklærer manifestet kun tilladelserne ACCESS_FINE_LOCATION og ACCESS_COARSE_LOCATION. Tilladelsen ACCESS_BACKGROUND_LOCATION, som ville være nødvendig for at følge en medarbejder, mens appen er lukket, anmodes der ikke om, og der findes ingen forgrundstjeneste dedikeret til position: uden den tilladelse leverer operativsystemet simpelthen ikke positionsdata til en app, der ikke er åben på skærmen. På iOS anmoder appen kun om tilladelsen "når appen bruges" (requestWhenInUseAuthorization), aldrig tilladelse til sporing i baggrunden.',
-        'Det er et tjek, en tillidsrepræsentant, en arbejdsretsadvokat eller en databeskyttelsesrådgiver selv kan udføre på få minutter ved at læse app-manifestet eller den privatlivsmærkning, som app-butikken offentliggør, allerede før de læser den information, virksomheden forelægger dem.',
+        'Man behøver ikke tage vores ord for det: det kan efterprøves uafhængigt. I Android-appen erklærer manifestet kun tilladelserne ACCESS_FINE_LOCATION og ACCESS_COARSE_LOCATION. Der anmodes ikke om tilladelsen ACCESS_BACKGROUND_LOCATION, som ville være nødvendig for at følge en medarbejder, mens appen er lukket, og der findes ingen forgrundstjeneste dedikeret til position: uden den tilladelse leverer operativsystemet simpelthen ikke positionsdata til en app, der ikke er åben på skærmen. På iOS anmoder appen kun om tilladelsen "når appen bruges" (requestWhenInUseAuthorization), aldrig tilladelse til sporing i baggrunden.',
+        'Det er et tjek, som en arbejdsmiljørepræsentant, en rådgiver eller en databeskyttelsesrådgiver selv kan udføre på få minutter ved at læse app-manifestet eller den privatlivsmærkning, som app-butikken offentliggør, allerede før de læser den privatlivsmeddelelse, virksomheden forelægger dem.',
       ],
     },
     {
@@ -45,14 +45,14 @@ const da: PresenzeCopy = {
     },
   ],
   table: {
-    title: 'Hvad der registreres, og hvad der ikke gør',
+    title: 'Hvad der registreres, og hvad der ikke registreres',
     colLeft: 'Registrerer',
     colRight: 'Registrerer ikke',
     left: [
       'Position ved ind- og udstempling',
       'Position ved start og slut af hver pause',
-      'Ét GPS-punkt pr. arbejdsbevis-foto',
-      'Tidsstemplet for forseglingen af rapporten, taget fra serverens ur',
+      'Ét GPS-punkt pr. bevisfoto',
+      'Tidspunktet for rapportens forsegling, taget fra serverens ur',
     ],
     right: [
       'Ingen bevægelse under vagten, mellem to stemplinger',
@@ -69,7 +69,7 @@ const da: PresenzeCopy = {
     'Forordning (EU) 2016/679 (GDPR), art. 5, 6, 12-14, 25',
   ],
   disclaimer:
-    'Denne side beskriver generelle principper, der kan efterprøves ved kilden, og udgør ikke juridisk rådgivning: for din specifikke situation bør du kontakte en arbejdsretsadvokat eller en databeskyttelsesrådgiver.',
+    'Denne side beskriver generelle principper, der kan efterprøves ved kilden, og udgør ikke juridisk rådgivning: for din specifikke situation bør du tjekke med en rådgiver eller en databeskyttelsesrådgiver.',
   faq: {
     title: 'Ofte stillede spørgsmål',
     items: [
@@ -79,7 +79,7 @@ const da: PresenzeCopy = {
       },
       {
         q: 'Kræves der altid en aftale med medarbejderrepræsentationen for at bruge GPS til fremmøde?',
-        a: 'Det kræves, hvor systemet kan muliggøre løbende kontrol med medarbejderens aktivitet. Retten i Cosenza anerkendte dog, at et system, der kun registrerer positionen ved stempling, uden løbende sporing, hører under fremmøderegistreringsværktøjer, der ikke kræver den procedure.',
+        a: 'Det kræves, hvor systemet kan muliggøre løbende kontrol med medarbejderens aktivitet. Retten i Cosenza anerkendte dog, at et system, der kun registrerer positionen ved stempling, uden løbende sporing, hører til blandt værktøjerne til fremmøderegistrering, som ikke kræver den procedure.',
       },
       {
         q: 'Hvad sker der, hvis systemet også sporer under pauser?',
@@ -87,7 +87,7 @@ const da: PresenzeCopy = {
       },
       {
         q: 'Kan GeoTapp spore en medarbejder kontinuerligt, hvis jeg beder om det?',
-        a: 'Nej. Appen anmoder aldrig om tilladelse til position i baggrunden og har ingen tjeneste, der følger en enhed, mens appen er lukket: det er ikke en slået-fra indstilling, det er en tilladelse, koden aldrig anmoder om. Kan efterprøves ved at læse app-manifestet eller privatlivsmærkningen i butikken.',
+        a: 'Nej. Appen anmoder aldrig om tilladelse til position i baggrunden og har ingen tjeneste, der følger en enhed, mens appen er lukket: det er ikke en deaktiveret indstilling, det er en tilladelse, koden aldrig anmoder om. Kan efterprøves ved at læse app-manifestet eller privatlivsmærkningen i butikken.',
       },
       {
         q: 'Opbevares indsamlede positioner for altid?',

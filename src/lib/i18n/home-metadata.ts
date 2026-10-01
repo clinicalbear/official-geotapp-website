@@ -78,7 +78,7 @@ export const HOME_META: Record<string, { title: string; description: string }> =
   },
   da: {
     title: 'GPS-software feltservice: bevis hvert besøg | GeoTapp',
-    description: 'Kunden bestrider arbejdet? GeoTapp registrerer GPS, tid, fotos og en rapport med sporbare ændringer. Bevis opgaven og få betaling uden diskussion.',
+    description: 'Software til hold i marken: GeoTapp registrerer position, tidspunkter og fotos ved hver stempling og forsegler dem i en rapport, som kunden selv kan verificere.',
   },
   sv: {
     title: 'GPS-mjukvara fältservice: bevisa varje jobb | GeoTapp',

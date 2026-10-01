@@ -468,6 +468,17 @@ export const NON_IN_VETRINA = new Set<string>([
   // (funzioni e promesse di conformita' che GeoTapp non ha) e «DPIA template», «log de acessos imutavel». Aggiunte il 01/10/2026.
   'app-geolocalizacao-empregados-limpeza-portugal-2026',
   'geolocalizacao-funcionarios-rgpd-portugal-2026',
+  // Versioni in danese: titolo o estratto o corpo che promettono conformita' («opfylder Arbejdsmiljøloven og GDPR», «klar til Datatilsynet»,
+  // «blive compliant»), «ingen binding» (c'e' un minimo di 12 mesi), sapere «i realtid» chi e' sul posto, geofence (funzione che GeoTapp non ha),
+  // funzioni del portale clienti non verificate, oppure estratto scritto senza æ ø å («paa», «taeller»). Aggiunte il 01/10/2026.
+  'byggepladsrapport-app-2026-arbejdsmiljolov-gdpr-danmark',
+  'gps-firmabiler-hvad-er-lovligt',
+  'august-halvt-hold-hvem-er-paa-pladsen',
+  'stemple-ind-med-gps-ikke-overvaagning',
+  'faktura-beviser-ikke-udfoert-arbejde-tvister-2026',
+  'geotapp-nyheder-sommer-2026',
+  'gps-sporing-medarbejdere-oplysning-skabelon-2026',
+  'medarbejderdata-hvad-loven-tillader',
 ]);
 
 export function filterPosts<T extends WpIndexEntry>(

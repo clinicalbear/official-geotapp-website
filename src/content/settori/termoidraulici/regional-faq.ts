@@ -12,6 +12,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   es: 'Normativa y documentación en España',
   pt: 'Normas e registos em Portugal',
   nl: 'Regels en documentatie in Nederland',
+  da: 'Regler og dokumentation i Danmark',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -102,6 +103,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'F-gassen en bewijzen van vakbekwaamheid (zoals STEK)?',
       a: 'GeoTapp beheert geen bewijzen van vakbekwaamheid voor F-gassen, zoals het STEK-certificaat, en houdt geen installatieboeken bij. Het legt tijd, locatie, foto\'s en notities van elke klus aan ketels en verwarmingsinstallaties vast, die bij de documentatie van de installatie kunnen worden gevoegd.',
+    },
+  ],
+  da: [
+    {
+      q: 'Timer og opgaver på varmeanlæg?',
+      a: 'GeoTapp registrerer ved hver stempling ind, pauser og ud med position og klokkeslæt, pr. tekniker og pr. sag, og eksporterer dem til Excel eller CSV til din bogholder eller dit lønkontor. Anvendelsen af overenskomsten (tillæg, godtgørelser) og lønbehandlingen forbliver hos bogholderen og virksomheden.',
+    },
+    {
+      q: 'Geolokalisering af varmeteknikere: GDPR og Datatilsynet?',
+      a: 'Positionen registreres kun ved stempling og med bevisfotos, aldrig løbende, og oplysningerne til medarbejderne underskrives i appen, før der stemples. Det er virksomheden, der selv skal undersøge, hvad GDPR (legitim interesse), databeskyttelsesloven og Datatilsynets vejledning kræver i netop jeres tilfælde.',
+    },
+    {
+      q: 'Fluorholdige gasser og teknikerens certifikater?',
+      a: 'GeoTapp håndterer hverken certifikater til arbejde med fluorholdige gasser eller anlæggenes serviceregistre. Det registrerer klokkeslæt, position, fotos og noter for hver opgave på kedler og varmeanlæg, som du kan vedlægge anlæggets dokumentation.',
     },
   ],
   'en-us': [

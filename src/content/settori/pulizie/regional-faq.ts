@@ -12,6 +12,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   es: 'Normativa y documentación en España',
   pt: 'Normas e registos em Portugal',
   nl: 'Regels en documentatie in Nederland',
+  da: 'Regler og dokumentation i Danmark',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -102,6 +103,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Overname van personeel bij opdrachtwisseling en minimumloon in de schoonmaak?',
       a: 'GeoTapp regelt de overname van personeel bij opdrachtwisseling niet en berekent geen minimumlonen. Het bewaart uren en aanwezigheid van elke medewerker, te exporteren als Excel- of CSV-bestand: de toepassing van de cao voor het schoonmaak- en glazenwassersbedrijf blijft bij de salarisadministrateur.',
+    },
+  ],
+  da: [
+    {
+      q: 'Hvilken tidsregistrering passer til et rengøringsfirma?',
+      a: 'GeoTapp registrerer timer, pauser og udstemplinger pr. medarbejder og pr. sted, med position og klokkeslæt, og eksporterer dem til Excel eller CSV til din bogholder eller dit lønkontor. Tillæg for nat og helligdage, mindstelønssatser og anvendelsen af overenskomsten forbliver hos bogholderen og virksomheden.',
+    },
+    {
+      q: 'Geolokalisering af rengøringsmedarbejdere: GDPR og Datatilsynet?',
+      a: 'Positionen registreres kun ved stempling og med bevisfotos, aldrig løbende, og oplysningerne til medarbejderne underskrives i appen, før der stemples. Det er virksomheden, der selv skal undersøge, hvad GDPR (legitim interesse), databeskyttelsesloven og Datatilsynets vejledning kræver i netop jeres tilfælde.',
+    },
+    {
+      q: 'Skift af leverandør og mindstelønssatser?',
+      a: 'GeoTapp håndterer hverken overdragelse af medarbejdere ved skift af leverandør eller mindstelønssatser. Det gemmer historikken over timer og tilstedeværelse for hver medarbejder, som kan eksporteres til Excel eller CSV: anvendelsen af overenskomsten forbliver hos bogholderen.',
     },
   ],
   'en-us': [

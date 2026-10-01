@@ -19,6 +19,7 @@ export const COMPARISON_BLOG_LINKS: Record<string, Record<string, string>> = {
     es: '/blog/es/2026/05/20/geotapp-vs-clockify-2026-comparacion-tiempo-certificacion/',
     nl: '/blog/nl/2026/05/20/geotapp-vs-clockify-2026-tijdregistratie-certificering/',
     pt: '/blog/pt/2026/07/24/geotapp-vs-clockify-2026-comparacao-assiduidade/',
+    da: '/blog/da/2026/07/24/geotapp-vs-clockify-2026-fremmode-sammenligning/',
   },
   connecteam: {
     it: '/blog/2026/05/19/geotapp-vs-connecteam-2026-confronto-app-squadre-campo/',
@@ -28,6 +29,7 @@ export const COMPARISON_BLOG_LINKS: Record<string, Record<string, string>> = {
     es: '/blog/es/2026/05/19/geotapp-vs-connecteam-2026-comparacion-equipos-campo/',
     nl: '/blog/nl/2026/05/19/geotapp-vs-connecteam-2026-buitendienst-vergelijking/',
     pt: '/blog/pt/2026/07/24/geotapp-vs-connecteam-2026-comparacao-assiduidade/',
+    da: '/blog/da/2026/07/24/geotapp-vs-connecteam-2026-fremmode-sammenligning/',
   },
   hubstaff: {
     it: '/blog/2026/05/21/geotapp-vs-hubstaff-2026-sorveglianza-vs-certificazione/',
@@ -37,6 +39,7 @@ export const COMPARISON_BLOG_LINKS: Record<string, Record<string, string>> = {
     es: '/blog/es/2026/05/21/geotapp-vs-hubstaff-2026-vigilancia-vs-certificacion/',
     nl: '/blog/nl/2026/05/21/geotapp-vs-hubstaff-2026-surveillance-vs-certificering/',
     pt: '/blog/pt/2026/07/24/geotapp-vs-hubstaff-2026-vigilancia-vs-prova/',
+    da: '/blog/da/2026/07/24/geotapp-vs-hubstaff-2026-overvaagning-vs-bevis/',
   },
   jibble: {
     it: '/blog/2026/05/18/geotapp-vs-jibble-2026-confronto-app-presenze/',
@@ -46,12 +49,14 @@ export const COMPARISON_BLOG_LINKS: Record<string, Record<string, string>> = {
     es: '/blog/es/2026/05/18/geotapp-vs-jibble-2026-comparacion-fichaje/',
     nl: '/blog/nl/2026/05/18/geotapp-vs-jibble-2026-tijdregistratie-vergelijking/',
     pt: '/blog/pt/2026/07/24/geotapp-vs-jibble-2026-comparacao-assiduidade/',
+    da: '/blog/da/2026/07/24/geotapp-vs-jibble-2026-fremmode-sammenligning/',
   },
   libemax: {
     // Libemax ha l'articolo IT (piu' quello NL del 24/07/2026), ed e' la pagina con piu' citazioni AI del sito.
     it: '/blog/2026/05/15/geotapp-vs-libemax-2026-confronto-app-rilevazione-presenze/',
     nl: '/blog/nl/2026/07/24/geotapp-vs-libemax-2026-urenregistratie-vergelijking/',
     pt: '/blog/pt/2026/07/24/geotapp-vs-libemax-2026-comparacao-assiduidade/',
+    da: '/blog/da/2026/07/24/geotapp-vs-libemax-2026-fremmode-sammenligning/',
   },
   picaponto: {
     it: '/blog/2026/07/16/geotapp-vs-picaponto-2026-confronto-app-presenze/',
@@ -79,7 +84,7 @@ const ANCHOR: Record<string, string> = {
   nl: 'Lees de uitgebreide vergelijking op de blog',
   sv: 'Las den fordjupade jamforelsen pa bloggen',
   nb: 'Les den grundige sammenligningen pa bloggen',
-  da: 'Las den dybdegaende sammenligning pa bloggen',
+  da: 'Læs den dybdegående sammenligning på bloggen',
   ru: 'Chitat podrobnoe sravnenie v bloge',
 };
 

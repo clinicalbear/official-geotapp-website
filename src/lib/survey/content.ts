@@ -195,7 +195,7 @@ export const SURVEY: Record<SurveyLocale, SurveyContent> = {
     },
     emailLabel: 'Efterlad din e-mail, så får du de europæiske resultater når vi lukker, land for land. De findes ikke andre steder (valgfrit)',
     emailPlaceholder: 'din@email.dk',
-    privacyNote: 'Anonym undersøgelse. Ingen påkrævede data. Din e-mail bruges, hvis du efterlader den, kun til resultaterne og deles aldrig.',
+    privacyNote: 'Anonym undersøgelse. Ingen påkrævede data. Hvis du efterlader din e-mail, bruges den kun til resultaterne og deles aldrig.',
     submit: 'Send',
     thankYou: 'Tak. Dit bidrag betyder virkelig noget.',
   },

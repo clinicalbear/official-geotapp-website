@@ -320,6 +320,41 @@ const TESTI: Record<string, Testi> = {
     unknownBody:
       'O código não corresponde a nenhum documento. Convém reconferir os oito caracteres: o S e o 5, o Z e o 2 confundem-se com facilidade.',
   },
+  da: {
+    sealedTitle: 'Forseglet dokument',
+    sealedBody:
+      'Dette dokument er elektronisk signeret og kan verificeres. Hver hændelse er kædet til den forrige: hvis en linje, et klokkeslæt eller et foto ændres, mislykkes verificeringen.',
+    draftTitle: 'Dokument uden forsegling',
+    draftBody:
+      'Dette dokument bærer ikke den elektroniske signatur: det kan ikke verificeres og kan ikke lægges til grund.',
+    issuedBy: 'Udstedt af',
+    job: 'Opgave',
+    sealedOn: 'Forseglet den',
+    downloadPackage: 'Download den signerede pakke',
+    downloadPackageHint:
+      'Det er originalen: den indeholder dokumentet, forløbet, fotoene og forseglingen.',
+    downloadPdf: 'Download den læsbare PDF',
+    fingerprint: 'Pakkens fingeraftryk',
+    linkLife:
+      'Linket til filen gælder i ti minutter. Koden på dokumentet udløber ikke: man kan blot åbne denne side igen.',
+    verifyTitle: 'Verificér uden at stole på os',
+    verifyBody:
+      'Pakken kan verificeres uden GeoTapp, med den åbne verifikator: den genberegner fingeraftrykkene og kontrollerer signaturen.',
+    verifyCta: 'Gå til verificeringen',
+    surveyTitle: 'Et spørgsmål til dem, der bestiller arbejdet',
+    surveyBody:
+      'Vi indsamler i hele Europa, hvor ofte betalt arbejde drages i tvivl, og hvad der sker bagefter. To minutter, anonymt, ingen obligatoriske oplysninger.',
+    surveyCta: 'Besvar spørgeskemaet',
+    revokedTitle: 'Kode tilbagekaldt',
+    revokedBody:
+      'Dette dokument fandtes, men den, der udstedte det, har tilbagekaldt linket. For at få en kopi skal man bede om den hos dem, der har udført arbejdet.',
+    expiredTitle: 'Dokumentet er ikke længere tilgængeligt',
+    expiredBody:
+      'Dette dokument fandtes og har nået slutningen af sin opbevaringsperiode: fem år efter arbejdets dato slettes pakken, som reglerne om persondata kræver. Der er ikke længere en kopi at bede nogen om.',
+    unknownTitle: 'Koden blev ikke fundet',
+    unknownBody:
+      'Koden svarer ikke til noget dokument. Det er en god idé at kontrollere de otte tegn igen: S og 5 samt Z og 2 forveksles let.',
+  },
 };
 
 function testiPer(locale: AppLocale): Testi {
