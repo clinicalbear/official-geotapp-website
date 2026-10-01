@@ -125,7 +125,7 @@ type Copy = {
 const T: Record<string, Copy> = {
   it: {
     badge: 'Confronto App', h1sub: 'timbratura o prova verificabile?',
-    desc: 'Blink è un software molto diffuso tra le imprese di pulizia in Germania. GeoTapp sigilla ogni intervento: posizione controllata alla timbratura, foto di prova e un report che il committente verifica da solo.',
+    desc: 'Blink è un software molto diffuso tra le imprese di pulizia in Germania. GeoTapp sigilla ogni intervento: posizione controllata alla timbratura, foto di prova e un report con un\'impronta digitale che cambia se qualcosa viene toccato, che il committente verifica da solo.',
     summary: 'In sintesi:',
     summaryText: 'Blink è forte nella timbratura e nella comunicazione per le pulizie in Germania. Tra le sue funzioni dichiarate però non ci sono il controllo della posizione falsificata, le foto sigillate nel report e la verifica da parte del committente. GeoTapp copre proprio queste tre cose.',
     noteTitle: 'Timbratura GPS non è verifica GPS',

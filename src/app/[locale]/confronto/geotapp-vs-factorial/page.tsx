@@ -124,7 +124,7 @@ type Copy = {
 const T: Record<string, Copy> = {
   it: {
     badge: 'Confronto App', h1sub: 'l\'ufficio del personale o il cantiere?',
-    desc: 'Factorial mette ferie, assenze, organigramma e timbratura dentro un\'unica piattaforma HR, con prezzi pubblici e attivazione rapida. GeoTapp sigilla il singolo intervento, con posizione controllata alla timbratura, foto di prova e un report che il cliente finale controlla da solo.',
+    desc: 'Factorial mette ferie, assenze, organigramma e timbratura dentro un\'unica piattaforma HR, con prezzi pubblici e attivazione rapida. GeoTapp sigilla il singolo intervento: posizione controllata alla timbratura, foto di prova e un report con un\'impronta digitale che cambia se qualcosa viene toccato, che il cliente finale controlla da solo.',
     summary: 'In sintesi:',
     summaryText: 'Factorial risolve il lavoro dell\'ufficio del personale, e lo fa bene, con un\'interfaccia che si capisce al primo giro. GeoTapp risolve il momento in cui il committente sostiene che il servizio non è stato fatto, e quel momento non si risolve con un riepilogo di presenze.',
     noteTitle: 'La geolocalizzazione è una spunta, il rischio resta al titolare',

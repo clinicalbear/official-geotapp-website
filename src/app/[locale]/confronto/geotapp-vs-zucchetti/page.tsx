@@ -124,7 +124,7 @@ type Copy = {
 const T: Record<string, Copy> = {
   it: {
     badge: 'Confronto App', h1sub: 'il gestionale o la prova?',
-    desc: 'Zucchetti è usato da moltissime aziende italiane per gestire il personale, con badge, geofence e cedolini dentro un ecosistema solo. GeoTapp parte da un\'altra domanda: come dimostrare l\'intervento sul campo. Posizione controllata alla timbratura, foto di prova e un report sigillato che il committente controlla da solo.',
+    desc: 'Zucchetti è usato da moltissime aziende italiane per gestire il personale, con badge, geofence e cedolini dentro un ecosistema solo. GeoTapp parte da un\'altra domanda: come dimostrare l\'intervento sul campo. Posizione controllata alla timbratura, foto di prova e un report sigillato: un\'impronta digitale che cambia se qualcosa viene toccato dopo, che il committente controlla da solo.',
     summary: 'In sintesi:',
     summaryText: 'Zucchetti è la scelta naturale quando il problema nasce in amministrazione, tra presenze da chiudere, paghe da elaborare e un ufficio del personale da far girare. GeoTapp serve quando il problema nasce fuori, alla porta del cliente che trattiene una fattura perché sostiene che martedì non è passato nessuno.',
     noteTitle: 'Il geofence dice dove cade il punto, non se il punto è vero',

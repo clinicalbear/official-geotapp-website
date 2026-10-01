@@ -126,7 +126,7 @@ type Copy = {
 const T: Record<string, Copy> = {
   it: {
     badge: 'Confronto App', h1sub: 'quale scegliere per il tuo settore?',
-    desc: 'Connecteam gestisce la comunicazione del team. GeoTapp sigilla il lavoro svolto con prove verificabili. Sono strumenti diversi, ecco perché.',
+    desc: 'Connecteam gestisce la comunicazione del team. GeoTapp sigilla il lavoro svolto: chiude ogni intervento in un report con un\'impronta digitale che cambia se qualcosa viene toccato dopo. Sono strumenti diversi, ecco perché.',
     summary: 'In sintesi:',
     summaryText: 'Se devi mostrare al cliente le prove del lavoro, con posizione e ora di ogni timbratura, foto di prova e un report in cui ogni modifica successiva è rilevabile, GeoTapp è lo strumento giusto. Connecteam è pensato per comunicazione e turni, non per produrre prove verificabili.',
     features: 'Confronto funzionalità chiave', feat: 'Funzionalità', diff: 'La differenza che conta: prove verificabili o comunicazione',

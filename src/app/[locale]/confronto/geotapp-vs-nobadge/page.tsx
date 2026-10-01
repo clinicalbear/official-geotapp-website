@@ -125,7 +125,7 @@ type Copy = {
 const T: Record<string, Copy> = {
   it: {
     badge: 'Confronto App', h1sub: 'timbratura o prova verificabile?',
-    desc: 'NoBadge registra le presenze dei dipendenti con GPS e QR code. GeoTapp sigilla ogni intervento: posizione controllata alla timbratura, foto di prova e un report che il committente verifica da solo. Due approcci molto diversi.',
+    desc: 'NoBadge registra le presenze dei dipendenti con GPS e QR code. GeoTapp sigilla ogni intervento: posizione controllata alla timbratura, foto di prova e un report con un\'impronta digitale che cambia se qualcosa viene toccato, che il committente verifica da solo. Due approcci molto diversi.',
     summary: 'In sintesi:',
     summaryText: 'NoBadge è un ottimo sistema di rilevazione presenze per chi ha bisogno solo di registrare entrate e uscite. GeoTapp è per chi ha bisogno di mostrare al proprio committente le prove del lavoro, con posizione alla timbratura, foto di prova e un report sigillato che il cliente può controllare da solo.',
     noteTitle: 'Perché la semplice timbratura GPS non basta',

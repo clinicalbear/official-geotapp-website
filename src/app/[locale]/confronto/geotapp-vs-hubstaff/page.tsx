@@ -124,7 +124,7 @@ type Copy = {
 const T: Record<string, Copy> = {
   it: {
     badge: 'Confronto App', h1sub: 'sigillo o monitoraggio?',
-    desc: 'Hubstaff monitora i lavoratori remoti con screenshot e GPS. GeoTapp sigilla ogni intervento con prove verificabili dal committente. Orientamenti diversi, settori diversi.',
+    desc: 'Hubstaff monitora i lavoratori remoti con screenshot e GPS. GeoTapp sigilla ogni intervento: lo chiude in un report con un\'impronta digitale che cambia se qualcosa viene toccato, verificabile dal committente. Orientamenti diversi, settori diversi.',
     summary: 'In sintesi:',
     summaryText: 'Hubstaff è pensato per monitorare lavoratori remoti al computer (screenshot, produttività). GeoTapp è pensato per documentare il lavoro sul campo: report in cui ogni modifica successiva è rilevabile, con posizione alla timbratura, foto di prova e verifica indipendente da parte del committente. E non traccia in continuo, cosa che nel contesto italiano pesa.',
     noteTitle: 'Nota importante per il mercato italiano',
