@@ -30,7 +30,7 @@ const COPY: Record<string, Copy> = {
   pt: { title: 'Uma pergunta rápida', body: '2 minutos para nos dizer o que pensa sobre o trabalho no terreno. Anónimo, sem email.', cta: 'Responder ao inquérito' },
   da: { title: 'Et hurtigt spørgsmål', body: '2 minutter til at fortælle os, hvad du mener om arbejdet i marken. Anonymt, ingen e-mail.', cta: 'Besvar spørgeskemaet' },
   sv: { title: 'En snabb fråga', body: '2 minuter för att berätta vad du tycker om arbete i fält. Anonymt, ingen e-post.', cta: 'Svara på undersökningen' },
-  nb: { title: 'Et raskt spørsmål', body: '2 minutter for din mening om feltarbeid. Anonymt, ingen e-post.', cta: 'Delta' },
+  nb: { title: 'Et raskt spørsmål', body: '2 minutter til å fortelle oss hva du mener om arbeidet i felt. Anonymt, ingen e-post.', cta: 'Svar på undersøkelsen' },
   ru: { title: 'Быстрый вопрос', body: '2 минуты, чтобы поделиться мнением о выездной работе. Анонимно, без почты.', cta: 'Пройти опрос' },
 };
 
@@ -135,7 +135,7 @@ export default function SurveyInvite() {
         }}>
           <Image src="/LogoGeoTapp.webp" alt="GeoTapp" width={140} height={48}
             style={{ filter: 'brightness(0) invert(1)', height: '36px', width: 'auto' }} />
-          <button onClick={dismiss} aria-label={(() => { const l = (document.documentElement.lang || '').toLowerCase(); return l.startsWith('fr') ? 'Fermer' : l.startsWith('es') ? 'Cerrar' : l.startsWith('pt') ? 'Fechar' : l.startsWith('da') ? 'Luk' : l.startsWith('sv') ? 'Stäng' : 'Close'; })()} style={{
+          <button onClick={dismiss} aria-label={(() => { const l = (document.documentElement.lang || '').toLowerCase(); return l.startsWith('fr') ? 'Fermer' : l.startsWith('es') ? 'Cerrar' : l.startsWith('pt') ? 'Fechar' : l.startsWith('da') ? 'Luk' : l.startsWith('sv') ? 'Stäng' : l.startsWith('nb') || l.startsWith('no') ? 'Lukk' : 'Close'; })()} style={{
             background: 'rgba(247,249,252,0.25)', border: 'none', borderRadius: '50%',
             width: 30, height: 30, display: 'flex', alignItems: 'center', justifyContent: 'center',
             color: '#fff', fontSize: 18, cursor: 'pointer', lineHeight: 1,

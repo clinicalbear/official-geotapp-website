@@ -22,7 +22,7 @@ const META: Record<string, { title: string; description: string }> = {
   nl: { title: 'GeoTapp vs Jibble - Vergelijking 2026 | GeoTapp', description: 'GeoTapp vs Jibble: de verschillen voor bedrijven met medewerkers in het veld. Jibble telt de aanwezigheid met gezicht en eenvoudige gps; GeoTapp bewijst elke klus met locatie, tijd, foto\'s en een rapport waarin elke latere wijziging zichtbaar is.' },
   da: { title: 'GeoTapp vs Jibble - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Jibble: Jibble tæller fremmøde med ansigt og basis-GPS. GeoTapp forsegler hver opgave med position, tid, fotos og en rapport, hvor enhver ændring kan opdages.' },
   sv: { title: 'GeoTapp vs Jibble - Jämförelse 2026 | GeoTapp', description: 'GeoTapp vs Jibble: de viktigaste skillnaderna för fältserviceföretag. Jibble loggar närvaro med ansiktsigenkänning och enkel GPS; GeoTapp bevisar varje uppdrag med plats, tid, foton och en rapport där varje senare ändring går att upptäcka.' },
-  nb: { title: 'GeoTapp vs Jibble - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Jibble: viktige forskjeller for bedrifter med feltarbeidere. Jibble registrerer oppmøte med ansikt og enkel GPS; GeoTapp beviser hvert oppdrag med verifisert GPS, bilder og rapporter hvor enhver endring er sporbar.' },
+  nb: { title: 'GeoTapp vs Jibble - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Jibble: Jibble registrerer oppmøte med ansikt og enkel GPS. GeoTapp forsegler hvert oppdrag med posisjon, tid, bilder og en rapport der enhver endring kan oppdages.' },
   ru: { title: 'GeoTapp vs Jibble, Сравнение 2026 | GeoTapp', description: 'GeoTapp vs Jibble: ключевые различия для компаний с выездными работниками. Jibble отмечает присутствие по лицу и базовому GPS; GeoTapp доказывает каждое задание проверенным GPS, фото и защищёнными отчётами.' },
 };
 
@@ -84,10 +84,10 @@ const FAQ: Record<string, FaqItem[]> = {
     { q: 'Jibble har en gratisplan. Är GeoTapp värt att betala för?', a: 'Jibbles gratisplan är rimlig om allt du behöver är instämplingar. För företag med fältpersonal ligger värdet i GeoTapp i beviset: när en kund ifrågasätter ett uppdrag har du en förseglad rapport att visa upp i stället för ord mot ord.' },
   ],
   nb: [
-    { q: 'Hva er den viktigste forskjellen mellom GeoTapp og Jibble?', a: 'Jibble er et oppmøtesystem: det registrerer hvem som stempler, med ansiktsgjenkjenning og enkel GPS ved stempling. GeoTapp er et arbeidsbevis-system: det lager forseglede rapporter med verifisert GPS, bilder og digital signatur, bevis kunden selv kan kontrollere. Jibble sier "var her"; GeoTapp beviser "hva, hvor og når".' },
-    { q: 'Jibble har GPS. Er ikke det nok?', a: 'Jibble registrerer en enkel GPS-posisjon ved stempling, nyttig for å vite hvorfra man stempler. Men det er ikke et forseglet bevis på oppdraget: posisjonen er ikke koblet til en rapport hvor enhver endring er sporbar eller til verifiserbare bilder, og kunden kan ikke kontrollere den. GeoTapp forsegler GPS, tid og bilder i en rapport som holder i en tvist.' },
-    { q: 'GeoTapp eller Jibble for oppdragsbasert arbeid?', a: 'Jibble passer for den som bare vil telle oppmøte og timer med en raus gratisplan. GeoTapp er bygget for renholdsfirmaer, vedlikeholdslag og installatører som må bevise oppdraget overfor en kunde. Hvis kunder bestrider arbeidet, leverer GeoTapp beviset; Jibble registrerer oppmøte, ikke arbeidsbevis.' },
-    { q: 'Jibble har en gratis plan. Er GeoTapp verdt å betale for?', a: 'Jibble gratis gir mening hvis du bare trenger stemplinger. For bedrifter med feltarbeidere ligger verdien av GeoTapp i holdbare bevis: én kontrakt reddet takket være en verifiserbar rapport er verdt mange ganger månedsabonnementet.' },
+    { q: 'Hva er den viktigste forskjellen mellom GeoTapp og Jibble?', a: 'Jibble er et system for oppmøteregistrering: det registrerer hvem som stempler, med ansiktsgjenkjenning og enkel GPS i det øyeblikket man stempler. GeoTapp er et system for dokumentasjon av arbeidet: det lager forseglede rapporter med posisjon, tid og bilder, som kunden selv kan kontrollere. Jibble sier «han var der»; GeoTapp viser hva som ble gjort, hvor og når.' },
+    { q: 'Jibble har GPS. Er ikke det nok?', a: 'Jibble registrerer en enkel GPS-posisjon ved stempling, nyttig for å se hvor man stempler fra. Men det er ikke et forseglet bevis for oppdraget: posisjonen er verken knyttet til en rapport der enhver senere endring kan oppdages, eller til verifiserbare bilder, og kunden kan ikke kontrollere den selv. GeoTapp forsegler GPS, tid og bilder i en rapport du kan vise når noen bestrider arbeidet.' },
+    { q: 'GeoTapp eller Jibble, hvis du jobber med oppdrag hos kunder?', a: 'Jibble passer for dem som bare vil telle oppmøte og timer med en raus gratisplan. GeoTapp er laget for renholdsbedrifter, servicefolk og installatører som må dokumentere oppdraget overfor en kunde. Hvis du har kunder som bestrider arbeidet, leverer GeoTapp dokumentasjonen; Jibble registrerer oppmøtet, men ikke beviset for arbeidet.' },
+    { q: 'Jibble har en gratisplan. Er det verdt å betale for GeoTapp?', a: 'Jibbles gratisplan gir mening for dem som bare ser etter stempling. For bedrifter med ansatte ute i felt ligger verdien til GeoTapp i dokumentasjonen: når en kunde bestrider arbeidet, har du en forseglet rapport å vise fram i stedet for ord mot ord.' },
   ],
   ru: [
     { q: 'В чём главное различие между GeoTapp и Jibble?', a: 'Jibble, это система учёта присутствия: она фиксирует, кто отметился, с распознаванием лица и базовым GPS при отметке. GeoTapp, это система доказательства работы: она формирует защищённые отчёты с проверенным GPS, фото и цифровой подписью, доказательства, которые заказчик может проверить сам. Jibble говорит «был здесь»; GeoTapp доказывает «что, где и когда сделано».' },
@@ -107,7 +107,7 @@ const ROWS_LABELS: Record<string, string[]> = {
   nl: ['Locatie vastgelegd en gecontroleerd bij elke registratie','Cryptografisch verzegeld rapport','Fotobewijzen gekoppeld aan gps en tijdstempel','Onafhankelijke controle door de klant','Bijhouden van uren','Mobiele app voor Android/iOS','Eigen interne berichten','Export van aanwezigheid/salarissen','Gratis abonnement','Opdrachtenbeheer voor meerdere locaties','Locatie alleen bij het registreren, nooit doorlopend','GPS-verklaring ondertekend in de app vóór het registreren*'],
   da: ['Position registreret og kontrolleret ved hver stempling','Kryptografisk forseglet rapport','Bevisfotos knyttet til GPS og tidsstempel','Uafhængig verificering af kunden','Timeregistrering','Mobilapp Android/iOS','Egen intern beskedfunktion','Eksport af fremmøde/løn','Gratis plan','Styring af opgaver på flere lokationer','Position registreres kun ved stempling, aldrig løbende','GPS-information underskrevet i appen, før man stempler*'],
   sv: ['Positionen registreras och kontrolleras vid varje instämpling','Kryptografiskt förseglad rapport','Bevisfoton kopplade till GPS och tidsstämpel','Oberoende verifiering av kunden','Tidrapportering','Mobilapp för Android/iOS','Inbyggd meddelandefunktion','Export av närvaro/lön','Gratisplan','Hantering av uppdrag på flera platser','Positionen registreras bara vid instämpling, aldrig löpande','GPS-information signerad i appen innan man stämplar in*'],
-  nb: ['GPS verifisert på oppdragsstedet','Kryptografisk forseglet rapport','Fotobevis koblet til GPS og tidsstempel','Uavhengig verifisering av kunden','Tidsregistrering','Mobilapp Android/iOS','Innebygd meldingsfunksjon','Eksport av lønn/oppmøte','Gratis plan','Styring av oppdrag på flere steder','GDPR-kompatibel geolokalisering','Automatisk GPS-personvernerklæring med digital signatur*'],
+  nb: ['Posisjon registrert og kontrollert ved hver stempling','Kryptografisk forseglet rapport','Bevisbilder knyttet til GPS og tidsstempel','Uavhengig verifisering fra kunden','Timeregistrering','Mobilapp Android/iOS','Egen intern meldingsfunksjon','Eksport av oppmøte/lønn','Gratis plan','Styring av oppdrag på flere steder','Posisjon registreres bare ved stempling, aldri løpende','GPS-informasjon signert i appen før man stempler*'],
   ru: ['GPS проверен на месте задания','Криптографически опечатанный отчёт','Фотодоказательства, привязанные к GPS и метке времени','Независимая проверка заказчиком','Учёт часов','Мобильное приложение Android/iOS','Встроенный обмен сообщениями','Экспорт зарплат/присутствия','Бесплатный тариф','Управление заданиями на нескольких объектах','Геолокация в соответствии с GDPR','Автоматическое уведомление о GPS с цифровой подписью*'],
 };
 
@@ -127,7 +127,7 @@ const TABLE_TAKEAWAY: Record<string, string> = {
   nl: 'Kort gezegd: Jibble registreert aanwezigheid met gezichtsherkenning en eenvoudige gps; GeoTapp voegt het verzegelde rapport toe, de bewijsfoto gekoppeld aan gps en tijd, en de controle door de klant van de klus.',
   da: 'Kort sagt: Jibble registrerer fremmøde med ansigtsgenkendelse og basis-GPS; GeoTapp tilføjer den forseglede rapport, fotobeviset knyttet til GPS og tid og kundens egen verificering af opgaven.',
   sv: 'Kort sagt: Jibble registrerar närvaro med ansiktsigenkänning och enkel GPS; GeoTapp lägger till den förseglade rapporten, bevisfoton kopplade till GPS och tid, och kundens egen verifiering av uppdraget.',
-  nb: 'Kort sagt: Jibble registrerer oppmøte med ansiktsgjenkjenning og enkel GPS; GeoTapp legger til den forseglede rapporten, fotobevis koblet til GPS og tid, og uavhengig kundeverifisering av oppdraget.',
+  nb: 'Kort sagt: Jibble registrerer oppmøte med ansiktsgjenkjenning og enkel GPS; GeoTapp legger til den forseglede rapporten, bevisbilder knyttet til GPS og tid, og kundens egen verifisering av oppdraget.',
   ru: 'Коротко: Jibble фиксирует присутствие по распознаванию лица и базовому GPS; GeoTapp добавляет защищённый отчёт, фотодоказательства с GPS и временем и независимую проверку заказчиком.',
 };
 
@@ -150,7 +150,7 @@ const FOOTNOTE: Record<string, string> = {
   nl: '* Volgens de wet (art. 13 AVG en, in Italië, art. 4 van het arbeidsstatuut) moet elke werknemer worden geïnformeerd voordat hij wordt gelokaliseerd. Laat de software deze stap aan de verantwoordelijke over, dan blijft het risico bij hem. GeoTapp maakt de persoonlijke privacyverklaring klaar, laat die in de app voor kennisgeving ondertekenen en laat niet registreren totdat ze is ondertekend.',
   da: '* Ifølge loven (GDPR art. 13 og, i Italien, art. 4 i arbejdstagerloven, Statuto dei Lavoratori) skal hver medarbejder informeres, før vedkommende geolokaliseres. Overlader softwaren dette trin til arbejdsgiveren, er risikoen stadig arbejdsgiverens. GeoTapp forbereder den personlige information, får den underskrevet i appen som bekræftelse på, at den er læst, og lader ikke medarbejderen stemple, før den er underskrevet.',
   sv: '* Enligt lag (artikel 13 i GDPR) måste varje anställd informeras innan hen geolokaliseras. Om programvaran överlåter det steget åt arbetsgivaren ligger risken kvar hos arbetsgivaren. GeoTapp tar fram den personliga informationen, låter den anställde signera den som läst i appen och släpper inte till instämpling förrän den är signerad.',
-  nb: '* Ifølge loven (GDPR Art. 13, og i Italia Art. 4 i arbeidstakerstatutten) må hver ansatt signere en personvernerklæring før geolokalisering. De fleste GPS-programmer håndterer ikke dette: den juridiske risikoen blir hos arbeidsgiveren. GeoTapp lager automatisk den personlige erklæringen, får den signert digitalt og blokkerer GPS-tilgang til den er signert.',
+  nb: '* Ifølge loven (GDPR art. 13 og, i Italia, art. 4 i arbeidstakerloven, Statuto dei Lavoratori) må hver ansatt informeres før vedkommende geolokaliseres. Overlater programvaren dette trinnet til arbeidsgiveren, blir risikoen hos arbeidsgiveren. GeoTapp forbereder den personlige informasjonen, får den signert i appen som bekreftelse på at den er lest, og lar ikke den ansatte stemple før den er signert.',
   ru: '* По закону (GDPR ст. 13, а в Италии ст. 4 Статута трудящихся) каждый сотрудник должен подписать уведомление о конфиденциальности до геолокации. Большинство GPS-программ этого не обеспечивают: юридический риск остаётся на работодателе. GeoTapp автоматически формирует персональное уведомление, даёт подписать его цифровой подписью и блокирует доступ к GPS, пока оно не подписано.',
 };
 
@@ -304,20 +304,20 @@ const T: Record<string, Copy> = {
     footnote: FOOTNOTE.sv,
   },
   nb: {
-    badge: 'App-sammenligning', h1sub: 'telle oppmøte eller bevise arbeidet?',
-    desc: 'Jibble registrerer hvem som er der, med ansikt og enkel GPS. GeoTapp beviser hva som ble gjort, hvor og når. For feltarbeid endrer den forskjellen alt.',
+    badge: 'App-sammenligning', h1sub: 'registrere oppmøte eller dokumentere arbeidet?',
+    desc: 'Jibble registrerer hvem som er til stede, med ansikt og enkel GPS. GeoTapp dokumenterer hva som er gjort, hvor og når. For dem som jobber ute i felt, endrer forskjellen alt.',
     summary: 'Kort sagt:',
-    summaryText: 'Jibble er bra for å telle oppmøte og timer med en raus gratisplan. For feltarbeidere som må bevise oppdraget overfor en kunde, lager GeoTapp forseglede rapporter med verifisert GPS, bilder og digital signatur, som Jibble ikke har.',
+    summaryText: 'Jibble er utmerket til å telle oppmøte og timer med en raus gratisplan. For ansatte ute i felt som må dokumentere oppdraget overfor en kunde, lager GeoTapp forseglede rapporter med posisjon, tid og bilder, noe Jibble ikke har.',
     footnote: FOOTNOTE.nb,
     features: 'Sammenligning av nøkkelfunksjoner', feat: 'Funksjon',
-    diff: 'Oppmøteregistrering vs arbeidsbevis',
-    geo: ['GPS verifisert automatisk, ikke skrevet inn for hånd','Rapporter forseglet med kryptografisk hash ved oppdragsslutt','Fotobevis innebygd med GPS og tidsstempel','Kunden verifiserer ektheten selv','Bygget for feltarbeidere, ikke kontoret'],
-    comp: ['Solid oppmøteregistrering med ansiktsgjenkjenning','Enkel GPS ved stempling (ikke forseglet i oppdraget)','Raus gratisplan, bra for å telle timer','Ingen forseglet rapport eller fotobevis på oppdraget','Data kan ikke verifiseres av kunden'],
-    useCasesTitle: 'Hvem bør velge GeoTapp fremfor Jibble',
-    useCases: ['Renholds- og facility management-firmaer med krevende kunder','Vedlikeholdslag og installatører som må forsvare fakturerte timer','Bedrifter med arbeidstilsyn eller kunderevisjoner','De som allerede har hatt tvister om ikke-anerkjente oppdrag','Bedrifter med flere lag på ulike steder'],
+    diff: 'Oppmøteregistrering eller dokumentasjon av arbeidet',
+    geo: ['Posisjon lest fra telefonen ved hver stempling, ikke skrevet inn for hånd','Rapporter forseglet med kryptografisk hash når oppdraget avsluttes','Bevisbilder integrert med GPS og tidsstempel','Kunden kontrollerer selv at rapporten ikke er endret','Laget for ansatte ute i felt, ikke for kontoret'],
+    comp: ['God oppmøteregistrering med ansiktsgjenkjenning','Enkel GPS ved stempling (ikke forseglet i oppdraget)','Raus gratisplan, ideell for å telle timer','Ingen forseglet rapport og ingen bevisbilder for oppdraget','Dataene kan ikke verifiseres av kunden'],
+    useCasesTitle: 'Hvem bør velge GeoTapp framfor Jibble',
+    useCases: ['Renholdsbedrifter og facility management med krevende kunder','Servicefolk og installatører som må dokumentere de fakturerte timene','Bedrifter som blir kontrollert av en tilsynsmyndighet eller av kunden','De som allerede har opplevd at kunder ikke har anerkjent utførte oppdrag','Bedrifter med flere lag fordelt på ulike byggeplasser'],
     cta: 'Vil du se forskjellen i praksis?',
-    ctaDesc: 'Vi viser deg på 20 minutter hvordan et oppdrag blir til verifiserbart bevis, uforpliktende.',
-    ctaBtn: 'Kom i gang gratis nå!',
+    ctaDesc: 'Prøv det på et ekte oppdrag: 14 dager gratis, uten kredittkort.',
+    ctaBtn: 'Start gratis prøveperiode',
   },
   ru: {
     badge: 'Сравнение приложений', h1sub: 'считать присутствие или доказывать работу?',

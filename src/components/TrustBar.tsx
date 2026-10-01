@@ -63,10 +63,10 @@ const COPY: Record<string, {
     { title: 'Oberoende verifiering', sub: 'Kunden kontrollerar, utan konto' },
   ], sectors: 'Städning · Bygg · Säkerhet · Installatörer · Underhåll · Tekniska installationer' },
   nb: { headline: 'Bevis på feltarbeid, verifiserbart av hvem som helst', claims: [
-    { title: 'Enhver endring er synlig', sub: 'Kryptografisk segl på hvert oppdrag' },
-    { title: 'Ekte GPS-stempling', sub: 'Sted og tid registrert på stedet' },
+    { title: 'Enhver senere endring kan ses', sub: 'Kryptografisk segl på hver rapport' },
+    { title: 'Stempling med GPS-posisjon', sub: 'Sted og tidspunkt registrert på stedet' },
     { title: 'Uavhengig verifisering', sub: 'Kunden sjekker, uten konto' },
-  ], sectors: 'Rengjøring · Bygg · Sikkerhet · Installatører · Vedlikehold · VVS' },
+  ], sectors: 'Rengjøring · Bygg · Sikkerhet · Installatører · Vedlikehold · Tekniske anlegg' },
 };
 
 const CLAIM_ICONS = [ShieldCheck, FileCheck, MapPin];
@@ -80,7 +80,7 @@ export default function TrustBar({ locale }: { locale: string }) {
   return (
     <section
       ref={ref}
-      aria-label={locale === 'nl' ? 'Vertrouwenssignalen' : locale === 'fr' ? 'Points de confiance' : locale === 'es' ? 'Puntos de confianza' : locale === 'pt' ? 'Pontos de confiança' : locale === 'da' ? 'Tillidssignaler' : locale === 'sv' ? 'Förtroendesignaler' : 'Trust signals'}
+      aria-label={locale === 'nl' ? 'Vertrouwenssignalen' : locale === 'fr' ? 'Points de confiance' : locale === 'es' ? 'Puntos de confianza' : locale === 'pt' ? 'Pontos de confiança' : locale === 'da' ? 'Tillidssignaler' : locale === 'sv' ? 'Förtroendesignaler' : locale === 'nb' ? 'Tillitssignaler' : 'Trust signals'}
       className="r relative overflow-hidden"
       style={{
         background: 'linear-gradient(135deg, #f7f9fc 0%, #f2f4f7 50%, #f7f9fc 100%)',

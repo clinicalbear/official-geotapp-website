@@ -2,99 +2,302 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Programvare for Renholdsbedrifter og Facility Management | Vaktdokumentasjon | GeoTapp',
-    description: 'GeoTapp for renholdsbedrifter og facility management: GPS-verifisert tidsregistrering, fotodokumentasjon av rengjorte arealer, tilsyn med spredte team og etterlevelse av overenskomstene til NHO Service og Negotia.',
+    title: 'App for renholdsbedrifter: GPS og foto per oppdrag',
+    description: 'Stempling med GPS bare ved start og slutt og foto av hvert oppdrag: dokumentasjonen du kan vise kunden når vedkommende bestrider en tjeneste. 14 dager gratis.',
   },
+
   hero: {
-    badge: 'Programvare for Renholdsbedrifter, Facility Management og Serviceentreprenører',
-    h1_line1: 'Programvare for renholdsbedrifter:',
-    h1_line2: 'vakter, fotodokumentasjon og verifiserte timer, på hvert bygg',
-    subtitle: 'GeoTapp kobler Flow + TimeTracker for team spredt over flere bygg og etasjer. Dine renholdere stempler inn med GPS-verifisert smarttelefon; kontoret ser hvem som rengjorde hva, hvor og når, med fotodokumentasjon vedlagt. Data klare ved tvist, i tråd med NHO Service-overenskomsten.',
+    badge: 'App for renholdsbedrifter, eiendomsdrift og multiservice',
+    h1_line1: 'Appen for renholdsbedrifter',
+    h1_line2: 'som forsegler hvert oppdrag.',
+    subtitle:
+      'GeoTapp er appen for renholdsbedrifter som gjør hvert oppdrag om til dokumentasjon du kan vise. Kundene bestrider, og et påskrevet klokkeslett er ikke nok. GeoTapp registrerer posisjonen ved hver stempling, samler bevisbilder og lukker det hele i en forseglet rapport der enhver endring kan oppdages, og som kunden selv kan kontrollere.',
     cta_primary: 'Prøv det på et ekte oppdrag',
-    cta_note: '14 dager, opptil 50 medarbeidere i felt, uten kredittkort.',
+    cta_note: '14 dager, opptil 50 ansatte i felten, uten kredittkort.',
   },
+
   pain: {
-    title: 'Problemet du allerede kjenner',
+    title: 'Hvis du ikke kan dokumentere det, har det aldri skjedd for kunden.',
     items: [
       {
-        title: 'Tvister om arealer faktisk ble rengjort',
-        desc: 'Kunden hevder at et areal ikke ble rengjort eller bestrider tidspunktet. Dine renholdere har ingen bevis. Tvisten drar ut, og kontrakten står i fare.',
+        title: 'Kunden nekter for at oppdraget er utført',
+        desc: 'Kunden sier at området ikke er rengjort, eller at den ansatte ikke var der. Du har et påskrevet klokkeslett, kunden har sin versjon. Uten verifiserbar dokumentasjon risikerer du kontrakten.',
       },
       {
-        title: 'Tilsyn med spredte team på tvers av bygg',
-        desc: 'Du har ansatte på flere bygg, etasjer og vaktplaner samtidig. Å vite hvem som er hvor og om runden er fullført, blir en kjede av anrop og meldinger.',
+        title: 'Ansatte i felten som du ikke kan kontrollere',
+        desc: 'Du kan ikke være overalt. Du vet ikke om arbeidet er gjort før kunden klager, og da er det for sent å rekonstruere noe.',
       },
       {
-        title: 'Mangelfulle vaktoverleveringer og tariffkrav',
-        desc: 'Dagvakten vet ikke hva kveldsvakten gjorde. Papirblanketter forsvinner, meldinger ignoreres, og overenskomsten krever sporbare registreringer av pauser og overtid.',
+        title: 'Tilsynet ber om ekte dokumentasjon',
+        desc: 'Arbeidstider, tilstedeværelse, overtid, pauser: en timeliste er ikke nok. Den som kontrollerer, vil se registrerte tider, ikke tider gjettet etter hukommelsen.',
       },
     ],
   },
+
+  prima_dopo: {
+    title: 'Slik er det nå. Slik er det med GeoTapp.',
+    prima: [
+      'Kunden ringer og sier at badet ikke er rengjort.',
+      'Den ansatte sier «jeg har gjort det». Kunden sier «det har han ikke».',
+      'Du har ingenting i hånden som beviser noe.',
+      'Diskusjonen drar ut i dagevis. Noen ganger mister du kontrakten.',
+    ],
+    dopo: [
+      'Kunden ringer og sier at badet ikke er rengjort.',
+      'Du åpner rapporten for oppdraget: foto av det rene badet, tidspunkt, posisjon.',
+      'Du sender den til kunden. Du har svart med data, og kunden kontrollerer dem selv.',
+      'Du har noe å vise. Den ansatte har også noe i hånden.',
+    ],
+  },
+
+  scenario: {
+    title: 'Et typisk tilfelle',
+    body: 'Kunden sier at badet ikke er rengjort. Med GeoTapp åpner du rapporten og viser bildet av rommet, tidspunktet for bildet og posisjonen, alt sammen laget automatisk av den ansattes app mens oppdraget ble utført.',
+    resolution: 'Du har svart med data, ikke med ditt ord mot kundens.',
+  },
+
+  differenza: {
+    title: 'Stempling eller verifiserbar dokumentasjon av arbeidet.',
+    subtitle: 'De fleste appene registrerer data. GeoTapp lager dokumentasjon.',
+    rows: [
+      {
+        label: 'Hva den registrerer',
+        competitor: 'Tidspunkt for inn- og utstempling',
+        geotapp: 'Tidspunkt + posisjon ved stempling + foto + utført arbeid',
+      },
+      {
+        label: 'Hvem kan kontrollere',
+        competitor: 'Bare kontoret ditt',
+        geotapp: 'Du, kunden eller en tredjepart, hver for seg',
+      },
+      {
+        label: 'Ved en tvist',
+        competitor: 'Bare ditt ord',
+        geotapp: 'Forseglet rapport, enhver endring kan oppdages',
+      },
+      {
+        label: 'Fotodokumentasjon',
+        competitor: 'Mangler eller er løsrevet',
+        geotapp: 'Vedlagt rapporten med tidspunkt og posisjon',
+      },
+      {
+        label: 'GDPR',
+        competitor: 'Må ofte undersøkes nærmere',
+        geotapp: 'Bygget for å holde seg innenfor rammene i GDPR, skjemaer inkludert',
+      },
+      {
+        label: 'Oversikt oppdatert ved hver stempling',
+        competitor: 'Nei',
+        geotapp: 'Ja, alle steder, alle ansatte',
+      },
+    ],
+  },
+
+  non_gestionale: {
+    title: 'Det er ikke bare et administrasjonssystem.',
+    subtitle: 'Administrasjonssystemer organiserer arbeidet. GeoTapp organiserer det og forsegler det i tillegg.',
+    items: [
+      {
+        label: 'Hovedformål',
+        gestionale: 'Planlegge og organisere',
+        geotapp: 'Lage verifiserbar dokumentasjon',
+      },
+      {
+        label: 'Hva det leverer',
+        gestionale: 'Data internt i systemet ditt',
+        geotapp: 'Forseglede rapporter som tredjeparter kan kontrollere',
+      },
+      {
+        label: 'Ved en tvist',
+        gestionale: 'Du viser data som bare du kan lese',
+        geotapp: 'Du sender en rapport som kunden selv kontrollerer',
+      },
+      {
+        label: 'Verdi for kunden',
+        gestionale: 'Ingen, det er et internt verktøy',
+        geotapp: 'Høy: kunden kontrollerer den selv',
+      },
+      {
+        label: 'Fotodokumentasjon',
+        gestionale: 'Ikke med eller adskilt',
+        geotapp: 'Integrert i rapporten med GPS og tidsstempel',
+      },
+    ],
+  },
+
   workflow: {
-    title: 'Slik fungerer det i tre trinn',
-    subtitle: 'Fra bygget til kontoret, uten å jage noen.',
+    title: 'Fra byggeplassen til kontoret blir hvert oppdrag til dokumentasjon.',
+    subtitle: 'Tre trinn. Ingen papir. Ingen samtaler.',
     steps: [
       {
-        title: 'Renholderen stempler inn på stedet',
-        desc: 'Med GeoTapp TimeTracker registrerer de start, slutt, bilder av arealene og notater direkte fra smarttelefonen. GPS-verifisert, bygget for å holde seg innenfor GDPR, egnet for overenskomsten.',
+        title: 'Den ansatte forsegler beviset på stedet',
+        desc: 'Med GeoTapp TimeTracker registrerer den ansatte innstempling, pauser, utstempling, bilder av rommene og notater fra smarttelefonen. Posisjonen leses av telefonen i det øyeblikket og skrives ikke inn for hånd, og enhver senere endring kan oppdages.',
       },
       {
-        title: 'Kontoret ser hver stempling med en gang',
-        desc: 'Flow mottar data øyeblikkelig. Driftslederen ser hvilket bygg som er betjent, av hvem, på hvilket tidspunkt og med hvilken fotodokumentasjon, uten et eneste anrop.',
+        title: 'Kontoret er oppdatert ved hver stempling',
+        desc: 'Flow viser på ett skjermbilde hvem som har stemplet, hvor og når. Du ser status for hver bygning, får beskjed hvis en vakt står åpen, og tildeler oppdrag uten å jage noen.',
       },
       {
-        title: 'Vaktoverleveringsrapporten er allerede klar',
-        desc: 'Ved vaktens slutt er servicerapporten allerede strukturert med reelle data: arbeidede timer, pauser, dekkede arealer og bilder. Ingen manuell rekonstruksjon, ingen ubesvart tvist.',
+        title: 'Rapporten er allerede klar. Forseglet: enhver endring kan ses.',
+        desc: 'Når vakten er over, lager systemet automatisk en forseglet rapport med posisjoner, bilder og forsegling. Kunden mottar den og kontrollerer den selv, uten tilgang til systemet ditt og uten å måtte stole på ditt ord.',
       },
     ],
   },
+
   features: {
-    title: 'Hva du får',
+    title: 'App for renholdsbedrifter: færre diskusjoner, mer dokumentasjon.',
     items: [
       {
-        title: 'GPS-verifisert inn-/utstempeling per bygg',
-        desc: 'Hvert inn- og utstempel er koblet til posisjon, tidsstempel og tildelt bygg. Forsvarlig overfor kunden, oppdragsgiver og Arbeidstilsynet.',
+        title: 'Svar på enhver innvending med data',
+        desc: 'Når hvert oppdrag har en verifiserbar rapport, har du dokumentasjonen til å svare med en gang. Færre muntlige forhandlinger som varer i uker.',
       },
       {
-        title: 'Fotodokumentasjon før og etter',
-        desc: 'Renholderne fotograferer direkte fra appen. Bilder med dato, klokkeslett og GPS: verifiserbart bevis for levert tjeneste.',
+        title: 'Reell kontroll over alle steder',
+        desc: 'Du vet hvor og når hver ansatt har stemplet så snart stemplingen kommer inn, på alle bygninger og fra alle enheter. Mellom to stemplinger registreres ingenting automatisk.',
       },
       {
-        title: 'Lønnseksport for Visma Lønn og Tripletex',
-        desc: 'Eksporter månedlig fremmøtedata kompatibel med Visma Lønn, Tripletex og andre norske lønnssystemer, med automatisk skille mellom ordinære timer, overtid og tariffbestemte tillegg.',
+        title: 'Rapporter som kan forsvares overalt',
+        desc: 'Hver rapport er forseglet: enhver endring kan oppdages. Den som mottar den, kunde, tilsyn eller rådgiver, kan kontrollere den selv.',
+      },
+      {
+        title: 'Klar for tilsynet',
+        desc: 'Arbeidstider, pauser, overtid og tillegg registreres vakt for vakt og kommer med i oversikten til lønnsansvarlig. Ved et tilsyn er dokumentasjonen allerede i orden.',
+      },
+      {
+        title: 'Styring av flere steder uten samtaler',
+        desc: 'Mange adresser, ett skjermbilde. Du tildeler oppdrag, ser hvem som har stemplet hvor, og får beskjed hvis en vakt står åpen.',
+      },
+      {
+        title: 'De ansatte dine er beskyttet',
+        desc: 'En verifiserbar rapport gir også den ansatte noe i hånden mot ubegrunnede beskyldninger. Den som jobber godt, kan vise det.',
       },
     ],
   },
-  testimonial: {
-    quote: 'Siden vi begynte med GeoTapp, har vi ikke mottatt en eneste skriftlig klage fra en kunde. Bildene taler for seg selv.',
-    author: 'Tone B.',
-    role: 'Driftsleder, renholdsbedrift',
+
+  cosa_cambia: {
+    title: 'Det som virkelig endrer seg.',
+    items: [
+      {
+        title: 'Du trenger ikke lenger stole blindt på de ansatte.',
+        desc: 'Ikke fordi de ikke er pålitelige, men fordi du ikke trenger det. Systemet lager dokumentasjonen i det øyeblikket oppdraget utføres, uansett hva de forteller deg. Dataene forblir slik de ble registrert.',
+      },
+      {
+        title: 'Du trenger ikke lenger forsvare deg muntlig.',
+        desc: 'Du slipper å forklare, forsvare og huske. Når en kunde bestrider noe, åpner du rapporten og sender den. Det er ikke ditt ord mot kundens. Det er et verifiserbart dokument.',
+      },
+      {
+        title: 'Du har verifiserbar dokumentasjon. Alltid.',
+        desc: 'Hvert avsluttede oppdrag blir automatisk til en rapport: posisjoner, bilder, tidspunkter og forsegling. Du trenger ikke gjøre noe ekstra. Systemet gjør det mens de ansatte jobber.',
+      },
+    ],
   },
+
+  prova_visiva: {
+    title: 'Det du ser, og det kunden ser.',
+    subtitle: 'Appen for dem som jobber i felten. Rapporten for dem som skal svare.',
+  },
+
+  cta_mid: {
+    title: 'Vil du se hvordan det fungerer på et ekte oppdrag?',
+    body: 'Prøv det på et ekte oppdrag, fra den ansatte som åpner oppdraget til rapporten kunden mottar: 14 dager gratis, uten kredittkort.',
+    cta: 'Prøv gratis i 14 dager',
+  },
+
+  testimonial: {
+    quote:
+      'Før hadde vi alltid en kunde som bestred noe. Siden vi begynte med GeoTapp, sender vi rapporten, og samtalen endrer seg med en gang: man snakker om data, ikke om ord. Diskusjonene blir mye kortere.',
+    author: 'Roberta M.',
+    role: 'Driftssjef, industrirenhold - Nord-Italia',
+  },
+
+  trust: {
+    title: 'Hvis en av rapportene våre endres, kan det ses. Også hvis vi gjør det.',
+    body:
+      'GeoTapp-rapportene lages av systemet mens oppdraget utføres. Når rapporten er forseglet, brytes forseglingen hvis noen retter et klokkeslett eller flytter et bilde, og kontrollen melder fra. Den som mottar rapporten, kunde, tilsyn eller rådgiver, kan kontrollere den selv.',
+    badge: 'Kan kontrolleres av hvem som helst, uten tilgang til kontoen din',
+  },
+
   faq: {
     title: 'Ofte stilte spørsmål',
-    subtitle: 'Det vi oftest blir spurt om før oppstart.',
+    subtitle: 'Det vi oftest blir spurt om før dere kommer i gang.',
     items: [
       {
-        q: 'Er GeoTapp egnet for renholdsbedrifter og facility management?',
-        a: 'Ja. GeoTapp hjelper renholdsbedrifter, FM-leverandører og serviceentreprenører med å administrere vakter på flere bygg, dokumentere tjenester med GPS-tidsregistrering og fotodokumentasjon, og overholde kravene i NHO Service-overenskomsten.',
+        q: 'Er GeoTapp bare en stemplingsapp for renholdsbedrifter?',
+        a: 'Nei. GeoTapp er et system for verifiserbar dokumentasjon av arbeidet, ikke bare en stemplingsapp. Stemplingsapper registrerer et klokkeslett. GeoTapp lager en forseglet rapport med posisjon, fotodokumentasjon og tidsstempel som kunden selv kan kontrollere. Forskjellen mellom «det står der» og «det kan dokumenteres».',
       },
       {
-        q: 'Hvordan administrerer jeg team spredt over flere bygg samtidig?',
-        a: 'Flow viser status og plassering for hver renholdsarbeider per bygg, oppdatert ved hver stempling. Du kan tildele vakter, sjekke dekning og motta automatiske varsler ved fravær eller forsinkelser.',
+        q: 'Kan det brukes sammen med gjeldende tariffavtale?',
+        a: 'GeoTapp registrerer arbeidstider, pauser, overtid og tillegg, også natt- og helligdagsarbeid, og eksporterer dem til Excel eller CSV for lønnsansvarlig, som bruker dem etter gjeldende tariffavtale. Ved et tilsyn har du all dokumentasjon klar.',
       },
       {
-        q: 'Hjelper GeoTapp med etterlevelse av tariffavtalen for pauser og overtid?',
-        a: 'Ja. Systemet registrerer automatisk pausetider, overtid og vaktmønstre. Månedlig eksport er kompatibel med Visma Lønn og Tripletex for tariffmessig lønnsbehandling.',
+        q: 'Hvordan styrer jeg team fordelt på flere steder samtidig?',
+        a: 'Med GeoTapp Flow har du ett skjermbilde for alle steder. Du ser hvem som har stemplet hvor så snart stemplingen kommer inn, tildeler oppdrag og får beskjed hvis en vakt står åpen. Ingen samtaler, ingen e-poster.',
+      },
+      {
+        q: 'Hvordan kontrollerer jeg at de ansatte har utført arbeidet?',
+        a: 'Hvert oppdrag åpnes og lukkes med posisjon registrert av den ansattes smarttelefon. Den ansatte sender bevisbilder knyttet til oppdraget, med tidspunkt og posisjon. Rapporten lages automatisk og forsegles ved avslutningen: enhver endring kan ses.',
+      },
+      {
+        q: 'Overholder GeoTapp GDPR når det gjelder de ansattes posisjon?',
+        a: 'GeoTapp er bygget for å holde seg innenfor rammene i GDPR og Datatilsynets veiledning: det registrerer bare posisjonen når den ansatte stempler (innstempling, pauser, utstempling) eller tar et bevisbilde, lar informasjonen signeres i appen før stempling og samler ikke inn unødvendige data.',
+      },
+      {
+        q: 'Fungerer det også for eiendomsdrift og multiservice?',
+        a: 'Ja. Renholdsbedrifter, multiservice, eiendomsdrift og alle virksomheter med ansatte fordelt på flere steder bruker GeoTapp. Det passer fra det lille teamet til virksomheten med hundrevis av ansatte, uten kompliserte oppsett.',
+      },
+      {
+        q: 'Hva koster GeoTapp for en renholdsbedrift?',
+        a: 'GeoTapp Flow starter på 39 € per måned; TimeTracker-plassene til de ansatte koster 3 € per måned per plass opp til 25, 2,50 € fra plass 26. Abonnementet har en minste varighet på 12 måneder. Først kan du prøve det gratis i 14 dager, uten kort.',
       },
     ],
   },
+
   cta: {
-    title: 'Svar på tvister med data. Begynn nå.',
-    subtitle: 'GeoTapp Flow og TimeTracker gir renholdsbedriften din den operative kontrollen og bevisene du virkelig trenger.',
-    primary: 'Be om en demo',
-    secondary: 'Se priser',
+    title: 'De ansatte dine jobber bra. Sørg for at det kan ses.',
+    subtitle:
+      'Hver dag blir arbeidet utført. Problemet er at uten verifiserbar dokumentasjon står det ditt ord mot kundens når noen bestrider noe. GeoTapp gjør hvert oppdrag til dokumentasjon du kan vise.',
+    primary: 'Prøv gratis i 14 dager',
+    secondary: 'Se prisene',
   },
+
+  pricing_hint: {
+    label: 'TimeTracker-plasser fra',
+    per: 'per ansatt per måned, pluss Flow-abonnement fra 39 € per måned',
+    note: 'Gratis prøveperiode i 14 dager',
+  },
+
   schema_sector_name: 'Renholdsbedrifter',
+
+  schema_faq: [
+    {
+      question: 'Er GeoTapp bare en stemplingsapp for renholdsbedrifter?',
+      answer: 'Nei. GeoTapp er appen og programvaren for renholdsbedrifter og multiservice som går lenger enn stempling: den lager forseglede rapporter med posisjoner, bilder og tidspunkter som kunden selv kontrollerer, ikke bare et register over timer.',
+    },
+    {
+      question: 'Kan det brukes sammen med gjeldende tariffavtale?',
+      answer: 'GeoTapp registrerer arbeidstider, pauser, overtid og tillegg og eksporterer dem til Excel eller CSV for lønnsansvarlig, som bruker dem etter gjeldende tariffavtale.',
+    },
+    {
+      question: 'Hvordan styrer jeg flere steder samtidig?',
+      answer: 'Ett skjermbilde for alle steder. Du ser hvem som har stemplet hvor så snart stemplingen kommer inn, tildeler oppdrag og får beskjed hvis en vakt står åpen, uten telefonsamtaler.',
+    },
+    {
+      question: 'Hvordan dokumenterer jeg at arbeidet er utført?',
+      answer: 'Hvert oppdrag åpnes og lukkes med registrert posisjon. Den ansatte sender bevisbilder knyttet til oppdraget. Rapporten lages automatisk og forsegles ved avslutningen: enhver endring kan ses.',
+    },
+    {
+      question: 'Overholder GeoTapp GDPR når det gjelder de ansattes posisjon?',
+      answer: 'Bygget for å holde seg innenfor rammene i GDPR: det registrerer bare posisjonen når den ansatte stempler eller tar et bevisbilde, aldri løpende, og lar informasjonen signeres i appen før stempling.',
+    },
+    {
+      question: 'Fungerer det også for eiendomsdrift og multiservice?',
+      answer: 'Ja. GeoTapp passer for renholdsbedrifter, multiservice og eiendomsdrift, fra det lille teamet til virksomheten med hundrevis av ansatte.',
+    },
+    {
+      question: 'Hva koster det?',
+      answer: 'GeoTapp Flow fra 39 € per måned, pluss TimeTracker-plasser fra 3 € per ansatt per måned. Abonnementet har en minste varighet på 12 måneder. Først kan du prøve det gratis i 14 dager, uten kort.',
+    },
+  ],
 };
 
 export default content;

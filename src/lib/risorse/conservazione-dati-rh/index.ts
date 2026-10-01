@@ -427,17 +427,17 @@ const CONTENUTI: Record<CdLocale, CdContenuto> = {
     unitAnni: 'år',
     perPaeseNota: 'Fastsatt av nasjonal regnskaps-/skattelov',
     tipi: [
-      { id: 'presenze', nome: 'Oppmøte og innstemplinger', durata: 'Ansettelsens varighet + foreldelsesfrister for lønnskrav (ofte opptil 5 år)', nota: 'De dokumenterer arbeidstimer og skyldig lønn: perioden følger landets foreldelsesregler.' },
-      { id: 'geolocalizzazione', nome: 'Geolokaliseringsdata', durata: 'Så kort som mulig (veiledende: 12 måneder); helst bare innstemplingspunktet, ikke det løpende sporet', nota: 'Det er den mest sensitive opplysningen: oppbevar det strengt nødvendige og slett så snart den ikke lenger tjener formålet.' },
+      { id: 'presenze', nome: 'Oppmøte og stemplinger', durata: 'Ansettelsens varighet + foreldelsesfrister for lønnskrav (ofte opptil 5 år)', nota: 'De dokumenterer arbeidstimer og skyldig lønn: perioden følger landets foreldelsesregler.' },
+      { id: 'geolocalizzazione', nome: 'Geolokaliseringsdata', durata: 'Så kort som mulig (veiledende: 12 måneder); helst bare posisjonen ved stempling, ikke et løpende spor', nota: 'Det er den mest sensitive opplysningen: oppbevar det strengt nødvendige og slett så snart den ikke lenger tjener formålet.' },
       { id: 'foto', nome: 'Oppdragsbilder / arbeidsbevis', durata: 'Så lenge det er nødvendig for tvister eller garanti (veiledende: 12-24 måneder eller kundekontraktens varighet)', nota: 'Behold dem så lenge de tjener som bevis på utført arbeid, slett eller anonymiser dem deretter.' },
-      { id: 'comunicazioni', nome: 'Tjenstlig kommunikasjon (chat, meldinger)', durata: 'Veiledende: 6-12 måneder', nota: 'Unngå å oppbevare samtaler ut over tiden som er nyttig for organiseringen av arbeidet.' },
+      { id: 'comunicazioni', nome: 'Arbeidsrelatert kommunikasjon (chat, meldinger)', durata: 'Veiledende: 6-12 måneder', nota: 'Unngå å oppbevare samtaler ut over tiden som er nyttig for organiseringen av arbeidet.' },
       { id: 'valutazioni', nome: 'Vurderinger og advarsler', durata: 'Ansettelsens varighet + ankefrister', nota: 'Behold dem bare hvis de er knyttet til saker eller plikter; slett dem som ikke lenger er relevante.' },
       { id: 'documenti', nome: 'Kontraktsdokumenter og lønnsslipper', durata: 'I henhold til regnskaps- og skatteregler (veiledende: 5-10 år)', nota: 'Perioden fastsettes av landets regnskaps-/skattelov.', perPaese: true },
     ],
     faq: { title: 'Ofte stilte spørsmål', items: [
-      { q: 'Er periodene bindende?', a: 'Nei, de er veiledende: et fornuftig utgangspunkt. For regnskapsdokumenter bruker vi loven i landet du velger; for resten er prinsippet å oppbevare data kortest mulig. Sjekk alltid din konkrete situasjon.' },
+      { q: 'Er periodene bindende?', a: 'Nei, de er veiledende: et fornuftig utgangspunkt. For regnskapsdokumenter bruker vi loven i landet du velger; for resten er prinsippet å oppbevare data bare så lenge det er nødvendig. Sjekk alltid din konkrete situasjon.' },
       { q: 'Forblir dataene mine private?', a: 'Ja. Tabellen genereres helt i nettleseren din: verken firmanavn eller logo sendes til en server.' },
-      { q: 'Hvorfor er det bedre å oppbevare mindre?', a: 'Jo lenger du oppbevarer data, desto større er risikoen ved et brudd, og desto vanskeligere å begrunne behovet. Å slette ved utløp er en del av etterlevelsen, ikke et tillegg.' },
+      { q: 'Hvorfor er det bedre å oppbevare mindre?', a: 'Jo lenger du oppbevarer data, desto større er risikoen ved et brudd, og desto vanskeligere å begrunne behovet. Å slette ved utløp hører med til god databehandling, det er ikke et tillegg.' },
     ] },
   },
   ru: {

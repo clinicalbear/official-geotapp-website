@@ -13,6 +13,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   pt: 'Regras e documentação em Portugal',
   nl: 'Regels en documentatie in Nederland',
   da: 'Regler og dokumentation i Danmark',
+  nb: 'Regler og dokumentasjon i Norge',
   sv: 'Regler och dokumentation i Sverige',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
@@ -118,6 +119,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Underentreprenører og arbejdsmiljø på byggepladsen?',
       a: 'GeoTapp håndterer ikke arbejdsmiljødokumenter som APV eller planer for byggepladsen og vurderer ikke medarbejdernes egnethed. Det registrerer, hvem der har stemplet, hvor og hvornår på hver byggeplads, også for underentreprenørernes hold, og den historik kan vises til byggeledelsen. Dokumentationspligterne efter arbejdsmiljøloven forbliver hos virksomheden.',
+    },
+  ],
+  nb: [
+    {
+      q: 'Timer og tariffavtale på byggeplassen?',
+      a: 'GeoTapp anvender ingen tariffavtale og beregner ikke tillegg. Det registrerer timer og oppmøte per ansatt og per byggeplass, som kan eksporteres til Excel eller CSV og brukes som grunnlag for dine egne registreringer. Lønnsbehandlingen og anvendelsen av tariffavtalen forblir hos virksomheten og regnskapsføreren.',
+    },
+    {
+      q: 'Geolokalisering på byggeplassen: GDPR og Datatilsynet?',
+      a: 'Posisjonen registreres bare ved stempling og med bevisbilder, aldri løpende, og informasjonen til de ansatte signeres i appen før det stemples. Det er virksomheten selv som må undersøke hva GDPR (berettiget interesse), personopplysningsloven og Datatilsynets veiledning krever i akkurat ditt tilfelle.',
+    },
+    {
+      q: 'Underentreprenører og HMS på byggeplassen?',
+      a: 'GeoTapp håndterer ikke HMS-dokumenter eller planer for byggeplassen og vurderer ikke de ansattes egnethet. Det registrerer hvem som har stemplet, hvor og når på hver byggeplass, også for underentreprenørenes team, og den historikken kan vises til byggeledelsen. Dokumentasjonsplikten etter arbeidsmiljøloven forblir hos virksomheten.',
     },
   ],
   sv: [

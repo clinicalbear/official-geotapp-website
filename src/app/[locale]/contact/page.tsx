@@ -12,7 +12,7 @@ const CONTACT_META: Record<string, { title: string; description: string }> = {
   ru: { title: 'Связаться с GeoTapp, Поддержка клиентов | GeoTapp', description: 'Есть вопросы о GeoTapp? Напишите нам. Наша команда отвечает на русском и английском языках.' },
   da: { title: 'Kontakt GeoTapp - Kundesupport | GeoTapp', description: 'Har du spørgsmål om GeoTapp? Skriv til os. Vi svarer på spørgsmål om support, samarbejder og kommerciel information.' },
   sv: { title: 'Kontakta GeoTapp - Kundsupport | GeoTapp', description: 'Har du frågor om GeoTapp? Skriv till oss. Vi svarar på frågor om support, samarbeten och kommersiell information.' },
-  nb: { title: 'Kontakt GeoTapp - Kundestøtte | GeoTapp', description: 'Har du spørsmål om GeoTapp? Skriv til oss. Teamet svarer på norsk og engelsk.' },
+  nb: { title: 'Kontakt GeoTapp - Kundestøtte | GeoTapp', description: 'Har du spørsmål om GeoTapp? Skriv til oss. Vi svarer på spørsmål om support, samarbeid og kommersiell informasjon.' },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

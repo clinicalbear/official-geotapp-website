@@ -98,14 +98,20 @@ const CLASSIC_CLOCKIN: Record<string, string> = {
   nl: 'Klassieke registratie-app',
   da: 'Klassisk stemplings-app',
   sv: 'Klassisk stämplingsapp',
+  nb: 'Klassisk stemplingsapp',
 };
 
 // Etichette dell'anteprima report che il dizionario danese non ha (senza, la pagina mostrerebbe l'italiano).
 const MOCKUP_FALLBACK_DA = { operator: 'Medarbejder', opening: 'Start', closing: 'Slut' };
 // Idem per lo svedese.
 const MOCKUP_FALLBACK_SV = { operator: 'Medarbetare', opening: 'Start', closing: 'Slut' };
+// Idem per il norvegese (bokmal).
+const MOCKUP_FALLBACK_NB = { operator: 'Ansatt', opening: 'Start', closing: 'Slutt' };
 const mockupFallback = (locale: string, key: 'operator' | 'opening' | 'closing', it: string) =>
-  locale === 'da' ? MOCKUP_FALLBACK_DA[key] : locale === 'sv' ? MOCKUP_FALLBACK_SV[key] : it;
+  locale === 'da' ? MOCKUP_FALLBACK_DA[key]
+    : locale === 'sv' ? MOCKUP_FALLBACK_SV[key]
+    : locale === 'nb' ? MOCKUP_FALLBACK_NB[key]
+    : it;
 
 export default function SettorePageLayout({ content, locale, settore, children }: Props) {
   const trialLink = localizePath('/trial', locale);
@@ -226,7 +232,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
     nl: 'Verdiep u in de regelgeving',
     da: 'Læs mere om reglerne',
     sv: 'Läs mer om reglerna',
-    nb: 'Dybdedykk compliance',
+    nb: 'Les mer om reglene',
     ru: 'Углублённый анализ нормативов',
   };
   const NORM_LINKS: Record<string, { href: string; label: string }[]> = {
@@ -279,6 +285,12 @@ export default function SettorePageLayout({ content, locale, settore, children }
     sv: [
       { href: 'https://www.imy.se/verksamhet/dataskydd/vi-guidar-dig/integritet-pa-jobbet/sa-far-du-som-arbetsgivare-anvanda-platstjanster-gps/',
         label: 'IMY: så får du som arbetsgivare använda platstjänster (GPS)' },
+    ],
+    // Norvegese: la fonte giusta e' il Datatilsynet (non l'articolo inglese sull'ICO). URL gia' nella scheda Paese no.ts
+    // (FONTE_DATATILSYNET_VEICOLI). La chiave nb serve la Norvegia.
+    nb: [
+      { href: 'https://www.datatilsynet.no/personvern-pa-ulike-omrader/personvern-pa-arbeidsplassen/overvaking-kjoretoy/',
+        label: 'Datatilsynet: overvåking av kjøretøy og GPS' },
     ],
   };
   // Le 6 locale che NON hanno articoli normative tradotti ricadono su EN.

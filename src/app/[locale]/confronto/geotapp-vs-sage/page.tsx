@@ -22,7 +22,7 @@ const META: Record<string, { title: string; description: string }> = {
   nl: { title: 'GeoTapp vs Sage - Vergelijking 2026 | GeoTapp', description: 'GeoTapp vs Sage: twee verschillende hulpmiddelen. Sage beheert boekhouding, salaris en hr; GeoTapp bewijst het werk in het veld met locatie, tijd, foto\'s en verzegelde rapporten. Vaak complementair.' },
   da: { title: 'GeoTapp vs Sage - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Sage: to forskellige værktøjer. Sage styrer bogføring, løn og HR; GeoTapp dokumenterer arbejdet i marken. Ofte komplementære.' },
   sv: { title: 'GeoTapp vs Sage - Jämförelse 2026 | GeoTapp', description: 'GeoTapp vs Sage: två olika verktyg. Sage sköter bokföring, lön och HR; GeoTapp bevisar fältarbete med plats, tid, foton och förseglade rapporter. Ofta kompletterande.' },
-  nb: { title: 'GeoTapp vs Sage - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Sage: to forskjellige verktøy. Sage styrer regnskap, lønn og HR; GeoTapp beviser feltarbeid med verifisert GPS, bilder og rapporter som ikke kan endres. Ofte komplementære.' },
+  nb: { title: 'GeoTapp vs Sage - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Sage: to ulike verktøy. Sage styrer regnskap, lønn og HR; GeoTapp dokumenterer arbeidet ute i felt. Ofte utfyllende.' },
   ru: { title: 'GeoTapp vs Sage, Сравнение 2026 | GeoTapp', description: 'GeoTapp vs Sage: два разных инструмента. Sage ведёт бухгалтерию, зарплату и HR; GeoTapp доказывает выездную работу проверенным GPS, фото и защищёнными отчётами. Часто дополняют друг друга.' },
 };
 
@@ -84,10 +84,10 @@ const FAQ: Record<string, FaqItem[]> = {
     { q: 'Har Sage en gratisplan?', a: 'Sage är betaltjänst, utan någon offentlig gratisplan för affärssviten. GeoTapp har en gratis provperiod och öppna priser, och är modulärt: slå bara på de funktioner du behöver i fält.' },
   ],
   nb: [
-    { q: 'Hva er den viktigste forskjellen mellom GeoTapp og Sage?', a: 'Sage er en forretningssuite: regnskap, fakturering, lønn og, med Sage HR, personaladministrasjon. GeoTapp er et arbeidsbevis-system for felt: det lager forseglede rapporter med verifisert GPS, bilder og digital signatur, bevis kunden kan kontrollere. Sage fører regnskap og lønn; GeoTapp beviser hva medarbeideren gjør ute.' },
-    { q: 'Har Sage oppmøteregistrering?', a: 'Med Sage HR-modulen styrer det timelister, ferie og oppmøte, administrasjonsrettet. Men det produserer ikke bevis på feltoppdraget: ingen GPS verifisert på stedet, forseglede rapporter eller kundeverifisering. GeoTapp dekker den delen.' },
-    { q: 'Erstatter GeoTapp Sage?', a: 'Nei, de er komplementære. Sage forblir regnskap og lønn; GeoTapp legger til verifiserbart bevis på utført arbeid og eksporterer timer klare for lønnsslippen. Mange bedrifter beholder Sage til administrasjon og GeoTapp til feltarbeidere.' },
-    { q: 'Har Sage en gratis plan?', a: 'Sage er betalt, uten en offentlig gratis plan for forretningssuiten. GeoTapp har en gratis prøveperiode og transparente planer og er modulær: aktiver bare funksjonene du trenger i felt.' },
+    { q: 'Hva er den viktigste forskjellen mellom GeoTapp og Sage?', a: 'Sage er et forretningssystem: regnskap, fakturering, lønn og, med Sage HR, personaladministrasjon. GeoTapp er et system for dokumentasjon av arbeidet ute i felt: det lager forseglede rapporter med posisjon, tid og bilder, som kunden kan kontrollere. Sage holder orden på regnskapet og lønn; GeoTapp viser hva den ansatte gjør ute hos kunden.' },
+    { q: 'Har Sage oppmøteregistrering?', a: 'Med modulen Sage HR håndterer det timelister, ferie og oppmøte, rettet mot administrasjonen. Det leverer likevel ikke dokumentasjonen av oppdraget ute i felt: ingen posisjon registrert på byggeplassen, ingen forseglede rapporter og ingen verifisering fra kundens side. Den delen dekker GeoTapp.' },
+    { q: 'Erstatter GeoTapp Sage?', a: 'Nei, de utfyller hverandre. Sage forblir regnskap og lønn; GeoTapp legger til det verifiserbare beviset for arbeidet som er utført og eksporterer timene slik at de er klare for lønn. Mange bedrifter beholder Sage til administrasjonen og bruker GeoTapp til de ansatte ute i felt.' },
+    { q: 'Har Sage en gratisplan?', a: 'Sage er betalt, uten en offentlig gratisplan for den delen som gjelder forretningsstyring. GeoTapp har en gratis prøveperiode og åpne planer, og det er modulbasert: du slår bare på funksjonene du trenger ute i felt.' },
   ],
   ru: [
     { q: 'В чём главное различие между GeoTapp и Sage?', a: 'Sage, это бизнес-система: бухгалтерия, выставление счетов, зарплата и, с Sage HR, управление персоналом. GeoTapp, это система доказательства выездной работы: она формирует защищённые отчёты с проверенным GPS, фото и цифровой подписью, доказательства, которые заказчик может проверить. Sage ведёт учёт и зарплату; GeoTapp доказывает, что сотрудник делает вне офиса.' },
@@ -107,7 +107,7 @@ const ROWS_LABELS: Record<string, string[]> = {
   nl: ['Locatie vastgelegd en gecontroleerd bij elke registratie','Cryptografisch verzegeld rapport','Fotobewijzen gekoppeld aan gps en tijdstempel','Onafhankelijke controle door de klant','Bijhouden van uren','Mobiele app voor Android/iOS','Eigen interne berichten','Export van aanwezigheid/salarissen','Gratis abonnement','Opdrachtenbeheer voor meerdere locaties','Locatie alleen bij het registreren, nooit doorlopend','GPS-verklaring ondertekend in de app vóór het registreren*'],
   da: ['Position registreret og kontrolleret ved hver stempling','Kryptografisk forseglet rapport','Bevisfotos knyttet til GPS og tidsstempel','Uafhængig verificering af kunden','Timeregistrering','Mobilapp Android/iOS','Egen intern beskedfunktion','Eksport af fremmøde/løn','Gratis plan','Styring af opgaver på flere lokationer','Position registreres kun ved stempling, aldrig løbende','GPS-information underskrevet i appen, før man stempler*'],
   sv: ['Positionen registreras och kontrolleras vid varje instämpling','Kryptografiskt förseglad rapport','Bevisfoton kopplade till GPS och tidsstämpel','Oberoende verifiering av kunden','Tidrapportering','Mobilapp för Android/iOS','Inbyggd meddelandefunktion','Export av lön/närvaro','Gratisplan','Hantering av uppdrag på flera platser','Positionen registreras bara vid instämpling, aldrig löpande','GPS-information signerad i appen innan man stämplar in*'],
-  nb: ['GPS verifisert på oppdragsstedet','Kryptografisk forseglet rapport','Fotobevis koblet til GPS og tidsstempel','Uavhengig verifisering av kunden','Tidsregistrering','Mobilapp Android/iOS','Innebygd meldingsfunksjon','Eksport av lønn/oppmøte','Gratis plan','Styring av oppdrag på flere steder','GDPR-kompatibel geolokalisering','Automatisk GPS-personvernerklæring med digital signatur*'],
+  nb: ['Posisjon registrert og kontrollert ved hver stempling','Kryptografisk forseglet rapport','Bevisbilder knyttet til GPS og tidsstempel','Uavhengig verifisering fra kunden','Timeregistrering','Mobilapp Android/iOS','Egen intern meldingsfunksjon','Eksport av oppmøte/lønn','Gratis plan','Styring av oppdrag på flere steder','Posisjon registreres bare ved stempling, aldri løpende','GPS-informasjon signert i appen før man stempler*'],
   ru: ['GPS проверен на месте задания','Криптографически опечатанный отчёт','Фотодоказательства, привязанные к GPS и метке времени','Независимая проверка заказчиком','Учёт часов','Мобильное приложение Android/iOS','Встроенный обмен сообщениями','Экспорт зарплат/присутствия','Бесплатный тариф','Управление заданиями на нескольких объектах','Геолокация в соответствии с GDPR','Автоматическое уведомление о GPS с цифровой подписью*'],
 };
 
@@ -126,7 +126,7 @@ const TABLE_TAKEAWAY: Record<string, string> = {
   nl: 'Kort gezegd: Sage beheert boekhouding, facturering en salaris; GeoTapp bewijst het uitgevoerde werk in het veld met locatie bij de registratie, verzegeld rapport en controle door de klant. Vaak vullen ze elkaar aan.',
   da: 'Kort sagt: Sage styrer bogføring, fakturering og løn; GeoTapp dokumenterer arbejdet i marken med position ved stempling, forseglet rapport og kundens egen verificering. De supplerer ofte hinanden.',
   sv: 'Kort sagt: Sage sköter bokföring, fakturering och lön; GeoTapp bevisar fältarbete med positionen vid instämpling, en förseglad rapport och kundens verifiering. De fungerar ofta sida vid sida.',
-  nb: 'Kort sagt: Sage styrer regnskap, fakturering og lønn; GeoTapp beviser feltarbeid med verifisert GPS, forseglede rapporter og kundeverifisering. De utfyller ofte hverandre.',
+  nb: 'Kort sagt: Sage styrer regnskap, fakturering og lønn; GeoTapp dokumenterer arbeidet ute i felt med posisjon ved stempling, forseglet rapport og kundens egen verifisering. De utfyller ofte hverandre.',
   ru: 'Коротко: Sage ведёт бухгалтерию, счета и зарплату; GeoTapp доказывает выездную работу проверенным GPS, защищёнными отчётами и проверкой заказчиком. Часто дополняют друг друга.',
 };
 
@@ -149,7 +149,7 @@ const FOOTNOTE: Record<string, string> = {
   nl: '* Volgens de wet (art. 13 AVG en, in Italië, art. 4 van het arbeidsstatuut) moet elke werknemer worden geïnformeerd voordat hij wordt gelokaliseerd. Laat de software deze stap aan de verantwoordelijke over, dan blijft het risico bij hem. GeoTapp maakt de persoonlijke privacyverklaring klaar, laat die in de app voor kennisgeving ondertekenen en laat niet registreren totdat ze is ondertekend.',
   da: '* Ifølge loven (GDPR art. 13 og, i Italien, art. 4 i arbejdstagerloven, Statuto dei Lavoratori) skal hver medarbejder informeres, før vedkommende geolokaliseres. Overlader softwaren dette trin til arbejdsgiveren, er risikoen stadig arbejdsgiverens. GeoTapp forbereder den personlige information, får den underskrevet i appen som bekræftelse på, at den er læst, og lader ikke medarbejderen stemple, før den er underskrevet.',
   sv: '* Enligt lag (artikel 13 i GDPR) måste varje anställd informeras innan hen geolokaliseras. Om programvaran överlåter det steget åt arbetsgivaren ligger risken kvar hos arbetsgivaren. GeoTapp tar fram den personliga informationen, låter den anställde signera den som läst i appen och släpper inte till instämpling förrän den är signerad.',
-  nb: '* Ifølge loven (GDPR Art. 13, og i Italia Art. 4 i arbeidstakerstatutten) må hver ansatt signere en personvernerklæring før geolokalisering. De fleste programmer håndterer ikke dette: den juridiske risikoen blir hos arbeidsgiveren. GeoTapp lager automatisk den personlige erklæringen, får den signert digitalt og blokkerer GPS-tilgang til den er signert.',
+  nb: '* Ifølge loven (GDPR art. 13 og, i Italia, art. 4 i arbeidstakerloven, Statuto dei Lavoratori) må hver ansatt informeres før vedkommende geolokaliseres. Overlater programvaren dette trinnet til arbeidsgiveren, blir risikoen hos arbeidsgiveren. GeoTapp forbereder den personlige informasjonen, får den signert i appen som bekreftelse på at den er lest, og lar ikke den ansatte stemple før den er signert.',
   ru: '* По закону (GDPR ст. 13, а в Италии ст. 4 Статута трудящихся) каждый сотрудник должен подписать уведомление о конфиденциальности до геолокации. Большинство программ этого не обеспечивают: юридический риск остаётся на работодателе. GeoTapp автоматически формирует персональное уведомление, даёт подписать его цифровой подписью и блокирует доступ к GPS, пока оно не подписано.',
 };
 
@@ -303,20 +303,20 @@ const T: Record<string, Copy> = {
     ctaBtn: 'Starta den kostnadsfria provperioden',
   },
   nb: {
-    badge: 'Programvaresammenligning', h1sub: 'forretningssuite og lønn eller bevis på feltarbeid?',
-    desc: 'Sage styrer regnskap, lønn og HR. GeoTapp beviser hva medarbeideren gjør ute, med verifisert GPS og bilder. To forskjellige verktøy, ofte komplementære.',
+    badge: 'Programvaresammenligning', h1sub: 'forretningssystem og lønn eller dokumentasjon av arbeidet ute i felt?',
+    desc: 'Sage styrer regnskap, lønn og HR. GeoTapp viser hva den ansatte gjør ute hos kunden, med posisjon, tid og bilder. To ulike verktøy, ofte utfyllende.',
     summary: 'Kort sagt:',
-    summaryText: 'Sage er sterk på regnskap, fakturering og lønn, med Sage HR for personalet. Den er ikke bygget for å bevise feltoppdrag: ingen verifisert GPS, forseglede rapporter eller kundeverifisering. For utekjørende medarbeidere dekker GeoTapp den delen, og timene kommer ut klare for lønn.',
+    summaryText: 'Sage er sterkt på regnskap, fakturering og lønn, med Sage HR for personalet. Det er ikke laget for å dokumentere oppdraget ute i felt: ingen posisjon ved stempling, ingen forseglede rapporter og ingen verifisering fra kundens side. For ansatte ute hos kundene dekker GeoTapp den delen, og timene kommer ut klare for lønn.',
     footnote: FOOTNOTE.nb,
     features: 'Sammenligning av nøkkelfunksjoner', feat: 'Funksjon',
-    diff: 'Forretningssuite/lønn vs bevis på feltarbeid',
-    geo: ['GPS verifisert automatisk, ikke skrevet inn for hånd','Rapporter forseglet med kryptografisk hash ved oppdragsslutt','Fotobevis innebygd med GPS og tidsstempel','Kunden verifiserer ektheten selv','Bygget for feltarbeidere, ikke administrasjonen'],
-    comp: ['Solid regnskap, fakturering og lønn','Sage HR for timelister, ferie og oppmøte','Mobilapp for personaladministrasjon','Ingen forseglet bevis på feltoppdraget','Ingen verifisert GPS, fotobevis eller kundeverifisering'],
-    useCasesTitle: 'Hvem bør kombinere GeoTapp med en suite som Sage',
-    useCases: ['Renholds- og facility management-firmaer med krevende kunder','Vedlikeholdslag og installatører som må forsvare fakturerte timer','Bedrifter med regnskap/lønn i Sage men lag i felt','De som allerede har hatt tvister om ikke-anerkjente oppdrag','Bedrifter med flere lag på ulike steder'],
+    diff: 'Forretningssystem og lønn eller dokumentasjon av arbeidet ute i felt',
+    geo: ['Posisjon lest fra telefonen ved hver stempling, ikke skrevet inn for hånd','Rapporter forseglet med kryptografisk hash når oppdraget avsluttes','Bevisbilder integrert med GPS og tidsstempel','Kunden kontrollerer selv at rapporten ikke er endret','Laget for ansatte ute i felt, ikke for administrasjonen'],
+    comp: ['Robust regnskap, fakturering og lønn','Sage HR for timelister, ferie og oppmøte','Mobilapp for personaladministrasjon','Ingen forseglet bevis for oppdraget ute i felt','Ingen posisjon ved stempling, bevisbilder eller verifisering fra kunden'],
+    useCasesTitle: 'Hvem bør supplere et forretningssystem som Sage med GeoTapp',
+    useCases: ['Renholdsbedrifter og facility management med krevende kunder','Servicefolk og installatører som må dokumentere de fakturerte timene','Bedrifter med regnskap og lønn i Sage, men lag ute i felt','De som allerede har opplevd at kunder ikke har anerkjent utførte oppdrag','Bedrifter med flere lag fordelt på ulike byggeplasser'],
     cta: 'Vil du se forskjellen i praksis?',
-    ctaDesc: 'Vi viser deg på 20 minutter hvordan et oppdrag blir til verifiserbart bevis, uforpliktende.',
-    ctaBtn: 'Kom i gang gratis nå!',
+    ctaDesc: 'Prøv det på et ekte oppdrag: 14 dager gratis, uten kredittkort.',
+    ctaBtn: 'Start gratis prøveperiode',
   },
   ru: {
     badge: 'Сравнение ПО', h1sub: 'бизнес-система и зарплата или доказательство работы в поле?',

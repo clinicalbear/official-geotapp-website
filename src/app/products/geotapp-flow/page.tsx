@@ -58,6 +58,8 @@ const CAROUSEL_SLIDES = [
     label_da: 'Dashboard med nøgletal og operative moduler',
     alt_sv: 'GeoTapp Flow - Instrumentpanel med nyckeltal och operativa moduler',
     label_sv: 'Instrumentpanel med nyckeltal och operativa moduler',
+    alt_nb: 'GeoTapp Flow - Dashbord med nøkkeltall og operative moduler',
+    label_nb: 'Dashbord med nøkkeltall og operative moduler',
   },
   {
     src: '/screen_live_map.webp',
@@ -79,6 +81,8 @@ const CAROUSEL_SLIDES = [
     label_da: 'Kort over de positioner, der er registreret ved stemplingerne',
     alt_sv: 'GeoTapp Flow - Karta med de positioner som sparats vid instämplingarna',
     label_sv: 'Karta över de positioner som sparats vid instämplingarna',
+    alt_nb: 'GeoTapp Flow - Kart med posisjonene som ble registrert ved stemplingene',
+    label_nb: 'Kart over posisjonene som ble registrert ved stemplingene',
   },
   {
     src: '/schermataFlow.webp',
@@ -100,6 +104,8 @@ const CAROUSEL_SLIDES = [
     label_da: 'Operativt overblik',
     alt_sv: 'GeoTapp Flow - Operativ översikt',
     label_sv: 'Operativ översikt',
+    alt_nb: 'GeoTapp Flow - Operativt overblikk',
+    label_nb: 'Operativt overblikk',
   },
 ];
 
@@ -307,9 +313,30 @@ const FLOW_COPY: Record<string, FlowCopy> = {
     legalKicker: 'Lokala regler',
     trial: 'Prova Flow gratis i 14 dagar',
   },
+  nb: {
+    statusLabel: 'Hvor det brukes',
+    releaseNote: 'Flow er en nettapp: du bruker den i nettleseren, på datamaskin og nettbrett, uten å installere noe. De som jobber ute i felt bruker GeoTapp TimeTracker, appen på Google Play og App Store, og det de stempler kommer fram i Flow.',
+    doesTitle: 'Hva GeoTapp Flow gjør',
+    doesSub: 'Det er kontorets administrasjonsverktøy, og det samler i tillegg dokumentasjonen på det teamet har gjort: planlegging, feltarbeid, sluttoppgjør og rapporter til kunden.',
+    cards: [
+      { title: 'Operativt senter og administrasjon', description: 'Flow gir kontoret ett sted for kunder, oppdrag, kalender, dokumenter, ferie og fravær, administrasjon og koordinering av teamene.' },
+      { title: 'Dokumentasjon du kan vise kunden', description: 'Bilder, notater og stemplinger fra feltet blir knyttet til oppdraget, slik at kontoret svarer med fakta og ikke med antakelser.' },
+      { title: 'Oppdragets historikk og eksport', description: 'For hvert oppdrag kan du laste ned pakken med hendelsesforløpet, stemplingene med posisjonene og bildene, og sende kunden den forseglede rapporten.' },
+      { title: 'Raskere fakturering', description: 'Tilbud, fakturaer og koblingen til Fatture in Cloud jobber med oppdragets faktiske data: sluttoppgjøret er klart tidligere, og det blir mindre å diskutere.' },
+    ],
+    blocks: [
+      { title: 'Laget for kontor, administrasjon og koordinering', description: 'Eiere, administrasjon og ledere bruker Flow når de vil ha færre interne diskusjoner, tydeligere roller og et klart overblikk over arbeidet som er utført.' },
+      { title: 'Koblet til TimeTracker', description: 'Stemplinger, bevisbilder og oppdragets framdrift kommer fram i Flow så snart medarbeideren registrerer dem, klare for rapporten og sluttoppgjøret.' },
+    ],
+    complianceKicker: 'GPS-informasjon',
+    complianceTagline: 'Først bekreftes informasjonen, så stempler man.*',
+    complianceFootnote: '* Etter personvernforordningen (GDPR art. 13) må hver ansatt informeres før posisjonen hans eller hennes registreres. Hvis programvaren overlater det steget til arbeidsgiveren, blir risikoen hos arbeidsgiveren. GeoTapp forbereder den personlige informasjonen, får den bekreftet som lest i appen og lar ikke den ansatte stemple før den er bekreftet.',
+    legalKicker: 'Lokale regler',
+    trial: 'Prøv Flow gratis i 14 dager',
+  },
 };
 
-function ScreenCarousel({ isItalian, isGerman = false, isDutch = false, isFrench = false, isSpanish = false, isPortuguese = false, isDanish = false, isSwedish = false }: { isItalian: boolean; isGerman?: boolean; isDutch?: boolean; isFrench?: boolean; isSpanish?: boolean; isPortuguese?: boolean; isDanish?: boolean; isSwedish?: boolean }) {
+function ScreenCarousel({ isItalian, isGerman = false, isDutch = false, isFrench = false, isSpanish = false, isPortuguese = false, isDanish = false, isSwedish = false, isNorwegian = false }: { isItalian: boolean; isGerman?: boolean; isDutch?: boolean; isFrench?: boolean; isSpanish?: boolean; isPortuguese?: boolean; isDanish?: boolean; isSwedish?: boolean; isNorwegian?: boolean }) {
   const [current, setCurrent] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
   const total = CAROUSEL_SLIDES.length;
@@ -336,7 +363,7 @@ function ScreenCarousel({ isItalian, isGerman = false, isDutch = false, isFrench
   return (
     <>
       <div className="bar">
-        <i /><i /><i /><b>{isItalian ? slide.label_it : isGerman ? slide.label_de : isDutch ? slide.label_nl : isFrench ? slide.label_fr : isSpanish ? slide.label_es : isPortuguese ? slide.label_pt : isDanish ? slide.label_da : isSwedish ? slide.label_sv : slide.label_en}</b>
+        <i /><i /><i /><b>{isItalian ? slide.label_it : isGerman ? slide.label_de : isDutch ? slide.label_nl : isFrench ? slide.label_fr : isSpanish ? slide.label_es : isPortuguese ? slide.label_pt : isDanish ? slide.label_da : isSwedish ? slide.label_sv : isNorwegian ? slide.label_nb : slide.label_en}</b>
       </div>
       {isDesktop ? (
         <AnimatePresence mode="wait">
@@ -344,7 +371,7 @@ function ScreenCarousel({ isItalian, isGerman = false, isDutch = false, isFrench
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={slide.src}
-              alt={isItalian ? slide.alt_it : isGerman ? slide.alt_de : isDutch ? slide.alt_nl : isFrench ? slide.alt_fr : isSpanish ? slide.alt_es : isPortuguese ? slide.alt_pt : isDanish ? slide.alt_da : isSwedish ? slide.alt_sv : slide.alt_en}
+              alt={isItalian ? slide.alt_it : isGerman ? slide.alt_de : isDutch ? slide.alt_nl : isFrench ? slide.alt_fr : isSpanish ? slide.alt_es : isPortuguese ? slide.alt_pt : isDanish ? slide.alt_da : isSwedish ? slide.alt_sv : isNorwegian ? slide.alt_nb : slide.alt_en}
               loading={current === 0 ? 'eager' : 'lazy'}
               fetchPriority={current === 0 ? 'high' : 'auto'}
             />
@@ -354,15 +381,15 @@ function ScreenCarousel({ isItalian, isGerman = false, isDutch = false, isFrench
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={CAROUSEL_SLIDES[0].src}
-          alt={isItalian ? CAROUSEL_SLIDES[0].alt_it : isGerman ? CAROUSEL_SLIDES[0].alt_de : isDutch ? CAROUSEL_SLIDES[0].alt_nl : isFrench ? CAROUSEL_SLIDES[0].alt_fr : isSpanish ? CAROUSEL_SLIDES[0].alt_es : isPortuguese ? CAROUSEL_SLIDES[0].alt_pt : isDanish ? CAROUSEL_SLIDES[0].alt_da : isSwedish ? CAROUSEL_SLIDES[0].alt_sv : CAROUSEL_SLIDES[0].alt_en}
+          alt={isItalian ? CAROUSEL_SLIDES[0].alt_it : isGerman ? CAROUSEL_SLIDES[0].alt_de : isDutch ? CAROUSEL_SLIDES[0].alt_nl : isFrench ? CAROUSEL_SLIDES[0].alt_fr : isSpanish ? CAROUSEL_SLIDES[0].alt_es : isPortuguese ? CAROUSEL_SLIDES[0].alt_pt : isDanish ? CAROUSEL_SLIDES[0].alt_da : isSwedish ? CAROUSEL_SLIDES[0].alt_sv : isNorwegian ? CAROUSEL_SLIDES[0].alt_nb : CAROUSEL_SLIDES[0].alt_en}
           loading="eager"
           fetchPriority="high"
         />
       )}
-      <button type="button" onClick={prev} className="l-shot-nav l-shot-prev" aria-label={isItalian ? 'Precedente' : isGerman ? 'Zurück' : isDutch ? 'Vorige' : isFrench ? 'Précédent' : isSpanish ? 'Anterior' : isPortuguese ? 'Anterior' : isDanish ? 'Forrige' : isSwedish ? 'Föregående' : 'Previous'}>
+      <button type="button" onClick={prev} className="l-shot-nav l-shot-prev" aria-label={isItalian ? 'Precedente' : isGerman ? 'Zurück' : isDutch ? 'Vorige' : isFrench ? 'Précédent' : isSpanish ? 'Anterior' : isPortuguese ? 'Anterior' : isDanish ? 'Forrige' : isSwedish ? 'Föregående' : isNorwegian ? 'Forrige' : 'Previous'}>
         <ArrowRight size={18} style={{ transform: 'rotate(180deg)' }} />
       </button>
-      <button type="button" onClick={next} className="l-shot-nav l-shot-next" aria-label={isItalian ? 'Successiva' : isGerman ? 'Weiter' : isDutch ? 'Volgende' : isFrench ? 'Suivant' : isSpanish ? 'Siguiente' : isPortuguese ? 'Seguinte' : isDanish ? 'Næste' : isSwedish ? 'Nästa' : 'Next'}>
+      <button type="button" onClick={next} className="l-shot-nav l-shot-next" aria-label={isItalian ? 'Successiva' : isGerman ? 'Weiter' : isDutch ? 'Volgende' : isFrench ? 'Suivant' : isSpanish ? 'Siguiente' : isPortuguese ? 'Seguinte' : isDanish ? 'Næste' : isSwedish ? 'Nästa' : isNorwegian ? 'Neste' : 'Next'}>
         <ArrowRight size={18} />
       </button>
       <div className="l-shot-dots">
@@ -372,7 +399,7 @@ function ScreenCarousel({ isItalian, isGerman = false, isDutch = false, isFrench
             type="button"
             onClick={() => setCurrent(i)}
             className={i === current ? 'on' : ''}
-            aria-label={`${isItalian ? 'Schermata' : isGerman ? 'Ansicht' : isDutch ? 'Weergave' : isFrench ? 'Vue' : isSpanish ? 'Vista' : isPortuguese ? 'Ecrã' : isDanish ? 'Billede' : isSwedish ? 'Bild' : 'Slide'} ${i + 1}`}
+            aria-label={`${isItalian ? 'Schermata' : isGerman ? 'Ansicht' : isDutch ? 'Weergave' : isFrench ? 'Vue' : isSpanish ? 'Vista' : isPortuguese ? 'Ecrã' : isDanish ? 'Billede' : isSwedish ? 'Bild' : isNorwegian ? 'Bilde' : 'Slide'} ${i + 1}`}
           />
         ))}
       </div>
@@ -452,11 +479,11 @@ const GPS_PRIVACY_CONTENT: Record<string, {
     tags: ['GDPR art. 13', 'IMY', 'MBL (medbestämmande)', 'Bekräftad som läst', 'Dokument arkiverat', 'Ingen stämpling före bekräftelsen', 'Inget papper'],
   },
   nb: {
-    title: 'Automatisk GPS-personvernerklaring for hver ansatt',
-    p1: 'Når du inviterer en ny ansatt, genererer Flow automatisk et GDPR-kompatibelt GPS-personvernvarsel og sender det til digital signatur. Den ansatte fyller inn sine data, leser dokumentet og signerer med ett klikk, alt online, uten papir.',
-    p2: 'Den signerte PDF-en arkiveres automatisk, og du ser i sanntid hvem som har signert og hvem som ikke har det. Ingen løse papirer, ingen risiko for bøter: hvert samtykke logges med dato, tid og digital signatur.',
-    legal: 'I samsvar med GDPR og Datatilsynets retningslinjer for overvåking av ansatte. Arbeidsmiljøloven (§ 9-1) krever at kontrolltiltak er forholdsmessige og at ansatte informeres på forhånd.',
-    tags: ['GDPR-kompatibel', 'Datatilsynet', 'Arbeidsmiljøloven', 'Digital signatur', 'PDF arkivert', 'Ikke papir'],
+    title: 'GPS-informasjonen, til hver ansatt',
+    p1: 'Når du inviterer en ny ansatt, forbereder Flow informasjonen om posisjonsregistrering med bedriftens opplysninger og sender den. Den ansatte fyller inn opplysningene sine, leser dokumentet og bekrefter det som lest, alt fra telefonen, uten papir. Så lenge det ikke er bekreftet, lar ikke appen den ansatte stemple.',
+    p2: 'Det bekreftede dokumentet blir arkivert, og i Flow ser du hvem som har bekreftet og hvem som ikke har det. Ikke flere løse papirer: hver bekreftelse registreres med dato og klokkeslett. Bekreftelsen viser at informasjonen er utlevert; den er ikke et samtykke, og den trenger ikke å være det.',
+    legal: 'I Norge skal de ansatte informeres før du registrerer posisjonen deres (GDPR art. 13), og arbeidsmiljøloven kapittel 9 stiller krav til kontrolltiltak: de må være saklig begrunnet, ikke uforholdsmessig inngripende, og drøftes med de tillitsvalgte. Datatilsynet har veiledning om kontroll av ansatte. Disse stegene er fortsatt arbeidsgiverens ansvar. GeoTapp er bygget for å holde seg innenfor rammene: posisjon bare ved stempling, aldri løpende.',
+    tags: ['GDPR art. 13', 'Arbeidsmiljøloven kap. 9', 'Datatilsynet', 'Bekreftet som lest', 'Dokument arkivert', 'Ingen stempling før bekreftelsen', 'Ikke noe papir'],
   },
   ru: {
     title: 'Автоматическое согласие на GPS-мониторинг для каждого сотрудника',
@@ -604,7 +631,7 @@ export default function GeoTappApp() {
 
       {/* SCHERMATA VERA */}
       <section className="shot"><div className="wn"><div className="frame r-s">
-        <div className="browser"><ScreenCarousel isItalian={isItalian} isGerman={currentLocale === 'de'} isDutch={currentLocale === 'nl'} isFrench={currentLocale === 'fr'} isSpanish={currentLocale === 'es'} isPortuguese={currentLocale === 'pt'} isDanish={currentLocale === 'da'} isSwedish={currentLocale === 'sv'} /></div>
+        <div className="browser"><ScreenCarousel isItalian={isItalian} isGerman={currentLocale === 'de'} isDutch={currentLocale === 'nl'} isFrench={currentLocale === 'fr'} isSpanish={currentLocale === 'es'} isPortuguese={currentLocale === 'pt'} isDanish={currentLocale === 'da'} isSwedish={currentLocale === 'sv'} isNorwegian={currentLocale === 'nb'} /></div>
       </div></div></section>
 
       {/* IL GIRO COMPLETO — entra dall'atto in cui la prova arriva in ufficio da
@@ -699,7 +726,7 @@ export default function GeoTappApp() {
         <div className="r-s d1" style={{ display: 'flex', justifyContent: 'center' }}>
           <div className="sheet">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/verifier-report.webp" alt={currentLocale === 'it' ? 'Report sigillato GeoTapp' : currentLocale === 'de' ? 'Versiegelter GeoTapp-Bericht' : currentLocale === 'fr' ? 'Rapport scellé GeoTapp' : currentLocale === 'nl' ? 'Verzegeld GeoTapp-rapport' : currentLocale === 'es' ? 'Informe sellado de GeoTapp' : currentLocale === 'pt' ? 'Relatório selado GeoTapp' : currentLocale === 'da' ? 'Forseglet GeoTapp-rapport' : currentLocale === 'sv' ? 'Förseglad GeoTapp-rapport' : 'GeoTapp sealed report'} loading="lazy" />
+            <img src="/verifier-report.webp" alt={currentLocale === 'it' ? 'Report sigillato GeoTapp' : currentLocale === 'de' ? 'Versiegelter GeoTapp-Bericht' : currentLocale === 'fr' ? 'Rapport scellé GeoTapp' : currentLocale === 'nl' ? 'Verzegeld GeoTapp-rapport' : currentLocale === 'es' ? 'Informe sellado de GeoTapp' : currentLocale === 'pt' ? 'Relatório selado GeoTapp' : currentLocale === 'da' ? 'Forseglet GeoTapp-rapport' : currentLocale === 'sv' ? 'Förseglad GeoTapp-rapport' : currentLocale === 'nb' ? 'Forseglet GeoTapp-rapport' : 'GeoTapp sealed report'} loading="lazy" />
           </div>
         </div>
       </div></div></section>

@@ -19,7 +19,7 @@ const TEXTS: Record<string, T> = {
   nl: { lead: 'Deze pagina bestaat niet.', desc: 'Of ze is van adres veranderd, of ze is er nooit geweest. De rest van de site werkt gewoon.', home: 'Naar de home', pricing: 'Tarieven', cta: 'Probeer gratis' },
   da: { lead: 'Denne side findes ikke.', desc: 'Enten er den flyttet, eller også har den aldrig været her. Resten af siden virker.', home: 'Gå til forsiden', pricing: 'Priser', cta: 'Prøv gratis' },
   sv: { lead: 'Den här sidan finns inte.', desc: 'Antingen har den flyttat, eller så har den aldrig funnits. Resten av webbplatsen fungerar.', home: 'Gå till startsidan', pricing: 'Priser', cta: 'Prova gratis' },
-  nb: { lead: 'Denne siden finnes ikke.', desc: 'Enten har den flyttet, eller så har den aldri vært her. Resten av nettstedet virker.', home: 'Gå til forsiden', pricing: 'Priser', cta: 'Prøv gratis' },
+  nb: { lead: 'Denne siden finnes ikke.', desc: 'Enten har den flyttet, eller så har den aldri vært her. Resten av nettsiden virker.', home: 'Gå til forsiden', pricing: 'Priser', cta: 'Prøv gratis' },
   ru: { lead: 'Такой страницы нет.', desc: 'Либо она переехала, либо её никогда не было. Остальной сайт работает.', home: 'На главную', pricing: 'Цены', cta: 'Попробовать бесплатно' },
 };
 

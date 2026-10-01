@@ -42,6 +42,11 @@ const META: Record<string, { title: string; description: string }> = {
     description:
       'Skicka en begäran om att radera ditt GeoTapp-konto och dina personuppgifter. Vi hanterar varje begäran inom 30 dagar, som GDPR föreskriver.',
   },
+  nb: {
+    title: 'Be om sletting av kontoen | GeoTapp',
+    description:
+      'Send en forespørsel om å slette GeoTapp-kontoen din og personopplysningene dine. Vi behandler hver forespørsel innen 30 dager, slik GDPR krever.',
+  },
   nl: {
     title: 'Accountverwijdering aanvragen | GeoTapp',
     description:

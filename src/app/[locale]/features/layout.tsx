@@ -57,9 +57,9 @@ const META: Record<string, { title: string; description: string }> = {
       'Position bara vid stämpling, falska positioner avvisas, stämplingar sparas även utan täckning, förseglade rapporter som kunden själv kontrollerar, data i Europa.',
   },
   nb: {
-    title: 'GeoTapp-funksjoner: GPS-stempling, frakoblet modus, kryptering',
+    title: 'GeoTapp: stempling med posisjon og forseglede rapporter',
     description:
-      'Stempling med GPS og geofence-kontroll, anti-spoofing, frakoblet modus som synkroniserer når dekningen er tilbake, AES-256-kryptering og sanntidsdata.',
+      'Posisjon bare ved stempling, falske posisjoner avvises, stemplinger lagres også uten dekning, forseglede rapporter som kunden selv kontrollerer, data i Europa.',
   },
   ru: {
     title: 'Функции GeoTapp: отметка по GPS, офлайн-режим, шифрование',

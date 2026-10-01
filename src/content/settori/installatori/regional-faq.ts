@@ -13,6 +13,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   pt: 'Normas e registos em Portugal',
   nl: 'Regels en documentatie in Nederland',
   da: 'Regler og dokumentation i Danmark',
+  nb: 'Regler og dokumentasjon i Norge',
   sv: 'Regler och dokumentation i Sverige',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
@@ -118,6 +119,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Autorisationer og dokumentation af installationen?',
       a: 'GeoTapp verificerer ingen autorisationer og laver ingen installationsdokumentation eller overensstemmelseserklæringer. Det registrerer klokkeslæt, position, fotos og noter for hver opgave, som du kan vedlægge anlæggets dokumentation.',
+    },
+  ],
+  nb: [
+    {
+      q: 'Timer og reiser i installasjonsbedriften?',
+      a: 'GeoTapp registrerer ved hver stempling start, pauser og slutt med posisjon og klokkeslett, per tekniker og per oppdrag, og eksporterer dem til Excel eller CSV for regnskapsføreren eller lønnskontoret ditt. Anvendelsen av tariffavtalen (tillegg, godtgjørelser) og lønnsbehandlingen forblir hos regnskapsføreren og virksomheten.',
+    },
+    {
+      q: 'Geolokalisering av installatører: GDPR og Datatilsynet?',
+      a: 'Posisjonen registreres bare ved stempling og med bevisbilder, aldri løpende, og informasjonen til de ansatte signeres i appen før det stemples. Det er virksomheten selv som må undersøke hva GDPR (berettiget interesse), personopplysningsloven og Datatilsynets veiledning krever i akkurat ditt tilfelle.',
+    },
+    {
+      q: 'Autorisasjoner og dokumentasjon av installasjonen?',
+      a: 'GeoTapp verifiserer ingen autorisasjoner og lager ingen installasjonsdokumentasjon eller samsvarserklæringer. Det registrerer klokkeslett, posisjon, bilder og notater for hvert oppdrag, som du kan legge ved anleggets dokumentasjon.',
     },
   ],
   sv: [

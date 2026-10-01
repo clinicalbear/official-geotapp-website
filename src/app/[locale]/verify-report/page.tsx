@@ -48,9 +48,9 @@ const META: Record<string, { title: string; description: string }> = {
       'Ladda upp det signerade paketet och kontrollera den elektroniska signaturen, händelsekedjan och fotografiernas fingeravtryck. Kontrollen körs i din webbläsare: filen skickas inte till oss.',
   },
   nb: {
-    title: 'Kontroller en GeoTapp-rapport | GeoTapp',
+    title: 'Verifiser en GeoTapp-rapport | GeoTapp',
     description:
-      'Last opp den signerte pakken og kontroller den elektroniske signaturen, hendelseskjeden og fotografienes fingeravtrykk. Kontrollen kjører i nettleseren din: filen sendes ikke til oss.',
+      'Last opp den signerte pakken og kontroller den elektroniske signaturen, hendelseskjeden og bildenes fingeravtrykk. Kontrollen kjører i nettleseren din: filen sendes ikke til oss.',
   },
   ru: {
     title: 'Проверка отчёта GeoTapp | GeoTapp',

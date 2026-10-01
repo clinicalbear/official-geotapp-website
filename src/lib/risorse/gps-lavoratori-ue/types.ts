@@ -15,7 +15,7 @@ export type RispostaChecklist = 'si' | 'no' | 'dipende';
  * Testo localizzabile. Una `string` semplice e' trattata come italiano (master) e
  * usata come fallback per tutte le lingue. Un oggetto porta le traduzioni: la lingua
  * della pagina, poi l'inglese, poi l'italiano (vedi `loc()` in ./localize.ts). Le
- * lingue del sito senza traduzione propria (nb/ru/en-*) ripiegano sull'inglese,
+ * lingue del sito senza traduzione propria (ru/en-*) ripiegano sull'inglese,
  * coerentemente coi dizionari della cornice.
  */
 export type TestoLoc = string | ({ it: string } & Partial<Record<AppLocale, string>>);

@@ -195,7 +195,7 @@ const TEXTS: Record<string, Texts> = {
     modalTitle: 'Innstillinger for informasjonskapsler',
     modalIntro: 'Velg hvilke kategorier du vil aktivere. Du kan ombestemme deg når som helst.',
     catNecessary: 'Nødvendige',
-    catNecessaryDesc: 'Innlogging, språk, sikkerhet. Uten disse fungerer ikke siden.',
+    catNecessaryDesc: 'Språk, land, sikkerhet. Uten disse fungerer ikke siden.',
     alwaysOn: 'alltid på',
     catAnalytics: 'Analyse',
     catAnalyticsDesc: 'Google Analytics: forstå hvilke sider som fungerer. Anonyme data. Ingen reklame.',

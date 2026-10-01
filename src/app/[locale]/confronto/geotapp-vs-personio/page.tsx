@@ -22,7 +22,7 @@ const META: Record<string, { title: string; description: string }> = {
   nl: { title: 'GeoTapp vs Personio - Vergelijking 2026 | GeoTapp', description: 'GeoTapp vs Personio: twee verschillende werelden. Personio beheert hr, afwezigheid en salaris van het personeelsbestand; GeoTapp bewijst het werk in het veld met locatie, tijd, foto\'s en verzegelde rapporten. Vaak complementair.' },
   da: { title: 'GeoTapp vs Personio - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Personio: to forskellige verdener. Personio styrer HR og løn; GeoTapp dokumenterer arbejdet i marken. Ofte komplementære.' },
   sv: { title: 'GeoTapp vs Personio - Jämförelse 2026 | GeoTapp', description: 'GeoTapp vs Personio: två olika världar. Personio sköter HR, frånvaro och lön; GeoTapp bevisar fältarbete med plats, tid, foton och förseglade rapporter. Ofta kompletterande.' },
-  nb: { title: 'GeoTapp vs Personio - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Personio: to forskjellige verdener. Personio styrer HR, fravær og lønn; GeoTapp beviser feltarbeid med verifisert GPS, bilder og rapporter som ikke kan endres. Ofte komplementære.' },
+  nb: { title: 'GeoTapp vs Personio - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Personio: to ulike verdener. Personio styrer HR og lønn; GeoTapp dokumenterer arbeidet ute i felt. Ofte utfyllende.' },
   ru: { title: 'GeoTapp vs Personio, Сравнение 2026 | GeoTapp', description: 'GeoTapp vs Personio: два разных мира. Personio ведёт HR, отсутствия и зарплату; GeoTapp доказывает выездную работу проверенным GPS, фото и защищёнными отчётами. Часто дополняют друг друга.' },
 };
 
@@ -84,10 +84,10 @@ const FAQ: Record<string, FaqItem[]> = {
     { q: 'Har Personio en gratisplan?', a: 'Personio säljs på offert, utan någon offentlig gratisplan. GeoTapp har en gratis provperiod och öppna priser, och är modulärt: slå bara på de funktioner du behöver i fält.' },
   ],
   nb: [
-    { q: 'Hva er den viktigste forskjellen mellom GeoTapp og Personio?', a: 'Personio er en HR-suite: personaldata, fravær og ferie, onboarding, lønn. GeoTapp er et arbeidsbevis-system for felt: det lager forseglede rapporter med verifisert GPS, bilder og digital signatur, bevis kunden kan kontrollere. Personio styrer menneskene i organisasjonen; GeoTapp beviser hva medarbeideren gjør ute.' },
-    { q: 'Har Personio oppmøteregistrering?', a: 'Ja, Personio styrer oppmøte og timer, bygget for kontor og HR. Men det produserer ikke bevis på feltoppdraget: ingen GPS verifisert på stedet, forseglede rapporter eller kundeverifisering. For bedrifter med felt-team dekker GeoTapp den delen.' },
-    { q: 'Erstatter GeoTapp Personio?', a: 'Nei, de er ofte komplementære. Personio forblir HR-systemet for de ansatte; GeoTapp legger til verifiserbart bevis på feltarbeid, med timer eksportert klar for lønn. Mange bedrifter bruker en HR-suite for kontoret og GeoTapp for feltarbeidere.' },
-    { q: 'Har Personio en gratis plan?', a: 'Personio er tilbudsbasert uten en offentlig gratis plan. GeoTapp har en gratis prøveperiode og transparente planer og er modulær: aktiver bare funksjonene du trenger i felt.' },
+    { q: 'Hva er den viktigste forskjellen mellom GeoTapp og Personio?', a: 'Personio er en HR-suite: personalregister, fravær og ferie, onboarding, lønn. GeoTapp er et system for dokumentasjon av arbeidet ute i felt: det lager forseglede rapporter med posisjon, tid og bilder, som kunden kan kontrollere. Personio styrer folkene i organisasjonen; GeoTapp viser hva den ansatte gjør ute hos kunden.' },
+    { q: 'Har Personio oppmøteregistrering?', a: 'Ja, Personio håndterer oppmøte og timer, laget for kontoret og HR. Det leverer likevel ikke dokumentasjonen av oppdraget ute i felt: ingen posisjon registrert på byggeplassen, ingen forseglede rapporter og ingen verifisering fra kundens side. For dem som har lag ute hos kundene, dekker GeoTapp den delen.' },
+    { q: 'Erstatter GeoTapp Personio?', a: 'Nei, de utfyller ofte hverandre. Personio forblir HR-systemet for de ansatte; GeoTapp legger til det verifiserbare beviset for arbeidet ute i felt, med eksport av timene klar for lønn. Mange bedrifter bruker en personalsuite til kontoret og GeoTapp til de ansatte ute i felt.' },
+    { q: 'Har Personio en gratisplan?', a: 'Personio selges bare etter tilbud og har ingen offentlig gratisplan. GeoTapp har en gratis prøveperiode og åpne planer, og det er modulbasert: du slår bare på funksjonene du trenger ute i felt.' },
   ],
   ru: [
     { q: 'В чём главное различие между GeoTapp и Personio?', a: 'Personio, это HR-система: карточки сотрудников, отсутствия и отпуска, онбординг, зарплата. GeoTapp, это система доказательства выездной работы: она формирует защищённые отчёты с проверенным GPS, фото и цифровой подписью, доказательства, которые заказчик может проверить. Personio управляет людьми организации; GeoTapp доказывает, что сотрудник делает вне офиса.' },
@@ -107,7 +107,7 @@ const ROWS_LABELS: Record<string, string[]> = {
   nl: ['Locatie vastgelegd en gecontroleerd bij elke registratie','Cryptografisch verzegeld rapport','Fotobewijzen gekoppeld aan gps en tijdstempel','Onafhankelijke controle door de klant','Bijhouden van uren','Mobiele app voor Android/iOS','Eigen interne berichten','Export van aanwezigheid/salarissen','Gratis abonnement','Opdrachtenbeheer voor meerdere locaties','Locatie alleen bij het registreren, nooit doorlopend','GPS-verklaring ondertekend in de app vóór het registreren*'],
   da: ['Position registreret og kontrolleret ved hver stempling','Kryptografisk forseglet rapport','Bevisfotos knyttet til GPS og tidsstempel','Uafhængig verificering af kunden','Timeregistrering','Mobilapp Android/iOS','Egen intern beskedfunktion','Eksport af fremmøde/løn','Gratis plan','Styring af opgaver på flere lokationer','Position registreres kun ved stempling, aldrig løbende','GPS-information underskrevet i appen, før man stempler*'],
   sv: ['Positionen registreras och kontrolleras vid varje instämpling','Kryptografiskt förseglad rapport','Bevisfoton kopplade till GPS och tidsstämpel','Oberoende verifiering av kunden','Tidrapportering','Mobilapp för Android/iOS','Inbyggd meddelandefunktion','Export av lön/närvaro','Gratisplan','Hantering av uppdrag på flera platser','Positionen registreras bara vid instämpling, aldrig löpande','GPS-information signerad i appen innan man stämplar in*'],
-  nb: ['GPS verifisert på oppdragsstedet','Kryptografisk forseglet rapport','Fotobevis koblet til GPS og tidsstempel','Uavhengig verifisering av kunden','Tidsregistrering','Mobilapp Android/iOS','Innebygd meldingsfunksjon','Eksport av lønn/oppmøte','Gratis plan','Styring av oppdrag på flere steder','GDPR-kompatibel geolokalisering','Automatisk GPS-personvernerklæring med digital signatur*'],
+  nb: ['Posisjon registrert og kontrollert ved hver stempling','Kryptografisk forseglet rapport','Bevisbilder knyttet til GPS og tidsstempel','Uavhengig verifisering fra kunden','Timeregistrering','Mobilapp Android/iOS','Egen intern meldingsfunksjon','Eksport av oppmøte/lønn','Gratis plan','Styring av oppdrag på flere steder','Posisjon registreres bare ved stempling, aldri løpende','GPS-informasjon signert i appen før man stempler*'],
   ru: ['GPS проверен на месте задания','Криптографически опечатанный отчёт','Фотодоказательства, привязанные к GPS и метке времени','Независимая проверка заказчиком','Учёт часов','Мобильное приложение Android/iOS','Встроенный обмен сообщениями','Экспорт зарплат/присутствия','Бесплатный тариф','Управление заданиями на нескольких объектах','Геолокация в соответствии с GDPR','Автоматическое уведомление о GPS с цифровой подписью*'],
 };
 
@@ -126,7 +126,7 @@ const TABLE_TAKEAWAY: Record<string, string> = {
   nl: 'Kort gezegd: Personio beheert hr, afwezigheid en salaris van het personeelsbestand; GeoTapp bewijst het uitgevoerde werk in het veld met locatie bij de registratie, verzegeld rapport en controle door de klant. Vaak vullen ze elkaar aan.',
   da: 'Kort sagt: Personio styrer HR, fravær og løn; GeoTapp dokumenterer arbejdet i marken med position ved stempling, forseglet rapport og kundens egen verificering. De supplerer ofte hinanden.',
   sv: 'Kort sagt: Personio hanterar HR, frånvaro och lön; GeoTapp bevisar fältarbete med positionen vid instämpling, en förseglad rapport och kundens verifiering. De fungerar ofta sida vid sida.',
-  nb: 'Kort sagt: Personio styrer HR, fravær og lønn; GeoTapp beviser feltarbeid med verifisert GPS, forseglede rapporter og kundeverifisering. De utfyller ofte hverandre.',
+  nb: 'Kort sagt: Personio styrer HR, fravær og lønn; GeoTapp dokumenterer arbeidet ute i felt med posisjon ved stempling, forseglet rapport og kundens egen verifisering. De utfyller ofte hverandre.',
   ru: 'Коротко: Personio ведёт HR, отсутствия и зарплату; GeoTapp доказывает выездную работу проверенным GPS, защищёнными отчётами и проверкой заказчиком. Часто дополняют друг друга.',
 };
 
@@ -149,7 +149,7 @@ const FOOTNOTE: Record<string, string> = {
   nl: '* Volgens de wet (art. 13 AVG en, in Italië, art. 4 van het arbeidsstatuut) moet elke werknemer worden geïnformeerd voordat hij wordt gelokaliseerd. Laat de software deze stap aan de verantwoordelijke over, dan blijft het risico bij hem. GeoTapp maakt de persoonlijke privacyverklaring klaar, laat die in de app voor kennisgeving ondertekenen en laat niet registreren totdat ze is ondertekend.',
   da: '* Ifølge loven (GDPR art. 13 og, i Italien, art. 4 i arbejdstagerloven, Statuto dei Lavoratori) skal hver medarbejder informeres, før vedkommende geolokaliseres. Overlader softwaren dette trin til arbejdsgiveren, er risikoen stadig arbejdsgiverens. GeoTapp forbereder den personlige information, får den underskrevet i appen som bekræftelse på, at den er læst, og lader ikke medarbejderen stemple, før den er underskrevet.',
   sv: '* Enligt lag (artikel 13 i GDPR) måste varje anställd informeras innan hen geolokaliseras. Om programvaran överlåter det steget åt arbetsgivaren ligger risken kvar hos arbetsgivaren. GeoTapp tar fram den personliga informationen, låter den anställde signera den som läst i appen och släpper inte till instämpling förrän den är signerad.',
-  nb: '* Ifølge loven (GDPR Art. 13, og i Italia Art. 4 i arbeidstakerstatutten) må hver ansatt signere en personvernerklæring før geolokalisering. De fleste programmer håndterer ikke dette: den juridiske risikoen blir hos arbeidsgiveren. GeoTapp lager automatisk den personlige erklæringen, får den signert digitalt og blokkerer GPS-tilgang til den er signert.',
+  nb: '* Ifølge loven (GDPR art. 13 og, i Italia, art. 4 i arbeidstakerloven, Statuto dei Lavoratori) må hver ansatt informeres før vedkommende geolokaliseres. Overlater programvaren dette trinnet til arbeidsgiveren, blir risikoen hos arbeidsgiveren. GeoTapp forbereder den personlige informasjonen, får den signert i appen som bekreftelse på at den er lest, og lar ikke den ansatte stemple før den er signert.',
   ru: '* По закону (GDPR ст. 13, а в Италии ст. 4 Статута трудящихся) каждый сотрудник должен подписать уведомление о конфиденциальности до геолокации. Большинство программ этого не обеспечивают: юридический риск остаётся на работодателе. GeoTapp автоматически формирует персональное уведомление, даёт подписать его цифровой подписью и блокирует доступ к GPS, пока оно не подписано.',
 };
 
@@ -303,20 +303,20 @@ const T: Record<string, Copy> = {
     ctaBtn: 'Starta den kostnadsfria provperioden',
   },
   nb: {
-    badge: 'Programvaresammenligning', h1sub: 'styre personalet eller bevise feltarbeidet?',
-    desc: 'Personio styrer HR, ferie og lønn for personalet. GeoTapp beviser hva medarbeideren gjør ute, med verifisert GPS og bilder. To forskjellige verdener, ofte komplementære.',
+    badge: 'Programvaresammenligning', h1sub: 'administrere personalet eller dokumentere arbeidet ute i felt?',
+    desc: 'Personio styrer HR, ferie og lønn for de ansatte. GeoTapp viser hva den ansatte gjør ute hos kunden, med posisjon, tid og bilder. To ulike verdener, ofte utfyllende.',
     summary: 'Kort sagt:',
-    summaryText: 'Personio er en god HR-suite for persondata, fravær og lønn. Den er ikke bygget for å bevise feltoppdrag: ingen verifisert GPS, forseglede rapporter eller kundeverifisering. For bedrifter med ansatte ute dekker GeoTapp nettopp den delen, og timene kommer ut klare for lønn.',
+    summaryText: 'Personio er en utmerket HR-suite for personalregister, fravær og lønn. Den er ikke laget for å dokumentere oppdraget ute i felt: ingen posisjon ved stempling, ingen forseglede rapporter og ingen verifisering fra kundens side. For dem som har ansatte ute hos kundene, dekker GeoTapp nettopp den delen, og timene kommer ut klare for lønn.',
     footnote: FOOTNOTE.nb,
     features: 'Sammenligning av nøkkelfunksjoner', feat: 'Funksjon',
-    diff: 'HR-styring vs bevis på feltarbeid',
-    geo: ['GPS verifisert automatisk, ikke skrevet inn for hånd','Rapporter forseglet med kryptografisk hash ved oppdragsslutt','Fotobevis innebygd med GPS og tidsstempel','Kunden verifiserer ektheten selv','Bygget for feltarbeidere, ikke HR-kontoret'],
-    comp: ['Komplett HR-suite: persondata, fravær, onboarding','Styring av lønn og kontoroppmøte','Mobil selvbetjeningsapp for ansatte','Ingen forseglet bevis på feltoppdraget','Ingen verifisert GPS, fotobevis eller kundeverifisering'],
-    useCasesTitle: 'Hvem bør kombinere GeoTapp med en HR-suite som Personio',
-    useCases: ['Renholds- og facility management-firmaer med krevende kunder','Vedlikeholdslag og installatører som må forsvare fakturerte timer','Bedrifter med HR på kontoret men operative lag i felt','De som allerede har hatt tvister om ikke-anerkjente oppdrag','Bedrifter med flere lag på ulike steder'],
+    diff: 'Personaladministrasjon eller dokumentasjon av arbeidet ute i felt',
+    geo: ['Posisjon lest fra telefonen ved hver stempling, ikke skrevet inn for hånd','Rapporter forseglet med kryptografisk hash når oppdraget avsluttes','Bevisbilder integrert med GPS og tidsstempel','Kunden kontrollerer selv at rapporten ikke er endret','Laget for ansatte ute i felt, ikke for HR-kontoret'],
+    comp: ['Komplett HR-suite: personalregister, fravær, onboarding','Lønnsstyring og oppmøte på kontoret','Selvbetjent mobilapp for de ansatte','Ingen forseglet bevis for oppdraget ute i felt','Ingen posisjon ved stempling, bevisbilder eller verifisering fra kunden'],
+    useCasesTitle: 'Hvem bør supplere en HR-løsning som Personio med GeoTapp',
+    useCases: ['Renholdsbedrifter og facility management med krevende kunder','Servicefolk og installatører som må dokumentere de fakturerte timene','Bedrifter med HR på kontoret, men driftslag ute i felt','De som allerede har opplevd at kunder ikke har anerkjent utførte oppdrag','Bedrifter med flere lag fordelt på ulike byggeplasser'],
     cta: 'Vil du se forskjellen i praksis?',
-    ctaDesc: 'Vi viser deg på 20 minutter hvordan et oppdrag blir til verifiserbart bevis, uforpliktende.',
-    ctaBtn: 'Kom i gang gratis nå!',
+    ctaDesc: 'Prøv det på et ekte oppdrag: 14 dager gratis, uten kredittkort.',
+    ctaBtn: 'Start gratis prøveperiode',
   },
   ru: {
     badge: 'Сравнение ПО', h1sub: 'управлять персоналом или доказывать работу в поле?',

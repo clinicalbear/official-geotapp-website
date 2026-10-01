@@ -503,6 +503,33 @@ export const NON_IN_VETRINA = new Set<string>([
   'overtid-dokumentera-granserna',
   'stampla-in-med-gps-inte-overvakning',
   'faktura-bevisar-inte-utfort-arbete-tvister-2026',
+  // Versioni in norvegese (bokmal): titolo, estratto o corpo che presentano come funzione di GeoTapp il geofencing/geofence (che non esiste),
+  // il «sanntid» (tracciamento o panoramica in tempo reale), «ingen bindingstid» (c'e' un minimo di 12 mesi), «GDPR-klar», la conformita'
+  // a leggi (arbeidsmiljoloven, personopplysningsloven), moduli e integrazioni non verificati (HMS-kort, API/dashboard del coordinatore,
+  // avvisi automatici, modelli di drøfting), QR-code/PIN per ogni persona; oppure testo scritto senza æ ø å («aerlig», «overvaaking»,
+  // «drofting», «pa»). Verificati sul corpo il 01/10/2026 (da correggere sul blog, poi togliere da qui).
+  'stemple-inn-med-gps-ikke-overvaaking',
+  'geotapp-mot-clockify-feltteam',
+  'omkledningstid-som-arbeidstid',
+  'facsimile-gps-personvernerklaering-ansatte',
+  'august-hvem-er-pa-byggeplassen-tilstedevaerelse',
+  'elektronisk-oversiktsliste-byggeplass',
+  'geofencing-eller-bevegelsesprofil',
+  'byggherreforskriften-sha-plan',
+  'forberede-a-krim-kontroll',
+  'minstelonn-bygg-2026',
+  'hms-kort-godstransport-2026',
+  'renholdsregisteret-godkjenning-timer',
+  'gps-sporing-firmabiler-personvern',
+  'gdpr-byggeplass-tidsregistrering-norge-2026',
+  'sha-plan-byggherreforskriften-2026',
+  'allmenngjoringsloven-minstelonn-audit-2026',
+  'renholdsforskriften-godkjenningsmerke-2026',
+  'hms-kort-byggekort-byggeplass-2026',
+  'hms-forskriften-arbeidstidskontroll-2026',
+  'arbeidsmiljoloven-9-3-kontrolltiltak-2026',
+  'personopplysningsloven-31-overvaking-2026',
+  'sikkerhetsklarering-feltlogging-kritisk-infrastruktur-2026',
 ]);
 
 export function filterPosts<T extends WpIndexEntry>(

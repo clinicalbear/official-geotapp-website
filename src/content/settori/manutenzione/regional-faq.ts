@@ -13,6 +13,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   pt: 'Normas e registos em Portugal',
   nl: 'Regels en documentatie in Nederland',
   da: 'Regler og dokumentation i Danmark',
+  nb: 'Regler og dokumentasjon i Norge',
   sv: 'Regler och dokumentation i Sverige',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
@@ -118,6 +119,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Arbejdsmiljø og periodiske eftersyn?',
       a: 'GeoTapp håndterer hverken medarbejdernes egnethed eller arbejdsmiljødokumentationen. Det registrerer hvert besøg med klokkeslæt, position og foto og gemmer historikken pr. sted og pr. tekniker, som du kan vise kunden.',
+    },
+  ],
+  nb: [
+    {
+      q: 'Timer og oppdrag på flere steder?',
+      a: 'GeoTapp registrerer ved hver stempling start, pauser og slutt med posisjon og klokkeslett, per tekniker og per sted, og eksporterer dem til Excel eller CSV for regnskapsføreren eller lønnskontoret ditt. Anvendelsen av tariffavtalen (tillegg, godtgjørelser) og lønnsbehandlingen forblir hos regnskapsføreren og virksomheten.',
+    },
+    {
+      q: 'Geolokalisering av vedlikeholdsteknikere: GDPR og Datatilsynet?',
+      a: 'Posisjonen registreres bare ved stempling og med bevisbilder, aldri løpende, og informasjonen til de ansatte signeres i appen før det stemples. Det er virksomheten selv som må undersøke hva GDPR (berettiget interesse), personopplysningsloven og Datatilsynets veiledning krever i akkurat ditt tilfelle.',
+    },
+    {
+      q: 'HMS og periodiske kontroller?',
+      a: 'GeoTapp håndterer verken de ansattes egnethet eller HMS-dokumentasjonen. Det registrerer hvert besøk med klokkeslett, posisjon og bilde og lagrer historikken per sted og per tekniker, som du kan vise kunden.',
     },
   ],
   sv: [

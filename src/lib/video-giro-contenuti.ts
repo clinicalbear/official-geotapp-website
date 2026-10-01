@@ -434,7 +434,7 @@ export const GIRO_CONTENUTI: Record<LinguaGiro, ContenutoGiro> = {
     ],
     chiusa: "Arbeidet etterlater et dokument som hvem som helst kan kontrollere — om mange år, uten å spørre oss.",
     trascrizione: [
-      { da: 0.3, testo: "Ett skift, tatt opp live." },
+      { da: 0.3, testo: "Ett skift, tatt opp mens det skjer." },
       { da: 3.3, testo: "På anlegget åpner ett trykk skiftet." },
       { da: 5.432, testo: "Fem sekunder senere viser skjermen på kontoret ham allerede i arbeid." },
       { da: 9.519, testo: "Ingen rørte noe." },

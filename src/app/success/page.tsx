@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
-import { DEFAULT_LOCALE, getLocaleFromPathname } from '@/lib/i18n/locale-routing';
+import { DEFAULT_LOCALE, getLocaleFromPathname, localizePath } from '@/lib/i18n/locale-routing';
 
 import { useCart } from '@/store/cart';
 
@@ -20,7 +20,7 @@ const T: Record<string, Record<string, string>> = {
   pt: { title: 'Pagamento efetuado', thanks: 'Obrigado por escolher o GeoTapp.', generating: 'Estamos a preparar a sua conta…', ready: 'A sua conta está pronta: falta apenas a ativação.', email_sent: 'Enviámos-lhe a licença por e-mail.', check_inbox: 'Consulte a sua caixa de correio.', back_home: 'Voltar ao início', activate: 'Ativar a conta', waiting: 'Um momento…', unavailable: 'Ligação indisponível', help: 'Tem dúvidas? Escreva-nos', loading: 'A carregar…', error_unknown: 'Erro desconhecido do servidor', error_connection: 'Erro de ligação.' },
   da: { title: 'Betaling gennemført', thanks: 'Tak, fordi du valgte GeoTapp.', generating: 'Vi gør din konto klar…', ready: 'Din konto er klar: der mangler kun aktiveringen.', email_sent: 'Vi har sendt dig licensen på e-mail.', check_inbox: 'Tjek din indbakke.', back_home: 'Tilbage til forsiden', activate: 'Aktivér kontoen', waiting: 'Et øjeblik…', unavailable: 'Linket er ikke tilgængeligt', help: 'Spørgsmål? Skriv til os', loading: 'Indlæser…', error_unknown: 'Ukendt serverfejl', error_connection: 'Forbindelsesfejl.' },
   sv: { title: 'Betalningen är genomförd', thanks: 'Tack för att du valde GeoTapp.', generating: 'Vi gör ditt konto klart…', ready: 'Ditt konto är klart: det återstår bara aktiveringen.', email_sent: 'Vi har skickat licensen till dig med e-post.', check_inbox: 'Kolla din inkorg.', back_home: 'Tillbaka till startsidan', activate: 'Aktivera kontot', waiting: 'Ett ögonblick…', unavailable: 'Länken är inte tillgänglig', help: 'Frågor? Skriv till oss', loading: 'Laddar…', error_unknown: 'Okänt serverfel', error_connection: 'Anslutningsfel.' },
-  nb: { title: 'Betalingen er fullført!', thanks: 'Takk for at du valgte GeoTapp.', generating: 'Kontoen din opprettes...', ready: 'Kontoen din er klar til aktivering!', email_sent: 'Lisens sendt på e-post!', check_inbox: 'Sjekk innboksen din.', back_home: 'Tilbake til forsiden', activate: 'AKTIVER KONTO NÅ', waiting: 'Vent litt...', unavailable: 'Lenke utilgjengelig', help: 'Spørsmål? Kontakt oss', loading: 'Laster...', error_unknown: 'Ukjent serverfeil', error_connection: 'Tilkoblingsfeil.' },
+  nb: { title: 'Betalingen er fullført', thanks: 'Takk for at du valgte GeoTapp.', generating: 'Vi gjør kontoen din klar…', ready: 'Kontoen din er klar: det gjenstår bare aktiveringen.', email_sent: 'Vi har sendt deg lisensen på e-post.', check_inbox: 'Sjekk innboksen din.', back_home: 'Tilbake til forsiden', activate: 'Aktiver kontoen', waiting: 'Et øyeblikk…', unavailable: 'Lenken er ikke tilgjengelig', help: 'Spørsmål? Skriv til oss', loading: 'Laster…', error_unknown: 'Ukjent serverfeil', error_connection: 'Tilkoblingsfeil.' },
   ru: { title: 'Оплата прошла успешно!', thanks: 'Спасибо, что выбрали GeoTapp.', generating: 'Создание вашего аккаунта...', ready: 'Ваш аккаунт готов к активации!', email_sent: 'Лицензия отправлена на email!', check_inbox: 'Проверьте вашу почту.', back_home: 'На главную', activate: 'АКТИВИРОВАТЬ АККАУНТ', waiting: 'Подождите...', unavailable: 'Ссылка недоступна', help: 'Вопросы? Свяжитесь с нами', loading: 'Загрузка...', error_unknown: 'Неизвестная ошибка сервера', error_connection: 'Ошибка соединения.' },
 };
 
@@ -100,7 +100,7 @@ function SuccessContent() {
                   <p className="ready" style={{ fontWeight: 600 }}>{t.email_sent}</p>
                   <p>{t.check_inbox}</p>
                 </div>
-                <Link href="/" className="pill-mute">
+                <Link href={localizePath('/', locale)} className="pill-mute">
                   {t.back_home}
                 </Link>
               </>

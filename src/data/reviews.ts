@@ -81,6 +81,7 @@ export const REVIEWS: Review[] = [
       nl: { meta: 'Medisch vertegenwoordiger · Medische hulpmiddelen · Zelfstandig' },
       da: { meta: 'Medicinsk salgsrepræsentant · Medicinsk udstyr · Selvstændig' },
       sv: { meta: 'Medicinteknisk säljare · Medicinteknik · Egenföretagare' },
+      nb: { meta: 'Medisinsk salgsrepresentant · Medisinsk utstyr · Selvstendig næringsdrivende' },
     },
     original: {
       title: 'GeoTapp Flow è il top',
@@ -162,6 +163,7 @@ export const REVIEWS: Review[] = [
       nl: { name: 'Door Capterra geverifieerde reviewer', meta: 'Evenementendiensten · 51-200 medewerkers' },
       da: { name: 'Anmelder verificeret af Capterra', meta: 'Eventtjenester · 51-200 medarbejdere' },
       sv: { name: 'Recensent verifierad av Capterra', meta: 'Eventtjänster · 51–200 anställda' },
+      nb: { name: 'Anmelder verifisert av Capterra', meta: 'Arrangementstjenester · 51–200 ansatte' },
     },
     original: {
       title: 'A good app for a good work',

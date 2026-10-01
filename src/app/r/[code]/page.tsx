@@ -390,6 +390,41 @@ const TESTI: Record<string, Testi> = {
     unknownBody:
       'Koden motsvarar inget dokument. Det är bra att kontrollera de åtta tecknen igen: S och 5 samt Z och 2 förväxlas lätt.',
   },
+  nb: {
+    sealedTitle: 'Forseglet dokument',
+    sealedBody:
+      'Dette dokumentet er elektronisk signert og kan verifiseres. Hver hendelse er kjedet til den forrige: hvis en linje, et klokkeslett eller et bilde endres, mislykkes verifiseringen.',
+    draftTitle: 'Dokument uten forsegling',
+    draftBody:
+      'Dette dokumentet bærer ikke den elektroniske signaturen: det kan ikke verifiseres og kan ikke legges til grunn.',
+    issuedBy: 'Utstedt av',
+    job: 'Oppdrag',
+    sealedOn: 'Forseglet den',
+    downloadPackage: 'Last ned den signerte pakken',
+    downloadPackageHint:
+      'Det er originalen: den inneholder dokumentet, forløpet, bildene og forseglingen.',
+    downloadPdf: 'Last ned den lesbare PDF-en',
+    fingerprint: 'Pakkens fingeravtrykk',
+    linkLife:
+      'Lenken til filen gjelder i ti minutter. Koden på dokumentet utløper ikke: du kan bare åpne denne siden på nytt.',
+    verifyTitle: 'Verifiser uten å stole på oss',
+    verifyBody:
+      'Pakken kan verifiseres uten GeoTapp, med den åpne verifikatoren: den regner på nytt ut fingeravtrykkene og kontrollerer signaturen.',
+    verifyCta: 'Gå til verifiseringen',
+    surveyTitle: 'Et spørsmål til dem som bestiller arbeidet',
+    surveyBody:
+      'Vi samler inn, i hele Europa, hvor ofte betalt arbeid trekkes i tvil og hva som skjer etterpå. To minutter, anonymt, ingen obligatoriske opplysninger.',
+    surveyCta: 'Svar på undersøkelsen',
+    revokedTitle: 'Koden er trukket tilbake',
+    revokedBody:
+      'Dette dokumentet fantes, men den som utstedte det, har trukket tilbake lenken. For å få en kopi må du be om den hos dem som utførte arbeidet.',
+    expiredTitle: 'Dokumentet er ikke lenger tilgjengelig',
+    expiredBody:
+      'Dette dokumentet fantes og har nådd slutten av oppbevaringstiden: fem år etter arbeidsdatoen slettes pakken, slik personvernreglene krever. Det finnes ikke lenger en kopi å be noen om.',
+    unknownTitle: 'Koden ble ikke funnet',
+    unknownBody:
+      'Koden svarer ikke til noe dokument. Det kan lønne seg å kontrollere de åtte tegnene på nytt: S og 5 samt Z og 2 forveksles lett.',
+  },
 };
 
 function testiPer(locale: AppLocale): Testi {

@@ -16,7 +16,7 @@ const SETTORI_META: Record<string, { title: string; description: string }> = {
   ru: { title: 'Отрасли, Верифицируемые доказательства | GeoTapp', description: 'От клининга до охраны: каждый выезд, верифицируемое доказательство с GPS и фото. Запечатанные отчёты, ноль споров.' },
   da: { title: 'Brancher - Verificerbar dokumentation af arbejdet | GeoTapp', description: 'Fra rengøring til sikkerhed: hver opgave bliver verificerbar dokumentation med GPS og fotos. Forseglede rapporter, du kan vise, når nogen bestrider arbejdet.' },
   sv: { title: 'Branscher - Verifierbara bevis | GeoTapp', description: 'Från städning till säkerhet: varje fältuppdrag blir verifierbart bevis med GPS och foton. Förseglade rapporter, noll tvister.' },
-  nb: { title: 'Bransjer - Verifiserbare bevis | GeoTapp', description: 'Fra renhold til sikkerhet: hvert feltoppdrag blir verifiserbart bevis med GPS og bilder. Forseglede rapporter, null tvister.' },
+  nb: { title: 'Bransjer - Verifiserbar dokumentasjon av arbeidet | GeoTapp', description: 'Fra renhold til sikkerhet: hvert oppdrag blir verifiserbar dokumentasjon med GPS og bilder. Forseglede rapporter du kan vise når noen bestrider arbeidet.' },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

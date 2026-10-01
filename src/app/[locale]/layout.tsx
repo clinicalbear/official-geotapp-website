@@ -188,18 +188,17 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
   },
   nb: {
     description:
-      'GeoTapp genererer verifiserbare bevis for utført feltarbeid: forseglede rapporter med ekte GPS-data, tidsstemplede fotobevis og dokumentasjon med sporbare endringer som hvem som helst kan verifisere uavhengig.',
+      'GeoTapp er programvaren for å dokumentere arbeidet i felt: ved hver stempling registrerer den posisjon og tidspunkt, samler bevisbilder og lukker alt i en forseglet rapport som kunden selv kan kontrollere. Posisjonen registreres bare når medarbeideren stempler, aldri løpende.',
     featureList: [
-      'Arbeidsrapporter med sporbare endringer, uavhengig verifiserbare av hvem som helst',
-      'Fotobevis bundet til GPS-tidsstempel og arbeidsordre',
-      'Dokumentasjon av utrykning: enhver endring oppdages',
-      'Arbeidsbevis: objektive beviser for hvert feltoppdrag',
-      'Verifiserbar GPS-tidsregistrering',
-      'Håndtering av arbeidsordrer og intervensjoner',
-      'GDPR-kompatibel, ingen kontinuerlig sporing',
-      'Mobilapp for Android og iOS (Flutter)',
+      'Forseglede rapporter: enhver senere endring kan oppdages, og alle kan kontrollere dem uten konto',
+      'Bevisbilder knyttet til tidspunkt, posisjon og oppdrag',
+      'Stempling med posisjon ved start, pauser og slutt',
+      'Ingen løpende sporing: mellom to stemplinger registreres ingenting automatisk',
+      'Styring av oppdrag, team og oppgaver fra kontoret (GeoTapp Flow, nett)',
+      'Native app for medarbeiderne på Android og iOS (GeoTapp TimeTracker)',
+      'Gratis verifikator, også offline (GeoTapp Verifier)',
     ],
-    offersDescription: '14 dagers gratis prøveperiode, betalte planer fra {price}/bruker/måned via Stripe',
+    offersDescription: 'Gratis prøveperiode på 14 dager uten kort. Deretter GeoTapp Flow fra 39 € per måned og TimeTracker-plasser fra {price} per medarbeider per måned, abonnement med minst 12 måneders varighet',
   },
 };
 

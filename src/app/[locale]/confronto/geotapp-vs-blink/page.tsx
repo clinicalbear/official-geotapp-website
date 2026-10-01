@@ -22,7 +22,7 @@ const META: Record<string, { title: string; description: string }> = {
   pt: { title: 'GeoTapp vs Blink - Comparação 2026 | GeoTapp', description: 'GeoTapp vs Blink: picagem ou prova verificável? Comparação do controlo da posição ao picar, dos relatórios selados e das fotos de prova para empresas de limpeza.' },
   da: { title: 'GeoTapp vs Blink - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Blink: stempling eller verificerbart bevis? Sammenligning af positionskontrol ved stempling, forseglede rapporter og bevisfotos til rengøringsfirmaer.' },
   sv: { title: 'GeoTapp vs Blink - Jämförelse 2026 | GeoTapp', description: 'GeoTapp vs Blink: tidrapportering eller verifierbart bevis? Jämförelse av positionskontroll vid instämpling, förseglade rapporter och bevisfoton för städföretag.' },
-  nb: { title: 'GeoTapp vs Blink - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Blink: tidsregistrering eller forseglet bevis? Sammenlign anti-spoofing GPS og kryptografisk forseglede rapporter.' },
+  nb: { title: 'GeoTapp vs Blink - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Blink: stempling eller verifiserbart bevis? Sammenligning av posisjonskontroll ved stempling, forseglede rapporter og bevisbilder for renholdsbedrifter.' },
   ru: { title: 'GeoTapp vs Blink - Sravnenie 2026 | GeoTapp', description: 'GeoTapp vs Blink: uchet vremeni ili zapechatyvanie? Sravnenie anti-spoofing GPS i kriptograficheski zapechatannyh otchetov.' },
 };
 
@@ -84,10 +84,10 @@ const FAQ: Record<string, FaqItem[]> = {
     { q: 'Blink är mycket utbrett bland tyska städföretag. Varför välja GeoTapp?', a: 'Blink är starkt på instämpling och teamkommunikation för städning i Tyskland. Men om du behöver visa kunden bevisen för tjänsten, i en rapport där varje senare ändring går att upptäcka, behöver du GeoTapp. Olika verktyg för olika problem.' },
   ],
   nb: [
-    { q: 'Hva er den viktigste forskjellen mellom GeoTapp og Blink?', a: 'Blink er den ledende programvaren for tidsregistrering innen bygningsrenhold i Tyskland: GPS, QR-kode, NFC, oppgavestyring og teamkommunikasjon. GeoTapp går lenger: det er et system for forseglet bevis som dokumenterer hvert oppdrag med anti-spoofing-GPS og kryptografisk forseglede bilder. Oppdragsgiveren verifiserer rapporten selv.' },
-    { q: 'Har Blink anti-spoofing-GPS?', a: 'Nei. Blink sammenligner GPS-posisjonen med den forhåndsinnstilte arbeidsplassen, men verifiserer ikke om posisjonen er ekte eller forfalsket. GeoTapp oppdager forfalskningsforsøk.' },
-    { q: 'Kan oppdragsgiveren verifisere Blinks rapporter?', a: 'Blink genererer interne rapporter. GeoTapp genererer rapporter med et kryptografisk segl som oppdragsgiveren kan verifisere uavhengig på en offentlig portal.' },
-    { q: 'Blink er nummer 1 innen bygningsrenhold. Hvorfor velge GeoTapp?', a: 'Blink er utmerket på tidsregistrering og teamkommunikasjon for den tyske renholdsbransjen. Men hvis du må bevise overfor oppdragsgiveren at tjenesten er utført, med bevis hvor enhver endring er sporbar, trenger du GeoTapp. Forskjellige verktøy for forskjellige problemer.' },
+    { q: 'Hva er den viktigste forskjellen mellom GeoTapp og Blink?', a: 'Blink er en programvare som er mye brukt blant renholdsbedrifter i Tyskland: GPS-stempling, QR-kode, NFC, oppgavestyring og teamkommunikasjon. GeoTapp gjør noe annet: det dokumenterer hvert oppdrag med en posisjon som kontrolleres ved stempling, og bevisbilder, og lukker det i en forseglet rapport som kunden selv verifiserer.' },
+    { q: 'Kontrollerer Blink om posisjonen er forfalsket?', a: 'Blink oppgir blant funksjonene sine en sammenligning av posisjonen med den innstilte arbeidsplassen, ikke en kontroll av forfalskede posisjoner. Ved stempling avviser GeoTapp posisjoner simulert av apper for falsk posisjon, posisjoner som er for upresise, og umulige forflytninger.' },
+    { q: 'Kan kunden verifisere Blinks rapporter?', a: 'Blink lager interne rapporter. GeoTapp lager rapporter med kryptografisk segl som kunden kan verifisere uavhengig.' },
+    { q: 'Blink er mye brukt blant tyske renholdsbedrifter. Hvorfor velge GeoTapp?', a: 'Blink er sterkt på stempling og teamkommunikasjon for renhold i Tyskland. Men hvis du må vise kunden bevisene for tjenesten i en rapport der enhver senere endring kan oppdages, trenger du GeoTapp. Ulike verktøy for ulike problemer.' },
   ],
   ru: [
     { q: 'В чём главное отличие GeoTapp от Blink?', a: 'Blink, ведущее ПО для учёта рабочего времени в немецком клининге зданий: GPS, QR-код, NFC, управление задачами и командное общение. GeoTapp идёт дальше: это система опечатывания, которая документирует каждый выезд с анти-спуфинговым GPS и криптографически опечатанными фотографиями. Заказчик проверяет отчёт сам.' },
@@ -108,7 +108,7 @@ const ROWS_LABELS: Record<string, string[]> = {
   nl: ['Controle van de locatie bij de registratie (weigert gesimuleerde locaties)','Cryptografisch verzegeld rapport','Onafhankelijke controle door de opdrachtgever','Foto\'s met SHA-256-vingerafdruk in het rapport','Locatie alleen bij het registreren','Gps-registratie','Registratie met QR-code / NFC','Taakbeheer','Teamcommunicatie','Digitale checklists','App voor Android/iOS','Gespecialiseerd in gebouwreiniging','GPS-verklaring ondertekend in de app vóór het registreren*'],
   da: ['Positionskontrol ved stempling (afviser simulerede positioner)','Kryptografisk forseglet rapport','Uafhængig verificering af kunden','Fotos med SHA-256-fingeraftryk i rapporten','Position registreres kun ved stempling','GPS-stempling','Stempling med QR-kode / NFC','Opgavestyring','Teamkommunikation','Digitale tjeklister','App Android/iOS','Specialiseret i bygningsrengøring','GPS-information underskrevet i appen, før man stempler*'],
   sv: ['Positionskontroll vid instämpling (avvisar simulerade positioner)','Kryptografiskt förseglad rapport','Oberoende verifiering av kunden','Foton med SHA-256-fingeravtryck i rapporten','Positionen registreras bara vid instämpling','GPS-instämpling','Instämpling med QR-kod / NFC','Uppgiftshantering','Teamkommunikation','Digitala checklistor','Android-/iOS-app','Specialiserad på byggnadsstädning','GPS-information signerad i appen innan man stämplar in*'],
-  nb: ['Anti-spoofing-GPS (oppdager forfalskede posisjoner)','Kryptografisk forseglet rapport','Uavhengig verifisering av oppdragsgiver','Bilder med kryptografisk hash-kjede','GDPR-kompatibel','GPS-tidsregistrering','QR-kode / NFC-registrering','Oppgavestyring','Teamkommunikasjon','Digitale sjekklister','App Android/iOS','Spesialisert på bygningsrenhold','Automatisk GPS-personvernerklæring med digital signatur*'],
+  nb: ['Posisjonskontroll ved stempling (avviser simulerte posisjoner)','Kryptografisk forseglet rapport','Uavhengig verifisering fra kunden','Bilder med SHA-256-fingeravtrykk i rapporten','Posisjon registreres bare ved stempling','GPS-stempling','Stempling med QR-kode / NFC','Oppgavestyring','Teamkommunikasjon','Digitale sjekklister','App Android/iOS','Spesialisert på bygningsrenhold','GPS-informasjon signert i appen før man stempler*'],
   ru: ['Анти-спуфинг GPS (выявляет подделанные позиции)','Криптографически опечатанный отчёт','Независимая проверка заказчиком','Фото с криптографической хеш-цепочкой','Соответствие GDPR','Учёт времени по GPS','Отметка по QR-коду / NFC','Управление задачами','Командное общение','Цифровые чек-листы','Приложение Android/iOS','Специализация на клининге зданий','Автоматическое уведомление о GPS с цифровой подписью*'],
 };
 
@@ -262,19 +262,19 @@ const T: Record<string, Copy> = {
     footnote: '* Enligt lag (artikel 13 i GDPR) måste varje anställd informeras innan hen geolokaliseras. Om programvaran överlåter det steget åt arbetsgivaren ligger risken kvar hos arbetsgivaren. GeoTapp tar fram den personliga informationen, låter den anställde signera den som läst i appen och släpper inte till instämpling förrän den är signerad.',
   },
   nb: {
-    badge: 'App-sammenligning', h1sub: 'tidsregistrering eller forseglet bevis?',
-    desc: 'Blink er den ledende programvaren for bygningsrenhold i Tyskland: GPS, QR-kode, NFC, oppgavestyring og teamkommunikasjon. GeoTapp forsegler hvert oppdrag med anti-spoofing-GPS, kryptografisk forseglede bilder og rapporter som oppdragsgiveren selv verifiserer.',
+    badge: 'App-sammenligning', h1sub: 'stempling eller verifiserbart bevis?',
+    desc: 'Blink er en programvare som er mye brukt blant renholdsbedrifter i Tyskland. GeoTapp forsegler hvert oppdrag: posisjon kontrollert ved stempling, bevisbilder og en rapport som kunden selv verifiserer.',
     summary: 'Kort sagt:',
-    summaryText: 'Blink er utmerket på tidsregistrering og teamkommunikasjon for renhold i Tyskland. Men GPS-en verifiseres ikke (ingen anti-spoofing), bilder forsegles ikke kryptografisk og rapportene kan ikke verifiseres av oppdragsgiveren. GeoTapp tetter nettopp disse hullene.',
-    noteTitle: 'GPS-registrering er ikke GPS-verifisering',
-    noteText: 'Blink sammenligner GPS-posisjonen med den innstilte arbeidsplassen. Men hvis en medarbeider forfalsker GPS-en med en gratis app, oppdager ikke Blink det. GeoTapp bruker anti-spoofing-teknologi som krysskobler flere signaler for å oppdage falske posisjoner. I tillegg forsegles hvert bilde med en kryptografisk hash-kjede.',
+    summaryText: 'Blink er sterkt på stempling og teamkommunikasjon for renhold i Tyskland. Blant funksjonene som er oppgitt, finnes det likevel ikke kontroll av forfalskede posisjoner, forseglede bilder i rapporten eller verifisering fra kundens side. GeoTapp dekker nettopp disse tre tingene.',
+    noteTitle: 'GPS-stempling er ikke GPS-verifisering',
+    noteText: 'Å sammenligne posisjonen med arbeidsplassen viser om koordinatet ligger på riktig sted, ikke om det er ekte: en posisjon kan forfalskes med en gratis app. Ved stempling avviser GeoTapp simulerte posisjoner, posisjoner som er for upresise, og umulige forflytninger. I tillegg kommer hvert bilde inn i rapporten med sitt SHA-256-fingeravtrykk: hvis noen endrer det, slår verifiseringen alarm.',
     features: 'Sammenligning av nøkkelfunksjoner', feat: 'Funksjon', diff: 'To forskjellige verktøy',
     cta: 'Vil du se GeoTapp i aksjon?',
-    ctaDesc: 'Vi viser deg hvordan et oppdrag blir til verifiserbart bevis, på 10 minutter, uforpliktende.',
-    ctaBtn: 'Kom i gang gratis!',
-    geo: ['Anti-spoofing-GPS: oppdager falske posisjoner','Bilder forseglet med kryptografisk hash-kjede','Rapport med kryptografisk segl og bevisverdi','Oppdragsgiveren verifiserer selv på en offentlig portal','Ikke bare renhold, alle bransjer med feltpersonell'],
-    comp: ['Den ledende programvaren for renhold i Tyskland','GPS + QR-kode + NFC tidsregistrering','Oppgavestyring og digitale sjekklister','Integrert teamkommunikasjon','Ingen anti-spoofing, ingen kryptografisk forsegling'],
-    footnote: '* Ifølge loven (GDPR art. 13) må hver ansatt signere en personvernerklæring før vedkommende geolokaliseres. De fleste GPS-programmer håndterer ikke dette: den juridiske risikoen blir hos arbeidsgiveren. GeoTapp genererer automatisk den personlige erklæringen, lar den ansatte signere den digitalt og blokkerer GPS-tilgangen til den er signert. Ingen annen programvare på markedet gjør dette.',
+    ctaDesc: 'Prøv det på et ekte oppdrag: 14 dager gratis, uten kredittkort.',
+    ctaBtn: 'Start gratis prøveperiode',
+    geo: ['Avviser simulerte posisjoner ved stempling','Bilder med SHA-256-fingeravtrykk i rapporten','Rapport med verifiserbart kryptografisk segl','Kunden verifiserer selv, online eller med offline-verifikatoren','Ikke bare renhold: alle bransjer med ansatte ute i felt'],
+    comp: ['Mye brukt innen renhold i Tyskland','GPS-stempling + QR-kode + NFC','Oppgavestyring og digitale sjekklister','Integrert teamkommunikasjon','Ingen forseglet rapport som kunden kan verifisere'],
+    footnote: '* Ifølge loven (GDPR art. 13 og, i Italia, art. 4 i arbeidstakerloven, Statuto dei Lavoratori) må hver ansatt informeres før vedkommende geolokaliseres. Overlater programvaren dette trinnet til arbeidsgiveren, blir risikoen hos arbeidsgiveren. GeoTapp forbereder den personlige informasjonen, får den signert i appen som bekreftelse på at den er lest, og lar ikke den ansatte stemple før den er signert.',
   },
   ru: {
     badge: 'Сравнение приложений', h1sub: 'учёт времени или запечатывание?',

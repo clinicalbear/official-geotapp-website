@@ -13,6 +13,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   pt: 'Regras e documentação em Portugal',
   nl: 'Regels en documentatie in Nederland',
   da: 'Regler og dokumentation i Danmark',
+  nb: 'Regler og dokumentasjon i Norge',
   sv: 'Regler och dokumentation i Sverige',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
@@ -118,6 +119,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Hvordan håndteres skift af rengøringsleverandør?',
       a: 'GeoTapp håndterer hverken virksomhedsoverdragelse eller overførsel af medarbejdere ved skift af leverandør. Det gemmer historikken over timer og fremmøde for hver medarbejder, som kan eksporteres til Excel eller CSV: anvendelsen af overenskomsten forbliver hos bogholderen.',
+    },
+  ],
+  nb: [
+    {
+      q: 'Hva trenger man for å vise timer og oppmøte i en renholdsbedrift?',
+      a: 'GeoTapp registrerer timer, pauser og avganger per ansatt og per sted, med posisjon og klokkeslett, og eksporterer dem til Excel eller CSV for regnskapsføreren eller lønnskontoret ditt. Tillegg for kveld, natt og helligdager, lønnsbehandling og tilsyn forblir hos regnskapsføreren og virksomheten, som dermed har en tidsregistrering å ta utgangspunkt i.',
+    },
+    {
+      q: 'Geolokalisering av renholdere: GDPR og Datatilsynet?',
+      a: 'Posisjonen registreres bare ved stempling og med bevisbilder, aldri løpende, og informasjonen til de ansatte signeres i appen før det stemples. Det er virksomheten selv som må undersøke hva GDPR (berettiget interesse), personopplysningsloven og Datatilsynets veiledning krever i akkurat ditt tilfelle.',
+    },
+    {
+      q: 'Hvordan håndteres bytte av renholdsleverandør?',
+      a: 'GeoTapp håndterer verken virksomhetsoverdragelse eller overføring av ansatte ved bytte av leverandør. Det lagrer historikken over timer og oppmøte for hver ansatt, som kan eksporteres til Excel eller CSV: anvendelsen av tariffavtalen forblir hos regnskapsføreren.',
     },
   ],
   sv: [

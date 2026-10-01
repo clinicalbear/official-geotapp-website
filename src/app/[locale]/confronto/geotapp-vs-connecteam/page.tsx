@@ -22,7 +22,7 @@ const META: Record<string, { title: string; description: string }> = {
   nl: { title: 'GeoTapp vs Connecteam - Vergelijking 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: welke kiest u voor medewerkers in het veld? Vergelijking op bewijs van het werk, locatie bij de registratie en verzegelde rapporten.' },
   da: { title: 'GeoTapp vs Connecteam - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: hvilken skal du vælge til medarbejdere i marken? Sammenligning af dokumentation, position ved stempling og forseglede rapporter.' },
   sv: { title: 'GeoTapp vs Connecteam - Jämförelse 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: vilket ska du välja för fältserviceföretag? Jämförelse av arbetsbevis, position vid instämpling, förseglade rapporter och kundens verifiering.' },
-  nb: { title: 'GeoTapp vs Connecteam - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: hvilken skal du velge for bedrifter med ansatte ute i felt? Full sammenligning av arbeidsbevis, verifisert GPS, forseglede rapporter og forseglet oppdragsbevis.' },
+  nb: { title: 'GeoTapp vs Connecteam - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: hvilken bør du velge for ansatte ute i felt? Sammenligning av dokumentasjon, posisjon ved stempling og forseglede rapporter.' },
   ru: { title: 'GeoTapp vs Connecteam, Сравнение 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: что выбрать для компаний с выездными сотрудниками? Полное сравнение по доказательствам работы, проверенному GPS, опечатанным отчётам и опечатыванию выездов.' },
 };
 
@@ -84,10 +84,10 @@ const FAQ: Record<string, FaqItem[]> = {
     { q: 'Kan jag använda GeoTapp tillsammans med Connecteam?', a: 'Ja. GeoTapp fokuserar på bevisen för uppdragen; Connecteam kan fortsätta sköta intern kommunikation och schemaläggning. De två verktygen löser olika problem.' },
   ],
   nb: [
-    { q: 'Hva er hovedforskjellen mellom GeoTapp og Connecteam?', a: 'Connecteam er et verktøy for kommunikasjon og personaladministrasjon. GeoTapp er et system for forseglet arbeidsbevis: det produserer forseglede rapporter med verifisert GPS og fotobevis som kunden kan verifisere selv, uten tilgang til kontoen din.' },
-    { q: 'Har Connecteam GPS-verifisering?', a: 'Connecteam registrerer GPS-posisjonen, men dataene er verken kryptografisk forseglet eller verifiserbare av tredjeparter. GeoTapp produserer rapporter med en kryptografisk hash: oppdragsgiveren kan verifisere at dataene ikke er endret etter at oppdraget ble avsluttet.' },
-    { q: 'GeoTapp eller Connecteam for renholds- og facility management-bedrifter?', a: 'GeoTapp er utviklet spesielt for bransjer der beviset for utført arbeid er kritisk (renhold, vedlikehold, facility). GeoTapp sine verifiserbare rapporter løser tvister umiddelbart, en funksjon Connecteam ikke tilbyr.' },
-    { q: 'Kan jeg bruke GeoTapp sammen med Connecteam?', a: 'Ja. GeoTapp fokuserer på å forsegle oppdrag og produsere verifiserbare bevis; Connecteam kan fortsette å håndtere intern kommunikasjon og planlegging. De to verktøyene løser ulike problemer.' },
+    { q: 'Hva er den viktigste forskjellen mellom GeoTapp og Connecteam?', a: 'Connecteam er et verktøy for kommunikasjon og personaladministrasjon. GeoTapp er et system for verifiserbar dokumentasjon av arbeidet: det lager forseglede rapporter med posisjon, tid og bevisbilder, som kunden selv kan verifisere uten å få tilgang til kontoen din.' },
+    { q: 'Forsegler Connecteam posisjonen?', a: 'Connecteam registrerer GPS-posisjonen, men dataene havner ikke i en forseglet rapport som en tredjepart kan verifisere. GeoTapp lager rapporter med kryptografisk hash: kunden kan verifisere at dataene ikke er endret etter at oppdraget ble lukket.' },
+    { q: 'GeoTapp eller Connecteam for renholdsbedrifter og facility management?', a: 'GeoTapp er laget spesielt for bransjer der dokumentasjon av utført arbeid er avgjørende (renhold, vedlikehold, facility). Når en innsigelse kommer, gir GeoTapp deg en forseglet rapport som kunden selv kontrollerer: en funksjon Connecteam ikke tilbyr.' },
+    { q: 'Kan jeg bruke GeoTapp sammen med Connecteam?', a: 'Ja. GeoTapp konsentrerer seg om dokumentasjon av oppdragene; Connecteam kan fortsette å styre intern kommunikasjon og planlegging. De to verktøyene løser ulike problemer.' },
   ],
   ru: [
     { q: 'В чём главная разница между GeoTapp и Connecteam?', a: 'Connecteam, это инструмент для коммуникации и управления персоналом. GeoTapp, это система опечатывания работы: она создаёт опечатанные отчёты с проверенным GPS и фотодоказательствами, которые заказчик может проверить сам, без доступа к вашему аккаунту.' },
@@ -108,7 +108,7 @@ const ROWS_LABELS: Record<string, string[]> = {
   nl: ['Locatie bij de registratie, verzegeld in het rapport','Rapport met cryptografische hash, elke wijziging zichtbaar','Onafhankelijke controle door de klant','Fotobewijzen gekoppeld aan gps en tijdstempel','Eenvoudige registratie van aanwezigheid','Mobiele app voor Android/iOS','Dashboard voor teambeheer','Eigen interne berichten','Locatie alleen bij het registreren, nooit doorlopend','GPS-verklaring ondertekend in de app vóór het registreren*'],
   da: ['Position ved stempling, forseglet i rapporten','Rapport med kryptografisk hash, enhver ændring kan opdages','Uafhængig verificering af kunden','Bevisfotos knyttet til GPS og tidsstempel','Basal fremmøderegistrering','Mobilapp Android/iOS','Dashboard til teamstyring','Egen intern beskedfunktion','Position registreres kun ved stempling, aldrig løbende','GPS-information underskrevet i appen, før man stempler*'],
   sv: ['Position vid instämpling, förseglad i rapporten','Rapport med kryptografisk hash, varje ändring går att upptäcka','Oberoende verifiering av kunden','Bevisfoton kopplade till GPS och tidsstämpel','Enkel närvaroregistrering','Mobilapp för Android/iOS','Instrumentpanel för teamhantering','Inbyggd meddelandefunktion','Positionen registreras bara vid instämpling, aldrig löpande','GPS-information signerad i appen innan man stämplar in*'],
-  nb: ['Verifisert og forseglet GPS','Rapporter med kryptografisk hash, enhver endring er sporbar','Uavhengig verifisering av kunden','Fotobevis knyttet til GPS og tidsstempel','Grunnleggende tidsregistrering','Mobilapp Android/iOS','Dashbord for teamstyring','Innebygd meldingsfunksjon','GDPR-kompatibel geolokalisering','Automatisk GPS-personvernerklæring med digital signatur*'],
+  nb: ['Posisjon ved stempling, forseglet i rapporten','Rapport med kryptografisk hash, enhver endring kan oppdages','Uavhengig verifisering fra kunden','Bevisbilder knyttet til GPS og tidsstempel','Enkel oppmøteregistrering','Mobilapp Android/iOS','Dashbord for teamstyring','Egen intern meldingsfunksjon','Posisjon registreres bare ved stempling, aldri løpende','GPS-informasjon signert i appen før man stempler*'],
   ru: ['Проверенный и опечатанный GPS','Отчёты с криптографическим хешем, любое изменение заметно','Независимая проверка заказчиком','Фотодоказательства, привязанные к GPS и метке времени','Базовый учёт присутствия','Мобильное приложение Android/iOS','Панель управления командой','Встроенный обмен сообщениями','Геолокация в соответствии с GDPR','Автоматическое уведомление о GPS с цифровой подписью*'],
 };
 
@@ -266,19 +266,19 @@ const T: Record<string, Copy> = {
     footnote: '* Enligt lag (artikel 13 i GDPR) måste varje anställd informeras innan hen geolokaliseras. Om programvaran överlåter det steget åt arbetsgivaren ligger risken kvar hos arbetsgivaren. GeoTapp tar fram den personliga informationen, låter den anställde signera den som läst i appen och släpper inte till instämpling förrän den är signerad.',
   },
   nb: {
-    badge: 'App-sammenligning', h1sub: 'hvilken skal du velge for bransjen din?',
-    desc: 'Connecteam håndterer teamkommunikasjonen. GeoTapp forsegler det utførte arbeidet med verifiserbare bevis. To forskjellige verktøy, her er grunnen.',
+    badge: 'App-sammenligning', h1sub: 'hvilken bør du velge for din bransje?',
+    desc: 'Connecteam styrer kommunikasjonen i teamet. GeoTapp forsegler arbeidet som er utført, med verifiserbar dokumentasjon. Det er ulike verktøy, og her er hvorfor.',
     summary: 'Kort sagt:',
-    summaryText: 'Hvis du må bevise overfor kunden at arbeidet er utført, med verifiserbare GPS-bevis, rapporter hvor enhver endring er sporbar, og bilder med tidsstempel, er GeoTapp riktig verktøy. Connecteam produserer ikke verifiserbare bevis: det er et verktøy for kommunikasjon og planlegging, ikke en bevisplattform.',
-    features: 'Sammenligning av nøkkelfunksjoner', feat: 'Funksjon', diff: 'Forskjellen som teller: verifiserbare bevis vs kommunikasjon',
-    geo: ['Hvert oppdrag genererer en forseglet GPS- og fotorapport','Oppdragsgiveren verifiserer selv rapportens ekthet','Dataene er kryptografisk signert, enhver endring er sporbar','Utviklet for å løse tvister med holdbare bevis','GDPR-kompatibel for geolokalisering av ansatte'],
-    comp: ['Utmerket for intern kommunikasjon og teammeldinger','Registrerer oppmøte, men uten kryptografisk segl','Dataene kan ikke verifiseres uavhengig av tredjeparter','Rettet mot planlegging og personaladministrasjon','Produserer ikke holdbare bevis ved en tvist'],
-    footnote: '* Ifølge loven (GDPR art. 13) må hver ansatt signere en personvernerklæring før vedkommende geolokaliseres. De fleste GPS-programmer håndterer ikke dette: den juridiske risikoen blir hos arbeidsgiveren. GeoTapp genererer automatisk den personlige erklæringen, lar den ansatte signere den digitalt og blokkerer GPS-tilgangen til den er signert. Ingen annen programvare på markedet gjør dette.',
-    whenTitle: 'Når du bør velge GeoTapp',
-    when: ['Du driver en renholds-, facility management- eller multiservicebedrift','Kundene dine bestrider utførelsen av oppdragene','Du trenger geolokaliserte fotobevis for hvert oppdrag','Du er underlagt arbeidstilsyn eller kontraktsrevisjoner','Du vil ha rapporter oppdragsgiveren kan verifisere selv'],
+    summaryText: 'Hvis du må vise kunden dokumentasjonen av arbeidet, med posisjon og tid for hver stempling, bevisbilder og en rapport der enhver senere endring kan oppdages, er GeoTapp det riktige verktøyet. Connecteam er laget for kommunikasjon og vaktplaner, ikke for å lage verifiserbar dokumentasjon.',
+    features: 'Sammenligning av nøkkelfunksjoner', feat: 'Funksjon', diff: 'Forskjellen som teller: verifiserbar dokumentasjon eller kommunikasjon',
+    geo: ['Hvert oppdrag gir en forseglet rapport med posisjon og bilder','Kunden kontrollerer selv at rapporten ikke er endret','Rapporten er kryptografisk forseglet: enhver senere endring kan oppdages','Laget for å ha dokumentasjon å vise fram når noen bestrider arbeidet','Posisjon registreres bare ved stempling, aldri løpende'],
+    comp: ['Utmerket til intern kommunikasjon og meldinger i teamet','Registrerer oppmøte, uten kryptografisk segl','Dataene kan ikke verifiseres uavhengig av en tredjepart','Orientert mot vaktplaner og personaladministrasjon','Ingen forseglet rapport å vise kunden'],
+    footnote: '* Ifølge loven (GDPR art. 13 og, i Italia, art. 4 i arbeidstakerloven, Statuto dei Lavoratori) må hver ansatt informeres før vedkommende geolokaliseres. Overlater programvaren dette trinnet til arbeidsgiveren, blir risikoen hos arbeidsgiveren. GeoTapp forbereder den personlige informasjonen, får den signert i appen som bekreftelse på at den er lest, og lar ikke den ansatte stemple før den er signert.',
+    whenTitle: 'Når bør du velge GeoTapp',
+    when: ['Du driver en renholdsbedrift, facility management eller multiservice','Kundene dine bestrider at oppdragene er utført','Du trenger geolokaliserte bevisbilder for hvert oppdrag','Du blir kontrollert av en tilsynsmyndighet eller må gjennom kontraktsmessige revisjoner','Du vil ha rapporter som kunden selv kan verifisere'],
     cta: 'Vil du se GeoTapp i aksjon?',
-    ctaDesc: 'Vi viser deg hvordan et oppdrag blir til verifiserbart bevis, på 20 minutter, uforpliktende.',
-    ctaBtn: 'Kom i gang gratis!',
+    ctaDesc: 'Prøv det på et ekte oppdrag: 14 dager gratis, uten kredittkort.',
+    ctaBtn: 'Start gratis prøveperiode',
   },
   ru: {
     badge: 'Сравнение приложений', h1sub: 'что выбрать для вашей отрасли?',

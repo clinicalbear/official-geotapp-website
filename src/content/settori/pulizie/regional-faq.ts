@@ -13,6 +13,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   pt: 'Normas e registos em Portugal',
   nl: 'Regels en documentatie in Nederland',
   da: 'Regler og dokumentation i Danmark',
+  nb: 'Regler og dokumentasjon i Norge',
   sv: 'Regler och dokumentation i Sverige',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
@@ -118,6 +119,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Skift af leverandør og mindstelønssatser?',
       a: 'GeoTapp håndterer hverken overdragelse af medarbejdere ved skift af leverandør eller mindstelønssatser. Det gemmer historikken over timer og tilstedeværelse for hver medarbejder, som kan eksporteres til Excel eller CSV: anvendelsen af overenskomsten forbliver hos bogholderen.',
+    },
+  ],
+  nb: [
+    {
+      q: 'Hvilken tidsregistrering passer for en renholdsbedrift?',
+      a: 'GeoTapp registrerer timer, pauser og utstemplinger per ansatt og per sted, med posisjon og klokkeslett, og eksporterer dem til Excel eller CSV for regnskapsføreren eller lønnskontoret ditt. Tillegg for natt og helligdager, minstelønnssatser og anvendelsen av tariffavtalen forblir hos regnskapsføreren og virksomheten.',
+    },
+    {
+      q: 'Geolokalisering av renholdere: GDPR og Datatilsynet?',
+      a: 'Posisjonen registreres bare ved stempling og med bevisbilder, aldri løpende, og informasjonen til de ansatte signeres i appen før det stemples. Det er virksomheten selv som må undersøke hva GDPR (berettiget interesse), personopplysningsloven og Datatilsynets veiledning krever i akkurat ditt tilfelle.',
+    },
+    {
+      q: 'Bytte av leverandør og minstelønnssatser?',
+      a: 'GeoTapp håndterer verken overdragelse av ansatte ved bytte av leverandør eller minstelønnssatser. Det lagrer historikken over timer og tilstedeværelse for hver ansatt, som kan eksporteres til Excel eller CSV: anvendelsen av tariffavtalen forblir hos regnskapsføreren.',
     },
   ],
   sv: [

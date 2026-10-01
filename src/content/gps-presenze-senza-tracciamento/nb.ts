@@ -87,7 +87,7 @@ const nb: PresenzeCopy = {
       },
       {
         q: 'Kan GeoTapp spore en ansatt kontinuerlig hvis jeg ber om det?',
-        a: 'Nei. Appen ber aldri om tillatelse til posisjon i bakgrunnen og har ingen tjeneste som følger en enhet mens appen er lukket: det er ikke en avslått innstilling, det er en tillatelse koden aldri ber om. Kan etterprøves ved å lese appens manifest eller personvernmerkingen i butikken.',
+        a: 'Nei. Appen ber aldri om tillatelse til posisjon i bakgrunnen og har ingen tjeneste som følger en enhet mens appen er lukket: det er ikke en deaktivert innstilling, det er en tillatelse koden aldri ber om. Kan etterprøves ved å lese appens manifest eller personvernmerkingen i butikken.',
       },
       {
         q: 'Oppbevares innsamlede posisjoner for alltid?',

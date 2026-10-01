@@ -40,7 +40,7 @@ export const HOME_TITLE_KEYWORD: Record<string, string> = {
   ru: 'GPS-программа выезда',
   da: 'GPS-software feltservice',
   sv: 'GPS-programvara för fältteam',
-  nb: 'GPS-programvare feltservice',
+  nb: 'GPS-programvare for feltteam',
 };
 
 export const HOME_META: Record<string, { title: string; description: string }> = {
@@ -85,7 +85,7 @@ export const HOME_META: Record<string, { title: string; description: string }> =
     description: 'Programvara för team på fältet: GeoTapp sparar position, tider och foton vid varje stämpling och förseglar dem i en rapport som kunden själv kan kontrollera.',
   },
   nb: {
-    title: 'GPS-programvare feltservice: bevis hver jobb | GeoTapp',
-    description: 'Kunden bestrider jobben? GeoTapp registrerer GPS, tid, bilder og en rapport med sporbare endringer. Bevis arbeidet og få betalt uten diskusjon.',
+    title: 'GPS-programvare for feltteam: bevis hvert oppdrag | GeoTapp',
+    description: 'Programvare for team i felt: GeoTapp registrerer posisjon, tid og bilder ved hver stempling og forsegler dem i en rapport som kunden selv kan kontrollere.',
   },
 };

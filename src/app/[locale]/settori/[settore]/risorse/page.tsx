@@ -46,7 +46,7 @@ const SETTORE_CONFIG: Record<string, {
       nl: { title: 'Aanwezigheidsbeheer in schoonmaakbedrijven: gids - GeoTapp', description: 'Hoe u aanwezigheid, diensten en klussen beheert bij schoonmaakbedrijven met registratie met gps. Praktische gidsen voor operationeel verantwoordelijken.', heading: 'Aanwezigheidsbeheer bij schoonmaakbedrijven' },
       da: { title: 'Styring af fremmøde i rengøringsfirmaer: guide - GeoTapp', description: 'Sådan styrer du fremmøde, vagter og opgaver i rengøringsfirmaer med stempling med GPS. Praktiske guides til driftsledere.', heading: 'Styring af fremmøde i rengøringsfirmaer' },
       sv: { title: 'Närvaro i städföretag: guide - GeoTapp', description: 'Så hanterar du närvaro, skift och uppdrag i städföretag med stämpling med GPS. Praktiska guider för driftchefer.', heading: 'Hantering av närvaro i städföretag' },
-      nb: { title: 'Ressurser for rengjøringsbedrifter - GeoTapp', description: 'Artikler og veiledninger for administrasjon av fremmøte og oppdrag i rengjøringsbedrifter.', heading: 'Ressurser for rengjøringsbedrifter' },
+      nb: { title: 'Styring av oppmøte i renholdsbedrifter: veiledning - GeoTapp', description: 'Slik styrer du oppmøte, vakter og oppdrag i renholdsbedrifter med stempling med GPS. Praktiske veiledninger for driftsledere.', heading: 'Styring av oppmøte i renholdsbedrifter' },
       ru: { title: 'Ресурсы для клининговых компаний - GeoTapp', description: 'Статьи и руководства по управлению присутствием и заявками в клининговых компаниях.', heading: 'Ресурсы для клининговых компаний' },
     },
     intro: {
@@ -59,7 +59,7 @@ const SETTORE_CONFIG: Record<string, {
       nl: 'Aanwezigheid beheren in een schoonmaakbedrijf is iets anders dan inklokken op kantoor. De medewerkers zijn verdeeld over verschillende locaties, de tijden veranderen elke dag en de eindklant wil altijd weten wie er was, wanneer en hoe lang. Deze gidsen bundelen de operationele oplossingen die schoonmaakbedrijven gebruiken om dit probleem op te lossen.',
       da: 'Fremmøde i et rengøringsfirma er noget helt andet end at stemple ind på et kontor. Medarbejderne er fordelt på flere steder, arbejdstiderne ændrer sig fra dag til dag, og slutkunden vil altid vide, hvem der var der, hvornår og hvor længe. Disse guides samler de løsninger, rengøringsfirmaer bruger til at løse det problem.',
       sv: 'Att hantera närvaro i ett städföretag är något helt annat än att stämpla in på ett kontor. Medarbetarna är fördelade på flera platser, arbetstiderna ändras från dag till dag och slutkunden vill alltid veta vem som var där, när och hur länge. De här guiderna samlar de lösningar som städföretag använder för att lösa problemet.',
-      nb: 'Managing attendance in a cleaning company is nothing like office clock-ins. Staff are spread across multiple sites, schedules change daily, and clients always want to know who was present, when, and for how long.',
+      nb: 'Oppmøte i en renholdsbedrift er noe helt annet enn å stemple inn på et kontor. De ansatte er fordelt på flere steder, arbeidstidene endrer seg fra dag til dag, og sluttkunden vil alltid vite hvem som var der, når og hvor lenge. Disse veiledningene samler løsningene renholdsbedrifter bruker for å løse det problemet.',
       ru: 'Учёт рабочего времени в клининговой компании существенно отличается от офисного. Сотрудники рассредоточены по нескольким объектам, расписание меняется каждый день, а клиенты всегда хотят знать, кто присутствовал, когда и сколько времени.',
     },
     sections: {
@@ -148,6 +148,28 @@ const SETTORE_CONFIG: Record<string, {
             'Mulighed for at vedlægge fotos til opgaverne',
             'Rapporter, der kan eksporteres til slutkunden',
             'Intern kommunikation mellem medarbejdere og kontor',
+          ],
+        },
+      ],
+      nb: [
+        {
+          h2: 'Det operative problemet som bremser renholdsbedriftene',
+          body: 'Den som driver en renholdsbedrift med mer enn 5 ansatte, kjenner problemene: du vet ikke om den ansatte kom klokken 7.00 eller 7.45, kunden ringer for å høre om teamet var der i går, og timelistene stemmer aldri. Problemet er ikke folks vilje, men at de tradisjonelle systemene ikke fungerer når teamene bytter sted hver dag.',
+        },
+        {
+          h2: 'Slik fungerer stempling med GPS i renholdsbedrifter',
+          body: 'Stempling med GPS lar de ansatte registrere inn- og utstempling direkte fra smarttelefonen, med posisjonen registrert i det øyeblikket og bare i det øyeblikket. Det krever ingen fast maskinvare og fungerer på ethvert sted. Lederen ser stemplingene så snart de kommer inn, og kan eksportere rapporter til kunden ved månedens slutt. GeoTapp TimeTracker legger til bevisbilder av det utførte arbeidet og kommunikasjon med koordinatoren fra den samme telefonen.',
+          productLink: true,
+        },
+        {
+          h2: 'Hva du bør sjekke før du velger programvare for renholdsbedriften din',
+          body: 'Ikke all programvare for oppmøte er laget for arbeid på flere steder. Sjekk før du velger at den støtter:',
+          listItems: [
+            'Stempling fra smarttelefonen, uten ekstra maskinvare',
+            'Posisjon registrert og kontrollert ved stemplingen, aldri løpende',
+            'Mulighet til å legge ved bilder til oppdragene',
+            'Rapporter som kan eksporteres til sluttkunden',
+            'Intern kommunikasjon mellom ansatte og kontor',
           ],
         },
       ],
@@ -280,7 +302,7 @@ const SETTORE_CONFIG: Record<string, {
       nl: { title: 'Klusbeheer voor installateurs en monteurs: gids - GeoTapp', description: 'Hoe u werkbonnen, monteurs in het veld en rapportage beheert voor installatiebedrijven. Operationele gidsen.', heading: 'Klusbeheer voor installateurs en monteurs' },
       da: { title: 'Styring af opgaver for installatører og teknikere: guide - GeoTapp', description: 'Sådan styrer du arbejdsordrer, teknikere i felten og rapportering i installationsvirksomheder. Praktiske guides.', heading: 'Styring af opgaver for installatører og teknikere' },
       sv: { title: 'Uppdragshantering för installatörer och tekniker - GeoTapp', description: 'Så hanterar du arbetsorder, tekniker i fält och rapportering i installationsföretag. Praktiska guider.', heading: 'Uppdragshantering för installatörer och tekniker' },
-      nb: { title: 'Ressurser for installatører - GeoTapp', description: 'Artikler og veiledninger for installatører og bedrifter med feltservice.', heading: 'Ressurser for installatører' },
+      nb: { title: 'Styring av oppdrag for installatører og teknikere: veiledning - GeoTapp', description: 'Slik styrer du arbeidsordrer, teknikere i felten og rapportering i installasjonsbedrifter. Praktiske veiledninger.', heading: 'Styring av oppdrag for installatører og teknikere' },
       ru: { title: 'Ресурсы для монтажников - GeoTapp', description: 'Статьи и руководства для монтажников и выездных технических служб.', heading: 'Ресурсы для монтажников' },
     },
     intro: {
@@ -293,7 +315,7 @@ const SETTORE_CONFIG: Record<string, {
       nl: 'Monteurs in het veld coördineren betekent weten welke klus net is afgesloten en wat er nog openstaat, zonder iemand telefonisch achterna te zitten. Met telefoontjes en WhatsApp-berichten is het beeld altijd onvolledig: de updates komen te laat, de prioriteiten veranderen zonder dat het kantoor het weet en de documentatie voor de klant is altijd een probleem. Deze artikelen bundelen de meest effectieve operationele werkwijzen voor bedrijven met monteurs in het veld.',
       da: 'At koordinere teknikere i felten betyder at vide, hvilken opgave der lige er afsluttet, og hvad der stadig mangler, uden at ringe efter nogen. Med telefonopkald og WhatsApp-beskeder er billedet altid ufuldstændigt: opdateringerne kommer for sent, prioriteterne ændrer sig uden at kontoret ved det, og dokumentationen til kunden er altid et problem. Disse artikler samler de mest effektive arbejdsgange for virksomheder med teknikere i felten.',
       sv: 'Att samordna tekniker i fält betyder att veta vilket uppdrag som just avslutats och vad som återstår, utan att ringa efter någon. Med telefonsamtal och WhatsApp-meddelanden blir bilden alltid ofullständig: uppdateringarna kommer för sent, prioriteringarna ändras utan att kontoret vet om det och dokumentationen till kunden är alltid ett problem. De här artiklarna samlar de mest effektiva arbetssätten för företag med tekniker i fält.',
-      nb: 'Coordinating field technicians means knowing at any moment who is where, which jobs have just been closed, and what\'s still pending. These guides cover effective operational practices for field service companies.',
+      nb: 'Å koordinere teknikere i felten betyr å vite hvilket oppdrag som nettopp er avsluttet, og hva som fortsatt gjenstår, uten å ringe etter noen. Med telefonsamtaler og WhatsApp-meldinger er bildet alltid ufullstendig: oppdateringene kommer for sent, prioriteringene endrer seg uten at kontoret vet det, og dokumentasjonen til kunden er alltid et problem. Disse artiklene samler de mest effektive arbeidsmåtene for virksomheter med teknikere i felten.',
       ru: 'Координация выездных техников означает знать в каждый момент, кто где находится, какие заявки только что закрыты и что ещё в работе. Эти руководства охватывают эффективные операционные практики для компаний с выездным персоналом.',
     },
     sections: {
@@ -382,6 +404,28 @@ const SETTORE_CONFIG: Record<string, {
             'Bevisfotos knyttet til opgaven',
             'Automatisk rapportering for hver afsluttet opgave',
             'Fuld historik over opgaverne pr. kunde',
+          ],
+        },
+      ],
+      nb: [
+        {
+          h2: 'Koordineringsproblemet i virksomheter med teknikere i felten',
+          body: 'Når en tekniker avslutter et oppdrag, og kontoret først oppdager det ved dagens slutt, vet det ikke om det skal sendes forsterkninger, eller om saken kan lukkes. Når dokumentasjonen ligger på papir eller i meldinger, tar det timer å rekonstruere en kundes historikk, og koordineringen over telefon tar en del av dagen som kunne vært vunnet tilbake.',
+        },
+        {
+          h2: 'Slik styrer du arbeidsordrer og oppdrag uten telefonsamtaler',
+          body: 'Et digitalt system for oppdragsstyring lar deg tildele arbeidsordrer direkte til teknikerens smarttelefon, med prioritet, instrukser og kundens historikk allerede med. Teknikeren jobber med appen GeoTapp TimeTracker: stempler, tar bevisbilder og skriver notater, og rapporten settes sammen av seg selv. Fra kontoret tildeler GeoTapp Flow oppdragene, mottar stemplingene så snart de kommer inn, og sender kunden den forseglede rapporten.',
+          productLink: true,
+        },
+        {
+          h2: 'Hva programvare for installatører og teknikere i felten må kunne',
+          body: 'Sjekk før du velger et verktøy for teknikerteamet ditt at det støtter:',
+          listItems: [
+            'Tildeling og endring av oppdrag på avstand',
+            'Posisjon registrert bare ved stemplingene, aldri løpende',
+            'Bevisbilder knyttet til oppdraget',
+            'Automatisk rapportering for hvert avsluttet oppdrag',
+            'Full historikk over oppdragene per kunde',
           ],
         },
       ],
@@ -514,7 +558,7 @@ const SETTORE_CONFIG: Record<string, {
       nl: { title: 'Aanwezigheid en documentatie voor beveiligingsdiensten - GeoTapp', description: 'Hoe u aanwezigheid, controles en afwijkingen bij beveiligingsdiensten documenteert, met de locatie alleen bij de registraties.', heading: 'Aanwezigheidsbeheer en documentatie bij beveiligingsdiensten' },
       da: { title: 'Fremmøde og dokumentation for vagttjenester - GeoTapp', description: 'Sådan dokumenterer du fremmøde, kontroller og afvigelser i vagttjenester, med positionen kun ved stemplingerne.', heading: 'Fremmøde og dokumentation i vagttjenester' },
       sv: { title: 'Närvaro och dokumentation i bevakning - GeoTapp', description: 'Så dokumenterar du närvaro, kontroller och avvikelser i bevakningstjänster, med positionen bara vid stämplingarna.', heading: 'Närvaro och dokumentation i bevakningstjänster' },
-      nb: { title: 'Ressurser for sikkerhetstjenester - GeoTapp', description: 'Artikler og veiledninger for sikkerhets- og overvåkingsbedrifter.', heading: 'Ressurser for sikkerhetstjenester' },
+      nb: { title: 'Oppmøte og dokumentasjon for vektertjenester - GeoTapp', description: 'Slik dokumenterer du oppmøte, kontroller og avvik i vektertjenester, med posisjonen bare ved stemplingene.', heading: 'Oppmøte og dokumentasjon i vektertjenester' },
       ru: { title: 'Ресурсы для служб безопасности - GeoTapp', description: 'Статьи и руководства для охранных предприятий и служб наблюдения.', heading: 'Ресурсы для служб безопасности' },
     },
     intro: {
@@ -527,7 +571,7 @@ const SETTORE_CONFIG: Record<string, {
       nl: 'Bij beveiligingsbedrijven moeten elke dienst en elke controle worden gedocumenteerd, en elke afwijking moet meteen worden gemeld. Met telefoontjes en papieren rapporten heeft de meldkamer altijd een onvolledig en vertraagd beeld. Deze artikelen behandelen de meest relevante operationele onderwerpen voor verantwoordelijken van beveiligingsdiensten.',
       da: 'I vagtselskaber skal hver vagt og hver kontrol dokumenteres, og enhver afvigelse skal meldes med det samme. Med telefonopkald og rapporter på papir har vagtcentralen altid et ufuldstændigt og forsinket billede. Disse artikler tager de mest relevante driftsemner op for ledere af vagttjenester.',
       sv: 'I bevakningsföretag måste varje pass och varje kontroll dokumenteras, och varje avvikelse måste rapporteras direkt. Med telefonsamtal och rapporter på papper har larmcentralen alltid en ofullständig och försenad bild. De här artiklarna tar upp de mest relevanta driftfrågorna för chefer inom bevakningstjänster.',
-      nb: 'In security companies every patrol must be documented, every agent must be locatable, and every incident must be reported immediately. These guides cover the most relevant operational topics for security service managers.',
+      nb: 'I vekterselskaper skal hver vakt og hver kontroll dokumenteres, og ethvert avvik skal meldes med en gang. Med telefonsamtaler og rapporter på papir har vaktsentralen alltid et ufullstendig og forsinket bilde. Disse artiklene tar opp de mest relevante driftstemaene for ledere av vektertjenester.',
       ru: 'В охранных предприятиях каждый обход должен быть задокументирован, каждый сотрудник должен быть отслеживаемым, а каждый инцидент должен быть зафиксирован немедленно. Эти руководства охватывают наиболее актуальные операционные темы для руководителей охранных служб.',
     },
     sections: {
@@ -616,6 +660,28 @@ const SETTORE_CONFIG: Record<string, {
             'Melding af afvigelser med foto og geolokalisering',
             'Forseglede rapporter, der kan eksporteres til slutkunden',
             'Besked, hvis en vagt står åben',
+          ],
+        },
+      ],
+      nb: [
+        {
+          h2: 'De operative utfordringene i vekter- og sikkerhetstjenester',
+          body: 'Uten et digitalt system vet ikke vaktsentralen om en vekter har møtt opp på riktig post, om en kontroll er utført, eller om det har vært et avvik, før noen ringer. Sluttkunden har ingen konkret dokumentasjon på tjenesten, og ved en innvending er det ingenting å vise. For et vekterselskap er det å kunne dokumentere tjenesten en del av selve tjenesten.',
+        },
+        {
+          h2: 'Slik dokumenterer du tjenesten uten å overvåke vekterne',
+          body: 'Vekterne stempler inn og ut fra smarttelefonen og tar bevisbilde ved kontrollpunktene: hver handling registrerer tidspunkt og posisjon, og mellom to handlinger registreres ingenting automatisk. Vaktsentralen ser stemplingene så snart de kommer inn, og mottar meldinger med bilde. GeoTapp TimeTracker er laget for det: tilstedeværelse med posisjon ved stemplingen, bilder av kontrollene og meldinger til vaktsentralen.',
+          productLink: true,
+        },
+        {
+          h2: 'Hva programvaren for vektertjenester må sikre',
+          body: 'Sjekk når du velger et verktøy for den daglige driften av vektertjenester at det støtter:',
+          listItems: [
+            'Innstempling og utstempling med registrert posisjon og tidspunkt',
+            'Bevisbilder med tidspunkt og posisjon ved kontrollpunktene',
+            'Melding av avvik med bilde og geolokalisering',
+            'Forseglede rapporter som kan eksporteres til sluttkunden',
+            'Beskjed hvis en vakt står åpen',
           ],
         },
       ],

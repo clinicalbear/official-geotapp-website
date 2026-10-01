@@ -13,6 +13,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   pt: 'Normas e registos em Portugal',
   nl: 'Regels en documentatie in Nederland',
   da: 'Regler og dokumentation i Danmark',
+  nb: 'Regler og dokumentasjon i Norge',
   sv: 'Regler och dokumentation i Sverige',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
@@ -118,6 +119,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Godkendelser og autorisationer?',
       a: 'GeoTapp håndterer hverken vagtgodkendelser eller sager over for myndighederne. Det registrerer, hvem der har stemplet, hvor og hvornår på hver opgave, og den historik kan du vise kunden.',
+    },
+  ],
+  nb: [
+    {
+      q: 'Vakter og timer for vekterselskaper?',
+      a: 'GeoTapp registrerer ved hver stempling start, pauser og slutt per vekter og per oppdrag, med posisjon og klokkeslett, og eksporterer dem til Excel eller CSV for regnskapsføreren eller lønnskontoret ditt. Anvendelsen av tariffavtalen (tillegg for natt og helligdager) og lønnsbehandlingen forblir hos regnskapsføreren og virksomheten.',
+    },
+    {
+      q: 'Geolokalisering av vektere: GDPR og Datatilsynet?',
+      a: 'Posisjonen registreres bare ved stempling og med bevisbilder, aldri løpende, og informasjonen til de ansatte signeres i appen før det stemples. Det er virksomheten selv som må undersøke hva GDPR (berettiget interesse), personopplysningsloven og Datatilsynets veiledning krever i akkurat ditt tilfelle.',
+    },
+    {
+      q: 'Godkjenninger og autorisasjoner?',
+      a: 'GeoTapp håndterer verken vektergodkjenninger eller saker overfor myndighetene. Det registrerer hvem som har stemplet, hvor og når på hvert oppdrag, og den historikken kan du vise kunden.',
     },
   ],
   sv: [

@@ -68,9 +68,9 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
       p2: 'Generatorn tar dina uppgifter, din logotyp och dina svar och sätter ihop ett utkast som pdf, redo för din rådgivare att finslipa och för dina team att få i handen. Allt sker i din webbläsare, och utgångspunkten står klar på en minut.',
     },
     nb: {
-      title: 'Derfor trenger du en informasjonstekst',
-      p1: 'Registrerer du posisjonen til arbeidstakerne dine, om så bare ved innstempling, krever GDPR art. 13 at du forteller dem det skriftlig før du starter: hvem som behandler opplysningene, med hvilket formål, når posisjonen registreres og hvor lenge den lagres. Uten det dokumentet starter selv det ryddigste systemet allerede med en mangel.',
-      p2: 'Generatoren tar opplysningene dine, logoen din og svarene dine og setter opp et utkast som pdf, klart til at rådgiveren din finpusser det og lagene får det utlevert. Alt skjer i nettleseren din, og utgangspunktet står klart på et minutt.',
+      title: 'Derfor trenger du en personvernerklæring',
+      p1: 'Registrerer du posisjonen til de ansatte, om så bare ved innstempling, krever GDPR art. 13 at du forteller dem det skriftlig før du starter: hvem som behandler opplysningene, med hvilket formål, når posisjonen registreres og hvor lenge den lagres. Uten det dokumentet starter selv det ryddigste systemet allerede med en mangel.',
+      p2: 'Generatoren tar opplysningene dine, logoen din og svarene dine og setter opp et utkast som pdf, klart til at rådgiveren din kan finpusse det og teamene dine kan få det utlevert. Alt skjer i nettleseren din, og utgangspunktet står klart på et minutt.',
     },
     ru: {
       title: 'Зачем вам уведомление о геолокации',
@@ -126,7 +126,7 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
     },
     nb: {
       title: 'Dette forteller kalkulatoren deg',
-      p1: 'Hvert land straffer gps uten orden i reglene på sin måte: noen regner prosent av omsetningen, andre gir faste beløp, og det reelle tallet avhenger også av hvor mye du allerede har på plass. Maksbeløpene kommer fra lovene og faktiske vedtak i 39 land, kontrollert ved kilden.',
+      p1: 'Hvert land straffer GPS som ikke følger reglene, på sin måte: noen regner prosent av omsetningen, andre gir faste beløp, og det reelle tallet avhenger også av hvor mye du allerede har på plass. Maksbeløpene kommer fra lovene og faktiske vedtak i 39 land, kontrollert ved kilden.',
       p2: 'Velg landet, huk av det du allerede har i orden, og se den høyeste boten som faktisk er gitt der og risikoen du sitter igjen med. Bedre å få vite det på denne siden enn i en tilsynsrapport.',
     },
     ru: {
@@ -183,7 +183,7 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
     },
     nb: {
       title: 'Derfor bør du stille deg spørsmålene',
-      p1: 'Oppmøte, posisjon, bilder fra plassen: alt er personopplysninger om arbeidstakerne dine, og etterlevelse er ikke et merke man kjøper én gang, men en rekke vaner man har eller ikke har. De ni spørsmålene treffer punktene der bedrifter med lag i felt oftest snubler.',
+      p1: 'Oppmøte, posisjon, bilder fra plassen: alt er personopplysninger om de ansatte, og etterlevelse er ikke et merke man kjøper én gang, men en rekke vaner man har eller ikke har. De ni spørsmålene treffer punktene der bedrifter med team i felt oftest snubler.',
       p2: 'Svar ærlig: til slutt får du en poengsum, områdene å ta tak i og de tilknyttede ressursene for å rette opp. Ingen svar forlater nettleseren din, testen jobber for deg, ikke for oss.',
     },
     ru: {
@@ -240,7 +240,7 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
     },
     nb: {
       title: 'Dette bruker du en lagringspolicy til',
-      p1: 'GDPR sier ikke hvor lenge lønnsslipper, stemplingstider eller attester skal oppbevares: Den krever at du bestemmer det, skriver det ned og holder deg til det. Det heter lagringsbegrensning, og det er noe av det første et tilsyn ser på.',
+      p1: 'GDPR sier ikke hvor lenge lønnsslipper, stemplingstider eller legeattester skal oppbevares: den krever at du bestemmer det, skriver det ned og holder deg til det. Det heter lagringsbegrensning, og det er noe av det første et tilsyn ser på.',
       p2: 'Velg land og typene personalopplysninger du håndterer: verktøyet setter opp tabellen med anbefalte frister, notatet som begrunner dem og pdf-en til protokollen din over behandlinger. For regnskapsbilag gjelder lovfristene i landet du velger.',
     },
     ru: {

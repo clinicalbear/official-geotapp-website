@@ -12,7 +12,7 @@ const DEMO_META: Record<string, { title: string; description: string }> = {
   ru: { title: 'Записаться на бесплатное демо GeoTapp, 30 минут | GeoTapp', description: 'Узнайте, как GeoTapp устраняет споры по часам и делает каждый выезд верифицируемым. Бесплатное 30-минутное демо.' },
   da: { title: 'Book en gratis GeoTapp-demo, 30 minutter | GeoTapp', description: 'Se, hvordan GeoTapp får færre tvister om timerne og gør hver opgave dokumenteret. Gratis demo på 30 minutter med vores team.' },
   sv: { title: 'Boka en gratis genomgång av GeoTapp, 30 minuter | GeoTapp', description: 'Se hur GeoTapp ger färre tvister om timmarna och gör varje uppdrag dokumenterat. Gratis genomgång på 30 minuter med vårt team.' },
-  nb: { title: 'Bestill Gratis GeoTapp Demo, 30 Minutter | GeoTapp', description: 'Se hvordan GeoTapp stopper timekonflikter og gjør hvert feltoppdrag verifiserbart. Gratis 30-minutters demo.' },
+  nb: { title: 'Bestill en gratis GeoTapp-demo, 30 minutter | GeoTapp', description: 'Se hvordan GeoTapp gir færre tvister om timene og gjør hvert oppdrag dokumentert. Gratis demo på 30 minutter med teamet vårt.' },
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

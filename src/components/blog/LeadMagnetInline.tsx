@@ -148,8 +148,8 @@ export const LEAD_MAGNETS: Record<string, LeadMagnetAsset> = {
         error: 'Något gick fel. Försök igen.',
       },
       nb: {
-        title: 'Last ned den gratis GDPR-malen for GPS-personvernerklæring for Norge',
-        desc: 'Mal for personvernerklæring for geolokalisering av ansatte, i samsvar med GDPR art. 13, med landets rettslige grunnlag og tilsynsmyndighet. Fyll ut de tomme feltene og få den sjekket av rådgiveren din.',
+        title: 'Last ned den gratis malen for personverninformasjon om GPS for Norge',
+        desc: 'Mal for personverninformasjon om geolokalisering av ansatte, bygget på innholdet som art. 13 i GDPR krever, med landets rettslige grunnlag og tilsynsmyndighet. Fyll ut de tomme feltene og la rådgiveren din gå gjennom den.',
         download: 'Last ned malen (PDF)',
         newsletterPrompt: 'Vil du også ha de neste praktiske guidene om GPS og styring av feltteam? Legg igjen e-posten din (valgfritt).',
         placeholder: 'Din e-post',

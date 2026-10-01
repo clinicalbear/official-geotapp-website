@@ -13,7 +13,7 @@ const GUIDA_META: Record<string, { title: string; description: string }> = {
   nl: { title: 'GeoTapp-gebruikershandleiding - Aan de slag | GeoTapp', description: 'Zo begint u met GeoTapp: het bedrijf activeren, medewerkers uitnodigen, registreren, bewijs van het werk verzamelen en de klant een rapport sturen dat hij zelf controleert.' },
   da: { title: 'GeoTapp-brugervejledning - Kom i gang | GeoTapp', description: 'Sådan kommer du i gang med GeoTapp: aktivér virksomheden, inviter medarbejdere, stempl, indsaml arbejdsbeviser og send kunden en rapport, som vedkommende selv kan verificere.' },
   sv: { title: 'GeoTapps användarhandbok - Kom igång | GeoTapp', description: 'Så kommer du igång med GeoTapp: aktivera företaget, bjud in medarbetare, stämpla, samla in arbetsbevis och skicka kunden en rapport som kunden själv kan kontrollera.' },
-  nb: { title: 'GeoTapp Brukerhåndbok - Kom i gang | GeoTapp', description: 'Komplett GeoTapp-guide: konfigurer teamet ditt, start GPS-tidsregistrering, generer verifiserbare rapporter og bruk Verifier.' },
+  nb: { title: 'GeoTapp-veiledning - Kom i gang | GeoTapp', description: 'Slik kommer du i gang med GeoTapp: aktiver bedriften, inviter ansatte, stemple, samle arbeidsbevis og send kunden en rapport som vedkommende selv kan verifisere.' },
   ru: { title: 'Руководство пользователя GeoTapp, Начало работы | GeoTapp', description: 'Полное руководство по GeoTapp: настройка команды, запуск GPS-учёта времени, создание верифицируемых отчётов и использование Verifier.' },
 };
 
