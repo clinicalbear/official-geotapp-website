@@ -604,7 +604,8 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
 .op .top{margin-bottom:auto;display:flex;flex-wrap:wrap;gap:14px 40px;padding-bottom:24px;border-bottom:1px solid rgba(247,249,252,.22); opacity:0;animation:fadeu .5s .25s cubic-bezier(.2,.8,.25,1) forwards}
 .op .top span{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--lime);display:flex;gap:9px;align-items:center}
 .op .top i{font-style:normal;color:#fff;opacity:.6}
-.op h1{font-size:clamp(34px,4.8vw,64px);margin-top:40px}
+.op .aud{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--lime);margin-top:40px; opacity:0;animation:fadeu .5s .2s cubic-bezier(.2,.8,.25,1) forwards}
+.op h1{font-size:clamp(34px,4.8vw,64px);margin-top:14px}
 .op h1 span{display:block;overflow:hidden;padding-top:.12em;margin-top:-.12em}
 .op h1 span b{display:block;font-weight:800;transform:translateY(103%);animation:lineup .55s cubic-bezier(.19,1,.22,1) .05s forwards}
 .op h1 span:nth-child(2) b{animation-delay:.12s;color:var(--lime)}
@@ -780,7 +781,7 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
 }
 @media(prefers-reduced-motion:reduce){
   .op .bg,.end img.bg,.op .cue s::after,.seq .hint s::after,.slab .run{animation:none}
-  .op h1 span b,.op .low,.op .top,.op .cue{animation:none;transform:none;opacity:1}
+  .op h1 span b,.op .low,.op .top,.op .aud,.op .cue{animation:none;transform:none;opacity:1}
   .seq .fr img{transform:none}
   .scr>.w{transform:none;opacity:1}
   .pg1 .sheet{transform:none}
@@ -832,6 +833,9 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
      Toglierla libera l'altezza che serve alla riga sulla prova per restare
      sopra al banner cookie, e leva un doppione. */
   .lp-home .op .top{display:none}
+  /* Stesso motivo della riga sopra: niente spazio verticale da dare via su
+     mobile. La riga pubblico/mestieri resta solo su schermi larghi. */
+  .lp-home .op .aud{display:none}
   .lp-home .pnote{font-size:13.5px;padding:11px 54px 11px 15px}
 }
 .lp-home .b1{background:var(--seal);color:var(--ink);padding:17px 34px;border-radius:99px;font-size:15.5px;font-weight:500; transition:transform .3s cubic-bezier(.2,.8,.25,1),box-shadow .3s}
