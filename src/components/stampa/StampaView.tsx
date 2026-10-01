@@ -264,6 +264,12 @@ export default function StampaView({
             <b>{d.asset_facsimile}</b>
             <span><ExternalLink size={13} style={{ display: 'inline', verticalAlign: -2 }} /></span>
           </a>
+          {/* Risposta GeoTapp alla consultazione UK (DBT, chiusa il 30/09/2026), inviata il
+              10/09 con consenso alla pubblicazione integrale. Il PDF e' quello inviato, invariato. */}
+          <a href="/downloads/geotapp-response-uk-workplace-monitoring-consultation-2026.pdf" target="_blank" rel="noopener">
+            <b>{d.asset_uk_consultation}</b>
+            <span>.pdf</span>
+          </a>
           <a href={localizePath('/risorse/', locale)}>
             <b>{allResourcesLabel}</b>
             <span><ExternalLink size={13} style={{ display: 'inline', verticalAlign: -2 }} /></span>
