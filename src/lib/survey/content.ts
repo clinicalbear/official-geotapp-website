@@ -212,11 +212,11 @@ export const SURVEY: Record<SurveyLocale, SurveyContent> = {
     pathB: {
       b1: { label: 'Har du någonsin tvivlat på att ett jobb du betalade för verkligen utfördes, eller utfördes ordentligt?', options: ['Ja, flera gånger', 'Ja, ibland', 'Aldrig'] },
       b2: { label: 'Har du någonsin bestridit eller hållit inne en betalning på grund av det?', options: ['Ja', 'Nej'] },
-      b3: { label: 'Hur mycket skulle du föredra en leverantör som ger dig solida bevis (foto + plats + tid) för varje jobb?', lowLabel: 'Inte alls', highLabel: 'Enormt' },
+      b3: { label: 'Hur mycket skulle du föredra en leverantör som ger dig solida bevis (foto, plats och tid) för varje jobb?', lowLabel: 'Inte alls', highLabel: 'Enormt' },
     },
     emailLabel: 'Lämna din e-post så får du de europeiska resultaten när vi stänger, land för land. De finns ingen annanstans (valfritt)',
     emailPlaceholder: 'din@email.se',
-    privacyNote: 'Anonym undersökning. Inga obligatoriska uppgifter. Din e-post, om du lämnar den, används bara för resultaten och delas aldrig.',
+    privacyNote: 'Anonym undersökning. Inga obligatoriska uppgifter. Om du lämnar din e-post används den bara för resultaten och delas aldrig.',
     submit: 'Skicka',
     thankYou: 'Tack. Ditt bidrag spelar verkligen roll.',
   },

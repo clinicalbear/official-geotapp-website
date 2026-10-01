@@ -63,8 +63,8 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
       p2: 'Generatoren tager dine oplysninger, dit logo og dine svar og sætter et udkast op som pdf, klar til, at din rådgiver kan finpudse det, og dine hold kan få det udleveret. Alt sker i din browser, og udgangspunktet står klar på et minut.',
     },
     sv: {
-      title: 'Därför behöver du en informationstext',
-      p1: 'Registrerar du dina anställdas position, om så bara vid instämpling, kräver GDPR art. 13 att du berättar det skriftligt innan du börjar: vem som behandlar uppgifterna, i vilket syfte, när positionen registreras och hur länge den sparas. Utan det dokumentet börjar även det snyggaste systemet redan med en brist.',
+      title: 'Därför behöver du en integritetsinformation',
+      p1: 'Registrerar du dina anställdas position, även om det bara sker vid instämpling, kräver GDPR art. 13 att du berättar det skriftligt innan du börjar: vem som behandlar uppgifterna, i vilket syfte, när positionen registreras och hur länge den sparas. Utan det dokumentet börjar även det snyggaste systemet redan med en brist.',
       p2: 'Generatorn tar dina uppgifter, din logotyp och dina svar och sätter ihop ett utkast som pdf, redo för din rådgivare att finslipa och för dina team att få i handen. Allt sker i din webbläsare, och utgångspunkten står klar på en minut.',
     },
     nb: {
@@ -121,8 +121,8 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
     },
     sv: {
       title: 'Det här säger kalkylatorn dig',
-      p1: 'Varje land straffar gps utan ordning på reglerna på sitt sätt: några räknar procent av omsättningen, andra delar ut fasta belopp, och den verkliga summan beror också på hur mycket du redan har på plats. Maxbeloppen kommer från lagarna och verkliga beslut i 39 länder, kontrollerade vid källan.',
-      p2: 'Välj land, bocka i det du redan har i ordning och se den högsta sanktion som faktiskt dömts ut där och risken du har kvar. Bättre att få veta det på den här sidan än i en tillsynsrapport.',
+      p1: 'Varje land straffar GPS som inte följer reglerna på sitt sätt: några räknar procent av omsättningen, andra delar ut fasta belopp, och den verkliga summan beror också på hur mycket du redan har på plats. Maxbeloppen kommer från lagarna och verkliga beslut i 39 länder, kontrollerade vid källan.',
+      p2: 'Välj land, bocka i det du redan har i ordning och se den högsta sanktion som faktiskt har utdömts där och risken du har kvar. Bättre att få veta det på den här sidan än i en tillsynsrapport.',
     },
     nb: {
       title: 'Dette forteller kalkulatoren deg',
@@ -178,7 +178,7 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
     },
     sv: {
       title: 'Därför ska du ställa dig frågorna',
-      p1: 'Närvaro, position, foton från arbetsplatsen: allt är personuppgifter om dina anställda, och efterlevnad är inget märke man köper en gång, utan en rad vanor man har eller inte har. De nio frågorna träffar punkterna där företag med team i fält snubblar oftast.',
+      p1: 'Närvaro, position, foton från arbetsplatsen: allt är personuppgifter om dina anställda, och efterlevnad är inget märke man köper en gång, utan en rad vanor man har eller inte har. De nio frågorna träffar punkterna där företag med team i fält oftast snubblar.',
       p2: 'Svara ärligt: i slutet får du en poäng, områdena att ta tag i och de kopplade resurserna för att rätta till dem. Inget svar lämnar din webbläsare, testet arbetar för dig, inte för oss.',
     },
     nb: {
@@ -235,7 +235,7 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
     },
     sv: {
       title: 'Det här har du en gallringspolicy till',
-      p1: 'GDPR säger inte hur länge lönebesked, stämpeltider eller intyg ska sparas: den kräver att du bestämmer det, skriver ner det och håller dig till det. Det kallas lagringsminimering, och det är bland det första en tillsyn tittar på.',
+      p1: 'GDPR säger inte hur länge lönebesked, stämpeltider eller läkarintyg ska sparas: den kräver att du bestämmer det, skriver ner det och håller dig till det. Det kallas lagringsminimering, och det är bland det första en tillsyn tittar på.',
       p2: 'Välj land och de typer av personaluppgifter du hanterar: verktyget ställer samman tabellen med rekommenderade tider, noten som motiverar dem och pdf:en till ditt register över behandlingar. För bokföringsunderlag gäller lagtiderna i landet du väljer.',
     },
     nb: {

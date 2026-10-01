@@ -59,10 +59,10 @@ export const TRUST_COPY: Record<string, TrustCopy> = {
     { title: 'Uafhængig verificering', sub: 'Kunden tjekker, uden konto' },
   ], sectors: 'Rengøring · Byggeri · Sikkerhed · Installatører · Vedligeholdelse · Tekniske anlæg' },
   sv: { headline: 'Bevis på fältarbete, verifierbart av vem som helst', claims: [
-    { title: 'Varje ändring är synlig', sub: 'Kryptografiskt sigill på varje jobb' },
-    { title: 'Äkta GPS-stämpling', sub: 'Plats och tid registreras på plats' },
+    { title: 'Varje senare ändring går att se', sub: 'Kryptografiskt sigill på varje rapport' },
+    { title: 'Stämpling med GPS-position', sub: 'Plats och tidpunkt registreras på plats' },
     { title: 'Oberoende verifiering', sub: 'Kunden kontrollerar, utan konto' },
-  ], sectors: 'Städning · Bygg · Säkerhet · Installatörer · Underhåll · VVS' },
+  ], sectors: 'Städning · Bygg · Säkerhet · Installatörer · Underhåll · Tekniska installationer' },
   nb: { headline: 'Bevis på feltarbeid, verifiserbart av hvem som helst', claims: [
     { title: 'Enhver endring er synlig', sub: 'Kryptografisk segl på hvert oppdrag' },
     { title: 'Ekte GPS-stempling', sub: 'Sted og tid registrert på stedet' },

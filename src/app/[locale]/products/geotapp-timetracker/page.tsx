@@ -22,7 +22,7 @@ const appMeta: Record<string, { title: string; description: string }> = {
   es: { title: 'GeoTapp TimeTracker: fichaje con GPS para equipos de campo', description: 'La ubicación se registra a la entrada, en la pausa y a la salida, nada automático entre medias. Las fotos van ligadas a la obra. 14 días gratis.' },
   nl: { title: 'GeoTapp TimeTracker - App voor registratie met locatie', description: 'GeoTapp TimeTracker is de app voor monteurs in het veld: registraties met locatie en tijd, bewijsfoto\'s, notities, weekrapporten. Op Android en iOS, gekoppeld aan Flow.' },
   pt: { title: 'GeoTapp TimeTracker: picagem com GPS para equipas no terreno', description: 'A localização é registada à entrada, na pausa e à saída, nada de automático pelo meio. As fotografias ficam ligadas à obra. 14 dias grátis.' },
-  sv: { title: 'GeoTapp TimeTracker - GPS Tidsrapporterings-App för Fälttekniker', description: 'GeoTapp TimeTracker är appen för GPS-tidsrapportering för fälttekniker. In- och utcheckning, fotodokumentation, veckorapporter och realtidssynkronisering med Flow.' },
+  sv: { title: 'GeoTapp TimeTracker: stämpelapp för team på fältet', description: 'Positionen sparas vid start, rast och slut, och inget automatiskt där emellan. Foton hör till uppdraget. 14 dagar gratis.' },
   da: { title: 'GeoTapp TimeTracker: stempel-app med GPS til hold i marken', description: 'Positionen registreres ved start, pause og slut, og intet automatisk imellem. Fotos hænger på opgaven. 14 dage gratis.' },
   nb: { title: 'GeoTapp TimeTracker - GPS Tidsregistrerings-App for Serviceteknikere', description: 'GeoTapp TimeTracker er mobilappen for serviceteknikere. GPS inn- og utsjekking, fotodokumentasjon, ukentlige rapporter og sanntidssynkronisering med Flow.' },
   ru: { title: 'GeoTapp TimeTracker: GPS-учёт времени для выездных техников', description: 'GeoTapp TimeTracker, мобильное приложение для выездных техников. GPS отметки, фотодоказательства, еженедельные отчёты и синхронизация с Flow в реальном времени.' },
@@ -145,11 +145,11 @@ const APP_FAQ: Record<string, object> = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'Vad är GeoTapp TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp TimeTracker är appen för GPS-tidsrapportering för fälttekniker. Den registrerar närvaro, aktiviteter och fotobevis direkt från fältet, och varje incheckning kan verifieras av vem som helst via GeoTapp Verifier.' } },
-      { '@type': 'Question', name: 'Fungerar GeoTapp TimeTracker utan internet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Appen fungerar offline och sparar alla GPS-incheckningar, foton och anteckningar lokalt. Data synkroniseras med GeoTapp Flow så snart uppkopplingen återställs.' } },
-      { '@type': 'Question', name: 'Hur skiljer sig GeoTapp TimeTracker från en vanlig app för tidsrapportering?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp TimeTracker är inte bara tidsrapportering: varje stämpling förseglas med verklig GPS, kryptografisk hash och fotobevis. Rapporten kan verifieras oberoende, och varje ändring, även av administratören, är spårbar.' } },
-      { '@type': 'Question', name: 'Fungerar GeoTapp TimeTracker på Android och iOS?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Appen finns på Google Play Store och Apple App Store och fungerar på alla Android- (6.0+) och iOS-enheter (14+).' } },
-      { '@type': 'Question', name: 'Är GeoTapp TimeTracker förenlig med GDPR?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. GeoTapp registrerar GPS-positionen endast vid stämplingen, inte kontinuerligt. Medarbetaren kan när som helst se alla sina registrerade uppgifter.' } },
+      { '@type': 'Question', name: 'Vad är GeoTapp TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp TimeTracker är mobilappen för tekniker, som registrerar närvaro, uppdrag och fotobevis direkt på fältet. Allt hamnar i den förseglade rapporten, som kunden själv kontrollerar med GeoTapp Verifier.' } },
+      { '@type': 'Question', name: 'Vad händer om det inte finns täckning?', acceptedAnswer: { '@type': 'Answer', text: 'Stämplingen sparas på telefonen och skickas av sig själv när signalen kommer tillbaka, med den tid då den gjordes. Tills den har kommit fram syns den inte i Flow.' } },
+      { '@type': 'Question', name: 'Hur skiljer sig GeoTapp TimeTracker från en vanlig stämpelapp?', acceptedAnswer: { '@type': 'Answer', text: 'GeoTapp TimeTracker är inte bara en stämpling: varje arbetspass, med sina positioner, bevisfoton och anteckningar, blir en förseglad rapport med kryptografiska fingeravtryck. Kunden kontrollerar den själv: varje senare ändring, även från administratörens sida, går att upptäcka.' } },
+      { '@type': 'Question', name: 'Fungerar GeoTapp TimeTracker på Android och iOS?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Appen finns på Google Play och App Store. Den kräver Android 8.0 eller senare, eller iOS 26.2 eller senare.' } },
+      { '@type': 'Question', name: 'Hur är det med dataskyddet (GDPR) i GeoTapp TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'Appen är byggd för att hålla sig inom ramarna: den sparar positionen bara när medarbetaren stämplar (start, raster, slut) eller tar ett bevisfoto, aldrig löpande, och ber inte ens om tillstånd att läsa positionen i bakgrunden. Medarbetaren kan se sina stämplingar och sina rapporter i appen. Information och, där det behövs, samråd med de anställdas företrädare är fortsatt arbetsgivarens ansvar.' } },
     ],
   },
 };
@@ -162,7 +162,7 @@ const APP_DESCRIPTION: Record<string, string> = {
   es: 'GeoTapp TimeTracker es la aplicación nativa Android e iOS para técnicos sobre el terreno: fichaje con ubicación, fotos de prueba, notas e informes semanales, conectada con GeoTapp Flow. Si no hay cobertura, los fichajes se guardan en el teléfono y se envían en cuanto vuelve la señal.',
   nl: 'GeoTapp TimeTracker is de mobiele app voor monteurs in het veld: registratie met gecontroleerde locatie, fotobewijzen, weekrapporten en synchronisatie met GeoTapp Flow. Werkt offline.',
   pt: 'O GeoTapp TimeTracker é a aplicação nativa Android e iOS para técnicos no terreno: picagem com localização, fotografias de prova, notas e relatórios semanais, ligada ao GeoTapp Flow. Se não houver rede, as picagens ficam guardadas no telemóvel e seguem assim que o sinal volta.',
-  sv: 'GeoTapp TimeTracker är appen för GPS-tidsrapportering för fälttekniker: verifierad incheckning, fotobevis, veckorapporter och realtidssynkronisering med GeoTapp Flow. Fungerar offline.',
+  sv: 'GeoTapp TimeTracker är den inbyggda Android- och iOS-appen för tekniker på fältet: stämpling med position, bevisfoton, anteckningar och veckorapporter, kopplad till GeoTapp Flow. Om det saknas täckning sparas stämplingarna på telefonen och skickas när signalen kommer tillbaka.',
   da: 'GeoTapp TimeTracker er den native Android- og iOS-app til teknikere i marken: stempling med position, bevisfotos, noter og ugentlige rapporter, forbundet med GeoTapp Flow. Hvis der ikke er net, gemmes stemplingerne på telefonen og sendes, så snart signalet vender tilbage.',
   nb: 'GeoTapp TimeTracker er mobilappen for serviceteknikere: verifisert GPS-innsjekking, fotobevis, ukentlige rapporter og sanntidssynkronisering med GeoTapp Flow. Fungerer offline.',
   ru: 'GeoTapp TimeTracker, мобильное приложение для выездных техников: верифицированные GPS-отметки, фотодоказательства, еженедельные отчёты и синхронизация с GeoTapp Flow в реальном времени. Работает офлайн.',
@@ -249,6 +249,16 @@ const APP_FEATURES: Record<string, string[]> = {
     'Findes på Google Play og i App Store',
     'Position kun når medarbejderen stempler eller tager et bevisfoto, aldrig løbende',
   ],
+  sv: [
+    'Stämpling med position vid start, raster och slut; simulerade positioner avvisas',
+    'Bevisfoton med tid och position',
+    'Utan täckning blir stämplingarna kvar på telefonen och skickas när signalen kommer tillbaka',
+    'Kryptografiskt förseglade rapporter',
+    'GPS-information som bekräftas som läst i appen före första stämplingen',
+    'Inbyggd koppling till GeoTapp Flow',
+    'Finns på Google Play och App Store',
+    'Position bara när medarbetaren stämplar eller tar ett bevisfoto, aldrig löpande',
+  ],
 };
 
 function buildAppSoftware(locale: AppLocale) {
@@ -285,6 +295,8 @@ function buildAppSoftware(locale: AppLocale) {
         ? `Teste gratuito de 14 dias. Planos pagos a partir de ${rate.formatted} por posto e por mês, IVA não incluído.`
         : locale === 'da'
         ? `14 dages gratis prøveperiode. Betalte planer fra ${rate.formatted} pr. plads om måneden, ekskl. moms.`
+        : locale === 'sv'
+        ? `14 dagars gratis provperiod. Betalplaner från ${rate.formatted} per plats och månad, exkl. moms.`
         : `14-day free trial. Paid plans from ${rate.formatted} per seat per month.`,
     },
     publisher: { '@id': 'https://geotapp.com/#organization' },

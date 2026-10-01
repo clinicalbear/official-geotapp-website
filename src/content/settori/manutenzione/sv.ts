@@ -2,122 +2,122 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Underhållsapp: Teamhantering och Uppdrag med GPS | GeoTapp',
+    title: 'App för underhåll: team och uppdrag med GPS | GeoTapp',
     description:
-      'Hantera underhållsteam med GPS: uppdrag, scheman, servicebevis. Komplett historik per anläggning eller kundplats. Testa GeoTapp gratis.',
+      'Hantera underhållsteam med GPS: uppdrag, skift, bevis på utförd tjänst. Fullständig historik för varje anläggning eller kundplats. Testa GeoTapp gratis.',
   },
 
   hero: {
     badge: 'App för underhållsteam',
     h1_line1: 'Ditt underhållsteam,',
-    h1_line2: 'med full koll på varje besök.',
+    h1_line2: 'varje besök dokumenterat.',
     subtitle:
-      'Registrera uppdrag, planera scheman och dokumentera varje besök med äkta GPS och fotobevis. Komplett historik per anläggning och kund, utan manuell inmatning.',
+      'Registrera uppdragen, planera skiften och dokumentera varje besök med positionen vid stämplingen och bevisfoton. Fullständig historik för anläggningar och kunder, utan någon manuell inmatning.',
     cta_primary: 'Testa GeoTapp gratis i 14 dagar',
-    cta_note: 'Ingen bindning. Inget kreditkort krävs.',
+    cta_note: 'Provperioden binder dig inte till något. Inget kreditkort krävs.',
   },
 
   pain: {
     title: 'Problem vi löser varje dag',
     items: [
       {
-        title: 'Hur dokumenterar du periodiska underhållsbesök?',
-        desc: 'Automatisk rapport med GPS, timmar och foton för varje besök. Komplett historik, nedladdningsbar, utan manuell inmatning.',
+        title: 'Hur dokumenterar du de periodiska uppdragen?',
+        desc: 'Automatisk rapport med GPS, timmar och foton för varje besök. Historiken är komplett och kan laddas ned utan någon manuell inmatning.',
       },
       {
-        title: 'Kommer teknikerna verkligen i tid?',
-        desc: 'Ankomsttid verifierad med GPS, utan samtal. Data finns redan i din dashboard, för varje plats.',
+        title: 'Kommer teknikerna verkligen i utsatt tid?',
+        desc: 'Du ser det så fort teknikern stämplar, utan samtal: ankomsttid och position finns redan i Flow, för varje plats.',
       },
       {
-        title: 'Hur bevisar du den levererade tjänsten?',
-        desc: 'Komplett nedladdningsbar historik per kundplats: datum, timmar, GPS och foton. Kunden verifierar självständigt, utan åtkomst till ditt system.',
+        title: 'Hur visar du kunderna den utförda tjänsten?',
+        desc: 'Fullständig historik att ladda ned för varje plats: datum, timmar, GPS och foton. Kunden kontrollerar själv, utan att komma åt ditt system.',
       },
     ],
   },
 
   workflow: {
     title: 'Så fungerar det',
-    subtitle: 'Tre enkla steg. Noll papper. Noll samtal.',
+    subtitle: 'Tre enkla steg. Inget papper. Inga samtal.',
     steps: [
       {
-        title: 'Teknikern stämplar GPS vid ankomst',
-        desc: 'Öppnar uppdraget från sin smartphone. GeoTapp registrerar äkta GPS-koordinater, tidsstämpel och foton, helautomatiskt, förseglat.',
+        title: 'Teknikern stämplar med GPS vid ankomsten',
+        desc: 'Teknikern öppnar uppdraget från smartphonen. GeoTapp registrerar tid och position i det ögonblicket, samt bevisfotona. Mellan två stämplingar registreras ingenting automatiskt.',
       },
       {
         title: 'Timmar och uppdrag registreras automatiskt',
-        desc: 'Varje arbetad minut kopplas till platsen och uppdragstypen. Ansvarig ser status för varje besök så snart den uppdateras.',
+        desc: 'De arbetade timmarna kopplas till platsen och typen av uppdrag. Chefen ser vid varje stämpling status för varje besök.',
       },
       {
-        title: 'Kunden får den digitalt signerade rapporten',
-        desc: 'Vid uppdragets slut genererar systemet en rapport med GPS, timmar och digital signatur. Kunden verifierar den självständigt.',
+        title: 'Kunden får den förseglade rapporten',
+        desc: 'När uppdraget är klart skapar systemet en rapport med GPS, timmar och försegling. Kunden kontrollerar den själv, utan åtkomst till ditt system.',
       },
     ],
   },
 
   features: {
-    title: 'Underhållsapp: total kontroll över varje uppdrag.',
+    title: 'App för underhåll: varje uppdrag dokumenterat.',
     items: [
       {
-        title: 'GPS-verifierad närvaro',
-        desc: 'Varje ankomst och avfärd förseglas med äkta GPS, tidsstämpel och tilldelad plats. Försvarbart gentemot kunder och inspektörer.',
+        title: 'Närvaro med position och tid',
+        desc: 'Varje ankomst, rast och avfärd registreras med position, tid och tilldelad plats, och hamnar i den förseglade rapporten. Att visa för kunden eller tillsynsmyndigheten när det behövs.',
       },
       {
         title: 'Underhållshistorik per anläggning',
-        desc: 'Varje uppdrag är kopplat till platsen eller anläggningen. Komplett historik är sökbar och nedladdningsbar.',
+        desc: 'Varje uppdrag är kopplat till platsen eller anläggningen. Den fullständiga historiken kan läsas och laddas ned, av dig och av kunden.',
       },
       {
-        title: 'Automatiska förseglade rapporter',
-        desc: 'Efter varje uppdrag genererar systemet en förseglad rapport: timmar, GPS, foton och digital signatur.',
+        title: 'Automatiska och förseglade rapporter',
+        desc: 'När uppdraget är klart skapar systemet en förseglad rapport: timmar, positioner, foton och försegling. Kunden kan kontrollera den själv.',
       },
       {
-        title: 'Teamplanering',
-        desc: 'Tilldela uppdrag, hantera scheman och få automatiska varningar om ett uppdrag inte öppnas eller stängs i tid.',
+        title: 'Planering av skift och team',
+        desc: 'Tilldela uppdrag, hantera skiften och få en avisering om ett pass blir kvar öppet.',
       },
       {
         title: 'Fotodokumentation',
-        desc: 'Tekniker tar foton direkt från appen: före, under och efter uppdraget. Varje bild är geotaggad med tidsstämpel.',
+        desc: 'Teknikerna tar foton direkt från appen: före, under och efter uppdraget. Varje bild är kopplad till en plats och har en tidsstämpel.',
       },
       {
-        title: 'Stämpla in med ett klick',
-        desc: 'Teknikern stämplar in med GPS, markerar raster och avslutar uppdraget med ett klick. Varje foto som tas kopplas till uppdraget och dess tider.',
+        title: 'Stämpling med ett tryck',
+        desc: 'Teknikern stämplar in vid ankomsten med GPS, markerar raster och avslutar uppdraget med ett tryck. Varje foto som tas förblir kopplat till uppdraget och dess tider.',
       },
     ],
   },
 
   testimonial: {
     quote:
-      'Med GeoTapp är varje underhållsbesök spårbart. Kunderna ser den kompletta historiken per anläggning och det blir betydligt färre diskussioner om timmar eller utfört arbete.',
-    author: 'Anders L.',
-    role: 'Underhållschef, facility management - Sverige',
+      'Med GeoTapp är varje underhållsuppdrag dokumenterat, och vi skickar rapporten för varje besök till kunderna.',
+    author: 'Andrea L.',
+    role: 'Underhållschef, fastighetsservice',
   },
 
   faq: {
     title: 'Vanliga frågor',
-    subtitle: 'Det vi oftast får frågor om innan start.',
+    subtitle: 'Det vi oftast får frågor om innan man kommer igång.',
     items: [
       {
-        q: 'Hur dokumenterar man periodiska underhållsbesök?',
-        a: 'GeoTapp genererar automatiskt en rapport per besök med GPS, timmar och foton. Komplett historik per anläggning eller kundplats, utan manuell inmatning.',
+        q: 'Hur dokumenterar du de periodiska underhållsuppdragen?',
+        a: 'GeoTapp skapar automatiskt en rapport för varje besök med GPS, timmar och foton. Historiken är komplett och kan laddas ned per anläggning eller kundplats, utan någon manuell inmatning.',
       },
       {
-        q: 'Kommer teknikerna verkligen i tid?',
-        a: 'Med GeoTapp kan du verifiera ankomsttid och GPS-position för varje tekniker, verifierad vid stämplingen. Inget samtal behövs.',
+        q: 'Kommer teknikerna verkligen i utsatt tid?',
+        a: 'Med GeoTapp ser du ankomsttiden och positionen för varje tekniker i det ögonblick han eller hon stämplar. Inga samtal: uppgiften finns redan i Flow.',
       },
       {
-        q: 'Hur bevisar jag den levererade underhållstjänsten för kunden?',
-        a: 'GeoTapp upprätthåller en komplett nedladdningsbar historik per kundplats: datum, timmar, GPS och foton. Kunden verifierar självständigt.',
+        q: 'Hur visar jag kunderna det utförda underhållet?',
+        a: 'GeoTapp sparar en fullständig historik att ladda ned för varje kundplats: datum, timmar, GPS och foton för varje uppdrag. Till kunden skickar du den förseglade rapporten, som kunden kontrollerar själv utan att komma åt ditt system.',
       },
       {
-        q: 'Fungerar GeoTapp för fastighetsunderhåll och anläggningsservice?',
-        a: 'Ja. GeoTapp används av underhållsföretag, facility management-företag och organisationer med distribuerade team. Plattformen skalar från 3 till 300 tekniker.',
+        q: 'Fungerar GeoTapp för underhåll av anläggningar och fastighetsservice?',
+        a: 'Ja. GeoTapp används av underhållsföretag, fastighetsservice och företag med team fördelade på flera platser. Det passar allt från ett litet team till ett företag med hundratals tekniker.',
       },
       {
-        q: 'Är GeoTapp GDPR-kompatibelt?',
-        a: 'GeoTapp är byggd för att hålla sig inom GDPR: spårar plats endast under aktiv arbetstid, mallar för medarbetarinformation ingår, och samlar inte in onödiga data.',
+        q: 'Hur hanterar GeoTapp GDPR vid positionering?',
+        a: 'GeoTapp är byggt för att hålla sig inom GDPR:s ramar: positionen registreras bara när teknikern stämplar (in, raster, ut) eller tar ett bevisfoto, informationen till medarbetaren signeras i appen före stämplingen och inga onödiga uppgifter samlas in.',
       },
       {
         q: 'Vad kostar GeoTapp för ett underhållsföretag?',
-        a: 'Planerna börjar från några euro per medarbetare per månad. Testa gratis i 14 dagar, utan bindning.',
+        a: 'GeoTapp Flow börjar på 39 € per månad; TimeTracker-platserna för teknikerna kostar 3 € per månad vardera upp till 25. Abonnemanget har en bindningstid på 12 månader. Först kan du testa det gratis i 14 dagar, utan kort.',
       },
     ],
   },
@@ -125,34 +125,34 @@ const content: SettoreContent = {
   cta: {
     title: 'Varje underhållsuppdrag förtjänar ett bevis. GeoTapp skapar det.',
     subtitle:
-      'Verifierbara rapporter, äkta GPS, komplett historik per anläggning. Ditt arbete blir försvarbart.',
-    primary: 'Starta gratis nu!',
-    secondary: 'Se Priser',
+      'Verifierbara rapporter, position vid stämplingarna, fullständig historik för varje anläggning.',
+    primary: 'Testa gratis i 14 dagar',
+    secondary: 'Se priserna',
   },
 
   pricing_hint: {
-    label: 'Från',
-    per: 'medarbetare/månad',
-    note: '14 dagars gratis provperiod',
+    label: 'TimeTracker-platser från',
+    per: 'per medarbetare och månad, plus Flow-abonnemang från 39 € per månad',
+    note: 'Gratis provperiod i 14 dagar',
   },
 
   schema_sector_name: 'Underhåll',
 
   schema_faq: [
     {
-      question: 'Hur dokumenterar man periodiska underhållsbesök?',
+      question: 'Hur dokumenterar du de periodiska underhållsuppdragen?',
       answer:
-        'GeoTapp genererar automatiskt en rapport per besök med GPS, timmar och foton. Komplett historik per anläggning eller kundplats.',
+        'GeoTapp skapar automatiskt en rapport för varje besök med GPS, timmar och foton. Historiken är komplett och kan laddas ned per anläggning eller kundplats, utan någon manuell inmatning.',
     },
     {
-      question: 'Kommer teknikerna verkligen i tid?',
+      question: 'Kommer teknikerna verkligen i utsatt tid?',
       answer:
-        'Med GeoTapp kan du verifiera ankomsttid och GPS-position för varje tekniker, verifierad vid stämplingen. Data finns redan i din dashboard.',
+        'Med GeoTapp ser du ankomsttiden och positionen för varje tekniker i det ögonblick han eller hon stämplar. Uppgiften finns redan i Flow, utan samtal.',
     },
     {
-      question: 'Hur bevisar jag den levererade underhållstjänsten?',
+      question: 'Hur visar jag kunderna det utförda underhållet?',
       answer:
-        'GeoTapp upprätthåller en komplett nedladdningsbar historik per kundplats: datum, timmar, GPS och foton. Kunden verifierar självständigt.',
+        'GeoTapp sparar en fullständig historik att ladda ned för varje kundplats: datum, timmar, GPS och foton för varje uppdrag. Till kunden skickar du den förseglade rapporten, som kunden kontrollerar själv.',
     },
   ],
 };

@@ -13,6 +13,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   pt: 'Regras e documentação em Portugal',
   nl: 'Regels en documentatie in Nederland',
   da: 'Regler og dokumentation i Danmark',
+  sv: 'Regler och dokumentation i Sverige',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -117,6 +118,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Underentreprenører og arbejdsmiljø på byggepladsen?',
       a: 'GeoTapp håndterer ikke arbejdsmiljødokumenter som APV eller planer for byggepladsen og vurderer ikke medarbejdernes egnethed. Det registrerer, hvem der har stemplet, hvor og hvornår på hver byggeplads, også for underentreprenørernes hold, og den historik kan vises til byggeledelsen. Dokumentationspligterne efter arbejdsmiljøloven forbliver hos virksomheden.',
+    },
+  ],
+  sv: [
+    {
+      q: "Timmar och kollektivavtal på byggarbetsplatsen?",
+      a: "GeoTapp tillämpar inget kollektivavtal och räknar inte ut några tillägg. Det registrerar timmar och närvaro per medarbetare och per byggarbetsplats, som kan exporteras till Excel eller CSV och användas som underlag för era egna uppgifter. Lönehanteringen och tillämpningen av kollektivavtalet ligger kvar hos företaget och dess redovisningsbyrå.",
+    },
+    {
+      q: "Geolokalisering på byggarbetsplatsen: GDPR och IMY?",
+      a: "Positionen registreras bara vid stämpling och med bevisfoton, aldrig löpande, och informationen till medarbetarna undertecknas i appen innan man stämplar. Det är företaget som själv måste ta reda på vad GDPR (intresseavvägning), IMY:s vägledning om GPS på anställda och MBL § 11 (förhandling med den fackliga organisationen före en större förändring, när arbetsgivaren är bunden av kollektivavtal) kräver i just ditt fall.",
+    },
+    {
+      q: "Underentreprenörer och arbetsmiljö på byggarbetsplatsen?",
+      a: "GeoTapp hanterar inga arbetsmiljödokument och bedömer inte medarbetarnas lämplighet. Det registrerar vem som har stämplat, var och när på varje byggarbetsplats, även för underentreprenörernas lag, och den historiken kan visas för projektledningen. Dokumentationsskyldigheterna ligger kvar hos företaget.",
     },
   ],
   'en-us': [

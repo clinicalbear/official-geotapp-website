@@ -13,6 +13,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   pt: 'Normas e registos em Portugal',
   nl: 'Regels en documentatie in Nederland',
   da: 'Regler og dokumentation i Danmark',
+  sv: 'Regler och dokumentation i Sverige',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -117,6 +118,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Godkendelser og autorisationer?',
       a: 'GeoTapp håndterer hverken vagtgodkendelser eller sager over for myndighederne. Det registrerer, hvem der har stemplet, hvor og hvornår på hver opgave, og den historik kan du vise kunden.',
+    },
+  ],
+  sv: [
+    {
+      q: 'Pass och timmar för bevakningsföretag?',
+      a: 'GeoTapp registrerar vid varje instämpling, rast och utstämpling per väktare och per uppdrag position och tid, och exporterar dem till Excel eller CSV för din redovisningsbyrå eller ditt lönekontor. Tillämpningen av kollektivavtalet (tillägg för natt och helg) och lönehanteringen ligger kvar hos redovisningsbyrån och företaget.',
+    },
+    {
+      q: 'Positionering av väktare: GDPR och IMY?',
+      a: 'Positionen registreras bara vid stämpling och med bevisfoton, aldrig löpande, och informationen till medarbetarna signeras i appen före stämplingen. Det är företaget som själv måste ta reda på vad GDPR (intresseavvägning), medbestämmandelagen (MBL § 11, förhandling med facket innan systemet införs, där företaget är bundet av kollektivavtal) och IMY:s vägledning kräver i just ditt fall.',
+    },
+    {
+      q: 'Godkännanden och tillstånd?',
+      a: 'GeoTapp hanterar varken väktares godkännanden eller ärenden hos myndigheterna. Det registrerar vem som har stämplat, var och när på varje uppdrag, och den historiken kan du visa kunden.',
     },
   ],
   'en-us': [

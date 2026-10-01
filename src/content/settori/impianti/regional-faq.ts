@@ -13,6 +13,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   pt: 'Regras e documentação em Portugal',
   nl: 'Regels en documentatie in Nederland',
   da: 'Regler og dokumentation i Danmark',
+  sv: 'Regler och dokumentation i Sverige',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -117,6 +118,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Periodiske lovpligtige eftersyn?',
       a: 'GeoTapp styrer hverken teknikernes autorisationer eller de periodiske lovpligtige eftersyn. Det registrerer klokkeslæt, position, fotos og noter for hver opgave og hvert eftersyn, som du kan vedlægge eftersynets dokumentation.',
+    },
+  ],
+  sv: [
+    {
+      q: "Timmar och uppdrag för tekniker?",
+      a: "GeoTapp registrerar vid varje stämpling in, raster och ut med position och tid, per tekniker och per anläggning, och exporterar dem till Excel eller CSV för din redovisningsbyrå eller ditt lönekontor. Tillämpningen av kollektivavtalet (tillägg, ersättningar) och lönehanteringen ligger kvar hos redovisningsbyrån och företaget.",
+    },
+    {
+      q: "Geolokalisering av tekniker: GDPR och IMY?",
+      a: "Positionen registreras bara vid stämpling och med bevisfoton, aldrig löpande, och informationen till medarbetarna undertecknas i appen innan man stämplar. Det är företaget som själv måste ta reda på vad GDPR (intresseavvägning), IMY:s vägledning om GPS på anställda och MBL § 11 (förhandling med den fackliga organisationen före en större förändring, när arbetsgivaren är bunden av kollektivavtal) kräver i just ditt fall.",
+    },
+    {
+      q: "Periodiska lagstadgade besiktningar?",
+      a: "GeoTapp hanterar varken teknikernas behörigheter eller de periodiska lagstadgade besiktningarna. Det registrerar tid, position, foton och anteckningar för varje jobb och varje besiktning, som du kan bifoga besiktningens dokumentation.",
     },
   ],
   'en-us': [

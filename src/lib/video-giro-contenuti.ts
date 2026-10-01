@@ -391,7 +391,7 @@ export const GIRO_CONTENUTI: Record<LinguaGiro, ContenutoGiro> = {
     ],
     chiusa: "Arbetet lämnar ett dokument som vem som helst kan kontrollera — om flera år, utan att fråga oss.",
     trascrizione: [
-      { da: 0.3, testo: "Ett arbetspass, inspelat live." },
+      { da: 0.3, testo: "Ett arbetspass, inspelat medan det pågår." },
       { da: 3.3, testo: "På plats öppnar en tryckning passet." },
       { da: 6.556, testo: "Fem sekunder senare ser kontoret honom redan i arbete." },
       { da: 11.439, testo: "Ingen rörde något." },

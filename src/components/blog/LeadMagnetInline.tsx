@@ -137,14 +137,14 @@ export const LEAD_MAGNETS: Record<string, LeadMagnetAsset> = {
         error: 'Noget gik galt. Prøv igen.',
       },
       sv: {
-        title: 'Ladda ner den kostnadsfria GDPR-mallen för GPS-integritetspolicy för Sverige',
-        desc: 'Mall för integritetspolicy för geolokalisering av anställda, i enlighet med GDPR art. 13, med landets rättsliga grund och tillsynsmyndighet. Fyll i de tomma fälten och låt din rådgivare granska den.',
+        title: 'Ladda ner den kostnadsfria mallen för integritetsinformation om GPS för Sverige',
+        desc: 'Mall för integritetsinformation om geolokalisering av anställda, byggd på det innehåll som art. 13 i GDPR kräver, med landets rättsliga grund och tillsynsmyndighet. Fyll i de tomma fälten och låt din rådgivare gå igenom den.',
         download: 'Ladda ner mallen (PDF)',
-        newsletterPrompt: 'Vill du också ha nästa praktiska guider om GPS och hantering av fältteam? Lämna din e-post (valfritt).',
+        newsletterPrompt: 'Vill du också ha våra kommande praktiska guider om GPS och styrning av fältteam? Lämna din e-post (valfritt).',
         placeholder: 'Din e-post',
         btn: 'Prenumerera',
         consent: 'Ingen spam, avsluta med ett klick.',
-        success: 'Klart, du är anmäld. Nästa guider kommer från info@geotapp.com.',
+        success: 'Klart, du är anmäld. De kommande guiderna kommer från info@geotapp.com.',
         error: 'Något gick fel. Försök igen.',
       },
       nb: {

@@ -2,99 +2,205 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Programvara för Elektriker och Rörmokare | Jobbhantering | GeoTapp',
-    description: 'GeoTapp för elektriker, rörmokare och installationsföretag: jobbhantering, GPS-tidregistrering, verifierbara arbetsrapporter och fotodokumentation. Enligt EIO/Installatörernas kollektivavtal.',
+    title: 'App för installatörer och VVS-tekniker | GeoTapp',
+    description: 'GeoTapp är appen för installatörer, rörmokare och VVS-tekniker: arbetsrapporter med position och foto, bevisfoton och rapporter där varje ändring syns. Testa gratis.',
   },
   hero: {
-    badge: 'Programvara för Elektriker, Rörmokare och Installationsteam',
-    h1_line1: 'Fältarbete under kontroll:',
-    h1_line2: 'jobb, tidrapporter och bevis på ett ställe',
-    subtitle: 'GeoTapp kopplar samman Flow + TimeTracker för företag som arbetar mellan skåpbilar, arbetsplatser och slutkunder. Android- och iOS-apparna stödjer teknikern i fält; kontoret ser jobbet, tiderna, fotodokumentationen och anteckningarna utan att behöva ringa någon. Byggd för att hålla sig inom GDPR, och enligt EIO/Installatörernas kollektivavtal.',
-    cta_primary: 'Begär en demo',
-    cta_note: 'Ingen bindning. Svar inom 12 arbetstimmar.',
+    badge: 'App för installatörer, rörmokare och VVS-tekniker',
+    h1_line1: 'Bestrider kunden timmarna?',
+    h1_line2: 'Visa arbetsrapporten med GPS.',
+    subtitle: 'Dina tekniker stämplar från smartphonen med ett tryck. Systemet skapar en arbetsrapport med registrerad position och foton: varje ändring syns. När kunden frågar "hur lång tid tog det?" har du svaret redo.',
+    cta_primary: 'Testa gratis i 14 dagar',
+    cta_note: 'Inget kreditkort. Igång från första dagen.',
   },
   pain: {
     title: 'Problemet du redan känner till',
     items: [
       {
         title: 'Tvister om timmar och utfört arbete',
-        desc: 'Kunden bestrider närvaron. Teknikern saknar bevis. Tvisten pågår i veckor och kostar mer än jobbet självt.',
+        desc: 'Kunden nekar till tiden. Teknikern har inget bevis. Tvisten drar ut i veckor och kostar mer än själva jobbet.',
       },
       {
         title: 'Kontoret jagar fältet',
-        desc: 'Chefen ringer teknikerna för att ta reda på var de är, vad de har gjort, när de är klara. Varje samtal avbryter båda parter.',
+        desc: 'Chefen ringer teknikerna för att få veta var de är, vad de har gjort och när de blir klara. Varje samtal avbryter båda.',
       },
       {
-        title: 'Ofullständiga eller förlorade arbetstidrapporter',
-        desc: 'Lappar, WhatsApp, e-post: data kommer in ofullständigt, sent eller inte alls. Att rekonstruera den slutliga rapporten är ett eget arbete.',
+        title: 'Ofullständiga eller bortkomna arbetsrapporter',
+        desc: 'Lappar, WhatsApp, e-post: uppgifterna kommer ofullständiga, sent eller inte alls. Att bygga ihop sammanställningen i efterhand är ett eget jobb.',
       },
     ],
   },
   workflow: {
-    title: 'Hur det fungerar i tre steg',
+    title: 'Så fungerar det i tre steg',
     subtitle: 'Från skåpbilen till kontoret, utan telefonsamtal.',
     steps: [
       {
-        title: 'Teknikern stämplar in på arbetsplatsen',
-        desc: 'Med GeoTapp TimeTracker registrerar han start, slut, foton och anteckningar direkt från sin smartphone. GPS-verifierat, byggd för att hålla sig inom GDPR.',
+        title: 'Teknikern stämplar på plats',
+        desc: 'Med GeoTapp TimeTracker registrerar teknikern start, raster, slut, foton och anteckningar direkt från smartphonen. Positionen registreras bara vid stämplingen, så som GDPR kräver.',
       },
       {
-        title: 'Kontoret ser varje stämpling direkt',
-        desc: 'Flow tar emot data direkt. Chefen ser jobb, framsteg, tilldelad tekniker och fotodokumentation utan att ringa.',
+        title: 'Kontoret ser allt så fort det kommer in',
+        desc: 'Flow tar emot uppgifterna direkt. Chefen ser uppdrag, framsteg, tilldelad tekniker och bevisfoton utan att ringa.',
       },
       {
-        title: 'Rapporten är redan klar',
-        desc: 'När jobbet är slut är arbetsrapporten redan strukturerad med verkliga data. Ingen manuell rekonstruktion. Bevis redo om något ifrågasätts.',
+        title: 'Rapporten är ditt bevis, att visa för kunden',
+        desc: 'När jobbet är klart skapas rapporten med registrerade GPS-uppgifter och bevisfoton. Varje ändring syns. Kunden kan själv kontrollera att den är oförändrad. När det uppstår tvivel behöver du inte förklara. Du visar.',
       },
     ],
   },
-  features: {
-    title: 'Vad du får',
-    items: [
+  differenza: {
+    title: 'App för installatörer: stämpling eller verifierbart bevis?',
+    subtitle: 'De flesta appar registrerar klockslaget. GeoTapp skapar verifierbara bevis.',
+    rows: [
       {
-        title: 'Verifierbar GPS-tidregistrering',
-        desc: 'Varje in- och utstämpling är kopplad till plats, tidsstämpel och jobb. Försvarbart gentemot kunder och arbetsmiljöinspektionen.',
+        label: 'Vad som registreras',
+        competitor: 'Tid för in- och utstämpling',
+        geotapp: 'Tid + position vid stämplingen + foto + utfört arbete',
       },
       {
-        title: 'Fotodokumentation från fältet',
-        desc: 'Teknikern fotograferar direkt från appen. Bilder kopplade till jobbet med datum och tid. Tydligt bevis om något ifrågasätts.',
+        label: 'Vem kan kontrollera',
+        competitor: 'Bara ditt kontor',
+        geotapp: 'Du, beställaren eller en utomstående, på egen hand',
+      },
+      {
+        label: 'Vid en tvist',
+        competitor: 'Bara ditt ord',
+        geotapp: 'Förseglad rapport, varje ändring syns',
+      },
+      {
+        label: 'Arbetsrapport för uppdraget',
+        competitor: 'Manuell eller saknas',
+        geotapp: 'Skapas automatiskt med GPS och foto',
+      },
+      {
+        label: 'GDPR',
+        competitor: 'Ofta oklart',
+        geotapp: 'Byggd för att hålla sig inom GDPR:s ramar, blanketter ingår',
+      },
+    ],
+  },
+
+  prima_dopo: {
+    title: 'Så är det nu. Så blir det med GeoTapp.',
+    prima: [
+      'Kunden nekar till tiden eller till att jobbet blev gjort.',
+      'Teknikern säger "jag gjorde det". Kunden säger "det syns inte".',
+      'Du har inget i handen. Diskussionen pågår i dagar.',
+      'Ibland går betalningen förlorad. Tiden går alltid förlorad.',
+    ],
+    dopo: [
+      'Kunden nekar till tiden eller till att jobbet blev gjort.',
+      'Du öppnar rapporten: foton, GPS, tid, försegling.',
+      'Du skickar den. Diskussionen är över på en minut.',
+      'Du har ett bevis att visa. Teknikern har också något i handen.',
+    ],
+  },
+
+  scenario: {
+    title: 'Ett typiskt fall',
+    body: 'Kunden bestrider sluttiden och kräver rabatt på fakturan. Med GeoTapp öppnar du rapporten för uppdraget: foton av den färdiga installationen, tider och positioner för stämplingarna och automatiskt beräknad varaktighet, allt skapat från teknikerns smartphone när jobbet utfördes.',
+    resolution: 'I stället för ord mot ord finns ett dokument som kunden kan kontrollera själv.',
+  },
+
+  features: {
+    title: 'App för installatörer och VVS-tekniker: GPS-arbetsrapporter och bevisfoton.',
+    items: [
+      {
+        title: 'Verifierbar stämpling med GPS',
+        desc: 'Varje instämpling, rast och utstämpling kopplas till position, tid och uppdrag. Att visa för kunden eller tillsynsmyndigheten när det behövs.',
+      },
+      {
+        title: 'Förseglade bevisfoton',
+        desc: 'Teknikern tar foton i appen. Varje bild kopplas till uppdraget med GPS och tidsstämpel och tas sedan med i rapporten. Ingen kan ändra dem utan att systemet upptäcker det.',
       },
       {
         title: 'Export för lönehantering',
-        desc: 'Exportera månatlig närvaro kompatibel med Visma och Fortnox. Lönehantering blir en uppgift på 10 minuter.',
+        desc: 'Exportera månadens närvaro till Excel eller CSV, redo för din redovisningsbyrå eller lönekontor.',
+      },
+      {
+        title: 'Hantering av uppdrag på flera arbetsplatser',
+        desc: 'Tilldela uppdrag, följ framstegen på varje arbetsplats och få en avisering om ett pass blir kvar öppet.',
+      },
+      {
+        title: 'Automatiska digitala arbetsrapporter',
+        desc: 'När jobbet är klart är arbetsrapporten redan färdig: timmar, foton och anteckningar. Inget papper, inga samtal. Kontoret skickar den till kunden från Flow med ett klick.',
+      },
+      {
+        title: 'Även dina tekniker har ett bevis',
+        desc: 'En verifierbar rapport ger teknikern något i handen mot ogrundade anklagelser. Den som gör ett bra jobb visar det med data. Ingen gråzon mellan fält och kontor.',
       },
     ],
   },
+
+  cta_mid: {
+    title: 'Vill du se hur det fungerar på ett riktigt uppdrag?',
+    body: 'Vi visar hela flödet: från att uppdraget öppnas till arbetsrapporten som kunden får.',
+    cta: 'Testa gratis i 14 dagar',
+  },
+
+  trust: {
+    title: 'Våra rapporter: varje ändring syns. Inte bara dina. Inte bara våra.',
+    body: 'GeoTapps rapporter skapas av systemet när uppdraget utförs. När rapporten väl är förseglad bryter en ändrad tid eller ett flyttat foto förseglingen, och kontrollen visar det. Den som får rapporten, kund eller rådgivare, kan kontrollera den själv.',
+    badge: 'Kan kontrolleras av vem som helst, utan åtkomst till ditt konto',
+  },
   testimonial: {
-    quote: 'Vi brukade lägga timmar på att samla in tidrapporter från fältet. Nu är rapporten klar när teknikern går tillbaka till skåpbilen.',
-    author: 'Erik L.',
-    role: 'Driftchef, elsinstallationsföretag',
+    quote: 'Förut la vi timmar på att samla in lappar från fältet. Nu är arbetsrapporten redan klar när teknikern kommer tillbaka till skåpbilen.',
+    author: 'Marco R.',
+    role: 'Driftchef, installationer i bostäder',
   },
   faq: {
     title: 'Vanliga frågor',
-    subtitle: 'Det vi får mest frågor om innan start.',
+    subtitle: 'Det vi oftast får frågor om innan man kommer igång.',
     items: [
       {
-        q: 'Passar GeoTapp för elektriker och rörmokare?',
-        a: 'Ja. GeoTapp hjälper elektriker, rörmokare och installationsföretag att hantera jobb, tidrapporter, närvaro och fältdokumentation mellan arbetsplats och kontor, enligt EIO/Installatörernas kollektivavtal.',
+        q: 'Passar GeoTapp som program för installatörer och underhållstekniker?',
+        a: 'Ja. GeoTapp hjälper installatörer, elektriker, rörmokare och underhållstekniker att hantera uppdrag, arbetsrapporter, timmar, resor och bevis på utfört arbete mellan fält och kontor.',
       },
       {
-        q: 'Kan jag använda GeoTapp för arbetsrapporter och fotodokumentation?',
-        a: 'Ja. TimeTracker samlar in foton, anteckningar och verifierbara tidregistreringar i fältet, medan Flow kopplar allt till jobbjournalen och den operativa historiken.',
+        q: 'Kan jag använda GeoTapp för arbetsrapporter och bevisfoton?',
+        a: 'Ja. TimeTracker samlar foton, anteckningar och verifierbara stämplingar i fält, medan Flow kopplar allt till uppdraget och den operativa historiken.',
       },
       {
         q: 'Hjälper GeoTapp till att minska tvister om timmar och utfört arbete?',
-        a: 'Det är ett av de primära användningsfallen: tider, plats, anteckningar och fotodokumentation gör det mycket lättare att rekonstruera och försvara vad som faktiskt gjordes på arbetsplatsen.',
+        a: 'Det är ett av de främsta användningsområdena: tider, position, anteckningar och bevisfoton gör det tydligare och enklare att visa vad som gjordes på uppdraget.',
       },
     ],
   },
   cta: {
-    title: 'Sluta jaga fältet.',
-    subtitle: 'GeoTapp Flow och TimeTracker ger ditt företag den operativa kontrollen du faktiskt behöver.',
-    primary: 'Begär en demo',
-    secondary: 'Se priser',
+    title: 'Jobbet blev gjort. Nu kan du visa det.',
+    subtitle: 'GeoTapp skapar verifierbar dokumentation av varje uppdrag, förseglade rapporter som kunden kan kontrollera själv.',
+    primary: 'Testa gratis i 14 dagar',
+    secondary: 'Se priserna',
   },
-  schema_sector_name: 'Elektriker och rörmokare',
+  pricing_hint: {
+    label: 'TimeTracker-platser från',
+    per: 'per medarbetare och månad, plus Flow-abonnemang från 39 € per månad',
+    note: 'Gratis provperiod i 14 dagar',
+  },
+
+  schema_sector_name: 'Installatörer',
+  schema_faq: [
+    {
+      question: 'Fungerar GeoTapp för rörmokare och VVS-tekniker i fält?',
+      answer: 'Ja. GeoTapp är appen för installatörer och VVS-tekniker som arbetar på byggplatser och i privata hem. Med arbetsrapporterna inbyggda registrerar teknikerna uppdrag, foton och timmar direkt från smartphonen, utan att åka tillbaka till kontoret.',
+    },
+    {
+      question: 'Hur dokumenterar jag ett underhålls- eller installationsuppdrag?',
+      answer: 'När uppdraget är klart registrerar teknikern i GeoTapp start- och sluttid med position, foton av det utförda arbetet och tekniska anteckningar. Systemet skapar en förseglad rapport som kunden kan kontrollera själv.',
+    },
+    {
+      question: 'Kan jag använda GeoTapp för flera installationsteam på olika arbetsplatser?',
+      answer: 'Ja. Med GeoTapp Flow kan ägaren samordna flera team, tilldela uppdrag, följa status och samla bevisfoton från alla aktiva arbetsplatser så fort de kommer in.',
+    },
+    {
+      question: 'Är rapporterna till nytta vid en tvist med kunden?',
+      answer: 'GeoTapps rapporter är förseglade med position, tidsstämpel och bevisfoton. Kunden kontrollerar dem själv. De hjälper till att visa att dokumentet inte har ändrats; ensamma är de inget absolut bevis för händelsen och inte juridisk rådgivning.',
+    },
+    {
+      question: 'Följer GeoTapp GDPR när det gäller positionering av tekniker?',
+      answer: 'Den är byggd för att hålla sig inom ramarna: positionen registreras bara när teknikern stämplar eller tar ett bevisfoto, aldrig löpande, och informationen till medarbetarna signeras i appen före den första stämplingen. Resten (avtal med fackförbund eller samråd, där det krävs) ansvarar arbetsgivaren för.',
+    },
+  ],
 };
 
 export default content;

@@ -13,6 +13,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   pt: 'Normas e registos em Portugal',
   nl: 'Regels en documentatie in Nederland',
   da: 'Regler og dokumentation i Danmark',
+  sv: 'Regler och dokumentation i Sverige',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -117,6 +118,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Skift af leverandør og mindstelønssatser?',
       a: 'GeoTapp håndterer hverken overdragelse af medarbejdere ved skift af leverandør eller mindstelønssatser. Det gemmer historikken over timer og tilstedeværelse for hver medarbejder, som kan eksporteres til Excel eller CSV: anvendelsen af overenskomsten forbliver hos bogholderen.',
+    },
+  ],
+  sv: [
+    {
+      q: 'Vilken tidsregistrering passar ett städföretag?',
+      a: 'GeoTapp registrerar timmar, raster och utstämplingar per medarbetare och per plats, med position och tid, och exporterar dem till Excel eller CSV för din redovisningsbyrå eller ditt lönekontor. Tillägg för natt och helg, lönenivåer och tillämpningen av kollektivavtalet ligger kvar hos redovisningsbyrån och företaget.',
+    },
+    {
+      q: 'Positionering av städpersonal: GDPR och IMY?',
+      a: 'Positionen registreras bara vid stämpling och med bevisfoton, aldrig löpande, och informationen till medarbetarna signeras i appen före stämplingen. Det är företaget som själv måste ta reda på vad GDPR (intresseavvägning), medbestämmandelagen (MBL § 11, förhandling med facket innan systemet införs, där företaget är bundet av kollektivavtal) och IMY:s vägledning kräver i just ditt fall.',
+    },
+    {
+      q: 'Byte av leverantör och lönenivåer?',
+      a: 'GeoTapp hanterar varken övertagande av personal vid byte av leverantör eller lönenivåer. Det sparar historiken över timmar och närvaro för varje medarbetare, som kan exporteras till Excel eller CSV: tillämpningen av kollektivavtalet ligger kvar hos redovisningsbyrån.',
     },
   ],
   'en-us': [

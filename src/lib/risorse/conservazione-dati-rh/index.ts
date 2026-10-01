@@ -375,7 +375,7 @@ const CONTENUTI: Record<CdLocale, CdContenuto> = {
   sv: {
     heading: 'Generera din lagringspolicy för HR-data',
     intro: 'Välj land och de typer av personaldata du hanterar: du får en lagringstabell med rekommenderade tider, en not för var och en och en PDF-export. Tiderna är vägledande — för bokföringsdokument använder vi lagen i det valda landet. Allt sker i din webbläsare.',
-    azienda: 'Juridiskt namn / företagsnamn (valfritt)',
+    azienda: 'Bolagsnamn / företagsnamn (valfritt)',
     aziendaPlaceholder: 'T.ex. Andersson Städ AB',
     paese: 'Referensland',
     selezionaTipi: 'Vilka data lagrar du?',
@@ -394,16 +394,16 @@ const CONTENUTI: Record<CdLocale, CdContenuto> = {
     perPaeseNota: 'Fastställt av nationell bokförings-/skattelag',
     tipi: [
       { id: 'presenze', nome: 'Närvaro och instämplingar', durata: 'Anställningens längd + preskriptionstider för lönefordringar (ofta upp till 5 år)', nota: 'De bevisar arbetade timmar och skyldig lön: tiden följer ditt lands preskriptionsregler.' },
-      { id: 'geolocalizzazione', nome: 'Geolokaliseringsdata', durata: 'Så kort som möjligt (vägledande: 12 månader); helst bara instämplingspunkten, inte det löpande spåret', nota: 'Det är den känsligaste uppgiften: spara det strikt nödvändiga och radera så snart den inte längre tjänar ändamålet.' },
+      { id: 'geolocalizzazione', nome: 'Geolokaliseringsdata', durata: 'Så kort som möjligt (vägledande: 12 månader); helst bara instämplingspunkten, inte det löpande spåret', nota: 'Det är den känsligaste uppgiften: spara det strikt nödvändiga och radera så snart de inte längre tjänar ändamålet.' },
       { id: 'foto', nome: 'Uppdragsfoton / arbetsbevis', durata: 'Så länge det behövs för tvister eller garanti (vägledande: 12-24 månader eller kundavtalets längd)', nota: 'Behåll dem så länge de tjänar som bevis på utfört arbete, radera eller anonymisera dem sedan.' },
-      { id: 'comunicazioni', nome: 'Tjänstekommunikation (chatt, meddelanden)', durata: 'Vägledande: 6-12 månader', nota: 'Undvik att spara samtal längre än vad som är användbart för att organisera arbetet.' },
-      { id: 'valutazioni', nome: 'Bedömningar och disciplinära noteringar', durata: 'Anställningens längd + tider för överklagande', nota: 'Behåll dem bara om de är kopplade till förfaranden eller skyldigheter; radera de som inte längre är relevanta.' },
+      { id: 'comunicazioni', nome: 'Arbetsrelaterad kommunikation (chatt, meddelanden)', durata: 'Vägledande: 6-12 månader', nota: 'Undvik att spara samtal längre än vad som är användbart för att organisera arbetet.' },
+      { id: 'valutazioni', nome: 'Bedömningar och disciplinära noteringar', durata: 'Anställningens längd + överklagandefrister', nota: 'Behåll dem bara om de är kopplade till förfaranden eller skyldigheter; radera de som inte längre är relevanta.' },
       { id: 'documenti', nome: 'Avtalsdokument och lönebesked', durata: 'Enligt bokförings- och skatteregler (vägledande: 5-10 år)', nota: 'Tiden fastställs av ditt lands bokförings-/skattelag.', perPaese: true },
     ],
     faq: { title: 'Vanliga frågor', items: [
-      { q: 'Är tiderna bindande?', a: 'Nej, de är vägledande: en rimlig utgångspunkt. För bokföringsdokument använder vi lagen i det land du väljer; för resten är principen att spara data så kort tid som möjligt. Kontrollera alltid din specifika situation.' },
-      { q: 'Förblir mina data privata?', a: 'Ja. Tabellen genereras helt i din webbläsare: varken företagsnamn eller logotyp skickas till en server.' },
-      { q: 'Varför är det bättre att spara mindre?', a: 'Ju längre du sparar data, desto större är risken vid ett intrång och desto svårare att motivera behovet. Att radera vid utgången är en del av efterlevnaden, inte ett tillval.' },
+      { q: 'Är tiderna bindande?', a: 'Nej, de är vägledande: en rimlig utgångspunkt. För bokföringsdokument använder vi lagen i det land du väljer; för resten är principen att bara spara uppgifter så länge det är nödvändigt. Kontrollera alltid din specifika situation.' },
+      { q: 'Förblir mina uppgifter privata?', a: 'Ja. Tabellen genereras helt i din webbläsare: varken företagsnamn eller logotyp skickas till en server.' },
+      { q: 'Varför är det bättre att spara mindre?', a: 'Ju längre du sparar data, desto större är risken vid ett intrång och desto svårare att motivera behovet. Att radera vid utgången hör till en god personuppgiftshantering, det är inget tillval.' },
     ] },
   },
   nb: {

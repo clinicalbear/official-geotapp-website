@@ -13,6 +13,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   pt: 'Regras e documentação em Portugal',
   nl: 'Regels en documentatie in Nederland',
   da: 'Regler og dokumentation i Danmark',
+  sv: 'Regler och dokumentation i Sverige',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -117,6 +118,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Gasarbejde og autoriserede VVS-installatører?',
       a: 'GeoTapp verificerer ingen autorisationer, heller ikke til gasarbejde, og laver ingen installationsdokumentation. Det registrerer klokkeslæt, position og fotos af hver opgave på vand- og gasinstallationer, som du kan vedlægge anlæggets dokumentation.',
+    },
+  ],
+  sv: [
+    {
+      q: "Timmar och uppdrag för VVS-installatörer?",
+      a: "GeoTapp registrerar vid varje stämpling in, raster och ut med position och tid, per VVS-installatör och per uppdrag, och exporterar dem till Excel eller CSV för din redovisningsbyrå eller ditt lönekontor. Tillämpningen av kollektivavtalet (tillägg, ersättningar) och lönehanteringen ligger kvar hos redovisningsbyrån och företaget.",
+    },
+    {
+      q: "Geolokalisering av VVS-installatörer: GDPR och IMY?",
+      a: "Positionen registreras bara vid stämpling och med bevisfoton, aldrig löpande, och informationen till medarbetarna undertecknas i appen innan man stämplar. Det är företaget som själv måste ta reda på vad GDPR (intresseavvägning), IMY:s vägledning om GPS på anställda och MBL § 11 (förhandling med den fackliga organisationen före en större förändring, när arbetsgivaren är bunden av kollektivavtal) kräver i just ditt fall.",
+    },
+    {
+      q: "Gasarbeten och behöriga VVS-installatörer?",
+      a: "GeoTapp verifierar inga behörigheter, inte heller för gasarbeten, och tar inte fram någon installationsdokumentation. Det registrerar tid, position och foton för varje jobb på vatten- och gasinstallationer, som du kan bifoga anläggningens dokumentation.",
     },
   ],
   'en-us': [

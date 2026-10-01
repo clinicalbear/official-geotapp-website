@@ -10,7 +10,7 @@ const TRIAL_META: Record<string, { title: string; description: string }> = {
   es: { title: 'Prueba GeoTapp gratis durante 14 días | GeoTapp', description: 'Prueba GeoTapp gratis 14 días, sin tarjeta de crédito: fichajes con ubicación, fotos de prueba e informes que el cliente verifica por sí mismo, desde el primer día.' },
   pt: { title: 'Experimente o GeoTapp grátis durante 14 dias | GeoTapp', description: 'Experimente o GeoTapp grátis 14 dias, sem cartão: picagens com localização, fotos de prova e relatórios que o cliente verifica sozinho, desde o primeiro dia.' },
   da: { title: 'Prøv GeoTapp gratis i 14 dage | GeoTapp', description: 'Prøv GeoTapp gratis i 14 dage uden kreditkort: stemplinger med position, bevisfotos og rapporter, som kunden selv verificerer, fra første dag.' },
-  sv: { title: 'Starta din gratis 14-dagars provperiod - GeoTapp', description: 'Prova GeoTapp gratis i 14 dagar, inget kreditkort krävs. Hantera närvaro, uppdrag och kunder från dag ett.' },
+  sv: { title: 'Prova GeoTapp gratis i 14 dagar | GeoTapp', description: 'Prova GeoTapp gratis i 14 dagar utan kreditkort: stämplingar med position, bevisfoton och rapporter som kunden själv kontrollerar, från första dagen.' },
   nb: { title: 'Start din gratis 14-dagers prøveperiode - GeoTapp', description: 'Prøv GeoTapp gratis i 14 dager, intet kredittkort nødvendig. Administrer oppmøte, oppdrag og kunder fra dag én.' },
   ru: { title: 'Начните бесплатный 14-дневный пробный период - GeoTapp', description: 'Попробуйте GeoTapp бесплатно 14 дней, без кредитной карты. Управляйте посещаемостью, выездами и клиентами с первого дня.' },
 };

@@ -227,6 +227,29 @@ const TT_COPY: Record<string, TtCopy> = {
     trial: 'Start den gratis prøveperiode på 14 dage',
     availableOn: 'Findes på',
   },
+  sv: {
+    statusLabel: 'Var du använder det',
+    releaseNote: 'TimeTracker är en inbyggd app på Google Play och App Store: den kräver Android 8.0 eller senare, eller iOS 26.2 eller senare. Det medarbetaren registrerar kommer fram i Flow så fort det finns nät.',
+    mobileKicker: 'Appen för telefonen',
+    downloadTitle: 'Hämta GeoTapp TimeTracker',
+    downloadSub: 'Finns på Google Play och App Store.',
+    doesTitle: 'Vad GeoTapp TimeTracker gör',
+    doesSub: 'Inte bara närvaro: den samlar underlaget för arbetet på fältet, som kontoret använder till rapporten och som kunden kan kontrollera.',
+    highlights: [
+      { title: 'Stämplingar med position och klockslag', description: 'Start, raster och slut sparar position, adress och klockslag i det ögonblick medarbetaren stämplar. Mellan två stämplingar sparas ingenting automatiskt.' },
+      { title: 'Underlag som kunden kan kontrollera', description: 'Medarbetarna tar foton, lägger till anteckningar och skickar underlag för arbetet, kopplat till uppdraget. Det hamnar i den förseglade rapporten, som kunden själv verifierar.' },
+      { title: 'En historik som kontoret kan använda', description: 'Det som samlas in på fältet kommer fram i Flow och används direkt till rapporten till kunden, uppdragets förlopp och slutavräkningen.' },
+      { title: 'Bilanvändning, kvitton och utlägg', description: 'Medarbetaren anger bilanvändning under passet, registrerar tankning och utgifter med ett foto av kvittot, och kontoret godkänner dem.' },
+    ],
+    workflow: [
+      { title: 'Mycket mer än en vanlig stämpling', description: 'TimeTracker omfattar uppdragets detaljer, rapporter, meddelanden, ansökningar om semester och ledighet samt arbetspass: inte bara närvaro.' },
+      { title: 'Fältet, kontoret och kunden på samma data', description: 'Arbetet på fältet står inte ensamt: kontoret följer framstegen, ser underlaget och svarar kunden med fakta.' },
+    ],
+    complianceTagline: 'Först bekräftar man informationen, sedan stämplar man.*',
+    complianceFootnote: '* Enligt GDPR måste varje anställd informeras innan hens position registreras. GeoTapp förbereder informationen, låter den bekräftas som läst i appen och släpper inte fram någon stämpling förrän den är bekräftad.',
+    trial: 'Starta den kostnadsfria provperioden på 14 dagar',
+    availableOn: 'Finns på',
+  },
 };
 
 export default function GeoTappApp() {
@@ -461,7 +484,7 @@ export default function GeoTappApp() {
         <div className="r-s d1" style={{ display: 'flex', justifyContent: 'center' }}>
           <div className="sheet">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/verifier-report.webp" alt={currentLocale === 'it' ? 'Report sigillato GeoTapp' : currentLocale === 'de' ? 'Versiegelter GeoTapp-Bericht' : currentLocale === 'fr' ? 'Rapport scellé GeoTapp' : currentLocale === 'nl' ? 'Verzegeld GeoTapp-rapport' : currentLocale === 'es' ? 'Informe sellado de GeoTapp' : currentLocale === 'pt' ? 'Relatório selado GeoTapp' : currentLocale === 'da' ? 'Forseglet GeoTapp-rapport' : 'GeoTapp sealed report'} loading="lazy" />
+            <img src="/verifier-report.webp" alt={currentLocale === 'it' ? 'Report sigillato GeoTapp' : currentLocale === 'de' ? 'Versiegelter GeoTapp-Bericht' : currentLocale === 'fr' ? 'Rapport scellé GeoTapp' : currentLocale === 'nl' ? 'Verzegeld GeoTapp-rapport' : currentLocale === 'es' ? 'Informe sellado de GeoTapp' : currentLocale === 'pt' ? 'Relatório selado GeoTapp' : currentLocale === 'da' ? 'Forseglet GeoTapp-rapport' : currentLocale === 'sv' ? 'Förseglad GeoTapp-rapport' : 'GeoTapp sealed report'} loading="lazy" />
           </div>
         </div>
       </div></div></section>

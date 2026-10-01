@@ -355,6 +355,41 @@ const TESTI: Record<string, Testi> = {
     unknownBody:
       'Koden svarer ikke til noget dokument. Det er en god idé at kontrollere de otte tegn igen: S og 5 samt Z og 2 forveksles let.',
   },
+  sv: {
+    sealedTitle: 'Förseglat dokument',
+    sealedBody:
+      'Det här dokumentet är elektroniskt signerat och går att kontrollera. Varje händelse är kedjad till den föregående: om en rad, en tid eller ett foto ändras misslyckas kontrollen.',
+    draftTitle: 'Dokument utan försegling',
+    draftBody:
+      'Det här dokumentet bär inte den elektroniska signaturen: det går inte att kontrollera och kan inte åberopas.',
+    issuedBy: 'Utfärdat av',
+    job: 'Uppdrag',
+    sealedOn: 'Förseglat den',
+    downloadPackage: 'Ladda ner det signerade paketet',
+    downloadPackageHint:
+      'Det är originalet: det innehåller dokumentet, förloppet, fotona och förseglingen.',
+    downloadPdf: 'Ladda ner den läsbara PDF:en',
+    fingerprint: 'Paketets fingeravtryck',
+    linkLife:
+      'Länken till filen gäller i tio minuter. Koden på dokumentet går inte ut: det är bara att öppna den här sidan igen.',
+    verifyTitle: 'Kontrollera utan att lita på oss',
+    verifyBody:
+      'Paketet går att kontrollera utan GeoTapp, med den öppna verifieraren: den räknar om fingeravtrycken och kontrollerar signaturen.',
+    verifyCta: 'Gå till kontrollen',
+    surveyTitle: 'En fråga till dem som beställer arbetet',
+    surveyBody:
+      'Vi samlar in, i hela Europa, hur ofta betalt arbete ifrågasätts och vad som händer sedan. Två minuter, anonymt, inga obligatoriska uppgifter.',
+    surveyCta: 'Svara på enkäten',
+    revokedTitle: 'Koden är återkallad',
+    revokedBody:
+      'Det här dokumentet fanns, men den som utfärdade det har återkallat länken. För att få en kopia får man be om den hos dem som utförde arbetet.',
+    expiredTitle: 'Dokumentet är inte längre tillgängligt',
+    expiredBody:
+      'Det här dokumentet fanns och har nått slutet av sin lagringstid: fem år efter arbetets datum raderas paketet, så som dataskyddsreglerna kräver. Det finns inte längre någon kopia att be om.',
+    unknownTitle: 'Koden hittades inte',
+    unknownBody:
+      'Koden motsvarar inget dokument. Det är bra att kontrollera de åtta tecknen igen: S och 5 samt Z och 2 förväxlas lätt.',
+  },
 };
 
 function testiPer(locale: AppLocale): Testi {

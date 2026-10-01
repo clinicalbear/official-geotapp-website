@@ -479,6 +479,30 @@ export const NON_IN_VETRINA = new Set<string>([
   'geotapp-nyheder-sommer-2026',
   'gps-sporing-medarbejdere-oplysning-skabelon-2026',
   'medarbejderdata-hvad-loven-tillader',
+  // Versioni in svedese: titolo o estratto che promettono conformita' («uppfyller GDPR»), corpo che presenta come funzione di GeoTapp
+  // il geofencing/geofence (che non esiste) o il tracciamento «i realtid», «ingen bindningstid» (c'e' un minimo di 12 mesi),
+  // «GDPR-säker», certificazioni SBSC, NFC; oppure titolo/estratto scritto senza å ä ö («stampla», «overvakning», «Bestaellaren»).
+  // Aggiunte il 01/10/2026 (da correggere sul blog, poi togliere da qui).
+  'programvara-sakerhetsvakter-bevakning-sverige-2026',
+  'geofencing-stadforetag-tvister',
+  'id06-digital-personalliggare',
+  'skarpta-id06-krav-2026',
+  'kollektivavtal-stad-overtid-deltid',
+  'oannonserade-kontroller-skatteverket',
+  'gps-sparning-anstallda-imy',
+  'installationsavtalet-2025-2027',
+  'fusk-byggbranschen-byggnads-rapport',
+  'underentreprenorer-bygget-timmar',
+  'personalliggare-2026-nya-branscher',
+  'elektronisk-personalliggare-skatteverket-2026',
+  'almega-stad-tidrapportering-2026',
+  'id06-byggnads-narvarokontroll-2026',
+  'arbetstidslagen-13-dygnsvila-2026',
+  'omstart-i-september-ordna-narvaron',
+  'tidrapportering-och-gdpr',
+  'overtid-dokumentera-granserna',
+  'stampla-in-med-gps-inte-overvakning',
+  'faktura-bevisar-inte-utfort-arbete-tvister-2026',
 ]);
 
 export function filterPosts<T extends WpIndexEntry>(

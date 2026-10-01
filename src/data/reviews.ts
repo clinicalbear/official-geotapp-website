@@ -80,6 +80,7 @@ export const REVIEWS: Review[] = [
       pt: { meta: 'Delegada de informação médica · Dispositivos médicos · Trabalhadora independente' },
       nl: { meta: 'Medisch vertegenwoordiger · Medische hulpmiddelen · Zelfstandig' },
       da: { meta: 'Medicinsk salgsrepræsentant · Medicinsk udstyr · Selvstændig' },
+      sv: { meta: 'Medicinteknisk säljare · Medicinteknik · Egenföretagare' },
     },
     original: {
       title: 'GeoTapp Flow è il top',
@@ -160,6 +161,7 @@ export const REVIEWS: Review[] = [
       pt: { name: 'Avaliação verificada pela Capterra', meta: 'Serviços para eventos · 51-200 colaboradores' },
       nl: { name: 'Door Capterra geverifieerde reviewer', meta: 'Evenementendiensten · 51-200 medewerkers' },
       da: { name: 'Anmelder verificeret af Capterra', meta: 'Eventtjenester · 51-200 medarbejdere' },
+      sv: { name: 'Recensent verifierad av Capterra', meta: 'Eventtjänster · 51–200 anställda' },
     },
     original: {
       title: 'A good app for a good work',
@@ -335,7 +337,7 @@ export const REVIEWS: Review[] = [
       sv: {
         title: 'Geotapp är en praktisk app',
         quote:
-          'Geotapp är en praktisk app, enkel att använda och intuitiv. Den har allt jag behöver. Verkligen rekommenderad.',
+          'Geotapp är en praktisk app, enkel att använda och intuitiv. Den har allt jag behöver. Rekommenderas varmt.',
       },
       nb: {
         title: 'Geotapp er en praktisk app',

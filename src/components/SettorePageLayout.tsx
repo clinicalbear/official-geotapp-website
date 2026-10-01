@@ -55,7 +55,7 @@ const RISORSE_LABELS: Record<string, string> = {
   it: 'Guide e articoli →', en: 'Guides & articles →', de: 'Leitfäden & Artikel →',
   fr: 'Guides et articles →', es: 'Guías y artículos →', pt: 'Guias e artigos →',
   nl: 'Gidsen en artikelen →', da: 'Vejledninger og artikler →',
-  sv: 'Guider & artiklar →', nb: 'Guider & artikler →', ru: 'Руководства & статьи →',
+  sv: 'Guider och artiklar →', nb: 'Guider & artikler →', ru: 'Руководства & статьи →',
 };
 
 /** Tabella comparativa a 3 colonne (etichetta, comparatore, GeoTapp),
@@ -97,10 +97,15 @@ const CLASSIC_CLOCKIN: Record<string, string> = {
   pt: 'App clássica de picagem',
   nl: 'Klassieke registratie-app',
   da: 'Klassisk stemplings-app',
+  sv: 'Klassisk stämplingsapp',
 };
 
 // Etichette dell'anteprima report che il dizionario danese non ha (senza, la pagina mostrerebbe l'italiano).
 const MOCKUP_FALLBACK_DA = { operator: 'Medarbejder', opening: 'Start', closing: 'Slut' };
+// Idem per lo svedese.
+const MOCKUP_FALLBACK_SV = { operator: 'Medarbetare', opening: 'Start', closing: 'Slut' };
+const mockupFallback = (locale: string, key: 'operator' | 'opening' | 'closing', it: string) =>
+  locale === 'da' ? MOCKUP_FALLBACK_DA[key] : locale === 'sv' ? MOCKUP_FALLBACK_SV[key] : it;
 
 export default function SettorePageLayout({ content, locale, settore, children }: Props) {
   const trialLink = localizePath('/trial', locale);
@@ -220,7 +225,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
     pt: 'Aprofundar a conformidade',
     nl: 'Verdiep u in de regelgeving',
     da: 'Læs mere om reglerne',
-    sv: 'Fördjupa efterlevnaden',
+    sv: 'Läs mer om reglerna',
     nb: 'Dybdedykk compliance',
     ru: 'Углублённый анализ нормативов',
   };
@@ -268,6 +273,12 @@ export default function SettorePageLayout({ content, locale, settore, children }
     da: [
       { href: 'https://www.datatilsynet.dk/Media/638348919997326341/Kontrol%20af%20medarbejdere.pdf',
         label: 'Datatilsynet: vejledning om kontrol af medarbejdere (PDF)' },
+    ],
+    // Svedese: la fonte giusta e' l'IMY (non l'articolo inglese sull'ICO). URL gia' nella scheda Paese se.ts (FONTE_IMY_GPS).
+    // Nota: la chiave sv serve anche la Finlandia svedese, ma il link e' quello svedese.
+    sv: [
+      { href: 'https://www.imy.se/verksamhet/dataskydd/vi-guidar-dig/integritet-pa-jobbet/sa-far-du-som-arbetsgivare-anvanda-platstjanster-gps/',
+        label: 'IMY: så får du som arbetsgivare använda platstjänster (GPS)' },
     ],
   };
   // Le 6 locale che NON hanno articoli normative tradotti ricadono su EN.
@@ -583,9 +594,9 @@ export default function SettorePageLayout({ content, locale, settore, children }
                 <div className="row"><span><Camera size={13} style={{ display: 'inline', marginRight: 6, verticalAlign: -2, opacity: .7 }} />{sl.mockup_photos ?? 'Photos'}</span><span>{sl.mockup_photos_count ?? '3 photos'}</span></div>
               </div>
               <div className="mock r-s d2">
-                <div className="row"><span>{sl.mockup_operator ?? (locale === 'da' ? MOCKUP_FALLBACK_DA.operator : 'Operatore')}</span><span>Mario R.</span></div>
-                <div className="row"><span>{sl.mockup_opening ?? (locale === 'da' ? MOCKUP_FALLBACK_DA.opening : 'Apertura')}</span><span>08:47:03</span></div>
-                <div className="row"><span>{sl.mockup_closing ?? (locale === 'da' ? MOCKUP_FALLBACK_DA.closing : 'Chiusura')}</span><span>11:22:41</span></div>
+                <div className="row"><span>{sl.mockup_operator ?? mockupFallback(locale, 'operator', 'Operatore')}</span><span>Mario R.</span></div>
+                <div className="row"><span>{sl.mockup_opening ?? mockupFallback(locale, 'opening', 'Apertura')}</span><span>08:47:03</span></div>
+                <div className="row"><span>{sl.mockup_closing ?? mockupFallback(locale, 'closing', 'Chiusura')}</span><span>11:22:41</span></div>
                 <p style={{ marginTop: 16, fontSize: 13, color: 'var(--lime)', fontWeight: 600 }}>
                   <ShieldCheck size={14} style={{ display: 'inline', marginRight: 6, verticalAlign: -2 }} />
                   {sl.mockup_sealed ?? 'Sealed after closure'}

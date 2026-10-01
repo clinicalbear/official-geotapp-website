@@ -13,6 +13,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   pt: 'Normas e registos em Portugal',
   nl: 'Regels en documentatie in Nederland',
   da: 'Regler og dokumentation i Danmark',
+  sv: 'Regler och dokumentation i Sverige',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -117,6 +118,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Arbejdsmiljø og periodiske eftersyn?',
       a: 'GeoTapp håndterer hverken medarbejdernes egnethed eller arbejdsmiljødokumentationen. Det registrerer hvert besøg med klokkeslæt, position og foto og gemmer historikken pr. sted og pr. tekniker, som du kan vise kunden.',
+    },
+  ],
+  sv: [
+    {
+      q: 'Timmar och uppdrag på flera platser?',
+      a: 'GeoTapp registrerar vid varje instämpling, rast och utstämpling position och tid, per tekniker och per plats, och exporterar dem till Excel eller CSV för din redovisningsbyrå eller ditt lönekontor. Tillämpningen av kollektivavtalet (tillägg, ersättningar) och lönehanteringen ligger kvar hos redovisningsbyrån och företaget.',
+    },
+    {
+      q: 'Positionering av underhållstekniker: GDPR och IMY?',
+      a: 'Positionen registreras bara vid stämpling och med bevisfoton, aldrig löpande, och informationen till medarbetarna signeras i appen före stämplingen. Det är företaget som själv måste ta reda på vad GDPR (intresseavvägning), medbestämmandelagen (MBL § 11, förhandling med facket innan systemet införs, där företaget är bundet av kollektivavtal) och IMY:s vägledning kräver i just ditt fall.',
+    },
+    {
+      q: 'Arbetsmiljö och periodiska kontroller?',
+      a: 'GeoTapp hanterar varken medarbetarnas lämplighet eller arbetsmiljödokumentationen. Det registrerar varje besök med tid, position och foto och sparar historiken per plats och per tekniker, som du kan visa kunden.',
     },
   ],
   'en-us': [

@@ -13,6 +13,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   pt: 'Regras e documentação em Portugal',
   nl: 'Regels en documentatie in Nederland',
   da: 'Regler og dokumentation i Danmark',
+  sv: 'Regler och dokumentation i Sverige',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -117,6 +118,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Hvordan håndteres skift af rengøringsleverandør?',
       a: 'GeoTapp håndterer hverken virksomhedsoverdragelse eller overførsel af medarbejdere ved skift af leverandør. Det gemmer historikken over timer og fremmøde for hver medarbejder, som kan eksporteres til Excel eller CSV: anvendelsen af overenskomsten forbliver hos bogholderen.',
+    },
+  ],
+  sv: [
+    {
+      q: "Vad behövs för att visa timmar och närvaro i ett städföretag?",
+      a: "GeoTapp registrerar timmar, raster och avgångar per medarbetare och per plats, med position och tid, och exporterar dem till Excel eller CSV för din redovisningsbyrå eller ditt lönekontor. Tillägg för kväll, natt och helg, lönehantering och tillsyn ligger kvar hos redovisningsbyrån och företaget, som därmed har en tidsregistrering att utgå från.",
+    },
+    {
+      q: "Geolokalisering av städpersonal: GDPR och IMY?",
+      a: "Positionen registreras bara vid stämpling och med bevisfoton, aldrig löpande, och informationen till medarbetarna undertecknas i appen innan man stämplar. Det är företaget som själv måste ta reda på vad GDPR (intresseavvägning), IMY:s vägledning om GPS på anställda och MBL § 11 (förhandling med den fackliga organisationen före en större förändring, när arbetsgivaren är bunden av kollektivavtal) kräver i just ditt fall.",
+    },
+    {
+      q: "Hur hanteras byte av städleverantör?",
+      a: "GeoTapp hanterar varken verksamhetsövergång eller överföring av medarbetare vid byte av leverantör. Det sparar historiken över timmar och närvaro för varje medarbetare, som kan exporteras till Excel eller CSV: tillämpningen av kollektivavtalet ligger kvar hos redovisningsbyrån.",
     },
   ],
   'en-us': [

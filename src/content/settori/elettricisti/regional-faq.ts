@@ -13,6 +13,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   pt: 'Regras e documentação em Portugal',
   nl: 'Regels en documentatie in Nederland',
   da: 'Regler og dokumentation i Danmark',
+  sv: 'Regler och dokumentation i Sverige',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -117,6 +118,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'El-autorisation og dokumentation af el-installationer?',
       a: 'GeoTapp verificerer hverken autorisationer eller kvalifikationer og laver ingen installationsdokumentation. Det registrerer klokkeslæt, position og fotos af hver opgave, som teknikeren kan vedlægge sin egen dokumentation.',
+    },
+  ],
+  sv: [
+    {
+      q: "Timmar, jour och resor för elektriker?",
+      a: "GeoTapp registrerar vid varje stämpling in, raster och ut med position och tid, per elektriker och per arbetsplats, och exporterar dem till Excel eller CSV för din redovisningsbyrå eller ditt lönekontor. Tillämpningen av kollektivavtalet (tillägg, ersättningar) och lönehanteringen ligger kvar hos redovisningsbyrån och företaget.",
+    },
+    {
+      q: "Geolokalisering av elektriker: GDPR och IMY?",
+      a: "Positionen registreras bara vid stämpling och med bevisfoton, aldrig löpande, och informationen till medarbetarna undertecknas i appen innan man stämplar. Det är företaget som själv måste ta reda på vad GDPR (intresseavvägning), IMY:s vägledning om GPS på anställda och MBL § 11 (förhandling med den fackliga organisationen före en större förändring, när arbetsgivaren är bunden av kollektivavtal) kräver i just ditt fall.",
+    },
+    {
+      q: "Behörigheter och dokumentation av elinstallationer?",
+      a: "GeoTapp verifierar varken behörigheter eller kvalifikationer och tar inte fram någon installationsdokumentation. Det registrerar tid, position och foton för varje jobb, som teknikern kan bifoga sin egen dokumentation.",
     },
   ],
   'en-us': [

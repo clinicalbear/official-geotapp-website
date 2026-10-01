@@ -42,7 +42,7 @@ const EU_BADGE: Record<string, { title: string; desc: string }> = {
   es: { title: 'Tus datos se quedan en Europa', desc: 'Fichajes, fotos y datos en servidores de la UE.' },
   pt: { title: 'Os seus dados ficam na Europa', desc: 'Picagens, fotos e dados pessoais em servidores da UE.' },
   da: { title: 'Dine data bliver i Europa', desc: 'Stemplinger, fotos og persondata på EU-servere.' },
-  sv: { title: 'Dina data stannar i Europa', desc: 'Stämplingar, foton och data på EU-servrar.' },
+  sv: { title: 'Dina data stannar i Europa', desc: 'Stämplingar, foton och personuppgifter på EU-servrar.' },
   nb: { title: 'Dataene dine blir i Europa', desc: 'Registreringer, bilder og data på EU-servere.' },
   ru: { title: 'Ваши данные остаются в Европе', desc: 'Отметки, фото и данные на серверах в ЕС.' },
 };
@@ -115,7 +115,7 @@ function ShareButtons({ title, copiedLabel, locale }: { title: string; copiedLab
       ))}
       <button
         onClick={handleCopy}
-        aria-label={locale === 'nl' ? 'Link kopiëren' : locale === 'fr' ? 'Copier le lien' : locale === 'es' ? 'Copiar enlace' : locale === 'pt' ? 'Copiar ligação' : locale === 'da' ? 'Kopiér link' : 'Copy link'}
+        aria-label={locale === 'nl' ? 'Link kopiëren' : locale === 'fr' ? 'Copier le lien' : locale === 'es' ? 'Copiar enlace' : locale === 'pt' ? 'Copiar ligação' : locale === 'da' ? 'Kopiér link' : locale === 'sv' ? 'Kopiera länk' : 'Copy link'}
         className={`p-2 rounded-lg transition-all duration-200 ${copied ? 'text-green-500 bg-green-50' : 'text-slate-400 hover:bg-slate-50'}`}
         onMouseEnter={(e) => { if (!copied) e.currentTarget.style.color = '#22B573'; }}
         onMouseLeave={(e) => { if (!copied) e.currentTarget.style.color = ''; }}

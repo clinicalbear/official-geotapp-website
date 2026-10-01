@@ -1,12 +1,15 @@
 {
   "navbar": {
+    "aria_cart": "Varukorg",
+    "aria_menu": "Öppna menyn",
+    "aria_close": "Stäng menyn",
     "resources": "Resurser",
     "products": "Produkter",
     "pricing": "Priser",
     "blog": "Blogg",
     "contact": "Kontakt",
     "login": "Logga in",
-    "cta": "Begär demo",
+    "cta": "Starta gratis provperiod",
     "cta_trial": "Testa gratis",
     "cta_how": "Se hur det fungerar",
     "cta_start": "Starta provperiod",
@@ -41,35 +44,35 @@
       },
       "dossier": {
         "title": "Efterlevnadsdossier",
-        "desc": "Vad GeoTapp gör och inte gör, med GDPR och gränserna klart sagda."
+        "desc": "Vad GeoTapp gör och inte gör, med GDPR och gränserna sagda utan omsvep."
       },
       "gpsPresenze": {
         "title": "GPS för närvaro, utan spårning",
         "desc": "Kan positionen bara registreras vid stämpling utan att spåra de anställda? Ja: vad en italiensk domstol slog fast och vad GeoTapp verkligen registrerar."
       },
       "autovalutazione": {
-        "title": "Är du förenlig med datakraven?",
+        "title": "Uppfyller du dataskyddskraven?",
         "desc": "Snabbt test med 9 frågor om skyddet av personaldata: poäng och områden att åtgärda. Gratis, i din webbläsare."
       },
       "generatore": {
-        "title": "GPS-meddelande-generator",
-        "desc": "Skapa ditt exempel på ett GPS-integritetsmeddelande med din logotyp, GDPR-förenligt. Gratis, i din webbläsare."
+        "title": "Generator för GPS-integritetsinformation",
+        "desc": "Skapa ett färdigt förslag till GPS-integritetsinformation med din logotyp, utformat för att följa GDPR. Gratis, i din webbläsare."
       },
       "conservazione": {
         "title": "Policy för datalagring",
-        "desc": "Generera HR-lagringstabellen land för land: rekommenderade tider, juridisk not och export. Gratis, i din webbläsare."
+        "desc": "Skapa tabellen över lagringstider för personaldata land för land: rekommenderade tider, juridisk anmärkning och export. Gratis, i din webbläsare."
       },
       "sanzioni": {
         "title": "GPS-bötesräknare",
-        "desc": "Välj ett land och ta reda på hur mycket du riskerar genom att övervaka anställda: verklig maxbot och skyldigheter som exponerar dig."
+        "desc": "Välj land och se vad du riskerar när du övervakar anställda: den högsta bot som faktiskt utdömts, eller lagens maxbelopp, och de skyldigheter som utsätter dig."
       },
       "osservatorio": {
         "title": "Europeiskt observatorium",
-        "desc": "Beslut från europeiska tillsynsmyndigheter om positionsuppgifter, kamerabevakning och tidsregistrering, var och en med länk till källan."
+        "desc": "Europeiska dataskyddsmyndigheters beslut om platsdata, kamerabevakning och tidsregistrering i arbetslivet, vart och ett med länk till den officiella källan."
       },
       "indice": {
         "title": "Index för medarbetarövervakning i Europa",
-        "desc": "Rangordningen av 39 europeiska länder efter hur strängt deras ramverk för medarbetarövervakning är."
+        "desc": "Vad besluten som europeiska myndigheter publicerat säger, i siffror, om kontroll av anställda: hur många, om vilka ämnen, de högsta böterna."
       },
       "roi": {
         "title": "ROI-kalkylator",
@@ -116,7 +119,7 @@
     "terms": "Användarvillkor",
     "rights": "Alla rättigheter förbehållna.",
     "newsletter_title": "Håll dig uppdaterad om branschen",
-    "newsletter_desc": "Ingen spam, bara värdefulla uppdateringar om verksamhetsstyrning, HR och teknik för SMF.",
+    "newsletter_desc": "Ingen spam, bara värdefulla uppdateringar om hur du organiserar fältarbete, personalfrågor och digitala verktyg för småföretag.",
     "sectors": "Sektorer",
     "contact": "Kontakt"
   },
@@ -124,22 +127,22 @@
     "us_badge": "🇺🇸 Serving US teams, chat support 9am-6pm ET. USD invoicing available on request.",
     "hero_badge": "Arbetet hände. Gör det nu bevisbart.",
     "hero_title": "Om du inte kan bevisa det, säger kunden att det aldrig hände.",
-    "hero_subtitle": "GeoTapp förvandlar varje fältuppdrag till objektiva bevis: förseglade rapporter med verkliga GPS-data, tidsstämplade fotobevis och dokumentation som vem som helst kan verifiera oberoende, utan att behöva lita på ditt ord, med färre tvister.",
+    "hero_subtitle": "GeoTapp förvandlar varje fältuppdrag till ett bevis: förseglade rapporter med plats, foton och tider som kunden kan kontrollera själv, utan att behöva lita på ditt ord.",
     "hero_cta_primary": "Starta gratis provperiod",
     "hero_cta_secondary": "Utforska sektorer",
     "hero_cta_report": "Se en förseglad rapport",
     "trust_gdpr": "Ingen löpande spårning",
-    "trust_gdpr_desc": "Position registreras bara när medarbetaren stämplar: in, paus, ut, eller tar en bevisfoto",
+    "trust_gdpr_desc": "Plats bara vid stämpling: in, raster, ut",
     "trust_gps": "GPS-bevis",
     "trust_gps_desc": "Varje uppdrag förseglat med plats och tidsstämpel",
-    "trust_offline": "Offlinekontroll",
+    "trust_offline": "Offlineverifierare",
     "trust_offline_desc": "En enda fil, utan konto och utan nät",
     "trust_eu_data": "Data i Europa",
     "features_title": "Från uppdrag till verifierbart bevis",
-    "features_subtitle": "Tre integrerade verktyg: fältet registrerar, kontoret kontrollerar, kunden verifierar.",
+    "features_subtitle": "Tre integrerade verktyg: fältet registrerar, kontoret organiserar, kunden verifierar.",
     "cta_title": "Arbetet hände. Bevisa det nu.",
-    "cta_subtitle": "Inget uppdrag lämnas utan dokumentation, och varje timme som kommer in från fältet kommer redan verifierbar.",
-    "cta_button": "Boka 30-minuters demo",
+    "cta_subtitle": "Inget uppdrag lämnas utan dokumentation, och varje timme som kommer in från fältet är redan verifierbar.",
+    "cta_button": "Starta gratis provperiod",
     "problem_title": "Problemet du redan känner till",
     "problem_subtitle": "Den som har beviset behöver inte förklara, den som förklarar har inget bevis.",
     "problem_items": [
@@ -156,9 +159,9 @@
         "desc": "Varje oregistrerad timme är en obetald timme. Varje uppdrag utan bevis är ett uppdrag som kunden kan bestrida."
       }
     ],
-    "report_section_title": "Rapporten. Inte en sammanfattning. Ett bevis.",
+    "report_section_title": "Rapporten är ingen sammanfattning: den är ett bevis.",
     "report_section_subtitle": "Varje GeoTapp-rapport genereras automatiskt från verkliga fältdata.",
-    "report_section_body": "GPS-stämplingar, foton med tiden på, fältanteckningar. Uppgifterna låses när rapporten skapas och efter det rör ingen dem. När tvivlet kommer förklarar du inte, du visar, och det du visar är inte ett dokument till kunden, det är slutet på diskussionen.",
+    "report_section_body": "Stämplingar med plats, foton med klockslag, fältanteckningar. Uppgifterna förseglas när rapporten skapas, och därefter går varje ändring att upptäcka. När tvivlet kommer behöver du inte förklara: du visar rapporten, och kunden kontrollerar den själv.",
     "report_feature_1": "Förseglad efter generering, varje ändring upptäcks",
     "report_feature_2": "Verifierbar utan konto, av vem som helst, självständigt",
     "report_feature_3": "GPS- och fotodata integrerade och oskiljaktiga",
@@ -171,21 +174,21 @@
     "hero_sectors_and": "och",
     "clockin_demo": {
       "step_clock": "Stämpla in",
-      "step_gps": "GPS verifierad",
+      "step_gps": "Plats kontrollerad",
       "step_photo": "Foto på plats",
       "step_sealed": "Förseglat",
-      "caption": "En stämpling. GPS, foto och tid, förseglade. Kan inte göras om, kan inte ifrågasättas.",
+      "caption": "En stämpling: plats, foto och tid, förseglade i rapporten. Varje senare ändring syns.",
       "replay": "Se igen"
     },
     "roi_mini": {
       "title": "Vad kostar det dig att inte kunna bevisa det?",
-      "subtitle": "Tre siffror, en ärlig uppskattning. På två sekunder, utan e-post.",
+      "subtitle": "Tre siffror, en ärlig uppskattning. Direkt, utan e-post.",
       "field_operatori": "Anställda",
       "field_costo": "Timkostnad (€)",
       "field_contestazioni": "Tvister per månad",
       "result_prefix": "Du lämnar varje år ungefär",
       "result_suffix": "på bordet",
-      "disclaimer": "Minimiuppskattning (tvister + samordning). Hela kalkylen, post för post, finns i rapporten.",
+      "disclaimer": "Minimiuppskattning (tvister + samordning). Hela uträkningen, post för post, finns i ROI-kalkylatorn.",
       "email_label": "Vill du ha den detaljerade rapporten och jämförelsen med din bransch?",
       "email_placeholder": "Din jobbmejl",
       "email_cta": "Skicka mig rapporten + starta provperioden",
@@ -193,125 +196,127 @@
       "email_err": "Något gick fel. Försök igen.",
       "pitch_kicker": "ROI-kalkylator",
       "pitch_title": "Siffrorna du inte tittar på är de som kostar dig.",
-      "pitch_body": "Timmarna i byråkrati, tvisterna du själv betalar, samordningen muntligt. Du märker dem inte lämna kontot, men det gör de. Fyll i tre siffror och se vad ett år går på. Det brukar överraska, och inte positivt.",
+      "pitch_body": "Timmarna i byråkrati, tvisterna som du själv betalar, samordningen som sker muntligt. Du ser dem inte lämna kontot, men det gör de. Skriv in tre siffror och se vad ett år blir. Det brukar överraska, och inte till det bättre.",
       "pitch_points": [
-        "Varje obetald reklamation väger, tolv månader om året",
+        "Varje obetald tvist väger tungt, tolv månader av tolv",
         "Timmar på kontoret är timmar du inte fakturerar",
-        "Två sekunder och inget mejl för att se siffran"
+        "Tre siffror och ingen e-post för att se resultatet"
       ]
     },
-    "proof_note": "Bevis samlas in enbart via kameran, ingen kontinuerlig spårning.",
-    "proof_claim": "Mellan in- och utstämpling registreras ingenting.",
-    "sticky_cta_subtitle": "14 dagar gratis, inget kreditkort"
+    "proof_note": "Bevisfoton tas i appen, ingen löpande spårning.",
+    "proof_claim": "Mellan två stämplingar registrerar vi ingenting automatiskt.",
+    "sticky_cta_subtitle": "14 dagar gratis, inget kreditkort",
+    "trial_cta_headline": "Prova gratis i 14 dagar",
+    "trial_cta_subtitle": "Inget kreditkort krävs"
   },
   "home_sections": {
     "flow": {
       "badge": "GeoTapp Flow",
-      "title": "Koordinera fältet från ett operativt nav.",
-      "subtitle": "Flow är systemet som kontoret använder för att hantera arbetsorder, tilldela aktiviteter, följa framsteg och generera strukturerade arbetsrapporter. <strong class=\"text-slate-900\">Mindre intern friktion, mer verklig kontroll.</strong><br/><br/><em>Ditt företag är en levande organism. Varje uppdrag, varje uppgift, varje medarbetare är ett hjärtslag. GeoTapp Flow håller dem alla synkroniserade.</em>",
+      "title": "Kontoret ser varje stämpling så fort den kommer in.",
+      "subtitle": "Flow är kontorets operativa nav: uppdrag, aktiviteter, framsteg och strukturerade rapporter. <strong class=\"text-slate-900\">Fältet arbetar. Kontoret vet.</strong>",
       "features": {
-        "crm": "<strong>Arbetsorderhantering:</strong> Skapa arbetsorder, tilldela fälttekniker och följ framsteg i realtid.",
-        "pipeline": "<strong>Strukturerade arbetsrapporter:</strong> Varje slutförd arbetsorder genererar spårbar dokumentation redo för kunden."
+        "crm": "<strong>Uppdragshantering:</strong> Varje uppdrag skapas strukturerat, med tilldelad tekniker, plats och en status som uppdateras direkt.",
+        "pipeline": "<strong>Automatisk dokumentation:</strong> Varje avslutat uppdrag ger en färdig rapport, utan manuell ifyllning."
       },
       "link": "Utforska GeoTapp Flow"
     },
     "app": {
       "badge": "GeoTapp TimeTracker",
-      "title": "Teknikern registrerar. Kontoret kontrollerar.",
-      "subtitle": "TimeTracker är mobilappen som samlar in beviset från fältet, in, ut, foton med tiden på, anteckningar. Allt kopplat till uppdraget, allt förseglat. <strong>Finns för Android och iOS.</strong>",
+      "title": "Teknikern registrerar. Beviset tar form.",
+      "subtitle": "TimeTracker är mobilappen som samlar in beviset från fältet: instämpling, raster, utstämpling, foton med klockslag, anteckningar. Allt kopplat till uppdraget och förseglat i rapporten. <strong>Finns för Android och iOS.</strong>",
       "card_gps": {
-        "title": "GPS-tidregistrering",
-        "desc": "Verifierad position"
+        "title": "GPS-bevis",
+        "desc": "Plats och tid registreras vid varje stämpling"
       },
       "card_gdpr": {
         "title": "Ingen löpande spårning",
-        "desc": "Ingen kontinuerlig spårning"
+        "desc": "Mellan två stämplingar registreras inget automatiskt"
       },
       "link": "Utforska GeoTapp TimeTracker"
     },
     "verifier": {
       "badge": "GeoTapp Verifier",
       "title": "Du behöver inte att de litar på dig.",
-      "subtitle": "Ditt ord kommer aldrig in i diskussionen. Kunden öppnar rapporten och kontrollerar själv, utan att logga in i GeoTapp. Stämmer uppgifterna med det verkliga arbetet håller rapporten. Har någon ändrat dokumentet håller den inte längre. Utan överklagande.",
+      "subtitle": "Ditt ord kommer inte in i diskussionen. Kunden öppnar rapporten och kontrollerar den själv, utan att logga in i GeoTapp. Om ingen har rört dokumentet bekräftar kontrollen det. Om någon har ändrat det flaggar kontrollen det.",
       "features": {
-        "integrity": "<strong>Förseglade data:</strong> Rapporten genereras på verkliga fältdata och låses. Varje ändring ogiltigförklarar den, utan undantag.",
-        "independent": "<strong>Autonom verifiering:</strong> Vem som helst med rapporten kan verifiera dess äkthet, inget konto, ingen plattformsåtkomst."
+        "integrity": "<strong>Förseglade data:</strong> Rapporten förseglas när den skapas. Varje senare ändring flaggas av kontrollen.",
+        "independent": "<strong>Självständig verifiering:</strong> Alla som har rapporten kan kontrollera att den är intakt, utan konto och utan åtkomst till plattformen."
       },
       "link": "Utforska GeoTapp Verifier"
     },
     "core": {
       "badge": "GeoTapp-plattform",
-      "title": "Ett system, tre nivåer av säkerhet",
-      "subtitle": "TimeTracker registrerar i fält. Flow organiserar på kontoret. Verifier bekräftar att allt stämmer.",
+      "title": "Ett system, tre verktyg",
+      "subtitle": "TimeTracker registrerar i fält. Flow organiserar på kontoret. Verifier låter kunden kontrollera att rapporten inte har rörts. En enda krets, från fältet till kunden.",
       "features": [
         {
-          "title": "Verklig mobil operabilitet",
-          "desc": "TimeTracker registrerar in- och utstämpling samt raster med GPS. Varje uppgift som skickas från fältet är autentisk, med plats och tidsstämpel."
+          "title": "Uppgifterna föds i fält",
+          "desc": "TimeTracker registrerar instämpling, raster och utstämpling med plats och tid, plus de foton som bevisar arbetet."
         },
         {
-          "title": "Privacy by design",
-          "desc": "Platsen registreras <strong>endast</strong> vid instämpling, paus och utstämpling. Ingen kontinuerlig spårning."
+          "title": "Plats bara vid stämpling",
+          "desc": "Platsen registreras <strong>bara</strong> när medarbetaren stämplar (in, raster, ut) eller tar ett bevisfoto. Mellan två stämplingar registreras ingenting automatiskt."
         },
         {
-          "title": "Operationell kontroll, uppdaterad direkt",
-          "desc": "Fältdata anländer till Flow omedelbart. Kontoret ser varje uppdatering utan att ringa någon."
+          "title": "Operativ kontroll, uppdaterad vid varje stämpling",
+          "desc": "Fältdata kommer till Flow så fort den registrerats. Chefen ser stämplingarna utan att behöva ringa någon."
         },
         {
-          "title": "Försvarbart bevis över tid",
-          "desc": "Varje rapport låses på verkliga fältdata, förseglad efter generering. Tvist? Datan finns där. Verifierbar av vem som helst. Alltid."
+          "title": "Ett bevis som förblir verifierbart",
+          "desc": "Varje rapport är förseglad på de uppgifter som samlats in i fält. Kommer det en tvist finns uppgifterna där, och vem som helst kan kontrollera att rapporten inte har ändrats. Även om flera år, även utan oss."
         }
       ]
     },
     "footer_cta": {
       "title": "Jobbet är bevisat. Åk hem nu.",
-      "subtitle": "Ett tryck på plats förseglar beviset, och rapporten skriver sig själv, klar för kunden. Slut med fredagskvällar där du bygger upp veckan ur minnet. När du stämplar ut är du faktiskt klar, och kvällen är din igen.",
-      "button": "Kontakta oss",
+      "subtitle": "Du stämplar in på bygget och rapporten sätter ihop sig själv av passets uppgifter, redo för kunden. Slut med fredagskvällar som går åt till att rekonstruera veckan ur minnet. När du stämplar ut är du faktiskt klar, och kvällen är din igen.",
+      "button": "Skriv till oss",
       "pricing_link": "Se planer och priser →"
     },
     "settori": {
-      "title": "Verifierbar dokumentation för varje sektor - GeoTapp-lösningar",
+      "title": "Verifierbar dokumentation för varje bransch",
       "subtitle": "Välj din sektor för att se hur GeoTapp genererar arbetsbevis, att visa kunden vid tvister.",
       "see_all": "Se alla stödda sektorer",
       "installatori": {
         "name": "Installatörer",
-        "desc": "Elektriker, VVS-installatörer, Tekniker. Varje uppdrag dokumenterat med GPS och foton, förseglade data, verifierbara av kunden.",
+        "desc": "Elektriker, rörmokare, installatörer. Varje uppdrag dokumenterat med GPS och foton, förseglade data som kunden kan verifiera.",
         "cta": "Bevisa varje uppdrag"
       },
       "sicurezza": {
         "name": "Säkerhet",
-        "desc": "Vakter, Stewards, Förtroendetjänster. Verifierbar närvaro, dokumenterade skift med objektivt bevis.",
+        "desc": "Bevakning, ordningsvakter, förtroendetjänster. Verifierbar närvaro, dokumenterade pass med objektivt bevis.",
         "cta": "Bevisa närvaro för kunden"
       },
       "pulizie": {
         "name": "Städning",
-        "desc": "Städföretag, Facility, Multiservice. Varje omgång dokumenterad och verifierbar av uppdragsgivaren, färre tvister.",
-        "cta": "Undvik tvister"
+        "desc": "Städföretag, facility, multiservice. Varje moment dokumenterat och verifierbart av beställaren, färre tvister.",
+        "cta": "Dokumentera varje moment"
       },
       "elettricisti": {
         "name": "Elektriker",
-        "desc": "Elinstallationer, el-tavlor, kabeldragning. Varje jobb dokumenterat med GPS och foton, förseglade bevis för att lösa tvister snabbt.",
+        "desc": "Elinstallationer, elcentraler, kabeldragning. Varje jobb dokumenterat med GPS och foton, i en förseglad rapport att visa när någon ifrågasätter.",
         "cta": "Dokumentera varje jobb"
       },
       "idraulici": {
         "name": "Rörmokare",
-        "desc": "VVS, värme, pannor. GPS-arbetsrapporter med före-och-efter-foton, färre tvister om utfört arbete.",
+        "desc": "VVS, värme, pannor. GPS-rapporter med foton före och efter, färre tvister om utfört arbete.",
         "cta": "Bevisa varje jobb"
       },
       "termoidraulici": {
         "name": "VVS-tekniker",
-        "desc": "GeoTapp registrerar varje uppdrag på pannor och värmesystem med GPS, foton och verifierbara tidsstämplar. Kunden nekar utbytta delar?",
+        "desc": "GeoTapp registrerar varje uppdrag på pannor och värmesystem med plats, foton och verifierbara tider. Nekar kunden att delar har bytts?",
         "cta": "Bevisa utbytta delar"
       },
       "edilizia": {
-        "desc": "Nybyggnad, Renovering, Underentreprenad. Timmar och närvaro på bygget dokumenterade, avstämningar som håller vid tvist.",
-        "cta": "Försvara dina avstämningar"
+        "desc": "Nybyggnad, renovering, underentreprenad. Timmar och närvaro på bygget dokumenterade, avstämningar att visa beställaren med bevisen bifogade.",
+        "cta": "Dokumentera dina avstämningar"
       },
       "manutenzione": {
-        "desc": "Anläggningar, Hissar, Facility. Varje utryckning och varje besök med GPS och foton: arbetsrapporten blir svår att ifrågasätta.",
-        "cta": "Minska tvisterna"
+        "desc": "Anläggningar, hissar, facility. Varje utryckning och varje besök med GPS och foton, i en servicerapport att visa när det behövs.",
+        "cta": "Dokumentera varje besök"
       },
       "impianti": {
-        "desc": "Mekanik, El, Brandskydd. Provning och driftsättning förseglade med tid och position, bevis klart för beställaren.",
+        "desc": "Mekaniska, elektriska och brandskyddssystem. Provning och driftsättning förseglade med tid och plats, bevis redo för beställaren.",
         "cta": "Försegla provningen"
       }
     },
@@ -325,10 +330,10 @@
       "badge": "Riktigt exempel",
       "title": "Förseglad rapport, ladda ned och verifiera",
       "field_operator": "Operatör",
-      "field_intervention": "Insats",
+      "field_intervention": "Uppdrag",
       "field_intervention_value": "Byte av elcentralen",
       "btn_download": "Ladda ned rapport (.zip)",
-      "btn_verify": "Verifiera äkthet →"
+      "btn_verify": "Så verifierar du →"
     },
     "flow_mockup": {
       "pipeline_title": "Försäljningspipeline",
@@ -341,7 +346,7 @@
     "badge": "GeoTapp Lösningar",
     "title": "Välj rätt produkt.",
     "subtitle": "Praktiska lösningar för företag med fälttekniker och operatörer.",
-    "vat_note": "Alla priser exklusive moms. Fakturering enligt användarvillkoren.",
+    "vat_note": "Alla priser är exklusive moms. Abonnemanget har en minsta löptid på 12 månader och kan betalas som en årsbetalning eller i månatliga delbetalningar. GeoTapp Verifier, verktyget som dina kunder använder för att kontrollera rapporterna, är gratis.",
     "categories": {
       "app": {
         "title": "GeoTapp TimeTracker",
@@ -352,22 +357,23 @@
             "tagline": "Från och med",
             "desc": "Närvaro, fältaktivitet och bevis för utfört arbete, på ett ställe. Pris per användare och år.",
             "features": [
-              "Android/iOS-app",
-              "GPS-instämpling",
-              "Veckoapporter"
+              "Inbyggd Android- och iOS-app",
+              "Stämpling med plats",
+              "Bevisfoton",
+              "Veckorapporter"
             ],
-            "button": "Visa kalkylator"
+            "button": "Visa kalkylatorn"
           }
         ]
       },
       "flow": {
         "title": "GeoTapp Flow",
-        "description": "Fältverksamhet och teamhantering",
+        "description": "Uppdrag och team",
         "products": [
           {
             "name": "GeoTapp Flow Business",
             "tagline": "För strukturerade företag.",
-            "desc": "För företag med flera lag, flera uppdrag och ett kontor som ska hålla ihop alltihop.",
+            "desc": "För företag med flera team, flera uppdrag och ett kontor som ska hålla ihop allt.",
             "features": [
               "Obegränsade team",
               "API",
@@ -380,7 +386,7 @@
           {
             "name": "GeoTapp Flow Team",
             "tagline": "För små operativa team.",
-            "desc": "Koordinera och hantera ditt operativa team utan fördröjning.",
+            "desc": "Samordna och hantera ditt operativa team, uppdaterat vid varje stämpling.",
             "features": [
               "5 Flow-användare inkluderade",
               "Jobbhantering",
@@ -393,7 +399,7 @@
           {
             "name": "GeoTapp Flow Solo",
             "tagline": "För frilansare och mikroföretag.",
-            "desc": "Allt du behöver för att hantera fältuppdrag självständigt.",
+            "desc": "Allt som behövs för att sköta uppdragen på egen hand.",
             "features": [
               "1 användare",
               "Uppgiftshantering",
@@ -408,42 +414,42 @@
     "calculator": {
       "title": "TimeTracker licensräknare",
       "subtitle": "Uppskatta din årliga personalinvestering.",
-      "active_users": "Aktiva användare",
+      "active_users": "Aktiva medarbetare",
       "discount_threshold": "Rabattgräns",
       "cost_per_user": "Genomsnittlig kostnad per användare",
       "per_month": "/mån",
-      "standard_rate": "Standardtaxa (1–25 @ {price})",
+      "standard_rate": "Standardpris (1–25 à {price})",
       "mixed_rate": "Blandad taxa (volymrabatt tillämpad)",
       "annual_total": "Årstotal (+moms)",
-      "annual_billing_note": "Enskild årsfakturering",
-      "enterprise_plan": "Enterprise-plan",
-      "enterprise_desc": "För team med fler än 150 användare erbjuder vi anpassade SLA och dedikerad kontohantering.",
+      "annual_billing_note": "Faktureras en gång per år",
+      "enterprise_plan": "Över 150 platser",
+      "enterprise_desc": "Över 150 platser avtalas priset: skriv till oss så skickar vi en offert.",
       "request_quote": "Begär offert",
-      "add_to_cart": "Lägg App-licens i varukorg",
+      "add_to_cart": "Lägg platserna i varukorgen",
       "secure_payment": "Säker betalning via Stripe. Moms beräknas vid utcheckning."
     },
     "simulator": {
       "section_title": "Beräkna din offert",
       "employees_label": "Antal anställda:",
-      "one_employee": "1 Anställd",
-      "many_employees": "150+ Anställda",
+      "one_employee": "1 anställd",
+      "many_employees": "150+ anställda",
       "price_per_user": "Pris per användare",
       "annual_total": "Årstotal",
       "per_month": "/mån",
       "per_user_annual": "per användare, årsfakturering",
       "selected_badge": "Vald",
-      "enterprise_plan": "Enterprise-plan",
+      "enterprise_plan": "Över 150 platser",
       "enterprise_desc": "För stora organisationer erbjuder vi skräddarsydda lösningar.",
       "enterprise_cta": "Kontakta oss för en offert",
       "company_placeholder": "Företagsnamn",
-      "email_placeholder": "Admin-e-post",
+      "email_placeholder": "Administratörens e-post",
       "email_error_format": "Ange en giltig e-postadress (t.ex. namn@foretag.se)",
       "email_error_placeholder": "Ange en riktig företags-e-post.",
       "terms_alert": "För att fortsätta måste du acceptera Villkoren och bekräfta att du har läst Integritetspolicyn.",
-      "processing": "Bearbetar...",
+      "processing": "Bearbetar…",
       "request_info": "Begär information",
       "buy_now": "Köp nu",
-      "payment_note": "Säker betalning via Stripe. Avsluta när som helst.",
+      "payment_note": "Säker betalning via Stripe. Abonnemang med en minsta löptid på 12 månader.",
       "success_sent": "Förfrågan skickad! Vi kontaktar dig snart.",
       "error_request": "Fel vid sändning av förfrågan",
       "plus_vat": "+ moms"
@@ -481,7 +487,7 @@
       "error_checkout": "Fel vid skapande av session. Försök igen.",
       "error_connection": "Anslutningsfel. Försök igen."
     },
-    "intro_label": "Introduktionspris 2026",
+    "intro_label": "Lanseringspris 2026",
     "tracker_footnote": "* TimeTracker-platser köps separat. Flow-planen avgör hur många som kan vara aktiva samtidigt, inte hur många som ingår. Att ta bort åtkomst för en medarbetare frigör platsen omedelbart.",
     "per_year": "/år",
     "title_gradient": "Användare på kontoret, plus en plats per medarbetare i fält.",
@@ -493,10 +499,10 @@
     "recommended": "Rekommenderad"
   },
   "contact": {
-    "title": "Låt oss prata <span class=\"text-primary\">affärer</span>.",
-    "subtitle": "Du behöver förstå om GeoTapp passar ditt företag. Vi finns här för att svara konkret.",
-    "guarantee_title": "Svarsgaranti",
-    "guarantee_text": "Genomsnittligt första svar inom 12 arbetstimmar. Inga ärenden förlorade i tomma intet.",
+    "title": "Låt oss prata om ditt <span class=\"text-primary\">arbete</span>.",
+    "subtitle": "Vill du veta om GeoTapp passar ditt företag? Skriv till oss: vi svarar konkret.",
+    "guarantee_title": "Svarstider",
+    "guarantee_text": "Genomsnittligt svar inom 12 arbetstimmar. Det är en människa som svarar.",
     "form": {
       "name": "Namn",
       "first_name": "Förnamn",
@@ -516,7 +522,7 @@
         },
         {
           "value": "pulizie",
-          "label": "Städning & Sanering"
+          "label": "Städning och sanering"
         },
         {
           "value": "elettricisti",
@@ -532,67 +538,69 @@
         }
       ],
       "company": "Företag",
-      "email": "Jobbmail",
-      "reason": "Anledning till kontakt",
+      "email": "Arbets-e-post",
+      "reason": "Anledning till kontakten",
       "message": "Meddelande",
       "send": "Skicka",
       "reason_options": [
-        "Jag vill ha en GeoTapp Demo",
-        "Allmän informationsförfrågan",
-        "Partnerskap",
+        "Jag vill starta den kostnadsfria provperioden av GeoTapp",
+        "Allmän information",
+        "Samarbeten",
         "Övrigt"
       ],
       "name_placeholder": "Ditt namn",
       "email_placeholder": "du@email.com",
       "company_placeholder": "Företagsnamn",
-      "message_placeholder": "Ditt meddelande...",
-      "submit": "Skicka meddelande",
-      "submitting": "Skickar...",
+      "message_placeholder": "Ditt meddelande…",
+      "submit": "Skicka meddelandet",
+      "submitting": "Skickar…",
       "all_required": "* Alla fält är obligatoriska",
       "reason_placeholder": "Välj en anledning"
     },
     "hours": "Mån-Fre 9:00 - 18:00",
     "location_city": "Italien",
-    "channels_title": "Direkta Kanaler",
-    "email_label": "Allmän E-post",
+    "channels_title": "Direkta kanaler",
+    "email_label": "E-post",
     "email_desc": "För information, offerter och support.",
     "hq_label": "Var vi arbetar",
     "hq_city": "Helt online, kunder i Italien och EU",
     "hq_note": "Inget publikt kontor: support och onboarding på distans.",
-    "privacy_note": "Genom att skicka detta formulär godkänner du vår Integritetspolicy.",
+    "privacy_note": "Genom att skicka formuläret bekräftar du att du har läst vår integritetspolicy.",
     "map_title": "Var vi finns - Trenzano (BS), Italien",
     "success": "Meddelande skickat. Vi återkommer så snart som möjligt.",
     "error": "Fel vid sändning. Försök igen senare.",
-    "sending": "Skickar...",
+    "sending": "Skickar…",
     "map_unavailable": "Karta ej tillgänglig",
     "open_maps": "Öppna i Google Maps ↗"
   },
   "login_hub": {
-    "title": "Åtkomst till ditt <span class=\"text-primary\">konto</span>.",
-    "subtitle": "Välj den produkt du vill ansluta till.",
+    "title": "Logga in på <span class=\"text-primary\">GeoTapp</span>.",
+    "subtitle": "Välj produkt: Flow för kontoret, TimeTracker för dem som arbetar i fält.",
     "flow": {
       "desc": "Verksamhetsstyrning, arbetsorder, koordinering och rapporter.",
       "btn": "Logga in på Flow"
     },
     "timetracker": {
-      "desc": "Närvaro, fältaktivitet och arbetsbevis.",
-      "btn": "Logga in på TimeTracker"
-    }
+      "desc": "För medarbetare i fält: du loggar in från appen, på Android och iOS.",
+      "btn": "Hämta appen TimeTracker"
+    },
+    "meta_title": "Logga in | GeoTapp",
+    "meta_description": "Logga in på GeoTapp Flow i webbläsaren, eller hämta appen TimeTracker för att stämpla från fältet."
   },
   "product_pages": {
     "flow": {
       "hero_badge": "GeoTapp Flow - Hantering av fältverksamhet",
-      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-slate-900\">Operativ Hantering.</span>",
-      "hero_subtitle": "Det operativa navet för att hantera kunder, projekt, team och administration på ett ställe. Flow är plattformen som även driver TimeTracker.",
+      "hero_title": "GeoTapp Flow.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-slate-900\">Uppdrag och team.</span>",
+      "hero_subtitle": "Det operativa navet för att hantera kunder, uppdrag, team och administration på ett ställe. Flow är plattformen som TimeTracker också bygger på.",
       "visual_placeholder": "DRIFTSPANEL",
       "grid_title": "Operativa funktioner",
-      "grid_subtitle": "Varje modul är utformad för verklig kontroll av fältarbete. Klicka för att utforska.",
+      "grid_subtitle": "Varje modul hjälper dig att organisera och dokumentera arbetet i fält. Klicka för att läsa mer.",
       "sectors": {
         "1": "Arbetsorder och kunder",
         "2": "Planering och resurser",
         "3": "Kontroll och synlighet"
       },
-      "cta_title": "Ta verklig kontroll över ditt fält.",
+      "cta_title": "Skapa ordning i fältarbetet.",
       "cta_button": "Visa priser",
       "modal": {
         "status": "SYSTEMSTATUS: <span class=\"text-green-600\">OPERATIVT</span>",
@@ -603,8 +611,8 @@
       "systems": {
         "nexus-core": {
           "name": "Arbetsorderhantering",
-          "short": "Skapa och hantera tekniska arbetsorder. Tilldela uppgifter till fälttekniker, följ framsteg och håll allt spårat per arbetsorder.",
-          "full": "### Central arbetsorderkontroll.\n\nVarje arbetsorder börjar som ett strukturerat uppdrag.\n**Arbetsorderhantering** ger dig en tydlig överblick av allt pågående arbete.\n\n#### Orderhantering\n\nSkapa en arbetsorder, tilldela teknikern, definiera platsen och datumet.\nÖvervaka status: Öppen, Pågående, Avslutad.\n\n#### Operativ historik\n\nVarje arbetsorder har ett komplett arkiv av aktiviteter, fotobevis, anteckningar och tidsstämplar.\nKunden frågar vad som gjordes? Du har uppgifterna. Alltid."
+          "short": "Skapa och hantera tekniska uppdrag. Tilldela uppgifter till teknikerna, följ framstegen och håll allt spårat per uppdrag.",
+          "full": "### Alla uppdrag på ett ställe.\n\nVarje uppdrag börjar som en strukturerad order.\n**Uppdragshantering** ger dig en tydlig överblick av allt pågående arbete.\n\n#### Hantering av uppdrag\n\nSkapa ett uppdrag, tilldela teknikern, ange plats och datum.\nFölj statusen: Öppet, Pågående, Avslutat.\n\n#### Operativ historik\n\nVarje uppdrag har ett komplett arkiv av aktiviteter, fotobevis, anteckningar och stämplingar.\nFrågar kunden vad som gjordes? Du har uppgifterna."
         },
         "titan-flow": {
           "name": "Uppgiftstilldelning",
@@ -614,7 +622,7 @@
         "ledger-prime": {
           "name": "Arbetsrapporter och fakturering",
           "short": "Generera strukturerade arbetsrapporter från varje arbetsorder. Exportera dokumentation och stöd fakturering med verkliga fältdata.",
-          "full": "### Från arbete till arbetsrapport, på ett ordnat sätt.\n\nManuell fakturering är långsam och ofta ofullständig.\n**Arbetsrapporter och fakturering** avslutar den operativa cykeln.\n\n#### Strukturerade arbetsrapporter\n\nVarje slutförd arbetsorder genererar dokumentation genom att samla in tidsstämplar, foton och anteckningar från fält.\nInga uppgifter att ange manuellt, allt kommer från TimeTracker.\n\n#### Faktureringsstöd\n\nVerkliga arbetsorderdata stöder mer exakta offerter och fakturor.\nFärre fel, färre tvister, snabbare administrativ cykel."
+          "full": "### Från arbete till rapport, i ordning.\n\nManuell sammanställning är långsam och ofta ofullständig.\n**Rapporter och sammanställning** sluter den operativa cykeln.\n\n#### Strukturerade rapporter\n\nVarje avslutat uppdrag ger dokumentation som samlar stämplingar, foton och anteckningar från fältet.\nInga uppgifter att skriva in för hand: allt kommer från TimeTracker.\n\n#### Stöd för fakturering\n\nVerkliga uppdragsdata ger mer exakta offerter och fakturor.\nFärre fel, färre tvister, snabbare administrativ cykel."
         },
         "quantum-logistics": {
           "name": "Arbetsorderskalender",
@@ -623,38 +631,39 @@
         },
         "supply-command": {
           "name": "Resurshantering",
-          "short": "Kontrollera material, utrustning och operativa resurser som behövs för varje fältarbetsorder. Inga överraskningar.",
-          "full": "### Ingen arbetsorder utan resurser.\n\nAtt skicka en fälttekniker ut i fält utan rätt material är ett kostsamt misstag.\n**Resurshantering** förhindrar operativa överraskningar.\n\n#### Material per arbetsorder\n\nKoppla nödvändiga resurser till varje arbetsorder.\nChefen ser i förväg vad som behövs och när.\n\n#### Leverantörer och inköp\n\nLagra kontaktuppgifter och villkor för dina fasta leverantörer.\nMinska inköpstid och håll kostnaderna under kontroll."
+          "short": "Håll katalog, leverantörer och material kopplade till uppdragen, så att teknikern åker iväg med det som behövs.",
+          "full": "### Inget uppdrag utan rätt material.\n\nAtt skicka en tekniker ut i fält utan rätt material är ett kostsamt misstag.\n**Resurshantering** förhindrar operativa överraskningar.\n\n#### Katalog och uppdrag\n\nHåll din produktkatalog i Flow och koppla den till offerter och uppdrag.\nChefen ser i förväg vad som behövs och när.\n\n#### Leverantörer\n\nSpara kontaktuppgifter och villkor för dina vanliga leverantörer.\nMinska inköpstiden och håll kostnaderna under kontroll."
         },
         "the-architect": {
           "name": "Arbetsplanering",
           "short": "Organisera arbete i faser, uppgifter och deadlines. Håll projektet under kontroll utan kalkylark eller WhatsApp-meddelanden.",
-          "full": "### Strukturera arbetet. Kontrollera framstegen.\n\nKomplexa arbetsorder kräver struktur.\n**Arbetsplanering** ger operativ ordning.\n\n#### Faser och deadlines\n\nStrukturera komplexa arbetsorder i operativa faser med tydliga deadlines.\nTilldela ansvar till varje teammedlem.\n\n#### Framstegsövervakning\n\nVisualisera framsteg i realtid.\nVet alltid vad som har gjorts och vad som återstår.\nAgera innan en försening blir ett kundproblem."
+          "full": "### Strukturera arbetet. Följ framstegen.\n\nKomplexa uppdrag kräver struktur.\n**Arbetsplanering** skapar operativ ordning.\n\n#### Faser och deadlines\n\nDela in varje komplext uppdrag i operativa faser med tydliga deadlines.\nTilldela ansvar till varje teammedlem.\n\n#### Uppföljning av framsteg\n\nSe framstegen, uppdaterade steg för steg.\nDu vet alltid vad som är gjort och vad som är öppet.\nAgera innan en försening blir ett kundproblem."
         },
         "the-auditor": {
           "name": "Arbetsorderdokumentation",
-          "short": "Samla fotobevis, operativa anteckningar och signerade dokument för varje arbetsorder. Utfört arbete förblir verifierbart.",
-          "full": "### Verkligt bevis för varje arbetsorder.\n\nUtan dokumentation är utfört arbete möjligt att ifrågasätta.\n**Arbetsorderdokumentation** gör varje uppdrag verifierbart.\n\n#### Fotobevis\n\nTekniker tar foton direkt från GeoTapp TimeTracker i fält.\nBilder kopplas automatiskt till arbetsordern med tidsstämpel och position.\n\n#### Digital kundsignatur\n\nKunden kan signera arbetsrapporten direkt på teknikerns skärm.\nDen digitala signaturen ingår i rapporten och utgör bevis på levererad tjänst."
+          "short": "Samla fotobevis, operativa anteckningar och dokument för varje uppdrag. Utfört arbete förblir verifierbart.",
+          "full": "### Verkliga bevis för varje uppdrag.\n\nUtan dokumentation går utfört arbete att ifrågasätta.\n**Uppdragsdokumentation** gör varje uppdrag verifierbart.\n\n#### Fotobevis\n\nTeknikerna tar foton direkt från GeoTapp TimeTracker i fält.\nBilderna kopplas automatiskt till uppdraget med tid och plats.\n\n#### Förseglad rapport\n\nVid uppdragets slut skapar systemet en digitalt förseglad rapport: varje senare ändring går att upptäcka.\nKunden kan kontrollera den själv, utan att behöva logga in i GeoTapp."
         },
         "the-uplink": {
           "name": "Fält-till-kontor-länk",
-          "short": "Data som samlats in av TimeTracker anländer till Flow i realtid. Fält och kontor arbetar med samma operativa data.",
-          "full": "### Kontor och fält, äntligen sammankopplade.\n\nKlyftan mellan fält och kontor skapar undvikbara fel, förseningar och tvister.\n**Fält-till-kontor-länk** sluter gapet.\n\n#### Synkronisering i realtid\n\nVarje instämpling, foto och anteckning registrerad på TimeTracker anländer omedelbart till Flow.\nChefen ser varje registrering direkt utan att behöva ringa teknikern.\n\n#### Tillförlitlig historik\n\nAllt teknikern registrerar i fält arkiveras och kopplas till arbetsordern.\nIngen data förloras. Ingen information saknas när det är dags att rapportera."
+          "short": "Data som TimeTracker samlat in kommer till Flow så fort den registrerats. Fält och kontor arbetar med samma operativa data.",
+          "full": "### Kontor och fält, äntligen sammankopplade.\n\nAvståndet mellan fält och kontor ger undvikbara fel, förseningar och tvister.\n**Länken fält–kontor** förkortar det.\n\n#### Kommer fram direkt\n\nVarje stämpling, foto och anteckning som registrerats i TimeTracker kommer till Flow så fort den skickas.\nChefen ser uppgifterna utan att behöva ringa teknikern.\n\n#### Tillförlitlig historik\n\nAllt som teknikern registrerar i fält arkiveras och kopplas till uppdraget.\nNär det är dags att rapportera finns uppgifterna redan där."
         },
         "the-oracle": {
           "name": "Operativ synlighet",
-          "short": "Operativt dashboard i realtid. Vet alltid hur många arbetsorder som är öppna, pågående eller avslutade idag.",
-          "full": "### Operativa data, inte antaganden.\n\nAtt fatta beslut utan tillförlitliga data är farligt.\n**Operativ synlighet** omvandlar fältdata till konkret information.\n\n#### Operativt dashboard\n\nSe i realtid:\n- Öppna och pågående arbetsorder\n- Aktiva fälttekniker\n- Arbetsorder avslutade idag och denna vecka\n\n#### Periodiska rapporter\n\nFå automatiserade aktivitetssammanfattningar.\nJämför perioder, identifiera flaskhalsar och optimera verksamheten."
+          "short": "Operativ dashboard som uppdateras vid varje uppdrag. Du vet alltid hur många uppdrag som är öppna, pågående eller avslutade idag.",
+          "full": "### Operativa data, inte antaganden.\n\nAtt besluta utan tillförlitliga data är farligt.\n**Operativ överblick** gör fältdata till konkret information.\n\n#### Operativ dashboard\n\nSe, uppdaterat vid varje uppdrag:\n- Öppna och pågående uppdrag\n- Aktiva tekniker\n- Uppdrag som avslutats idag och denna vecka\n\n#### Periodiska rapporter\n\nFå automatiskt en sammanfattning av aktiviteterna.\nJämför perioder, hitta flaskhalsar och förbättra verksamheten."
         }
-      }
+      },
+      "label_open": "Läs mer"
     },
     "app": {
       "hero_badge": "GeoTapp TimeTracker - App för fälttekniker",
-      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-slate-900\">Fältet i din ficka.</span>",
-      "hero_subtitle": "Mobilappen som fälttekniker använder för att registrera aktivitet, samla bevis och upprätthålla den operativa tråden direkt från fält. Tillgänglig på Android och iOS.",
+      "hero_title": "GeoTapp TimeTracker.<br /><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-slate-900\">Appen för dig som arbetar i fält.</span>",
+      "hero_subtitle": "Appen som teknikerna använder för att stämpla, ta bevisfoton och hålla kontakt med kontoret direkt från fältet. Finns för Android och iOS.",
       "visual_placeholder": "FÄLTGRÄNSSNITT",
       "grid_title": "Verktyg för fältarbete",
-      "grid_subtitle": "Varje funktion är utformad för dem som arbetar utanför kontoret och inte har tid att slösa. Klicka för att utforska.",
+      "grid_subtitle": "Varje funktion är utformad för dig som arbetar utanför kontoret och inte har tid att förlora. Klicka för att läsa mer.",
       "sectors": {
         "1": "Kärnverksamhet",
         "2": "Logistik och kommunikation",
@@ -671,18 +680,18 @@
       "systems": {
         "timelock-alpha": {
           "name": "GPS-tidregistrering",
-          "short": "Instämpling och utstämpling kopplade till GPS-position och exakt tidsstämpel. Varje arbetspass blir en verifierbar operativ händelse.",
-          "full": "### Tid är verifierbar.\n\nTidsstämplar utan verifiering skapar tvister.\n**GPS-tidregistrering** gör varje arbetspass till ett tillförlitligt, försvarsbart register.\n\n#### Geolokaliserad instämpling och utstämpling\n\nTeknikern registrerar ankomst och avfärd från fält.\nPosition, adress och tid registreras automatiskt.\n\n#### Förseglad historik\n\nVarje pass är ett verifierbart register: starttid, sluttid, position, varaktighet och kopplad arbetsorder.\nKunden frågar när du anlände? Uppgifterna finns där, alltid."
+          "short": "Instämpling, raster och utstämpling registrerar plats och exakt tid i själva stämplingsögonblicket. Varje pass blir en uppgift som kunden kan verifiera.",
+          "full": "### Rätt tid, på rätt plats.\n\nStämplingar utan kontroll ger tvister.\n**GPS-stämpling** gör varje pass till en tillförlitlig uppgift.\n\n#### In, raster och ut\n\nTeknikern stämplar från telefonen.\nPlats, adress och tid registreras i det ögonblicket, och bara då: mellan två stämplingar registreras ingenting automatiskt.\n\n#### Förseglad historik\n\nVarje pass är en post: starttid, sluttid, raster, plats, längd och uppdrag.\nI rapporten som kunden får är den förseglad: varje senare ändring går att upptäcka."
         },
         "event-horizon": {
           "name": "Schemaläggning",
           "short": "Hantera scheman och personaltillgänglighet. Vecko- och månadsvisningar för koordinering utan förvirring eller överlappningar.",
-          "full": "### Inga schemakonfliker.\n\nAtt organisera mobil personal kräver tydlighet.\n**Schemaläggning** ger chefen en exakt, aktuell översikt.\n\n#### Kalendervy\n\nSe vem som arbetar när.\nIdentifiera frånvaro, semestrar och överlappningar innan de blir operativa problem.\n\n#### Realtidstillgänglighet\n\nAnställda bekräftar närvaro eller rapporterar frånvaro direkt från appen.\nChefen ser luckor i schemat innan nya arbetsorder tilldelas."
+          "full": "### Inga schemakonflikter.\n\nAtt organisera mobil personal kräver tydlighet.\n**Schemaläggning** ger chefen en exakt och aktuell överblick.\n\n#### Kalendervy\n\nSe vem som arbetar när.\nUpptäck frånvaro, helgdagar och överlappningar innan de blir operativa problem.\n\n#### Alltid aktuell tillgänglighet\n\nDe anställda bekräftar närvaro eller anmäler frånvaro direkt från appen.\nChefen ser luckorna i schemat innan nya uppdrag tilldelas."
         },
         "unit-matrix": {
           "name": "Operatörsregister",
-          "short": "Hantera ett fullständigt register över dina operatörer: roller, kontakter, certifieringar och plattformsåtkomst.",
-          "full": "### Känn ditt team.\n\nVarje operatör är en viktig operativ resurs.\n**Operatörsregister** centraliserar all vital information.\n\n#### Certifieringshantering\n\nSe på ett ögonkast vem som har de nödvändiga kvalifikationerna för ett specifikt uppdrag eller en plats.\n\n#### Snabb introduktion\n\nAtt lägga till en ny fälttekniker är enkelt.\nSkicka en inbjudningslänk: inom minuter är de operativa på GeoTapp TimeTracker."
+          "short": "Håll ordning på dina medarbetare: roller, kontakter och åtkomst till plattformen, där nya kommer igång på några minuter.",
+          "full": "### Känn ditt team.\n\nVarje medarbetare är en viktig resurs.\n**Medarbetarregistret** samlar den information du behöver.\n\n#### Roller och åtkomst\n\nBestäm vem som ser vad: administratör, chef, medarbetare.\nVarje person kommer bara åt det som rollen tillåter.\n\n#### Snabb start\n\nAtt lägga till en ny tekniker är enkelt.\nDu skickar en inbjudningskod: teknikern signerar GPS-informationen och stämplar från GeoTapp TimeTracker inom några minuter."
         },
         "sector-grid": {
           "name": "Platser och arbetsplatser",
@@ -691,8 +700,8 @@
         },
         "energy-logistics": {
           "name": "Fordons- och kostnadshantering",
-          "short": "Spåra företagsfordonanvändning, förbrukat bränsle och resekostnader för fältpersonal.",
-          "full": "### Varje resa dokumenterad.\n\nResekostnader är en kritisk post för alla företag med mobil personal.\n**Fordonshantering** övervakar varje utgående kostnad.\n\n#### Fordonsanvändning\n\nTilldela tillfälligt ett fordon till en anställd för en arbetsorder.\nVet alltid vem som använder vilket fordon och för vilket uppdrag.\n\n#### Bränslekostnader\n\nDen anställde registrerar tankning direkt från appen med ett kvittofoto och belopp.\nAllt arkiverat, allt kopplat till arbetsordern."
+          "short": "Registrera användningen av tjänstebil under passet, tankningar och resekostnader, med foto på kvittot.",
+          "full": "### Varje utgift dokumenterad.\n\nResekostnader är en känslig post för alla företag med personal i rörelse.\n**Fordon och ersättningar** ger ordning på dem.\n\n#### Användning av fordon\n\nTilldela en anställd ett fordon för ett uppdrag, och medarbetaren anger i appen om bilen används under passet.\nDu vet vem som använde vilket fordon och för vilket uppdrag.\n\n#### Bränslekostnader\n\nDen anställde registrerar tankningen i appen, med kvittofoto och belopp.\nKontoret godkänner ersättningen, och allt förblir kopplat till uppdraget."
         },
         "neural-link": {
           "name": "Operativ kommunikation",
@@ -700,21 +709,22 @@
           "full": "### Tydlig kommunikation. Inget bakgrundsbrus.\n\nWhatsApp blandar privat- och yrkesliv och erbjuder ingen kontroll över lässtatus.\n**Operativ kommunikation** är den officiella företagskanalen.\n\n#### Riktade meddelanden\n\nAvisera bara det team som behöver veta.\nSkiftbyte på Göteborgsplatsen? Bara de tilldelade teknikerna tar emot meddelandet.\n\n#### Läsbekräftelser\n\nVet alltid vem som läste kommunikationen och vem som inte gjorde det.\nTydligt och transparent ansvar för alla."
         },
         "payroll-bridge": {
-          "name": "Närvароexport",
-          "short": "Exportera månadsvis närvaro i format kompatibla med de viktigaste lönesystemen. Mindre manuellt arbete, färre fel.",
-          "full": "### Lönehantering utan huvudvärk.\n\nMånadsslut behöver inte vara en administrativ mardröm.\n**Närvаrоexport** kopplar samman fältverksamhet med HR-administration.\n\n#### Flerformat\n\nGenerera närvarofiler redo för import till de ledande svenska lönesystemen (Visma, Fortnox, Hogia).\n\n#### Åtkomst för lönekonsult\n\nGe begränsad åtkomst till din lönebyrå.\nDe laddar ned de uppgifter de behöver självständigt, utan att ringa dig vid varje månadsslut."
+          "name": "Närvaroexport",
+          "short": "Exportera månadens närvaro till Excel eller CSV, redo för din lönekonsult. Mindre manuellt arbete, färre fel.",
+          "full": "### Lön utan huvudvärk.\n\nMånadsskiftet behöver inte vara en administrativ mardröm.\n**Närvaroexport** kopplar fältarbetet till personaladministrationen.\n\n#### Excel och CSV\n\nTimmar, övertid, tillägg och frånvaro hamnar i en Excel- eller CSV-fil som är redo att lämnas till lönekonsulten.\n\n#### Åtkomst för konsulten\n\nGe din lönebyrå en separat åtkomst, redovisningsportalen.\nDe hämtar de uppgifter de behöver på egen hand, utan att ringa dig varje månadsskifte."
         },
         "data-core": {
-          "name": "Veckоrapporter",
+          "name": "Veckorapporter",
           "short": "Detaljerade rapporter om arbetade timmar per arbetsorder och per operatör. Tillförlitliga data för intern kontroll och fakturering.",
-          "full": "### Data ljuger inte.\n\nFatta beslut baserade på fakta, inte intryck.\n**Veckоrapporter** extraherar värde ur den dagliga verksamheten.\n\n#### Detaljerade rapporter\n\nVarje vecka en fullständig bild: vem som arbetade, var, på vilken arbetsorder och hur länge.\n\n#### Full transparens\n\nAnställda och chefer konsulterar samma månadsrapport.\nRäknade timmar är identiska för alla.\nFärre tvister vid månadsslut."
+          "full": "### Besluta utifrån fakta.\n\nBesluta utifrån data, inte intryck.\n**Veckorapporter** ordnar varje dags arbete.\n\n#### Detaljerade rapporter\n\nVarje vecka en fullständig bild: vem som arbetat, var, på vilket uppdrag och hur många timmar.\n\n#### Samma siffror för alla\n\nAnställda och chefer tittar på samma rapport.\nDe räknade timmarna är desamma för alla, och det finns mycket mindre att bråka om vid månadsskiftet."
         },
         "identity-forge": {
-          "name": "Varumärkesapp",
-          "short": "Ladda upp din logotyp och välj dina företagsfärger. Dina operatörer använder en app som speglar din varumärkesidentitet.",
+          "name": "Anpassad app",
+          "short": "Ladda upp din logotyp och välj företagets färger. Dina medarbetare använder en app som speglar ditt varumärke.",
           "full": "### Ditt företag, din app.\n\nAnvänd inte en generisk app.\nLåt dina anställda känna sig som en del av DITT företag med en konsekvent visuell upplevelse.\n\n#### Företagslogotyp\n\nDin logotyp framträdande visad på inloggningsskärmen och huvuddashboarden.\n\n#### Företagsfärger\n\nVälj färgtemat som passar din företagsprofil.\nProfessionell, konsekvent, igenkännbar."
         }
-      }
+      },
+      "label_open": "Läs mer"
     }
   },
   "cart": {
@@ -745,7 +755,10 @@
   },
   "guida": {
     "page_title": "Användarhandbok",
-    "download_pdf": "Ladda ner / Skriv ut PDF"
+    "download_pdf": "Ladda ner / Skriv ut PDF",
+    "box_note": "Obs",
+    "box_warning": "Varning",
+    "box_tip": "Tips"
   },
   "demo": {
     "page_title": "Boka din personliga demo",
@@ -759,12 +772,12 @@
     ],
     "cosa_vedrai": [
       {
-        "title": "GPS-instämpling i aktion",
-        "desc": "Hur teknikern stämplar in via mobilappen och hur kontoret ser den verifierade positionen, utan kontinuerlig spårning."
+        "title": "GPS-stämpling i praktiken",
+        "desc": "Hur teknikern stämplar från mobilappen och hur kontoret ser den plats som registrerats vid stämplingen, utan löpande spårning."
       },
       {
         "title": "Verifierbara rapporter",
-        "desc": "Hur varje uppdrag genererar en rapport med fotodokumentation, digital signatur och förseglad hash som du kan visa kunden."
+        "desc": "Hur varje uppdrag ger en rapport med fotobevis, kryptografisk försegling och SHA-256-avtryck som du kan visa kunden."
       },
       {
         "title": "Teamhantering via Flow",
@@ -804,12 +817,12 @@
     "success_desc": "Vi kontaktar dig inom 1 arbetsdag för att schemalägga demon.",
     "error_message": "Fel vid sändning. Försök igen senare.",
     "badge": "Demo GeoTapp, 30 Minuter",
-    "page_subtitle": "Vi visar dig hur GeoTapp eliminerar tvister om timmar och gör varje uppdrag dokumenterat och verifierbart.",
+    "page_subtitle": "Vi visar hur GeoTapp dokumenterar varje uppdrag och gör det verifierbart, så att det finns mindre att diskutera om timmarna.",
     "form_title": "Dina uppgifter",
     "urgent_contact": "Brådskande frågor? Skriv till",
     "no_spam": "Ingen spam. Dina uppgifter hanteras enligt vår",
-    "trust_gps": "GPS-verifierad stämpling",
-    "trust_offline": "Offlinekontroll",
+    "trust_gps": "Plats vid stämpling",
+    "trust_offline": "Offlineverifierare",
     "trust_response": "Svar inom 1 dag",
     "what_youll_see": "Vad du kommer att se i demon",
     "faq_title": "Vanliga frågor",
@@ -820,9 +833,9 @@
     "subtitle": "Välj den version som passar dina behov.",
     "demo_report_badge": "Riktigt exempel",
     "demo_report_title": "Förseglad jobbrapport",
-    "demo_report_desc": "Ladda ner en riktig rapport genererad av GeoTapp. Innehåller verifierad GPS, fotodokumentation, operatörs-hashkedja och kryptografisk sigillering.",
+    "demo_report_desc": "Ladda ner en riktig rapport som GeoTapp har skapat. Den innehåller platsen som registrerats vid stämplingarna, bevisfotona och den kryptografiska förseglingen. Du kan kontrollera att den inte ändrats direkt på geotapp.com.",
     "demo_report_btn_download": "Ladda ner exempelrapport (.zip)",
-    "demo_report_btn_verify": "Verifiera äkthet",
+    "demo_report_btn_verify": "Så verifierar du",
     "demo_report_field_operator": "Operatör",
     "demo_report_field_type": "Jobbtyp",
     "windows_title": "GeoTapp för Windows",
@@ -835,7 +848,7 @@
     ],
     "windows_btn": "Ladda ned för Windows",
     "wp_title": "WordPress-plugin",
-    "wp_desc": "Integrera GeoTapp på din företagswebbplats. Låt anställda komma åt direkt från ert intranät.",
+    "wp_desc": "Integrera GeoTapp på ditt företags webbplats. Låt de anställda komma åt direkt från ditt intranät.",
     "wp_features": [
       "Säker Iframe-integration",
       "Shortcode [geotap_app]",
@@ -851,36 +864,36 @@
     "hero_desc": "Produkten började med ett pappersark med en månads timmar på och summor som aldrig gick ihop.",
     "story": [
       "Det finns ett arbete som ingen någonsin har fått betalt för, och det är att skriva ner sina egna timmar. Datum, start, slut, summa. Varje dag, och vid månadens slut går sammanställningen till chefen.",
-      "<strong>Michele Angelo Petraroli</strong> arbetade med evenemangssäkerhet, som anställd, och han fyllde i det där bladet som alla fyller i det, alltså dåligt. Summorna stämde nästan aldrig, delvis också hans eget fel, för det är mänskligt att skjuta upp det tråkiga och sedan rekonstruera det ur minnet en vecka senare. Kollegerna som inte skickade in sina timmar alls arbetade tydligen för att de var rika och gjorde det av lust.",
-      "Han letade efter en app som kunde ta bort besväret. De var alla likadana, och alla bad om exakt det han redan gjorde för hand, datum, start, slut, summa. Samma möda, snyggare knappar.",
-      "Så han byggde en själv, på semestern. En webbsida och två handgrepp, tryck när du börjar och tryck när du slutar, och resten hamnade prydligt i ett arkiv som var färdigt att skicka vid månadens slut.",
-      "Sedan kom tanken som ändrade allt, hjälper det mig så hjälper det kollegerna också. Och hjälper det chefen måste flödet vändas, för det är inte han som ska springa efter folk för att få timmarna, det är timmarna som ska nå honom varje dag av sig själva.",
-      "Därifrån växte verktyget bara i en riktning. Först laglig positionering, avläst när passet öppnas och när det stängs, aldrig löpande. Sedan automatisk dokumentation av utfört arbete, för det verkliga problemet var aldrig att räkna timmarna, det var att bevisa dem när någon ifrågasatte dem.",
+      "<strong>Michele Angelo Petraroli</strong> arbetade med säkerhet vid evenemang, som anställd, och han fyllde i det där bladet som alla fyller i det, alltså dåligt. Summorna stämde nästan aldrig, delvis också hans eget fel, för det är mänskligt att skjuta upp det tråkiga och sedan rekonstruera det ur minnet en vecka senare.",
+      "Han letade efter en app som kunde ta bort besväret. Alla var likadana, och alla bad om exakt det han redan gjorde för hand: datum, start, slut, summa. Samma möda, snyggare knappar.",
+      "Så på semestern byggde han en själv. En webbsida och två handgrepp: tryck när du börjar och tryck när du slutar, och resten hamnade prydligt i ett arkiv som var färdigt att skicka i slutet av månaden.",
+      "Sedan kom tanken som ändrade allt: hjälper det mig så hjälper det kollegerna också. Och hjälper det chefen måste flödet vändas, för det är inte han som ska springa efter folk för att få timmarna, det är timmarna som ska nå honom varje dag av sig själva.",
+      "Därifrån växte verktyget i bara en riktning. Först platsangivelse byggd för att hålla sig inom lagens ramar: positionen läses bara när medarbetaren stämplar (in, raster, ut) och aldrig löpande. Sedan det verifierbara beviset på utfört arbete, för det verkliga problemet var aldrig att räkna timmarna, det var att bevisa dem när någon ifrågasatte dem.",
       "Just det, och det stavas GeoTapp, med två P. Hittar du ett med bara ett någonstans är det inte vi, men vi bär inget agg.",
-      "Namnet har för övrigt allt i sig. Positionen, ett tap, en app."
+      "Namnet har för övrigt allt i sig: positionen, ett tryck, en app."
     ],
     "values_title": "Våra värderingar",
     "values": [
       {
-        "title": "Tydlig mission",
+        "title": "Ett tydligt uppdrag",
         "desc": "Göra varje uppdrag mätbart och verifierbart. Fältarbete förtjänar samma transparensverktyg som ett kontor."
       },
       {
-        "title": "Dedikerat team",
+        "title": "Ett litet team",
         "desc": "Vi är ett litet team som är besatta av problemet vi löser. Varje funktion kommer från verklig feedback, inte från marknadsföringsplaner."
       },
       {
-        "title": "Privacy by Design",
-        "desc": "Data säljs inte, och positionen läses två gånger under ett pass, när du öppnar det och när du stänger det. Däremellan vet verktyget inte var du är."
+        "title": "Integritet från start",
+        "desc": "Data säljs inte, och positionen läses bara när du stämplar: vid start, vid raster och vid slut, plus bevisfotot om du tar ett. Mellan två stämplingar registreras ingenting automatiskt."
       },
       {
-        "title": "Made in Italy",
+        "title": "Gjort i Italien",
         "desc": "Utvecklat i Italien för den italienska och europeiska marknaden. GDPR-regler, arbetskultur och lokala regler finns i produktens DNA."
       }
     ],
     "cta_title": "I andra änden sitter en människa",
     "cta_desc": "Ett litet företag som bygger ett verktyg åt företag med folk ute på fältet. Skriver du får du svar av någon som själv har haft problemet.",
-    "cta_btn": "Skicka oss ett meddelande",
+    "cta_btn": "Skriv till oss",
     "stats": [
       {
         "number": "2024",
@@ -899,18 +912,18 @@
     "founder": {
       "section_label": "Grundaren",
       "name": "Michele Angelo Petraroli",
-      "role": "Founder & CEO",
-      "bio": "Michele Angelo Petraroli är grundare och CEO för GeoTapp, ett italienskt SaaS-företag för hantering av fältarbetare hos europeiska SMF. Från operativ erfarenhet såg han hur städföretag, installatörer och säkerhetsfirmor förlorar pengar när bevis på arbete saknas. Han grundade GeoTapp 2024 för att lösa problemet vid roten. Idag hjälper GeoTapp europeiska SMF med GPS-spårning byggd för att hålla sig inom GDPR, fotobevis och digitala signaturer som gör varje fältjobb verifierbart.",
+      "role": "Grundare",
+      "bio": "Michele Angelo Petraroli är grundare och ägare av GeoTapp, den italienska mjukvaran som dokumenterar fältteamens arbete hos europeiska småföretag. Genom direkt erfarenhet från tjänsteföretag (städning, installation, säkerhet) såg han hur mycket pengar som går förlorade när beviset på utfört arbete saknas. Han grundade GeoTapp 2024 för att lösa problemet vid roten. Idag hjälper GeoTapp europeiska småföretag att bevisa det arbete de utfört: plats som registreras bara vid stämpling, bevisfoton och förseglade rapporter som kunden själv kan verifiera.",
       "expertise_label": "Expertområden",
       "expertise": [
-        "Fältservicehantering",
-        "GDPR & Anställdas geolokalisering",
-        "Workforce Management",
-        "B2B SaaS",
+        "Ledning av fältteam",
+        "GDPR och platsangivelse för anställda",
+        "Arbetsorganisation",
+        "Affärsprogramvara",
         "Europeiska SMF"
       ],
       "cta_linkedin": "LinkedIn",
-      "cta_email": "Kontakta mig"
+      "cta_email": "Skriv till mig"
     }
   },
   "stampa": {
@@ -918,18 +931,18 @@
     "metaDesc": "Pressmaterial för GeoTapp: vilka vi är, grundaren, verifierbara fakta och nedladdningsbara resurser. Kontakt: press@geotapp.com.",
     "badge": "PRESS",
     "hero_title": "Pressrum",
-    "hero_desc": "Allt du behöver för att skriva om GeoTapp: vilka vi är, vad vi gör och varför arbetsproof inte är övervakning. Material, fakta och kontakter för journalister och redaktioner.",
+    "hero_desc": "Allt du behöver för att berätta om GeoTapp: vilka vi är, vad vi gör och varför bevis på utfört arbete inte är övervakning. Material, fakta och kontakter för journalister och redaktioner.",
     "boilerplate_label": "Kort sagt",
-    "boilerplate_short": "GeoTapp är ett verktyg för tidrapportering och arbetsproof för företag med fältteam. Det registrerar plats och tidpunkt för en instämpling bara i det ögonblick medarbetaren själv stämplar, aldrig löpande, och producerar ett dokument som kunden själv kan kontrollera.",
-    "boilerplate_long": "GeoTapp uppstod ur ett konkret problem: att bevisa att ett jobb utfördes, var och när, utan att förvandla folk till prickar på en karta som bevakas hela dagen. Verktyget registrerar platsen enbart vid stämpling, raster inkluderade, lägger till foton och anteckningar från fältet och förseglar varje session så att varje ändring är spårbar. Resultatet är ett bevis som kunden kan verifiera självständigt, ett som skyddar arbetsgivaren vid en tvist lika väl som den medarbetare som felaktigt anklagas för att inte ha dykt upp. Det är byggt för alla som skickar team utanför kontoret, städföretag, installatörer, säkerhet, underhåll, bygg, och utformat för att hålla sig inom gränserna för reglerna om medarbetaruppföljning och GDPR.",
+    "boilerplate_short": "GeoTapp är ett verktyg för närvaroregistrering och bevis på utfört arbete för företag med team i fält. Det registrerar var och när en stämpling sker bara i det ögonblick medarbetaren stämplar, aldrig löpande, och tar fram ett dokument som beställaren kan kontrollera själv.",
+    "boilerplate_long": "GeoTapp föddes ur ett konkret problem: att bevisa att ett jobb utfördes, var och när, utan att förvandla människor till prickar på en karta som bevakas hela dagen. Verktyget registrerar platsen bara i stämplingsögonblicket, raster inräknade, lägger till foton och anteckningar från fältet och förseglar varje pass så att varje ändring går att upptäcka. Resultatet är ett bevis som kunden kan verifiera själv och som skyddar arbetsgivaren vid en tvist lika väl som den medarbetare som felaktigt anklagas för att inte ha dykt upp. Det är byggt för alla som skickar team utanför kontoret, städföretag, installatörer, säkerhet, underhåll, bygg, och utformat för att hålla sig inom gränserna för reglerna om övervakning av anställda och GDPR.",
     "facts_label": "Nyckelfakta",
     "facts": [
       {
         "k": "Vad",
-        "v": "Tidrapportering och arbetsproof för fältteam"
+        "v": "Närvaroregistrering och bevis på utfört arbete för fältteam"
       },
       {
-        "k": "Vem som helst kan kontrollera",
+        "k": "Kan kontrolleras av vem som helst",
         "v": "Appen begär aldrig platsbehörighet i bakgrunden: det går att kontrollera i APK-manifestet eller i butikens integritetsetikett. Vi skulle inte kunna spåra löpande ens om vi ville."
       },
       {
@@ -941,7 +954,7 @@
         "v": "Michele Angelo Petraroli"
       },
       {
-        "k": "Huvudkontor",
+        "k": "Säte",
         "v": "Trenzano (BS)"
       },
       {
@@ -950,7 +963,7 @@
       }
     ],
     "founder_label": "Grundaren",
-    "founder_bio": "Michele Angelo Petraroli arbetade inom evenemangsbevakning och hatade varje dag samma syssla: att anteckna sina timmar för hand. Apparna han testade gjorde samma jobb med snyggare knappar, så under semestern byggde han sin egen version: tryck på starta, tryck på stoppa, en prydlig månadssum klar vid månadens slut. Det är därifrån GeoTapp kom, först till hans kollegor, sedan som ett system för att bevisa att arbetet utfördes utan att övervaka de människor som utför det.",
+    "founder_bio": "Michele Angelo Petraroli arbetade med säkerhet vid evenemang, och hatade varje dag samma sak: att anteckna sina timmar för hand. Apparna han provade gjorde samma sak med snyggare knappar, så på semestern byggde han en egen version: tryck för att börja, tryck för att sluta, en ordnad månadssumma redo vid månadens slut. Därifrån kom GeoTapp, först för kollegorna, sedan som ett system för att bevisa utfört arbete utan att övervaka dem som utför det.",
     "resources_label": "Pressresurser",
     "resources_intro": "Logotyp, foto och färdiga material samt de kostnadsfria verktyg vi gör tillgängliga för alla.",
     "logo_download": "Ladda ner logotypen",
@@ -958,8 +971,8 @@
     "photo_download_2": "Foto på grundaren (på scenen)",
     "photo_download_3": "Foto på grundaren (närbild)",
     "photo_download_wide": "Foto på grundaren (brett format)",
-    "asset_map": "EU-medarbetare GPS-karta",
-    "asset_facsimile": "GPS-integritetspolicyformulär",
+    "asset_map": "GPS-karta över EU:s arbetstagare",
+    "asset_facsimile": "Mall för GPS-integritetsinformation",
     "contact_label": "Presskontakt",
     "contact_office": "GeoTapp Pressavdelning",
     "contact_email": "press@geotapp.com",
@@ -969,34 +982,34 @@
   },
   "blog": {
     "hero_title": "Guider om arbetsbevis, GDPR och team i fält.",
-    "hero_desc": "Vi skriver inte för att fylla sidor. Vi skriver för att dela vad vi lär oss medan vi bygger framtiden för verifierbart arbete.",
+    "hero_desc": "Praktiska guider för dig som skickar team ut i fält: hur du bevisar utfört arbete, vad lagen säger om GPS för anställda och hur du håller ordning på timmar och närvaro.",
     "no_posts": "Inga artiklar tillgängliga för tillfället.",
     "read_article": "Läs artikel →",
-    "cta_title": "Håll dig uppdaterad",
-    "cta_desc": "Inget spam, bara värdefulla uppdateringar om produkten och branschen.",
-    "cta_btn": "Kontakta oss",
+    "cta_title": "Testa GeoTapp gratis i 14 dagar",
+    "cta_desc": "Full åtkomst till alla moduler. Inget kreditkort, ingen förpliktelse.",
+    "cta_btn": "Starta gratis provperiod",
     "schema_desc": "Guider och insikter om verifierbart bevis för fältarbete, teamhantering, GDPR och geolokalisering.",
-    "meta_title": "Blogg | GeoTapp - Verifiering av fältarbete",
-    "meta_desc": "Guider, insikter och resurser om teamhantering, förseglat bevis av interventioner, GDPR och geolokalisering. Från GeoTapp-teamet.",
+    "meta_title": "Blogg | GeoTapp - Verifierbart fältarbete",
+    "meta_desc": "Guider, analyser och resurser om teamledning, verifierbart bevis på fältarbete, GDPR och platsangivelse. Från GeoTapp-teamet.",
     "cat_all": "Alla",
-    "toc_title": "Innehall",
-    "reading_time_suffix": "min lastid",
+    "toc_title": "Innehåll",
+    "reading_time_suffix": "min läsning",
     "cta_sidebar_title": "Testa GeoTapp gratis",
-    "cta_sidebar_desc": "14 dagar, inget kreditkort kravs",
-    "cta_sidebar_btn": "Borja nu",
+    "cta_sidebar_desc": "14 dagar, inget kreditkort krävs",
+    "cta_sidebar_btn": "Börja nu",
     "related_title": "Relaterade artiklar",
     "cta_final_title": "Testa GeoTapp gratis i 14 dagar",
-    "cta_final_desc": "Inget kreditkort kravs. Kom igang pa 2 minuter.",
-    "cta_final_btn": "Borja nu",
-    "read_post": "Las",
+    "cta_final_desc": "Inget kreditkort krävs. Kom igång på 2 minuter.",
+    "cta_final_btn": "Börja nu",
+    "read_post": "Läs",
     "next_step_text": "Se hur GeoTapp löser detta problem för {sector}-företag",
     "next_step_fallback": "Se hur GeoTapp fungerar för ditt företag",
     "next_step_cta": "Läs mer",
-    "hero_tagline": "Tankar och Gnistor."
+    "hero_tagline": "Guider och nyheter."
   },
   "trial": {
     "page_title": "14 dagar gratis. Inget kort.",
-    "page_subtitle": "Hela Business-planen i 14 dagar: obegränsade kontorsanvändare och upp till 50 medarbetare i fält. Inget kort, ingen bindning, och dagarna börjar vid din första inloggning, inte vid registreringen.",
+    "page_subtitle": "Hela Business-planen i 14 dagar: obegränsat antal kontorsanvändare och upp till 50 medarbetare i fält. Inget kort, ingen förpliktelse, och dagarna börjar räknas vid din första inloggning, inte vid registreringen.",
     "badge": "Gratis provperiod, 14 dagar",
     "form_title": "Skapa ditt konto",
     "form_company": "Företagsnamn",
@@ -1041,8 +1054,8 @@
     "benefits_title": "Vad ingår",
     "benefits": [
       {
-        "title": "Den största planen, inte en demo",
-        "desc": "Du provar GeoTapp Flow på full kraft: alla moduler ingår, ingen kostar extra, med obegränsade kontorsanvändare och 50 TimeTracker-platser aktiva från dag ett. Bara stämplingsplatserna betalas separat, ute i fält med TimeTracker och på kontoret inne i Flow."
+        "title": "Den största planen, inte en nedskalad version",
+        "desc": "Du provar GeoTapp Flow med full kraft: alla moduler, obegränsat antal kontorsanvändare och 50 TimeTracker-platser aktiva från start. Med ett abonnemang ingår Flows moduler i planen; separat betalar du bara stämplingsplatserna, ute i fält med TimeTracker och på kontoret inne i Flow."
       },
       {
         "title": "Inget kreditkort krävs",
@@ -1074,13 +1087,15 @@
     "success_sender": "E-postmeddelandet kommer från:",
     "form_seats_required_note": "* Obligatoriskt: ange 0 om du inte behöver några TimeTracker-licenser.",
     "trust_gdpr": "Ingen löpande spårning",
-    "trust_offline": "Offlinekontroll",
+    "trust_offline": "Offlineverifierare",
     "form_field_employees": "Hur många arbetar ute i fält?",
-    "form_field_employees_hint": "Frivilligt. Då skriver vi till dig om ditt fall, inte ett allmänt."
+    "form_field_employees_hint": "Frivilligt. Då skriver vi till dig om ditt fall, inte ett allmänt.",
+    "trust_gps": "Plats bara vid stämpling",
+    "trust_no_card": "Inget kreditkort"
   },
   "roi": {
-    "meta_title": "GeoTapp ROI-kalkylator - Upptäck dina verkliga besparingar",
-    "meta_desc": "Beräkna på 2 minuter hur mycket du skulle spara med GeoTapp: mindre byråkrati, färre tvister, mer produktiva operatörer. Utan e-post och utan konto.",
+    "meta_title": "GeoTapp ROI-kalkylator: uppskatta din årliga besparing",
+    "meta_desc": "Uppskatta på en minut hur mycket du skulle spara med GeoTapp: färre timmar byråkrati, färre tvister, mindre muntlig samordning. Utan e-post och utan konto.",
     "hero_title": "Beräkna din ROI med GeoTapp",
     "hero_subtitle": "Ange dina företagsdata och upptäck hur mycket du kan spara varje år.",
     "step1_title": "Ditt företag",
@@ -1127,13 +1142,13 @@
     "per_anno": "/ år",
     "label_operators": "operatörer",
     "embed_title": "GeoTapp ROI-kalkylator",
-    "intro": "Den här kalkylatorn uppskattar hur mycket ditt företag kan spara varje år genom att automatisera närvaro, arbetsrapporter och bevis på utfört arbete. Ange några siffror och få på 30 sekunder din årliga besparing, återbetalningstid och ROI, utan registrering.",
+    "intro": "Kalkylatorn uppskattar hur mycket ditt företag kan spara varje år genom att automatisera närvaro, arbetsrapporter och bevis på utfört fältarbete. Ange några uppgifter och se på en minut din uppskattade årliga besparing, återbetalningstid och ROI, utan registrering.",
     "faq_title": "Vanliga frågor om ROI-beräkningen",
     "pricing_link": "Se hur mycket du kan spara med ROI-kalkylatorn",
     "faq": [
       {
         "q": "Hur beräknas ROI för en app för GPS-tidrapportering?",
-        "a": "Uppskattningen bygger på tre konkreta poster: de administrativa timmar du sparar varje månad, de tvister och obefogad övertid du undviker tack vare geolokaliserade bevis, och den återvunna samordningstiden. Årssumman jämförs med abonnemangskostnaden för att ge ROI och återbetalningstid."
+        "a": "Uppskattningen utgår från tre konkreta poster: de administrativa timmar du sparar varje månad, de tvister och obefogade övertidstimmar som bevis på utfört arbete hjälper dig att undvika, och den återvunna samordningstiden. Årssumman jämförs med abonnemangskostnaden för att ge ROI och återbetalningstid."
       },
       {
         "q": "Måste jag registrera mig eller lämna en e-postadress för att se resultatet?",
@@ -1141,7 +1156,7 @@
       },
       {
         "q": "Vilka uppgifter baseras den uppskattade besparingen på?",
-        "a": "Endast på de värden du anger: antal anställda, platser eller arbetsplatser, timmar för administration, timkostnad och de tvister som är typiska för din bransch. Ju mer realistiska uppgifter, desto närmare är uppskattningen din situation."
+        "a": "Bara på de värden du själv anger: antal medarbetare, platser eller byggen du följer, timmar som läggs på administration, timkostnad och de tvister som är typiska för din bransch. Ju mer realistiska uppgifter, desto närmare ligger uppskattningen din situation."
       },
       {
         "q": "Är abonnemangskostnaden redan avdragen från den uppskattade besparingen?",
@@ -1149,7 +1164,7 @@
       },
       {
         "q": "Vad betyder återbetalningstiden i månader?",
-        "a": "Det är hur många månaders uppskattad besparing som krävs för att täcka ett år med verktyget. Under tolv betyder att det betalar sig själv redan första året, och det som kommer sedan är återvunnen marginal."
+        "a": "Det är hur många månaders uppskattad besparing som krävs för att täcka ett år med verktyget. Kommer det ut ett tal under tolv betalar verktyget sig själv inom första året, och det som följer är återvunnen marginal."
       },
       {
         "q": "Varför räknar kalkylen inte hem alla administrationstimmar?",
@@ -1158,54 +1173,57 @@
     ]
   },
   "settore_layout": {
-    "pain_subtitle": "Stämplingsappar registrerar. De förseglar inte. Skillnaden är enorm, och vid en tvist känner du den.",
+    "pain_subtitle": "Stämplingsappar registrerar. De förseglar inte. Skillnaden är enorm, och när tvisten kommer känner du den.",
     "before": "Före",
     "after": "Med GeoTapp",
-    "classic_app": "Standardapp / Kalkylblad",
+    "classic_app": "Vanlig app / kalkylblad",
     "roi_badge": "Beräkna din ROI",
     "roi_title": "Hur mycket skulle du spara med GeoTapp?",
-    "roi_desc": "Ange din teamstorlek och få en ROI-uppskattning på 30 sekunder. Utan registrering, utan email.",
+    "roi_desc": "Ange storleken på ditt team och se en ROI-uppskattning på en minut. Utan registrering, utan e-post.",
     "roi_cta": "Beräkna min ROI",
     "mockup_title": "Uppdrag öppet",
-    "mockup_gps": "GPS verifierad",
+    "mockup_gps": "Plats vid stämpling",
     "mockup_photos": "Foton bifogade",
     "mockup_photos_count": "3 geolokaliserade foton",
-    "mockup_sealed": "Förseglad efter stängning",
+    "mockup_sealed": "Förseglad vid stängning: varje ändring syns",
     "mockup_status_active": "Aktiv",
     "mockup_status_completed": "Slutförd",
     "mockup_status_summary": "4 operatörer aktiva på 6 platser",
+    "mockup_operator": "Operatör",
+    "mockup_opening": "Öppning",
+    "mockup_closing": "Stängning",
     "see_real_report": "Se en riktig rapport",
-    "cta_note": "Ingen bindning. Inget avtal. Vi konfigurerar för ditt riktiga fall."
+    "cta_note": "Gratis provperiod i 14 dagar, utan kreditkort."
   },
   "features": {
-    "title": "Kraft under huven.",
-    "subtitle": "Vi bygger inte leksaker. GeoTapp är en enterprise-plattform byggd för att skala. Här är de teknologier som gör magin möjlig.",
-    "gps_title": "GPS vid stämpling, inte hela dagen",
-    "gps_desc": "Positionen registreras bara när medarbetaren stämplar: vid in- och utstämpling, vid varje paus och vid varje bevisfoto. Däremellan registreras ingenting automatiskt. Dagens stämplingar visas var och en med GPS-koordinater, geofence-kontroll och skydd mot spoofing: kontoret vet vem som började var utan att ringa, och teamet vet exakt vad som registreras, och när.",
-    "offline_title": "Stämpla in med ett klick",
-    "offline_desc": "Ett klick för att stämpla in med GPS, markera raster och avsluta dagen. Varje uppdrag kan få ett foto bifogat som bevis på utfört arbete, och allt hamnar direkt i Flow.",
-    "encryption_title": "Military-Grade Encryption",
-    "encryption_desc": "Sov lugnt. Vi använder AES-256-kryptering i vila och TLS 1.3 i transit. Även om en angripare lyckades fånga upp dina data skulle de bara se vitt brus. Integritet är inte bara en juridisk kryssruta, det är matematik.",
-    "realtime_title": "Real-Time WebSocket",
-    "realtime_desc": "Sluta trycka F5. Tack vare WebSockets färdas information ögonblickligen. När en tekniker stänger ett ärende i Göteborg ser chefen i Stockholm pricken bli grön i samma millisekund. Det är som att vara överallt på en gång.",
-    "cms_title": "Headless CMS Integration",
-    "cms_desc": "Innehåll är flytande. Vår headless-arkitektur frikopplar data från presentation. Det innebär att du kan publicera ett blogginlägg, pusha det till mobilappen och skicka det via nyhetsbrev med ett enda klick.",
-    "datalake_title": "Scalable Data Lake",
-    "datalake_desc": "Från 100 till 100 miljoner poster utan att svettas. Vi använder partitionerad PostgreSQL för att hantera massiva datavolymer utan fördröjningar. Din historik är värdefull, vi behåller den för alltid, tillgänglig på ett ögonblick.",
-    "cdn_title": "Global CDN Edge",
-    "cdn_desc": "Hastighet är geografisk. Våra statiska resurser replikeras över 300+ datacenter världen över. Oavsett om din kund finns i New York eller Tokyo laddas din sajt som om servern vore i rummet bredvid."
+    "title": "Vad GeoTapp gör, funktion för funktion.",
+    "subtitle": "Från stämplingen i fält till rapporten som kunden kontrollerar själv. Här är vad som finns inuti, beskrivet för det det gör.",
+    "gps_title": "Platsen bara när du stämplar",
+    "gps_desc": "Platsen registreras när medarbetaren stämplar (in, raster, ut) och när ett bevisfoto tas. Mellan två stämplingar registreras ingenting automatiskt. I Flow visar skärmen Dagens stämplingar varje stämpling med dess plats och kontrollen mot arbetsplatsen: kontoret vet vem som började var utan att ringa, och teamet vet exakt vad som registreras, och när.",
+    "offline_title": "Stämpling med ett tryck, även utan nät",
+    "offline_desc": "Ett tryck för att starta passet, markera raster och avsluta det. Varje uppdrag kan ha sina bevisfoton. Saknas nätet ligger stämplingen sparad i telefonen och skickas av sig själv när signalen kommer tillbaka, med den tid då den gjordes.",
+    "encryption_title": "Falska positioner avvisas",
+    "encryption_desc": "Vid stämpling avvisar appen positioner som simulerats av appar för falsk plats, positioner som är för oprecisa och omöjliga förflyttningar. På foton avvisas ingenting: de flaggas, genom att tid och plats för bilden jämförs med stämplingens.",
+    "realtime_title": "Rapporten förseglar sig själv",
+    "realtime_desc": "När uppdraget är klart sätts rapporten ihop av stämplingar, foton och anteckningar och förseglas: en kedja av SHA-256-avtryck binder ihop varje händelse och varje foto, och roten signeras med GeoTapps nyckel. Varje senare ändring går att upptäcka.",
+    "cms_title": "Verifiering utan oss",
+    "cms_desc": "Beställaren får en länk och kontrollerar rapporten själv, online eller med offlineverifieraren: en enda fil som inte ansluter till internet och bär den publika nyckeln inuti. Det fungerar även om flera år, även utan GeoTapp.",
+    "datalake_title": "Data i Europa, sparad rätt tid",
+    "datalake_desc": "Tjänstens data ligger på servrar i Europeiska unionen och skickas krypterat. I registret raderas platser efter tolv månader, en period som företaget kan korta ner till trettio dagar; i rapporter som redan lämnats ut finns de kvar, eftersom de är förseglade dokument, och efter fem år raderas paketet.",
+    "cdn_title": "Kontor och fält sammankopplade",
+    "cdn_desc": "I Flow ser kontoret varje stämpling så fort den kommer in, hanterar uppdrag, team, scheman och ledigheter och exporterar timmar till lönen. Medarbetarna får uppdrag och meddelanden direkt i appen."
   },
   "kairos": {
     "subtitle": "Din GeoTapp-assistent",
-    "welcome": "Hej! Jag ar Kairos, GeoTapp-assistenten. Hur kan jag hjalpa?",
-    "placeholder": "Skriv din fraga...",
+    "welcome": "Hej! Jag är Kairos, GeoTapp-assistenten. Hur kan jag hjälpa dig?",
+    "placeholder": "Skriv din fråga...",
     "send": "Skicka",
     "quick_pricing": "Priser",
-    "quick_how": "Sa fungerar det",
+    "quick_how": "Så fungerar det",
     "quick_trial": "Gratis provperiod",
     "quick_contact": "Kontakta oss",
     "fallback": "Jag kunde inte hitta ett svar. Du kan omformulera eller kontakta oss direkt.",
-    "low_confidence": "Jag ar inte saker pa att jag forstod ratt. Vill du kontakta teamet?",
+    "low_confidence": "Jag är inte säker på att jag förstod rätt. Vill du kontakta teamet?",
     "contact_btn": "Kontakt",
     "powered_by": "Powered by GeoTapp"
   },
@@ -1220,10 +1238,10 @@
     "no_articles": "Inga artiklar än."
   },
   "sanzioniGps": {
-    "metaTitle": "GPS-bötesräknare: hur mycket du riskerar genom att övervaka anställda, land för land",
-    "metaDesc": "Välj ett land och se det verkliga maxbeloppet för GPS-övervakning av anställda och vilka skyldigheter som exponerar dig. Verifierade data, 39 europeiska länder.",
+    "metaTitle": "GPS-bötesräknare: vad du riskerar, land för land",
+    "metaDesc": "Välj land och se den högsta bot som faktiskt utdömts, eller lagens maxbelopp, för GPS-övervakning av anställda. Verifierade data, 39 länder.",
     "h1": "Hur mycket riskerar du genom att spåra dina anställda?",
-    "intro": "Välj ett land, se den högsta bot som faktiskt utdömts och bocka för det du redan har på plats: vi säger hur exponerad du är. Källverifierade data, 39 länder.",
+    "intro": "Välj land, se det högsta straffet (det som faktiskt utdömts där det finns ett offentligt fall, annars lagens maxbelopp: landssidan säger vilket) och bocka för det du redan har på plats: vi berättar hur utsatt du är. Källverifierade data, 39 länder.",
     "sanzioneMax": "Högsta bot",
     "casoCitato": "Verkligt fall",
     "fonte": "Se källan",
@@ -1239,8 +1257,8 @@
       "title": "Vanliga frågor",
       "items": [
         {
-          "q": "Vad är den verkliga risken om GPS inte är förenlig med reglerna?",
-          "a": "Det beror på landet och på vad som gick fel, men böterna enligt GDPR är inte symboliska: de når en andel av omsättningen som kan slå ut ett litet företag, och i flera stater tillkommer arbetsrättsliga konsekvenser. Välj destinationen ovan så ser du det verkliga maxbeloppet, med det fall som det bygger på."
+          "q": "Vad riskerar man egentligen om GPS inte följer reglerna?",
+          "a": "Det beror på landet och på vad som gick fel, men GDPR-sanktionerna är inte symboliska: de kan nå en andel av omsättningen, och i flera stater tillkommer konsekvenser inom arbetsrätten. Välj land ovan och se det högsta beloppet, med uppgift om det är en bot som faktiskt utdömts eller lagens maxbelopp."
         },
         {
           "q": "Drabbar GDPR-böterna verkligen små företag?",
@@ -1260,13 +1278,13 @@
         },
         {
           "q": "Hur sänker jag risken för böter?",
-          "a": "Genom att samla in det absolut minsta du faktiskt behöver: platsen vid instämpling, inte kontinuerlig spårning, med en underskriven integritetsinformation och en annan grund än samtycke. Det är precis så GeoTapp är byggt, och generatorn för integritetsinformation här i resurserna förbereder dokumentet som de ska skriva under."
+          "a": "Genom att samla in det minsta du verkligen behöver: platsen vid stämplingen, inte löpande spårning, med en undertecknad integritetsinformation och en annan grund än samtycke. Så är GeoTapp utvecklat, och generatorn för integritetsinformation här bland resurserna förbereder dokumentet som ska undertecknas."
         }
       ]
     }
   },
   "indiceSorveglianza": {
-    "metaTitle": "Index för medarbetarövervakning i Europa: rangordning av de 39 länderna",
+    "metaTitle": "Övervakningsindex för anställda i Europa: 39 länder",
     "metaDesc": "Vilka europeiska länder har de strängaste reglerna om medarbetarövervakning? Rangordning efter stränghetsindex, med högsta bot och källa. 39 länder.",
     "h1": "Index för medarbetarövervakning i Europa",
     "intro": "Europa behandlar inte övervakning av anställda likadant överallt. Vi har rangordnat 39 länder efter hur strängt ramverket är: fler skyldigheter, högre index. Klicka på kolumnerna för att sortera.",
@@ -1310,7 +1328,7 @@
   "attribuzione": {
     "datiVerificati": "Data insamlade och verifierade av GeoTapp.",
     "liberoCitare": "Du får citera dem fritt, så länge du anger källan med en länk till den här sidan.",
-    "ripubblicazione": "För fullständig återpublicering av datasetet eller kommersiell användning",
+    "ripubblicazione": "För fullständig återpublicering av datasetet eller kommersiell användning,",
     "contattaci": "kontakta oss",
     "titoloCita": "Citera den här sidan",
     "formatoTesto": "Text",
@@ -1327,15 +1345,15 @@
     "fonte": "Källa:"
   },
   "risorseGps": {
-    "metaTitleSelettore": "GPS och övervakning av anställda i Europa: vad som krävs för att följa reglerna, land för land",
-    "metaDescSelettore": "Välj ett land och se vad som krävs för att göra GPS och övervakning av anställda regelrätt: skyldigheter, förfarande, myndighet och en mall att ladda ner.",
+    "metaTitleSelettore": "GPS för anställda i Europa: vad som krävs per land",
+    "metaDescSelettore": "Välj land och se vad som krävs för att följa reglerna för GPS och övervakning av anställda: skyldigheter, förfarande, myndighet och en mall att ladda ner.",
     "h1Selettore": "GPS och övervakning av anställda, land för land",
-    "introSelettore": "Samma Europa, olika regler. Du skickar ett arbetslag för att installera, städa eller bevaka i ett annat land och utgår från att reglerna om GPS och övervakning av anställda är desamma som hemma. Det är de inte. Varje stat har sina egna, och de gäller där arbetet utförs: ett företag med en arbetsplats utomlands följer de lokala reglerna, även om laget bara är där på ett kort uppdrag. Välj destinationen så berättar vi vad som krävs för att vara regelrätt: skyldigheterna, förfarandet, vem du ska kontakta och mallen att ladda ner.",
+    "introSelettore": "Samma Europa, olika regler. Du skickar ett team för att montera, städa eller bevaka i ett annat land och utgår från att reglerna om GPS och kontroll av anställda är de samma som hemma. Det är de inte. Varje stat har sina egna, och de gäller där arbetet utförs: ditt italienska företag med en byggplats i Tyskland följer de tyska reglerna, även om arbetarna bara är där på tjänsteresa. Välj destination så berättar vi vad som krävs för att följa reglerna: skyldigheterna, förfarandet, vem du ska vända dig till och mallen att ladda ner.",
     "scegliPaese": "Välj ett land",
     "inArrivo": "Kommer snart",
     "inArrivoNota": "Vi håller på att förbereda sidan för det här landet.",
-    "metaTitleScheda": "{paese}: GPS-spårning av anställda, vad är tillåtet",
-    "metaDescScheda": "{paese}: när GPS-spårning av anställda är tillåten, vad de ska få veta, vilken myndighet som granskar, sanktioner och en mall.",
+    "metaTitleScheda": "{paese}: GPS för anställda, vad är lagligt",
+    "metaDescScheda": "{paese}: när GPS för anställda är lagligt, vad de ska få veta, vem som kontrollerar, sanktionerna och en mall att ladda ner.",
     "sezioneCosaServe": "Vad som krävs",
     "sezioneProcedura": "Förfarandet, steg för steg",
     "sezioneAChiInviare": "Vem du ska kontakta",
@@ -1354,15 +1372,15 @@
     "scaricaModello": "Ladda ner mallen",
     "autoritaCompetente": "Behörig myndighet",
     "disclaimer": "Det här är en informativ resurs, inte juridisk rådgivning. Innan du aktiverar ett övervakningssystem bör du låta en yrkesperson granska din situation.",
-    "ctaTitolo": "Vill du ha ett system som redan är regelrätt?",
-    "ctaTesto": "GeoTapp registrerar platsen endast vid instämpling, inte löpande, och tar fram informationstexten som de anställda ska skriva under. Prova det gratis.",
+    "ctaTitolo": "Vill du ha ett verktyg byggt för GDPR?",
+    "ctaTesto": "GeoTapp registrerar platsen bara när någon stämplar eller tar ett bevisfoto, aldrig löpande, och låter medarbetaren signera informationen i appen före första stämplingen. Prova det gratis.",
     "ctaBottone": "Prova GeoTapp gratis",
     "faq": {
       "title": "Vanliga frågor",
       "items": [
         {
           "q": "Får jag använda GPS för att hålla koll på mitt arbetslag medan de jobbar?",
-          "a": "GPS på jobbet är lagligt nästan överallt i Europa, på ett villkor: det ska organisera och styrka arbetet, inte övervaka personen. Det är hur du gör det som avgör. Att registrera platsen vid instämpling, när någon öppnar och avslutar ett jobb, är något helt annat än att följa personen i realtid hela dagen. Det första går nästan alltid att göra på rätt sätt, det andra nästan aldrig. Men vad \"rätt sätt\" betyder skiljer sig från land till land, och det handlar inte bara om pappersarbete: ibland krävs en överenskommelse med personalrepresentanterna eller en särskild rättslig grund. Sidan för ditt land, ovan, säger vad som faktiskt behövs."
+          "a": "GPS i arbetet är lagligt nästan överallt i Europa, på ett villkor: det ska hjälpa till att organisera och bevisa arbetet, inte övervaka personen. Det är hur du gör det som avgör. Att registrera platsen vid stämpling, när medarbetaren börjar, går på rast och slutar, är något helt annat än att följa personen i realtid hela dagen. Det första går nästan alltid att göra på rätt sätt, det andra nästan aldrig. Men vad \"på rätt sätt\" betyder skiljer sig från land till land, och det handlar inte bara om dokument: ibland krävs en överenskommelse med personalrepresentanterna eller en särskild rättslig grund. Sidan för ditt land, ovan, säger vad som verkligen krävs."
         },
         {
           "q": "Gäller reglerna i mitt eget land, eller i landet dit jag skickar laget?",
@@ -1377,65 +1395,65 @@
           "a": "Det är precis det som utlöser böterna. Löpande spårning anses oproportionerlig nästan överallt: du registrerar långt mer än du behöver för att betala timmarna eller styrka ett jobb. Den praktiska regeln är att samla in så lite som möjligt, platsen i det ögonblick som spelar roll, inte en tråd som följer personen från morgon till kväll."
         },
         {
-          "q": "Vad riskerar jag om jag sätter på ett system utan att följa reglerna?",
-          "a": "Det beror på landet, men böterna enligt GDPR når belopp som inget litet företag vill se, och i vissa stater finns det dessutom konsekvenser enligt arbetsrätten. Det verkliga problemet är dock ofta inte boten: det är att data som samlas in på fel sätt blir oanvändbar precis när du behöver den, i en tvist eller inför en kund som ifrågasätter fakturan. På varje landsblad ser du den verkliga maxsanktionen och de fall som finns dokumenterade."
+          "q": "Vad riskerar jag om jag slår på ett system utan att följa reglerna?",
+          "a": "Det beror på landet, men GDPR-sanktionerna når belopp som inget litet företag vill se, och i vissa stater tillkommer konsekvenser inom arbetsrätten. Det verkliga problemet är dock ofta inte boten: det är att data som samlats in på fel sätt blir oanvändbar just när du behöver den, i en rättstvist eller inför en kund som ifrågasätter fakturan. På varje landssida hittar du lagens maxbelopp och, där det finns, den bot som faktiskt utdömts i ett verkligt fall."
         },
         {
           "q": "Är GeoTapp ett övervakningssystem?",
-          "a": "Nej, och det byggdes uttryckligen för att inte vara det. Verktyget registrerar platsen endast vid instämpling, när någon öppnar eller avslutar ett jobb, aldrig löpande, och det tar fram informationstexten som de ska skriva under. Det finns där för att styrka vad som gjorts och var, inte för att hålla koll på folk. Det är skillnaden mellan ett bevis på utfört arbete och ett koppel."
+          "a": "Nej, det är inte byggt för att övervaka. Det registrerar platsen vid varje stämpling (in, rast, ut) och när ett bevisfoto tas; mellan två stämplingar registrerar det ingenting. Och det tar fram informationen som ska undertecknas. Det finns för att bevisa vad som gjorts och var, inte för att titta på människor. Det är skillnaden mellan ett bevis på utfört arbete och ett koppel."
         }
       ]
     },
     "mappaFonte": "Karta:",
     "mappaDi": "av",
     "regoleComuni": {
-      "titolo": "Reglerna som galler i hela Europa",
-      "intro": "Innan du tittar pa ett enskilt land ar det bra att veta vad som aldrig andras. Dataskyddsforordningen galler lika i alla medlemsstater, och dessa sex principer haller overallt. Ovanpa ligger den nationella arbetsratten, och det ar den som skiftar vid varje grans.",
+      "titolo": "Reglerna som gäller i hela Europa",
+      "intro": "Innan du tittar på ett enskilt land är det bra att veta vad som aldrig ändras. GDPR gäller lika i alla medlemsstater, och dessa sex principer håller överallt. Ovanpå kommer den nationella arbetsrätten, och det är den som skiftar vid varje gräns.",
       "regole": [
         {
-          "titolo": "Ett berattigat andamal, angivet i forvag",
-          "testo": "Att organisera arbetet, skydda sakerheten, dokumentera prestationen. Aldrig 'att kontrollera personen': det ar inte ett tillatet andamal (artiklarna 5 och 6)."
+          "titolo": "Ett berättigat ändamål, angivet i förväg",
+          "testo": "Att organisera arbetet, skydda säkerheten, dokumentera prestationen. Aldrig \"att kontrollera personen\": det är inte ett tillåtet ändamål (artiklarna 5 och 6 i GDPR)."
         },
         {
-          "titolo": "Bara de uppgifter som behovs, och bara nar de behovs",
-          "testo": "Det ar uppgiftsminimering (artikel 5.1 c). Att registrera positionen vid start och slut dokumenterar; att registrera varje minut overvakar, och det ar det vanligaste skalet till sanktioner i Europa."
+          "titolo": "Bara de uppgifter som behövs, och bara när de behövs",
+          "testo": "Det är principen om uppgiftsminimering (artikel 5.1 c). Att registrera platsen i början och slutet av arbetet dokumenterar; att registrera den varje minut övervakar personen."
         },
         {
-          "titolo": "Oppenhet forst, inte efterat",
-          "testo": "Medarbetaren ska i forvag veta vad som registreras, nar, varfor och hur lange (artiklarna 12 och 13). En generisk information, eller en som inte stammer med det verkliga systemet, raknas som ingen information."
+          "titolo": "Öppenhet först, inte efteråt",
+          "testo": "Medarbetaren ska i förväg veta vad som registreras, när, varför och hur länge (artiklarna 12 och 13). En allmän information, eller en som inte stämmer med det verkliga systemet, räknas som ingen information alls."
         },
         {
-          "titolo": "Lagring under en bestamd tid",
-          "testo": "Uppgifter sparas den tid andamalet kraver, bestamd och nedskriven i forvag, inte 'sa lange de ar till nytta' (artikel 5.1 e)."
+          "titolo": "Lagring under en bestämd tid",
+          "testo": "Uppgifter sparas under den tid som ändamålet kräver, bestämd och nedskriven i förväg, inte \"så länge de är till nytta\" (artikel 5.1 e)."
         },
         {
-          "titolo": "Konsekvensbedomning nar risken ar hog",
-          "testo": "Systematisk overvakning av anstallda hor typiskt till de fall som kraver en DPIA (artikel 35), och den ska goras innan systemet slas pa, inte efterat."
+          "titolo": "Konsekvensbedömning när risken är hög",
+          "testo": "Systematisk övervakning av anställda hör typiskt till de fall som kräver en DPIA (artikel 35), som ska göras innan systemet slås på, inte i efterhand."
         },
         {
-          "titolo": "Uppgifter insamlade for ett andamal ateranvands inte for ett annat",
-          "testo": "Det ar andamalsbegransning (artikel 5.1 b). Positioner som samlats in for att dokumentera arbete blir inte automatiskt bevis i ett arbetsrattsligt arende."
+          "titolo": "Uppgifter som samlats in för ett ändamål återanvänds inte för ett annat",
+          "testo": "Det är ändamålsbegränsningen (artikel 5.1 b). Positioner som samlats in för att dokumentera arbete blir inte automatiskt bevis i ett disciplinärende."
         }
       ],
-      "nota": "Sedan finns artikel 88, som later varje stat lagga till egna regler om behandling av personuppgifter i anstallningsforhallanden. Darfor finns landkorten harunder: det som andras ar vem som ska godkanna, inte principen."
+      "nota": "Sedan finns artikel 88 i GDPR, som låter varje stat lägga till egna regler om behandling av personuppgifter i anställningsförhållanden. Därför finns landssidorna nedan: det som ändras är vem som ska ge tillstånd, inte principen."
     },
     "sanzioneTipoCasoGps": "från ett verkligt GPS-fall",
-    "sanzioneTipoCasoAffine": "närliggande fall, inte GPS",
-    "sanzioneTipoMassimale": "lagens maxbelopp, inte ett utdömt vite",
-    "fonteNonUfficialeEtichetta": "inte en officiell kalla",
-    "fonteNonUfficialeAvviso": "Denna uppgift kommer inte fran en officiell kalla. Nedan finns den direkta lanken till kallan vi har anvant. Eftersom den inte kan kontrolleras hos behorig myndighet kan vi inte garantera att den ar korrekt och konsekvent.",
-    "fonteNonUfficialeTipo_studio_legale": "advokatbyra",
+    "sanzioneTipoCasoAffine": "närliggande fall, inte om GPS för anställda",
+    "sanzioneTipoMassimale": "lagens maxbelopp",
+    "fonteNonUfficialeEtichetta": "inte en officiell källa",
+    "fonteNonUfficialeAvviso": "Den här uppgiften kommer inte från en officiell källa. Nedan finns den direkta länken till källan vi har använt. Eftersom vi inte kan kontrollera den hos behörig myndighet kan vi inte garantera att den är korrekt och konsekvent.",
+    "fonteNonUfficialeTipo_studio_legale": "advokatbyrå",
     "fonteNonUfficialeTipo_stampa": "nyhetsmedium",
-    "fonteNonUfficialeTipo_banca_dati": "privat rattsdatabas",
-    "fonteNonUfficialeTipo_compilazione": "privat sammanstallning"
+    "fonteNonUfficialeTipo_banca_dati": "privat rättsdatabas",
+    "fonteNonUfficialeTipo_compilazione": "privat sammanställning"
   },
   "videoTutorial": {
     "title": "Från första inloggningen till första stämplingen",
-    "note": "Två minuter, utan omsvep: du ställer in Flow, bjuder in din första medarbetare och ser den första stämplingen dyka upp på kartan.",
+    "note": "Två minuter, utan omsvep: du ställer in Flow, bjuder in din första medarbetare och ser hennes eller hans första stämpling komma in till kontoret, med tid och plats.",
     "cta": "Se videon, 2 minuter"
   },
   "videoGiro": {
-    "kicker": "Se det arbeta",
+    "kicker": "Se hur det fungerar",
     "title": "Ett skift, åttio sekunder, inget iscensatt",
     "note": "En riktig telefon på platsen och en riktig skärm på kontoret, inspelade i samma ögonblick. Ljudet börjar avstängt, och undertexterna bär orden tills du skruvar upp.",
     "audioOn": "Slå på ljudet",
@@ -1455,7 +1473,7 @@
       "transcriptTitle": "Vad filmen säger",
       "transcriptNote": "Samma ord som rösten, att läsa.",
       "honestyTitle": "Vad den här filmen är, och vad den inte är",
-      "honesty": "Skiftets data är testdata, och de två bilderna på elcentralen är utbytta i klippningen, eftersom bevisen togs med täckt objektiv. Programmets beteende är det verkliga, inspelat utan retusch. Positionen skrivs vid stämplingen och aldrig däremellan, och ett förseglat paket hjälper till att visa att det som lämnats inte har rörts, men utgör inte i sig ett absolut bevis för det underliggande förhållandet och är inte juridisk rådgivning.",
+      "honesty": "Passets data är testdata, och de två bilderna på elcentralen är utbytta i klippningen, eftersom bevisen togs med täckt objektiv. Programvarans beteende är det verkliga, inspelat utan retusch. Platsen skrivs vid stämplingen, och mellan två stämplingar registreras ingenting automatiskt, och ett förseglat paket hjälper till att visa att det som lämnats ut inte har rörts, men är ensamt inget absolut bevis för själva händelsen och är inte juridisk rådgivning.",
       "ctaTitle": "Fjorton dagar, på dina egna skift",
       "ctaText": "Samma skift går på dina uppdrag, med din telefon, i fjorton dagar och utan kort.",
       "youtubeNote": "Den finns också på YouTube, på elva språk."
@@ -1476,7 +1494,9 @@
     "segnala_t": "Rapportera ett problem",
     "segnala": "Om du stöter på ett hinder på denna webbplats, skriv till info@geotapp.com och ange sidan och vad du inte kunde göra. Vi svarar inom trettio dagar. Är svaret inte tillfredsställande kan du vända dig till behörig tillsynsmyndighet i ditt land.",
     "data_t": "Datum",
-    "data": "Redogörelse upprättad den 23 september 2026, på grundval av bedömningen samma datum."
+    "data": "Redogörelse upprättad den 23 september 2026, på grundval av bedömningen samma datum.",
+    "meta_title": "Tillgänglighetsredogörelse | GeoTapp",
+    "meta_description": "Hur tillgänglig geotapp.com är: vad som har kontrollerats, med vilken metod, de kända begränsningarna och hur du rapporterar ett problem."
   },
   "contentDates": {
     "updatedOn": "Uppdaterad den"

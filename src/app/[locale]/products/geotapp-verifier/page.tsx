@@ -16,7 +16,7 @@ const verifierMeta: Record<string, { title: string; description: string }> = {
   es: { title: "GeoTapp Verifier: verificación independiente de informes", description: "Verifier comprueba que un informe de GeoTapp no se haya modificado después del sello y que proceda de GeoTapp. Gratuito, sin cuenta, incluso sin conexión." },
   nl: { title: "GeoTapp Verifier: onafhankelijke controle van rapporten", description: "Verifier controleert dat een GeoTapp-rapport na de verzegeling niet is gewijzigd en dat het van GeoTapp komt. Gratis, zonder account, ook offline." },
   pt: { title: "GeoTapp Verifier: verificação independente de relatórios", description: "O Verifier confirma que um relatório GeoTapp não foi alterado depois de selado e que vem mesmo do GeoTapp. Gratuito, sem conta, mesmo sem ligação." },
-  sv: { title: "GeoTapp Verifier: oberoende verifiering av rapporter", description: "Verifier gör varje insats verifierbar med förseglad GPS, tidsstämplade foton och rapporter med spårbara ändringar. Din kund kontrollerar själv, utan konto." },
+  sv: { title: "GeoTapp Verifier: oberoende kontroll av rapporter", description: "Verifier kontrollerar att en GeoTapp-rapport inte har ändrats efter förseglingen och att den kommer från GeoTapp. Gratis, utan konto, även offline." },
   da: { title: "GeoTapp Verifier: uafhængig kontrol af rapporter", description: "Verifier kontrollerer, at en GeoTapp-rapport ikke er ændret efter forseglingen, og at den kommer fra GeoTapp. Gratis, uden konto, også offline." },
   nb: { title: "GeoTapp Verifier: uavhengig verifisering av rapporter", description: "Verifier gjør hvert oppdrag etterprøvbart med forseglet GPS, tidsstemplede bilder og rapporter med sporbare endringer. Kunden din sjekker selv, uten konto." },
   ru: { title: "GeoTapp Verifier: независимая проверка отчётов о работе", description: "Verifier делает каждый выезд проверяемым: запечатанные GPS-данные, фото с отметкой времени, отчёты с обнаруживаемыми изменениями. Заказчик проверяет сам, без аккаунта." },
@@ -134,6 +134,17 @@ const VERIFIER_FAQ: Record<string, object> = {
       { '@type': 'Question', name: 'Fungerer GeoTapp Verifier sammen med Flow og TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Dataene opstår i GeoTapp TimeTracker, i marken, og rapporten oprettes i GeoTapp Flow, på kontoret. Verifier er det gratis værktøj, som alle kan bruge til at kontrollere rapporten.' } },
     ],
   },
+  sv: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Hur fungerar kontrollen av en GeoTapp-rapport?', acceptedAnswer: { '@type': 'Answer', text: 'Varje GeoTapp-rapport förseglas när den skapas: en kedja av SHA-256-fingeravtryck binder ihop händelser och foton, och roten är signerad med GeoTapps nyckel. Kunden får rapporten som PDF och en fast länk till det förseglade paketet; kunden kontrollerar den online eller med den fristående verifieraren offline, som räknar om fingeravtrycken och kontrollerar signaturen.' } },
+      { '@type': 'Question', name: 'Vem kan kontrollera en GeoTapp-rapport?', acceptedAnswer: { '@type': 'Answer', text: 'Alla som har paketet, utan tillgång till företagets konto. Verifieraren offline har den publika nyckeln inbyggd: den fungerar även utan internet och utan GeoTapp.' } },
+      { '@type': 'Question', name: 'Vad händer om en kund ifrågasätter det utförda arbetet?', acceptedAnswer: { '@type': 'Answer', text: 'Du kan visa kunden rapporten: den innehåller tider, positioner som sparats vid stämplingarna och bevisfoton, och kunden kan själv kontrollera att ingen har ändrat den sedan förseglingen. Kontrollen visar att dokumentet är oförändrat; i sig är den varken ett absolut bevis för det faktiska förloppet eller juridisk rådgivning.' } },
+      { '@type': 'Question', name: 'Hur är det med dataskyddet (GDPR) i GeoTapp Verifier?', acceptedAnswer: { '@type': 'Answer', text: 'Verifieraren offline skickar ingenting till någon: den körs på din dator. Vid kontrollen online går filen via vår server, som inte sparar den. När det gäller uppgifterna i rapporten sparar GeoTapp positionen bara när medarbetaren stämplar (start, raster, slut) eller tar ett bevisfoto, aldrig löpande.' } },
+      { '@type': 'Question', name: 'Fungerar GeoTapp Verifier tillsammans med Flow och TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Uppgifterna uppstår i GeoTapp TimeTracker, på fältet, och rapporten skapas i GeoTapp Flow, på kontoret. Verifier är det kostnadsfria verktyget som alla kan använda för att kontrollera rapporten.' } },
+    ],
+  },
 };
 
 const VERIFIER_DESCRIPTION: Record<string, string> = {
@@ -144,7 +155,7 @@ const VERIFIER_DESCRIPTION: Record<string, string> = {
   es: 'GeoTapp Verifier comprueba que un informe de GeoTapp no se haya modificado después del sello y que proceda realmente de GeoTapp. Es gratuito, sin cuenta, incluso sin conexión: para las empresas que deben demostrar el trabajo realizado y para sus clientes.',
   nl: 'GeoTapp Verifier controleert dat een GeoTapp-rapport na de verzegeling niet is gewijzigd en dat het echt van GeoTapp komt. Het is gratis, zonder account, ook offline: voor bedrijven die het uitgevoerde werk moeten aantonen en voor hun klanten.',
   pt: 'O GeoTapp Verifier confirma que um relatório GeoTapp não foi alterado depois de selado e que vem mesmo do GeoTapp. É gratuito, sem conta, mesmo sem ligação: para as empresas que têm de demonstrar o trabalho realizado e para os seus clientes.',
-  sv: 'GeoTapp Verifier gör varje insats verifierbar med förseglad GPS-data, tidsstämplad fotodokumentation och rapporter med spårbara ändringar, oberoende verifierbara.',
+  sv: 'GeoTapp Verifier kontrollerar att en GeoTapp-rapport inte har ändrats efter förseglingen och att den verkligen kommer från GeoTapp. Det är gratis, utan konto, även offline: för företag som behöver visa det utförda arbetet och för deras kunder.',
   da: 'GeoTapp Verifier kontrollerer, at en GeoTapp-rapport ikke er ændret efter forseglingen, og at den virkelig kommer fra GeoTapp. Det er gratis, uden konto, også offline: til virksomheder, der skal dokumentere det udførte arbejde, og til deres kunder.',
   nb: 'GeoTapp Verifier gjør hvert oppdrag etterprøvbart med forseglet GPS-data, tidsstemplede fotobevis og rapporter med sporbare endringer, uavhengig verifiserbare.',
   ru: 'GeoTapp Verifier делает каждый выезд проверяемым: запечатанные GPS-данные, фотодоказательства с отметками времени и отчёты с обнаруживаемыми изменениями. Проверка независимая.',
@@ -215,6 +226,14 @@ const VERIFIER_FEATURES: Record<string, string[]> = {
     'Gratis offline verifier, én enkelt fil med den offentlige nøgle indbygget',
     'Virker med de rapporter, der oprettes i Flow og TimeTracker',
   ],
+  sv: [
+    'Rapporten förseglas när den skapas: SHA-256-kedja signerad med GeoTapps nyckel',
+    'Oberoende kontroll: kunderna får inte tillgång till ditt konto',
+    'Kedja över händelser, foton och tider',
+    'Fast länk till det förseglade paketet (geotapp.com/r/ följt av en kod)',
+    'Kostnadsfri verifierare offline, en enda fil med den publika nyckeln inbyggd',
+    'Fungerar med rapporterna som skapas i Flow och TimeTracker',
+  ],
 };
 
 function buildVerifierSoftware(locale: AppLocale) {
@@ -246,6 +265,8 @@ function buildVerifierSoftware(locale: AppLocale) {
         ? 'Gratuito, sem conta, também para quem recebe os relatórios.'
         : locale === 'da'
         ? 'Gratis, uden konto, også for dem, der modtager rapporterne.'
+        : locale === 'sv'
+        ? 'Gratis, utan konto, även för dem som tar emot rapporterna.'
         : 'Included in GeoTapp plans. Free verification for report recipients.',
     },
     publisher: { '@id': 'https://geotapp.com/#organization' },

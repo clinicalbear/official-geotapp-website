@@ -13,6 +13,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   pt: 'Normas e registos em Portugal',
   nl: 'Regels en documentatie in Nederland',
   da: 'Regler og dokumentation i Danmark',
+  sv: 'Regler och dokumentation i Sverige',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
   'en-au': 'Regional rules and records',
@@ -117,6 +118,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Autorisationer og dokumentation af installationen?',
       a: 'GeoTapp verificerer ingen autorisationer og laver ingen installationsdokumentation eller overensstemmelseserklæringer. Det registrerer klokkeslæt, position, fotos og noter for hver opgave, som du kan vedlægge anlæggets dokumentation.',
+    },
+  ],
+  sv: [
+    {
+      q: 'Timmar och resor i installationsföretaget?',
+      a: 'GeoTapp registrerar vid varje instämpling, rast och utstämpling position och tid, per tekniker och per uppdrag, och exporterar dem till Excel eller CSV för din redovisningsbyrå eller ditt lönekontor. Tillämpningen av kollektivavtalet (tillägg, ersättningar) och lönehanteringen ligger kvar hos redovisningsbyrån och företaget.',
+    },
+    {
+      q: 'Positionering av installatörer: GDPR och IMY?',
+      a: 'Positionen registreras bara vid stämpling och med bevisfoton, aldrig löpande, och informationen till medarbetarna signeras i appen före stämplingen. Det är företaget som själv måste ta reda på vad GDPR (intresseavvägning), medbestämmandelagen (MBL § 11, förhandling med facket innan systemet införs, där företaget är bundet av kollektivavtal) och IMY:s vägledning kräver i just ditt fall.',
+    },
+    {
+      q: 'Behörigheter och dokumentation av installationen?',
+      a: 'GeoTapp kontrollerar inga behörigheter och skapar ingen installationsdokumentation eller intyg. Det registrerar tid, position, foton och anteckningar för varje uppdrag, som du kan foga till anläggningens dokumentation.',
     },
   ],
   'en-us': [
