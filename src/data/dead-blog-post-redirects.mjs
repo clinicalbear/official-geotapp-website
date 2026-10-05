@@ -1,7 +1,7 @@
 // Redirect 301 dei post blog rimossi/ri-sluggati nella campagna di localizzazione (mar-apr 2026).
 // Sorgente: GSC Coverage 404 drilldown 2026-06-25 (128 post). Ognuno -> hub blog della sua lingua.
 // Generato per spegnere i 404 e recuperare l'equity residua. NON tocca i post vivi (match esatto).
-export const deadBlogPostRedirects = [
+const voci = [
   // 10/08/2026: consolidato nella guida GDPR di novembre. Esce come 308 (Next emette
   // 308 per permanent: true), verificato live. Fuori dall'indice dal 29/06
   // (37 giorni a zero impressioni, "crawled - currently not indexed"), stesso territorio
@@ -382,3 +382,11 @@ export const deadBlogPostRedirects = [
   { source: "/blog/fr/2026/03/18/gestion-dequipe-comment-organiser-les-departs-et-les-affectations-en-5-minutes/", destination: "/fr/blog/", permanent: true },
   { source: "/blog/fr/2026/03/18/gestion-dequipe-comment-organiser-les-departs-et-les-affectations-en-5-minutes", destination: "/fr/blog/", permanent: true },
 ];
+
+// 05/10/2026: i 14 post russi qui sopra non scattavano MAI. La richiesta arriva con il
+// path codificato (/blog/ru/.../%D0%B3%D0%B5...) e il confronto di Next non trova la
+// forma in cirillico, quindi davano ancora 404 nel report GSC. Per ogni sorgente non
+// ASCII si aggiunge la stessa voce codificata.
+export const deadBlogPostRedirects = voci.flatMap((v) =>
+  /[^\x00-\x7f]/.test(v.source) ? [v, { ...v, source: encodeURI(v.source) }] : [v],
+);
