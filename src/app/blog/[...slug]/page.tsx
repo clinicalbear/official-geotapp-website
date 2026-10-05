@@ -95,32 +95,50 @@ interface WPPost {
   };
 }
 
+// WordPress non raggiungibile: la pagina deve rispondere 5xx, non 404.
+class WpUnavailable extends Error {}
+
 async function fetchPost(articleSlug: string, requestedLocale?: string): Promise<WPPost | null> {
   const url = `${WP}/wp-json/wp/v2/posts/?slug=${encodeURIComponent(articleSlug)}&_embed=wp:featuredmedia,wp:term`;
   // 3 tentativi con backoff: un blip transitorio di WP non deve trasformare un post ESISTENTE
-  // in un 404 (rischio deindicizzazione). Una risposta OK con 0 risultati è invece un 404
-  // LEGITTIMO (slug inesistente) e non va ritentata.
+  // in un 404 (rischio deindicizzazione).
+  //
+  // 🔴 05/10/2026: prima, finiti i tentativi, si tornava null e la pagina dava 404. Misurato
+  // dal vivo con lo user agent di Googlebot: 6 articoli vivi su 40 rispondevano 404 alla
+  // prima richiesta e 200 a quella dopo, e il report GSC aveva articoli vivi fra i 404 e i
+  // 5xx. Ora: WP irraggiungibile = eccezione = 5xx, che Google ritenta invece di togliere la
+  // pagina; lista vuota = si richiede una seconda volta prima di dire che lo slug non esiste.
+  let emptyAnswers = 0;
+  let lastProblem = '';
   for (let i = 0; i < 3; i++) {
     try {
       const res = await wpFetch(url);
       if (res.ok) {
         const posts: WPPost[] = await res.json();
-        if (posts.length === 0) return null; // genuino: lo slug non esiste
-        // Polylang permette lo stesso slug in lingue diverse: se la query ne ritorna
-        // più d'uno, scegli quello che corrisponde alla lingua dell'URL richiesto.
-        if (posts.length > 1 && requestedLocale) {
-          const match = posts.find((p) => detectPostLocale(p) === requestedLocale);
-          if (match) return match;
+        if (posts.length === 0) {
+          emptyAnswers += 1;
+          if (emptyAnswers >= 2) return null; // detto due volte: lo slug non esiste
+          lastProblem = 'lista vuota';
+        } else {
+          // Polylang permette lo stesso slug in lingue diverse: se la query ne ritorna
+          // più d'uno, scegli quello che corrisponde alla lingua dell'URL richiesto.
+          if (posts.length > 1 && requestedLocale) {
+            const match = posts.find((p) => detectPostLocale(p) === requestedLocale);
+            if (match) return match;
+          }
+          return posts[0];
         }
-        return posts[0];
+      } else {
+        lastProblem = `HTTP ${res.status}`; // 5xx / 403 / 429 del WP: ritenta
       }
-      // risposta non-ok (5xx / blip): ritenta
-    } catch {
-      // errore di rete / timeout: ritenta
+    } catch (err) {
+      lastProblem = err instanceof Error ? err.name + ' ' + err.message : String(err); // rete / timeout
     }
     if (i < 2) await new Promise((r) => setTimeout(r, 250 * (i + 1)));
   }
-  return null;
+  if (emptyAnswers > 0 && lastProblem === 'lista vuota') return null;
+  console.error(`[blog] WP non risponde per lo slug "${articleSlug}": ${lastProblem}`);
+  throw new WpUnavailable(`WP non risponde per ${articleSlug}`);
 }
 
 function resolvePostData(post: WPPost, locale: string) {
