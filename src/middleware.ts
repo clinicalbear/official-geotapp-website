@@ -737,7 +737,7 @@ export async function middleware(req: NextRequest) {
   // Destinazione: la pagina equivalente che esiste davvero, "cos'e GeoTapp",
   // gia' localizzata dallo SLUG_MAP (was-ist-geotapp, wat-is-geotapp, ...).
   {
-    const HOW_IT_WORKS_LEGACY = new Set(['come-funziona', 'how-it-works', 'wie-es-funktioniert']);
+    const HOW_IT_WORKS_LEGACY = new Set(['come-funziona', 'how-it-works', 'wie-es-funktioniert', 'hoe-het-werkt', 'comment-ca-marche']);
     const bare = pathname.replace(/^\/|\/$/g, '');
     const withLocale = pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\/([a-z-]+)\/?$/);
     const supported = SUPPORTED_LOCALES as readonly string[];
@@ -758,6 +758,63 @@ export async function middleware(req: NextRequest) {
       const legacyRedirect = NextResponse.redirect(new URL(`/${detected}${target}`, req.url), 302);
       legacyRedirect.headers.set('X-Robots-Tag', 'noindex, follow');
       return legacyRedirect;
+    }
+  }
+
+  // 0a5. Indirizzi vecchi che Google tiene in memoria e che finivano in 404.
+  // Sorgente: GSC "Indicizzazione delle pagine" > Non trovata (404), letto il
+  // 05/10/2026 (444 URL), ricontrollati uno per uno dal vivo. Ognuno va alla
+  // pagina che esiste oggi, in un solo salto e gia' nello slug della sua lingua.
+  {
+    const supported = SUPPORTED_LOCALES as readonly string[];
+    const values = (key: string) => Object.values((SLUG_MAP[key] ?? {}) as Record<string, string>);
+    const SECTOR_KEYS = [
+      'pulizie', 'installatori', 'sicurezza', 'edilizia', 'impianti', 'manutenzione',
+      'impresa-di-pulizie', 'elettricisti', 'idraulici', 'termoidraulici',
+    ];
+    // Solo questi tre settori hanno la pagina "risorse"; per gli altri il link
+    // .../risorse/ e' di una versione vecchia del sito e va alla pagina del settore.
+    const WITH_RESOURCES = new Set(['pulizie', 'installatori', 'sicurezza']);
+    const sectorOf = new Map<string, string>();
+    for (const k of SECTOR_KEYS) for (const v of [k, ...values(k)]) sectorOf.set(v, k);
+    // Slug di settore cambiati in svedese, danese e norvegese.
+    sectorOf.set('installatorer', 'installatori');
+    sectorOf.set('stadning', 'pulizie');
+    sectorOf.set('rengoring', 'pulizie');
+    const SECTORS_PARENT = new Set(['settori', 'otrasli', ...values('settori')]); // otrasli: vecchio slug russo
+    const RESOURCES = new Set(['risorse', ...values('risorse')]);
+    const PRODUCTS = new Set(['products', ...values('products')]);
+    const PAGE_ALIAS: Record<string, string> = { contato: 'contact', 'quem-somos': 'chi-siamo', handleiding: 'guida' };
+
+    const seg = pathname.split('/').filter(Boolean);
+    const loc = seg[0];
+    let target: string | null = null;
+    if (loc && supported.includes(loc)) {
+      const l = loc as AppLocale;
+      if ((seg.length === 3 || seg.length === 4) && SECTORS_PARENT.has(seg[1]) && sectorOf.has(seg[2])) {
+        const key = sectorOf.get(seg[2])!;
+        const wantsResources = seg.length === 4 && RESOURCES.has(seg[3]);
+        if (seg.length === 3 || wantsResources) {
+          const base = wantsResources && WITH_RESOURCES.has(key) ? `/settori/${key}/risorse/` : `/settori/${key}/`;
+          target = `/${l}${translatePath(base, l)}`;
+        }
+      } else if (seg.length === 3 && PRODUCTS.has(seg[1]) && (seg[2] === 'zenith-seo' || seg[2] === 'fortyx')) {
+        // Prodotti ritirati il 10/03/2026: la decisione di allora era rimandarli al listino.
+        target = `/${l}${translatePath('/pricing/', l)}`;
+      } else if (seg.length === 3 && PRODUCTS.has(seg[1]) && seg[2] === 'geotapp-app') {
+        // appRenames in next.config copre solo /products/ in chiaro, non /produkter/ & co.
+        target = `/${l}${translatePath('/products/geotapp-timetracker/', l)}`;
+      } else if (seg.length === 2 && PAGE_ALIAS[seg[1]]) {
+        target = `/${l}${translatePath(`/${PAGE_ALIAS[seg[1]]}/`, l)}`;
+      } else if (seg.length === 5 && /^20\d\d$/.test(seg[1]) && /^\d\d$/.test(seg[2]) && /^\d\d$/.test(seg[3]) && !loc.includes('-')) {
+        // Articolo linkato senza /blog davanti (/en/2026/06/17/slug/).
+        target = `/blog/${l === 'it' ? '' : `${l}/`}${seg.slice(1).join('/')}/`;
+      }
+    } else if (seg.length === 2 && seg[0] === 'products' && (seg[1] === 'zenith-seo' || seg[1] === 'fortyx')) {
+      target = '/en/pricing/';
+    }
+    if (target && target !== (pathname.endsWith('/') ? pathname : `${pathname}/`)) {
+      return NextResponse.redirect(new URL(target, req.url), 301);
     }
   }
 
