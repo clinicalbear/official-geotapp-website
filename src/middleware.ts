@@ -806,12 +806,18 @@ export async function middleware(req: NextRequest) {
         target = `/${l}${translatePath('/products/geotapp-timetracker/', l)}`;
       } else if (seg.length === 2 && PAGE_ALIAS[seg[1]]) {
         target = `/${l}${translatePath(`/${PAGE_ALIAS[seg[1]]}/`, l)}`;
-      } else if (seg.length === 5 && /^20\d\d$/.test(seg[1]) && /^\d\d$/.test(seg[2]) && /^\d\d$/.test(seg[3]) && !loc.includes('-')) {
-        // Articolo linkato senza /blog davanti (/en/2026/06/17/slug/).
-        target = `/blog/${l === 'it' ? '' : `${l}/`}${seg.slice(1).join('/')}/`;
+      } else if (seg.length === 5 && /^20\d\d$/.test(seg[1]) && /^\d\d$/.test(seg[2]) && /^\d\d$/.test(seg[3])) {
+        // Articolo linkato senza /blog davanti (/en/2026/06/17/slug/). Le varianti
+        // inglesi (en-gb, en-us...) non hanno un blog loro: vanno su /blog/en/.
+        const blogLang = loc.startsWith('en-') ? 'en' : loc;
+        target = `/blog/${blogLang === 'it' ? '' : `${blogLang}/`}${seg.slice(1).join('/')}/`;
       }
     } else if (seg.length === 2 && seg[0] === 'products' && (seg[1] === 'zenith-seo' || seg[1] === 'fortyx')) {
       target = '/en/pricing/';
+    } else if (seg.length === 4 && /^20\d\d$/.test(seg[0]) && /^\d\d$/.test(seg[1]) && /^\d\d$/.test(seg[2])) {
+      // Articolo senza /blog e senza lingua (/2026/06/17/slug/): il permalink italiano.
+      // Se il post e' in un'altra lingua, la pagina del blog lo porta al suo canonical.
+      target = `/blog/${seg.join('/')}/`;
     }
     if (target && target !== (pathname.endsWith('/') ? pathname : `${pathname}/`)) {
       return NextResponse.redirect(new URL(target, req.url), 301);
