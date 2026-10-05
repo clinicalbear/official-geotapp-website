@@ -1173,7 +1173,23 @@ export async function middleware(req: NextRequest) {
         headers.set('cache-control', 'public, max-age=86400');
       }
 
-      return new NextResponse(rewriteWpContent(text), {
+      // Pagine demo del tema WordPress (05/10/2026): erano indicizzabili e nella
+      // sitemap del blog, alcune anche vietate da robots.txt (Google lo segnala come
+      // errore). Fuori dalla sitemap e noindex; WordPress non si tocca. Fuori anche
+      // /blog/, che Yoast mette in post-sitemap ma e' un redirect con noindex.
+      const THEME_PAGES = ['home', 'pagina-di-esempio', 'cart', 'checkout', 'my-account', 'contact', 'portfolio', 'services', 'about-us'];
+      let body = rewriteWpContent(text);
+      if (isXml && /^\/blog\/(?:post|page)-sitemap\d*\.xml\/?$/.test(pathname)) {
+        const fuori = new Set([`${SITE_ORIGIN}/blog/`, ...THEME_PAGES.map((p) => `${SITE_ORIGIN}/blog/${p}/`)]);
+        body = body.replace(/<url>\s*<loc>([^<]+)<\/loc>[\s\S]*?<\/url>\s*/g, (blocco, loc: string) =>
+          fuori.has(loc.trim()) ? '' : blocco,
+        );
+      }
+      if (isHtml && THEME_PAGES.some((p) => pathname === `/blog/${p}/` || pathname === `/blog/${p}`)) {
+        headers.set('X-Robots-Tag', 'noindex, follow');
+      }
+
+      return new NextResponse(body, {
         status: wpRes.status,
         headers,
       });

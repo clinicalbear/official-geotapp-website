@@ -232,6 +232,15 @@ const nextConfig = {
   // cache calda (il TTFB era tornato a 288 ms, quindi non era cache fredda).
   // Se un giorno si riprova, serve estrarre il CSS critico VERO, non tutto.
   experimental: { cpus: 4 },
+  // Metadati (title, canonical, hreflang) SEMPRE nella <head> per i motori di ricerca.
+  // Next 16 li manda "in streaming" ai bot che eseguono JS, Googlebot compreso: se
+  // generateMetadata e' lento (articolo del blog che aspetta WordPress) finiscono in
+  // fondo al <body>. Misurato il 05/10/2026 con lo user agent di Googlebot: 3 articoli
+  // su 60 con title e canonical nel body, mai con Chrome. Un canonical fuori dalla head
+  // Google non lo considera. Questa lista sostituisce quella di default di Next, che
+  // e' ripresa qui sotto, con in piu' Googlebot, gli altri crawler Google e Bing.
+  htmlLimitedBots:
+    /Googlebot|Google-InspectionTool|Storebot-Google|GoogleOther|AdsBot-Google|bingbot|BingPreview|Mediapartners-Google|Slurp|DuckDuckBot|baiduspider|yandex|sogou|bitlybot|tumblr|vkShare|quora link preview|facebookexternalhit|facebookcatalog|Twitterbot|applebot|redditbot|Slackbot|Discordbot|WhatsApp|SkypeUriPreview|Yeti|googleweblight|LinkedInBot/i,
   // Nel browser getDictionary legge il dizionario consegnato dal server invece di
   // importare tutti gli 11 JSON (~1 MB, 303 KB compressi a ogni prima visita).
   // Vedi src/lib/i18n/client-dictionary-store.ts. Il server usa sempre dictionaries.ts.
