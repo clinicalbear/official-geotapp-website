@@ -2,22 +2,22 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Mobile Zeiterfassung für Gebäudereinigung: GPS & Fotobeweis je Objekt',
-    description: 'Mobile Zeiterfassung für Reinigungskräfte: GPS nur beim Stempeln und Fotos jedes Einsatzes, die Nachweise für den Kunden, wenn er eine Leistung bestreitet. 14 Tage kostenlos testen.',
+    title: 'Zeiterfassung Gebäudereinigung: mobil, objektgenau | GeoTapp',
+    description: 'Digitale Zeiterfassung für die Gebäudereinigung: Beginn, Pause und Ende je Objekt per App. GPS nur beim Stempeln, Fotos je Einsatz, Berichte für den Kunden. 14 Tage kostenlos.',
   },
 
   hero: {
     badge: 'App für Reinigungsunternehmen, Facility Management und Gebäudedienste',
-    h1_line1: 'Die App für Reinigungsunternehmen,',
-    h1_line2: 'die jeden Einsatz versiegelt.',
+    h1_line1: 'Zeiterfassung für die Gebäudereinigung,',
+    h1_line2: 'objektgenau und mit Fotonachweis.',
     subtitle:
-      'GeoTapp ist die App für Reinigungsunternehmen, die jeden Einsatz in einen Nachweis zum Vorzeigen verwandelt. Kunden bestreiten etwas, und eine aufgeschriebene Uhrzeit reicht nicht. GeoTapp erfasst die Position bei jeder Stempelung, sammelt die Nachweisfotos und fasst alles in einem versiegelten Bericht zusammen, in dem jede Änderung erkennbar ist und den der Auftraggeber selbst prüfen kann.',
+      'GeoTapp ist die mobile Zeiterfassung für Reinigungsunternehmen: Reinigungskräfte stempeln Beginn, Pausen und Ende je Objekt am Smartphone. Die Position wird nur in diesem Moment erfasst, nie durchgehend. Dazu kommen die Fotos des Einsatzes und ein versiegelter Bericht, in dem jede Änderung erkennbar ist und den auch der Auftraggeber selbst prüfen kann.',
     cta_primary: 'An einem echten Objekt testen',
     cta_note: '14 Tage, bis zu 50 Mitarbeiter im Außendienst, ohne Kreditkarte.',
   },
 
   pain: {
-    title: 'Was Sie nicht belegen können, ist für den Kunden nie passiert.',
+    title: 'Ohne saubere Zeiterfassung ist ein Einsatz für den Kunden nie passiert.',
     items: [
       {
         title: 'Der Kunde bestreitet den Einsatz',
@@ -57,7 +57,7 @@ const content: SettoreContent = {
   },
 
   differenza: {
-    title: 'Stempelung oder überprüfbarer Arbeitsnachweis.',
+    title: 'Digitale Zeiterfassung oder bloßes Stempeln?',
     subtitle: 'Die meisten Apps erfassen Daten. GeoTapp liefert Nachweise.',
     rows: [
       {
@@ -126,7 +126,7 @@ const content: SettoreContent = {
   },
 
   workflow: {
-    title: 'Von der Baustelle ins Büro wird jeder Einsatz zum Nachweis.',
+    title: 'Elektronische Zeiterfassung im Objekt: von der Stempelung zum Bericht.',
     subtitle: 'Drei Schritte. Kein Papier. Keine Anrufe.',
     steps: [
       {
@@ -145,7 +145,7 @@ const content: SettoreContent = {
   },
 
   features: {
-    title: 'App für Reinigungsunternehmen: weniger Diskussion, mehr Nachweise.',
+    title: 'Zeiterfassung für Reinigungskräfte: weniger Diskussion, mehr Nachweise.',
     items: [
       {
         title: 'Auf jeden Einwand mit Daten antworten',
@@ -217,10 +217,43 @@ const content: SettoreContent = {
     badge: 'Von jedem prüfbar, ohne Zugang zu Ihrem Konto',
   },
 
+  guida: [
+    {
+      h2: 'Zeiterfassungspflicht in der Gebäudereinigung: was Sie aufzeichnen müssen',
+      paras: [
+        'Das Bundesarbeitsgericht hat am 13.09.2022 (Az. 1 ABR 22/21) entschieden: Arbeitgeber müssen Beginn und Ende der täglichen Arbeitszeit erfassen, Überstunden eingeschlossen. Grundlage ist § 3 Abs. 2 Nr. 1 ArbSchG. Ob das elektronisch oder auf Papier geschieht, schreibt das Gericht nicht vor.',
+        'In der Gebäudereinigung gilt zusätzlich § 17 MiLoG: Beginn, Ende und Dauer der täglichen Arbeitszeit sind spätestens sieben Tage nach der Arbeitsleistung aufzuzeichnen und mindestens zwei Jahre aufzubewahren.',
+        'GeoTapp erfasst Beginn, Pausen und Ende je Mitarbeiter und Objekt mit Uhrzeit und Position, direkt am Smartphone, und Sie exportieren die Stunden als Excel- oder CSV-Datei. Ob Ihr Betrieb damit alle Pflichten erfüllt, bewerten Sie mit Ihrer Beratung.',
+      ],
+    },
+    {
+      h2: 'Mobile Zeiterfassung in wechselnden Objekten, ohne Stundenzettel',
+      paras: [
+        'Reinigungskräfte arbeiten in fremden Gebäuden, oft allein und oft früh am Morgen oder spät am Abend. Ein fester Terminal am Werkstor passt dazu selten, und der Stundenzettel, der am Freitag abgetippt wird, ist genau das Papier, das bei einer Reklamation nicht trägt.',
+        'Mit GeoTapp stempelt die Reinigungskraft im Objekt am eigenen Smartphone: Beginn, Pausen, Ende und bei Bedarf ein Foto. Das Büro sieht in Flow, wer in welchem Objekt gestempelt hat, sobald die Stempelung ankommt, und muss nichts mehr nachtragen.',
+      ],
+    },
+    {
+      h2: 'GPS und Datenschutz bei der Zeiterfassung von Reinigungskräften',
+      paras: [
+        'GeoTapp ortet Reinigungskräfte nicht durchgehend. Die Position wird nur erfasst, wenn die Reinigungskraft Beginn, Pause oder Ende stempelt oder ein Nachweisfoto aufnimmt. Zwischen den Stempelungen läuft keine Ortung.',
+        'Ob Sie die Daten verarbeiten dürfen, hängt von Ihrem Betrieb ab: Rechtsgrundlage nach Art. 6 DSGVO, Information der Mitarbeiter und, wenn es einen Betriebsrat gibt, dessen Mitbestimmung nach § 87 Abs. 1 Nr. 6 BetrVG. Das klärt der Arbeitgeber. Die Mitarbeiterinformation wird in der App vor dem ersten Stempeln bestätigt.',
+      ],
+      link: { href: '/blog/de/2026/09/23/zeiterfassung-einfuehren-betriebsrat/', label: 'Zeiterfassung mit dem Betriebsrat einführen: der praktische Weg' },
+    },
+  ],
   faq: {
     title: 'Häufig gestellte Fragen',
     subtitle: 'Was uns am häufigsten gefragt wird, bevor es losgeht.',
     items: [
+      {
+        q: 'Muss ich in der Gebäudereinigung die Arbeitszeit elektronisch erfassen?',
+        a: 'Das Bundesarbeitsgericht verlangt die Erfassung von Beginn und Ende der täglichen Arbeitszeit (13.09.2022, 1 ABR 22/21), schreibt aber nicht vor, dass sie elektronisch erfolgen muss. In der Gebäudereinigung gilt zusätzlich § 17 MiLoG: aufzeichnen spätestens sieben Tage nach der Arbeit, zwei Jahre aufbewahren. Eine App ersetzt den Stundenzettel und liefert Uhrzeit und Position der Stempelung mit. Die Bewertung für Ihren Betrieb klärt Ihre Beratung.',
+      },
+      {
+        q: 'Wie erfasse ich Minijobber und Aushilfen in mehreren Objekten?',
+        a: 'Jede Reinigungskraft stempelt mit ihrem eigenen Zugang am Smartphone, je Objekt. Im Büro sehen Sie Stunden und Anwesenheit je Mitarbeiter und Objekt und exportieren sie als Excel- oder CSV-Datei für die Lohnabrechnung. Die Aufzeichnungspflicht nach § 17 MiLoG gilt auch für geringfügig Beschäftigte nach § 8 Abs. 1 SGB IV.',
+      },
       {
         q: 'Ist GeoTapp nur eine Stempel-App für Reinigungsunternehmen?',
         a: 'Nein. GeoTapp ist ein System für überprüfbare Arbeitsnachweise, nicht nur eine Stempel-App. Stempel-Apps erfassen eine Uhrzeit. GeoTapp erstellt einen versiegelten Bericht mit Position, Fotonachweisen und Zeitstempel, den der Auftraggeber eigenständig prüfen kann. Der Unterschied zwischen „Es steht da“ und „Es lässt sich belegen“.',
@@ -269,6 +302,14 @@ const content: SettoreContent = {
   schema_sector_name: 'Gebäudereinigung',
 
   schema_faq: [
+    {
+      question: 'Muss ich in der Gebäudereinigung die Arbeitszeit elektronisch erfassen?',
+      answer: 'Das Bundesarbeitsgericht verlangt die Erfassung von Beginn und Ende der täglichen Arbeitszeit (13.09.2022, 1 ABR 22/21), schreibt aber nicht vor, dass sie elektronisch erfolgen muss. In der Gebäudereinigung gilt zusätzlich § 17 MiLoG: aufzeichnen spätestens sieben Tage nach der Arbeit, zwei Jahre aufbewahren. Eine App ersetzt den Stundenzettel und liefert Uhrzeit und Position der Stempelung mit. Die Bewertung für Ihren Betrieb klärt Ihre Beratung.',
+    },
+    {
+      question: 'Wie erfasse ich Minijobber und Aushilfen in mehreren Objekten?',
+      answer: 'Jede Reinigungskraft stempelt mit ihrem eigenen Zugang am Smartphone, je Objekt. Im Büro sehen Sie Stunden und Anwesenheit je Mitarbeiter und Objekt und exportieren sie als Excel- oder CSV-Datei für die Lohnabrechnung. Die Aufzeichnungspflicht nach § 17 MiLoG gilt auch für geringfügig Beschäftigte nach § 8 Abs. 1 SGB IV.',
+    },
     {
       question: 'Ist GeoTapp nur eine Stempel-App für Reinigungsunternehmen?',
       answer: 'Nein. GeoTapp ist die App und Software für Reinigungsunternehmen und Gebäudedienste, die über das Stempeln hinausgeht: Sie erstellt versiegelte Berichte mit Positionen, Fotos und Uhrzeiten, die der Auftraggeber selbst prüft, und nicht bloß ein Zeitprotokoll.',

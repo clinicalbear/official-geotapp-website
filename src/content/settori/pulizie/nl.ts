@@ -8,10 +8,10 @@ const content: SettoreContent = {
 
   hero: {
     badge: 'App voor schoonmaakbedrijven, facility management en multiservice',
-    h1_line1: 'De app voor schoonmaakbedrijven',
-    h1_line2: 'die elke klus verzegelt.',
+    h1_line1: 'Software voor schoonmaakbedrijven,',
+    h1_line2: 'met tijdregistratie en bewijs per klus.',
     subtitle:
-      'GeoTapp is de app voor schoonmaakbedrijven die van elke klus een bewijs maakt om te tonen. Klanten betwisten iets, en een opgeschreven tijd is niet genoeg. GeoTapp legt de locatie bij elke registratie vast, verzamelt de bewijsfoto\'s en sluit alles af in een verzegeld rapport, waarin elke wijziging zichtbaar is, dat de opdrachtgever zelf kan controleren.',
+      'GeoTapp is software voor schoonmaakbedrijven: uw medewerkers registreren aankomst, pauze en vertrek per object op hun telefoon, en de locatie wordt alleen op dat moment vastgelegd, nooit doorlopend. De bewijsfoto\'s horen bij dezelfde klus, en alles komt samen in een verzegeld rapport waarin elke wijziging zichtbaar is en dat de opdrachtgever zelf kan controleren.',
     cta_primary: 'Probeer het op een echte opdracht',
     cta_note: '14 dagen, tot 50 medewerkers in het veld, geen creditcard.',
   },
@@ -126,7 +126,7 @@ const content: SettoreContent = {
   },
 
   workflow: {
-    title: 'Van de werkplek naar het kantoor, elke klus wordt een bewijs.',
+    title: 'Urenregistratie voor schoonmaak: van de werkplek naar het kantoor.',
     subtitle: 'Drie stappen. Geen papier. Geen telefoontjes.',
     steps: [
       {
@@ -145,7 +145,7 @@ const content: SettoreContent = {
   },
 
   features: {
-    title: 'App voor schoonmaakbedrijven: minder discussie, meer bewijs.',
+    title: 'Schoonmaaksoftware voor tijdregistratie en bewijs per klus.',
     items: [
       {
         title: 'Antwoord op elke betwisting met gegevens',
@@ -217,17 +217,50 @@ const content: SettoreContent = {
     badge: 'Te controleren door iedereen, zonder toegang tot uw account',
   },
 
+  guida: [
+    {
+      h2: 'Wat doet schoonmaaksoftware voor uw bedrijf?',
+      paras: [
+        'Schoonmaaksoftware moet drie dingen oplossen: weten wie wanneer waar werkt, de gewerkte uren op orde hebben voor de salarisadministratie, en kunnen laten zien dat een klus is gedaan. GeoTapp richt zich op die drie.',
+        'Uw medewerker registreert aankomst, pauze en vertrek op zijn telefoon. De plaats wordt alleen op dat moment bepaald, niet doorlopend, en foto\'s horen bij dezelfde klus. In Flow ziet u op één scherm wie waar is begonnen, plant u diensten in de weekplanner en exporteert u de uren naar Excel of CSV.',
+        'Zoekt u kwaliteitsmetingen volgens VSR-KMS of een pakket voor offertes en facturatie, dan is dat een ander soort software. GeoTapp vult dat aan met tijdregistratie en bewijs per klus.',
+      ],
+    },
+    {
+      h2: 'Tijdregistratie voor schoonmaakbedrijven en de Arbeidstijdenwet',
+      paras: [
+        'Als werkgever voert u een deugdelijke registratie van de arbeids- en rusttijden van uw medewerkers (artikel 4:3 Arbeidstijdenwet), en die gegevens bewaart u ten minste 52 weken (artikel 3.2:1 Arbeidstijdenbesluit). De wet schrijft geen vorm voor: papier mag, maar bij een controle van de Nederlandse Arbeidsinspectie moet u de uren per medewerker kunnen laten zien.',
+        'Met GeoTapp staan begin, pauze en einde per dienst in het systeem, met de plaats van de registratie. U exporteert ze per periode voor de salarisadministrateur, die ze toepast volgens de cao Schoonmaak- en Glazenwassersbedrijf. Dit is geen juridisch advies: welke eisen voor uw bedrijf gelden, bespreekt u met uw adviseur.',
+      ],
+      link: { href: '/blog/nl/2026/06/01/arbeidstijdenwet-2026-urenregistratie/', label: 'Urenregistratie en de Arbeidstijdenwet: wat er verplicht is' },
+    },
+    {
+      h2: 'Logboek per klus: wat is er gedaan, en wanneer?',
+      paras: [
+        'Een logboek van een schoonmaakklus heeft pas waarde als het niet achteraf is ingevuld. In GeoTapp ontstaat het tijdens het werk: de medewerker begint de klus, maakt foto\'s van de ruimtes en sluit af, met tijd en plaats van elke registratie erbij.',
+        'Aan het eind staat alles in één rapport dat u aan de opdrachtgever kunt sturen. Wijzigt iemand achteraf een tijd, dan is dat in het rapport zichtbaar. Zo hebt u bij een klacht geen discussie over wat iemand zich herinnert, maar een rapport dat de klant zelf kan nakijken.',
+      ],
+    },
+  ],
   faq: {
     title: 'Veelgestelde vragen',
     subtitle: 'Wat ons het vaakst wordt gevraagd voordat u begint.',
     items: [
       {
+        q: 'Welke schoonmaaksoftware heb ik nodig voor een klein schoonmaakbedrijf?',
+        a: 'Dat hangt af van wat u nu mist. Wilt u weten wie waar en hoe laat is begonnen, de uren op orde hebben voor de salarisadministratie en bij een klacht kunnen laten zien dat de klus is gedaan, dan is GeoTapp daarvoor gebouwd. Voor offertes, facturatie en kwaliteitsmetingen volgens VSR-KMS bestaan aparte pakketten. Probeer het eerst 14 dagen gratis op één echte locatie.',
+      },
+      {
+        q: 'Is tijdregistratie verplicht voor een schoonmaakbedrijf?',
+        a: 'Ja. Volgens artikel 4:3 van de Arbeidstijdenwet voert de werkgever een deugdelijke registratie van de arbeids- en rusttijden, en die bewaart hij ten minste 52 weken (artikel 3.2:1 Arbeidstijdenbesluit). De vorm bepaalt u zelf. Let op: de aparte aanwezigheidsregistratie voor de schoonmaaksector die sinds 2024 in het nieuws is, is een Belgische regel en geldt niet in Nederland.',
+      },
+      {
         q: 'Is GeoTapp alleen een registratie-app voor schoonmaakbedrijven?',
         a: 'Nee. GeoTapp is een systeem voor controleerbaar bewijs van het werk, niet alleen een registratie-app. Registratie-apps leggen een tijd vast. GeoTapp maakt een verzegeld rapport met de locatie, fotobewijzen en tijdstempel, dat de opdrachtgever zelfstandig kan controleren. Het verschil tussen "het staat er" en "het is aan te tonen".',
       },
       {
-        q: 'Is het compatibel met de cao voor multiservice (CCNL Multiservizi)?',
-        a: 'GeoTapp legt tijden, pauzes, overuren en toeslagen vast, nachtelijke en feestdagen inbegrepen, en exporteert ze in Excel of CSV voor de salarisadministrateur, die ze toepast volgens de Italiaanse cao voor multiservice (CCNL Multiservizi). Bij een inspectie hebt u alle documentatie klaar.',
+        q: 'Is het geschikt voor de cao Schoonmaak- en Glazenwassersbedrijf?',
+        a: 'GeoTapp legt tijden, pauzes, overuren en toeslagen vast, nacht- en feestdagen inbegrepen, en exporteert ze in Excel of CSV voor de salarisadministrateur, die ze toepast volgens de cao Schoonmaak- en Glazenwassersbedrijf. Bij een controle van de Nederlandse Arbeidsinspectie hebt u de uren per medewerker bij de hand.',
       },
       {
         q: 'Hoe beheer ik ploegen die over meerdere locaties tegelijk verdeeld zijn?',
@@ -239,7 +272,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Is GeoTapp conform de AVG voor de geolocatie van werknemers?',
-        a: 'GeoTapp is gebouwd om binnen de kaders van de AVG en van de aanwijzingen van de Italiaanse toezichthouder (Garante Privacy) te blijven: het legt de locatie alleen vast wanneer de medewerker registreert (aankomst, pauzes, vertrek) of een bewijsfoto maakt, laat de privacyverklaring in de app ondertekenen voordat hij registreert en verzamelt geen onnodige gegevens.',
+        a: 'GeoTapp is gebouwd om binnen de kaders van de AVG te blijven, zoals de Autoriteit Persoonsgegevens die toepast: het legt de locatie alleen vast wanneer de medewerker registreert (aankomst, pauzes, vertrek) of een bewijsfoto maakt, laat de privacyverklaring in de app ondertekenen voordat hij registreert en verzamelt geen onnodige gegevens.',
       },
       {
         q: 'Werkt het ook voor facility management en multiservice?',
@@ -270,12 +303,20 @@ const content: SettoreContent = {
 
   schema_faq: [
     {
+      question: 'Welke schoonmaaksoftware heb ik nodig voor een klein schoonmaakbedrijf?',
+      answer: 'Dat hangt af van wat u nu mist. Wilt u weten wie waar en hoe laat is begonnen, de uren op orde hebben voor de salarisadministratie en bij een klacht kunnen laten zien dat de klus is gedaan, dan is GeoTapp daarvoor gebouwd. Voor offertes, facturatie en kwaliteitsmetingen volgens VSR-KMS bestaan aparte pakketten. Probeer het eerst 14 dagen gratis op één echte locatie.',
+    },
+    {
+      question: 'Is tijdregistratie verplicht voor een schoonmaakbedrijf?',
+      answer: 'Ja. Volgens artikel 4:3 van de Arbeidstijdenwet voert de werkgever een deugdelijke registratie van de arbeids- en rusttijden, en die bewaart hij ten minste 52 weken (artikel 3.2:1 Arbeidstijdenbesluit). De vorm bepaalt u zelf. Let op: de aparte aanwezigheidsregistratie voor de schoonmaaksector die sinds 2024 in het nieuws is, is een Belgische regel en geldt niet in Nederland.',
+    },
+    {
       question: 'Is GeoTapp alleen een registratie-app voor schoonmaakbedrijven?',
       answer: 'Nee. GeoTapp is de app en software voor schoonmaak- en multiservicebedrijven die verder gaat dan registreren: het maakt verzegelde rapporten met locaties, foto\'s en tijden, die de opdrachtgever zelf controleert: geen simpel urenregister.',
     },
     {
-      question: 'Is het compatibel met de cao voor multiservice (CCNL Multiservizi)?',
-      answer: 'GeoTapp legt tijden, pauzes, overuren en toeslagen vast en exporteert ze in Excel of CSV voor de salarisadministrateur, die ze toepast volgens de Italiaanse cao voor multiservice (CCNL Multiservizi).',
+      question: 'Is het geschikt voor de cao Schoonmaak- en Glazenwassersbedrijf?',
+      answer: 'GeoTapp legt tijden, pauzes, overuren en toeslagen vast en exporteert ze in Excel of CSV voor de salarisadministrateur, die ze toepast volgens de cao Schoonmaak- en Glazenwassersbedrijf.',
     },
     {
       question: 'Hoe beheer ik meerdere locaties tegelijk?',

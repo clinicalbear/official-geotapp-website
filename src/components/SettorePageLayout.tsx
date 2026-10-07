@@ -646,6 +646,27 @@ export default function SettorePageLayout({ content, locale, settore, children }
         </section>
       )}
 
+      {/* ── GUIDA: sezioni di testo sull'intento di ricerca ── */}
+      {content.guida && content.guida.length > 0 && (
+        <section className="sec">
+          <div className="wt">
+            {content.guida.map((g, i) => (
+              <div key={i} className="r" style={{ marginTop: i === 0 ? 0 : 56 }}>
+                <h2>{g.h2}</h2>
+                {g.paras.map((t, j) => (
+                  <p key={j} style={{ marginTop: 16, maxWidth: '68ch', color: '#475467' }}>{t}</p>
+                ))}
+                {g.link && (
+                  <p style={{ marginTop: 16 }}>
+                    <Link href={g.link.href}>{g.link.label} &rarr;</Link>
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* ── FAQ ── */}
       <section className="fq">
         <div className="w"><div className="g">

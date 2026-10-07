@@ -95,6 +95,13 @@ export interface SettoreContent {
     per: string;       // e.g. "operatore/mese"
     note: string;      // e.g. "Prova gratuita 14 giorni"
   };
+  // Sezioni di testo per l'intento di ricerca (SEO): H2 con le parole cercate in GSC,
+  // paragrafi semplici e un link facoltativo. Si mostrano prima delle FAQ.
+  guida?: Array<{
+    h2: string;
+    paras: string[];
+    link?: { href: string; label: string };
+  }>;
   schema_sector_name: string;
   schema_faq?: Array<{
     question: string;

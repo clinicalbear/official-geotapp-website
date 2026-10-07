@@ -103,7 +103,7 @@ const content: SettoreContent = {
   },
 
   features: {
-    title: 'App para instaladores y fontaneros: partes con GPS y pruebas fotográficas.',
+    title: 'Geolocalización de instaladores: registro GPS al llegar y al salir, con parte y fotos.',
     items: [
       {
         title: 'Fichaje con GPS verificable',
@@ -148,10 +148,34 @@ const content: SettoreContent = {
     author: 'Marco R.',
     role: 'Responsable de operaciones, instalaciones residenciales',
   },
+  guida: [
+    {
+      h2: 'Rastreo de instaladores o registro de llegada: no es lo mismo',
+      paras: [
+        'Cuando se habla de geolocalizar instaladores suelen mezclarse dos cosas distintas. El rastreo continuo sigue al técnico en un mapa durante toda la jornada. El registro de llegada y salida guarda la ubicación solo en el momento en que el técnico ficha o hace una foto de la obra.',
+        'GeoTapp hace lo segundo: no muestra dónde está tu técnico en este momento ni guarda su ruta. Lo que obtienes es lo que suele hacer falta de verdad: a qué hora llegó, cuándo se fue, qué hizo y qué fotos lo respaldan, todo en un parte que puedes enseñar al cliente. Para el técnico significa que nadie lo sigue entre una obra y otra; para ti, menos datos personales que custodiar.',
+      ],
+    },
+    {
+      h2: 'Dónde está mi técnico: lo que puedes saber sin seguirlo',
+      paras: [
+        'Si necesitas saber si el equipo ya está en la obra, el fichaje con ubicación lo responde: ves quién ha fichado, dónde y a qué hora, y recibes un aviso si una jornada se queda abierta.',
+        'Si necesitas ver el recorrido de la furgoneta minuto a minuto, GeoTapp no es la herramienta, y es una decisión deliberada. Registrar solo en los momentos clave reduce el riesgo de vigilar de más. Antes de activar cualquier geolocalización, informa por escrito a tu equipo de qué se registra y para qué.',
+      ],
+    },
+  ],
   faq: {
     title: 'Preguntas frecuentes',
     subtitle: 'Lo que más nos preguntan antes de empezar.',
     items: [
+      {
+        q: '¿GeoTapp rastrea a los instaladores en tiempo real?',
+        a: 'No. GeoTapp no sigue al técnico en un mapa ni guarda su ruta. Registra la ubicación solo cuando ficha (entrada, pausa, salida) o cuando hace una foto de prueba. Así sabes si llegó y cuándo se fue, y tienes el parte con fotos para el cliente, sin vigilancia continua.',
+      },
+      {
+        q: '¿Cuál es la diferencia entre rastreo GPS continuo y registro de llegada y salida?',
+        a: 'El rastreo continuo guarda la posición del técnico durante toda la jornada, también entre obras. El registro de llegada y salida guarda un punto en el momento en que ficha o hace una foto. Lo primero sirve para despachar vehículos en tiempo real; lo segundo, para demostrar el trabajo hecho y reducir las discusiones sobre horas, con menos datos personales que custodiar.',
+      },
       {
         q: '¿GeoTapp sirve como software para instaladores y empresas de mantenimiento?',
         a: 'Sí. GeoTapp ayuda a instaladores, electricistas, fontaneros y equipos de mantenimiento a gestionar intervenciones, partes, horas, desplazamientos y pruebas del trabajo realizado entre el campo y la oficina.',
@@ -180,6 +204,14 @@ const content: SettoreContent = {
 
   schema_sector_name: 'Instaladores',
   schema_faq: [
+    {
+      question: '¿GeoTapp rastrea a los instaladores en tiempo real?',
+      answer: 'No. GeoTapp no sigue al técnico en un mapa ni guarda su ruta. Registra la ubicación solo cuando ficha (entrada, pausa, salida) o cuando hace una foto de prueba. Así sabes si llegó y cuándo se fue, y tienes el parte con fotos para el cliente, sin vigilancia continua.',
+    },
+    {
+      question: '¿Cuál es la diferencia entre rastreo GPS continuo y registro de llegada y salida?',
+      answer: 'El rastreo continuo guarda la posición del técnico durante toda la jornada, también entre obras. El registro de llegada y salida guarda un punto en el momento en que ficha o hace una foto. Lo primero sirve para despachar vehículos en tiempo real; lo segundo, para demostrar el trabajo hecho y reducir las discusiones sobre horas, con menos datos personales que custodiar.',
+    },
     {
       question: '¿GeoTapp funciona para fontaneros y técnicos de climatización en movimiento?',
       answer: 'Sí. GeoTapp es la app para instaladores y técnicos de climatización pensada para quien trabaja en obras y en viviendas particulares. Con la gestión de partes integrada, los técnicos registran intervenciones, fotos y horas directamente desde el teléfono, sin volver a la oficina.',
