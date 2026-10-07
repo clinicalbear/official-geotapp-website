@@ -153,7 +153,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Is GeoTapp conform de AVG voor de geolocatie van werknemers?',
-        a: 'GeoTapp is gebouwd om binnen de kaders van de AVG te blijven: het legt de locatie alleen vast tijdens de actieve werktijd, bevat formulieren voor de privacyverklaring aan de werknemers en verzamelt geen onnodige gegevens, volgens de richtlijnen van de Italiaanse toezichthouder (Garante Privacy).',
+        a: 'GeoTapp is gebouwd om binnen de kaders van de AVG te blijven: het legt de locatie alleen vast op het moment van registreren of bij een bewijsfoto, nooit doorlopend, laat de privacyverklaring in de app ondertekenen en verzamelt geen onnodige gegevens.',
       },
       {
         q: 'Hoe beheer ik ploegen die over meerdere locaties tegelijk verdeeld zijn?',
@@ -193,9 +193,9 @@ const content: SettoreContent = {
         'GeoTapp Flow begint bij € 39 per maand; elke medewerker met de TimeTracker-app kost € 3 per maand extra. Het abonnement loopt minimaal 12 maanden. Aanwezigheid, foto\'s van de klussen en rapporten voor de klant zijn 14 dagen gratis uit te proberen.',
     },
     {
-      question: 'Voldoet de gps-app aan het Italiaanse arbeidsstatuut (artikel 4)?',
+      question: 'Mag ik gps gebruiken bij de tijdregistratie van schoonmaakmedewerkers?',
       answer:
-        'Ja, als ze is ingesteld volgens het protocol van de Garante: ondertekende privacyverklaring, organisatorisch doel, geolocatie alleen tijdens de dienst. Al deze regels staan standaard aan in GeoTapp Flow.',
+        'Dat hangt af van uw situatie: een duidelijk doel, informatie aan de medewerkers en zo weinig gegevens als nodig. GeoTapp legt de locatie alleen vast bij het registreren, nooit doorlopend, en laat de privacyverklaring in de app ondertekenen. De beoordeling voor uw bedrijf maakt u met uw adviseur.',
     },
     {
       question: 'Hoe toon ik de klant aan dat ik de schoonmaakdienst heb uitgevoerd?',
