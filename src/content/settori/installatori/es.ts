@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App para instaladores y fontaneros | GeoTapp - Partes con GPS',
-    description: 'Partes de intervención con ubicación y fotos, pruebas fotográficas e informes donde cualquier modificación es detectable. Prueba GeoTapp gratis.',
+    title: 'App de geolocalización para instaladores: partes con GPS y fotos',
+    description: 'Geolocalización solo al fichar, partes de intervención con fotos e informes donde cualquier modificación es detectable. Prueba GeoTapp gratis 14 días.',
   },
   hero: {
     badge: 'App para instaladores, fontaneros y técnicos de climatización',

@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App voor schoonmaakbedrijven: gps-aanwezigheid en foto\'s',
-    description: 'Registraties met gps alleen aan het begin en aan het einde en foto\'s van elke klus: het bewijs om aan de klant te tonen wanneer hij een dienst betwist. 14 dagen gratis.',
+    title: 'Software voor schoonmaakbedrijven: tijdregistratie met gps en foto\'s',
+    description: 'Tijdregistratie voor schoonmaakbedrijven met gps alleen aan het begin en aan het einde en foto\'s van elke klus: het bewijs voor de klant wanneer hij een dienst betwist. 14 dagen gratis.',
   },
 
   hero: {

@@ -2,8 +2,8 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App für Reinigungsunternehmen: GPS-Anwesenheit und Fotos je Objekt',
-    description: 'Stempelungen mit GPS nur beim Stempeln und Fotos jedes Einsatzes: die Nachweise für den Kunden, wenn er eine Leistung bestreitet. 14 Tage kostenlos testen.',
+    title: 'Mobile Zeiterfassung für Gebäudereinigung: GPS & Fotobeweis je Objekt',
+    description: 'Mobile Zeiterfassung für Reinigungskräfte: GPS nur beim Stempeln und Fotos jedes Einsatzes, die Nachweise für den Kunden, wenn er eine Leistung bestreitet. 14 Tage kostenlos testen.',
   },
 
   hero: {
