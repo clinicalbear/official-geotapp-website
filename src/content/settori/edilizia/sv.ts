@@ -2,7 +2,9 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Byggapp: närvaro med GPS och lagstyrning | GeoTapp',
+    // 2026-10-08: title ripristinato sulla query che portava impressioni (GSC); le
+    // passate di lingua del 30/09-01/10 l'avevano sostituito. Guardia: test/sector-title-keywords.test.js
+    title: 'Byggplats app: närvaro med GPS vid in- och utstämpling',
     description: 'Hantera närvaro, skift och lag på bygget med stämplingar med position. Förseglade rapporter som skapas automatiskt, för byggföretag.',
   },
   hero: {

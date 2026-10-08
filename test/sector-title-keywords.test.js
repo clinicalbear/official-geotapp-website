@@ -12,6 +12,17 @@ const CASI = [
   ['src/content/settori/pulizie/de.ts', /Zeiterfassung/, /Gebäudereinigung/],
   ['src/content/settori/pulizie/nl.ts', /[Ss]oftware/, /schoonmaakbedrijven/, /tijdregistratie/],
   ['src/content/settori/installatori/es.ts', /geolocalización/, /instaladores/],
+  // 08/10/2026: altri otto title sovrascritti dalle stesse passate (30/09-01/10).
+  // Due erano test di snippet del 29/09 (DE heizung-sanitaer, SV byggnation); FR e DA
+  // idraulici/termoidraulici erano stati differenziati il 29/09 per togliere la cannibalizzazione.
+  ['src/content/settori/installatori/de.ts', /Arbeitszeiterfassung/, /Installateure/],
+  ['src/content/settori/termoidraulici/de.ts', /Auftragsabwicklung Heizung/],
+  ['src/content/settori/edilizia/sv.ts', /Byggplats app/],
+  ['src/content/settori/idraulici/fr.ts', /^Application plombier/, /^(?!.*chauffagiste)/],
+  ['src/content/settori/termoidraulici/fr.ts', /^Application chauffagiste/],
+  ['src/content/settori/idraulici/da.ts', /blikkenslagere/, /^(?!.*VVS)/],
+  ['src/content/settori/termoidraulici/da.ts', /VVS-installatører/],
+  ['src/content/settori/sicurezza/fr.ts', /Pointeuse GPS/, /agents de sécurité/],
 ];
 
 for (const [file, ...parole] of CASI) {

@@ -2,7 +2,9 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'Logiciel sécurité privée | GeoTapp - Vacations avec GPS',
+    // 2026-10-08: title ripristinato sulla query che portava impressioni (GSC); le
+    // passate di lingua del 30/09-01/10 l'avevano sostituito. Guardia: test/sector-title-keywords.test.js
+    title: 'Pointeuse GPS pour agents de sécurité | GeoTapp',
     description: 'Le logiciel pour sociétés de sécurité privée : vacations avec position aux pointages, rondes documentées, photos de preuve. Conçu pour le RGPD. Essai gratuit.',
   },
   hero: {

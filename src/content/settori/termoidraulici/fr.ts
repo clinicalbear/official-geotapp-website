@@ -2,7 +2,9 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App plombier-chauffagiste : rapports GPS et photos',
+    // 2026-10-08: title ripristinato sulla query che portava impressioni (GSC); le
+    // passate di lingua del 30/09-01/10 l'avevano sostituito. Guardia: test/sector-title-keywords.test.js
+    title: 'Application chauffagiste : interventions, GPS et photos',
     description: 'Rapports avec GPS au pointage et photos de chaque installation : les preuves à montrer quand le client conteste une chaudière. Essai gratuit 14 jours.',
   },
   hero: {

@@ -2,7 +2,9 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: "Appli pour plombiers-chauffagistes | GeoTapp",
+    // 2026-10-08: title ripristinato sulla query che portava impressioni (GSC); le
+    // passate di lingua del 30/09-01/10 l'avevano sostituito. Guardia: test/sector-title-keywords.test.js
+    title: 'Application plombier : rapports GPS et photos du chantier',
     description: "Appli pour plombiers et chauffagistes : rapports avec position et photos, toute modification est détectable. À montrer en cas de contestation. Essai gratuit.",
   },
   hero: {

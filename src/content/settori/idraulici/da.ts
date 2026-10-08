@@ -2,7 +2,9 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App til VVS-installatører: rapporter med GPS | GeoTapp',
+    // 2026-10-08: title ripristinato sulla query che portava impressioni (GSC); le
+    // passate di lingua del 30/09-01/10 l'avevano sostituito. Guardia: test/sector-title-keywords.test.js
+    title: 'App til blikkenslagere: arbejdssedler med GPS og fotos',
     description: 'App til VVS-installatører: arbejdsrapporter med position og foto af anlæggene og rapporter, hvor enhver ændring kan opdages. Prøv gratis i 14 dage.',
   },
   hero: {

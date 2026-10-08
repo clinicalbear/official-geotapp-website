@@ -2,7 +2,9 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App für Heizungsbauer: Einsatzberichte mit GPS und Fotos',
+    // 2026-10-08: title ripristinato sulla query che portava impressioni (GSC); le
+    // passate di lingua del 30/09-01/10 l'avevano sostituito. Guardia: test/sector-title-keywords.test.js
+    title: 'Auftragsabwicklung Heizung: Einsatzbericht mit GPS und Fotos',
     description: 'Einsatzberichte mit GPS bei der Stempelung und Fotos jeder Anlage: die Nachweise, wenn der Kunde Heizkessel und ausgetauschte Teile bestreitet. 14 Tage kostenlos testen.',
   },
   hero: {

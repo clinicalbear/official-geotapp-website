@@ -2,7 +2,9 @@ import type { SettoreContent } from '../types';
 
 const content: SettoreContent = {
   meta: {
-    title: 'App für Installateure und Heizungsbauer | GeoTapp Einsatzberichte mit GPS',
+    // 2026-10-08: title ripristinato sulla query che portava impressioni (GSC); le
+    // passate di lingua del 30/09-01/10 l'avevano sostituito. Guardia: test/sector-title-keywords.test.js
+    title: 'Arbeitszeiterfassung für Installateure und Elektriker | GeoTapp',
     description: 'GeoTapp ist die App für Installateure, Klempner und Heizungsbauer: Einsatzberichte mit Position und Fotos, Fotonachweise und Berichte, in denen jede Änderung erkennbar ist. Kostenlos testen.',
   },
   hero: {
