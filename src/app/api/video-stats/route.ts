@@ -32,7 +32,8 @@ import { rateLimitOk, clientIp } from '@/lib/rate-limit';
  * il video continua a funzionare: si perde il conteggio, non la visione.
  */
 
-const VIDEO = new Set(['giro', 'tutorial']);
+// `giro-v` e' lo stesso giro in verticale, quello che vede il telefono.
+const VIDEO = new Set(['giro', 'giro-v', 'tutorial']);
 const EVENTI = new Set(['start', 'visto']);
 
 type KvLike = {

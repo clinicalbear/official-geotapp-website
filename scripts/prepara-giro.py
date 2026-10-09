@@ -4,6 +4,7 @@ Prepara per il sito il video "il giro completo", nelle undici lingue.
 
     python3 scripts/prepara-giro.py            # rifa' tutto
     python3 scripts/prepara-giro.py it en      # solo due lingue
+    python3 scripts/prepara-giro.py --verticale  # solo i file per il telefono
 
 Le sorgenti stanno in geotapp-reel, che e' un altro repo: da li' arrivano il
 montaggio (out/giro), le scritte del video (src/geotapp/giro/testi.ts), i tempi
@@ -57,6 +58,12 @@ MINIATURA_SECONDO = 3.0
 
 def sorgente(lingua: str) -> pathlib.Path:
     return SORGENTI / f"giro-live-voce-{lingua}-16x9-80s.mp4"
+
+
+def sorgente_verticale(lingua: str) -> pathlib.Path:
+    """Lo stesso giro impaginato per il telefono (GiroVerticale in
+    geotapp-reel): stessa voce e stessi tempi, quindi stessi sottotitoli."""
+    return SORGENTI / f"giro-live-voce-{lingua}-9x16-80s.mp4"
 
 
 # ── le sorgenti di testo ────────────────────────────────────────────────────
@@ -187,17 +194,23 @@ def ffmpeg(*args: str) -> None:
     subprocess.run(["ffmpeg", "-v", "error", "-y", *args], check=True)
 
 
-def prepara_video(lingua: str) -> pathlib.Path:
-    dentro, fuori = sorgente(lingua), USCITA / f"giro-{lingua}.mp4"
+def prepara_video(lingua: str, verticale: bool = False) -> pathlib.Path:
+    coda = "-v" if verticale else ""
+    dentro = sorgente_verticale(lingua) if verticale else sorgente(lingua)
+    fuori = USCITA / f"giro-{lingua}{coda}.mp4"
     ffmpeg("-i", str(dentro), "-c:v", "copy", "-c:a", "aac", "-b:a", "96k",
            "-movflags", "+faststart", str(fuori))
     return fuori
 
 
-def prepara_locandina(lingua: str) -> pathlib.Path:
-    dentro, fuori = sorgente(lingua), USCITA / f"giro-{lingua}.jpg"
+def prepara_locandina(lingua: str, verticale: bool = False) -> pathlib.Path:
+    coda = "-v" if verticale else ""
+    dentro = sorgente_verticale(lingua) if verticale else sorgente(lingua)
+    fuori = USCITA / f"giro-{lingua}{coda}.jpg"
+    # in verticale 720 di larghezza bastano: il riquadro sul telefono e' meno
+    larghezza = "720" if verticale else "1280"
     ffmpeg("-ss", str(LOCANDINA_SECONDO), "-i", str(dentro), "-frames:v", "1",
-           "-vf", "scale=1280:-2", "-q:v", "4", str(fuori))
+           "-vf", f"scale={larghezza}:-2", "-q:v", "4", str(fuori))
     return fuori
 
 
@@ -270,14 +283,30 @@ def main() -> None:
     scelte = [a for a in sys.argv[1:] if a in LINGUE] or LINGUE
     USCITA.mkdir(parents=True, exist_ok=True)
 
+    # --verticale: solo il video e la locandina per il telefono. Sottotitoli,
+    # capitoli e trascrizione non cambiano (stessa voce, stessi tempi), e
+    # l'orizzontale non va rifatto per aggiungere il verticale.
+    if "--verticale" in sys.argv[1:]:
+        for lingua in scelte:
+            if not sorgente_verticale(lingua).exists():
+                raise SystemExit(f"manca il montaggio: {sorgente_verticale(lingua)}")
+            video_v = prepara_video(lingua, verticale=True)
+            locandina_v = prepara_locandina(lingua, verticale=True)
+            print(f"{lingua}: verticale {video_v.stat().st_size/1e6:.1f} MB, "
+                  f"locandina {locandina_v.stat().st_size/1e3:.0f} KB")
+        return
+
     testi_battute, tempi_voce, testi_video = battute(), tempi(), scritte()
     dati: dict = {}
 
     for lingua in scelte:
-        if not sorgente(lingua).exists():
-            raise SystemExit(f"manca il montaggio: {sorgente(lingua)}")
+        for s in (sorgente(lingua), sorgente_verticale(lingua)):
+            if not s.exists():
+                raise SystemExit(f"manca il montaggio: {s}")
         video = prepara_video(lingua)
         locandina = prepara_locandina(lingua)
+        video_v = prepara_video(lingua, verticale=True)
+        prepara_locandina(lingua, verticale=True)
         miniatura = prepara_miniatura(lingua)
         cue = riquadri(lingua, testi_battute, tempi_voce[lingua])
         vtt = scrivi_vtt(lingua, cue)
@@ -291,6 +320,7 @@ def main() -> None:
         }
         print(
             f"{lingua}: {video.stat().st_size/1e6:.1f} MB, "
+            f"verticale {video_v.stat().st_size/1e6:.1f} MB, "
             f"locandina {locandina.stat().st_size/1e3:.0f} KB, "
             f"miniatura {miniatura.stat().st_size/1e3:.0f} KB, "
             f"{len(cue)} sottotitoli -> {vtt.name}"

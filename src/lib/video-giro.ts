@@ -80,13 +80,26 @@ export function linguaGiro(locale?: AppLocale | string | null): LinguaGiro {
   return (LINGUE_GIRO as string[]).includes(base) ? (base as LinguaGiro) : 'en';
 }
 
-export function giroVideoSrc(locale?: AppLocale | string | null): string {
-  return `/video/giro-${linguaGiro(locale)}.mp4`;
+/**
+ * Sul telefono il giro e' in verticale: stesse riprese, stessa voce e stessi
+ * tempi (i sottotitoli e i capitoli valgono per tutti e due), ma di Flow si
+ * vede solo il pezzo che conta. La composizione e' GiroVerticale in
+ * geotapp-reel. Questa e' la media query che decide, la stessa del CSS.
+ */
+// 🔴 E' scritta come la `max-md:` di Tailwind, che e' quella che cambia la
+// forma del riquadro: se le due non coincidono, a 767,5 px il video verticale
+// finisce in un riquadro orizzontale.
+export const GIRO_VERTICALE_MEDIA = 'not all and (min-width: 768px)';
+
+const coda = (verticale: boolean) => (verticale ? '-v' : '');
+
+export function giroVideoSrc(locale?: AppLocale | string | null, verticale = false): string {
+  return `/video/giro-${linguaGiro(locale)}${coda(verticale)}.mp4`;
 }
 
 /** La locandina: la sigla del video di QUELLA lingua, servita da noi. */
-export function giroLocandina(locale?: AppLocale | string | null): string {
-  return `/video/giro-${linguaGiro(locale)}.jpg`;
+export function giroLocandina(locale?: AppLocale | string | null, verticale = false): string {
+  return `/video/giro-${linguaGiro(locale)}${coda(verticale)}.jpg`;
 }
 
 /** La miniatura per le schede social e per i dati strutturati. */

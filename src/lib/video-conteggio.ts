@@ -26,7 +26,8 @@
  */
 import { trackEvent } from './analytics';
 
-export type QualeVideo = 'giro' | 'tutorial';
+/** `giro-v` e' il giro in verticale: contato a parte, per confrontarlo con l'orizzontale. */
+export type QualeVideo = 'giro' | 'giro-v' | 'tutorial';
 
 /** I secondi si arrotondano a dieci: il numero esatto non serve a niente. */
 function scaglione(secondi: number): number {

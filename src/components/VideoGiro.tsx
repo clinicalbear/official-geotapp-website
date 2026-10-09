@@ -6,6 +6,7 @@ import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
 import {
   GIRO_CAPITOLI,
+  GIRO_VERTICALE_MEDIA,
   giroLocandina,
   giroSottotitoli,
   giroVideoSrc,
@@ -71,6 +72,15 @@ export default function VideoGiro({
   // in home stavano fra i file scaricati prima del titolo (25 KB di jpg) pur essendo
   // piu' in basso. Senza locandina il riquadro resta sul suo fondo scuro.
   const [vicino, setVicino] = useState(subito);
+  // Orizzontale o verticale: lo decide lo schermo, una volta sola. Finche' non
+  // si sa (il server non lo sa) il video non parte e la locandina non si
+  // chiede, cosi' non si scarica il formato sbagliato. Girare il telefono a
+  // meta' visione non cambia file: il riquadro cambia forma, il video no.
+  const [formato, setFormato] = useState<'o' | 'v' | null>(null);
+  const verticale = formato === 'v';
+  useEffect(() => {
+    setFormato(window.matchMedia?.(GIRO_VERTICALE_MEDIA).matches ? 'v' : 'o');
+  }, []);
   useEffect(() => {
     const el = video.current;
     if (!el || vicino) return;
@@ -100,22 +110,23 @@ export default function VideoGiro({
   const rendiLocale = useCallback(async (secondo: number) => {
     const el = video.current;
     if (!el || blob.current || scorribile(el)) return false;
-    const url = await rendiScorribile(el, giroVideoSrc(locale), secondo, () => sottotitoli(el.muted));
+    const url = await rendiScorribile(el, giroVideoSrc(locale, verticale), secondo, () => sottotitoli(el.muted));
     if (!url) return false;
     blob.current = url;
     return true;
-  }, [locale, sottotitoli]);
+  }, [locale, verticale, sottotitoli]);
 
   // Quante volte parte e per quanto lo guardano: vedi src/lib/video-conteggio.ts.
   useEffect(() => {
     const el = video.current;
-    if (!el) return;
-    return contaVideo(el, 'giro', locale);
-  }, [locale]);
+    if (!el || !formato) return;
+    // il verticale si conta a parte, per confrontarlo con l'orizzontale
+    return contaVideo(el, formato === 'v' ? 'giro-v' : 'giro', locale);
+  }, [locale, formato]);
 
   useEffect(() => {
     const el = video.current;
-    if (!el) return;
+    if (!el || !formato) return;
 
     sottotitoli(true);
 
@@ -157,7 +168,7 @@ export default function VideoGiro({
       osservatore.disconnect();
       if (blob.current) URL.revokeObjectURL(blob.current);
     };
-  }, [sottotitoli, inizio, rendiLocale]);
+  }, [sottotitoli, inizio, rendiLocale, formato]);
 
   const accendi = () => {
     const el = video.current;
@@ -185,13 +196,16 @@ export default function VideoGiro({
   };
 
   return (
-    <div className={className} id={id}>
-      <div className="relative w-full overflow-hidden rounded-2xl bg-slate-900 shadow-lg" style={{ aspectRatio: '16 / 9' }}>
+    <div className={className} id={id} style={{ position: 'relative' }}>
+      {/* La forma la decide il CSS, non lo stato: cosi' il server la manda gia'
+          giusta e la pagina non salta quando arriva il JavaScript. In
+          verticale non supera l'82% dell'altezza dello schermo. */}
+      <div className="relative mx-auto aspect-video w-full overflow-hidden rounded-2xl bg-slate-900 shadow-lg max-md:aspect-[9/16] max-md:max-w-[calc(82svh*9/16)]">
         <video
           ref={video}
           className="absolute inset-0 h-full w-full"
-          src={giroVideoSrc(locale)}
-          poster={vicino ? giroLocandina(locale) : undefined}
+          src={giroVideoSrc(locale, verticale)}
+          poster={vicino && formato ? giroLocandina(locale, verticale) : undefined}
           preload="none"
           muted
           playsInline
@@ -210,23 +224,6 @@ export default function VideoGiro({
           )}
         </video>
 
-        {/* 🔴 Le classi di posizione e forma stanno nello style, non fra le
-            classi: redesign-l.css:185 spegne con `display:none !important`
-            qualunque cosa abbia insieme `absolute` e `rounded-full`, perche'
-            cosi' cancella i cerchi sfocati del vecchio eroe. Scritto con le
-            classi, questo pulsante spariva, e il video restava muto senza via
-            d'uscita. */}
-        <button
-          type="button"
-          onClick={accendi}
-          aria-pressed={acceso}
-          className="flex items-center gap-2 bg-white/95 px-4 py-2 text-sm font-semibold text-[#123047] shadow-lg transition hover:bg-white"
-          style={{ position: 'absolute', left: 12, top: 12, borderRadius: 999 }}
-        >
-          {acceso ? <VolumeX size={18} /> : <Volume2 size={18} />}
-          {acceso ? t.audioOff : t.audioOn}
-        </button>
-
         {fermo && (
           <button
             type="button"
@@ -238,6 +235,27 @@ export default function VideoGiro({
           </button>
         )}
       </div>
+
+      {/* 🔴 Le classi di posizione e forma stanno nello style, non fra le
+          classi: redesign-l.css:185 spegne con `display:none !important`
+          qualunque cosa abbia insieme `absolute` e `rounded-full`, perche'
+          cosi' cancella i cerchi sfocati del vecchio eroe. Scritto con le
+          classi, questo pulsante spariva, e il video restava muto senza via
+          d'uscita.
+          Sta FUORI dal riquadro: sul desktop e' sopra al video come prima
+          (l'involucro e' `relative` e il riquadro e' il suo primo figlio),
+          sul telefono `max-md:!static` lo mette sotto, perche' sopra al
+          video verticale copriva il titolo dell'atto. */}
+      <button
+        type="button"
+        onClick={accendi}
+        aria-pressed={acceso}
+        className="flex w-fit items-center gap-2 bg-white/95 px-4 py-2 text-sm font-semibold text-[#123047] shadow-lg transition hover:bg-white max-md:!static max-md:mx-auto max-md:mt-3 max-md:border max-md:border-slate-300"
+        style={{ position: 'absolute', left: 12, top: 12, borderRadius: 999 }}
+      >
+        {acceso ? <VolumeX size={18} /> : <Volume2 size={18} />}
+        {acceso ? t.audioOff : t.audioOn}
+      </button>
 
       <p className="mt-3 text-sm leading-relaxed text-slate-600">{t.note}</p>
 

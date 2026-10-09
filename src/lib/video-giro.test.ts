@@ -33,11 +33,14 @@ describe('il giro completo, lingua per lingua', () => {
     expect(linguaGiro('pl')).toBe('en');
   });
 
-  it('i quattro file di ogni lingua sono davvero in public/', () => {
+  it('i sei file di ogni lingua sono davvero in public/', () => {
     for (const lingua of LINGUE_GIRO) {
       for (const percorso of [
         giroVideoSrc(lingua),
         giroLocandina(lingua),
+        // il verticale, per il telefono
+        giroVideoSrc(lingua, true),
+        giroLocandina(lingua, true),
         giroMiniatura(lingua),
         giroSottotitoli(lingua),
       ]) {
