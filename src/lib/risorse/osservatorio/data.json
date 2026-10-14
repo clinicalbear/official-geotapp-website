@@ -72,20 +72,6 @@
    "lang": "it"
   },
   {
-   "country": "ES",
-   "authority": "Agencia Española de Protección de Datos",
-   "framework": "gdpr",
-   "title": "PS-00437-2025 - RESOLUCIÓN DE PROCEDIMIENTO SANCIONADOR",
-   "published_at": "2026-07-23",
-   "source_url": "https://www.aepd.es/documento/ps-00437-2025.pdf",
-   "topics": [
-    "controllo_a_distanza"
-   ],
-   "amount_eur": 2000,
-   "doc_number": "PS-00437-2025",
-   "lang": "es"
-  },
-  {
    "country": "IT",
    "authority": "Garante per la protezione dei dati personali",
    "framework": "gdpr",
@@ -114,20 +100,6 @@
    "lang": "it"
   },
   {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Provvedimento del 14 luglio 2026 [10292097]",
-   "published_at": "2026-07-14",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10292097",
-   "topics": [
-    "presenze_orario"
-   ],
-   "amount_eur": 36000,
-   "doc_number": "528/2026",
-   "lang": "it"
-  },
-  {
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
@@ -143,20 +115,6 @@
    "lang": "es"
   },
   {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Provvedimento del 3 luglio 2026 [10280790]",
-   "published_at": "2026-07-03",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10280790",
-   "topics": [
-    "presenze_orario"
-   ],
-   "amount_eur": 2000,
-   "doc_number": "480/2026",
-   "lang": "it"
-  },
-  {
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
@@ -169,48 +127,6 @@
    "amount_eur": null,
    "doc_number": "PD-00010-2026",
    "lang": "es"
-  },
-  {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Provvedimento del 18 giugno 2026 [10268633]",
-   "published_at": "2026-06-18",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10268633",
-   "topics": [
-    "presenze_orario"
-   ],
-   "amount_eur": 6600,
-   "doc_number": "462/2026",
-   "lang": "it"
-  },
-  {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Provvedimento del 18 giugno 2026 [10272529]",
-   "published_at": "2026-06-18",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10272529",
-   "topics": [
-    "email_dipendenti"
-   ],
-   "amount_eur": 460000,
-   "doc_number": "476/2026",
-   "lang": "it"
-  },
-  {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Provvedimento del 18 giugno 2026 [10267254 ] - Comune di Vasto",
-   "published_at": "2026-06-18",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10267254",
-   "topics": [
-    "controllo_a_distanza"
-   ],
-   "amount_eur": 5000,
-   "doc_number": "457/2026",
-   "lang": "it"
   },
   {
    "country": "IT",
@@ -265,23 +181,9 @@
    "topics": [
     "controllo_a_distanza"
    ],
-   "amount_eur": 4000,
+   "amount_eur": 2400,
    "doc_number": "PS-00440-2025",
    "lang": "es"
-  },
-  {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Provvedimento dell'11 giugno 2026 [10269684]",
-   "published_at": "2026-06-11",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10269684",
-   "topics": [
-    "controllo_a_distanza"
-   ],
-   "amount_eur": 1000,
-   "doc_number": "10269684",
-   "lang": "it"
   },
   {
    "country": "IT",
@@ -310,20 +212,6 @@
    ],
    "amount_eur": 6000,
    "doc_number": "382/2026",
-   "lang": "it"
-  },
-  {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Provvedimento del 28 maggio 2026 [10265423]",
-   "published_at": "2026-05-28",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10265423",
-   "topics": [
-    "controllo_a_distanza"
-   ],
-   "amount_eur": 1400,
-   "doc_number": "395/2026",
    "lang": "it"
   },
   {
@@ -367,20 +255,6 @@
    "amount_eur": null,
    "doc_number": "AI-00003-2025",
    "lang": "es"
-  },
-  {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Provvedimento del 14 maggio 2026 [10268800]",
-   "published_at": "2026-05-14",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10268800",
-   "topics": [
-    "controllo_a_distanza"
-   ],
-   "amount_eur": 43000,
-   "doc_number": "356/2026",
-   "lang": "it"
   },
   {
    "country": "BE",
@@ -502,8 +376,7 @@
    "published_at": "2026-04-17",
    "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10256825",
    "topics": [
-    "controllo_a_distanza",
-    "geolocalizzazione"
+    "controllo_a_distanza"
    ],
    "amount_eur": 4000,
    "doc_number": "271/2026",
@@ -556,20 +429,6 @@
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
-   "title": "REPOSICION-PS-00328-2024",
-   "published_at": "2026-03-23",
-   "source_url": "https://www.aepd.es/documento/reposicion-ps-00328-2024.pdf",
-   "topics": [
-    "geolocalizzazione"
-   ],
-   "amount_eur": 100000,
-   "doc_number": "REPOSICION-PS-00328-2024",
-   "lang": "es"
-  },
-  {
-   "country": "ES",
-   "authority": "Agencia Española de Protección de Datos",
-   "framework": "gdpr",
    "title": "PS-00192-2025 - RESOLUCIÓN DE PROCEDIMIENTO SANCIONADOR",
    "published_at": "2026-03-21",
    "source_url": "https://www.aepd.es/documento/ps-00192-2025.pdf",
@@ -612,27 +471,13 @@
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
-   "title": "PS-00511-2025 - RESOLUCIÓN DE TERMINACIÓN DEL PROCEDIMIENTO POR RECONOCIMIENTO DE RESPONSABILIDAD Y PAGO VOLUNTARIO",
-   "published_at": "2026-03-20",
-   "source_url": "https://www.aepd.es/documento/ps-00511-2025.pdf",
-   "topics": [
-    "geolocalizzazione"
-   ],
-   "amount_eur": 250000,
-   "doc_number": "PS-00511-2025",
-   "lang": "es"
-  },
-  {
-   "country": "ES",
-   "authority": "Agencia Española de Protección de Datos",
-   "framework": "gdpr",
    "title": "PS-00264-2024 - RESOLUCIÓN DE TERMINACIÓN DEL PROCEDIMIENTO POR RECONOCIMIENTO DE RESPONSABILIDAD Y PAGO VOLUNTARIO",
    "published_at": "2026-03-13",
    "source_url": "https://www.aepd.es/documento/ps-00264-2024.pdf",
    "topics": [
     "controllo_a_distanza"
    ],
-   "amount_eur": 15000,
+   "amount_eur": 18000,
    "doc_number": "PS-00264-2024",
    "lang": "es"
   },
@@ -736,20 +581,6 @@
    ],
    "amount_eur": 15000,
    "doc_number": "122/2026",
-   "lang": "it"
-  },
-  {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Provvedimento del 26 febbraio 2026 [10234928] - Dedalus Italia S.p.A.",
-   "published_at": "2026-02-26",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10234928",
-   "topics": [
-    "presenze_orario"
-   ],
-   "amount_eur": 32000,
-   "doc_number": "119/2026",
    "lang": "it"
   },
   {
@@ -932,7 +763,7 @@
    "topics": [
     "controllo_a_distanza"
    ],
-   "amount_eur": 1000,
+   "amount_eur": 1800,
    "doc_number": "PS-00059-2025",
    "lang": "es"
   },
@@ -946,7 +777,7 @@
    "topics": [
     "controllo_a_distanza"
    ],
-   "amount_eur": 2000,
+   "amount_eur": 1200,
    "doc_number": "PS-00463-2025",
    "lang": "es"
   },
@@ -1058,7 +889,7 @@
    "topics": [
     "controllo_a_distanza"
    ],
-   "amount_eur": 6000,
+   "amount_eur": 3600,
    "doc_number": "PS-00241-2025",
    "lang": "es"
   },
@@ -1072,7 +903,7 @@
    "topics": [
     "controllo_a_distanza"
    ],
-   "amount_eur": 6000,
+   "amount_eur": 3600,
    "doc_number": "PS-00061-2025",
    "lang": "es"
   },
@@ -1086,7 +917,7 @@
    "topics": [
     "controllo_a_distanza"
    ],
-   "amount_eur": 400,
+   "amount_eur": 320,
    "doc_number": "PS-00116-2024",
    "lang": "es"
   },
@@ -1112,10 +943,9 @@
    "published_at": "2025-11-23",
    "source_url": "https://www.aepd.es/documento/ps-00298-2025.pdf",
    "topics": [
-    "geolocalizzazione",
-    "presenze_orario"
+    "geolocalizzazione"
    ],
-   "amount_eur": 600,
+   "amount_eur": null,
    "doc_number": "PS-00298-2025",
    "lang": "es"
   },
@@ -1386,7 +1216,7 @@
    "topics": [
     "controllo_a_distanza"
    ],
-   "amount_eur": 2000,
+   "amount_eur": 1200,
    "doc_number": "PS-00295-2025",
    "lang": "es"
   },
@@ -1518,20 +1348,6 @@
    "lang": "de"
   },
   {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Provvedimento del 4 giugno 2025 [10164273]",
-   "published_at": "2025-06-04",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10164273",
-   "topics": [
-    "geolocalizzazione"
-   ],
-   "amount_eur": 15000,
-   "doc_number": "324/2025",
-   "lang": "it"
-  },
-  {
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
@@ -1558,20 +1374,6 @@
    "amount_eur": null,
    "doc_number": "",
    "lang": "es"
-  },
-  {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Provvedimento del 21 maggio 2025 [10162944]",
-   "published_at": "2025-05-21",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10162944",
-   "topics": [
-    "geolocalizzazione"
-   ],
-   "amount_eur": 20000,
-   "doc_number": "289/2025",
-   "lang": "it"
   },
   {
    "country": "IT",
@@ -1865,9 +1667,8 @@
    "published_at": "2025-01-16",
    "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10112287",
    "topics": [
-    "controllo_a_distanza",
     "geolocalizzazione",
-    "presenze_orario"
+    "controllo_a_distanza"
    ],
    "amount_eur": 50000,
    "doc_number": "7/2025",
@@ -1948,20 +1749,6 @@
    "lang": "fr"
   },
   {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Provvedimento del 19 dicembre 2024 [10105535]",
-   "published_at": "2024-12-19",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10105535",
-   "topics": [
-    "geolocalizzazione"
-   ],
-   "amount_eur": 5000000,
-   "doc_number": "818/2024",
-   "lang": "it"
-  },
-  {
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
@@ -1979,27 +1766,12 @@
    "country": "IT",
    "authority": "Garante per la protezione dei dati personali",
    "framework": "gdpr",
-   "title": "Provvedimento del 12 dicembre 2024 [10107187] - BDM Banca S.p.A.",
-   "published_at": "2024-12-12",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10107187",
-   "topics": [
-    "presenze_orario"
-   ],
-   "amount_eur": 20000,
-   "doc_number": "833/2024",
-   "lang": "it"
-  },
-  {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
    "title": "Provvedimento del 12 dicembre 2024 [10096474]",
    "published_at": "2024-12-12",
    "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10096474",
    "topics": [
-    "controllo_a_distanza",
     "email_dipendenti",
-    "presenze_orario"
+    "controllo_a_distanza"
    ],
    "amount_eur": 20000,
    "doc_number": "771/2024",
@@ -2013,10 +1785,9 @@
    "published_at": "2024-12-10",
    "source_url": "https://www.aepd.es/documento/ps-00419-2024.pdf",
    "topics": [
-    "controllo_a_distanza",
     "presenze_orario"
    ],
-   "amount_eur": 10000,
+   "amount_eur": 12000,
    "doc_number": "PS-00419-2024",
    "lang": "es"
   },
@@ -2120,20 +1891,6 @@
    "lang": "fr"
   },
   {
-   "country": "ES",
-   "authority": "Agencia Española de Protección de Datos",
-   "framework": "gdpr",
-   "title": "PS-00432-2023",
-   "published_at": "2024-10-01",
-   "source_url": "https://www.aepd.es/documento/ps-00432-2023.pdf",
-   "topics": [
-    "presenze_orario"
-   ],
-   "amount_eur": 250000,
-   "doc_number": "PS-00432-2023",
-   "lang": "es"
-  },
-  {
    "country": "IT",
    "authority": "Garante per la protezione dei dati personali",
    "framework": "gdpr",
@@ -2141,7 +1898,6 @@
    "published_at": "2024-09-26",
    "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10066287",
    "topics": [
-    "geolocalizzazione",
     "presenze_orario"
    ],
    "amount_eur": 4000,
@@ -2300,7 +2056,7 @@
    "topics": [
     "controllo_a_distanza"
    ],
-   "amount_eur": 70000,
+   "amount_eur": 42000,
    "doc_number": "PS-00435-2023",
    "lang": "es"
   },
@@ -2312,7 +2068,8 @@
    "published_at": "2024-06-06",
    "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10029500",
    "topics": [
-    "controllo_a_distanza"
+    "controllo_a_distanza",
+    "presenze_orario"
    ],
    "amount_eur": 120000,
    "doc_number": "338/2024",
@@ -2350,20 +2107,6 @@
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
-   "title": "PS-00111-2023 - RESOLUCIÓN DE PROCEDIMIENTO SANCIONADOR",
-   "published_at": "2024-04-12",
-   "source_url": "https://www.aepd.es/documento/ps-00111-2023.pdf",
-   "topics": [
-    "controllo_a_distanza"
-   ],
-   "amount_eur": 300,
-   "doc_number": "PS-00111-2023",
-   "lang": "es"
-  },
-  {
-   "country": "ES",
-   "authority": "Agencia Española de Protección de Datos",
-   "framework": "gdpr",
    "title": "PS-00483-2023 - RESOLUCIÓN DE TERMINACIÓN DEL PROCEDIMIENTO POR PAGO VOLUNTARIO",
    "published_at": "2024-04-09",
    "source_url": "https://www.aepd.es/documento/ps-00483-2023.pdf",
@@ -2384,7 +2127,7 @@
    "topics": [
     "controllo_a_distanza"
    ],
-   "amount_eur": 3000,
+   "amount_eur": 2400,
    "doc_number": "PS-00620-2022",
    "lang": "es"
   },
@@ -2541,7 +2284,7 @@
     "controllo_a_distanza",
     "presenze_orario"
    ],
-   "amount_eur": 32000000,
+   "amount_eur": 15000000,
    "doc_number": "SAN-2023-021",
    "lang": "fr"
   },
@@ -2630,20 +2373,6 @@
    "lang": "es"
   },
   {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Provvedimento del 12 ottobre 2023 [9965598] - S.T.A. Società Trattamento Acque s.r.l.",
-   "published_at": "2023-10-12",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9965598",
-   "topics": [
-    "lavoro_agile"
-   ],
-   "amount_eur": 75000,
-   "doc_number": "475/2023",
-   "lang": "it"
-  },
-  {
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
@@ -2665,7 +2394,6 @@
    "published_at": "2023-09-14",
    "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9940565",
    "topics": [
-    "controllo_a_distanza",
     "presenze_orario"
    ],
    "amount_eur": 5000,
@@ -2724,7 +2452,7 @@
    "topics": [
     "controllo_a_distanza"
    ],
-   "amount_eur": 50000,
+   "amount_eur": null,
    "doc_number": "REPOSICION-PS-00445-2022",
    "lang": "es"
   },
@@ -2781,10 +2509,9 @@
    "published_at": "2023-05-12",
    "source_url": "https://www.aepd.es/documento/reposicion-ps-00224-2022.pdf",
    "topics": [
-    "controllo_a_distanza",
-    "presenze_orario"
+    "controllo_a_distanza"
    ],
-   "amount_eur": 70000,
+   "amount_eur": null,
    "doc_number": "REPOSICION-PS-00224-2022",
    "lang": "es"
   },
@@ -2815,20 +2542,6 @@
    ],
    "amount_eur": 40000,
    "doc_number": "171/2023",
-   "lang": "it"
-  },
-  {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Provvedimento del 27 aprile 2023 [9896845] - Ministero dell’Istruzione e del Merito - Ufficio Scolastico Regionale per la Puglia",
-   "published_at": "2023-04-27",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9896845",
-   "topics": [
-    "geolocalizzazione"
-   ],
-   "amount_eur": 15000,
-   "doc_number": "168/2023",
    "lang": "it"
   },
   {
@@ -2888,20 +2601,6 @@
    "lang": "es"
   },
   {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Ordinanza ingiunzione nei confronti di Banca Cambiano 1884 S.p.A. - 9...",
-   "published_at": "2023-03-09",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9877728",
-   "topics": [
-    "lavoro_agile"
-   ],
-   "amount_eur": 10000,
-   "doc_number": "67/2023",
-   "lang": "it"
-  },
-  {
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
@@ -2923,8 +2622,7 @@
    "published_at": "2023-03-02",
    "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9880398",
    "topics": [
-    "controllo_a_distanza",
-    "presenze_orario"
+    "controllo_a_distanza"
    ],
    "amount_eur": 50000,
    "doc_number": "58/2023",
@@ -2943,20 +2641,6 @@
    ],
    "amount_eur": null,
    "doc_number": "PS-00494-2022",
-   "lang": "es"
-  },
-  {
-   "country": "ES",
-   "authority": "Agencia Española de Protección de Datos",
-   "framework": "gdpr",
-   "title": "PS-00553-2021 - RESOLUCIÓN DE PROCEDIMIENTO SANCIONADOR",
-   "published_at": "2023-02-24",
-   "source_url": "https://www.aepd.es/documento/ps-00553-2021.pdf",
-   "topics": [
-    "presenze_orario"
-   ],
-   "amount_eur": 200000,
-   "doc_number": "PS-00553-2021",
    "lang": "es"
   },
   {
@@ -3060,20 +2744,6 @@
    "lang": "it"
   },
   {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Ordinanza ingiunzione nei confronti di Azienda Sanitaria provinciale di...",
-   "published_at": "2022-12-15",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9857587",
-   "topics": [
-    "lavoro_agile"
-   ],
-   "amount_eur": 5000,
-   "doc_number": "425/2022",
-   "lang": "it"
-  },
-  {
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
@@ -3086,20 +2756,6 @@
    "amount_eur": null,
    "doc_number": "REPOSICION-AI-00357-2022",
    "lang": "es"
-  },
-  {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Ordinanza ingiunzione nei confronti di Amazon Italia Logistica s.r.l. - 1...",
-   "published_at": "2022-12-01",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9843805",
-   "topics": [
-    "presenze_orario"
-   ],
-   "amount_eur": 20000,
-   "doc_number": "406/2022",
-   "lang": "it"
   },
   {
    "country": "ES",
@@ -3295,7 +2951,7 @@
    "topics": [
     "controllo_a_distanza"
    ],
-   "amount_eur": 300,
+   "amount_eur": null,
    "doc_number": "PS-00617-2021",
    "lang": "es"
   },
@@ -3307,26 +2963,11 @@
    "published_at": "2022-06-01",
    "source_url": "https://www.aepd.es/documento/ps-00218-2021.pdf",
    "topics": [
-    "controllo_a_distanza",
     "presenze_orario"
    ],
-   "amount_eur": 100000,
+   "amount_eur": null,
    "doc_number": "PS-00218-2021",
    "lang": "es"
-  },
-  {
-   "country": "BE",
-   "authority": "Autorité de protection des données",
-   "framework": "gdpr",
-   "title": "Décision quant au fond n° 85/2022 du 25 mai 2022",
-   "published_at": "2022-05-25",
-   "source_url": "https://www.autoriteprotectiondonnees.be/publications/decision-quant-au-fond-n-85-2022.pdf",
-   "topics": [
-    "geolocalizzazione"
-   ],
-   "amount_eur": 50000,
-   "doc_number": "",
-   "lang": "fr"
   },
   {
    "country": "BE",
@@ -3392,8 +3033,6 @@
    "published_at": "2022-03-09",
    "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9874604",
    "topics": [
-    "controllo_a_distanza",
-    "lavoro_agile",
     "presenze_orario"
    ],
    "amount_eur": 1600,
@@ -3515,20 +3154,6 @@
    "lang": "es"
   },
   {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Provvedimento del 27 gennaio 2022 [9750219]",
-   "published_at": "2022-01-27",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9750219",
-   "topics": [
-    "lavoro_agile"
-   ],
-   "amount_eur": 75000,
-   "doc_number": "19/2022",
-   "lang": "it"
-  },
-  {
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
@@ -3607,7 +3232,6 @@
    "published_at": "2021-11-12",
    "source_url": "https://www.aepd.es/documento/ps-00010-2021.pdf",
    "topics": [
-    "controllo_a_distanza",
     "presenze_orario"
    ],
    "amount_eur": 20000,
@@ -3652,7 +3276,7 @@
    "topics": [
     "presenze_orario"
    ],
-   "amount_eur": 20000,
+   "amount_eur": 16000,
    "doc_number": "PS-00050-2021",
    "lang": "es"
   },
@@ -3725,34 +3349,6 @@
    "amount_eur": 75000,
    "doc_number": "331/2021",
    "lang": "it"
-  },
-  {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Ordinanza ingiunzione nei confronti di Istituto Comprensivo I.C.S....",
-   "published_at": "2021-09-16",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9711517",
-   "topics": [
-    "presenze_orario"
-   ],
-   "amount_eur": 2500,
-   "doc_number": "322/2021",
-   "lang": "it"
-  },
-  {
-   "country": "ES",
-   "authority": "Agencia Española de Protección de Datos",
-   "framework": "gdpr",
-   "title": "PS-00093-2021 - RESOLUCIÓN DE PROCEDIMIENTO SANCIONADOR",
-   "published_at": "2021-09-10",
-   "source_url": "https://www.aepd.es/documento/ps-00093-2021.pdf",
-   "topics": [
-    "controllo_a_distanza"
-   ],
-   "amount_eur": 4000,
-   "doc_number": "PS-00093-2021",
-   "lang": "es"
   },
   {
    "country": "ES",
@@ -3833,7 +3429,8 @@
    "published_at": "2021-07-22",
    "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9685994",
    "topics": [
-    "geolocalizzazione"
+    "geolocalizzazione",
+    "controllo_a_distanza"
    ],
    "amount_eur": 2500000,
    "doc_number": "285/2021",
@@ -3917,9 +3514,7 @@
    "published_at": "2021-05-13",
    "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9669974",
    "topics": [
-    "controllo_a_distanza",
-    "geolocalizzazione",
-    "presenze_orario"
+    "controllo_a_distanza"
    ],
    "amount_eur": 84000,
    "doc_number": "190/2021",
@@ -3985,20 +3580,6 @@
    "lang": "es"
   },
   {
-   "country": "IT",
-   "authority": "Garante per la protezione dei dati personali",
-   "framework": "gdpr",
-   "title": "Ordinanza ingiunzione nei confronti di Comune di Commezzadura - 25...",
-   "published_at": "2021-02-25",
-   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9567429",
-   "topics": [
-    "presenze_orario"
-   ],
-   "amount_eur": 6000,
-   "doc_number": "68/2021",
-   "lang": "it"
-  },
-  {
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
@@ -4053,20 +3634,6 @@
    "amount_eur": null,
    "doc_number": "PS-00145-2020",
    "lang": "es"
-  },
-  {
-   "country": "DE",
-   "authority": "Die Landesbeauftragte für den Datenschutz Niedersachsen",
-   "framework": "gdpr",
-   "title": "LfD Niedersachsen verhängt Bußgeld über 10,4 Millionen Euro gegen notebooksbilliger.de",
-   "published_at": "2021-01-08",
-   "source_url": "https://lfd.niedersachsen.de/startseite/infothek/presseinformationen/lfd-niedersachsen-verhaengt-bussgeld-gegen-notebooksbilliger-de-196019.html",
-   "topics": [
-    "controllo_a_distanza"
-   ],
-   "amount_eur": 10400000,
-   "doc_number": "",
-   "lang": "de"
   },
   {
    "country": "IT",
@@ -4407,7 +3974,7 @@
    "topics": [
     "presenze_orario"
    ],
-   "amount_eur": 725000,
+   "amount_eur": 50000,
    "doc_number": "",
    "lang": "nl"
   },
@@ -4649,7 +4216,7 @@
    "topics": [
     "controllo_a_distanza"
    ],
-   "amount_eur": 12000,
+   "amount_eur": 9600,
    "doc_number": "PS-00401-2018",
    "lang": "es"
   },
@@ -4906,7 +4473,7 @@
    "topics": [
     "presenze_orario"
    ],
-   "amount_eur": 3000000,
+   "amount_eur": 10000,
    "doc_number": "SAN-2018-009",
    "lang": "fr"
   },
@@ -5190,7 +4757,7 @@
    "topics": [
     "controllo_a_distanza"
    ],
-   "amount_eur": 40000,
+   "amount_eur": null,
    "doc_number": "A-00457-2017",
    "lang": "es"
   },
@@ -6767,20 +6334,6 @@
    "country": "FR",
    "authority": "Commission nationale de l'informatique et des libertés",
    "framework": "gdpr",
-   "title": "Délibération de la formation restreinte n° 2014-294 du 22 juillet 2014\r\nprononçant une sanction pécuniaire publique à l’encontre \r\nde la société X",
-   "published_at": "2014-07-22",
-   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000029298773",
-   "topics": [
-    "geolocalizzazione"
-   ],
-   "amount_eur": 5000,
-   "doc_number": "2014-294",
-   "lang": "fr"
-  },
-  {
-   "country": "FR",
-   "authority": "Commission nationale de l'informatique et des libertés",
-   "framework": "gdpr",
    "title": "Délibération de la formation restreinte n°2014-307 du 17 juillet 2014 prononçant une sanction pécuniaire à l’encontre de la société X",
    "published_at": "2014-07-17",
    "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000029302625",
@@ -7467,21 +7020,6 @@
    ],
    "amount_eur": null,
    "doc_number": "2009-201",
-   "lang": "fr"
-  },
-  {
-   "country": "FR",
-   "authority": "Commission nationale de l'informatique et des libertés",
-   "framework": "gdpr",
-   "title": "Délibération n° 2008-187 du 3 juillet 2008 prononçant une sanction pécuniaire à l’encontre de la société X",
-   "published_at": "2008-07-03",
-   "source_url": "https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000019796260",
-   "topics": [
-    "controllo_a_distanza",
-    "presenze_orario"
-   ],
-   "amount_eur": 30000,
-   "doc_number": "2008-187",
    "lang": "fr"
   },
   {
