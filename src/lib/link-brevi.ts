@@ -93,6 +93,21 @@ export const LINK_BREVI: Record<string, LinkBreve> = {
   'x-assocnl': { destinazione: '/nl/survey/', nota: 'associazioni di categoria, Paesi Bassi' },
   'x-assoces': { destinazione: '/es/survey/', nota: 'associazioni di categoria, Spagna' },
 
+  // Passaparola: il link che chi ha appena risposto gira a un collega dalla
+  // pagina di ringraziamento (WhatsApp, copia, condivisione del telefono).
+  // Uno per lingua, cosi' si vede quanto rende il passaparola e dove.
+  'x-giroit': { destinazione: '/it/survey/', nota: 'passaparola dalla pagina di ringraziamento, it' },
+  'x-giroen': { destinazione: '/en/survey/', nota: 'passaparola dalla pagina di ringraziamento, en' },
+  'x-girode': { destinazione: '/de/survey/', nota: 'passaparola dalla pagina di ringraziamento, de' },
+  'x-gironl': { destinazione: '/nl/survey/', nota: 'passaparola dalla pagina di ringraziamento, nl' },
+  'x-girofr': { destinazione: '/fr/survey/', nota: 'passaparola dalla pagina di ringraziamento, fr' },
+  'x-giroes': { destinazione: '/es/survey/', nota: 'passaparola dalla pagina di ringraziamento, es' },
+  'x-giropt': { destinazione: '/pt/survey/', nota: 'passaparola dalla pagina di ringraziamento, pt' },
+  'x-giroda': { destinazione: '/da/survey/', nota: 'passaparola dalla pagina di ringraziamento, da' },
+  'x-girosv': { destinazione: '/sv/survey/', nota: 'passaparola dalla pagina di ringraziamento, sv' },
+  'x-gironb': { destinazione: '/nb/survey/', nota: 'passaparola dalla pagina di ringraziamento, nb' },
+  'x-giroru': { destinazione: '/ru/survey/', nota: 'passaparola dalla pagina di ringraziamento, ru' },
+
   // Link in bio dei profili social. Il codice serve a separare il traffico:
   // /links e' la stessa pagina per tutti, ma senza un codice per piattaforma
   // non si sa se chi arriva viene da TikTok o da Instagram, perche' l'app

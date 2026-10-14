@@ -28,6 +28,8 @@ export interface SurveyContent {
   privacyNote: string;
   submit: string;
   thankYou: string;
+  /** Dopo l'invio: invito a girare il sondaggio a chi fa lo stesso mestiere. */
+  share: { title: string; intro: string; message: string; whatsapp: string; copy: string; copied: string; native: string };
 }
 
 export const SURVEY: Record<SurveyLocale, SurveyContent> = {
@@ -51,6 +53,15 @@ export const SURVEY: Record<SurveyLocale, SurveyContent> = {
     privacyNote: 'Sondaggio anonimo. Nessun dato obbligatorio. La mail, se la lasci, serve solo per i risultati e non viene condivisa.',
     submit: 'Invia',
     thankYou: 'Grazie. Il tuo contributo conta davvero.',
+    share: {
+      title: 'Conosci qualcuno che fa questo lavoro?',
+      intro: 'Più risposte arrivano da chi fa il mestiere, più i risultati sono affidabili. Giralo a un collega o a un cliente: bastano due minuti.',
+      message: 'Ho risposto a un sondaggio anonimo di 2 minuti sui lavori contestati dai clienti quando manca una prova. Se lavori nel settore, la tua risposta serve:',
+      whatsapp: 'Invia su WhatsApp',
+      copy: 'Copia il link',
+      copied: 'Link copiato',
+      native: 'Condividi',
+    },
   },
   en: {
     title: 'Field work: do you trust their word, or do you need proof?',
@@ -72,6 +83,15 @@ export const SURVEY: Record<SurveyLocale, SurveyContent> = {
     privacyNote: 'Anonymous survey. No required data. Your email, if you leave it, is used only for the results and is never shared.',
     submit: 'Submit',
     thankYou: 'Thank you. Your input really matters.',
+    share: {
+      title: 'Know someone who does this work?',
+      intro: 'The more answers come from people in the trade, the more reliable the results. Pass it on to a colleague or a client: it takes two minutes.',
+      message: 'I just answered an anonymous 2-minute survey about field work that clients dispute when there is no proof. If you work in the trade, your answer counts:',
+      whatsapp: 'Send on WhatsApp',
+      copy: 'Copy the link',
+      copied: 'Link copied',
+      native: 'Share',
+    },
   },
   de: {
     title: 'Arbeit vor Ort: Vertrauen Sie dem Wort, oder brauchen Sie einen Nachweis?',
@@ -93,6 +113,15 @@ export const SURVEY: Record<SurveyLocale, SurveyContent> = {
     privacyNote: 'Anonyme Umfrage. Keine Pflichtangaben. Ihre E-Mail-Adresse wird, falls angegeben, nur für die Ergebnisse genutzt und nicht weitergegeben.',
     submit: 'Senden',
     thankYou: 'Danke. Ihr Beitrag zählt wirklich.',
+    share: {
+      title: 'Kennen Sie jemanden, der diese Arbeit macht?',
+      intro: 'Je mehr Antworten aus der Branche kommen, desto belastbarer sind die Ergebnisse. Leiten Sie die Umfrage an Kollegen oder Kunden weiter: Es dauert zwei Minuten.',
+      message: 'Ich habe gerade an einer anonymen 2-Minuten-Umfrage teilgenommen: Es geht um Arbeiten vor Ort, die Kunden mangels Nachweis bestreiten. Wer in der Branche arbeitet, kann hier mitmachen:',
+      whatsapp: 'Per WhatsApp senden',
+      copy: 'Link kopieren',
+      copied: 'Link kopiert',
+      native: 'Teilen',
+    },
   },
   nl: {
     title: 'Werk in het veld: vertrouwt u op iemands woord, of hebt u bewijs nodig?',
@@ -114,6 +143,15 @@ export const SURVEY: Record<SurveyLocale, SurveyContent> = {
     privacyNote: 'Anonieme enquête. Geen verplichte gegevens. Het e-mailadres, als u het achterlaat, dient alleen voor de resultaten en wordt niet gedeeld.',
     submit: 'Verzenden',
     thankYou: 'Bedankt. Uw bijdrage telt echt.',
+    share: {
+      title: 'Kent u iemand die dit werk doet?',
+      intro: 'Hoe meer antwoorden uit de branche komen, hoe betrouwbaarder de resultaten. Stuur het door naar een collega of klant: het kost twee minuten.',
+      message: 'Ik heb net een anonieme enquête van 2 minuten ingevuld over werk in het veld dat klanten betwisten als er geen bewijs is. Werk je in de branche? Dan telt jouw antwoord:',
+      whatsapp: 'Versturen via WhatsApp',
+      copy: 'Link kopiëren',
+      copied: 'Link gekopieerd',
+      native: 'Delen',
+    },
   },
   fr: {
     title: 'Travail sur le terrain : faites-vous confiance à la parole, ou vous faut-il une preuve ?',
@@ -135,6 +173,15 @@ export const SURVEY: Record<SurveyLocale, SurveyContent> = {
     privacyNote: 'Enquête anonyme. Aucune donnée obligatoire. Votre e-mail, si vous le laissez, sert uniquement aux résultats et n\'est jamais partagé.',
     submit: 'Envoyer',
     thankYou: 'Merci. Votre contribution compte vraiment.',
+    share: {
+      title: 'Vous connaissez quelqu’un qui fait ce métier ?',
+      intro: 'Plus les réponses viennent du métier, plus les résultats sont fiables. Transmettez-le à un collègue ou à un client : cela prend deux minutes.',
+      message: 'Je viens de répondre à un sondage anonyme de 2 minutes sur les travaux contestés par les clients faute de preuve. Si vous travaillez dans le secteur, votre réponse compte :',
+      whatsapp: 'Envoyer sur WhatsApp',
+      copy: 'Copier le lien',
+      copied: 'Lien copié',
+      native: 'Partager',
+    },
   },
   es: {
     title: 'Trabajo de campo: ¿te fías de la palabra o necesitas una prueba?',
@@ -156,6 +203,15 @@ export const SURVEY: Record<SurveyLocale, SurveyContent> = {
     privacyNote: 'Encuesta anónima. Ningún dato obligatorio. Tu correo, si lo dejas, se usa solo para los resultados y nunca se comparte.',
     submit: 'Enviar',
     thankYou: 'Gracias. Tu aportación cuenta de verdad.',
+    share: {
+      title: '¿Conoces a alguien que haga este trabajo?',
+      intro: 'Cuantas más respuestas lleguen del oficio, más fiables serán los resultados. Pásaselo a un compañero o a un cliente: son dos minutos.',
+      message: 'Acabo de responder una encuesta anónima de 2 minutos sobre trabajos de campo que los clientes discuten cuando no hay prueba. Si trabajas en el sector, tu respuesta cuenta:',
+      whatsapp: 'Enviar por WhatsApp',
+      copy: 'Copiar el enlace',
+      copied: 'Enlace copiado',
+      native: 'Compartir',
+    },
   },
   pt: {
     title: 'Trabalho no terreno: confia na palavra ou precisa de uma prova?',
@@ -177,6 +233,15 @@ export const SURVEY: Record<SurveyLocale, SurveyContent> = {
     privacyNote: 'Inquérito anónimo. Nenhum dado obrigatório. O seu email, se o deixar, serve apenas para os resultados e nunca é partilhado.',
     submit: 'Enviar',
     thankYou: 'Obrigado. O seu contributo conta mesmo.',
+    share: {
+      title: 'Conhece alguém que faça este trabalho?',
+      intro: 'Quanto mais respostas vierem do setor, mais fiáveis serão os resultados. Envie a um colega ou a um cliente: demora dois minutos.',
+      message: 'Acabei de responder a um inquérito anónimo de 2 minutos sobre trabalhos no terreno contestados pelos clientes por falta de prova. Se trabalha no setor, a sua resposta conta:',
+      whatsapp: 'Enviar pelo WhatsApp',
+      copy: 'Copiar o link',
+      copied: 'Link copiado',
+      native: 'Partilhar',
+    },
   },
   da: {
     title: 'Arbejde i marken: stoler du på ordet, eller har du brug for bevis?',
@@ -198,6 +263,15 @@ export const SURVEY: Record<SurveyLocale, SurveyContent> = {
     privacyNote: 'Anonym undersøgelse. Ingen påkrævede data. Hvis du efterlader din e-mail, bruges den kun til resultaterne og deles aldrig.',
     submit: 'Send',
     thankYou: 'Tak. Dit bidrag betyder virkelig noget.',
+    share: {
+      title: 'Kender du nogen, der laver det her arbejde?',
+      intro: 'Jo flere svar der kommer fra branchen, jo mere pålidelige bliver resultaterne. Send den videre til en kollega eller en kunde: det tager to minutter.',
+      message: 'Jeg har lige svaret på en anonym undersøgelse på 2 minutter om arbejde, som kunder bestrider, når der ikke er bevis. Arbejder du i branchen, tæller dit svar:',
+      whatsapp: 'Send på WhatsApp',
+      copy: 'Kopiér linket',
+      copied: 'Linket er kopieret',
+      native: 'Del',
+    },
   },
   sv: {
     title: 'Arbete i fält: litar du på ordet, eller behöver du bevis?',
@@ -219,6 +293,15 @@ export const SURVEY: Record<SurveyLocale, SurveyContent> = {
     privacyNote: 'Anonym undersökning. Inga obligatoriska uppgifter. Om du lämnar din e-post används den bara för resultaten och delas aldrig.',
     submit: 'Skicka',
     thankYou: 'Tack. Ditt bidrag spelar verkligen roll.',
+    share: {
+      title: 'Känner du någon som gör det här jobbet?',
+      intro: 'Ju fler svar som kommer från branschen, desto mer tillförlitliga blir resultaten. Skicka den vidare till en kollega eller en kund: det tar två minuter.',
+      message: 'Jag har just svarat på en anonym enkät på 2 minuter om arbeten som kunder ifrågasätter när det saknas bevis. Jobbar du i branschen räknas ditt svar:',
+      whatsapp: 'Skicka via WhatsApp',
+      copy: 'Kopiera länken',
+      copied: 'Länken är kopierad',
+      native: 'Dela',
+    },
   },
   nb: {
     title: 'Arbeid ute i felt: stoler du på ordet, eller trenger du bevis?',
@@ -240,6 +323,15 @@ export const SURVEY: Record<SurveyLocale, SurveyContent> = {
     privacyNote: 'Anonym undersøkelse. Ingen obligatoriske data. Hvis du legger igjen e-posten din, brukes den bare til resultatene og deles aldri.',
     submit: 'Send',
     thankYou: 'Takk. Bidraget ditt betyr virkelig noe.',
+    share: {
+      title: 'Kjenner du noen som gjør denne jobben?',
+      intro: 'Jo flere svar som kommer fra bransjen, jo mer pålitelige blir resultatene. Send den videre til en kollega eller en kunde: det tar to minutter.',
+      message: 'Jeg har nettopp svart på en anonym undersøkelse på 2 minutter om arbeid som kunder bestrider når det mangler bevis. Jobber du i bransjen, teller svaret ditt:',
+      whatsapp: 'Send på WhatsApp',
+      copy: 'Kopier lenken',
+      copied: 'Lenken er kopiert',
+      native: 'Del',
+    },
   },
   ru: {
     title: 'Работа на выезде: верите на слово или нужно доказательство?',
@@ -261,5 +353,14 @@ export const SURVEY: Record<SurveyLocale, SurveyContent> = {
     privacyNote: 'Анонимный опрос. Обязательных данных нет. E-mail, если вы его оставите, используется только для результатов и никогда не передаётся третьим лицам.',
     submit: 'Отправить',
     thankYou: 'Спасибо. Ваш вклад действительно важен.',
+    share: {
+      title: 'Знаете кого-то, кто занимается этой работой?',
+      intro: 'Чем больше ответов от людей из отрасли, тем надёжнее результаты. Перешлите опрос коллеге или клиенту: это займёт две минуты.',
+      message: 'Анонимный опрос на 2 минуты о работах, которые клиенты оспаривают, когда нет доказательств. Если вы работаете в этой сфере, ваш ответ важен:',
+      whatsapp: 'Отправить в WhatsApp',
+      copy: 'Скопировать ссылку',
+      copied: 'Ссылка скопирована',
+      native: 'Поделиться',
+    },
   },
 };

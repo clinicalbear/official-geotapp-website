@@ -17,6 +17,71 @@ function pickContent(locale: string): { key: SurveyLocale; c: SurveyContent } {
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
+/**
+ * Passaparola dopo l'invio. Chi ha appena risposto conosce altri del mestiere,
+ * ed e' il pubblico che i gruppi social non ci portano. Il link e' il codice
+ * breve `x-giro<lingua>`, cosi' le aperture si contano lato server (vedi
+ * src/lib/link-brevi.ts) anche quando arrivano da WhatsApp senza referrer.
+ */
+function ShareBlock({ locale, c, side }: { locale: SurveyLocale; c: SurveyContent; side: string }) {
+  const [copied, setCopied] = useState(false);
+  const [canNative, setCanNative] = useState(false);
+  useEffect(() => {
+    setCanNative(typeof navigator !== 'undefined' && typeof navigator.share === 'function');
+  }, []);
+
+  const url = `https://geotapp.com/s/x-giro${locale}`;
+  const text = `${c.share.message} ${url}`;
+  const track = (method: string) => trackEvent('survey_share_click', { method, side, locale });
+
+  async function copy() {
+    track('copy');
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } catch {
+      // Clipboard negata (iframe, permessi): il link resta leggibile sotto.
+    }
+  }
+
+  async function nativeShare() {
+    track('native');
+    try {
+      await navigator.share({ text: c.share.message, url });
+    } catch {
+      // Chiusa dall'utente: niente da fare.
+    }
+  }
+
+  return (
+    <div className="mt-8 border-t border-slate-200 pt-8 text-left">
+      <p className="font-bold text-slate-900">{c.share.title}</p>
+      <p className="mt-2 text-sm text-slate-500">{c.share.intro}</p>
+      <div className="mt-5 grid gap-2 sm:grid-cols-2">
+        <a
+          href={`https://wa.me/?text=${encodeURIComponent(text)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => track('whatsapp')}
+          className="rounded-xl px-4 py-3 text-center text-sm font-bold text-white"
+          style={{ backgroundColor: ACCENT }}
+        >
+          {c.share.whatsapp}
+        </a>
+        <button
+          type="button"
+          onClick={canNative ? nativeShare : copy}
+          className="rounded-xl border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-700 hover:border-slate-300"
+        >
+          {canNative ? c.share.native : copied ? c.share.copied : c.share.copy}
+        </button>
+      </div>
+      <p className="mt-3 break-all text-center text-xs text-slate-400">{url}</p>
+    </div>
+  );
+}
+
 function Radio({ name, value, current, onChange, label }: {
   name: string; value: string; current: string; onChange: (v: string) => void; label: string;
 }) {
@@ -133,6 +198,7 @@ export default function SurveyForm({ locale }: { locale: string }) {
       <div className="mx-auto max-w-xl rounded-2xl border border-slate-200 p-10 text-center">
         <p className="text-2xl">🙏</p>
         <p className="mt-3 text-lg font-bold text-slate-900">{c.thankYou}</p>
+        <ShareBlock locale={key} c={c} side={side} />
       </div>
     );
   }
