@@ -1863,6 +1863,21 @@
    "lang": "es"
   },
   {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 13 novembre 2024 [10074601]",
+   "published_at": "2024-11-13",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10074601",
+   "topics": [
+    "geolocalizzazione",
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 5000000,
+   "doc_number": "675/2024",
+   "lang": "it"
+  },
+  {
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
@@ -3477,6 +3492,21 @@
    "amount_eur": null,
    "doc_number": "E-06866-2021",
    "lang": "es"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Ordinanza ingiunzione nei confronti di Foodinho s.r.l. - 10 giugno 2021...",
+   "published_at": "2021-06-10",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9675440",
+   "topics": [
+    "geolocalizzazione",
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 2600000,
+   "doc_number": "234/2021",
+   "lang": "it"
   },
   {
    "country": "ES",
