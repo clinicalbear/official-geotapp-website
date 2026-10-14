@@ -979,6 +979,20 @@
    "lang": "es"
   },
   {
+   "country": "AT",
+   "authority": "Datenschutzbehörde",
+   "framework": "gdpr",
+   "title": "DSB 2025-0.861.933, Bescheid (Beschwerde): Videoüberwachung, Vorwurf strafbarer Handlungen gegen Mitarbeiter des Verantwortlichen, Verarbeitung nach Treu und Glauben, Transparenz, Zweckbindung",
+   "published_at": "2025-10-28",
+   "source_url": "https://www.ris.bka.gv.at/Dokument.wxe?Abfrage=Dsk&Dokumentnummer=DSBT_20251028_2025_0_861_933_00",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "2025-0.861.933",
+   "lang": "de"
+  },
+  {
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
@@ -1006,6 +1020,20 @@
    "amount_eur": null,
    "doc_number": "AI-00203-2024",
    "lang": "es"
+  },
+  {
+   "country": "AT",
+   "authority": "Datenschutzbehörde",
+   "framework": "gdpr",
+   "title": "DSB 2025-0.764.984, Bescheid (Beschwerde): Videoüberwachung, Überwachung am Arbeitsplatz, Kontrolle von Arbeitnehmern, Kinobetrieb, Kassenbereich",
+   "published_at": "2025-10-20",
+   "source_url": "https://www.ris.bka.gv.at/Dokument.wxe?Abfrage=Dsk&Dokumentnummer=DSBT_20251020_2025_0_764_984_00",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "2025-0.764.984",
+   "lang": "de"
   },
   {
    "country": "IT",
@@ -1108,6 +1136,20 @@
    "amount_eur": null,
    "doc_number": "SAN-2025-008",
    "lang": "fr"
+  },
+  {
+   "country": "AT",
+   "authority": "Datenschutzbehörde",
+   "framework": "gdpr",
+   "title": "DSB 2025-0.607.071, Bescheid (Beschwerde): Videoüberwachung, Überwachung am Arbeitsplatz, Verarbeitungsverbot, gemeinsam für die Verarbeitung Verantwortliche, gemeinsame Verarbeitung",
+   "published_at": "2025-09-10",
+   "source_url": "https://www.ris.bka.gv.at/Dokument.wxe?Abfrage=Dsk&Dokumentnummer=DSBT_20250910_2025_0_607_071_00",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "2025-0.607.071",
+   "lang": "de"
   },
   {
    "country": "BE",
@@ -1250,6 +1292,21 @@
    "lang": "it"
   },
   {
+   "country": "AT",
+   "authority": "Datenschutzbehörde",
+   "framework": "gdpr",
+   "title": "DSB 2024-0.490.294, Bescheid (Beschwerde): Arbeitgeber, Arbeitnehmer, Zutrittskontrollsystem, Home Office, Betriebsvereinbarung",
+   "published_at": "2025-06-12",
+   "source_url": "https://www.ris.bka.gv.at/Dokument.wxe?Abfrage=Dsk&Dokumentnummer=DSBT_20250612_2024_0_490_294_00",
+   "topics": [
+    "lavoro_agile",
+    "presenze_orario"
+   ],
+   "amount_eur": null,
+   "doc_number": "2024-0.490.294",
+   "lang": "de"
+  },
+  {
    "country": "IT",
    "authority": "Garante per la protezione dei dati personali",
    "framework": "gdpr",
@@ -1319,6 +1376,20 @@
    "amount_eur": null,
    "doc_number": "288/2025",
    "lang": "it"
+  },
+  {
+   "country": "AT",
+   "authority": "Datenschutzbehörde",
+   "framework": "gdpr",
+   "title": "DSB 2025-0.327.266, Bescheid (amtswegiges Prüfverfahren): Videoüberwachung, Überwachung am Arbeitsplatz, Verantwortlicheneigenschaft, Organisationseinheit einer Gebietskörperschaft, Privatwirtschaftsverwaltung",
+   "published_at": "2025-05-19",
+   "source_url": "https://www.ris.bka.gv.at/Dokument.wxe?Abfrage=Dsk&Dokumentnummer=DSBT_20250519_2025_0_327_266_00",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "2025-0.327.266",
+   "lang": "de"
   },
   {
    "country": "ES",
@@ -2194,6 +2265,20 @@
    "lang": "fr"
   },
   {
+   "country": "AT",
+   "authority": "Datenschutzbehörde",
+   "framework": "gdpr",
+   "title": "DSB 2023-0.583.644, Straferkenntnis / Verwarnung: Videoüberwachung, Arbeitnehmer, Gastronomiebetrieb, Küche, Einwilligung",
+   "published_at": "2023-12-07",
+   "source_url": "https://www.ris.bka.gv.at/Dokument.wxe?Abfrage=Dsk&Dokumentnummer=DSBT_20231207_2023_0_583_644_00",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": 20000,
+   "doc_number": "2023-0.583.644",
+   "lang": "de"
+  },
+  {
    "country": "IT",
    "authority": "Garante per la protezione dei dati personali",
    "framework": "gdpr",
@@ -2820,6 +2905,20 @@
    "lang": "it"
   },
   {
+   "country": "AT",
+   "authority": "Datenschutzbehörde",
+   "framework": "gdpr",
+   "title": "DSB 2021-0.451.837, Bescheid (Beschwerde): frühere Mitarbeiterin, Beendigung des Dienstverhältnisses, Einsichtnahme in dienstlichen E-Mail-Account, dienstliche E-Mail-Adresse, subjektives Recht",
+   "published_at": "2022-08-29",
+   "source_url": "https://www.ris.bka.gv.at/Dokument.wxe?Abfrage=Dsk&Dokumentnummer=DSBT_20220829_2021_0_451_837_00",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": null,
+   "doc_number": "2021-0.451.837",
+   "lang": "de"
+  },
+  {
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
@@ -2991,6 +3090,20 @@
    "lang": "it"
   },
   {
+   "country": "AT",
+   "authority": "Datenschutzbehörde",
+   "framework": "gdpr",
+   "title": "DSB 2022-0.021.739, Bescheid (amtswegiges Prüfverfahren): GPS-Tracker, Dienstfahrzeug, gelindere Mittel",
+   "published_at": "2022-03-01",
+   "source_url": "https://www.ris.bka.gv.at/Dokument.wxe?Abfrage=Dsk&Dokumentnummer=DSBT_20220301_2022_0_021_739_00",
+   "topics": [
+    "geolocalizzazione"
+   ],
+   "amount_eur": null,
+   "doc_number": "2022-0.021.739",
+   "lang": "de"
+  },
+  {
    "country": "ES",
    "authority": "Agencia Española de Protección de Datos",
    "framework": "gdpr",
@@ -3132,6 +3245,20 @@
    "amount_eur": null,
    "doc_number": "PS-00052-2021",
    "lang": "es"
+  },
+  {
+   "country": "AT",
+   "authority": "Datenschutzbehörde",
+   "framework": "gdpr",
+   "title": "DSB 2021-0.450.072, Bescheid (Beschwerde): Beendigung des Dienstverhältnisses, Einsichtnahme in dienstlichen E-Mail-Account, dienstliche E-Mail-Adresse, subjektives Recht, Datenübertragbarkeit",
+   "published_at": "2022-01-13",
+   "source_url": "https://www.ris.bka.gv.at/Dokument.wxe?Abfrage=Dsk&Dokumentnummer=DSBT_20220113_2021_0_450_072_00",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": null,
+   "doc_number": "2021-0.450.072",
+   "lang": "de"
   },
   {
    "country": "ES",
@@ -3951,6 +4078,20 @@
    "lang": "es"
   },
   {
+   "country": "AT",
+   "authority": "Datenschutzbehörde",
+   "framework": "gdpr",
+   "title": "DSB-D123.154/0004-DSB/2019, Bescheid (Beschwerde): Einsichtnahme in dienstlichen E-Mail-Account, dienstliche E-Mail-Adresse, Gemeindemitarbeiter, Beendigung des Dienstverhältnisses, Ortsgemeinde",
+   "published_at": "2019-03-07",
+   "source_url": "https://www.ris.bka.gv.at/Dokument.wxe?Abfrage=Dsk&Dokumentnummer=DSBT_20190307_DSB_D123_154_0004_DSB_2019_00",
+   "topics": [
+    "email_dipendenti"
+   ],
+   "amount_eur": null,
+   "doc_number": "DSB-D123.154/0004-DSB/2019",
+   "lang": "de"
+  },
+  {
    "country": "IT",
    "authority": "Garante per la protezione dei dati personali",
    "framework": "gdpr",
@@ -4194,6 +4335,20 @@
    "amount_eur": null,
    "doc_number": "E-06119-2017",
    "lang": "es"
+  },
+  {
+   "country": "AT",
+   "authority": "Datenschutzbehörde",
+   "framework": "gdpr",
+   "title": "DSB-D122.718/0006-DSB/2017, Bescheid (Beschwerde): Verbindungsdaten, Vertragsbediensteter, Personalstelle, Telekommunikation, Sprachtelefonie",
+   "published_at": "2017-11-08",
+   "source_url": "https://www.ris.bka.gv.at/Dokument.wxe?Abfrage=Dsk&Dokumentnummer=DSBT_20171108_DSB_D122_718_0006_DSB_2017_00",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "DSB-D122.718/0006-DSB/2017",
+   "lang": "de"
   },
   {
    "country": "ES",
@@ -4553,6 +4708,20 @@
    "lang": "fr"
   },
   {
+   "country": "AT",
+   "authority": "Datenschutzkommission (Vorgängerin der DSB)",
+   "framework": "gdpr",
+   "title": "K213.137/0009-DSK/2012, Empfehlung: Videoüberwachung, Zustimmungserklärung der Mitarbeiter, Überwachung von Mitarbeitern, Video- und Audioaufnahmen, Kurzentrum",
+   "published_at": "2012-11-23",
+   "source_url": "https://www.ris.bka.gv.at/Dokument.wxe?Abfrage=Dsk&Dokumentnummer=DSKTE_20121123_K213137_0009_DSK_2012_00",
+   "topics": [
+    "controllo_a_distanza"
+   ],
+   "amount_eur": null,
+   "doc_number": "K213.137/0009-DSK/2012",
+   "lang": "de"
+  },
+  {
    "country": "FR",
    "authority": "Commission nationale de l'informatique et des libertés",
    "framework": "gdpr",
@@ -4636,6 +4805,21 @@
    "amount_eur": 30000,
    "doc_number": "2008-187",
    "lang": "fr"
+  },
+  {
+   "country": "AT",
+   "authority": "Datenschutzkommission (Vorgängerin der DSB)",
+   "framework": "gdpr",
+   "title": "K121.358/0009-DSK/2008, Bescheid (Beschwerde): Überwachung am Arbeitsplatz, Zutrittskontrollsystem, öffentlicher Dienst, Logfiles, Login-Files",
+   "published_at": "2008-06-20",
+   "source_url": "https://www.ris.bka.gv.at/Dokument.wxe?Abfrage=Dsk&Dokumentnummer=DSKTE_20080620_K121358_0009_DSK_2008_00",
+   "topics": [
+    "controllo_a_distanza",
+    "presenze_orario"
+   ],
+   "amount_eur": null,
+   "doc_number": "K121.358/0009-DSK/2008",
+   "lang": "de"
   },
   {
    "country": "IT",

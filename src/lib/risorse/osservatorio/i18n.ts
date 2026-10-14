@@ -26,7 +26,6 @@ export interface OsservatorioStrings {
   chiusura: string;
   metaTitle: string;
   metaDesc: string;
-  avviso: string;
   nomeBreve: string;
   creditoEmbed: string;
   datiTitolo: string;
@@ -52,7 +51,6 @@ const it: OsservatorioStrings = {
   chiusura: 'Ogni voce è raccolta dal sito ufficiale dell’autorità che l’ha emessa. Gli importi compaiono solo dove la fonte li scrive per esteso, i titoli restano quelli originali (quelli molto lunghi sono accorciati) e nessuna sintesi è interpretata: quello che si legge qui si può verificare in un clic.',
   metaTitle: 'Osservatorio europeo: provvedimenti su controllo e presenze dei lavoratori',
   metaDesc: 'I provvedimenti delle autorità europee su geolocalizzazione, videosorveglianza e presenze dei lavoratori, con il link al documento ufficiale.',
-  avviso: 'Due autorità mancano all’appello, la Renania Settentrionale-Vestfalia e l’Austria: i loro siti non rispondono alle nostre richieste, per un motivo tecnico che dipende da loro. Le aggiungeremo quando torneranno raggiungibili.',
   nomeBreve: 'Osservatorio europeo',
   creditoEmbed: 'Dati: Osservatorio europeo GeoTapp',
   datiTitolo: 'Prendi questi dati',
@@ -78,7 +76,6 @@ const en: OsservatorioStrings = {
   chiusura: 'Every entry is collected from the official site of the authority that issued it. Amounts appear only where the source writes them out, titles stay as originally published (very long ones are shortened) and no summary is interpreted: everything here can be checked in one click.',
   metaTitle: 'European register: rulings on worker monitoring and attendance',
   metaDesc: 'Rulings from European data protection authorities on GPS, camera surveillance and attendance tracking at work, each linked to the official document.',
-  avviso: 'Two authorities are missing, North Rhine-Westphalia and Austria: their sites do not respond to our requests, for a technical reason that lies on their side. We will add them when they become reachable again.',
   nomeBreve: 'European register',
   creditoEmbed: 'Data: GeoTapp European register',
   datiTitolo: 'Take this data',
@@ -104,7 +101,6 @@ const de: OsservatorioStrings = {
   chiusura: 'Jeder Eintrag stammt von der amtlichen Seite der Behörde, die ihn erlassen hat. Beträge erscheinen nur dort, wo die Quelle sie ausschreibt, Titel bleiben wie ursprünglich veröffentlicht (sehr lange werden gekürzt) und keine Zusammenfassung wird gedeutet: Alles hier lässt sich mit einem Klick prüfen.',
   metaTitle: 'Europäisches Register: Entscheidungen zu Überwachung und Zeiterfassung',
   metaDesc: 'Entscheidungen europäischer Datenschutzbehörden zu GPS, Videoüberwachung und Zeiterfassung am Arbeitsplatz, jeweils mit Link zum amtlichen Dokument.',
-  avviso: 'Zwei Behörden fehlen, Nordrhein-Westfalen und Österreich. Ihre Webseiten reagieren nicht auf unsere Anfragen, aus einem technischen Grund, der auf ihrer Seite liegt. Wir nehmen sie auf, sobald sie wieder erreichbar sind.',
   nomeBreve: 'Europäisches Register',
   creditoEmbed: 'Daten: GeoTapp Europäisches Register',
   datiTitolo: 'Nehmen Sie diese Daten',
@@ -130,7 +126,6 @@ const fr: OsservatorioStrings = {
   chiusura: 'Chaque entrée provient du site officiel de l’autorité qui l’a rendue. Les montants n’apparaissent que lorsque la source les écrit en toutes lettres, les titres restent ceux d’origine (les plus longs sont raccourcis) et aucun résumé n’est interprété : ce que vous lisez ici se vérifie en un clic.',
   metaTitle: 'Registre européen : décisions sur le contrôle au travail',
   metaDesc: 'Les décisions des autorités européennes sur la géolocalisation, la vidéosurveillance et le relevé des présences au travail, avec le lien vers le document officiel.',
-  avviso: 'Deux autorités manquent à l’appel, la Rhénanie-du-Nord-Westphalie et l’Autriche : leurs sites ne répondent pas à nos requêtes, pour une raison technique qui tient à eux. Nous les ajouterons dès qu’elles seront de nouveau joignables.',
   nomeBreve: 'Registre européen',
   creditoEmbed: 'Données : registre européen GeoTapp',
   datiTitolo: 'Reprenez ces données',
@@ -156,7 +151,6 @@ const es: OsservatorioStrings = {
   chiusura: 'Cada entrada procede del sitio oficial de la autoridad que la dictó. Los importes aparecen solo donde la fuente los escribe por extenso, los títulos se mantienen tal como son (los muy largos se acortan) y no se interpreta ningún resumen: lo que lees aquí se puede comprobar con un clic.',
   metaTitle: 'Registro europeo: resoluciones sobre control y jornada laboral',
   metaDesc: 'Resoluciones de las autoridades europeas sobre geolocalización, videovigilancia y registro de la jornada de los trabajadores, con enlace al documento oficial.',
-  avviso: 'Faltan dos autoridades, Renania del Norte-Westfalia y Austria: sus sitios no responden a nuestras solicitudes, por un motivo técnico que depende de ellos. Las añadiremos cuando vuelvan a ser accesibles.',
   nomeBreve: 'Registro europeo',
   creditoEmbed: 'Datos: registro europeo GeoTapp',
   datiTitolo: 'Llévate estos datos',
@@ -182,7 +176,6 @@ const pt: OsservatorioStrings = {
   chiusura: 'Cada entrada provém do sítio oficial da autoridade que a emitiu. Os montantes aparecem apenas onde a fonte os escreve por extenso, os títulos mantêm-se os originais (os muito longos são encurtados) e nenhum resumo é interpretado: o que se lê aqui pode verificar-se com um clique.',
   metaTitle: 'Registo europeu: decisões sobre controlo e assiduidade',
   metaDesc: 'As decisões das autoridades europeias sobre geolocalização, videovigilância e assiduidade dos trabalhadores, com ligação ao documento oficial.',
-  avviso: 'Faltam duas autoridades, a Renânia do Norte-Vestefália e a Áustria: os seus sítios não respondem aos nossos pedidos, por um motivo técnico que depende delas. Acrescentá-las-emos quando voltarem a estar acessíveis.',
   nomeBreve: 'Registo europeu',
   creditoEmbed: 'Dados: registo europeu GeoTapp',
   datiTitolo: 'Leve estes dados',
@@ -208,7 +201,6 @@ const nl: OsservatorioStrings = {
   chiusura: 'Elke regel komt van de officiële site van de toezichthouder die het besluit nam. Bedragen verschijnen alleen waar de bron ze voluit schrijft, de titels blijven zoals ze oorspronkelijk zijn gepubliceerd (zeer lange zijn ingekort) en er wordt geen samenvatting uitgelegd: wat hier staat, is met één klik te controleren.',
   metaTitle: 'Europees register: besluiten over toezicht en aanwezigheid van werknemers',
   metaDesc: 'Besluiten van Europese toezichthouders over GPS, cameratoezicht en urenregistratie op het werk, met de link naar het officiële document.',
-  avviso: 'Twee toezichthouders ontbreken, Noordrijn-Westfalen en Oostenrijk. Hun sites reageren niet op onze verzoeken, om een technische reden die aan hun kant ligt. We voegen ze toe zodra ze weer bereikbaar zijn.',
   nomeBreve: 'Europees register',
   creditoEmbed: 'Gegevens: Europees register GeoTapp',
   datiTitolo: 'Neem deze gegevens over',
@@ -234,7 +226,6 @@ const sv: OsservatorioStrings = {
   chiusura: 'Varje post är hämtad från webbplatsen hos den myndighet som har fattat beslutet. Belopp visas bara där källan skriver ut dem, rubrikerna är de ursprungliga (mycket långa är förkortade) och ingen sammanfattning har tolkats: det du läser här går att kontrollera med ett klick.',
   metaTitle: 'Europeiskt register: beslut om kontroll och arbetstid',
   metaDesc: 'Beslut från europeiska myndigheter om geolokalisering, kameraövervakning och registrering av anställdas arbetstid, med länk till originaldokumentet.',
-  avviso: 'Två myndigheter saknas, Nordrhein-Westfalen och Österrike: deras webbplatser svarar inte på våra förfrågningar, av ett tekniskt skäl som ligger hos dem. Vi lägger till dem när de går att nå igen.',
   nomeBreve: 'Europeiskt register',
   creditoEmbed: 'Data: GeoTapps europeiska register',
   datiTitolo: 'Ta del av dessa data',
@@ -260,7 +251,6 @@ const da: OsservatorioStrings = {
   chiusura: 'Hver post er hentet fra hjemmesiden hos den myndighed, der har truffet afgørelsen. Beløb vises kun, hvor kilden skriver dem ud, titlerne er de oprindelige (meget lange er forkortet), og intet resumé er fortolket: det, du læser her, kan kontrolleres med ét klik.',
   metaTitle: 'Europæisk register: afgørelser om kontrol og arbejdstid',
   metaDesc: 'Afgørelser fra europæiske myndigheder om geolokalisering, videoovervågning og registrering af medarbejderes arbejdstid, med link til det officielle dokument.',
-  avviso: 'To myndigheder mangler, Nordrhein-Westfalen og Østrig: deres hjemmesider svarer ikke på vores forespørgsler, af en teknisk årsag, der ligger hos dem. Vi tilføjer dem, når de igen kan nås.',
   nomeBreve: 'Europæisk register',
   creditoEmbed: 'Data: GeoTapps europæiske register',
   datiTitolo: 'Brug disse data',
@@ -286,7 +276,6 @@ const nb: OsservatorioStrings = {
   chiusura: 'Hver oppføring er hentet fra nettstedet til tilsynet som fattet vedtaket. Beløp vises bare der kilden skriver dem ut, titlene er de opprinnelige (svært lange er forkortet), og ingen sammendrag er tolket: det du leser her, kan kontrolleres med ett klikk.',
   metaTitle: 'Europeisk register: vedtak om kontroll og arbeidstid',
   metaDesc: 'Vedtak fra europeiske tilsynsmyndigheter om geolokalisering, videoovervåking og registrering av ansattes arbeidstid, med lenke til det offisielle dokumentet.',
-  avviso: 'To myndigheter mangler, Nordrhein-Westfalen og Østerrike: nettstedene deres svarer ikke på forespørslene våre, av en teknisk årsak som ligger hos dem. Vi legger dem til når de er tilgjengelige igjen.',
   nomeBreve: 'Europeisk register',
   creditoEmbed: 'Data: GeoTapps europeiske register',
   datiTitolo: 'Bruk disse dataene',
@@ -312,7 +301,6 @@ const ru: OsservatorioStrings = {
   chiusura: 'Каждая запись взята с официального сайта органа, вынесшего решение. Суммы указаны только там, где их пишет источник, заголовки остаются оригинальными (очень длинные — сокращены), и ни одно резюме не домыслено: то, что вы читаете здесь, можно проверить одним кликом.',
   metaTitle: 'Европейский реестр решений о контроле работников',
   metaDesc: 'Решения европейских надзорных органов о GPS, видеонаблюдении и учёте времени с ссылками на документы.',
-  avviso: 'Двух органов не хватает, Северного Рейна-Вестфалии и Австрии. Их сайты не отвечают по технической причине, которая находится на их стороне, а не на нашей. Система стучится каждое утро и добавит их в тот день, когда они вернутся.',
   nomeBreve: 'Европейский реестр',
   creditoEmbed: 'Данные: европейский реестр GeoTapp',
   datiTitolo: 'Заберите эти данные',

@@ -93,8 +93,6 @@ export default async function OsservatorioPage({
 
       <section className="sec">
         <div className="w">
-          <p className="oss-avviso">{s.avviso}</p>
-
           <TabellaOsservatorio voci={voci} locale={resolvedLocale} aggiornato={aggiornato} />
 
           <p className="oss-nota">{s.chiusura}</p>
