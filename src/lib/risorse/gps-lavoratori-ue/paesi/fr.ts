@@ -44,6 +44,10 @@ const FONTE_EDPB_UBEEQO = {
   titolo: 'CNIL, deliberazione SAN-2022-015 del 7 luglio 2022 (UBEEQO International, 175.000 €), su Légifrance',
   url: 'https://www.legifrance.gouv.fr/cnil/id/CNILTEXT000046070924',
 };
+const FONTE_CNIL_UBEEQO = {
+  titolo: 'CNIL, deliberazione SAN-2022-015 del 7 luglio 2022 sulla società UBEEQO INTERNATIONAL (pagina della CNIL)',
+  url: 'https://www.cnil.fr/fr/deliberation/deliberation-san-2022-015-du-7-juillet-2022',
+};
 const FONTE_CNIL_RECLAMO = {
   titolo: 'CNIL, presentare un reclamo',
   url: 'https://www.cnil.fr/fr/plaintes',
@@ -424,6 +428,7 @@ export const francia: SchedaPaese = {
     FONTE_CNIL_ABOLIZIONE_FORMALITA,
     FONTE_CNIL_SANZIONI_2025,
     FONTE_EDPB_UBEEQO,
+    FONTE_CNIL_UBEEQO,
     FONTE_GDPR,
   ],
 

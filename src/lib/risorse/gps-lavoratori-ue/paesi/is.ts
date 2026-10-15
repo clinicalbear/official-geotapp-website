@@ -246,6 +246,7 @@ export const islanda: SchedaPaese = {
         nl: 'Gegevens van elektronisch toezicht worden niet langer bewaard dan nodig voor het doel en in elk geval niet langer dan 90 dagen (Regels 50/2023, art. 11 lid 2; de termijn is door Regels 1329/2025, art. 3, van 30 naar 90 dagen gebracht). Uitzonderingen: wanneer de wet het toestaat; toestemming van de persoon voor een langere periode; logboeken van handelingen of back-ups; noodzaak om een rechtsvordering vast te stellen, uit te oefenen of te verdedigen; toestemming van de Persónuvernd; staatsveiligheid.',
       },
       fonte: FONTE_REGOLE_1329_2025,
+      fonteAggiuntiva: FONTE_REGOLE_50_2023,
     },
     {
       voce: {

@@ -65,7 +65,7 @@ export interface VoceChecklist {
    * regge su due documenti (16/10/2026: il giornalista che apre l'unica fonte della voce
    * non trovava il fatto, che stava in un altro documento della scheda).
    */
-  fonteAggiuntiva?: Fonte;
+  fonteAggiuntiva?: Fonte | Fonte[];
 }
 
 export interface PassoProcedura {

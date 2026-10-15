@@ -211,6 +211,7 @@ export const slovacchia: SchedaPaese = {
         nl: 'Een controle invoeren is een bevoegdheid van de werkgever, geen wettelijke plicht: de grondslag is doorgaans het gerechtvaardigd belang (art. 6 lid 1 onder f AVG), na een evenredigheidstoets. Voor GPS in een voertuig vraagt het door de UOOU SR gepubliceerde advies WP249 om noodzaak en evenredigheid te toetsen, de werknemer de mogelijkheid te geven het volgen uit te schakelen wanneer het voertuig ook privé wordt gebruikt, en merkt op dat een rechtsgrond om het buiten de afgesproken werktijd te lokaliseren onwaarschijnlijk is.',
       },
       fonte: FONTE_UOOU_WP249,
+      fonteAggiuntiva: FONTE_UOOU_LICEITA,
     },
     {
       voce: {
@@ -386,5 +387,5 @@ export const slovacchia: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-09-30',
+  aggiornatoIl: '2026-10-16',
 };

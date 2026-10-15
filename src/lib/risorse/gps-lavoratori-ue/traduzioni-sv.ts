@@ -439,8 +439,6 @@ export const TESTI_SV: Readonly<Record<string, string>> = {
     "Lag 195/2024 om skydd av personuppgifter, i kraft från och med den 23 augusti 2026 (art. 35 DPIA, art. 88 sanktioner), engelsk text publicerad av CNPDCP",
   "CNPDCP, ordine 27/2022: lista dei trattamenti soggetti a valutazione d'impatto (modificata dall'ordine 39/2026)":
     "CNPDCP, order 27/2022: förteckning över behandlingar som omfattas av en konsekvensbedömning (ändrad genom order 39/2026)",
-  "Legge della Repubblica di Bielorussia n. 99-Z del 7 maggio 2021 sulla protezione dei dati personali (NPDPC)":
-    "Republiken Belarus lag nr 99-Z av den 7 maj 2021 om skydd av personuppgifter (NPDPC)",
   "Ordine OAC n. 94 del 1 giugno 2022: Registro degli operatori di dati personali (casi di iscrizione)":
     "OAC:s order nr 94 av den 1 juni 2022: Register över personuppgiftsansvariga (fall där registrering krävs)",
   "NPDPC (N. Shved), responsabilita amministrativa per violazione della normativa sui dati personali (art. 23.7 CAO)":
@@ -541,6 +539,12 @@ export const TESTI_SV: Readonly<Record<string, string>> = {
     "Kodeks pracy (arbetslagen), art. 22(2) (övervakning), konsoliderad text Dz.U. 2026 poz. 1245 (offentliggjord den 24 september 2026, rättsläge den 27 augusti 2026)",
   "Poverenik, decisione sulla lista dei trattamenti che richiedono una DPIA (Sl. glasnik RS 45/2019 e 112/2020, testo consolidato)":
     "Poverenik, beslut om förteckningen över behandlingar som kräver en DPIA (Sl. glasnik RS 45/2019 och 112/2020, konsoliderad text)",
-  "LPDP (87/2018), artt. 54, 55(1) e 95, e decisione del Poverenik sulla lista DPIA (45/2019 e 112/2020), punti 2(7) e 4":
-    "LPDP (87/2018), art. 54, 55(1) och 95, och Poverenik-beslutet om DPIA-förteckningen (45/2019 och 112/2020), punkterna 2(7) och 4",
+  "Legge della Repubblica di Bielorussia n. 99-Z del 7 maggio 2021 sulla protezione dei dati personali, testo ufficiale su pravo.by":
+    "Republiken Belarus lag nr 99-Z av den 7 maj 2021 om skydd av personuppgifter, officiell text på pravo.by",
+  "Commissario cipriota, sintesi della decisione sul Gruppo Louis (818 dipendenti)":
+    "Cypriotiska Commissioner, sammanfattning av beslutet om Louis Group (818 anställda)",
+  "CNIL, deliberazione SAN-2022-015 del 7 luglio 2022 sulla società UBEEQO INTERNATIONAL (pagina della CNIL)":
+    "CNIL, beslut SAN-2022-015 av den 7 juli 2022 om bolaget UBEEQO INTERNATIONAL (CNIL:s sida)",
+  "LPDP (87/2018), artt. 54, 55(1) e 95, testo ufficiale":
+    "LPDP (87/2018), art. 54, 55.1 och 95, officiell text",
 };

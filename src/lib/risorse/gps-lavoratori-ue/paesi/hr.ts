@@ -118,6 +118,7 @@ export const croazia: SchedaPaese = {
         nl: 'Art. 43 van de arbeidsveiligheidswet bepaalt dat "toezichtapparaten" die alle bewegingen van de werknemer gedurende de hele werktijd volgen, alleen mogen worden gebruikt met voorafgaande toestemming van de ondernemingsraad (of van de vakbondsvertegenwoordiger met de betreffende bevoegdheden). De tekst betreft toezichtapparaten als instrument voor veiligheid op het werk (lid 6 noemt audio en video): noch de wet noch de AZOP zegt uitdrukkelijk dat dit ook voor GPS geldt, dus het is verstandig toestemming te verkrijgen. In elk geval verplicht de arbeidswet (Zakon o radu, art. 150) ertoe een bestaande ondernemingsraad te raadplegen voordat wordt besloten een nieuwe technologie in te voeren.',
       },
       fonte: FONTE_ZZR_43,
+      fonteAggiuntiva: FONTE_ZOR,
     },
     {
       voce: {
@@ -376,5 +377,5 @@ export const croazia: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-09-30',
+  aggiornatoIl: '2026-10-16',
 };

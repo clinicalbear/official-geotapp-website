@@ -262,6 +262,7 @@ export const irlanda: SchedaPaese = {
         nl: 'De DPC-lijst maakt een DPIA verplicht voor de systematische monitoring, tracking of observatie van de locatie of het gedrag van personen, wanneer een gedocumenteerde screening een hoog risico aantoont. Voor voertuigtracking zegt de DPC-gids dat het „zeer waarschijnlijk“ is dat vóór de invoering een DPIA nodig is.',
       },
       fonte: FONTE_DPC_DPIA,
+      fonteAggiuntiva: FONTE_DPC_VEICOLI,
     },
   ],
 

@@ -161,6 +161,7 @@ export const portogallo: SchedaPaese = {
         nl: 'Toezicht op afstand mag niet dienen om de professionele prestaties te controleren; het is alleen toegestaan voor de bescherming en veiligheid van personen en goederen of voor bijzondere behoeften van de activiteit. Gegevens die met technologische middelen voor toezicht op afstand zijn vastgelegd (art. 20 CT) mogen alleen in de strafprocedure worden gebruikt en, voor tuchtrechtelijke aansprakelijkheid, alleen voor zover ze in de strafprocedure worden gebruikt (wet 58/2019, art. 28, nrs. 4 en 5). De CNPD heeft deze twee leden niet buiten toepassing gelaten: van dat artikel liet zij alleen nr. 3, onder a, buiten toepassing (besluit 2019/494).',
       },
       fonte: FONTE_CT_20,
+      fonteAggiuntiva: [FONTE_LEI_58_28, FONTE_CNPD_494],
     },
     {
       voce: {

@@ -439,8 +439,6 @@ export const TESTI_DE: Readonly<Record<string, string>> = {
     "Gesetz 195/2024 zum Schutz personenbezogener Daten, in Kraft seit 23. August 2026 (Art. 35 DSFA, Art. 88 Sanktionen), englischer Text, veröffentlicht von der CNPDCP",
   "CNPDCP, ordine 27/2022: lista dei trattamenti soggetti a valutazione d'impatto (modificata dall'ordine 39/2026)":
     "CNPDCP, Anordnung 27/2022: Liste der Verarbeitungstätigkeiten, die einer Folgenabschätzung unterliegen (geändert durch Anordnung 39/2026)",
-  "Legge della Repubblica di Bielorussia n. 99-Z del 7 maggio 2021 sulla protezione dei dati personali (NPDPC)":
-    "Gesetz der Republik Belarus Nr. 99-Z vom 7. Mai 2021 über den Schutz personenbezogener Daten (NPDPC)",
   "Ordine OAC n. 94 del 1 giugno 2022: Registro degli operatori di dati personali (casi di iscrizione)":
     "OAC-Anordnung Nr. 94 vom 1. Juni 2022: Register der Betreiber personenbezogener Daten (Fälle der Eintragung)",
   "NPDPC (N. Shved), responsabilita amministrativa per violazione della normativa sui dati personali (art. 23.7 CAO)":
@@ -541,6 +539,12 @@ export const TESTI_DE: Readonly<Record<string, string>> = {
     "Kodeks pracy (Arbeitsgesetzbuch), Art. 22(2) (Überwachung), konsolidierte Fassung Dz.U. 2026 Pos. 1245 (veröffentlicht am 24. September 2026, Rechtsstand 27. August 2026)",
   "Poverenik, decisione sulla lista dei trattamenti che richiedono una DPIA (Sl. glasnik RS 45/2019 e 112/2020, testo consolidato)":
     "Poverenik, Beschluss über die Liste der Verarbeitungen, die eine DSFA erfordern (Sl. glasnik RS 45/2019 und 112/2020, konsolidierte Fassung)",
-  "LPDP (87/2018), artt. 54, 55(1) e 95, e decisione del Poverenik sulla lista DPIA (45/2019 e 112/2020), punti 2(7) e 4":
-    "LPDP (87/2018), Art. 54, 55(1) und 95, und Beschluss des Poverenik über die DSFA-Liste (45/2019 und 112/2020), Punkte 2(7) und 4",
+  "Legge della Repubblica di Bielorussia n. 99-Z del 7 maggio 2021 sulla protezione dei dati personali, testo ufficiale su pravo.by":
+    "Gesetz der Republik Belarus Nr. 99-Z vom 7. Mai 2021 über den Schutz personenbezogener Daten, amtlicher Text auf pravo.by",
+  "Commissario cipriota, sintesi della decisione sul Gruppo Louis (818 dipendenti)":
+    "Zypriotischer Commissioner, Zusammenfassung der Entscheidung zur Louis-Gruppe (818 Beschäftigte)",
+  "CNIL, deliberazione SAN-2022-015 del 7 luglio 2022 sulla società UBEEQO INTERNATIONAL (pagina della CNIL)":
+    "CNIL, Beschluss SAN-2022-015 vom 7. Juli 2022 zur Gesellschaft UBEEQO INTERNATIONAL (Seite der CNIL)",
+  "LPDP (87/2018), artt. 54, 55(1) e 95, testo ufficiale":
+    "LPDP (87/2018), Art. 54, 55 Abs. 1 und 95, amtlicher Text",
 };
