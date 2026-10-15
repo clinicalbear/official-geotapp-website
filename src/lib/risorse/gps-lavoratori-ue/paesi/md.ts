@@ -30,6 +30,10 @@ const FONTE_LISTA_DPIA = {
     'CNPDCP, ordine 27/2022: lista dei trattamenti soggetti a valutazione d\'impatto (modificata dall\'ordine 39/2026)',
   url: 'https://www.legis.md/cautare/getResults?doc_id=155870&lang=ro',
 };
+const FONTE_CODICE_LAVORO = {
+  titolo: 'Codice del lavoro della Repubblica di Moldova n. 154/2003, art. 91 lett. h)',
+  url: 'https://www.legis.md/cautare/getResults?doc_id=94981&lang=ro',
+};
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR) - riferimento comparativo',
   url: 'https://eur-lex.europa.eu/eli/reg/2016/679/oj',
@@ -119,7 +123,7 @@ export const moldova: SchedaPaese = {
         nb: 'Ansattdata som samles inn med GPS, er personopplysninger: lov 195/2024 (som 23. august 2026 avløste lov 133/2011; art. 13, informasjon til den registrerte) og arbeidsloven (art. 91-94: arbeidsgiveren må gjøre de ansatte kjent, mot underskrift, med dokumentene om behandlingen av dataene deres og med rettighetene og pliktene deres) gjelder. Verken loven eller arbeidsloven inneholder en særskilt regel om GPS.',
         nl: 'Via gps verzamelde werknemersgegevens zijn persoonsgegevens: wet 195/2024 (die op 23 augustus 2026 wet 133/2011 heeft vervangen; art. 13, informatie aan de betrokkene) en het Arbeidswetboek (art. 91-94: de werkgever moet werknemers tegen handtekening kennis laten nemen van de documenten over de verwerking van hun gegevens en van hun rechten en plichten) zijn van toepassing. Noch de wet noch het wetboek bevat een specifieke gps-regel.',
       },
-      fonte: FONTE_DLA_PIPER,
+      fonte: FONTE_CODICE_LAVORO,
     },
     {
       voce: {
@@ -371,9 +375,10 @@ export const moldova: SchedaPaese = {
   fonti: [
     FONTE_CNPDCP_RECLAMI,
     FONTE_DLA_PIPER,
+    FONTE_CODICE_LAVORO,
     FONTE_LISTA_DPIA,
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-09-30',
+  aggiornatoIl: '2026-10-16',
 };

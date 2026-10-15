@@ -42,8 +42,8 @@ const FONTE_GARANTE_CY = {
 };
 const FONTE_LOUIS = {
   titolo:
-    'Commissario cipriota, decisione del 25.10.2019 sul Gruppo Louis (strumento Bradford Factor)',
-  url: 'https://www.gov.cy/dataprotection/documents/chrimatiki-poini-stis-etaireies-louis-anaforika-me-vathmologisi-adeion-astheneias-ton-ergodotoymenon-chrisimopoiontas-ton-syntelesti-bradford-12-10-2019/',
+    'Commissario cipriota, decisione del 25 ottobre 2019 sul Gruppo Louis (Bradford Factor)',
+  url: 'https://www.gov.cy/media/sites/67/2025/10/2019-apofasi-bradford-system-ΑΝΩΝΥΜΟΠ.pdf',
 };
 const FONTE_GDPR = {
   titolo: 'Regolamento UE 2016/679 (GDPR)',
@@ -385,5 +385,5 @@ export const cipro: SchedaPaese = {
 
   fonti: [FONTE_CY_LEGGE_125, FONTE_CY_ARCHIVIO, FONTE_CY_DPIA, FONTE_GDPR_13, FONTE_GDPR_6, FONTE_GARANTE_CY, FONTE_LOUIS, FONTE_GDPR],
 
-  aggiornatoIl: '2026-09-30',
+  aggiornatoIl: '2026-10-16',
 };

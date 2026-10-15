@@ -25,8 +25,6 @@ export const TESTI_DA: Readonly<Record<string, string>> = {
     "Garante Privacy, afgørelse nr. 382 af 28. maj 2026, doc-web 10259916 (Azienda di Tutela della Salute per la Liguria, Liguriens sundhedsmyndighed)",
   "Garante Privacy, Provvedimento n. 135 del 13 marzo 2025 (doc-web 10128005), rimosso temporaneamente dal sito in ottemperanza alla sentenza del Tribunale di Cosenza n. 972 del 1° luglio 2026 (opposizione accolta)":
     "Garante Privacy, afgørelse nr. 135 af 13. marts 2025 (doc-web 10128005), midlertidigt fjernet fra webstedet i henhold til dom nr. 972 af 1. juli 2026 fra retten i Cosenza (indsigelsen fik medhold)",
-  "AGI Lavoro, «Lavoro agile e geolocalizzazione: sentenza del Tribunale di Cosenza» (sentenza n. 972 del 1° luglio 2026; il testo della sentenza non è stato reperito in fonte ufficiale)":
-    "AGI Lavoro, «Lavoro agile e geolocalizzazione: sentenza del Tribunale di Cosenza» (dom nr. 972 af 1. juli 2026; dommens tekst er ikke fundet i en officiel kilde)",
   "Avvocati Associati, commento alla sentenza Trib. Cosenza n. 972/2026 (22/09/2026), con passi citati":
     "Avvocati Associati, kommentar til dom nr. 972/2026 fra retten i Cosenza (22. september 2026), med citerede passager",
   "Legge 20 maggio 1970, n. 300 (Statuto dei Lavoratori), art. 4":
@@ -63,8 +61,6 @@ export const TESTI_DA: Readonly<Record<string, string>> = {
     "CNIL, liste over behandlinger, der kræver en konsekvensanalyse (AIPD)",
   "CNIL, abolizione delle dichiarazioni preventive dal 25 maggio 2018":
     "CNIL, afskaffelse af forhåndsanmeldelser siden 25. maj 2018",
-  "CNIL, dieci nuove sanzioni (procedura semplificata, 7 novembre 2023)":
-    "CNIL, ti nye sanktioner (forenklet procedure, 7. november 2023)",
   "CNIL, deliberazione SAN-2022-015 del 7 luglio 2022 (UBEEQO International, 175.000 €), su Légifrance":
     "CNIL, afgørelse SAN-2022-015 af 7. juli 2022 (UBEEQO International, 175.000 €), på Légifrance",
   "Ley Organica 3/2018 (LOPDGDD), art. 90 (geolocalizzazione sul lavoro)":
@@ -89,8 +85,6 @@ export const TESTI_DA: Readonly<Record<string, string>> = {
     "Autoriteit Persoonsgegevens, fjernkontrol af medarbejdere (GPS i firmabiler)",
   "Autoriteit Persoonsgegevens, sanzione per il trattamento delle impronte dei dipendenti":
     "Autoriteit Persoonsgegevens, bøde for behandling af medarbejdernes fingeraftryk",
-  "Codigo do Trabalho, art. 20 (mezzi di sorveglianza a distanza)":
-    "Código do Trabalho (den portugisiske arbejdskodeks), art. 20 (fjernovervågning)",
   "CNPD, Deliberacao 7680/2014 (geolocalizzazione nel contesto lavorativo)":
     "CNPD, Deliberação 7680/2014 (geolokalisering i arbejdsforhold)",
   "Lei 58/2019, art. 28 (relazioni di lavoro)":
@@ -169,14 +163,8 @@ export const TESTI_DA: Readonly<Record<string, string>> = {
     "ICO, afgørelse om GPS-overvågning (Home Office, 2024)",
   "ICO, presentare una segnalazione":
     "ICO, indsende en indberetning",
-  "Data (Use and Access) Act 2025 (Commencement No. 9) Regulations 2026, SI 2026/1015 (Information Commission dal 30/09/2026)":
-    "Data (Use and Access) Act 2025 (Commencement No. 9) Regulations 2026, SI 2026/1015 (Information Commission fra 30.09.2026)",
-  "Regolamento UE 2016/679 (GDPR) come UK GDPR":
-    "Forordning (EU) 2016/679 (GDPR) som UK GDPR",
   "DPC, guida sul tracciamento dei veicoli aziendali (maggio 2020)":
     "DPC, vejledning om sporing af firmabiler (maj 2020)",
-  "DPC, pagina sul tracciamento dei veicoli dei dipendenti (aggiornata a maggio 2026)":
-    "DPC, side om sporing af medarbejdernes køretøjer (opdateret i maj 2026)",
   "DPC, lista dei trattamenti che richiedono una DPIA":
     "DPC, liste over behandlinger, der kræver en DPIA",
   "DPC, consultazione preventiva":
@@ -207,8 +195,6 @@ export const TESTI_DA: Readonly<Record<string, string>> = {
     "ANSPDCP, Decizia 174/2018 (liste over behandlinger, der kræver en DPIA), Monitorul Oficial 919/31.10.2018, art. 1, litra d og g",
   "ANSPDCP, presentazione dei reclami":
     "ANSPDCP, indgivelse af klager",
-  "Kodeks pracy, art. 22(2) (monitoraggio), testo consolidato Dz.U. 2026 poz. 1245 (in vigore dal 24 settembre 2026)":
-    "Kodeks pracy (den polske arbejdskodeks), art. 22(2) (overvågning), konsolideret tekst Dz.U. 2026 poz. 1245 (i kraft fra 24. september 2026)",
   "Legge del 4 dicembre 2025 di modifica del Codice del lavoro, Dz.U. 2026 poz. 25 (art. 22(2) par. 8: \"su carta o in forma elettronica\", in vigore dal 27 gennaio 2026)":
     "Lov af 4. december 2025 om ændring af arbejdskodeksen, Dz.U. 2026 poz. 25 (art. 22(2) stk. 8: “på papir eller i elektronisk form”, i kraft fra 27. januar 2026)",
   "Kodeks pracy, art. 22(3) par. 3-4 (altre forme di monitoraggio, tra cui il GPS), testo consolidato Dz.U. 2026 poz. 1245":
@@ -349,8 +335,6 @@ export const TESTI_DA: Readonly<Record<string, string>> = {
     "VDAI, liste over behandlinger, der kræver en DPIA (punkt 10: overvågning af medarbejdere)",
   "VDAI, decisione sul trattamento della corrispondenza personale di un dipendente (2022)":
     "VDAI, afgørelse om behandling af en medarbejders personlige korrespondance (2022)",
-  "VDAI, elenco delle decisioni (multe, ordini e altro) fino al 2025":
-    "VDAI, liste over afgørelser (bøder, påbud m.m.) til og med 2025",
   "VDAI (Garante lituano), servizi e reclami":
     "VDAI (den litauiske tilsynsmyndighed for databeskyttelse), tjenester og klager",
   "Loi du 1er août 2018, art. 71 (nuovo art. L.261-1 del Code du travail) e art. 72 (abrogazione della legge del 2 agosto 2002), Legilux":
@@ -397,8 +381,6 @@ export const TESTI_DA: Readonly<Record<string, string>> = {
     "GDPR, art. 6, stk. 1, litra f, og præambelbetragtning 43 (retsgrundlag og skævhed mellem parterne), officiel tekst fra EUR-Lex",
   "Garante cipriota, pagina ufficiale":
     "Cyperns kommissær, officiel side",
-  "Commissario cipriota, decisione del 25.10.2019 sul Gruppo Louis (strumento Bradford Factor)":
-    "Cyperns kommissær, afgørelse af 25.10.2019 om Louis-koncernen (Bradford Factor-værktøjet)",
   "Legge 124/2024 sulla protezione dei dati personali (in vigore dal 1 febbraio 2025)":
     "Lov 124/2024 om beskyttelse af personoplysninger (i kraft fra 1. februar 2025)",
   "IDP, linea guida n. 03 del 30.04.2025 sulla videosorveglianza":
@@ -407,10 +389,6 @@ export const TESTI_DA: Readonly<Record<string, string>> = {
     "IDP (den albanske tilsynsmyndighed for databeskyttelse), officiel side",
   "Legge sulla protezione dei dati (LPDP, 87/2018) - testo ufficiale":
     "Lov om databeskyttelse (LPDP, 87/2018), officiel tekst",
-  "Poverenik, decisione sulla lista dei trattamenti che richiedono una DPIA (Gazzetta 45/2019)":
-    "Poverenik, afgørelse om listen over behandlinger, der kræver en DPIA (Den officielle tidende 45/2019)",
-  "Odluka sulla lista dei trattamenti che richiedono DPIA (Sl. glasnik RS 45/2019 e 112/2020, testo consolidato)":
-    "Odluka om listen over behandlinger, der kræver en DPIA (Sl. glasnik RS 45/2019 og 112/2020, konsolideret tekst)",
   "Poverenik (Garante serbo), competenze e contatti":
     "Poverenik (den serbiske tilsynsmyndighed for databeskyttelse), kompetencer og kontakt",
   "Danas, ispezione straordinaria del Poverenik al JKP Mediana di Nis (7 aprile 2026)":
@@ -535,4 +513,34 @@ export const TESTI_DA: Readonly<Record<string, string>> = {
     "Ombudsmanden, databeskyttelse",
   "CNPDCP, reclami":
     "CNPDCP, klager",
+  "Arbeitsvertragsrechts-Anpassungsgesetz (AVRAG), § 10 (misure di controllo che toccano la dignita: accordo aziendale, o consenso del lavoratore se manca il consiglio aziendale)":
+    "Arbeitsvertragsrechts-Anpassungsgesetz (AVRAG), § 10 (kontrolforanstaltninger, der berører den menneskelige værdighed: virksomhedsaftale eller den ansattes samtykke, hvis der ikke findes et virksomhedsråd)",
+  "APD/GBA, decisione n. 01/2019 del 16 gennaio 2019 (elenco dei trattamenti che richiedono una valutazione d'impatto)":
+    "APD/GBA, afgørelse nr. 01/2019 af 16. januar 2019 (liste over behandlinger, der kræver en konsekvensanalyse)",
+  "Commissario cipriota, decisione del 25 ottobre 2019 sul Gruppo Louis (Bradford Factor)":
+    "Den cypriotiske kommissær, afgørelse af 25. oktober 2019 om Louis Group (Bradford Factor)",
+  "Datatilsynet, casi di multa (bødesager)":
+    "Datatilsynet, bødesager",
+  "CNIL, dieci nuove sanzioni in procedura semplificata (annunciate il 7 novembre 2023)":
+    "CNIL, ti nye sanktioner i den forenklede procedure (offentliggjort den 7. november 2023)",
+  "Data (Use and Access) Act 2025 (Commencement No. 9 and Transitional and Saving Provisions) Regulations 2026, SI 2026/1015 (Information Commission dal 30/09/2026)":
+    "Data (Use and Access) Act 2025 (Commencement No. 9 and Transitional and Saving Provisions) Regulations 2026, SI 2026/1015 (Information Commission fra 30.09.2026)",
+  "UK GDPR, art. 83 c. 5 (legislation.gov.uk)":
+    "UK GDPR, art. 83, stk. 5 (legislation.gov.uk)",
+  "DPC, pagina sul tracciamento dei veicoli dei dipendenti (ultimo aggiornamento della guida: maggio 2020)":
+    "DPC, side om sporing af medarbejdernes køretøjer (vejledningen senest opdateret i maj 2020)",
+  "AGI - Avvocati Giuslavoristi Italiani (associazione di avvocati giuslavoristi), «Lavoro agile e geolocalizzazione: sentenza del Tribunale di Cosenza» (sentenza n. 972 del 1° luglio 2026; il testo della sentenza non è stato reperito in fonte ufficiale)":
+    "AGI - Avvocati Giuslavoristi Italiani (forening af italienske arbejdsretsadvokater), «Lavoro agile e geolocalizzazione: sentenza del Tribunale di Cosenza» (dom nr. 972 af 1. juli 2026; dommens tekst er ikke fundet i en officiel kilde)",
+  "VDAI, elenco delle decisioni più significative (multe, ordini e altro), dal 2019 al 14 gennaio 2025":
+    "VDAI, oversigt over de mere betydningsfulde afgørelser (bøder, påbud og andet), fra 2019 til 14. januar 2025",
+  "Codice del lavoro della Repubblica di Moldova n. 154/2003, art. 91 lett. h)":
+    "Moldovas arbejdslov nr. 154/2003, art. 91, litra h)",
+  "Código do Trabalho, arts. 20-21 (mezzi di sorveglianza a distanza)":
+    "Código do Trabalho (arbejdskodeks), art. 20-21 (fjernovervågning)",
+  "Kodeks pracy, art. 22(2) (monitoraggio), testo consolidato Dz.U. 2026 poz. 1245 (pubblicato il 24 settembre 2026, stato giuridico al 27 agosto 2026)":
+    "Kodeks pracy (arbejdskodeks), art. 22(2) (overvågning), konsolideret tekst Dz.U. 2026 poz. 1245 (offentliggjort den 24. september 2026, retstilstand pr. 27. august 2026)",
+  "Poverenik, decisione sulla lista dei trattamenti che richiedono una DPIA (Sl. glasnik RS 45/2019 e 112/2020, testo consolidato)":
+    "Poverenik, afgørelse om listen over behandlinger, der kræver en DPIA (Sl. glasnik RS 45/2019 og 112/2020, konsolideret tekst)",
+  "LPDP (87/2018), artt. 54, 55(1) e 95, e decisione del Poverenik sulla lista DPIA (45/2019 e 112/2020), punti 2(7) e 4":
+    "LPDP (87/2018), art. 54, 55(1) og 95, og Povereniks afgørelse om DPIA-listen (45/2019 og 112/2020), punkt 2(7) og 4",
 };

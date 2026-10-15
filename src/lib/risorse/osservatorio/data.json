@@ -1,5 +1,5 @@
 {
- "aggiornato": "2026-10-14",
+ "aggiornato": "2026-10-16",
  "voci": [
   {
    "country": "ES",
@@ -3045,13 +3045,13 @@
    "authority": "Garante per la protezione dei dati personali",
    "framework": "gdpr",
    "title": "Ordinanza ingiunzione nei confronti di Deca s.r.l. - 9 marzo 2023 [9874604]",
-   "published_at": "2022-03-09",
+   "published_at": "2023-03-09",
    "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9874604",
    "topics": [
     "presenze_orario"
    ],
    "amount_eur": 1600,
-   "doc_number": "66/2022",
+   "doc_number": "66/2023",
    "lang": "it"
   },
   {
@@ -7135,6 +7135,20 @@
    ],
    "amount_eur": null,
    "doc_number": "42106",
+   "lang": "it"
+  },
+  {
+   "country": "IT",
+   "authority": "Garante per la protezione dei dati personali",
+   "framework": "gdpr",
+   "title": "Provvedimento del 4 giugno 2025 [10164273]",
+   "published_at": "2025-06-04",
+   "source_url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10164273",
+   "topics": [
+    "presenze_orario"
+   ],
+   "amount_eur": 15000,
+   "doc_number": "324/2025",
    "lang": "it"
   }
  ]

@@ -9,8 +9,7 @@
  *
  * Contenuti basati su fonti primarie verificate e citate nella sezione "Fonti":
  * testo ufficiale della LPDP, decisione del Poverenik sulla lista dei
- * trattamenti che richiedono una DPIA (Gazzetta 45/2019), analisi PR Legal sul
- * GPS dei veicoli aziendali, pagina istituzionale del Poverenik, cronaca N1 sul
+ * trattamenti che richiedono una DPIA (Sl. glasnik RS 45/2019 e 112/2020), pagina istituzionale del Poverenik, cronaca N1 sul
  * caso JKP Mediana di Nis e GDPR come riferimento comparativo.
  *
  * La Serbia non e' federale: l'unica autorita nazionale e' il Poverenik, senza
@@ -26,13 +25,15 @@ const FONTE_LPDP = {
 };
 const FONTE_LISTA_DPIA = {
   titolo:
-    'Poverenik, decisione sulla lista dei trattamenti che richiedono una DPIA (Gazzetta 45/2019)',
+    'Poverenik, decisione sulla lista dei trattamenti che richiedono una DPIA (Sl. glasnik RS 45/2019 e 112/2020, testo consolidato)',
   url: 'https://www.pravno-informacioni-sistem.rs/SlGlasnikPortal/eli/rep/sgrs/drugidrzavniorganiorganizacije/odluka/2019/45/1/reg',
 };
-const FONTE_PR_LEGAL = {
+// Fonte della voce DPIA: gli artt. 54, 55(1) e 95 stanno nella LPDP; la lista
+// (punto 2(7)) e il punto 4 stanno nella decisione del Poverenik, citata a parte.
+const FONTE_DPIA_LPDP = {
   titolo:
-    'Odluka sulla lista dei trattamenti che richiedono DPIA (Sl. glasnik RS 45/2019 e 112/2020, testo consolidato)',
-  url: 'https://www.pravno-informacioni-sistem.rs/SlGlasnikPortal/eli/rep/sgrs/drugidrzavniorganiorganizacije/odluka/2019/45/1',
+    'LPDP (87/2018), artt. 54, 55(1) e 95, e decisione del Poverenik sulla lista DPIA (45/2019 e 112/2020), punti 2(7) e 4',
+  url: 'https://pravno-informacioni-sistem.rs/eli/rep/sgrs/skupstina/zakon/2018/87/13',
 };
 const FONTE_POVERENIK = {
   titolo: 'Poverenik (Garante serbo), competenze e contatti',
@@ -183,16 +184,16 @@ export const serbia: SchedaPaese = {
       },
       risposta: 'si',
       dettaglio: {
-        it: 'La base è di norma l\'interesse legittimo del datore (art. 12(1)(6) LPDP), che va definito con chiarezza, valutato in termini di necessità e proporzionalità rispetto ai diritti del lavoratore (art. 54(5)), documentato e comunicato al lavoratore (art. 23(1)(4)); il consenso nel rapporto di lavoro è la base più fragile, per lo squilibrio fra le parti.',
-        en: 'The basis is normally the employer\'s legitimate interest (art. 12(1)(6) LPDP), which must be clearly defined, assessed for necessity and proportionality against the worker\'s rights (art. 54(5)), documented and communicated to the worker (art. 23(1)(4)); consent in the employment relationship is the most fragile basis, because of the imbalance between the parties.',
-        de: 'Grundlage ist in der Regel das berechtigte Interesse des Arbeitgebers (Art. 12(1)(6) LPDP), das klar definiert, auf Erforderlichkeit und Verhältnismäßigkeit gegenüber den Rechten des Beschäftigten geprüft (Art. 54(5)), dokumentiert und dem Beschäftigten mitgeteilt werden muss (Art. 23(1)(4)); die Einwilligung im Arbeitsverhältnis ist wegen des Ungleichgewichts der Parteien die fragilste Grundlage.',
-        fr: 'La base est en principe l’intérêt légitime de l’employeur (art. 12(1)(6) LPDP), qui doit être clairement défini, évalué en termes de nécessité et de proportionnalité au regard des droits du salarié (art. 54(5)), documenté et communiqué au salarié (art. 23(1)(4)) ; le consentement dans la relation de travail est la base la plus fragile, en raison du déséquilibre entre les parties.',
-        es: 'La base es, por lo general, el interés legítimo del empleador (art. 12(1)(6) LPDP), que debe estar claramente definido, evaluado en términos de necesidad y proporcionalidad frente a los derechos del trabajador (art. 54(5)), documentado y comunicado al trabajador (art. 23(1)(4)); el consentimiento en la relación laboral es la base más frágil, por el desequilibrio entre las partes.',
-        pt: "A base é, em regra, o interesse legítimo da entidade empregadora (art. 12(1)(6) LPDP), que deve estar claramente definido, avaliado em termos de necessidade e proporcionalidade face aos direitos do trabalhador (art. 54(5)), documentado e comunicado ao trabalhador (art. 23(1)(4)); o consentimento na relação laboral é a base mais frágil, por causa do desequilíbrio entre as partes.",
-        da: 'Grundlaget er normalt arbejdsgiverens legitime interesse (art. 12, stk. 1, nr. 6, LPDP), som skal være klart defineret, vurderet for nødvendighed og proportionalitet over for medarbejderens rettigheder (art. 54, stk. 5), dokumenteret og meddelt medarbejderen (art. 23, stk. 1, nr. 4); samtykke i ansættelsesforholdet er det mest skrøbelige grundlag på grund af ubalancen mellem parterne.',
-        sv: 'Grunden är normalt arbetsgivarens berättigade intresse (art. 12(1)(6) LPDP), som ska definieras tydligt, bedömas med avseende på nödvändighet och proportionalitet i förhållande till den anställdes rättigheter (art. 54(5)), dokumenteras och meddelas den anställde (art. 23(1)(4)); samtycke i anställningsförhållandet är den skörare grunden, på grund av obalansen mellan parterna.',
-        nb: 'Grunnlaget er normalt arbeidsgiverens berettigede interesse (art. 12(1)(6) LPDP), som skal defineres tydelig, vurderes med hensyn til nødvendighet og forholdsmessighet overfor den ansattes rettigheter (art. 54(5)), dokumenteres og meddeles den ansatte (art. 23(1)(4)); samtykke i arbeidsforholdet er det skjøreste grunnlaget, på grunn av ubalansen mellom partene.',
-        nl: 'De grondslag is doorgaans het gerechtvaardigd belang van de werkgever (art. 12(1)(6) LPDP), dat duidelijk moet worden omschreven, op noodzaak en evenredigheid ten opzichte van de rechten van de werknemer beoordeeld (art. 54(5)), gedocumenteerd en aan de werknemer meegedeeld (art. 23(1)(4)); toestemming in de arbeidsrelatie is de meest kwetsbare grondslag wegens de ongelijkheid tussen de partijen.',
+        it: 'La base è di norma l\'interesse legittimo del datore (art. 12(1)(6) LPDP), che va definito con chiarezza, valutato in termini di necessità e proporzionalità rispetto ai diritti del lavoratore (art. 54(6)(2) LPDP), documentato e comunicato al lavoratore (art. 23(1)(4)); il consenso nel rapporto di lavoro è la base più fragile, per lo squilibrio fra le parti.',
+        en: 'The basis is normally the employer\'s legitimate interest (art. 12(1)(6) LPDP), which must be clearly defined, assessed for necessity and proportionality against the worker\'s rights (art. 54(6)(2) LPDP), documented and communicated to the worker (art. 23(1)(4)); consent in the employment relationship is the most fragile basis, because of the imbalance between the parties.',
+        de: 'Grundlage ist in der Regel das berechtigte Interesse des Arbeitgebers (Art. 12(1)(6) LPDP), das klar definiert, auf Erforderlichkeit und Verhältnismäßigkeit gegenüber den Rechten des Beschäftigten geprüft (Art. 54(6)(2) LPDP), dokumentiert und dem Beschäftigten mitgeteilt werden muss (Art. 23(1)(4)); die Einwilligung im Arbeitsverhältnis ist wegen des Ungleichgewichts der Parteien die fragilste Grundlage.',
+        fr: 'La base est en principe l’intérêt légitime de l’employeur (art. 12(1)(6) LPDP), qui doit être clairement défini, évalué en termes de nécessité et de proportionnalité au regard des droits du salarié (art. 54(6)(2) LPDP), documenté et communiqué au salarié (art. 23(1)(4)) ; le consentement dans la relation de travail est la base la plus fragile, en raison du déséquilibre entre les parties.',
+        es: 'La base es, por lo general, el interés legítimo del empleador (art. 12(1)(6) LPDP), que debe estar claramente definido, evaluado en términos de necesidad y proporcionalidad frente a los derechos del trabajador (art. 54(6)(2) LPDP), documentado y comunicado al trabajador (art. 23(1)(4)); el consentimiento en la relación laboral es la base más frágil, por el desequilibrio entre las partes.',
+        pt: "A base é, em regra, o interesse legítimo da entidade empregadora (art. 12(1)(6) LPDP), que deve estar claramente definido, avaliado em termos de necessidade e proporcionalidade face aos direitos do trabalhador (art. 54(6)(2) LPDP), documentado e comunicado ao trabalhador (art. 23(1)(4)); o consentimento na relação laboral é a base mais frágil, por causa do desequilíbrio entre as partes.",
+        da: 'Grundlaget er normalt arbejdsgiverens legitime interesse (art. 12, stk. 1, nr. 6, LPDP), som skal være klart defineret, vurderet for nødvendighed og proportionalitet over for medarbejderens rettigheder (art. 54, stk. 6, nr. 2, LPDP), dokumenteret og meddelt medarbejderen (art. 23, stk. 1, nr. 4); samtykke i ansættelsesforholdet er det mest skrøbelige grundlag på grund af ubalancen mellem parterne.',
+        sv: 'Grunden är normalt arbetsgivarens berättigade intresse (art. 12(1)(6) LPDP), som ska definieras tydligt, bedömas med avseende på nödvändighet och proportionalitet i förhållande till den anställdes rättigheter (art. 54(6)(2) LPDP), dokumenteras och meddelas den anställde (art. 23(1)(4)); samtycke i anställningsförhållandet är den skörare grunden, på grund av obalansen mellan parterna.',
+        nb: 'Grunnlaget er normalt arbeidsgiverens berettigede interesse (art. 12(1)(6) LPDP), som skal defineres tydelig, vurderes med hensyn til nødvendighet og forholdsmessighet overfor den ansattes rettigheter (art. 54(6)(2) LPDP), dokumenteres og meddeles den ansatte (art. 23(1)(4)); samtykke i arbeidsforholdet er det skjøreste grunnlaget, på grunn av ubalansen mellom partene.',
+        nl: 'De grondslag is doorgaans het gerechtvaardigd belang van de werkgever (art. 12(1)(6) LPDP), dat duidelijk moet worden omschreven, op noodzaak en evenredigheid ten opzichte van de rechten van de werknemer beoordeeld (art. 54(6)(2) LPDP), gedocumenteerd en aan de werknemer meegedeeld (art. 23(1)(4)); toestemming in de arbeidsrelatie is de meest kwetsbare grondslag wegens de ongelijkheid tussen de partijen.',
       },
       fonte: FONTE_LPDP,
     },
@@ -250,7 +251,7 @@ export const serbia: SchedaPaese = {
         nb: 'Behandling av de ansattes opplysninger via apper eller systemer som sporer arbeidet, bevegelsene og kommunikasjonen deres står på listen over behandlinger som krever en personvernkonsekvensvurdering; før oppstart må den behandlingsansvarlige gjennomføre en DPIA (art. 54 LPDP). Uttalelse fra Poverenik skal bare innhentes før oppstart hvis DPIA-en viser en høy risiko som de planlagte tiltakene ikke reduserer (art. 55(1)); å unnlate DPIA-en eller den påkrevde uttalelsen er straffbart (art. 95).',
         nl: 'De verwerking van werknemersgegevens via apps of systemen die hun werk, bewegingen en communicatie volgen, staat op de lijst die een effectbeoordeling vereist; vóór aanvang moet de verwerkingsverantwoordelijke de DPIA uitvoeren (art. 54 LPDP). Het advies van de Poverenik moet vóór aanvang alleen worden gevraagd als de DPIA een hoog risico aantoont dat de geplande maatregelen niet verminderen (art. 55(1)); het achterwege laten van de DPIA of het vereiste advies wordt bestraft (art. 95).',
       },
-      fonte: FONTE_PR_LEGAL,
+      fonte: FONTE_DPIA_LPDP,
     },
   ],
 
@@ -390,12 +391,11 @@ export const serbia: SchedaPaese = {
   fonti: [
     FONTE_LPDP,
     FONTE_LISTA_DPIA,
-    FONTE_PR_LEGAL,
     FONTE_POVERENIK,
     FONTE_DANAS_MEDIANA,
     FONTE_N1_MEDIANA,
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-09-30',
+  aggiornatoIl: '2026-10-16',
 };

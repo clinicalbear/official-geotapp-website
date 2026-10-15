@@ -29,6 +29,11 @@ const FONTE_APD_DPIA = {
   titolo: "APD/GBA, valutazione d'impatto sulla protezione dei dati",
   url: 'https://www.autoriteprotectiondonnees.be/professionnel/rgpd-/analyse-d-impact-relative-a-la-protection-des-donnees',
 };
+const FONTE_APD_LISTA_DPIA = {
+  titolo:
+    "APD/GBA, decisione n. 01/2019 del 16 gennaio 2019 (elenco dei trattamenti che richiedono una valutazione d'impatto)",
+  url: 'https://www.autoriteprotectiondonnees.be/publications/decision-n-01-2019-du-16-janvier-2019.pdf',
+};
 const FONTE_APD_RECLAMO = {
   titolo: 'APD/GBA, presentare un reclamo',
   url: 'https://www.autoriteprotectiondonnees.be/citoyen/agir/introduire-une-plainte',
@@ -184,6 +189,7 @@ export const belgio: SchedaPaese = {
         nl: "De werkgever moet vooraf de rechtsgrond van de verwerking, de doeleinden en de rechten van de werknemers meedelen; de grondslag is doorgaans het gerechtvaardigd belang of de contractuele/wettelijke noodzaak; toestemming moet in een arbeidsverhouding met grote voorzichtigheid worden benaderd omdat ze zelden vrij is (beslissing 114/2024 van de Geschillenkamer; de APD-pagina over geolocatie noemt ze nog voor rondtrekkende werknemers).",
       },
       fonte: FONTE_APD_GEOLOCALIZZAZIONE,
+      fonteAggiuntiva: FONTE_DECISIONE_114_2024,
     },
     {
       voce: {
@@ -228,18 +234,19 @@ export const belgio: SchedaPaese = {
       },
       risposta: 'dipende',
       dettaglio: {
-        it: "Serve una valutazione d'impatto quando il trattamento è suscettibile di comportare un rischio elevato (art. 35 GDPR). L'esempio di legge è la sorveglianza sistematica su larga scala di una zona accessibile al pubblico, e la lista dell'APD non nomina la geolocalizzazione dei dipendenti: va valutato caso per caso, anche con i criteri del gruppo di lavoro Art. 29.",
-        en: 'An impact assessment is required when the processing is likely to result in a high risk (Art. 35 GDPR). The example in the law is large-scale systematic monitoring of a publicly accessible area, and the APD list does not name employee geolocation: it must be assessed case by case, also using the Article 29 Working Party criteria.',
-        de: 'Eine Folgenabschätzung ist erforderlich, wenn die Verarbeitung voraussichtlich ein hohes Risiko mit sich bringt (Art. 35 DSGVO). Das gesetzliche Beispiel ist die umfangreiche systematische Überwachung eines öffentlich zugänglichen Bereichs; die Liste der APD nennt die Ortung von Beschäftigten nicht: Sie ist im Einzelfall zu beurteilen, auch anhand der Kriterien der Artikel-29-Datenschutzgruppe.',
-        fr: 'Une analyse d’impact est requise lorsque le traitement est susceptible d’engendrer un risque élevé (art. 35 RGPD). L’exemple légal est la surveillance systématique à grande échelle d’une zone accessible au public, et la liste de l’APD ne mentionne pas la géolocalisation des employés : il faut apprécier au cas par cas, notamment à l’aide des critères du groupe de travail Article 29.',
-        es: 'Es necesaria una evaluación de impacto cuando es probable que el tratamiento entrañe un riesgo elevado (art. 35 RGPD). El ejemplo legal es la vigilancia sistemática a gran escala de una zona de acceso público, y la lista de la APD no menciona la geolocalización de empleados: debe valorarse caso por caso, también con los criterios del Grupo de Trabajo del Artículo 29.',
-        pt: "É necessária uma avaliação de impacto quando o tratamento seja suscetível de implicar um risco elevado (art. 35.º do RGPD). O exemplo legal é a vigilância sistemática em grande escala de uma zona de acesso público, e a lista da APD não menciona a geolocalização dos trabalhadores: deve ser avaliada caso a caso, também com os critérios do grupo de trabalho do art. 29.º.",
-        da: "En konsekvensanalyse er påkrævet, når behandlingen sandsynligvis indebærer en høj risiko (art. 35 i GDPR). Lovens eksempel er systematisk overvågning i stor skala af et område, der er tilgængeligt for offentligheden, og APD's liste nævner ikke geolokalisering af ansatte: det skal vurderes fra sag til sag, også ud fra kriterierne fra Artikel 29-gruppen.",
-        sv: 'En konsekvensbedömning krävs när behandlingen sannolikt medför hög risk (art. 35 GDPR). Exemplet i lagen är storskalig systematisk övervakning av en allmänt tillgänglig plats, och APD:s förteckning nämner inte geolokalisering av anställda: det måste bedömas från fall till fall, även med hjälp av kriterierna från artikel 29-gruppen.',
-        nb: 'En personvernkonsekvensvurdering er påkrevd når behandlingen sannsynligvis medfører høy risiko (art. 35 i GDPR). Lovens eksempel er systematisk overvåking i stor skala av et område som er tilgjengelig for allmennheten, og APDs liste nevner ikke geolokalisering av ansatte: det må vurderes fra sak til sak, også ut fra kriteriene fra artikkel 29-gruppen.',
-        nl: 'Een effectbeoordeling is vereist wanneer de verwerking waarschijnlijk een hoog risico met zich meebrengt (art. 35 AVG). Het wettelijke voorbeeld is de grootschalige systematische monitoring van een openbaar toegankelijke ruimte, en de lijst van de APD noemt de geolocatie van werknemers niet: dit moet per geval worden beoordeeld, ook aan de hand van de criteria van de Groep Gegevensbescherming artikel 29.',
+        it: "Serve una valutazione d'impatto quando il trattamento è suscettibile di comportare un rischio elevato (art. 35 GDPR). L'esempio di legge è la sorveglianza sistematica su larga scala di una zona accessibile al pubblico, e la lista dell'APD (decisione 01/2019) non nomina i dipendenti, ma al punto 7 comprende il trattamento su larga scala e/o sistematico di dati di localizzazione non strettamente necessario per un servizio richiesto dalla persona, cui il tracciamento GPS sistematico dei lavoratori può rientrare; altrimenti va valutato caso per caso, anche con i criteri del gruppo di lavoro Art. 29.",
+        en: 'An impact assessment is required when the processing is likely to result in a high risk (Art. 35 GDPR). The example in the law is large-scale systematic monitoring of a publicly accessible area, and the APD list (decision 01/2019) does not name employees, but its item 7 covers large-scale and/or systematic processing of location data not strictly necessary for a service requested by the person, which systematic GPS tracking of workers may meet; otherwise it must be assessed case by case, also using the Article 29 Working Party criteria.',
+        de: 'Eine Folgenabschätzung ist erforderlich, wenn die Verarbeitung voraussichtlich ein hohes Risiko mit sich bringt (Art. 35 DSGVO). Das gesetzliche Beispiel ist die umfangreiche systematische Überwachung eines öffentlich zugänglichen Bereichs; die Liste der APD (Beschluss 01/2019) nennt Beschäftigte nicht, erfasst aber in Nr. 7 die umfangreiche und/oder systematische Verarbeitung von Standortdaten, die für eine von der betroffenen Person gewünschte Dienstleistung nicht unbedingt erforderlich ist, was die systematische GPS-Ortung von Arbeitnehmern erfüllen kann; andernfalls ist sie im Einzelfall zu beurteilen, auch anhand der Kriterien der Artikel-29-Datenschutzgruppe.',
+        fr: 'Une analyse d’impact est requise lorsque le traitement est susceptible d’engendrer un risque élevé (art. 35 RGPD). L’exemple légal est la surveillance systématique à grande échelle d’une zone accessible au public, et la liste de l’APD (décision 01/2019) ne mentionne pas les employés, mais son point 7 couvre le traitement à grande échelle et/ou systématique de données de localisation non strictement nécessaire à un service demandé par la personne, que le suivi GPS systématique des travailleurs peut remplir ; sinon il faut apprécier au cas par cas, notamment à l’aide des critères du groupe de travail Article 29.',
+        es: 'Es necesaria una evaluación de impacto cuando es probable que el tratamiento entrañe un riesgo elevado (art. 35 RGPD). El ejemplo legal es la vigilancia sistemática a gran escala de una zona de acceso público, y la lista de la APD (decisión 01/2019) no menciona a los empleados, pero su punto 7 abarca el tratamiento a gran escala y/o sistemático de datos de localización no estrictamente necesario para un servicio solicitado por la persona, que el seguimiento GPS sistemático de los trabajadores puede cumplir; en caso contrario debe valorarse caso por caso, también con los criterios del Grupo de Trabajo del Artículo 29.',
+        pt: "É necessária uma avaliação de impacto quando o tratamento seja suscetível de implicar um risco elevado (art. 35.º do RGPD). O exemplo legal é a vigilância sistemática em grande escala de uma zona de acesso público, e a lista da APD (decisão 01/2019) não menciona os trabalhadores, mas o seu ponto 7 abrange o tratamento em grande escala e/ou sistemático de dados de localização não estritamente necessário para um serviço pedido pela pessoa, o que o seguimento GPS sistemático dos trabalhadores pode preencher; caso contrário, deve ser avaliada caso a caso, também com os critérios do grupo de trabalho do art. 29.º.",
+        da: "En konsekvensanalyse er påkrævet, når behandlingen sandsynligvis indebærer en høj risiko (art. 35 i GDPR). Lovens eksempel er systematisk overvågning i stor skala af et område, der er tilgængeligt for offentligheden, og APD's liste (afgørelse 01/2019) nævner ikke ansatte, men punkt 7 dækker behandling i stor skala og/eller systematisk behandling af lokaliseringsdata, der ikke er strengt nødvendig for en tjeneste, som den registrerede har bedt om, hvilket systematisk GPS-sporing af ansatte kan opfylde; ellers skal det vurderes fra sag til sag, også ud fra kriterierne fra Artikel 29-gruppen.",
+        sv: 'En konsekvensbedömning krävs när behandlingen sannolikt medför hög risk (art. 35 GDPR). Exemplet i lagen är storskalig systematisk övervakning av en allmänt tillgänglig plats, och APD:s förteckning (beslut 01/2019) nämner inte anställda, men punkt 7 omfattar storskalig och/eller systematisk behandling av lokaliseringsuppgifter som inte är strikt nödvändig för en tjänst som den registrerade har begärt, vilket systematisk GPS-spårning av anställda kan uppfylla; annars måste det bedömas från fall till fall, även med hjälp av kriterierna från artikel 29-gruppen.',
+        nb: 'En personvernkonsekvensvurdering er påkrevd når behandlingen sannsynligvis medfører høy risiko (art. 35 i GDPR). Lovens eksempel er systematisk overvåking i stor skala av et område som er tilgjengelig for allmennheten, og APDs liste (vedtak 01/2019) nevner ikke ansatte, men punkt 7 omfatter behandling i stor skala og/eller systematisk behandling av lokaliseringsopplysninger som ikke er strengt nødvendig for en tjeneste den registrerte har bedt om, noe systematisk GPS-sporing av ansatte kan oppfylle; ellers må det vurderes fra sak til sak, også ut fra kriteriene fra artikkel 29-gruppen.',
+        nl: 'Een effectbeoordeling is vereist wanneer de verwerking waarschijnlijk een hoog risico met zich meebrengt (art. 35 AVG). Het wettelijke voorbeeld is de grootschalige systematische monitoring van een openbaar toegankelijke ruimte, en de lijst van de APD (beslissing 01/2019) noemt werknemers niet, maar punt 7 bestrijkt de grootschalige en/of systematische verwerking van locatiegegevens die niet strikt noodzakelijk is voor een door de betrokkene gevraagde dienst, wat systematische GPS-tracking van werknemers kan vervullen; anders moet dit per geval worden beoordeeld, ook aan de hand van de criteria van de Groep Gegevensbescherming artikel 29.',
       },
       fonte: FONTE_APD_DPIA,
+      fonteAggiuntiva: FONTE_APD_LISTA_DPIA,
     },
   ],
 
@@ -380,10 +387,11 @@ export const belgio: SchedaPaese = {
     FONTE_CCT_81,
     FONTE_APD_GEOLOCALIZZAZIONE,
     FONTE_APD_DPIA,
+    FONTE_APD_LISTA_DPIA,
     FONTE_APD_RECLAMO,
     FONTE_DECISIONE_114_2024,
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-09-30',
+  aggiornatoIl: '2026-10-16',
 };

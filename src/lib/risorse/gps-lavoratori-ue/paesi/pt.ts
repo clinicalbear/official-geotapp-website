@@ -2,7 +2,7 @@
  * Scheda-paese Portogallo per la risorsa "GPS sui lavoratori in UE".
  *
  * Contenuti basati su fonti primarie verificate e citate nella sezione "Fonti":
- * art. 20 del Codigo do Trabalho (mezzi di sorveglianza a distanza), Deliberacao
+ * art. 20 del Código do Trabalho (mezzi di sorveglianza a distanza), Deliberacao
  * 7680/2014 della CNPD sulla geolocalizzazione nel contesto lavorativo, art. 28
  * della Lei 58/2019 sulle relazioni di lavoro, lista CNPD dei trattamenti che
  * richiedono una valutazione d'impatto, portale CNPD per le segnalazioni e GDPR.
@@ -16,7 +16,7 @@ import type { SchedaPaese } from '../types';
 
 // URL delle fonti primarie citate.
 const FONTE_CT_20 = {
-  titolo: 'Codigo do Trabalho, art. 20 (mezzi di sorveglianza a distanza)',
+  titolo: 'Código do Trabalho, arts. 20-21 (mezzi di sorveglianza a distanza)',
   url: 'https://www.pgdlisboa.pt/leis/lei_mostra_articulado.php?nid=1047&tabela=leis',
 };
 const FONTE_CNPD_7680 = {
@@ -117,7 +117,7 @@ export const portogallo: SchedaPaese = {
         da: 'Information til medarbejderne om overvågningens eksistens og formål (art. 20 Código do Trabalho)',
         sv: 'Information till de anställda om att övervakningen finns och dess ändamål (art. 20 Código do Trabalho)',
         nb: 'Informasjon til de ansatte om at overvåking finnes og formålet med den (art. 20 Código do Trabalho)',
-        nl: 'Informatie aan werknemers over het bestaan en het doel van het toezicht (art. 20 Codigo do Trabalho)',
+        nl: 'Informatie aan werknemers over het bestaan en het doel van het toezicht (art. 20 Código do Trabalho)',
       },
       risposta: 'si',
       dettaglio: {
@@ -423,5 +423,5 @@ export const portogallo: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-09-30',
+  aggiornatoIl: '2026-10-16',
 };

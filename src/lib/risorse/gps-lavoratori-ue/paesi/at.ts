@@ -21,6 +21,11 @@ const FONTE_ARBVG_96 = {
     'Arbeitsverfassungsgesetz (ArbVG), § 96 (misure di controllo che toccano la dignita: consenso del consiglio aziendale)',
   url: 'https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008329&Paragraf=96',
 };
+const FONTE_AVRAG_10 = {
+  titolo:
+    'Arbeitsvertragsrechts-Anpassungsgesetz (AVRAG), § 10 (misure di controllo che toccano la dignita: accordo aziendale, o consenso del lavoratore se manca il consiglio aziendale)',
+  url: 'https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008872&Paragraf=10',
+};
 const FONTE_ARBVG_96A = {
   titolo:
     'Arbeitsverfassungsgesetz (ArbVG), § 96a (sistemi che trattano dati personali dei lavoratori)',
@@ -122,6 +127,7 @@ export const austria: SchedaPaese = {
         nl: 'Controlemaatregelen en technische systemen die geschikt zijn om werknemers te controleren en die de menselijke waardigheid raken, vereisen de instemming van de ondernemingsraad (een Betriebsvereinbarung is verplicht): zonder deze zijn ze ontoelaatbaar. Dit geldt waar een Betriebsrat bestaat; bij afwezigheid daarvan is een individuele overeenkomst krachtens § 10 AVRAG vereist.',
       },
       fonte: FONTE_ARBVG_96,
+      fonteAggiuntiva: FONTE_AVRAG_10,
     },
     {
       voce: {
@@ -316,16 +322,16 @@ export const austria: SchedaPaese = {
     {
       passo: 6,
       descrizione: {
-        it: 'Se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e verifica se devi di nuovo informare o consultare i rappresentanti dei lavoratori, dove la legge lo prevede. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: l’informativa consegnata prima non basta.',
-        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and check whether you must inform or consult the workers\' representatives again, where the law requires it. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
-        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und prüfen Sie, ob Sie die Arbeitnehmervertretung erneut informieren oder beteiligen müssen, wo das Gesetz es vorsieht. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
-        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et vérifiez si vous devez de nouveau informer ou consulter les représentants du personnel, lorsque la loi le prévoit. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
-        es: 'Si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y comprueba si debes volver a informar o consultar a los representantes de los trabajadores, cuando la ley lo prevé. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la información entregada antes no basta.',
-        pt: "Se mudar de sistema ou de software de monitorização, atualize e entregue de novo a informação, e verifique se tem de voltar a informar ou a consultar os representantes dos trabalhadores, onde a lei o preveja. Muitas vezes mudam o fornecedor (subcontratante), os dados recolhidos e as modalidades: a informação entregue antes não basta.",
-        da: 'Hvis du skifter system eller overvågningssoftware, skal du opdatere og udlevere privatlivsoplysningerne igen og undersøge, om du på ny skal informere eller høre medarbejdernes repræsentanter, hvor loven kræver det. Ofte ændrer leverandøren (databehandleren), de indsamlede oplysninger og metoderne sig: de oplysninger, der blev udleveret tidligere, er ikke nok.',
-        sv: 'Om du byter system: när du byter övervakningssystem eller programvara ska du uppdatera och dela ut integritetsinformationen på nytt, och kontrollera om du måste informera eller samråda med de anställdas företrädare igen, där lagen kräver det. Leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och metoderna ändras ofta: den information som lämnades tidigare räcker inte.',
-        nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og dele ut personvernerklæringen på nytt, og undersøke om du igjen må informere eller rådføre deg med de ansattes representanter, der loven krever det. Ofte endrer leverandøren (databehandleren), de innsamlede opplysningene og metodene seg: informasjonen som ble gitt tidligere, er ikke nok.',
-        nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        it: 'Se cambi sistema o software di monitoraggio, aggiorna e riconsegna l’informativa, e, se esiste un consiglio aziendale, aggiorna o rinegozia la Betriebsvereinbarung prima di attivare il nuovo sistema. Spesso cambiano fornitore (responsabile del trattamento), dati raccolti e modalità: l’informativa consegnata prima non basta.',
+        en: 'If you switch systems: when you change your monitoring system or software, update and re-issue the privacy notice, and, where a works council exists, update or renegotiate the Betriebsvereinbarung before activating the new system. The provider (data processor), the data collected and the methods often change: the one provided earlier is not enough.',
+        de: 'Bei Systemwechsel: Wenn Sie Ihr Überwachungssystem oder Ihre Software wechseln, aktualisieren Sie die Datenschutzinformation und händigen Sie sie erneut aus, und aktualisieren oder verhandeln Sie, wenn ein Betriebsrat besteht, die Betriebsvereinbarung vor Aktivierung des neuen Systems neu. Anbieter (Auftragsverarbeiter), erhobene Daten und Modalitäten ändern sich oft: die zuvor ausgehändigte genügt nicht.',
+        fr: 'En cas de changement de système : si vous changez de système ou de logiciel de surveillance, mettez à jour et remettez l’information, et, si un comité d’entreprise existe, mettez à jour ou renégociez la Betriebsvereinbarung avant d’activer le nouveau système. Le fournisseur (sous-traitant), les données collectées et les modalités changent souvent : celle remise auparavant ne suffit pas.',
+        es: 'Si cambias de sistema o software de monitorización, actualiza y vuelve a entregar la información, y, si existe un comité de empresa, actualiza o renegocia la Betriebsvereinbarung antes de activar el nuevo sistema. A menudo cambian el proveedor (encargado del tratamiento), los datos recogidos y las modalidades: la información entregada antes no basta.',
+        pt: "Se mudar de sistema ou de software de monitorização, atualize e entregue de novo a informação, e, se existir um conselho de empresa, atualize ou renegoceie a Betriebsvereinbarung antes de ativar o novo sistema. Muitas vezes mudam o fornecedor (subcontratante), os dados recolhidos e as modalidades: a informação entregue antes não basta.",
+        da: 'Hvis du skifter system eller overvågningssoftware, skal du opdatere og udlevere privatlivsoplysningerne igen og, hvis der findes et virksomhedsråd, opdatere eller genforhandle Betriebsvereinbarung, før du tager det nye system i brug. Ofte ændrer leverandøren (databehandleren), de indsamlede oplysninger og metoderne sig: de oplysninger, der blev udleveret tidligere, er ikke nok.',
+        sv: 'Om du byter system: när du byter övervakningssystem eller programvara ska du uppdatera och dela ut integritetsinformationen på nytt, och, om det finns ett företagsråd, uppdatera eller förhandla om Betriebsvereinbarung innan det nya systemet aktiveras. Leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och metoderna ändras ofta: den information som lämnades tidigare räcker inte.',
+        nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og dele ut personvernerklæringen på nytt, og, hvis det finnes et bedriftsutvalg, oppdatere eller reforhandle Betriebsvereinbarung før det nye systemet tas i bruk. Ofte endrer leverandøren (databehandleren), de innsamlede opplysningene og metodene seg: informasjonen som ble gitt tidligere, er ikke nok.',
+        nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en werkt u, als er een ondernemingsraad bestaat, de Betriebsvereinbarung bij of onderhandelt u er opnieuw over voordat u het nieuwe systeem activeert. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
       },
     },
   ],
@@ -372,6 +378,7 @@ export const austria: SchedaPaese = {
 
   fonti: [
     FONTE_ARBVG_96,
+    FONTE_AVRAG_10,
     FONTE_ARBVG_96A,
     FONTE_DSFA_V,
     FONTE_DSB_BERICHT_2018,
@@ -380,5 +387,5 @@ export const austria: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-09-30',
+  aggiornatoIl: '2026-10-16',
 };

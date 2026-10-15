@@ -210,6 +210,7 @@ export const repubblicaCeca: SchedaPaese = {
         nl: 'GPS in een voertuig houdt stand wanneer het concrete doelen dient, zoals de bescherming van het vermogen en de rittenregistratie (bij een controle in 2014 zag de UOOU geen inbreuk op de privacy bij een GPS met elektronisch rittenboek, diefstalbeveiliging en een schakelaar privé/zakelijk), niet wanneer het intensieve of voortdurende controle van werknemers wordt (art. 316 lid 2; rechtbank Praag 6 A 42/2013 over het volgen van de volledige route van postbodes). Voor privégebruik van het voertuig noemt het door de UOOU gepubliceerde advies WP249 de opt-out als belangrijkste maatregel.',
       },
       fonte: FONTE_UOOU_VZ2014,
+      fonteAggiuntiva: FONTE_UOOU_GPS,
     },
     {
       voce: {

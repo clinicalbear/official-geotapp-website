@@ -25,9 +25,9 @@ const FONTE_PROVV_ARSAC = {
 };
 const FONTE_SENT_COSENZA_STAMPA = {
   titolo:
-    'AGI Lavoro, «Lavoro agile e geolocalizzazione: sentenza del Tribunale di Cosenza» (sentenza n. 972 del 1° luglio 2026; il testo della sentenza non è stato reperito in fonte ufficiale)',
+    'AGI - Avvocati Giuslavoristi Italiani (associazione di avvocati giuslavoristi), «Lavoro agile e geolocalizzazione: sentenza del Tribunale di Cosenza» (sentenza n. 972 del 1° luglio 2026; il testo della sentenza non è stato reperito in fonte ufficiale)',
   url: 'https://www.giuslavoristi.it/articolo/2073/lavoro-agile-e-geolocalizzazione-sentenza-del-tribunale-di-cosenza',
-  nonUfficiale: 'stampa' as const,
+  nonUfficiale: 'studio-legale' as const,
 };
 const FONTE_SENT_COSENZA_STUDIO = {
   titolo:
@@ -95,7 +95,7 @@ export const italia: SchedaPaese = {
       ru: 'Garante per la protezione dei dati personali (итальянский орган по защите данных)',
     },
     urlFonte: 'https://www.garanteprivacy.it',
-    verificatoIl: '2026-09-30',
+    verificatoIl: '2026-10-16',
   },
 
   checklist: [
@@ -452,7 +452,7 @@ export const italia: SchedaPaese = {
     {
       ente: 'Garante per la protezione dei dati personali',
       urlFonte: 'https://www.garanteprivacy.it',
-      verificatoIl: '2026-09-30',
+      verificatoIl: '2026-10-16',
     },
   ],
 
@@ -505,5 +505,5 @@ export const italia: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-09-30',
+  aggiornatoIl: '2026-10-16',
 };

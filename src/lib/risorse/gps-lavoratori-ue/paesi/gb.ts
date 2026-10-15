@@ -37,12 +37,12 @@ const FONTE_ICO_SEGNALAZIONI = {
 };
 const FONTE_INFORMATION_COMMISSION = {
   titolo:
-    'Data (Use and Access) Act 2025 (Commencement No. 9) Regulations 2026, SI 2026/1015 (Information Commission dal 30/09/2026)',
+    'Data (Use and Access) Act 2025 (Commencement No. 9 and Transitional and Saving Provisions) Regulations 2026, SI 2026/1015 (Information Commission dal 30/09/2026)',
   url: 'https://www.legislation.gov.uk/uksi/2026/1015/made',
 };
 const FONTE_GDPR = {
-  titolo: 'Regolamento UE 2016/679 (GDPR) come UK GDPR',
-  url: 'https://eur-lex.europa.eu/eli/reg/2016/679/oj',
+  titolo: 'UK GDPR, art. 83 c. 5 (legislation.gov.uk)',
+  url: 'https://www.legislation.gov.uk/eur/2016/679/article/83',
 };
 
 export const regnoUnito: SchedaPaese = {
@@ -75,18 +75,18 @@ export const regnoUnito: SchedaPaese = {
     ente: "Information Commission (ICO)",
     portale: FONTE_ICO_SEGNALAZIONI.url,
     urlFonte: FONTE_ICO_SEGNALAZIONI.url,
-    verificatoIl: '2026-09-30',
+    verificatoIl: '2026-10-16',
     note: {
-      it: "Il Regno Unito ha un'unica autorità nazionale, l'ICO, per Inghilterra, Scozia, Galles e Irlanda del Nord: nessuna ripartizione regionale. Dal 30 settembre 2026 l'Information Commissioner è sostituito dalla Information Commission (Data (Use and Access) Act 2025, artt. 118-119); l'ufficio continua a chiamarsi ICO.",
+      it: "Il Regno Unito ha un'unica autorità nazionale, l'ICO, per Inghilterra, Scozia, Galles e Irlanda del Nord: nessuna ripartizione regionale. Dal 30 settembre 2026 l'Information Commissioner è sostituito dalla Information Commission (Data (Use and Access) Act 2025, ss. 118-119); l'ufficio continua a chiamarsi ICO.",
       en: 'The United Kingdom has a single national authority, the ICO, for England, Scotland, Wales and Northern Ireland: no regional split. From 30 September 2026 the Information Commissioner is replaced by the Information Commission (Data (Use and Access) Act 2025, ss. 118-119); the office continues to be known as the ICO.',
       de: 'Das Vereinigte Königreich hat eine einzige nationale Behörde, das ICO, für England, Schottland, Wales und Nordirland: keine regionale Aufteilung. Ab dem 30. September 2026 wird der Information Commissioner durch die Information Commission ersetzt (Data (Use and Access) Act 2025, Abschn. 118-119); die Behörde bleibt als ICO bekannt.',
-      fr: 'Le Royaume-Uni dispose d’une seule autorité nationale, l’ICO, pour l’Angleterre, l’Écosse, le pays de Galles et l’Irlande du Nord : aucune répartition régionale. Depuis le 30 septembre 2026, l’Information Commissioner est remplacé par l’Information Commission (Data (Use and Access) Act 2025, art. 118-119) ; l’office reste connu sous le nom d’ICO.',
-      es: 'El Reino Unido tiene una única autoridad nacional, la ICO, para Inglaterra, Escocia, Gales e Irlanda del Norte: sin reparto regional. Desde el 30 de septiembre de 2026 el Information Commissioner es sustituido por la Information Commission (Data (Use and Access) Act 2025, arts. 118-119); la oficina sigue conociéndose como ICO.',
-      pt: "O Reino Unido tem uma única autoridade nacional, o ICO, para Inglaterra, Escócia, País de Gales e Irlanda do Norte: não existe repartição regional. A partir de 30 de setembro de 2026, o Information Commissioner é substituído pela Information Commission (Data (Use and Access) Act 2025, arts. 118-119); o gabinete continua a chamar-se ICO.",
+      fr: 'Le Royaume-Uni dispose d’une seule autorité nationale, l’ICO, pour l’Angleterre, l’Écosse, le pays de Galles et l’Irlande du Nord : aucune répartition régionale. Depuis le 30 septembre 2026, l’Information Commissioner est remplacé par l’Information Commission (Data (Use and Access) Act 2025, ss. 118-119) ; l’office reste connu sous le nom d’ICO.',
+      es: 'El Reino Unido tiene una única autoridad nacional, la ICO, para Inglaterra, Escocia, Gales e Irlanda del Norte: sin reparto regional. Desde el 30 de septiembre de 2026 el Information Commissioner es sustituido por la Information Commission (Data (Use and Access) Act 2025, ss. 118-119); la oficina sigue conociéndose como ICO.',
+      pt: "O Reino Unido tem uma única autoridade nacional, o ICO, para Inglaterra, Escócia, País de Gales e Irlanda do Norte: não existe repartição regional. A partir de 30 de setembro de 2026, o Information Commissioner é substituído pela Information Commission (Data (Use and Access) Act 2025, ss. 118-119); o gabinete continua a chamar-se ICO.",
       da: 'Storbritannien har én national myndighed, ICO, for England, Skotland, Wales og Nordirland: ingen regional opdeling. Fra 30. september 2026 erstattes Information Commissioner af Information Commission (Data (Use and Access) Act 2025, §§ 118-119); kontoret hedder stadig ICO.',
       sv: 'Storbritannien har en enda nationell myndighet, ICO, för England, Skottland, Wales och Nordirland: det finns ingen regional uppdelning. Från och med den 30 september 2026 ersätts Information Commissioner av Information Commission (Data (Use and Access) Act 2025, avsnitt 118-119); kontoret fortsätter att kallas ICO.',
       nb: 'Storbritannia har én nasjonal myndighet, ICO, for England, Skottland, Wales og Nord-Irland: ingen regional inndeling. Fra 30. september 2026 erstattes Information Commissioner av Information Commission (Data (Use and Access) Act 2025, §§ 118-119); kontoret heter fortsatt ICO.',
-      nl: 'Het Verenigd Koninkrijk heeft één nationale autoriteit, de ICO, voor Engeland, Schotland, Wales en Noord-Ierland: geen regionale verdeling. Vanaf 30 september 2026 wordt de Information Commissioner vervangen door de Information Commission (Data (Use and Access) Act 2025, art. 118-119); het bureau blijft bekend als ICO.',
+      nl: 'Het Verenigd Koninkrijk heeft één nationale autoriteit, de ICO, voor Engeland, Schotland, Wales en Noord-Ierland: geen regionale verdeling. Vanaf 30 september 2026 wordt de Information Commissioner vervangen door de Information Commission (Data (Use and Access) Act 2025, ss. 118-119); het bureau blijft bekend als ICO.',
     },
   },
 
@@ -331,7 +331,7 @@ export const regnoUnito: SchedaPaese = {
       ente: 'ICO, segnalazioni',
       portale: FONTE_ICO_SEGNALAZIONI.url,
       urlFonte: FONTE_ICO_SEGNALAZIONI.url,
-      verificatoIl: '2026-09-30',
+      verificatoIl: '2026-10-16',
     },
   ],
 
@@ -376,5 +376,5 @@ export const regnoUnito: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-09-30',
+  aggiornatoIl: '2026-10-16',
 };

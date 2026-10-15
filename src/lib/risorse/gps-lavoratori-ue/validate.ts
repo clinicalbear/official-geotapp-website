@@ -46,6 +46,9 @@ export function validateScheda(s: SchedaPaese): { ok: boolean; errori: string[] 
     if (!v.fonte.url || v.fonte.url.trim() === '') {
       errori.push(`checklist[${i}].fonte.url è vuoto`);
     }
+    if (v.fonteAggiuntiva && (!v.fonteAggiuntiva.url || v.fonteAggiuntiva.url.trim() === '')) {
+      errori.push(`checklist[${i}].fonteAggiuntiva.url è vuoto`);
+    }
   });
 
   return { ok: errori.length === 0, errori };

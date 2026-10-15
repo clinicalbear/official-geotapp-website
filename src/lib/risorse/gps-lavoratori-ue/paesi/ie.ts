@@ -20,7 +20,7 @@ const FONTE_DPC_VEICOLI = {
   url: 'https://www.dataprotection.ie/sites/default/files/uploads/2020-09/Employer%20Vehicle%20Tracking_May2020.pdf',
 };
 const FONTE_DPC_LAVORO = {
-  titolo: 'DPC, pagina sul tracciamento dei veicoli dei dipendenti (aggiornata a maggio 2026)',
+  titolo: 'DPC, pagina sul tracciamento dei veicoli dei dipendenti (ultimo aggiornamento della guida: maggio 2020)',
   url: 'https://www.dataprotection.ie/en/dpc-guidance/employer-vehicle-tracking',
 };
 const FONTE_DPC_DPIA = {
@@ -79,7 +79,7 @@ export const irlanda: SchedaPaese = {
     ente: 'Data Protection Commission (DPC)',
     portale: FONTE_DPC_RECLAMI.url,
     urlFonte: FONTE_DPC_RECLAMI.url,
-    verificatoIl: '2026-09-30',
+    verificatoIl: '2026-10-16',
     note: {
       it: "L'Irlanda ha un'unica autorità nazionale, il DPC; nessuna ripartizione regionale.",
       en: 'Ireland has a single national authority, the DPC; no regional subdivision.',
@@ -348,7 +348,7 @@ export const irlanda: SchedaPaese = {
       ente: 'DPC, reclami',
       portale: FONTE_DPC_RECLAMI.url,
       urlFonte: FONTE_DPC_RECLAMI.url,
-      verificatoIl: '2026-09-30',
+      verificatoIl: '2026-10-16',
     },
   ],
 
@@ -368,15 +368,15 @@ export const irlanda: SchedaPaese = {
       nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
     },
     casoCitato: {
-      it: "Non risulta una multa del DPC specifica per il GPS sui dipendenti. Il caso più vicino: DPC contro Limerick City and County Council (dicembre 2021), 110.000 euro per trattamento senza base giuridica tramite telecamere, lettura targhe e droni. Riguardava un ente pubblico e i cittadini, non i dipendenti. Nella sentenza Doolin (High Court, febbraio 2020, sotto la legge previgente) l'uso, in un procedimento disciplinare, di immagini raccolte per finalità di sicurezza è stato ritenuto un ulteriore trattamento per una finalità diversa.",
+      it: "Non risulta una multa del DPC specifica per il GPS sui dipendenti. Il caso più vicino: DPC contro Limerick City and County Council (dicembre 2021), 110.000 euro per trattamento senza base giuridica tramite telecamere e lettura targhe (l'inchiesta ha riguardato anche i droni). Riguardava un ente pubblico, non i dipendenti. Nella sentenza Doolin (High Court, febbraio 2020, sotto la legge previgente) l'uso, in un procedimento disciplinare, di immagini raccolte per finalità di sicurezza è stato ritenuto un ulteriore trattamento per una finalità diversa.",
       en: 'There is no record of a DPC fine specifically for GPS on employees. Relevant landmark case: DPC v Limerick City and County Council (December 2021), 110,000 euro for processing without a legal basis via cameras and automatic number-plate reading (the inquiry also covered drones; a public body, not employees). In Doolin (High Court, February 2020, under the previous law) the use of material collected for security purposes in a disciplinary hearing was held to be further processing for a different purpose.',
       de: 'Es ist kein Bußgeld der DPC speziell für GPS bei Beschäftigten bekannt. Einschlägiger Leitfall: DPC gegen Limerick City and County Council (Dezember 2021), 110.000 Euro für eine Verarbeitung ohne Rechtsgrundlage mittels Kameras und Kennzeichenerfassung (die Untersuchung betraf auch Drohnen; eine öffentliche Stelle, keine Beschäftigten). Im Urteil Doolin (High Court, Februar 2020, nach dem früheren Recht) wurde die Verwendung von zu Sicherheitszwecken erhobenem Material in einem Disziplinarverfahren als Weiterverarbeitung zu einem anderen Zweck gewertet.',
       fr: 'Aucune amende de la DPC visant spécifiquement le GPS sur les salariés n’est connue. Affaire de référence pertinente : DPC contre Limerick City and County Council (décembre 2021), 110 000 euros pour un traitement sans base légale au moyen de caméras et de lecture automatique des plaques (l’enquête portait aussi sur des drones ; un organisme public, et non des salariés). Dans l’arrêt Doolin (High Court, février 2020, sous la loi précédente), l’utilisation lors d’une procédure disciplinaire de matériel collecté à des fins de sécurité a été jugée être un traitement ultérieur pour une finalité différente.',
       es: 'No consta una multa de la DPC específica por el GPS sobre los empleados. Caso de referencia afín: DPC contra Limerick City and County Council (diciembre de 2021), 110.000 euros por un tratamiento sin base jurídica mediante cámaras y lectura de matrículas (la investigación abarcaba también drones; un organismo público, no empleados). En la sentencia Doolin (High Court, febrero de 2020, bajo la ley anterior), el uso en un procedimiento disciplinario de material recogido por seguridad se consideró un tratamiento ulterior para una finalidad distinta.',
-      pt: "Não consta nenhuma coima da DPC específica sobre o GPS nos trabalhadores. O caso mais próximo: DPC contra Limerick City and County Council (dezembro de 2021), 110.000 euros por tratamento sem base jurídica através de câmaras, leitura de matrículas e drones. Dizia respeito a um organismo público e aos cidadãos, não aos trabalhadores. No acórdão Doolin (High Court, fevereiro de 2020, ao abrigo da lei anterior), a utilização, num processo disciplinar, de imagens recolhidas para fins de segurança foi considerada um tratamento posterior para uma finalidade diferente.",
-      da: 'Der kendes ingen bøde fra DPC specifikt for GPS på medarbejdere. Den nærmeste sag: DPC mod Limerick City and County Council (december 2021), 110.000 euro for behandling uden retsgrundlag via kameraer, nummerpladelæsning og droner. Sagen angik en offentlig myndighed og borgere, ikke medarbejdere. I Doolin-dommen (High Court, februar 2020, efter den tidligere lovgivning) blev brugen af optagelser, der var indsamlet af sikkerhedshensyn, i en disciplinærsag anset for videre behandling til et andet formål.',
-      sv: 'Det finns inga uppgifter om någon DPC-sanktion som särskilt gäller GPS på anställda. Det närmaste fallet: DPC mot Limerick City and County Council (december 2021), 110 000 euro för behandling utan rättslig grund via kameror, avläsning av registreringsskyltar och drönare. Det gällde ett offentligt organ och medborgare, inte anställda. I domen Doolin (High Court, februari 2020, enligt den tidigare lagen) ansågs användningen av bilder som samlats in av säkerhetsskäl i ett disciplinärt förfarande vara ytterligare behandling för ett annat ändamål.',
-      nb: 'Det foreligger ingen bot fra DPC som gjelder GPS på ansatte spesielt. Den nærmeste saken: DPC mot Limerick City and County Council (desember 2021), 110 000 euro for behandling uten rettslig grunnlag via kameraer, avlesing av registreringsskilt og droner. Den gjaldt et offentlig organ og borgere, ikke ansatte. I Doolin-dommen (High Court, februar 2020, etter den tidligere loven) ble bruken av bilder samlet inn av sikkerhetshensyn i en disiplinærsak ansett som ytterligere behandling til et annet formål.',
+      pt: "Não consta nenhuma coima da DPC específica sobre o GPS nos trabalhadores. O caso mais próximo: DPC contra Limerick City and County Council (dezembro de 2021), 110.000 euros por tratamento sem base jurídica através de câmaras e leitura de matrículas (o inquérito abrangeu também os drones). Dizia respeito a um organismo público, não aos trabalhadores. No acórdão Doolin (High Court, fevereiro de 2020, ao abrigo da lei anterior), a utilização, num processo disciplinar, de imagens recolhidas para fins de segurança foi considerada um tratamento posterior para uma finalidade diferente.",
+      da: 'Der kendes ingen bøde fra DPC specifikt for GPS på medarbejdere. Den nærmeste sag: DPC mod Limerick City and County Council (december 2021), 110.000 euro for behandling uden retsgrundlag via kameraer og nummerpladelæsning (undersøgelsen omfattede også droner). Sagen angik en offentlig myndighed, ikke medarbejdere. I Doolin-dommen (High Court, februar 2020, efter den tidligere lovgivning) blev brugen af optagelser, der var indsamlet af sikkerhedshensyn, i en disciplinærsag anset for videre behandling til et andet formål.',
+      sv: 'Det finns inga uppgifter om någon DPC-sanktion som särskilt gäller GPS på anställda. Det närmaste fallet: DPC mot Limerick City and County Council (december 2021), 110 000 euro för behandling utan rättslig grund via kameror och avläsning av registreringsskyltar (utredningen omfattade även drönare). Det gällde ett offentligt organ, inte anställda. I domen Doolin (High Court, februari 2020, enligt den tidigare lagen) ansågs användningen av bilder som samlats in av säkerhetsskäl i ett disciplinärt förfarande vara ytterligare behandling för ett annat ändamål.',
+      nb: 'Det foreligger ingen bot fra DPC som gjelder GPS på ansatte spesielt. Den nærmeste saken: DPC mot Limerick City and County Council (desember 2021), 110 000 euro for behandling uten rettslig grunnlag via kameraer og avlesing av registreringsskilt (undersøkelsen omfattet også droner). Den gjaldt et offentlig organ, ikke ansatte. I Doolin-dommen (High Court, februar 2020, etter den tidligere loven) ble bruken av bilder samlet inn av sikkerhetshensyn i en disiplinærsak ansett som ytterligere behandling til et annet formål.',
       nl: 'Er is geen boete van de DPC bekend die specifiek betrekking heeft op gps bij werknemers. Relevante richtinggevende zaak: DPC tegen Limerick City and County Council (december 2021), 110.000 euro voor een verwerking zonder rechtsgrondslag via camera\'s en kentekenherkenning (het onderzoek betrof ook drones; een overheidsinstantie, geen werknemers). In Doolin (High Court, februari 2020, onder de vorige wet) werd het gebruik van voor beveiliging verzameld materiaal in een tuchtprocedure aangemerkt als verdere verwerking voor een ander doel.',
     },
     urlFonte: FONTE_DPC_LIMERICK.url,
@@ -394,5 +394,5 @@ export const irlanda: SchedaPaese = {
     FONTE_GDPR,
   ],
 
-  aggiornatoIl: '2026-09-30',
+  aggiornatoIl: '2026-10-16',
 };

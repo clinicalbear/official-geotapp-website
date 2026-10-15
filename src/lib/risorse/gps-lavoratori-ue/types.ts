@@ -60,6 +60,12 @@ export interface VoceChecklist {
   risposta: RispostaChecklist;
   dettaglio: TestoLoc;
   fonte: Fonte;
+  /**
+   * Seconda fonte, mostrata accanto alla prima, quando l'affermazione della voce si
+   * regge su due documenti (16/10/2026: il giornalista che apre l'unica fonte della voce
+   * non trovava il fatto, che stava in un altro documento della scheda).
+   */
+  fonteAggiuntiva?: Fonte;
 }
 
 export interface PassoProcedura {

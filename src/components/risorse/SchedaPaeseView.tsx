@@ -261,6 +261,12 @@ export default function SchedaPaeseView({
                 <p style={{ marginBottom: 8 }}>{loc(item.dettaglio, locale)}</p>
                 <p style={{ fontSize: 14 }}>
                   <FonteConAvviso fonte={item.fonte} dict={dict} locale={locale} />
+                  {item.fonteAggiuntiva && (
+                    <>
+                      {' · '}
+                      <FonteConAvviso fonte={item.fonteAggiuntiva} dict={dict} locale={locale} />
+                    </>
+                  )}
                 </p>
               </li>
             ))}
