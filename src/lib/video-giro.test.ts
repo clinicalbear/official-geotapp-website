@@ -110,6 +110,7 @@ describe('i dati strutturati del video', () => {
         expect(String(schema[campo] ?? ''), `${locale}.${campo}`).not.toBe('');
       }
       expect(schema.duration).toBe('PT1M20S');
+      expect(String(schema.uploadDate)).toMatch(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}([+-]\d{2}:\d{2}|Z)$/);
       expect(String(schema.contentUrl)).toMatch(/^https:\/\/geotapp\.com\/video\/giro-\w+\.mp4$/);
       const miniature = schema.thumbnailUrl as string[];
       expect(miniature.every((u) => u.startsWith('https://geotapp.com/video/'))).toBe(true);

@@ -28,8 +28,8 @@ export const GIRO_DURATA_SECONDI = 80;
 export const GIRO_DURATA_ISO = 'PT1M20S';
 export const GIRO_LARGHEZZA = 1920;
 export const GIRO_ALTEZZA = 1080;
-/** Il giorno in cui i sottotitoli e le undici voci sono andati online. */
-export const GIRO_DATA = '2026-09-17';
+/** Il giorno in cui i sottotitoli e le undici voci sono andati online. Con ora e fuso: senza, Search Console segna uploadDate non valido. */
+export const GIRO_DATA = '2026-09-17T00:00:00+02:00';
 
 /**
  * Le stesse undici voci caricate sul canale GeoTapp Official il 17/09/2026,
