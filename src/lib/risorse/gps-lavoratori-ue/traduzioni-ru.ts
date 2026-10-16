@@ -548,4 +548,12 @@ export const TESTI_RU: Readonly<Record<string, string>> = {
     "CNIL, решение SAN-2022-015 от 7 июля 2022 г. в отношении компании UBEEQO INTERNATIONAL (страница CNIL)",
   "LPDP (87/2018), artt. 54, 55(1) e 95, testo ufficiale":
     "LPDP (87/2018), ст. 54, 55(1) и 95, официальный текст",
+  "LPDP (87/2018), artt. 54, 55(1) e 95, e decisione del Poverenik sulla lista DPIA (45/2019 e 112/2020), punti 2(7) e 4":
+    "LPDP (87/2018), статьи 54, 55(1) и 95, и решение Poverenik о перечне DPIA (45/2019 и 112/2020), пункты 2(7) и 4",
+  "VDAI, elenco delle decisioni del 2025 (multe, ordini e altro)":
+    "VDAI, список решений за 2025 год (штрафы, предписания и другое)",
+  "VDAI, elenco delle decisioni del 2026 (multe, ordini e altro)":
+    "VDAI, список решений за 2026 год (штрафы, предписания и другое)",
+  "EDPB, linee guida 05/2020 sul consenso ai sensi del regolamento 2016/679, par. 21 (squilibrio di potere nel rapporto di lavoro)":
+    "EDPB, Руководящие принципы 05/2020 о согласии согласно Регламенту 2016/679, п. 21 (дисбаланс сил в трудовых отношениях)",
 };

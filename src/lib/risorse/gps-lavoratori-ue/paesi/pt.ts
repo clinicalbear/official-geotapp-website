@@ -415,7 +415,6 @@ export const portogallo: SchedaPaese = {
     FONTE_CNPD_494,
     FONTE_CT_20,
     FONTE_CNPD_7680,
-    FONTE_LEI_58_28,
     FONTE_CNPD_VIDEOVIGILANCIA,
     FONTE_CNPD_AIPD,
     FONTE_CNPD_REG_798,

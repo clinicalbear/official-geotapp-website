@@ -546,4 +546,12 @@ export const TESTI_NL: Readonly<Record<string, string>> = {
     "CNIL, beraadslaging SAN-2022-015 van 7 juli 2022 over de vennootschap UBEEQO INTERNATIONAL (pagina van de CNIL)",
   "LPDP (87/2018), artt. 54, 55(1) e 95, testo ufficiale":
     "LPDP (87/2018), art. 54, 55 lid 1 en 95, officiële tekst",
+  "LPDP (87/2018), artt. 54, 55(1) e 95, e decisione del Poverenik sulla lista DPIA (45/2019 e 112/2020), punti 2(7) e 4":
+    "LPDP (87/2018), art. 54, 55(1) en 95, en het besluit van de Poverenik over de DPIA-lijst (45/2019 en 112/2020), punten 2(7) en 4",
+  "VDAI, elenco delle decisioni del 2025 (multe, ordini e altro)":
+    "VDAI, lijst van de besluiten van 2025 (boetes, bevelen en overige)",
+  "VDAI, elenco delle decisioni del 2026 (multe, ordini e altro)":
+    "VDAI, lijst van de besluiten van 2026 (boetes, bevelen en overige)",
+  "EDPB, linee guida 05/2020 sul consenso ai sensi del regolamento 2016/679, par. 21 (squilibrio di potere nel rapporto di lavoro)":
+    "EDPB, richtsnoeren 05/2020 inzake toestemming overeenkomstig Verordening 2016/679, punt 21 (machtsonevenwicht in de arbeidsrelatie)",
 };

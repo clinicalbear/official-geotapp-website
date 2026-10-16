@@ -36,6 +36,11 @@ const FONTE_DPIA_LPDP = {
     'LPDP (87/2018), artt. 54, 55(1) e 95, testo ufficiale',
   url: 'https://pravno-informacioni-sistem.rs/eli/rep/sgrs/skupstina/zakon/2018/87/13',
 };
+const FONTE_EDPB_CONSENSO = {
+  titolo:
+    'EDPB, linee guida 05/2020 sul consenso ai sensi del regolamento 2016/679, par. 21 (squilibrio di potere nel rapporto di lavoro)',
+  url: 'https://www.edpb.europa.eu/system/files/documents/files/file1/edpb_guidelines_202005_consent_en.pdf',
+};
 const FONTE_POVERENIK = {
   titolo: 'Poverenik (Garante serbo), competenze e contatti',
   url: 'https://poverenik.rs/en/about-us/about-the-commissioner/',
@@ -172,31 +177,32 @@ export const serbia: SchedaPaese = {
     },
     {
       voce: {
-        it: 'Base = interesse legittimo con test tripartito documentato, non il consenso',
-        en: 'Basis = legitimate interest with a documented three-part test, not consent',
-        de: 'Grundlage = berechtigtes Interesse mit dokumentierter dreiteiliger Prüfung, nicht Einwilligung',
-        fr: 'Base = intérêt légitime avec un test en trois parties documenté, et non le consentement',
-        es: 'Base = interés legítimo con una prueba tripartita documentada, no el consentimiento',
-        pt: "Base = interesse legítimo com um teste tripartido documentado, não o consentimento",
-        da: 'Grundlaget er legitim interesse med en dokumenteret test i tre led, ikke samtykke',
-        sv: 'Grunden är berättigat intresse med ett dokumenterat prov i tre delar, inte samtycke',
-        nb: 'Grunnlaget er berettiget interesse med en dokumentert test i tre ledd, ikke samtykke',
-        nl: 'Grondslag = gerechtvaardigd belang met een gedocumenteerde drieledige toets, niet toestemming',
+        it: 'Base = interesse legittimo bilanciato con i diritti del lavoratore; il consenso è una base debole',
+        en: "Basis = legitimate interest, balanced against the worker's rights; consent is a weak basis",
+        de: 'Grundlage = berechtigtes Interesse, abgewogen gegen die Rechte der Arbeitnehmer; die Einwilligung ist eine schwache Grundlage',
+        fr: 'Base = intérêt légitime, mis en balance avec les droits du travailleur ; le consentement est une base fragile',
+        es: 'Base = interés legítimo, ponderado frente a los derechos del trabajador; el consentimiento es una base débil',
+        pt: 'Base = interesse legítimo, ponderado com os direitos do trabalhador; o consentimento é uma base frágil',
+        da: 'Grundlaget er legitim interesse, afvejet mod arbejdstagerens rettigheder; samtykke er et svagt grundlag',
+        sv: 'Grunden är berättigat intresse, avvägt mot arbetstagarens rättigheter; samtycke är en svag grund',
+        nb: 'Grunnlaget er berettiget interesse, avveid mot arbeidstakerens rettigheter; samtykke er et svakt grunnlag',
+        nl: 'Grondslag = gerechtvaardigd belang, afgewogen tegen de rechten van de werknemer; toestemming is een zwakke grondslag',
       },
       risposta: 'si',
       dettaglio: {
-        it: 'La base è di norma l\'interesse legittimo del datore (art. 12(1)(6) LPDP), che va definito con chiarezza, bilanciato con gli interessi e i diritti fondamentali del lavoratore (art. 12(1)(6)) e, nella valutazione d\'impatto, valutato in termini di necessità e proporzionalità rispetto alle finalità (art. 54(6)(2) LPDP), documentato e comunicato al lavoratore (art. 23(1)(4)); il consenso nel rapporto di lavoro è la base più fragile, per lo squilibrio fra le parti.',
-        en: 'The basis is normally the employer\'s legitimate interest (art. 12(1)(6) LPDP), which must be clearly defined, balanced against the worker\'s interests and fundamental rights (art. 12(1)(6)) and, in the impact assessment, assessed for necessity and proportionality in relation to the purposes (art. 54(6)(2) LPDP), documented and communicated to the worker (art. 23(1)(4)); consent in the employment relationship is the most fragile basis, because of the imbalance between the parties.',
-        de: 'Grundlage ist in der Regel das berechtigte Interesse des Arbeitgebers (Art. 12(1)(6) LPDP), das klar definiert, mit den Interessen und Grundrechten des Beschäftigten abgewogen (Art. 12(1)(6)) und in der Folgenabschätzung auf Erforderlichkeit und Verhältnismäßigkeit in Bezug auf die Zwecke geprüft (Art. 54(6)(2) LPDP), dokumentiert und dem Beschäftigten mitgeteilt werden muss (Art. 23(1)(4)); die Einwilligung im Arbeitsverhältnis ist wegen des Ungleichgewichts der Parteien die fragilste Grundlage.',
-        fr: 'La base est en principe l’intérêt légitime de l’employeur (art. 12(1)(6) LPDP), qui doit être clairement défini, mis en balance avec les intérêts et les droits fondamentaux du salarié (art. 12(1)(6)) et, dans l’analyse d’impact, évalué en termes de nécessité et de proportionnalité au regard des finalités (art. 54(6)(2) LPDP), documenté et communiqué au salarié (art. 23(1)(4)) ; le consentement dans la relation de travail est la base la plus fragile, en raison du déséquilibre entre les parties.',
-        es: 'La base es, por lo general, el interés legítimo del empleador (art. 12(1)(6) LPDP), que debe estar claramente definido, ponderado con los intereses y los derechos fundamentales del trabajador (art. 12(1)(6)) y, en la evaluación de impacto, evaluado en términos de necesidad y proporcionalidad en relación con las finalidades (art. 54(6)(2) LPDP), documentado y comunicado al trabajador (art. 23(1)(4)); el consentimiento en la relación laboral es la base más frágil, por el desequilibrio entre las partes.',
-        pt: "A base é, em regra, o interesse legítimo da entidade empregadora (art. 12(1)(6) LPDP), que deve estar claramente definido, ponderado com os interesses e os direitos fundamentais do trabalhador (art. 12(1)(6)) e, na avaliação de impacto, avaliado em termos de necessidade e proporcionalidade em relação às finalidades (art. 54(6)(2) LPDP), documentado e comunicado ao trabalhador (art. 23(1)(4)); o consentimento na relação laboral é a base mais frágil, por causa do desequilíbrio entre as partes.",
-        da: 'Grundlaget er normalt arbejdsgiverens legitime interesse (art. 12, stk. 1, nr. 6, LPDP), som skal være klart defineret, afvejet over for medarbejderens interesser og grundlæggende rettigheder (art. 12, stk. 1, nr. 6) og, i konsekvensanalysen, vurderet for nødvendighed og proportionalitet i forhold til formålene (art. 54, stk. 6, nr. 2, LPDP), dokumenteret og meddelt medarbejderen (art. 23, stk. 1, nr. 4); samtykke i ansættelsesforholdet er det mest skrøbelige grundlag på grund af ubalancen mellem parterne.',
-        sv: 'Grunden är normalt arbetsgivarens berättigade intresse (art. 12(1)(6) LPDP), som ska definieras tydligt, vägas mot den anställdes intressen och grundläggande rättigheter (art. 12(1)(6)) och, i konsekvensbedömningen, bedömas med avseende på nödvändighet och proportionalitet i förhållande till ändamålen (art. 54(6)(2) LPDP), dokumenteras och meddelas den anställde (art. 23(1)(4)); samtycke i anställningsförhållandet är den skörare grunden, på grund av obalansen mellan parterna.',
-        nb: 'Grunnlaget er normalt arbeidsgiverens berettigede interesse (art. 12(1)(6) LPDP), som skal defineres tydelig, avveies mot den ansattes interesser og grunnleggende rettigheter (art. 12(1)(6)) og, i konsekvensvurderingen, vurderes med hensyn til nødvendighet og forholdsmessighet i forhold til formålene (art. 54(6)(2) LPDP), dokumenteres og meddeles den ansatte (art. 23(1)(4)); samtykke i arbeidsforholdet er det skjøreste grunnlaget, på grunn av ubalansen mellom partene.',
-        nl: 'De grondslag is doorgaans het gerechtvaardigd belang van de werkgever (art. 12(1)(6) LPDP), dat duidelijk moet worden omschreven, afgewogen tegen de belangen en de grondrechten van de werknemer (art. 12(1)(6)) en, in de effectbeoordeling, op noodzaak en evenredigheid ten opzichte van de doeleinden beoordeeld (art. 54(6)(2) LPDP), gedocumenteerd en aan de werknemer meegedeeld (art. 23(1)(4)); toestemming in de arbeidsrelatie is de meest kwetsbare grondslag wegens de ongelijkheid tussen de partijen.',
+        it: 'La base è di norma l\'interesse legittimo del datore (art. 12(1)(6) LPDP), bilanciato con gli interessi e i diritti fondamentali del lavoratore (stessa disposizione); nella valutazione d\'impatto va descritto e ne vanno valutate la necessità e la proporzionalità rispetto alle finalità (art. 54(6)(1)-(2) LPDP), e il lavoratore deve esserne informato (art. 23(1)(4)). Nel rapporto di lavoro il consenso è in genere una base debole, per lo squilibrio fra le parti (linee guida EDPB 05/2020 sul consenso).',
+        en: 'The basis is normally the employer\'s legitimate interest (art. 12(1)(6) LPDP), balanced against the worker\'s interests and fundamental rights (same provision); in the impact assessment it must be described and its necessity and proportionality to the purposes assessed (art. 54(6)(1)-(2) LPDP), and the worker must be informed of it (art. 23(1)(4)). In the employment relationship consent is generally a weak basis because of the imbalance between the parties (EDPB Guidelines 05/2020 on consent).',
+        de: 'Grundlage ist in der Regel das berechtigte Interesse des Arbeitgebers (Art. 12(1)(6) LPDP), abgewogen gegen die Interessen und Grundrechte des Beschäftigten (dieselbe Bestimmung); in der Folgenabschätzung ist es zu beschreiben und seine Erforderlichkeit und Verhältnismäßigkeit in Bezug auf die Zwecke zu prüfen (Art. 54(6)(1)-(2) LPDP), und der Beschäftigte muss darüber informiert werden (Art. 23(1)(4)). Im Arbeitsverhältnis ist die Einwilligung wegen des Ungleichgewichts der Parteien in der Regel eine schwache Grundlage (EDSA-Leitlinien 05/2020 zur Einwilligung).',
+        fr: 'La base est en principe l’intérêt légitime de l’employeur (art. 12(1)(6) LPDP), mis en balance avec les intérêts et les droits fondamentaux du salarié (même disposition) ; dans l’analyse d’impact, il doit être décrit et sa nécessité et sa proportionnalité au regard des finalités doivent être évaluées (art. 54(6)(1)-(2) LPDP), et le salarié doit en être informé (art. 23(1)(4)). Dans la relation de travail, le consentement est en général une base faible, en raison du déséquilibre entre les parties (lignes directrices 05/2020 du CEPD sur le consentement).',
+        es: 'La base es, por lo general, el interés legítimo del empleador (art. 12(1)(6) LPDP), ponderado con los intereses y los derechos fundamentales del trabajador (misma disposición); en la evaluación de impacto debe describirse y evaluarse su necesidad y proporcionalidad en relación con las finalidades (art. 54(6)(1)-(2) LPDP), y el trabajador debe ser informado de ello (art. 23(1)(4)). En la relación laboral el consentimiento es, en general, una base débil, por el desequilibrio entre las partes (Directrices 05/2020 del CEPD sobre el consentimiento).',
+        pt: 'A base é, em regra, o interesse legítimo da entidade empregadora (art. 12(1)(6) LPDP), ponderado com os interesses e os direitos fundamentais do trabalhador (mesma disposição); na avaliação de impacto deve ser descrito e avaliadas a sua necessidade e proporcionalidade em relação às finalidades (art. 54(6)(1)-(2) LPDP), e o trabalhador deve ser informado (art. 23(1)(4)). Na relação laboral o consentimento é, em geral, uma base fraca, por causa do desequilíbrio entre as partes (Diretrizes 05/2020 do CEPD sobre o consentimento).',
+        da: "Grundlaget er normalt arbejdsgiverens legitime interesse (art. 12, stk. 1, nr. 6, LPDP), afvejet over for medarbejderens interesser og grundlæggende rettigheder (samme bestemmelse); i konsekvensanalysen skal det beskrives, og dets nødvendighed og proportionalitet i forhold til formålene skal vurderes (art. 54, stk. 6, nr. 1-2, LPDP), og medarbejderen skal informeres herom (art. 23, stk. 1, nr. 4). I ansættelsesforholdet er samtykke generelt et svagt grundlag på grund af ubalancen mellem parterne (EDPB's retningslinjer 05/2020 om samtykke).",
+        sv: 'Grunden är normalt arbetsgivarens berättigade intresse (art. 12(1)(6) LPDP), vägt mot den anställdes intressen och grundläggande rättigheter (samma bestämmelse); i konsekvensbedömningen ska det beskrivas och dess nödvändighet och proportionalitet i förhållande till ändamålen bedömas (art. 54(6)(1)-(2) LPDP), och den anställde ska informeras om det (art. 23(1)(4)). I anställningsförhållandet är samtycke i allmänhet en svag grund, på grund av obalansen mellan parterna (EDPB:s riktlinjer 05/2020 om samtycke).',
+        nb: 'Grunnlaget er normalt arbeidsgiverens berettigede interesse (art. 12(1)(6) LPDP), avveid mot den ansattes interesser og grunnleggende rettigheter (samme bestemmelse); i konsekvensvurderingen skal det beskrives, og dets nødvendighet og forholdsmessighet i forhold til formålene skal vurderes (art. 54(6)(1)-(2) LPDP), og den ansatte skal informeres om det (art. 23(1)(4)). I arbeidsforholdet er samtykke generelt et svakt grunnlag på grunn av ubalansen mellom partene (EDPBs retningslinjer 05/2020 om samtykke).',
+        nl: 'De grondslag is doorgaans het gerechtvaardigd belang van de werkgever (art. 12(1)(6) LPDP), afgewogen tegen de belangen en de grondrechten van de werknemer (dezelfde bepaling); in de effectbeoordeling moet het worden omschreven en moeten de noodzaak en evenredigheid ervan ten opzichte van de doeleinden worden beoordeeld (art. 54(6)(1)-(2) LPDP), en de werknemer moet erover worden geïnformeerd (art. 23(1)(4)). In de arbeidsrelatie is toestemming in het algemeen een zwakke grondslag wegens de ongelijkheid tussen de partijen (EDPB-richtsnoeren 05/2020 over toestemming).',
       },
       fonte: FONTE_LPDP,
+      fonteAggiuntiva: FONTE_EDPB_CONSENSO,
     },
     {
       voce: {
@@ -396,6 +402,7 @@ export const serbia: SchedaPaese = {
     FONTE_POVERENIK,
     FONTE_DANAS_MEDIANA,
     FONTE_N1_MEDIANA,
+    FONTE_EDPB_CONSENSO,
     FONTE_GDPR,
   ],
 

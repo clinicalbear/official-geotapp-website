@@ -547,4 +547,12 @@ export const TESTI_DE: Readonly<Record<string, string>> = {
     "CNIL, Beschluss SAN-2022-015 vom 7. Juli 2022 zur Gesellschaft UBEEQO INTERNATIONAL (Seite der CNIL)",
   "LPDP (87/2018), artt. 54, 55(1) e 95, testo ufficiale":
     "LPDP (87/2018), Art. 54, 55 Abs. 1 und 95, amtlicher Text",
+  "LPDP (87/2018), artt. 54, 55(1) e 95, e decisione del Poverenik sulla lista DPIA (45/2019 e 112/2020), punti 2(7) e 4":
+    "LPDP (87/2018), Art. 54, 55(1) und 95, und Beschluss des Poverenik über die DSFA-Liste (45/2019 und 112/2020), Punkte 2(7) und 4",
+  "VDAI, elenco delle decisioni del 2025 (multe, ordini e altro)":
+    "VDAI, Liste der Entscheidungen des Jahres 2025 (Geldbußen, Anordnungen und anderes)",
+  "VDAI, elenco delle decisioni del 2026 (multe, ordini e altro)":
+    "VDAI, Liste der Entscheidungen des Jahres 2026 (Geldbußen, Anordnungen und anderes)",
+  "EDPB, linee guida 05/2020 sul consenso ai sensi del regolamento 2016/679, par. 21 (squilibrio di potere nel rapporto di lavoro)":
+    "EDSA, Leitlinien 05/2020 zur Einwilligung gemäß Verordnung 2016/679, Rn. 21 (Machtungleichgewicht im Beschäftigungskontext)",
 };

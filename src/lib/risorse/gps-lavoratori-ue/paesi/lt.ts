@@ -33,6 +33,14 @@ const FONTE_VDAI_DECISIONI = {
   titolo: 'VDAI, elenco delle decisioni più significative (multe, ordini e altro), dal 2019 al 14 gennaio 2025',
   url: 'https://vdai.lrv.lt/lt/sprendimai/vdai-sprendimai-baudos-nurodymai-ir-kt/',
 };
+const FONTE_VDAI_DECISIONI_2025 = {
+  titolo: 'VDAI, elenco delle decisioni del 2025 (multe, ordini e altro)',
+  url: 'https://vdai.lrv.lt/lt/sprendimai/2025/',
+};
+const FONTE_VDAI_DECISIONI_2026 = {
+  titolo: 'VDAI, elenco delle decisioni del 2026 (multe, ordini e altro)',
+  url: 'https://vdai.lrv.lt/lt/sprendimai/vdai-sprendimai-baudos-nurodymai-ir-kt-2026m/',
+};
 const FONTE_VDAI_SERVIZI = {
   titolo: 'VDAI (Garante lituano), servizi e reclami',
   url: 'https://vdai.lrv.lt/en/services/',
@@ -386,6 +394,8 @@ export const lituania: SchedaPaese = {
     FONTE_VDAI_DPIA,
     FONTE_VDAI_CORRISPONDENZA,
     FONTE_VDAI_DECISIONI,
+    FONTE_VDAI_DECISIONI_2025,
+    FONTE_VDAI_DECISIONI_2026,
     FONTE_VDAI_SERVIZI,
     FONTE_GDPR,
   ],
