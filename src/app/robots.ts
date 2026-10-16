@@ -43,6 +43,7 @@ export default function robots(): MetadataRoute.Robots {
           '/blog/pagina-di-esempio/',
           '/blog/wp-json/',
           '/blog/author/',
+          '/candidatura/',
         ],
       },
     ],

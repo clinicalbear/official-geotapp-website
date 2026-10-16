@@ -1231,6 +1231,16 @@ export async function middleware(req: NextRequest) {
     return response;
   }
 
+  // 2b-ter. /candidatura/<codice> — il questionario per i candidati, incorporato dal CRM.
+  // Locale-agnostico (l'indirizzo viaggia per email) e fuori dagli indici: oltre al meta
+  // robots della pagina, l'header vale anche per chi non esegue la pagina.
+  if (pathname.startsWith('/candidatura/')) {
+    const response = NextResponse.next();
+    applySecurityHeaders(response, req);
+    response.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive');
+    return response;
+  }
+
   // 2c. /blog/sindacazione/... — la resa spoglia dell'articolo per le piattaforme
   // che importano una pagina intera (Medium). La lingua sta gia' dentro il path
   // dell'articolo, quindi il prefisso di locale qui non aggiunge niente e anzi
