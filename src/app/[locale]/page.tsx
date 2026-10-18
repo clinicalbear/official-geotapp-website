@@ -239,7 +239,7 @@ export default async function LocalePage({ params }: Props) {
           Lo schema FAQPage resta iniettato da RisorsaFaq dentro lo slot. */}
       <HomeServer
         locale={locale}
-        jrSlot={<BlogHighlights locale={locale as AppLocale} categoryId={54} />}
+        jrSlot={<BlogHighlights locale={locale as AppLocale} />}
         // Senza FAQ per la lingua (le varianti inglesi regionali) lo slot resta vuoto:
         // da quando la home e' un componente server un elemento che rende null lascerebbe
         // comunque la sezione vuota nell'HTML, mentre prima React la scartava.

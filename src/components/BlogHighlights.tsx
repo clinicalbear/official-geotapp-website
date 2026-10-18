@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { AppLocale } from '@/lib/i18n/config';
-import { blogPostPath, getPostsInCategory } from '@/lib/wp-post-index';
+import { blogPostPath, getLatestPosts, getPostsInCategory } from '@/lib/wp-post-index';
 import { sharedSWR } from '@/lib/shared-swr';
 import { toBlogLocale } from '@/lib/blog-locale';
 
@@ -35,19 +35,22 @@ function cutAtWord(text: string, max: number): string {
 // La categoria arriva come id ITALIANO dalle pagine: getPostsInCategory la traduce
 // nella gemella della lingua e filtra sull'indice, perche' ?categories= sul blog
 // risponde sempre vuoto (vedi wp-post-index.ts).
-async function fetchBlogPosts(locale: AppLocale, categoryId: number, limit = 3): Promise<BlogPost[]> {
+async function fetchBlogPosts(locale: AppLocale, categoryId: number | undefined, limit = 3): Promise<BlogPost[]> {
   // Condivisa tra isolate: senza, ogni isolate freddo ripaginava l'archivio del blog e la
   // home o la pagina settore arrivava dopo 4-8 secondi (vedi shared-swr.ts).
   const posts = await sharedSWR(
-    `highlights:${locale}:${categoryId}:${limit}`,
+    `highlights:${locale}:${categoryId ?? 'ultimi'}:${limit}`,
     () => loadBlogPosts(locale, categoryId, limit),
     { freshMs: 60 * 60 * 1000, keep: (v) => v.length > 0 },
   );
   return posts ?? [];
 }
 
-async function loadBlogPosts(locale: AppLocale, categoryId: number, limit: number): Promise<BlogPost[]> {
-  const posts = await getPostsInCategory(categoryId, toBlogLocale(locale), limit);
+async function loadBlogPosts(locale: AppLocale, categoryId: number | undefined, limit: number): Promise<BlogPost[]> {
+  // senza categoria: gli ultimi articoli della lingua, qualunque argomento (la home)
+  const posts = categoryId === undefined
+    ? await getLatestPosts(toBlogLocale(locale), limit)
+    : await getPostsInCategory(categoryId, toBlogLocale(locale), limit);
   return posts.map((p) => ({
     id: p.id,
     title: stripHtml(p.title?.rendered ?? ''),
@@ -94,7 +97,8 @@ const READ_MORE_LABELS: Record<AppLocale, string> = {
 
 interface Props {
   locale: AppLocale;
-  categoryId: number;
+  /** Assente = ultimi articoli della lingua di qualsiasi categoria. */
+  categoryId?: number;
   className?: string;
 }
 

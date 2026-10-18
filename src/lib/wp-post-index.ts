@@ -567,6 +567,17 @@ export async function getPostsInCategory(
   return hydratePosts(scelti.map((p) => p.id));
 }
 
+/**
+ * Gli ultimi articoli pubblicati nella lingua della pagina, di qualsiasi categoria.
+ * La home li usa cosi' mostra sempre il pezzo piu' recente di quella lingua (18/10/2026:
+ * con la sola categoria 54 la home italiana era ferma al 17 giugno).
+ */
+export async function getLatestPosts(locale: string, limit?: number): Promise<WpIndexPost[]> {
+  const index = await getPostIndex();
+  const scelti = filterPosts(index, [], locale, limit);
+  return hydratePosts(scelti.map((p) => p.id));
+}
+
 /** Scarica titolo, estratto e immagine dei soli post scelti, nell'ordine dato. */
 export async function hydratePosts(ids: number[]): Promise<WpIndexPost[]> {
   if (ids.length === 0) return [];

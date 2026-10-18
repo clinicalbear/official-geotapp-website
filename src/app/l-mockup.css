@@ -94,8 +94,10 @@ h1,h2,h3,.big{font-family:var(--font-display);font-weight:800;letter-spacing:-.0
 .nvl img{height:48px;width:auto;pointer-events:auto}
 .mn{display:flex;gap:26px;margin-left:196px}
 .mn a{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#fff;position:relative;overflow:hidden;height:16px;display:block}
-.mn a span{display:block;transition:transform .45s cubic-bezier(.76,0,.24,1)}
-.mn a span:last-child{position:absolute;top:100%;left:0}
+/* la seconda copia della voce, quella che entra dal basso al passaggio del mouse, la disegna il CSS:
+   nell'HTML il testo compare una volta sola (prima era un secondo <span>, e i crawler leggevano "PrezziPrezzi") */
+.mn a span{display:block;position:relative;transition:transform .45s cubic-bezier(.76,0,.24,1)}
+.mn a span::after{content:attr(data-label);position:absolute;top:100%;left:0;white-space:nowrap}
 .mn a:hover span{transform:translateY(-100%)}
 .ne{margin-left:auto;display:flex;gap:22px;align-items:center}
 .ne a{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#fff}

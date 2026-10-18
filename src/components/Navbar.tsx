@@ -116,7 +116,7 @@ export default function Navbar() {
   };
 
   const mnLink = (href: string, label: string) => (
-    <Link href={href} onMouseEnter={scheduleClose}><span>{label}</span><span aria-hidden="true">{label}</span></Link>
+    <Link href={href} onMouseEnter={scheduleClose}><span data-label={label}>{label}</span></Link>
   );
 
   return (
