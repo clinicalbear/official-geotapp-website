@@ -317,7 +317,7 @@ export default function Pricing() {
               alt="GeoTapp TimeTracker"
               width={260}
               height={100}
-              style={{ height: '20px', width: 'auto' }}
+              style={{ height: '64px', width: 'auto', maxWidth: '100%' }}
             />
             <span className="sr-only">{category.title}</span>
           </div>
@@ -369,11 +369,6 @@ export default function Pricing() {
         <div style={{ margin: '4px 0 20px' }}>
           <span className="big" style={{ fontSize: '30px' }}>{annualPrice}</span>{' '}
           <span className="k" style={{ fontSize: '10.5px' }}>{periodLabel}</span>
-          {!isOnce && (
-            <div className="k" style={{ fontSize: '10px', color: 'var(--seal-testo)', marginTop: '6px' }}>
-              {dict.pricing.intro_label}
-            </div>
-          )}
           {hasMonthly && monthlyPrice && (
             <div style={{ fontSize: '13.5px', marginTop: '8px' }}>
               {p.or_monthly ?? 'or'}{' '}
@@ -404,9 +399,16 @@ export default function Pricing() {
         </ul>
 
         {(product as any).isCalculator ? (
-          <Link className="b1" href="#calculator">
-            {product.button}
-          </Link>
+          <>
+            <Link className="b1" href="#calculator">
+              {product.button}
+            </Link>
+            {/* Spazio grande quanto "Aggiungi" delle card Flow: tiene questo
+                pulsante alla stessa altezza dei loro "Inizia la prova". */}
+            <span className="b2 plan-add" aria-hidden="true" style={{ visibility: 'hidden' }}>
+              {(dict.pricing as any).add_btn ?? 'Add'}
+            </span>
+          </>
         ) : (
           <>
             {/* Trial-first: l'azione primaria della card e' provare, non
