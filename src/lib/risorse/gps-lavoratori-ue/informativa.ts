@@ -531,6 +531,6 @@ export function buildFacsimilePrintHtml(args: {
 <p>${escHtml(doc.intro)}</p>
 ${sezioni}
 <p class="disc">${escHtml(doc.chiusura)}</p>
-<p class="foot">${escHtml(args.footer)} · <a href="https://geotapp.com/${escHtml(args.locale)}/">geotapp.com</a></p>
+<p class="foot">${escHtml(args.footer)} · <a href="https://geotapp.com/${escHtml(args.locale)}/?utm_source=pdf&amp;utm_medium=fac-simile&amp;utm_campaign=informativa-gps">geotapp.com</a></p>
 </body></html>`;
 }
