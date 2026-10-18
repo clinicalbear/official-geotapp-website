@@ -490,13 +490,13 @@
     "intro_label": "Tarif de lancement 2026",
     "promo_fine_2026": {
       "badge": "Offre de fin 2026 · jusqu'au 18 décembre",
-      "banner": "Offre de fin 2026 : en vous abonnant au plus tard le 18 décembre 2026, vous avez un poste TimeTracker inclus avec Solo et Team, cinq avec Business, et des plafonds plus élevés (Solo 5, Team 15) pendant les 12 premiers mois.",
+      "banner": "Offre de fin 2026 : en vous abonnant au plus tard le 18 décembre 2026, pendant les 12 premiers mois, un poste TimeTracker est inclus dans le prix de Solo et de Team, cinq dans celui de Business, et vous pouvez activer plus de postes (Solo jusqu'à 5, Team jusqu'à 15, Business illimités).",
       "ceiling": {
         "solo": "Postes TimeTracker activables : 5, dont 1 inclus dans le prix*",
         "team": "Postes TimeTracker activables : 15, dont 1 inclus dans le prix*",
         "business": "Postes TimeTracker activables : illimités, dont 5 inclus dans le prix*"
       },
-      "footnote": "* Les postes TimeTracker au-delà de ceux inclus s'achètent séparément. Avec l'offre de fin 2026, la formule en inclut 1 (Solo et Team) ou 5 (Business) pendant les 12 premiers mois, et fixe combien peuvent être actifs en même temps. Retirer l'accès d'un salarié libère le poste immédiatement."
+      "footnote": "* Avec l'offre de fin 2026, pendant les 12 premiers mois, la formule inclut 1 poste TimeTracker (Solo et Team) ou 5 (Business) dans le prix et relève le nombre de postes actifs en même temps (Solo 5, Team 15). Les postes au-delà de ceux inclus s'achètent séparément. Retirer l'accès d'un salarié libère le poste immédiatement."
     },
     "tracker_footnote": "* Les postes TimeTracker s'achètent séparément. Le plan Flow fixe combien peuvent être actifs en même temps, pas combien sont inclus. Supprimer l'accès d'un employé libère la place immédiatement.",
     "per_year": "/an",

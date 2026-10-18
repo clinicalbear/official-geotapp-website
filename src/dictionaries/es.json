@@ -490,13 +490,13 @@
     "intro_label": "Precio de lanzamiento 2026",
     "promo_fine_2026": {
       "badge": "Promo de fin de 2026 · hasta el 18 de diciembre",
-      "banner": "Promo de fin de 2026: si te suscribes antes del 18 de diciembre de 2026, tienes un puesto TimeTracker incluido en Solo y Team, cinco en Business, y límites más altos (Solo 5, Team 15) durante los primeros 12 meses.",
+      "banner": "Promo de fin de 2026: si te suscribes hasta el 18 de diciembre de 2026 inclusive, durante los primeros 12 meses tienes 1 puesto TimeTracker incluido en el precio de Solo y Team y 5 en Business, y puedes activar más puestos: hasta 5 en Solo, 15 en Team e ilimitados en Business.",
       "ceiling": {
         "solo": "Puestos TimeTracker activables: 5, 1 incluido en el precio*",
         "team": "Puestos TimeTracker activables: 15, 1 incluido en el precio*",
         "business": "Puestos TimeTracker activables: ilimitados, 5 incluidos en el precio*"
       },
-      "footnote": "* Los puestos TimeTracker que superan los incluidos se compran aparte. Con la promo de fin de 2026, el plan incluye 1 (Solo y Team) o 5 (Business) durante los primeros 12 meses y fija cuántos pueden estar activos a la vez. Al retirar el acceso a un empleado, el puesto queda libre al momento."
+      "footnote": "* Con la promo de fin de 2026, durante los primeros 12 meses el precio del plan incluye 1 puesto TimeTracker (Solo y Team) o 5 (Business) y los límites de puestos activos a la vez son más altos (Solo 5, Team 15). Los puestos que superan los incluidos se pagan aparte. Al retirar el acceso a un empleado, el puesto queda libre al momento."
     },
     "tracker_footnote": "* Los puestos TimeTracker se compran aparte. El plan Flow determina cuántos pueden estar activos a la vez, no cuántos están incluidos. Al eliminar el acceso de un empleado, el puesto queda libre de inmediato.",
     "per_year": "/año",

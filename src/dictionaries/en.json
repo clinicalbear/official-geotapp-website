@@ -489,14 +489,14 @@
     },
     "intro_label": "2026 launch price",
     "promo_fine_2026": {
-      "badge": "Year-end 2026 offer · until 18 December",
-      "banner": "Year-end 2026 offer: subscribe by 18 December 2026 and get one TimeTracker seat included with Solo and Team, five with Business, plus higher seat limits (Solo 5, Team 15) for the first 12 months.",
+      "badge": "Year-end 2026 offer · subscribe by 18 December",
+      "banner": "Year-end 2026 offer: subscribe by 18 December 2026 and, for the first 12 months, get one TimeTracker seat included in the price of Solo and Team and five in Business, plus room for more seats: up to 5 on Solo, 15 on Team, unlimited on Business.",
       "ceiling": {
         "solo": "TimeTracker seats you can activate: 5, 1 included in the price*",
         "team": "TimeTracker seats you can activate: 15, 1 included in the price*",
         "business": "TimeTracker seats you can activate: unlimited, 5 included in the price*"
       },
-      "footnote": "* TimeTracker seats beyond the included ones are bought separately. With the year-end 2026 offer the plan includes 1 (Solo and Team) or 5 (Business) for the first 12 months, and sets how many can be active at the same time. Removing an employee's access frees the seat immediately."
+      "footnote": "* With the year-end 2026 offer, for the first 12 months the plan includes 1 TimeTracker seat (Solo and Team) or 5 (Business) and raises how many seats can be active at the same time (Solo 5, Team 15). Seats beyond the included ones are paid for separately. Removing an employee's access frees the seat immediately."
     },
     "per_year": "/year",
     "title_gradient": "Office users, plus a seat for every worker.",

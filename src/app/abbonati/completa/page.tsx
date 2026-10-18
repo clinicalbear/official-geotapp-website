@@ -389,7 +389,7 @@ function CompletaInner() {
           <div className="seat">
             <div>
               <div className="lb">{t.seatsTitle}</div>
-              <div className="mt">{t.seatsHelp}</div>
+              <div className="mt">{incluse > 0 ? t.seatsHelpPromo : t.seatsHelp}</div>
               <div className="mt">
                 {t.seatsUnit(prezzoPostazione)} /{perLabel}
               </div>
