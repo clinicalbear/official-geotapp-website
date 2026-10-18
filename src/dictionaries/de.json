@@ -788,7 +788,6 @@
     "plan_team": "Team, bis 5 Flow-Nutzer",
     "plan_business": "Business, unbegrenzte Flow-Nutzer",
     "form_seats": "TimeTracker-Lizenzen (optional)",
-    "form_seats_hint": "Separates Abonnement für Außendienstmitarbeiter (mobile App). Im Tarif enthaltenes Limit: Solo max. 2, Team max. 5, Business unbegrenzt. Lizenzen können nach der Aktivierung angepasst werden.",
     "form_submit": "Kostenlos testen",
     "form_submit_simple": "Kostenlos starten",
     "form_response_time": "Sie erhalten die Willkommens-E-Mail in wenigen Augenblicken",

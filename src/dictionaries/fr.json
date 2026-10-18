@@ -1036,7 +1036,6 @@
     "plan_team": "Team, jusqu'à 5 utilisateurs Flow",
     "plan_business": "Business, utilisateurs Flow illimités",
     "form_seats": "Licences TimeTracker (facultatif)",
-    "form_seats_hint": "Abonnement séparé pour les opérateurs terrain (application mobile). Limite incluse dans le plan : Solo max 2, Team max 5, Business illimitées. Vous pouvez modifier les licences après l'activation.",
     "form_submit": "Démarrer l'essai gratuit",
     "form_submit_simple": "Commencer gratuitement",
     "form_response_time": "Vous recevrez l'e-mail de bienvenue dans quelques instants",

@@ -788,7 +788,6 @@
     "plan_team": "Team, op til 5 Flow-brugere",
     "plan_business": "Business, ubegrænsede Flow-brugere",
     "form_seats": "Timetracker-licenser (valgfrit)",
-    "form_seats_hint": "Separat abonnement for feltoperatører (mobilapp). Grænse inkluderet i plan: Solo maks. 2, Team maks. 5, Business ubegrænset. Du kan justere licenser efter aktivering.",
     "form_submit": "Start gratis prøveperiode",
     "form_submit_simple": "Start gratis",
     "form_response_time": "Du modtager velkomstmailen inden for få øjeblikke",

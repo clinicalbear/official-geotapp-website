@@ -788,7 +788,6 @@
     "plan_team": "Team, tot 5 Flow-gebruikers",
     "plan_business": "Business, onbeperkt aantal Flow-gebruikers",
     "form_seats": "TimeTracker-licenties (optioneel)",
-    "form_seats_hint": "Apart abonnement voor medewerkers in het veld (mobiele app). Limiet die in het plan is inbegrepen: Solo max. 2, Team max. 5, Business onbeperkt. U kunt de licenties na de activering aanpassen.",
     "form_submit": "Start de gratis proefperiode",
     "form_submit_simple": "Gratis beginnen",
     "form_response_time": "U ontvangt de welkomstmail binnen enkele ogenblikken",
