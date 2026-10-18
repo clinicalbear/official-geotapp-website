@@ -21,11 +21,17 @@ test('newsletter API handles leadMagnet param', () => {
   assert.match(route, /LEAD_MAGNET_GROUPS/);
 });
 
-test('LeadMagnetInline component exists and posts leadMagnet', () => {
+test('LeadMagnetInline is a direct download with no email gate', () => {
   assert.ok(exists('src', 'components', 'blog', 'LeadMagnetInline.tsx'), 'component missing');
   const c = read('src', 'components', 'blog', 'LeadMagnetInline.tsx');
-  assert.match(c, /leadMagnet/);
-  assert.match(c, /\/api\/newsletter/);
+  // Il download e' un link diretto al PDF della lingua dell'articolo.
+  assert.match(c, /export const LEAD_MAGNETS/);
+  assert.match(c, /<a\s[^>]*href=\{file\}/);
+  // Nessun cancello email: il componente non deve piu' iscrivere nessuno.
+  assert.doesNotMatch(c, /\/api\/newsletter/);
+  assert.doesNotMatch(c, /<input/);
+  // Dopo il download l'invito e' al sondaggio, con tracciamento del click.
+  assert.match(c, /survey_cta_click/);
 });
 
 test('blog slug page maps fac-simile article to a lead magnet', () => {
