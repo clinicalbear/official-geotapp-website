@@ -46,22 +46,22 @@ export function pressRel(_item: PressItem): string {
 // VUOTI al lancio. Aggiungere una voce = la sezione compare da sola in pagina.
 export const PRESS_RELEASES: PressItem[] = [];
 export const PRESS_COVERAGE: PressItem[] = [
-  // ⏳ PRONTA MA NON ATTIVA — ISPER HR Review, uscita prevista mercoledi' 7 ottobre 2026.
-  // Articolo a firma Michele Angelo Petraroli, concordato con Anna Manavella (isper.org).
-  // I due asset sono gia' in /public/press/ (isperhrreview.png 780x239 e isperhrreview-sig.png
-  // 235x72), forniti da lei il 21/09/2026 e non ritagliati da noi.
-  // 🔴 Si scommenta SOLO quando il pezzo e' ONLINE, mettendo l'URL vero e leggendo il `rel`
-  // dal tag della loro pagina: `follow: true` solo se ci danno un dofollow.
-  // {
-  //   date: '2026-10-07',
-  //   outlet: 'ISPER HR Review',
-  //   title: '',            // da riempire col titolo pubblicato
-  //   url: '',              // da riempire con l'URL vero
-  //   locale: 'it',
-  //   country: 'it',
-  //   logo: '/press/isperhrreview.png',
-  //   follow: false,        // da verificare sul rel della loro pagina
-  // },
+  // ISPER HR Review, n. 292 del 7 ottobre 2026. Articolo a firma Michele Angelo Petraroli,
+  // concordato con Anna Manavella (isper.org). Logo forniti da lei il 21/09/2026
+  // (isperhrreview.png 780x239 e isperhrreview-sig.png 235x72), non ritagliati da noi.
+  // Verificato online il 18/10/2026: HTTP 200, titolo dal <title> della pagina, firma senza "Dr.".
+  {
+    date: '2026-10-07',
+    outlet: 'ISPER HR Review',
+    title: 'Il perimetro dei controlli digitali: il ruolo HR dall’accordo alla governance',
+    url: 'https://www.isper.org/ISPER-HR-Review/Post/ISPER0292-Geolocalizzazione-lavoratori-GPS-controlli-distanza-privacy.htm',
+    locale: 'it',
+    country: 'it',
+    logo: '/press/isperhrreview.png',
+    follow: true, // DOFOLLOW: due ancore dentro il pezzo (fac-simile informativa GPS e
+                  // /it/risorse/gps-lavoratori-ue/), rel="noopener noreferrer" letto sul grezzo
+                  // il 18/10/2026, nessun nofollow. Sono nelle fonti, non nella riga d'autore.
+  },
 
   {
     date: '2026-09-09',
