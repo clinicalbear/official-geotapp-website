@@ -36,6 +36,9 @@ export type Strings = {
   billingSave: (amount: string) => string;
   planCeiling: (n: number) => string;
   planCeilingUnlimited: string;
+  /** Promo fine 2026: data di scadenza gia' formattata e mesi di validita'. */
+  promoNote: (date: string, months: number) => string;
+  includedSeats: (n: number) => string;
   seatsTitle: string;
   seatsHelp: string;
   seatsUnit: (price: string) => string;
@@ -90,6 +93,8 @@ export const UI: Record<UiLocale, Strings> = {
     billingSave: (amount) => `risparmi ${amount}`,
     planCeiling: (n) => `fino a ${n} postazioni TimeTracker`,
     planCeilingUnlimited: 'postazioni TimeTracker senza limite',
+    promoNote: (d, m) => `Promo fine 2026: abbonandoti entro il ${d} hai postazioni TimeTracker comprese nel piano e tetti più alti per i primi ${m} mesi.`,
+    includedSeats: (n) => n === 1 ? '1 postazione compresa nel prezzo' : `${n} postazioni comprese nel prezzo`,
     seatsTitle: 'Postazioni TimeTracker',
     seatsHelp: 'Una per ogni operatore che timbra dal telefono. Si pagano a parte, nessun piano le include.',
     seatsUnit: (price) => `${price} a operatore`,
@@ -142,6 +147,8 @@ export const UI: Record<UiLocale, Strings> = {
     billingSave: (amount) => `save ${amount}`,
     planCeiling: (n) => `up to ${n} TimeTracker seats`,
     planCeilingUnlimited: 'unlimited TimeTracker seats',
+    promoNote: (d, m) => `Year-end 2026 offer: subscribe by ${d} and get TimeTracker seats included in the plan and higher limits for the first ${m} months.`,
+    includedSeats: (n) => n === 1 ? '1 seat included in the price' : `${n} seats included in the price`,
     seatsTitle: 'TimeTracker seats',
     seatsHelp: 'One per field operator clocking in from their phone. Billed separately: no plan includes them.',
     seatsUnit: (price) => `${price} per operator`,
@@ -194,6 +201,8 @@ export const UI: Record<UiLocale, Strings> = {
     billingSave: (amount) => `${amount} sparen`,
     planCeiling: (n) => `bis zu ${n} TimeTracker-Plätze`,
     planCeilingUnlimited: 'unbegrenzte TimeTracker-Plätze',
+    promoNote: (d, m) => `Jahresendangebot 2026: Bei Abschluss bis zum ${d} sind TimeTracker-Plätze im Tarif enthalten und die Obergrenzen in den ersten ${m} Monaten höher.`,
+    includedSeats: (n) => n === 1 ? '1 Platz im Preis enthalten' : `${n} Plätze im Preis enthalten`,
     seatsTitle: 'TimeTracker-Plätze',
     seatsHelp: 'Einer pro Mitarbeiter, der per Handy stempelt. Sie werden separat berechnet, kein Tarif enthält sie.',
     seatsUnit: (price) => `${price} pro Mitarbeiter`,
@@ -246,6 +255,8 @@ export const UI: Record<UiLocale, Strings> = {
     billingSave: (amount) => `économisez ${amount}`,
     planCeiling: (n) => `jusqu'à ${n} postes TimeTracker`,
     planCeilingUnlimited: 'postes TimeTracker illimités',
+    promoNote: (d, m) => `Offre de fin 2026 : en vous abonnant au plus tard le ${d}, des postes TimeTracker sont inclus dans la formule et les plafonds sont plus élevés pendant les ${m} premiers mois.`,
+    includedSeats: (n) => n === 1 ? '1 poste inclus dans le prix' : `${n} postes inclus dans le prix`,
     seatsTitle: 'Postes TimeTracker',
     seatsHelp: 'Un par opérateur qui pointe depuis son téléphone. Facturés à part : aucun plan ne les inclut.',
     seatsUnit: (price) => `${price} par opérateur`,
@@ -298,6 +309,8 @@ export const UI: Record<UiLocale, Strings> = {
     billingSave: (amount) => `ahorras ${amount}`,
     planCeiling: (n) => `hasta ${n} puestos TimeTracker`,
     planCeilingUnlimited: 'puestos TimeTracker sin límite',
+    promoNote: (d, m) => `Promo de fin de 2026: si te suscribes antes del ${d}, el plan incluye puestos TimeTracker y límites más altos durante los primeros ${m} meses.`,
+    includedSeats: (n) => n === 1 ? '1 puesto incluido en el precio' : `${n} puestos incluidos en el precio`,
     seatsTitle: 'Puestos TimeTracker',
     seatsHelp: 'Uno por cada operario que ficha desde el móvil. Se pagan aparte: ningún plan los incluye.',
     seatsUnit: (price) => `${price} por operario`,
@@ -350,6 +363,8 @@ export const UI: Record<UiLocale, Strings> = {
     billingSave: (amount) => `bespaar ${amount}`,
     planCeiling: (n) => `tot ${n} TimeTracker-plaatsen`,
     planCeilingUnlimited: 'onbeperkt TimeTracker-plaatsen',
+    promoNote: (d, m) => `Eindejaarsactie 2026: abonneer je uiterlijk ${d}, dan zijn er TimeTracker-plekken inbegrepen en gelden hogere limieten voor de eerste ${m} maanden.`,
+    includedSeats: (n) => n === 1 ? '1 plek inbegrepen in de prijs' : `${n} plekken inbegrepen in de prijs`,
     seatsTitle: 'TimeTracker-plaatsen',
     seatsHelp: 'Eén per medewerker die met de telefoon inklokt. Apart gefactureerd: geen enkel plan bevat ze.',
     seatsUnit: (price) => `${price} per medewerker`,
@@ -402,6 +417,8 @@ export const UI: Record<UiLocale, Strings> = {
     billingSave: (amount) => `poupa ${amount}`,
     planCeiling: (n) => `até ${n} postos TimeTracker`,
     planCeilingUnlimited: 'postos TimeTracker sem limite',
+    promoNote: (d, m) => `Promoção de fim de 2026: subscrevendo até ${d}, o plano inclui postos TimeTracker e limites mais altos nos primeiros ${m} meses.`,
+    includedSeats: (n) => n === 1 ? '1 posto incluído no preço' : `${n} postos incluídos no preço`,
     seatsTitle: 'Postos TimeTracker',
     seatsHelp: 'Um por cada operador que pica o ponto pelo telemóvel. Pagam-se à parte: nenhum plano os inclui.',
     seatsUnit: (price) => `${price} por operador`,
@@ -454,6 +471,8 @@ export const UI: Record<UiLocale, Strings> = {
     billingSave: (amount) => `spar ${amount}`,
     planCeiling: (n) => `op til ${n} TimeTracker-pladser`,
     planCeilingUnlimited: 'ubegrænsede TimeTracker-pladser',
+    promoNote: (d, m) => `Årsafslutningstilbud 2026: Abonnerer du senest ${d}, er TimeTracker-pladser inkluderet i abonnementet, og grænserne er højere de første ${m} måneder.`,
+    includedSeats: (n) => n === 1 ? '1 plads inkluderet i prisen' : `${n} pladser inkluderet i prisen`,
     seatsTitle: 'TimeTracker-pladser',
     seatsHelp: 'Én pr. medarbejder, der stempler ind fra telefonen. Betales særskilt: ingen plan indeholder dem.',
     seatsUnit: (price) => `${price} pr. medarbejder`,
@@ -506,6 +525,8 @@ export const UI: Record<UiLocale, Strings> = {
     billingSave: (amount) => `spar ${amount}`,
     planCeiling: (n) => `opptil ${n} TimeTracker-plasser`,
     planCeilingUnlimited: 'ubegrensede TimeTracker-plasser',
+    promoNote: (d, m) => `Årsslutttilbud 2026: Abonnerer du innen ${d}, er TimeTracker-plasser inkludert i abonnementet, og grensene er høyere de første ${m} månedene.`,
+    includedSeats: (n) => n === 1 ? '1 plass inkludert i prisen' : `${n} plasser inkludert i prisen`,
     seatsTitle: 'TimeTracker-plasser',
     seatsHelp: 'Én per ansatt som stempler inn fra telefonen. Faktureres separat: ingen plan inkluderer dem.',
     seatsUnit: (price) => `${price} per ansatt`,
@@ -558,6 +579,8 @@ export const UI: Record<UiLocale, Strings> = {
     billingSave: (amount) => `spara ${amount}`,
     planCeiling: (n) => `upp till ${n} TimeTracker-platser`,
     planCeilingUnlimited: 'obegränsat med TimeTracker-platser',
+    promoNote: (d, m) => `Årsslutserbjudande 2026: Tecknar du abonnemang senast ${d} ingår TimeTracker-platser i abonnemanget och gränserna är högre de första ${m} månaderna.`,
+    includedSeats: (n) => n === 1 ? '1 plats ingår i priset' : `${n} platser ingår i priset`,
     seatsTitle: 'TimeTracker-platser',
     seatsHelp: 'En per medarbetare som stämplar in med telefonen. Faktureras separat: ingen plan innehåller dem.',
     seatsUnit: (price) => `${price} per medarbetare`,
@@ -610,6 +633,8 @@ export const UI: Record<UiLocale, Strings> = {
     billingSave: (amount) => `экономия ${amount}`,
     planCeiling: (n) => `до ${n} мест TimeTracker`,
     planCeilingUnlimited: 'места TimeTracker без ограничений',
+    promoNote: (d, m) => `Акция конца 2026 года: при подписке до ${d} места TimeTracker входят в тариф, а лимиты выше в течение первых ${m} месяцев.`,
+    includedSeats: (n) => n === 1 ? '1 место входит в цену' : n < 5 ? `${n} места входят в цену` : `${n} мест входят в цену`,
     seatsTitle: 'Места TimeTracker',
     seatsHelp: 'По одному на каждого сотрудника, отмечающегося с телефона. Оплачиваются отдельно: ни один тариф их не включает.',
     seatsUnit: (price) => `${price} за сотрудника`,

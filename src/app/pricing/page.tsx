@@ -21,6 +21,7 @@ import {
   localizePath,
 } from '@/lib/i18n/locale-routing';
 import { trackEvent } from '@/lib/analytics';
+import { promoFine2026Attiva } from '@/lib/promo-fine-2026';
 import { useEffect, useState } from 'react';
 import {
   EUR_PRICES,
@@ -259,6 +260,16 @@ export default function Pricing() {
   const appCategory = categories.find((c) => c.id === 'app');
   const flowCategory = categories.find((c) => c.id === 'flow');
   const p = dict.pricing as any;
+  // Promo di fine 2026. Si accende solo nel browser: la pagina e' generata in
+  // anticipo, e una data decisa al momento della build resterebbe accesa oltre
+  // la scadenza. Il 19/12 il badge sparisce senza ripubblicare.
+  const [promoOn, setPromoOn] = useState(false);
+  useEffect(() => {
+    setPromoOn(promoFine2026Attiva());
+  }, []);
+  const promoT = promoOn ? (p.promo_fine_2026 as
+    | { badge: string; banner: string; ceiling: Record<string, string>; footnote: string }
+    | undefined) : undefined;
 
   // Il titolo del trial ("14 giorni gratis. Nessuna carta.") si spezza in due
   // righe come nel mockup solo dove il testo del dict ha davvero due frasi
@@ -290,6 +301,9 @@ export default function Pricing() {
 
     return (
       <div key={product.name} className={`plan r-s ${delayClass}`}>
+        {promoT && category.id === 'flow' && (
+          <span className="plan-promo">{promoT.badge}</span>
+        )}
         {(product as any).isBestValue && (
           <span className="absolute -top-3 left-6 bg-slate-900 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-md">
             {(p.recommended as string) ?? 'Recommended'}
@@ -381,7 +395,10 @@ export default function Pricing() {
         <p className="desc">{product.desc}</p>
 
         <ul>
-          {product.features.map((f: string) => (
+          {(promoT && category.id === 'flow' && promoT.ceiling[(product as any).priceKey]
+            ? [...product.features.slice(0, -1), promoT.ceiling[(product as any).priceKey]]
+            : product.features
+          ).map((f: string) => (
             <li key={f}>{f}</li>
           ))}
         </ul>
@@ -429,6 +446,7 @@ export default function Pricing() {
             <em>{p.title_gradient ?? 'Scale Your Business.'}</em>
           </h1>
           <p className="lede r d1">{dict.pricing.subtitle}</p>
+          {promoT && <p className="promo-banner r d1">{promoT.banner}</p>}
           <div className="acts r d2">
             <Link
               className="b1"
@@ -464,7 +482,7 @@ export default function Pricing() {
             {appCategory?.products.map((product) => renderPlanCard(appCategory!, product, 'd4'))}
           </div>
           {(dict.pricing as any).tracker_footnote && (
-            <p className="vat r" style={{ marginTop: '14px' }}>{(dict.pricing as any).tracker_footnote}</p>
+            <p className="vat r" style={{ marginTop: '14px' }}>{promoT?.footnote ?? (dict.pricing as any).tracker_footnote}</p>
           )}
           <p className="vat r">{dict.pricing.vat_note}</p>
           {(dict as any).roi?.pricing_link && (

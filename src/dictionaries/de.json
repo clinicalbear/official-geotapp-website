@@ -488,6 +488,16 @@
       "error_connection": "Verbindungsfehler. Bitte erneut versuchen."
     },
     "intro_label": "Einführungspreis 2026",
+    "promo_fine_2026": {
+      "badge": "Jahresendangebot 2026 · bis 18. Dezember",
+      "banner": "Jahresendangebot 2026: Wer bis zum 18. Dezember 2026 abonniert, erhält bei Solo und Team einen TimeTracker-Platz inklusive, bei Business fünf, und höhere Obergrenzen (Solo 5, Team 15) für die ersten 12 Monate.",
+      "ceiling": {
+        "solo": "Aktivierbare TimeTracker-Plätze: 5, davon 1 im Preis enthalten*",
+        "team": "Aktivierbare TimeTracker-Plätze: 15, davon 1 im Preis enthalten*",
+        "business": "Aktivierbare TimeTracker-Plätze: unbegrenzt, davon 5 im Preis enthalten*"
+      },
+      "footnote": "* TimeTracker-Plätze über die enthaltenen hinaus werden separat erworben. Mit dem Jahresendangebot 2026 enthält der Tarif in den ersten 12 Monaten 1 (Solo und Team) bzw. 5 (Business) und legt fest, wie viele gleichzeitig aktiv sein können. Wird einem Mitarbeiter der Zugang entzogen, ist der Platz sofort wieder frei."
+    },
     "per_year": "/Jahr",
     "title_gradient": "Nutzer im Büro, plus ein Platz für jede Person im Einsatz.",
     "or_monthly": "oder",

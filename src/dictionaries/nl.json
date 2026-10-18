@@ -488,6 +488,16 @@
       "error_connection": "Verbindingsfout. Probeer opnieuw."
     },
     "intro_label": "Introductieprijs 2026",
+    "promo_fine_2026": {
+      "badge": "Eindejaarsactie 2026 · tot 18 december",
+      "banner": "Eindejaarsactie 2026: wie zich uiterlijk 18 december 2026 abonneert, krijgt bij Solo en Team één TimeTracker-plek inbegrepen, bij Business vijf, en hogere limieten (Solo 5, Team 15) voor de eerste 12 maanden.",
+      "ceiling": {
+        "solo": "Te activeren TimeTracker-plekken: 5, waarvan 1 inbegrepen in de prijs*",
+        "team": "Te activeren TimeTracker-plekken: 15, waarvan 1 inbegrepen in de prijs*",
+        "business": "Te activeren TimeTracker-plekken: onbeperkt, waarvan 5 inbegrepen in de prijs*"
+      },
+      "footnote": "* TimeTracker-plekken boven de inbegrepen plekken koop je apart. Met de eindejaarsactie 2026 bevat het abonnement de eerste 12 maanden 1 (Solo en Team) of 5 (Business) plekken, en bepaalt het hoeveel er tegelijk actief kunnen zijn. Trek je de toegang van een medewerker in, dan komt de plek direct vrij."
+    },
     "per_year": "/jaar",
     "title_gradient": "Gebruikers op kantoor en een plaats voor elke medewerker in het veld.",
     "or_monthly": "of",

@@ -488,6 +488,16 @@
       "error_connection": "Errore di connessione. Riprova."
     },
     "intro_label": "Prezzo di lancio 2026",
+    "promo_fine_2026": {
+      "badge": "Promo fine 2026 · fino al 18 dicembre",
+      "banner": "Promo fine 2026: chi si abbona entro il 18 dicembre 2026 ha una postazione TimeTracker compresa in Solo e Team, cinque in Business, e tetti più alti (Solo 5, Team 15) per i primi 12 mesi.",
+      "ceiling": {
+        "solo": "Postazioni TimeTracker attivabili: 5, di cui 1 compresa nel prezzo*",
+        "team": "Postazioni TimeTracker attivabili: 15, di cui 1 compresa nel prezzo*",
+        "business": "Postazioni TimeTracker attivabili: illimitate, di cui 5 comprese nel prezzo*"
+      },
+      "footnote": "* Le postazioni TimeTracker oltre quelle comprese si acquistano a parte. Con la promo fine 2026 il piano ne comprende 1 (Solo e Team) o 5 (Business) per i primi 12 mesi, e stabilisce quante se ne possono tenere attive insieme. Rimuovendo l'accesso a un dipendente il posto si libera subito."
+    },
     "per_year": "/anno",
     "title_gradient": "Utenti d'ufficio e una postazione per ogni operatore.",
     "or_monthly": "oppure",

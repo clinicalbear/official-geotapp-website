@@ -488,6 +488,16 @@
       "error_connection": "Erro de ligação. Por favor, tente novamente."
     },
     "intro_label": "Tarifa de lançamento 2026",
+    "promo_fine_2026": {
+      "badge": "Promoção de fim de 2026 · até 18 de dezembro",
+      "banner": "Promoção de fim de 2026: quem subscrever até 18 de dezembro de 2026 tem um posto TimeTracker incluído no Solo e no Team, cinco no Business, e limites mais altos (Solo 5, Team 15) nos primeiros 12 meses.",
+      "ceiling": {
+        "solo": "Postos TimeTracker ativáveis: 5, dos quais 1 incluído no preço*",
+        "team": "Postos TimeTracker ativáveis: 15, dos quais 1 incluído no preço*",
+        "business": "Postos TimeTracker ativáveis: ilimitados, dos quais 5 incluídos no preço*"
+      },
+      "footnote": "* Os postos TimeTracker além dos incluídos compram-se à parte. Com a promoção de fim de 2026, o plano inclui 1 (Solo e Team) ou 5 (Business) nos primeiros 12 meses e define quantos podem estar ativos ao mesmo tempo. Ao retirar o acesso a um funcionário, o posto fica livre de imediato."
+    },
     "tracker_footnote": "* Os postos TimeTracker são adquiridos à parte. O plano Flow define quantos podem estar ativos ao mesmo tempo, não quantos estão incluídos. Ao remover o acesso de um trabalhador, o posto fica livre de imediato.",
     "per_year": "/ano",
     "title_gradient": "Utilizadores de escritório e um posto por cada operador.",

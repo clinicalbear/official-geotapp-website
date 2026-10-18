@@ -36,12 +36,21 @@ const SAAS_URL = process.env.NEXT_PUBLIC_SAAS_URL || 'https://crm.geotapp.com';
 type PlanCode = 'SOLO' | 'TEAM' | 'BUSINESS';
 type Interval = 'monthly' | 'annual';
 
-type CatalogPlan = { code: PlanCode; ttSeatCeiling: number; monthly: number; annual: number };
+type CatalogPlan = {
+  code: PlanCode;
+  ttSeatCeiling: number;
+  /** Postazioni comprese nel prezzo (solo in promo). Assente = nessuna. */
+  includedTtSeats?: number;
+  monthly: number;
+  annual: number;
+};
 type Tier = { upTo: number | null; eur: number };
 type Catalog = {
   plans: CatalogPlan[];
   ttSeatTiers: Record<Interval, Tier[]>;
   officeSeatAnnualEur: number;
+  /** Promo aperta, decisa dal CRM. Assente o null = listino normale. */
+  promo?: { code: string; endsAt: string; months: number } | null;
 };
 
 // Rete di sicurezza, non fonte di verita': i numeri veri arrivano dall'API.
@@ -205,12 +214,15 @@ function CompletaInner() {
     }
   }
 
+  // In promo le postazioni comprese nel piano non si pagano: il totale qui
+  // deve coincidere con quello che il CRM manda a Stripe.
+  const incluse = catalog.plans.find((p) => p.code === plan)?.includedTtSeats ?? 0;
   const righe = useMemo(() => {
     const flow = planPriceEur(catalog, plan, interval);
-    const tt = ttSeatsEur(catalog, ttSeats, interval);
+    const tt = ttSeatsEur(catalog, Math.max(0, ttSeats - incluse), interval);
     const office = interval === 'annual' ? officeSeats * catalog.officeSeatAnnualEur : 0;
     return { flow, tt, office, totale: Math.round((flow + tt + office) * 100) / 100 };
-  }, [catalog, plan, ttSeats, officeSeats, interval]);
+  }, [catalog, plan, ttSeats, officeSeats, interval, incluse]);
 
   const risparmioAnnuale = useMemo(() => {
     const mensile = planPriceEur(catalog, plan, 'monthly') * 12;
@@ -328,7 +340,20 @@ function CompletaInner() {
             </button>
           </div>
 
-          {/* I piani: il numero accanto e' il TETTO delle postazioni, non un incluso. */}
+          {catalog.promo && (
+            <p className="notice soft">
+              {t.promoNote(
+                new Date(catalog.promo.endsAt).toLocaleDateString(BCP47[locale], {
+                  day: 'numeric',
+                  month: 'long',
+                  year: 'numeric',
+                  timeZone: 'Europe/Rome',
+                }),
+                catalog.promo.months,
+              )}
+            </p>
+          )}
+          {/* I piani: il numero accanto e' il TETTO delle postazioni; in promo una parte e' compresa. */}
           <div className="plans">
             {catalog.plans.map((p) => {
               const isSel = plan === p.code;
@@ -352,6 +377,9 @@ function CompletaInner() {
                       ? t.planCeilingUnlimited
                       : t.planCeiling(p.ttSeatCeiling)}
                   </div>
+                  {(p.includedTtSeats ?? 0) > 0 && (
+                    <div className="ds">{t.includedSeats(p.includedTtSeats as number)}</div>
+                  )}
                 </button>
               );
             })}
@@ -365,6 +393,7 @@ function CompletaInner() {
               <div className="mt">
                 {t.seatsUnit(prezzoPostazione)} /{perLabel}
               </div>
+              {incluse > 0 && <div className="mt">{t.includedSeats(incluse)}</div>}
             </div>
             <div className="ctr">
               <button

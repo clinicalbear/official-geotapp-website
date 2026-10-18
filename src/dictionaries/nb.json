@@ -488,6 +488,16 @@
       "error_connection": "Tilkoblingsfeil. Prøv igjen."
     },
     "intro_label": "Lanseringspris 2026",
+    "promo_fine_2026": {
+      "badge": "Årsslutttilbud 2026 · til 18. desember",
+      "banner": "Årsslutttilbud 2026: Abonnerer du innen 18. desember 2026, får du én TimeTracker-plass inkludert i Solo og Team, fem i Business, og høyere grenser (Solo 5, Team 15) de første 12 månedene.",
+      "ceiling": {
+        "solo": "TimeTracker-plasser som kan aktiveres: 5, hvorav 1 inkludert i prisen*",
+        "team": "TimeTracker-plasser som kan aktiveres: 15, hvorav 1 inkludert i prisen*",
+        "business": "TimeTracker-plasser som kan aktiveres: ubegrenset, hvorav 5 inkludert i prisen*"
+      },
+      "footnote": "* TimeTracker-plasser utover de inkluderte kjøpes separat. Med årsslutttilbudet 2026 inkluderer abonnementet 1 (Solo og Team) eller 5 (Business) de første 12 månedene, og bestemmer hvor mange som kan være aktive samtidig. Fjerner du en ansatts tilgang, blir plassen ledig med en gang."
+    },
     "tracker_footnote": "* TimeTracker-plasser kjøpes separat. Flow-planen bestemmer hvor mange som kan være aktive samtidig, ikke hvor mange som er inkludert. Å fjerne tilgang for en ansatt frigjør plassen umiddelbart.",
     "per_year": "/år",
     "title_gradient": "Brukere på kontoret, pluss en plass per ansatt ute.",

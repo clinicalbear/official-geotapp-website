@@ -48,3 +48,7 @@
 /* Il calcolatore (.calc) e' gia' scoperto in l-mockup.css per il solo mobile
    (grid-template-columns:1fr). Qui restiamo dentro .sec.ink: nessuna aggiunta
    necessaria, la card e' quella globale. */
+
+/* Promo fine 2026: badge sulle card Flow e riga sotto il titolo. */
+.lp-prezzi .plan-promo{display:inline-block;align-self:flex-start;margin-bottom:10px;padding:4px 10px;border-radius:999px;background:#22B573;color:#fff;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.lp-prezzi .promo-banner{margin-top:14px;max-width:62ch;padding:10px 14px;border-left:4px solid #22B573;background:rgba(34,181,115,.08);border-radius:6px;font-size:15px;line-height:1.5}
