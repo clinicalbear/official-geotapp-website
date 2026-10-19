@@ -46,6 +46,19 @@ export function pressRel(_item: PressItem): string {
 // VUOTI al lancio. Aggiungere una voce = la sezione compare da sola in pagina.
 export const PRESS_RELEASES: PressItem[] = [];
 export const PRESS_COVERAGE: PressItem[] = [
+  // Vigilanza Privata Online, lettera al direttore a firma Michele Angelo Petraroli, uscita il
+  // 19/10/2026 (secondo contributo dopo quello di luglio). Verificato online il 19/10/2026:
+  // HTTP 200, titolo dal <title> della pagina. Nessun link a geotapp.com nel pezzo (GeoTapp
+  // compare solo nella firma, come testo), quindi nessun flag follow. Logo gia' presente.
+  {
+    date: '2026-10-19',
+    outlet: 'Vigilanza Privata Online',
+    title: 'Vigilanza Privata: il GPS contiene dati personali',
+    url: 'https://www.vigilanzaprivataonline.com/lettere-al-direttore/vigilanza-privata-il-gps-contiene-dati-personali-9646.html',
+    locale: 'it',
+    country: 'it',
+    logo: '/press/vigilanzaprivataonline-v2.png',
+  },
   // ISPER HR Review, n. 292 del 7 ottobre 2026. Articolo a firma Michele Angelo Petraroli,
   // concordato con Anna Manavella (isper.org). Logo forniti da lei il 21/09/2026
   // (isperhrreview.png 780x239 e isperhrreview-sig.png 235x72), non ritagliati da noi.
