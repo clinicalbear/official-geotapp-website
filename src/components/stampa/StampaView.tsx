@@ -45,6 +45,7 @@ import type { AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
 import { PRESS_RELEASES, PRESS_COVERAGE, hasPress, pressRel } from '@/lib/press/data';
 import LNastro from '@/components/LNastro';
+import PressKitForm from '@/components/stampa/PressKitForm';
 import FeaturedIn from '@/components/FeaturedIn';
 import { featuredLabel } from '@/lib/press/labels';
 
@@ -216,6 +217,7 @@ export default function StampaView({
       {/* ── risorse per la stampa ── */}
       <section className="sec" id="risorse"><div className="w">
         <div className="hd"><h2 className="r">{d.resources_label}</h2><p className="r d1">{d.resources_intro}</p></div>
+        <PressKitForm d={d} locale={locale} />
         <div className="dl2 r-s">
           {[
             { name: 'GeoTapp', src: '/LogoGeoTapp.webp' },
