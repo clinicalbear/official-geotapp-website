@@ -1069,6 +1069,7 @@
     "error_trial_already_active": "Det finns redan en aktiv testperiod för den här e-postadressen. Logga in på flow.geotapp.com eller skriv till support@geotapp.com.",
     "error_trial_already_used": "Den här e-postadressen har redan använt en GeoTapp-testperiod. Skriv till support@geotapp.com så löser vi det.",
     "error_email_already_registered": "Den här e-postadressen är redan registrerad. Logga in på flow.geotapp.com.",
+    "error_trial_closed_unused": "Din åtkomst stängdes eftersom den aldrig har använts. Skriv till support@geotapp.com så öppnar vi den igen.",
     "error_too_many_attempts": "För många försök från den här anslutningen. Vänta några minuter och försök igen, eller skriv till support@geotapp.com.",
     "error_bot_speed": "Formuläret skickades för snabbt. Försök igen.",
     "benefits_title": "Vad ingår",

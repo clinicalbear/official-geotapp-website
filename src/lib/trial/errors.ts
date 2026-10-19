@@ -23,6 +23,7 @@ export const TRIAL_ERROR_DICT_KEYS: Record<string, string> = {
   trial_already_active: 'error_trial_already_active',
   trial_already_used: 'error_trial_already_used',
   email_already_registered: 'error_email_already_registered',
+  trial_closed_unused: 'error_trial_closed_unused',
   too_many_attempts: 'error_too_many_attempts',
   ip_blocked: 'error_too_many_attempts',
   bot_speed: 'error_bot_speed',
