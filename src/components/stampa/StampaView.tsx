@@ -49,12 +49,6 @@ import PressKitForm from '@/components/stampa/PressKitForm';
 import FeaturedIn from '@/components/FeaturedIn';
 import { featuredLabel } from '@/lib/press/labels';
 
-/** "Chi siamo": stessa traduzione gia' usata in Footer.tsx (voce "about"). */
-const ABOUT_LABEL: Record<string, string> = {
-  it: 'Chi siamo', en: 'About us', de: 'Über uns', fr: 'À propos', es: 'Sobre nosotros',
-  pt: 'Sobre nós', nl: 'Over ons', da: 'Om os', sv: 'Om oss', nb: 'Om oss', ru: 'О нас',
-};
-
 /** Testi alternativi delle foto e etichetta del pulsante "copia" (de/it/en, le altre lingue ricadono sull'inglese). */
 const FOUNDER_ALT: Record<string, string> = {
   it: 'Michele Angelo Petraroli, fondatore di GeoTapp',
@@ -115,7 +109,6 @@ export default function StampaView({
   allResourcesLabel: string;
 }) {
   const { copied, copy } = useCopy();
-  const about = ABOUT_LABEL[locale] ?? ABOUT_LABEL.en;
   const facts = d.facts.filter((f) => !f.v.includes('{{'));
 
   return (
@@ -382,22 +375,7 @@ export default function StampaView({
         </div>
       </section>
 
-      {/* ── chiusura ── */}
-      <section className="end">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/bg2.webp" alt="" aria-hidden="true" loading="lazy" />
-        <div className="ov" />
-        <div className="w">
-          <p className="big r" style={{ fontSize: 'clamp(30px,5.2vw,72px)', maxWidth: '17ch', marginBottom: 24, color: 'var(--lime)' }}>
-            {d.contact_label}
-          </p>
-          <p className="r d1" style={{ color: 'rgba(247,249,252,.8)', maxWidth: '58ch', marginBottom: 32 }}>{d.contact_office}</p>
-          <div className="acts r d2">
-            <a className="b1" href={`mailto:${d.contact_email}`}>{d.contact_email}</a>
-            <Link className="b2" href={localizePath('/chi-siamo/', locale)}>{about}</Link>
-          </div>
-        </div>
-      </section>
+      {/* Il blocco di chiusura ripeteva i contatti stampa gia' nella sezione #contatti: tolto il 20/10/2026 */}
     </div>
   );
 }
