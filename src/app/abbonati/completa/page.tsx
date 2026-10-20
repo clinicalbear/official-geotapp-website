@@ -30,28 +30,19 @@ import { getLocaleFromPathname, localizePath } from '@/lib/i18n/locale-routing';
 import type { AppLocale } from '@/lib/i18n/config';
 import { buildPolicyAcceptancePayload } from '@/lib/policyAcceptance';
 import { BCP47, pickLocale, UI } from './strings';
+import {
+  buildComparison,
+  ceilingOf,
+  planForSeats,
+  planIndex,
+  planPriceEur,
+  ttSeatsEur,
+  type Catalog,
+  type Interval,
+  type PlanCode,
+} from './pricing';
 
 const SAAS_URL = process.env.NEXT_PUBLIC_SAAS_URL || 'https://crm.geotapp.com';
-
-type PlanCode = 'SOLO' | 'TEAM' | 'BUSINESS';
-type Interval = 'monthly' | 'annual';
-
-type CatalogPlan = {
-  code: PlanCode;
-  ttSeatCeiling: number;
-  /** Postazioni comprese nel prezzo (solo in promo). Assente = nessuna. */
-  includedTtSeats?: number;
-  monthly: number;
-  annual: number;
-};
-type Tier = { upTo: number | null; eur: number };
-type Catalog = {
-  plans: CatalogPlan[];
-  ttSeatTiers: Record<Interval, Tier[]>;
-  officeSeatAnnualEur: number;
-  /** Promo aperta, decisa dal CRM. Assente o null = listino normale. */
-  promo?: { code: string; endsAt: string; months: number } | null;
-};
 
 // Rete di sicurezza, non fonte di verita': i numeri veri arrivano dall'API.
 const CATALOG_FALLBACK: Catalog = {
@@ -77,48 +68,6 @@ const PLAN_NAMES: Record<PlanCode, string> = {
 // in traduzione fedele (vedi strings.ts), con il link al testo legale italiano dei Termini.
 
 type Reason = { code: 'ttSeats' | 'officeSeats' | 'flowUsers' | 'noUsage'; count: number };
-
-const ORDER: PlanCode[] = ['SOLO', 'TEAM', 'BUSINESS'];
-
-function planIndex(plan: PlanCode): number {
-  return ORDER.indexOf(plan);
-}
-
-/** Il piano piu' piccolo che regge quelle postazioni. */
-function planForSeats(catalog: Catalog, seats: number): PlanCode {
-  for (const code of ORDER) {
-    const plan = catalog.plans.find((p) => p.code === code);
-    if (!plan) continue;
-    if (plan.ttSeatCeiling < 0 || seats <= plan.ttSeatCeiling) return code;
-  }
-  return 'BUSINESS';
-}
-
-function ceilingOf(catalog: Catalog, plan: PlanCode): number {
-  return catalog.plans.find((p) => p.code === plan)?.ttSeatCeiling ?? -1;
-}
-
-/** Prezzo delle postazioni a scaglioni, come lo calcola Stripe. */
-function ttSeatsEur(catalog: Catalog, seats: number, interval: Interval): number {
-  let rimaste = Math.max(0, Math.floor(seats));
-  let coperte = 0;
-  let totale = 0;
-  for (const tier of catalog.ttSeatTiers[interval]) {
-    if (rimaste <= 0) break;
-    const capienza = tier.upTo === null ? rimaste : Math.max(0, tier.upTo - coperte);
-    const inScaglione = Math.min(rimaste, capienza);
-    totale += inScaglione * tier.eur;
-    coperte += inScaglione;
-    rimaste -= inScaglione;
-  }
-  return Math.round(totale * 100) / 100;
-}
-
-function planPriceEur(catalog: Catalog, plan: PlanCode, interval: Interval): number {
-  const p = catalog.plans.find((x) => x.code === plan);
-  if (!p) return 0;
-  return interval === 'annual' ? p.annual : p.monthly;
-}
 
 function CompletaInner() {
   const pathname = usePathname();
@@ -146,6 +95,17 @@ function CompletaInner() {
   const [privacy, setPrivacy] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Codice posti "ad personam": si controlla sul CRM e, se vale, aggiunge al
+  // carrello le postazioni del codice senza cambiare piano. Si brucia al pagamento.
+  const [codeInput, setCodeInput] = useState('');
+  const [codeApplied, setCodeApplied] = useState<{
+    code: string;
+    plan: PlanCode;
+    extra: number;
+  } | null>(null);
+  const [codeMsg, setCodeMsg] = useState<string | null>(null);
+  const [codeBusy, setCodeBusy] = useState(false);
 
   const money = useCallback(
     (eur: number) =>
@@ -187,13 +147,78 @@ function CompletaInner() {
       });
   }, [tenant, token, t.alreadySubscribed]);
 
-  const planRichiesto = planForSeats(catalog, ttSeats);
+  // Col codice applicato il tetto di quel piano sale dei posti del codice.
+  const catalogEff = useMemo<Catalog>(() => {
+    if (!codeApplied) return catalog;
+    return {
+      ...catalog,
+      plans: catalog.plans.map((p) =>
+        p.code === codeApplied.plan && p.ttSeatCeiling >= 0
+          ? { ...p, ttSeatCeiling: p.ttSeatCeiling + codeApplied.extra }
+          : p,
+      ),
+    };
+  }, [catalog, codeApplied]);
+
+  const planRichiesto = planForSeats(catalogEff, ttSeats);
+
+  /** Il cliente scrive il codice: si controlla sul CRM e, se vale, si aggiungono i posti. */
+  async function applicaCodice() {
+    const code = codeInput.trim();
+    if (!code || codeApplied || !tenant || !token) return;
+    setCodeBusy(true);
+    setCodeMsg(null);
+    try {
+      const res = await fetch(`${SAAS_URL}/api/v1/convert/seat-code`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ tenantId: tenant, token, code }),
+      });
+      const data = await res.json().catch(() => null);
+      if (!data || res.status === 503) {
+        setCodeMsg(t.codeUnavailable);
+      } else if (!data.valid) {
+        setCodeMsg(data.reason === 'unavailable' ? t.codeUnavailable : t.codeInvalid);
+      } else {
+        const codePlan = data.plan as PlanCode;
+        const extra = Math.max(0, Number(data.extraSeats) || 0);
+        if (plan !== codePlan) {
+          // Il codice vale per un piano preciso: usarlo su un altro non servirebbe
+          // a niente e lo brucerebbe al pagamento.
+          setCodeMsg(t.codeWrongPlan(PLAN_NAMES[codePlan]));
+        } else {
+          setCodeApplied({ code: String(data.code), plan: codePlan, extra });
+          setTtSeats((s) => s + extra);
+          setNotice(null);
+          setCodeInput('');
+        }
+      }
+    } catch {
+      setCodeMsg(t.codeUnavailable);
+    } finally {
+      setCodeBusy(false);
+    }
+  }
+
+  /** Si toglie il codice: i posti che aveva aggiunto se ne vanno e il piano torna a seguire le postazioni. */
+  function rimuoviCodice() {
+    if (!codeApplied) return;
+    const nuove = Math.max(0, ttSeats - codeApplied.extra);
+    setCodeApplied(null);
+    setCodeMsg(null);
+    setTtSeats(nuove);
+    const necessario = planForSeats(catalog, nuove);
+    if (planIndex(necessario) > planIndex(plan)) {
+      setPlan(necessario);
+      setNotice(t.bumpUp(PLAN_NAMES[necessario], nuove));
+    }
+  }
 
   /** Le postazioni comandano: se non ci stanno, il piano sale e lo si dice. */
   function cambiaPostazioni(nuove: number) {
     const seats = Math.max(0, nuove);
     setTtSeats(seats);
-    const necessario = planForSeats(catalog, seats);
+    const necessario = planForSeats(catalogEff, seats);
     if (planIndex(necessario) > planIndex(plan)) {
       setPlan(necessario);
       setNotice(t.bumpUp(PLAN_NAMES[necessario], seats));
@@ -205,7 +230,7 @@ function CompletaInner() {
   /** Scegliere un piano piu' piccolo delle postazioni le riduce, dichiarandolo. */
   function scegliPiano(nuovo: PlanCode) {
     setPlan(nuovo);
-    const tetto = ceilingOf(catalog, nuovo);
+    const tetto = ceilingOf(catalogEff, nuovo);
     if (tetto >= 0 && ttSeats > tetto) {
       setTtSeats(tetto);
       setNotice(t.seatsTrimmed(PLAN_NAMES[nuovo], tetto));
@@ -223,6 +248,27 @@ function CompletaInner() {
     const office = interval === 'annual' ? officeSeats * catalog.officeSeatAnnualEur : 0;
     return { flow, tt, office, totale: Math.round((flow + tt + office) * 100) / 100 };
   }, [catalog, plan, ttSeats, officeSeats, interval, incluse]);
+
+  // Il confronto "valore pieno" / "con promo e codice": solo col codice attivo
+  // sul piano a cui appartiene. Tutto dal listino del CRM, niente cifre a mano.
+  const codiceAttivo = codeApplied && codeApplied.plan === plan ? codeApplied : null;
+  const confronto = useMemo(
+    () =>
+      codiceAttivo ? buildComparison(catalog, ttSeats, officeSeats, interval, righe) : null,
+    [catalog, codiceAttivo, ttSeats, officeSeats, interval, righe],
+  );
+
+  /** "17 × 36 € = 612 €" finche' tutte le postazioni stanno nel primo scaglione, altrimenti solo il totale. */
+  const moltiplicazione = useCallback(
+    (n: number, lordo: number) => {
+      const primo = catalog.ttSeatTiers[interval][0];
+      if (primo && (primo.upTo === null || n <= primo.upTo)) {
+        return `${n} × ${money(primo.eur)} = ${money(lordo)}`;
+      }
+      return money(lordo);
+    },
+    [catalog, interval, money],
+  );
 
   const risparmioAnnuale = useMemo(() => {
     const mensile = planPriceEur(catalog, plan, 'monthly') * 12;
@@ -258,6 +304,8 @@ function CompletaInner() {
           selectedPlan: plan,
           selectedTtSeats: ttSeats,
           selectedOfficeClockInSeats: interval === 'annual' ? officeSeats : 0,
+          // Solo se il codice serve al piano scelto: altrimenti si brucerebbe per niente.
+          ...(codiceAttivo ? { seatCode: codiceAttivo.code } : {}),
           vatNumber: vat.trim(),
           minTermAccepted: true,
           minTermAcceptedAt: now,
@@ -268,7 +316,13 @@ function CompletaInner() {
       });
       const data = await res.json();
       if (!res.ok || !data.url) {
-        setError(data.error || t.generic);
+        setError(
+          typeof data.code === 'string' && data.code.startsWith('seat_code_')
+            ? data.code === 'seat_code_unavailable'
+              ? t.codeUnavailable
+              : t.codeInvalid
+            : data.error || t.generic,
+        );
         setLoading(false);
         return;
       }
@@ -355,7 +409,7 @@ function CompletaInner() {
           )}
           {/* I piani: il numero accanto e' il TETTO delle postazioni; in promo una parte e' compresa. */}
           <div className="plans">
-            {catalog.plans.map((p) => {
+            {catalogEff.plans.map((p) => {
               const isSel = plan === p.code;
               const isSuggested = suggestedPlan === p.code;
               return (
@@ -457,7 +511,111 @@ function CompletaInner() {
             </div>
           </div>
 
+          {/* Codice posti: un codice personale che aggiunge postazioni senza cambiare piano. */}
+          <div className="code">
+            {codeApplied ? (
+              <div className="code-ok">
+                <span>{t.codeApplied(codeApplied.extra, PLAN_NAMES[codeApplied.plan])}</span>
+                <button type="button" className="link" onClick={rimuoviCodice}>
+                  {t.codeRemove}
+                </button>
+              </div>
+            ) : (
+              <>
+                <label htmlFor="seatcode" className="lb">
+                  {t.codeTitle}
+                </label>
+                <div className="code-row">
+                  <input
+                    id="seatcode"
+                    className="in"
+                    value={codeInput}
+                    onChange={(e) => setCodeInput(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
+                        e.preventDefault();
+                        applicaCodice();
+                      }
+                    }}
+                    placeholder={t.codePlaceholder}
+                    autoCapitalize="characters"
+                    autoComplete="off"
+                    spellCheck={false}
+                  />
+                  <button
+                    type="button"
+                    className="code-apply"
+                    onClick={applicaCodice}
+                    disabled={codeBusy || !codeInput.trim()}
+                  >
+                    {t.codeApply}
+                  </button>
+                </div>
+              </>
+            )}
+            {codeMsg && <p className="code-msg">{codeMsg}</p>}
+          </div>
+
           {/* Il totale, voce per voce: chi paga deve poter rifare la somma. */}
+          {confronto ? (
+            <div className="cmp">
+              <div className="col full">
+                <div className="hd">{t.compareFullTitle}</div>
+                <div className="row">
+                  <span>{t.lineFlow(PLAN_NAMES[confronto.pieno.plan])}</span>
+                  <span>{money(confronto.pieno.flow)}</span>
+                </div>
+                <div className="row">
+                  <span>{t.lineTt(ttSeats)}</span>
+                  <span>{moltiplicazione(ttSeats, confronto.pieno.tt)}</span>
+                </div>
+                {confronto.pieno.office > 0 && (
+                  <div className="row">
+                    <span>{t.lineOffice(officeSeats)}</span>
+                    <span>{money(confronto.pieno.office)}</span>
+                  </div>
+                )}
+                <div className="row sum">
+                  <span>{t.totalLabel}</span>
+                  <span>{money(confronto.pieno.totale)}</span>
+                </div>
+                <p className="nt">{t.compareFullNote(PLAN_NAMES[confronto.pieno.plan], ttSeats)}</p>
+              </div>
+              <div className="col promo">
+                <div className="hd">{t.comparePromoTitle}</div>
+                <div className="row">
+                  <span>{t.lineFlow(PLAN_NAMES[plan])}</span>
+                  <span>{money(confronto.promo.flow)}</span>
+                </div>
+                <div className="row">
+                  <span>{t.lineTt(ttSeats)}</span>
+                  <span>{moltiplicazione(ttSeats, confronto.promo.lordo)}</span>
+                </div>
+                {incluse > 0 && confronto.promo.valoreIncluse > 0 && (
+                  <>
+                    <div className="row">
+                      <span>{t.lineIncluded(Math.min(incluse, ttSeats), PLAN_NAMES[plan])}</span>
+                      <span>− {money(confronto.promo.valoreIncluse)}</span>
+                    </div>
+                    <div className="row">
+                      <span>{t.lineSeatsToPay}</span>
+                      <span>{money(confronto.promo.tt)}</span>
+                    </div>
+                  </>
+                )}
+                {confronto.promo.office > 0 && (
+                  <div className="row">
+                    <span>{t.lineOffice(officeSeats)}</span>
+                    <span>{money(confronto.promo.office)}</span>
+                  </div>
+                )}
+                <div className="row sum">
+                  <span>{t.totalLabel}</span>
+                  <span>{money(confronto.promo.totale)}</span>
+                </div>
+              </div>
+            </div>
+          ) : (
           <div className="bill">
             <div className="row">
               <span>{t.lineFlow(PLAN_NAMES[plan])}</span>
@@ -476,6 +634,7 @@ function CompletaInner() {
               </div>
             )}
           </div>
+          )}
 
           <div className="tot">
             <span className="lb">{t.totalLabel}</span>

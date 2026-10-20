@@ -77,3 +77,23 @@
 .lp-abbonati .bill{margin-top:18px;border-top:1px solid rgba(11,23,54,.10);padding-top:12px}
 .lp-abbonati .bill .row{display:flex;justify-content:space-between;gap:12px;font-size:13px;color:#344054;padding:3px 0}
 .lp-abbonati .later{margin-top:10px;font-size:12px;color:#475467}
+/* Codice posti e confronto "valore pieno" / "con promo e codice" */
+.lp-abbonati .code{margin-top:18px}
+.lp-abbonati .code .lb{display:block;font-size:13.5px;font-weight:600;margin-bottom:6px}
+.lp-abbonati .code-row{display:flex;gap:8px}
+.lp-abbonati .code-row .in{flex:1;min-width:0;text-transform:uppercase;letter-spacing:.04em}
+.lp-abbonati .code-apply{height:42px;padding:0 16px;border-radius:8px;border:1px solid rgba(11,23,54,.24);background:#fff;font-weight:600;cursor:pointer}
+.lp-abbonati .code-apply:disabled{opacity:.45;cursor:default}
+.lp-abbonati .code-ok{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;font-size:12.5px;color:#344054;background:#F7F9FC;border-left:2px solid var(--seal);padding:10px 12px}
+.lp-abbonati .code-ok .link{border:0;background:none;padding:0;font:inherit;color:var(--seal-testo);font-weight:700;cursor:pointer;text-decoration:underline;white-space:nowrap}
+.lp-abbonati .code-msg{margin:6px 0 0;font-size:12.5px;color:#B42318}
+.lp-abbonati .cmp{margin-top:18px;border-top:1px solid rgba(11,23,54,.10);padding-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.lp-abbonati .cmp .col{min-width:0}
+.lp-abbonati .cmp .hd{font-size:12px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:#475467;margin-bottom:6px}
+.lp-abbonati .cmp .row{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:#344054;padding:3px 0}
+.lp-abbonati .cmp .row span:last-child{text-align:right;white-space:nowrap}
+.lp-abbonati .cmp .row.sum{border-top:1px solid rgba(11,23,54,.10);margin-top:6px;padding-top:7px;font-weight:700}
+.lp-abbonati .cmp .full .row span:last-child{color:#B42318}
+.lp-abbonati .cmp .full .row.sum span:last-child{text-decoration:line-through}
+.lp-abbonati .cmp .nt{margin:6px 0 0;font-size:11.5px;color:#475467}
+@media (max-width:560px){.lp-abbonati .cmp{grid-template-columns:1fr;gap:14px}}
