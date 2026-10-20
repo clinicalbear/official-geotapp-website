@@ -369,6 +369,12 @@ export default function Pricing() {
         <div style={{ margin: '4px 0 20px' }}>
           <span className="big" style={{ fontSize: '30px' }}>{annualPrice}</span>{' '}
           <span className="k" style={{ fontSize: '10.5px' }}>{periodLabel}</span>
+          {/* IVA esclusa accanto a ogni prezzo, non solo nella nota in fondo (20/10/2026) */}
+          {p.price_excl_vat && (
+            <span className="k" style={{ display: 'block', fontSize: '10.5px', marginTop: '2px' }}>
+              {p.price_excl_vat}
+            </span>
+          )}
           {hasMonthly && monthlyPrice && (
             <div style={{ fontSize: '13.5px', marginTop: '8px' }}>
               {p.or_monthly ?? 'or'}{' '}
