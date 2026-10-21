@@ -9,6 +9,8 @@ import { blogPostPath, getPostsInCategory } from '@/lib/wp-post-index';
 import FeaturedIn from '@/components/FeaturedIn';
 import { featuredLabel } from '@/lib/press/labels';
 
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalSectorGuidesBlock } from '@/content/regional-pages';
 const CTA_LABELS: Record<string, { discover: string; cta: string }> = {
   it: { discover: 'Scopri', cta: 'Vai al prodotto →' },
   en: { discover: 'Discover', cta: 'Go to product →' },
@@ -1148,6 +1150,7 @@ export default async function RisorseSettorePage({ params }: { params: Promise<P
           </div>
         </section>
       </div>
+      <RegionalNote block={isRegionLocale(resolvedLocale) ? regionalSectorGuidesBlock(settore, resolvedLocale) : null} />
     </>
   );
 }

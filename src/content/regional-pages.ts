@@ -283,11 +283,18 @@ export function regionalToolBlock(tool: ToolKey, locale: RegionLocale): Regional
 
 /* ───────────────────── Altre pagine ───────────────────── */
 
-export type PageKey = 'pricing' | 'what-is' | 'roi' | 'about' | 'compare-index' | 'guide' | 'contact';
+export type PageKey = 'sector-index' | 'pricing' | 'what-is' | 'roi' | 'about' | 'compare-index' | 'guide' | 'contact';
 
 export function regionalPageBlock(page: PageKey, locale: RegionLocale): RegionalBlock {
   const r = REGIONS[locale];
   const body: Record<PageKey, [string, string[]]> = {
+    'sector-index': [
+      `Field work in ${r.place}, sector by sector`,
+      [
+        `The sectors below share one problem: someone has to show that the work was done at the address, on the day, by the crew that was booked. In ${r.place} the employer's own record starts from this rule. ${r.law}`,
+        `Pick the sector closest to yours. Each page shows what GeoTapp records for that kind of crew and what the report looks like for your ${r.clientWord}.`,
+      ],
+    ],
     pricing: [
       `Pricing for ${r.adj} teams`,
       [
@@ -339,4 +346,22 @@ export function regionalPageBlock(page: PageKey, locale: RegionLocale): Regional
   };
   const [title, paras] = body[page];
   return fin(locale, { title, paras });
+}
+
+const SECTOR_QUESTION: Record<string, string> = {
+  pulizie: 'which site, which shift, which worker, and when the crew left',
+  installatori: 'when the engineer arrived at each address and what was left behind',
+  sicurezza: 'which post was covered, by whom, and when the round was done',
+};
+
+export function regionalSectorGuidesBlock(settore: string, locale: RegionLocale): RegionalBlock {
+  const r = REGIONS[locale];
+  const q = SECTOR_QUESTION[settore] ?? 'where the crew was, and when';
+  return fin(locale, {
+    title: `Guides for ${r.adj} teams`,
+    paras: [
+      `The articles below are written for companies in this sector. For a ${r.adj} one, the question a customer asks is always the same: ${q}.`,
+      r.law,
+    ],
+  });
 }

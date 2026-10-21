@@ -6,6 +6,8 @@ import { localizePath } from '@/lib/i18n/locale-routing';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import LNastro from '@/components/LNastro';
 
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalPageBlock } from '@/content/regional-pages';
 interface Props {
   locale?: AppLocale;
 }
@@ -140,6 +142,7 @@ export default function SettoriPage({ locale }: Props) {
         </div>
       </section>
 
+      <RegionalNote block={isRegionLocale(l) ? regionalPageBlock('sector-index', l) : null} />
       <LNastro />
     </div>
   );

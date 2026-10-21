@@ -9,6 +9,7 @@ import {
   regionalCountryBlock,
   regionalToolBlock,
   regionalPageBlock,
+  regionalSectorGuidesBlock,
   type RegionalBlock,
   type ToolKey,
   type PageKey,
@@ -16,7 +17,7 @@ import {
 import { HOME_TITLE_MAX } from '@/lib/i18n/home-metadata';
 
 const TOOLS: ToolKey[] = ['hub', 'resources-index', 'surveillance-index', 'penalties', 'notice-generator', 'attendance-without-tracking', 'data-check', 'retention', 'dossier'];
-const PAGES: PageKey[] = ['pricing', 'what-is', 'roi', 'about', 'compare-index', 'guide', 'contact'];
+const PAGES: PageKey[] = ['sector-index', 'pricing', 'what-is', 'roi', 'about', 'compare-index', 'guide', 'contact'];
 
 function allBlocks(locale: (typeof REGION_LOCALES)[number]): RegionalBlock[] {
   return [
@@ -24,6 +25,7 @@ function allBlocks(locale: (typeof REGION_LOCALES)[number]): RegionalBlock[] {
     ...(['flow', 'timetracker', 'verifier'] as const).map((p) => regionalProductBlock(p, locale)),
     regionalCompareBlock('Jibble', locale),
     regionalCountryBlock('France', locale),
+    ...['pulizie', 'installatori', 'sicurezza'].map((x) => regionalSectorGuidesBlock(x, locale)),
     ...TOOLS.map((t) => regionalToolBlock(t, locale)),
     ...PAGES.map((p) => regionalPageBlock(p, locale)),
   ];
