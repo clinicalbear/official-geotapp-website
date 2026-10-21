@@ -11,6 +11,8 @@ import { getPresenzeCopy } from '@/content/gps-presenze-senza-tracciamento';
 import RisorsaAttribuzione from '@/components/risorse/RisorsaAttribuzione';
 import RisorsaFaq from '@/components/risorse/RisorsaFaq';
 import { JsonLd } from '@/components/seo/JsonLd';
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalToolBlock, regionalCountryBlock } from '@/content/regional-pages';
 
 /**
  * Risorsa "GPS per le presenze senza tracciare i dipendenti" — risponde in
@@ -205,6 +207,7 @@ export default async function GpsPresenzeSenzaTracciamentoPage({
           />
         </div>
       </section>
+      <RegionalNote block={isRegionLocale(resolvedLocale) ? regionalToolBlock('attendance-without-tracking', resolvedLocale) : null} />
     </div>
   );
 }

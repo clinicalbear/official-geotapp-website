@@ -15,6 +15,8 @@ import {
 } from '@/lib/pricing';
 import { REVIEWS } from '@/data/reviews';
 
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalProductBlock } from '@/content/regional-pages';
 const flowMeta: Record<string, { title: string; description: string }> = {
   it: { title: 'GeoTapp Flow - Gestione Operativa Interventi e Squadre', description: 'La web app dell\'ufficio per le aziende con tecnici sul campo: clienti, commesse, squadre, turni, fatture e report sigillati che il cliente verifica da solo.' },
   en: { title: 'GeoTapp Flow - Field Operations Management', description: 'The office web app for companies with field technicians: clients, jobs, teams, shifts, invoices and sealed reports that the client verifies alone.' },
@@ -434,6 +436,7 @@ export default async function LocaleFlowPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPage) }} />
       <FlowPage />
       {/* FAQ visibile (H3) + schema FAQPage da RisorsaFaq (niente <script> faq manuale). */}
+      <RegionalNote block={isRegionLocale(locale) ? regionalProductBlock('flow', locale) : null} />
       <FaqFromSchema faq={faq} locale={locale} />
       <BlogHighlights locale={locale as AppLocale} categoryId={65} />
       <SettoriLinks locale={locale as AppLocale} settori={['installatori']} />

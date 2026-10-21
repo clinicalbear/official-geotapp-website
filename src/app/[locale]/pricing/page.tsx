@@ -9,6 +9,8 @@ import {
 } from '@/lib/pricing';
 import type { AppLocale } from '@/lib/i18n/config';
 import UpdatedOnLine, { updatedIsoFor } from '@/components/seo/UpdatedOnLine';
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalPageBlock } from '@/content/regional-pages';
 
 const PRICING_SCHEMA_NAME: Record<string, string> = {
   it: 'Prezzi GeoTapp', en: 'GeoTapp Pricing', de: 'GeoTapp Preise',
@@ -331,6 +333,7 @@ export default async function LocalePricingPage({ params }: { params: Promise<{ 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...pricingSchema, name: PRICING_SCHEMA_NAME[locale] ?? PRICING_SCHEMA_NAME.en }) }} />
       {faq && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />}
       <PricingPage />
+      <RegionalNote block={isRegionLocale(locale) ? regionalPageBlock('pricing', locale) : null} />
       <UpdatedOnLine pageKey="pricing" locale={locale as AppLocale} />
     </>
   );

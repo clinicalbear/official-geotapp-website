@@ -10,6 +10,8 @@ import LNastro from '@/components/LNastro';
 import UpdatedOnLine, { updatedIsoFor } from '@/components/seo/UpdatedOnLine';
 import './l-page.css';
 
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalPageBlock } from '@/content/regional-pages';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 export async function generateMetadata({
@@ -168,6 +170,7 @@ export default async function RoiCalculatorPage({
         </div>
       </section>
 
+      <RegionalNote block={isRegionLocale(safeLocale) ? regionalPageBlock('roi', safeLocale) : null} />
       <UpdatedOnLine pageKey={pageKey} locale={safeLocale} />
     </div>
   );

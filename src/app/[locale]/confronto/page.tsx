@@ -13,6 +13,8 @@ export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/s
 const FeaturedIn = dynamic(() => import('@/components/FeaturedIn'), { ssr: true });
 import { featuredLabel } from '@/lib/press/labels';
 
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalPageBlock } from '@/content/regional-pages';
 const PATHNAME = '/confronto/';
 
 const META: Record<string, { title: string; description: string }> = {
@@ -368,6 +370,7 @@ export default async function ConfrontoIndexPage({ params }: { params: Promise<{
             </div>
           </div>
         </section>
+        <RegionalNote block={isRegionLocale(locale) ? regionalPageBlock('compare-index', locale) : null} />
       </div>
     </>
   );

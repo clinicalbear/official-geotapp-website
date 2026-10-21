@@ -15,6 +15,8 @@ import RisorsaFaq from '@/components/risorse/RisorsaFaq';
 import LicenzaContenuto from '@/components/LicenzaContenuto';
 import '../tside.css';
 import './l-page.css';
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalToolBlock, regionalCountryBlock } from '@/content/regional-pages';
 
 /**
  * Generatore di informativa GPS per i lavoratori.
@@ -145,6 +147,7 @@ export default async function GeneratoreInformativaPage({
 
         <LicenzaContenuto locale={rl} />
       </div>
+      <RegionalNote block={isRegionLocale(rl) ? regionalToolBlock('notice-generator', rl) : null} />
     </>
   );
 }

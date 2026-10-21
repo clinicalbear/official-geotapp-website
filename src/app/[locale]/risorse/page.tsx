@@ -9,6 +9,8 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import LNastro from '@/components/LNastro';
 import './l-page.css';
 
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalToolBlock } from '@/content/regional-pages';
 /**
  * Hub "Risorse": vetrina di tutti gli strumenti/risorse gratuiti del sito
  * (GPS lavoratori UE, calcolatore ROI, sondaggio...). Pagina data-driven:
@@ -159,6 +161,7 @@ export default async function RisorseHubPage({
           </div>
         </div>
       </section>
+      <RegionalNote block={isRegionLocale(resolvedLocale) ? regionalToolBlock('resources-index', resolvedLocale) : null} />
     </div>
   );
 }

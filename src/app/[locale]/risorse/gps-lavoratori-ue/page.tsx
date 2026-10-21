@@ -15,6 +15,8 @@ import SelettorePaesiClient, {
 } from '@/components/risorse/SelettorePaesiClient';
 import EmbedCodeBox from '@/components/risorse/EmbedCodeBox';
 import RisorsaFaq from '@/components/risorse/RisorsaFaq';
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalToolBlock, regionalCountryBlock } from '@/content/regional-pages';
 
 /**
  * Pagina-selettore (landing dello strumento) della risorsa "GPS sui lavoratori in UE".
@@ -190,6 +192,7 @@ export default async function SelettorePaesiPage({
           </div>
         </section>
       </div>
+      <RegionalNote block={isRegionLocale(resolvedLocale) ? regionalToolBlock('hub', resolvedLocale) : null} />
     </>
   );
 }

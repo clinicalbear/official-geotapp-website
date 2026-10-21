@@ -12,6 +12,8 @@ import RisorsaAttribuzione from '@/components/risorse/RisorsaAttribuzione';
 import RisorsaFaq from '@/components/risorse/RisorsaFaq';
 import '../tside.css';
 import './l-page.css';
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalToolBlock, regionalCountryBlock } from '@/content/regional-pages';
 
 /**
  * Tool "Calcolatore sanzioni GPS": scegli un Paese, vedi la sanzione massima reale
@@ -154,6 +156,7 @@ export default async function CalcolatoreSanzioniPage({
           </div>
         </div>
       </section>
+      <RegionalNote block={isRegionLocale(resolvedLocale) ? regionalToolBlock('penalties', resolvedLocale) : null} />
     </div>
   );
 }

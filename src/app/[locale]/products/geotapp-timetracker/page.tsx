@@ -8,6 +8,8 @@ import SettoriLinks from '@/components/SettoriLinks';
 import FaqFromSchema from '@/components/FaqFromSchema';
 import UpdatedOnLine, { updatedIsoFor } from '@/components/seo/UpdatedOnLine';
 import { type AppLocale } from '@/lib/i18n/config';
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalProductBlock } from '@/content/regional-pages';
 import {
   EUR_PRICES,
   convertEurToLocale,
@@ -383,6 +385,7 @@ export default async function LocaleAppPage({ params }: Props) {
       {/* FAQ VISIBILE (H3) + schema FAQPage: FaqFromSchema rende entrambi, cosi' il
           testo e' citabile dagli AI (prima le FAQ vivevano solo nel <script> JSON-LD,
           invisibili: 0 heading a domanda, l'AI non le pescava). Allineato a Flow. */}
+      <RegionalNote block={isRegionLocale(locale) ? regionalProductBlock('timetracker', locale) : null} />
       {faq && <FaqFromSchema faq={faq} locale={locale} />}
       <BlogHighlights locale={locale as AppLocale} categoryId={108} />
       <SettoriLinks locale={locale as AppLocale} settori={['pulizie', 'sicurezza']} />

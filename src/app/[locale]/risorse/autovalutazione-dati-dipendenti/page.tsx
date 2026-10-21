@@ -13,6 +13,8 @@ import RisorsaFaq from '@/components/risorse/RisorsaFaq';
 import LicenzaContenuto from '@/components/LicenzaContenuto';
 import '../tside.css';
 import './l-page.css';
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalToolBlock, regionalCountryBlock } from '@/content/regional-pages';
 
 /**
  * Auto-valutazione "Sei conforme sui dati dei dipendenti?".
@@ -122,6 +124,7 @@ export default async function AutovalutazionePage({
 
         <LicenzaContenuto locale={rl} />
       </div>
+      <RegionalNote block={isRegionLocale(rl) ? regionalToolBlock('data-check', rl) : null} />
     </>
   );
 }

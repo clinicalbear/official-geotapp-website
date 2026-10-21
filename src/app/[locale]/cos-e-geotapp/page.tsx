@@ -12,6 +12,8 @@ import UpdatedOnLine, { updatedIsoFor } from '@/components/seo/UpdatedOnLine';
 import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
 import { localizeEurPricesDeep } from '@/lib/pricing';
 
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalPageBlock } from '@/content/regional-pages';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 /* "Vedi i prezzi →" nella lingua giusta: stessa traduzione gia' presente nel corpo del testo prezzi. */
@@ -638,6 +640,7 @@ export default async function CosEGeoTappPage({ params }: { params: Promise<{ lo
           </div>
         </section>
 
+        <RegionalNote block={isRegionLocale(locale) ? regionalPageBlock('what-is', locale) : null} />
         <UpdatedOnLine pageKey={pageKey} locale={locale} />
       </div>
     </>

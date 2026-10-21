@@ -21,6 +21,8 @@ import './l-page-confronto-vs.css';
 const FeaturedIn = dynamic(() => import('@/components/FeaturedIn'), { ssr: true });
 import { featuredLabel } from '@/lib/press/labels';
 
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalCompareBlock } from '@/content/regional-pages';
 export type ComparisonRow = { feature: string; geotapp: boolean; competitor: boolean };
 export type ComparisonFaqItem = { q: string; a: string };
 
@@ -167,6 +169,8 @@ export default function ComparisonPageL({
           <FeaturedIn locale={locale} />
         </div>
       </section>
+
+      <RegionalNote block={isRegionLocale(locale) ? regionalCompareBlock(competitorName, locale) : null} />
 
       {/* ── domande, che si aprono con calma ── */}
       <section className="fq"><div className="w"><div className="g">

@@ -12,6 +12,8 @@ import IndiceSorveglianzaClient, {
 import RisorsaAttribuzione from '@/components/risorse/RisorsaAttribuzione';
 import RisorsaFaq from '@/components/risorse/RisorsaFaq';
 import './l-page.css';
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalToolBlock, regionalCountryBlock } from '@/content/regional-pages';
 
 /**
  * Tool "Indice della sorveglianza sul lavoro in Europa": classifica dei 39 Paesi
@@ -142,6 +144,7 @@ export default async function IndiceSorveglianzaPage({
           />
         </div>
       </section>
+      <RegionalNote block={isRegionLocale(resolvedLocale) ? regionalToolBlock('surveillance-index', resolvedLocale) : null} />
     </div>
   );
 }

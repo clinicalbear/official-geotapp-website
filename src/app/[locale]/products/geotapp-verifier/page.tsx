@@ -8,6 +8,8 @@ import UpdatedOnLine, { updatedIsoFor } from '@/components/seo/UpdatedOnLine';
 import { type AppLocale } from '@/lib/i18n/config';
 import { getCurrencyForLocale } from '@/lib/pricing';
 
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalProductBlock } from '@/content/regional-pages';
 const verifierMeta: Record<string, { title: string; description: string }> = {
   it: { title: "GeoTapp Verifier: verifica indipendente dei report", description: "Verifier controlla che un report GeoTapp non sia stato modificato dopo il sigillo e che venga da GeoTapp. Gratuito, senza account, anche offline." },
   en: { title: "GeoTapp Verifier: independent work report verification", description: "Verifier checks that a GeoTapp report has not been modified after it was sealed and that it comes from GeoTapp. Free, no account, offline too." },
@@ -351,6 +353,7 @@ export default async function LocaleVerifierPage({ params }: Props) {
       <VerifierPage params={params} />
       <BlogHighlights locale={locale as AppLocale} categoryId={9} />
       <SettoriLinks locale={locale as AppLocale} settori={['pulizie', 'installatori', 'sicurezza']} />
+      <RegionalNote block={isRegionLocale(locale) ? regionalProductBlock('verifier', locale) : null} />
       <UpdatedOnLine pageKey={pageKey} locale={locale} />
     </>
   );

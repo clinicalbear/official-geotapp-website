@@ -17,6 +17,8 @@ import SchedaPaeseView from '@/components/risorse/SchedaPaeseView';
 import CambiaStatoSelect from '@/components/risorse/CambiaStatoSelect';
 import RisorsaAttribuzione from '@/components/risorse/RisorsaAttribuzione';
 import type { PaeseSelettore } from '@/components/risorse/SelettorePaesiClient';
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalToolBlock, regionalCountryBlock } from '@/content/regional-pages';
 
 /**
  * Pagina-scheda per paese della risorsa "GPS sui lavoratori in UE".
@@ -173,6 +175,7 @@ export default async function SchedaPaesePage({
           />
         }
       />
+      <RegionalNote block={isRegionLocale(resolvedLocale) ? regionalCountryBlock(nomePaese, resolvedLocale) : null} />
     </>
   );
 }

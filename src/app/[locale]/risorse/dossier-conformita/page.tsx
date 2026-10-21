@@ -9,6 +9,8 @@ import { localizePath } from '@/lib/i18n/locale-routing';
 import { getDossierCopy } from '@/content/dossier-conformita';
 import RisorsaAttribuzione from '@/components/risorse/RisorsaAttribuzione';
 import RisorsaFaq from '@/components/risorse/RisorsaFaq';
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalToolBlock, regionalCountryBlock } from '@/content/regional-pages';
 
 /**
  * Dossier di conformità GeoTapp ("prova del lavoro, non sorveglianza").
@@ -123,6 +125,7 @@ export default async function DossierConformitaPage({
           />
         </div>
       </section>
+      <RegionalNote block={isRegionLocale(resolvedLocale) ? regionalToolBlock('dossier', resolvedLocale) : null} />
     </div>
   );
 }

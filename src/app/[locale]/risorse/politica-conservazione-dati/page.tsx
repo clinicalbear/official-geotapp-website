@@ -13,6 +13,8 @@ import RisorsaFaq from '@/components/risorse/RisorsaFaq';
 import LicenzaContenuto from '@/components/LicenzaContenuto';
 import '../tside.css';
 import './l-page.css';
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalToolBlock, regionalCountryBlock } from '@/content/regional-pages';
 
 /**
  * Generatore "Politica di conservazione dei dati RH".
@@ -118,6 +120,7 @@ export default async function ConservazionePage({
 
         <LicenzaContenuto locale={rl} />
       </div>
+      <RegionalNote block={isRegionLocale(rl) ? regionalToolBlock('retention', rl) : null} />
     </>
   );
 }

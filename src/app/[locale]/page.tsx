@@ -12,6 +12,8 @@ import LocaleSuggestionBanner from '@/components/LocaleSuggestionBanner';
 import { REVIEWS } from '@/data/reviews';
 import { buildReviewsSchema } from '@/lib/seo/reviewsSchema';
 import { EUR_PRICES } from '@/lib/pricing';
+import RegionalNote from '@/components/RegionalNote';
+import { isRegionLocale, regionalHomeBlock, regionalHomeFaq, REGIONAL_HOME_META } from '@/content/regional-pages';
 
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
@@ -215,7 +217,8 @@ type Props = { params: Promise<{ locale: string }> };
 
 export default async function LocalePage({ params }: Props) {
   const { locale } = await params;
-  const faq = HOMEPAGE_FAQ[locale] ?? null;
+  const regional = isRegionLocale(locale);
+  const faq = regional ? regionalHomeFaq(locale) : (HOMEPAGE_FAQ[locale] ?? null);
   const reviewsSchema = buildReviewsSchema(REVIEWS);
   return (
     <>
@@ -240,10 +243,18 @@ export default async function LocalePage({ params }: Props) {
       <HomeServer
         locale={locale}
         jrSlot={<BlogHighlights locale={locale as AppLocale} />}
-        // Senza FAQ per la lingua (le varianti inglesi regionali) lo slot resta vuoto:
+        // Le varianti inglesi regionali hanno blocco e FAQ proprie (content/regional-pages.ts).
+        // Senza FAQ per la lingua lo slot resta vuoto:
         // da quando la home e' un componente server un elemento che rende null lascerebbe
         // comunque la sezione vuota nell'HTML, mentre prima React la scartava.
-        fqSlot={faq ? <FaqFromSchema faq={faq} locale={locale} /> : undefined}
+        fqSlot={
+          faq ? (
+            <>
+              {regional && <RegionalNote block={regionalHomeBlock(locale)} />}
+              <FaqFromSchema faq={faq} locale={locale} />
+            </>
+          ) : undefined
+        }
       />
     </>
   );
@@ -251,7 +262,7 @@ export default async function LocalePage({ params }: Props) {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const meta = HOME_META[locale] ?? HOME_META.en;
+  const meta = (isRegionLocale(locale) ? REGIONAL_HOME_META[locale] : HOME_META[locale]) ?? HOME_META.en;
 
   // Build hreflang alternates dynamically from SUPPORTED_LOCALES.
   // All locale homepages use trailing slash (trailingSlash:true in next.config.mjs).
