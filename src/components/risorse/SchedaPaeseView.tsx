@@ -4,6 +4,7 @@ import type { AppLocale } from '@/lib/i18n/config';
 import type { SiteDictionary } from '@/lib/i18n/dictionaries';
 import { loc } from '@/lib/risorse/gps-lavoratori-ue/localize';
 import InformativaFacsimile from '@/components/risorse/InformativaFacsimile';
+import ChecklistDownload from '@/components/risorse/ChecklistDownload';
 import LNastro from '@/components/LNastro';
 
 /**
@@ -240,7 +241,7 @@ export default function SchedaPaeseView({
       <section className="sec warm">
         <div className="w">
           <div className="hd">
-            <h2 className="r">{dict.sezioneCosaServe}</h2>
+            <h2 className="r">{dict.titoloChecklist}</h2>
             <p className="r d1">{dict.cosaServeLegenda}</p>
           </div>
           <ul className="rows r d1">
@@ -271,6 +272,32 @@ export default function SchedaPaeseView({
               </li>
             ))}
           </ul>
+          <ChecklistDownload
+            locale={locale}
+            countryISO={scheda.codiceISO}
+            data={{
+              paese: nomeLocale,
+              autorita: loc(scheda.autoritaCompetente.ente, locale),
+              verificatoIl: formatDate(scheda.aggiornatoIl, locale),
+              sezioneVoci: dict.sezioneCosaServe,
+              sezioneProcedura: dict.sezioneProcedura,
+              sezioneContatti: dict.sezioneAChiInviare,
+              voci: scheda.checklist.map((item) => ({
+                voce: loc(item.voce, locale),
+                rispostaLabel: rispostaLabel(dict, item.risposta),
+                risposta: item.risposta,
+                dettaglio: loc(item.dettaglio, locale),
+                fonteTitolo: item.fonte.titolo,
+                fonteUrl: item.fonte.url,
+              })),
+              passi: scheda.procedura.map((passo) => loc(passo.descrizione, locale)),
+              contatti: scheda.contatti.map((k) => ({
+                ente: loc(k.ente, locale),
+                email: k.email,
+                portale: k.portale,
+              })),
+            }}
+          />
         </div>
       </section>
 
