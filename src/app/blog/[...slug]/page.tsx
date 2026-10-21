@@ -18,6 +18,7 @@ import Comments, { type CommentItem } from '@/components/blog/Comments';
 import { detectPostLocale } from '@/lib/blog-locale';
 import { canonicalBlogPath, requestedBlogPath } from '@/lib/blog-canonical';
 import { sanitizeWpHtml } from '@/lib/sanitize-wp';
+import { blogFaqJsonLd, extractBlogFaq } from '@/lib/blog-faq';
 
 export const dynamic = 'force-dynamic';
 
@@ -412,6 +413,10 @@ export default async function BlogArticlePage({ params }: Props) {
     ],
   };
 
+  // Domande frequenti: se l'articolo ha la sezione .gt-faq, lo schema FAQPage si ricava
+  // dallo stesso HTML che il lettore vede.
+  const faqSchema = blogFaqJsonLd(extractBlogFaq(contentWithIds));
+
   // Detect products from categories for map background color
   const mapProducts: Array<'timetracker' | 'flow' | 'verifier'> = [];
   const catSlugs = categories.map(c => c.slug.toLowerCase()).join(' ');
@@ -430,6 +435,9 @@ export default async function BlogArticlePage({ params }: Props) {
       {/* Structured data */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {faqSchema ? (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      ) : null}
 
       {/* Hero */}
       <ArticleHero
