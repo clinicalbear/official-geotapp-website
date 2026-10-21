@@ -15,6 +15,7 @@ import { featuredLabel } from '@/lib/press/labels';
 
 import RegionalNote from '@/components/RegionalNote';
 import { isRegionLocale, regionalPageBlock } from '@/content/regional-pages';
+import { applyRegionalMeta } from '@/content/regional-pages';
 const PATHNAME = '/confronto/';
 
 const META: Record<string, { title: string; description: string }> = {
@@ -249,7 +250,7 @@ const COMPARISONS: Record<string, { tagline: string; highlight: string }>[] = [
   } as any,
 ];
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const m = META[locale] ?? META.en;
   return {
@@ -374,4 +375,12 @@ export default async function ConfrontoIndexPage({ params }: { params: Promise<{
       </div>
     </>
   );
+}
+
+export async function generateMetadata(
+  props: Parameters<typeof generateMetadataBase>[0],
+): Promise<Awaited<ReturnType<typeof generateMetadataBase>>> {
+  const md = await generateMetadataBase(props);
+  const { locale } = await (props.params as Promise<{ locale: string }>);
+  return applyRegionalMeta(md, locale);
 }

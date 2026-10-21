@@ -12,9 +12,10 @@ import './l-page.css';
 
 import RegionalNote from '@/components/RegionalNote';
 import { isRegionLocale, regionalPageBlock } from '@/content/regional-pages';
+import { applyRegionalMeta } from '@/content/regional-pages';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
-export async function generateMetadata({
+async function generateMetadataBase({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -174,4 +175,12 @@ export default async function RoiCalculatorPage({
       <UpdatedOnLine pageKey={pageKey} locale={safeLocale} />
     </div>
   );
+}
+
+export async function generateMetadata(
+  props: Parameters<typeof generateMetadataBase>[0],
+): Promise<Awaited<ReturnType<typeof generateMetadataBase>>> {
+  const md = await generateMetadataBase(props);
+  const { locale } = await (props.params as Promise<{ locale: string }>);
+  return applyRegionalMeta(md, locale);
 }

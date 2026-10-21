@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import type { AppLocale } from '@/lib/i18n/config';
 import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
 import SettoriPage from '../../settori/page';
+import { applyRegionalMeta } from '@/content/regional-pages';
 
 const SETTORI_META: Record<string, { title: string; description: string }> = {
   it: { title: 'Settori - Documentazione verificabile | GeoTapp', description: 'Da pulizie a sicurezza: ogni intervento diventa prova verificabile con GPS e foto. Report sigillati da mostrare quando qualcuno contesta.' },
@@ -19,7 +20,7 @@ const SETTORI_META: Record<string, { title: string; description: string }> = {
   nb: { title: 'Bransjer - Verifiserbar dokumentasjon av arbeidet | GeoTapp', description: 'Fra renhold til sikkerhet: hvert oppdrag blir verifiserbar dokumentasjon med GPS og bilder. Forseglede rapporter du kan vise når noen bestrider arbeidet.' },
 };
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const meta = SETTORI_META[locale] ?? SETTORI_META.en;
   return {
@@ -47,4 +48,12 @@ export default async function LocaleSettoriPage({
 }) {
   const { locale } = await params;
   return <SettoriPage locale={locale as AppLocale} />;
+}
+
+export async function generateMetadata(
+  props: Parameters<typeof generateMetadataBase>[0],
+): Promise<Awaited<ReturnType<typeof generateMetadataBase>>> {
+  const md = await generateMetadataBase(props);
+  const { locale } = await (props.params as Promise<{ locale: string }>);
+  return applyRegionalMeta(md, locale);
 }

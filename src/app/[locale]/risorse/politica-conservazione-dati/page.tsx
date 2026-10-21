@@ -15,6 +15,7 @@ import '../tside.css';
 import './l-page.css';
 import RegionalNote from '@/components/RegionalNote';
 import { isRegionLocale, regionalToolBlock, regionalCountryBlock } from '@/content/regional-pages';
+import { applyRegionalMeta } from '@/content/regional-pages';
 
 /**
  * Generatore "Politica di conservazione dei dati RH".
@@ -36,7 +37,7 @@ function safeLocale(locale: string): AppLocale {
 
 const CANONICAL = '/risorse/politica-conservazione-dati/';
 
-export async function generateMetadata({
+async function generateMetadataBase({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -123,4 +124,12 @@ export default async function ConservazionePage({
       <RegionalNote block={isRegionLocale(rl) ? regionalToolBlock('retention', rl) : null} />
     </>
   );
+}
+
+export async function generateMetadata(
+  props: Parameters<typeof generateMetadataBase>[0],
+): Promise<Awaited<ReturnType<typeof generateMetadataBase>>> {
+  const md = await generateMetadataBase(props);
+  const { locale } = await (props.params as Promise<{ locale: string }>);
+  return applyRegionalMeta(md, locale);
 }

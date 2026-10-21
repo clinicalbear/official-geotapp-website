@@ -11,6 +11,7 @@ import './l-page.css';
 
 import RegionalNote from '@/components/RegionalNote';
 import { isRegionLocale, regionalToolBlock } from '@/content/regional-pages';
+import { applyRegionalMeta } from '@/content/regional-pages';
 /**
  * Hub "Risorse": vetrina di tutti gli strumenti/risorse gratuiti del sito
  * (GPS lavoratori UE, calcolatore ROI, sondaggio...). Pagina data-driven:
@@ -50,7 +51,7 @@ const CARDS = [
   { key: 'survey', path: '/survey/' },
 ] as const;
 
-export async function generateMetadata({
+async function generateMetadataBase({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -164,4 +165,12 @@ export default async function RisorseHubPage({
       <RegionalNote block={isRegionLocale(resolvedLocale) ? regionalToolBlock('resources-index', resolvedLocale) : null} />
     </div>
   );
+}
+
+export async function generateMetadata(
+  props: Parameters<typeof generateMetadataBase>[0],
+): Promise<Awaited<ReturnType<typeof generateMetadataBase>>> {
+  const md = await generateMetadataBase(props);
+  const { locale } = await (props.params as Promise<{ locale: string }>);
+  return applyRegionalMeta(md, locale);
 }

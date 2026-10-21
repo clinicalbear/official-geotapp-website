@@ -15,6 +15,7 @@ import '../tside.css';
 import './l-page.css';
 import RegionalNote from '@/components/RegionalNote';
 import { isRegionLocale, regionalToolBlock, regionalCountryBlock } from '@/content/regional-pages';
+import { applyRegionalMeta } from '@/content/regional-pages';
 
 /**
  * Auto-valutazione "Sei conforme sui dati dei dipendenti?".
@@ -36,7 +37,7 @@ function safeLocale(locale: string): AppLocale {
 
 const CANONICAL = '/risorse/autovalutazione-dati-dipendenti/';
 
-export async function generateMetadata({
+async function generateMetadataBase({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -127,4 +128,12 @@ export default async function AutovalutazionePage({
       <RegionalNote block={isRegionLocale(rl) ? regionalToolBlock('data-check', rl) : null} />
     </>
   );
+}
+
+export async function generateMetadata(
+  props: Parameters<typeof generateMetadataBase>[0],
+): Promise<Awaited<ReturnType<typeof generateMetadataBase>>> {
+  const md = await generateMetadataBase(props);
+  const { locale } = await (props.params as Promise<{ locale: string }>);
+  return applyRegionalMeta(md, locale);
 }

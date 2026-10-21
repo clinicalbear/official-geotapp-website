@@ -11,6 +11,7 @@ import { featuredLabel } from '@/lib/press/labels';
 
 import RegionalNote from '@/components/RegionalNote';
 import { isRegionLocale, regionalSectorGuidesBlock } from '@/content/regional-pages';
+import { applyRegionalMeta } from '@/content/regional-pages';
 const CTA_LABELS: Record<string, { discover: string; cta: string }> = {
   it: { discover: 'Scopri', cta: 'Vai al prodotto →' },
   en: { discover: 'Discover', cta: 'Go to product →' },
@@ -921,7 +922,7 @@ export async function generateStaticParams(): Promise<Params[]> {
   );
 }
 
-export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { locale, settore } = await params;
   const config = SETTORE_CONFIG[settore];
   if (!config) return {};
@@ -1153,4 +1154,12 @@ export default async function RisorseSettorePage({ params }: { params: Promise<P
       <RegionalNote block={isRegionLocale(resolvedLocale) ? regionalSectorGuidesBlock(settore, resolvedLocale) : null} />
     </>
   );
+}
+
+export async function generateMetadata(
+  props: Parameters<typeof generateMetadataBase>[0],
+): Promise<Awaited<ReturnType<typeof generateMetadataBase>>> {
+  const md = await generateMetadataBase(props);
+  const { locale } = await (props.params as Promise<{ locale: string }>);
+  return applyRegionalMeta(md, locale);
 }

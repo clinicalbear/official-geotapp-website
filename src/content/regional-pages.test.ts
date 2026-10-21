@@ -10,6 +10,7 @@ import {
   regionalToolBlock,
   regionalPageBlock,
   regionalSectorGuidesBlock,
+  applyRegionalMeta,
   type RegionalBlock,
   type ToolKey,
   type PageKey,
@@ -86,5 +87,21 @@ describe('testi regionali di home, prodotti, confronti e risorse', () => {
   it('Australia: i sette anni vengono dal Fair Work Ombudsman, non dalla legge', () => {
     expect(regionalHomeBlock('en-au').paras[0]).toContain('seven years');
     expect(regionalHomeBlock('en-au').paras[0]).toContain('Fair Work Ombudsman');
+  });
+
+  it('title e description: il paese entra, le altre lingue passano intatte', () => {
+    const md = { title: { absolute: 'Pricing for teams | GeoTapp' }, description: 'Plans for field teams.', openGraph: { title: 'Pricing for teams | GeoTapp' } };
+    const gb = applyRegionalMeta(md, 'en-gb') as { title: { absolute: string }; description: string; openGraph: { title: string } };
+    expect(gb.title.absolute).toBe('Pricing for teams (UK) | GeoTapp');
+    expect(gb.description).toBe('Plans for field teams. For UK field teams.');
+    expect(gb.openGraph.title).toBe(gb.title.absolute);
+    expect(applyRegionalMeta(md, 'en')).toBe(md);
+    expect(applyRegionalMeta(md, 'de')).toBe(md);
+    expect((applyRegionalMeta({ title: 'Solo titolo' }, 'en-au').title as string)).toBe('Solo titolo (Australia)');
+  });
+
+  it('la description non supera mai i 160 caratteri', () => {
+    const long = 'x'.repeat(150);
+    expect((applyRegionalMeta({ description: long }, 'en-ie').description as string).length).toBeLessThanOrEqual(160);
   });
 });

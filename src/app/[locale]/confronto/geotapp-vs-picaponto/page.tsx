@@ -6,6 +6,7 @@ import {
   buildComparisonBreadcrumb,
 } from '@/lib/seo/comparisonSchema';
 import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
+import { applyRegionalMeta } from '@/content/regional-pages';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 const PATHNAME = '/confronto/geotapp-vs-picaponto/';
@@ -299,7 +300,7 @@ const ROWS_LABELS: Record<string, string[]> = {
 const ROWS_GEO =  [true,true,true,true,true,true,false,false,true,true,true,true,true];
 const ROWS_COMP = [false,false,false,false,true, true, true, true,  true, true,  true, false,false];
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const m = localizeEnglishDeep(META[locale] ?? META.en, locale);
   return {
@@ -352,4 +353,12 @@ export default async function GeoTappVsPicaPontoPage({ params }: { params: Promi
       />
     </>
   );
+}
+
+export async function generateMetadata(
+  props: Parameters<typeof generateMetadataBase>[0],
+): Promise<Awaited<ReturnType<typeof generateMetadataBase>>> {
+  const md = await generateMetadataBase(props);
+  const { locale } = await (props.params as Promise<{ locale: string }>);
+  return applyRegionalMeta(md, locale);
 }

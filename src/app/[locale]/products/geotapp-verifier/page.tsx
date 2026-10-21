@@ -10,6 +10,7 @@ import { getCurrencyForLocale } from '@/lib/pricing';
 
 import RegionalNote from '@/components/RegionalNote';
 import { isRegionLocale, regionalProductBlock } from '@/content/regional-pages';
+import { applyRegionalMeta } from '@/content/regional-pages';
 const verifierMeta: Record<string, { title: string; description: string }> = {
   it: { title: "GeoTapp Verifier: verifica indipendente dei report", description: "Verifier controlla che un report GeoTapp non sia stato modificato dopo il sigillo e che venga da GeoTapp. Gratuito, senza account, anche offline." },
   en: { title: "GeoTapp Verifier: independent work report verification", description: "Verifier checks that a GeoTapp report has not been modified after it was sealed and that it comes from GeoTapp. Free, no account, offline too." },
@@ -24,7 +25,7 @@ const verifierMeta: Record<string, { title: string; description: string }> = {
   ru: { title: "GeoTapp Verifier: независимая проверка отчётов о работе", description: "Verifier проверяет, что отчёт GeoTapp не был изменён после запечатывания и действительно создан GeoTapp. Бесплатно, без аккаунта, работает и офлайн." },
 };
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const m = verifierMeta[locale] ?? verifierMeta[locale.startsWith('en-') ? 'en' : 'it'];
   return {
@@ -357,4 +358,12 @@ export default async function LocaleVerifierPage({ params }: Props) {
       <UpdatedOnLine pageKey={pageKey} locale={locale} />
     </>
   );
+}
+
+export async function generateMetadata(
+  props: Parameters<typeof generateMetadataBase>[0],
+): Promise<Awaited<ReturnType<typeof generateMetadataBase>>> {
+  const md = await generateMetadataBase(props);
+  const { locale } = await (props.params as Promise<{ locale: string }>);
+  return applyRegionalMeta(md, locale);
 }

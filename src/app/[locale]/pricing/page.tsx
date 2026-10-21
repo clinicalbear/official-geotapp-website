@@ -11,6 +11,7 @@ import type { AppLocale } from '@/lib/i18n/config';
 import UpdatedOnLine, { updatedIsoFor } from '@/components/seo/UpdatedOnLine';
 import RegionalNote from '@/components/RegionalNote';
 import { isRegionLocale, regionalPageBlock } from '@/content/regional-pages';
+import { applyRegionalMeta } from '@/content/regional-pages';
 
 const PRICING_SCHEMA_NAME: Record<string, string> = {
   it: 'Prezzi GeoTapp', en: 'GeoTapp Pricing', de: 'GeoTapp Preise',
@@ -288,7 +289,7 @@ const PRICING_META: Record<string, { title: string; description: string }> = {
   nb: { title: 'GeoTapp priser: planer for team i felt, 14 dagers prøve', description: 'Kontorplaner for Flow, én plass per medarbeider i TimeTracker, 14 dager gratis uten kort. Se hva hver plan inneholder før du starter.' },
 };
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const meta = PRICING_META[locale] ?? PRICING_META.en;
   return {
@@ -337,4 +338,12 @@ export default async function LocalePricingPage({ params }: { params: Promise<{ 
       <UpdatedOnLine pageKey="pricing" locale={locale as AppLocale} />
     </>
   );
+}
+
+export async function generateMetadata(
+  props: Parameters<typeof generateMetadataBase>[0],
+): Promise<Awaited<ReturnType<typeof generateMetadataBase>>> {
+  const md = await generateMetadataBase(props);
+  const { locale } = await (props.params as Promise<{ locale: string }>);
+  return applyRegionalMeta(md, locale);
 }

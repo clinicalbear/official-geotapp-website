@@ -17,6 +17,7 @@ import EmbedCodeBox from '@/components/risorse/EmbedCodeBox';
 import RisorsaFaq from '@/components/risorse/RisorsaFaq';
 import RegionalNote from '@/components/RegionalNote';
 import { isRegionLocale, regionalToolBlock, regionalCountryBlock } from '@/content/regional-pages';
+import { applyRegionalMeta } from '@/content/regional-pages';
 
 /**
  * Pagina-selettore (landing dello strumento) della risorsa "GPS sui lavoratori in UE".
@@ -37,7 +38,7 @@ function safeLocale(locale: string): AppLocale {
     : ('it' as AppLocale);
 }
 
-export async function generateMetadata({
+async function generateMetadataBase({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -195,4 +196,12 @@ export default async function SelettorePaesiPage({
       <RegionalNote block={isRegionLocale(resolvedLocale) ? regionalToolBlock('hub', resolvedLocale) : null} />
     </>
   );
+}
+
+export async function generateMetadata(
+  props: Parameters<typeof generateMetadataBase>[0],
+): Promise<Awaited<ReturnType<typeof generateMetadataBase>>> {
+  const md = await generateMetadataBase(props);
+  const { locale } = await (props.params as Promise<{ locale: string }>);
+  return applyRegionalMeta(md, locale);
 }

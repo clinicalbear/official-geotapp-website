@@ -4,6 +4,7 @@ import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-meta
 import { DynamicComparison } from '@/components/DynamicComparison';
 import { TrialCTALink } from '@/components/analytics/TrialCTALink';
 import LNastro from '@/components/LNastro';
+import { applyRegionalMeta } from '@/content/regional-pages';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 const PATHNAME = '/confronto/dinamico/';
@@ -287,7 +288,7 @@ const COPY: Record<string, Copy> = {
   },
 };
 
-export async function generateMetadata({
+async function generateMetadataBase({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -359,4 +360,12 @@ export default async function Page({
       <LNastro />
     </div>
   );
+}
+
+export async function generateMetadata(
+  props: Parameters<typeof generateMetadataBase>[0],
+): Promise<Awaited<ReturnType<typeof generateMetadataBase>>> {
+  const md = await generateMetadataBase(props);
+  const { locale } = await (props.params as Promise<{ locale: string }>);
+  return applyRegionalMeta(md, locale);
 }

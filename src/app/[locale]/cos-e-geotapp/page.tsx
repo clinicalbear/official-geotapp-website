@@ -14,6 +14,7 @@ import { localizeEurPricesDeep } from '@/lib/pricing';
 
 import RegionalNote from '@/components/RegionalNote';
 import { isRegionLocale, regionalPageBlock } from '@/content/regional-pages';
+import { applyRegionalMeta } from '@/content/regional-pages';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 /* "Vedi i prezzi →" nella lingua giusta: stessa traduzione gia' presente nel corpo del testo prezzi. */
@@ -405,7 +406,7 @@ function getCopy(locale: string): Copy {
   return COPY.en;
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const copy = getCopy(locale);
   return {
@@ -645,4 +646,12 @@ export default async function CosEGeoTappPage({ params }: { params: Promise<{ lo
       </div>
     </>
   );
+}
+
+export async function generateMetadata(
+  props: Parameters<typeof generateMetadataBase>[0],
+): Promise<Awaited<ReturnType<typeof generateMetadataBase>>> {
+  const md = await generateMetadataBase(props);
+  const { locale } = await (props.params as Promise<{ locale: string }>);
+  return applyRegionalMeta(md, locale);
 }

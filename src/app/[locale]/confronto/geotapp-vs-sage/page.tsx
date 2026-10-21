@@ -6,6 +6,7 @@ import {
   buildComparisonBreadcrumb,
 } from '@/lib/seo/comparisonSchema';
 import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
+import { applyRegionalMeta } from '@/content/regional-pages';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 const PATHNAME = '/confronto/geotapp-vs-sage/';
@@ -336,7 +337,7 @@ const T: Record<string, Copy> = {
   },
 };
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const m = localizeEnglishDeep(META[locale] ?? META.en, locale);
   return {
@@ -413,4 +414,12 @@ export default async function GeoTappVsSagePage({ params }: { params: Promise<{ 
       />
     </>
   );
+}
+
+export async function generateMetadata(
+  props: Parameters<typeof generateMetadataBase>[0],
+): Promise<Awaited<ReturnType<typeof generateMetadataBase>>> {
+  const md = await generateMetadataBase(props);
+  const { locale } = await (props.params as Promise<{ locale: string }>);
+  return applyRegionalMeta(md, locale);
 }

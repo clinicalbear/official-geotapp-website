@@ -13,6 +13,7 @@ import RisorsaFaq from '@/components/risorse/RisorsaFaq';
 import { JsonLd } from '@/components/seo/JsonLd';
 import RegionalNote from '@/components/RegionalNote';
 import { isRegionLocale, regionalToolBlock, regionalCountryBlock } from '@/content/regional-pages';
+import { applyRegionalMeta } from '@/content/regional-pages';
 
 /**
  * Risorsa "GPS per le presenze senza tracciare i dipendenti" — risponde in
@@ -44,7 +45,7 @@ function safeLocale(locale: string): AppLocale {
     : ('it' as AppLocale);
 }
 
-export async function generateMetadata({
+async function generateMetadataBase({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -210,4 +211,12 @@ export default async function GpsPresenzeSenzaTracciamentoPage({
       <RegionalNote block={isRegionLocale(resolvedLocale) ? regionalToolBlock('attendance-without-tracking', resolvedLocale) : null} />
     </div>
   );
+}
+
+export async function generateMetadata(
+  props: Parameters<typeof generateMetadataBase>[0],
+): Promise<Awaited<ReturnType<typeof generateMetadataBase>>> {
+  const md = await generateMetadataBase(props);
+  const { locale } = await (props.params as Promise<{ locale: string }>);
+  return applyRegionalMeta(md, locale);
 }

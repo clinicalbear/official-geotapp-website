@@ -19,6 +19,7 @@ import RisorsaAttribuzione from '@/components/risorse/RisorsaAttribuzione';
 import type { PaeseSelettore } from '@/components/risorse/SelettorePaesiClient';
 import RegionalNote from '@/components/RegionalNote';
 import { isRegionLocale, regionalToolBlock, regionalCountryBlock } from '@/content/regional-pages';
+import { applyRegionalMeta } from '@/content/regional-pages';
 
 /**
  * Pagina-scheda per paese della risorsa "GPS sui lavoratori in UE".
@@ -55,7 +56,7 @@ export function generateStaticParams(): { locale: string; paese: string }[] {
   return params;
 }
 
-export async function generateMetadata({
+async function generateMetadataBase({
   params,
 }: {
   params: Promise<{ locale: string; paese: string }>;
@@ -178,4 +179,12 @@ export default async function SchedaPaesePage({
       <RegionalNote block={isRegionLocale(resolvedLocale) ? regionalCountryBlock(nomePaese, resolvedLocale) : null} />
     </>
   );
+}
+
+export async function generateMetadata(
+  props: Parameters<typeof generateMetadataBase>[0],
+): Promise<Awaited<ReturnType<typeof generateMetadataBase>>> {
+  const md = await generateMetadataBase(props);
+  const { locale } = await (props.params as Promise<{ locale: string }>);
+  return applyRegionalMeta(md, locale);
 }

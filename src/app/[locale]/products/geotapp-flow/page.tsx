@@ -17,6 +17,7 @@ import { REVIEWS } from '@/data/reviews';
 
 import RegionalNote from '@/components/RegionalNote';
 import { isRegionLocale, regionalProductBlock } from '@/content/regional-pages';
+import { applyRegionalMeta } from '@/content/regional-pages';
 const flowMeta: Record<string, { title: string; description: string }> = {
   it: { title: 'GeoTapp Flow - Gestione Operativa Interventi e Squadre', description: 'La web app dell\'ufficio per le aziende con tecnici sul campo: clienti, commesse, squadre, turni, fatture e report sigillati che il cliente verifica da solo.' },
   en: { title: 'GeoTapp Flow - Field Operations Management', description: 'The office web app for companies with field technicians: clients, jobs, teams, shifts, invoices and sealed reports that the client verifies alone.' },
@@ -31,7 +32,7 @@ const flowMeta: Record<string, { title: string; description: string }> = {
   ru: { title: 'GeoTapp Flow - управление заказами и бригадами на выезде', description: 'Веб-приложение для офиса компаний с выездными техниками: клиенты, заказы, бригады, смены, счета и запечатанные отчёты, которые клиент проверяет сам.' },
 };
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const m = flowMeta[locale] ?? flowMeta[locale.startsWith('en-') ? 'en' : 'it'];
   return {
@@ -443,4 +444,12 @@ export default async function LocaleFlowPage({ params }: Props) {
       <UpdatedOnLine pageKey={pageKey} locale={locale} />
     </>
   );
+}
+
+export async function generateMetadata(
+  props: Parameters<typeof generateMetadataBase>[0],
+): Promise<Awaited<ReturnType<typeof generateMetadataBase>>> {
+  const md = await generateMetadataBase(props);
+  const { locale } = await (props.params as Promise<{ locale: string }>);
+  return applyRegionalMeta(md, locale);
 }

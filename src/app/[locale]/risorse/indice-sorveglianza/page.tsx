@@ -14,6 +14,7 @@ import RisorsaFaq from '@/components/risorse/RisorsaFaq';
 import './l-page.css';
 import RegionalNote from '@/components/RegionalNote';
 import { isRegionLocale, regionalToolBlock, regionalCountryBlock } from '@/content/regional-pages';
+import { applyRegionalMeta } from '@/content/regional-pages';
 
 /**
  * Tool "Indice della sorveglianza sul lavoro in Europa": classifica dei 39 Paesi
@@ -33,7 +34,7 @@ function safeLocale(locale: string): AppLocale {
     : ('it' as AppLocale);
 }
 
-export async function generateMetadata({
+async function generateMetadataBase({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -147,4 +148,12 @@ export default async function IndiceSorveglianzaPage({
       <RegionalNote block={isRegionLocale(resolvedLocale) ? regionalToolBlock('surveillance-index', resolvedLocale) : null} />
     </div>
   );
+}
+
+export async function generateMetadata(
+  props: Parameters<typeof generateMetadataBase>[0],
+): Promise<Awaited<ReturnType<typeof generateMetadataBase>>> {
+  const md = await generateMetadataBase(props);
+  const { locale } = await (props.params as Promise<{ locale: string }>);
+  return applyRegionalMeta(md, locale);
 }

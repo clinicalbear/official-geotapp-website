@@ -15,6 +15,7 @@ import {
   convertEurToLocale,
   getCurrencyForLocale,
 } from '@/lib/pricing';
+import { applyRegionalMeta } from '@/content/regional-pages';
 
 const appMeta: Record<string, { title: string; description: string }> = {
   it: { title: 'GeoTapp TimeTracker - App Timbratura GPS per Tecnici sul Campo', description: 'GeoTapp TimeTracker è l\'app per i tecnici sul campo: timbrature con posizione e ora, foto di prova, note, report settimanali. Su Android e iOS, collegata a Flow.' },
@@ -30,7 +31,7 @@ const appMeta: Record<string, { title: string; description: string }> = {
   ru: { title: 'GeoTapp TimeTracker: GPS-учёт времени для выездных техников', description: 'Геопозиция фиксируется при начале смены, перерыве и завершении — и ничего автоматически между ними. Фото привязаны к заказу. 14 дней бесплатно.' },
 };
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const m = appMeta[locale] ?? appMeta[locale.startsWith('en-') ? 'en' : 'it'];
   return {
@@ -392,4 +393,12 @@ export default async function LocaleAppPage({ params }: Props) {
       <UpdatedOnLine pageKey={pageKey} locale={locale} />
     </>
   );
+}
+
+export async function generateMetadata(
+  props: Parameters<typeof generateMetadataBase>[0],
+): Promise<Awaited<ReturnType<typeof generateMetadataBase>>> {
+  const md = await generateMetadataBase(props);
+  const { locale } = await (props.params as Promise<{ locale: string }>);
+  return applyRegionalMeta(md, locale);
 }

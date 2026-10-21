@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
 
 /**
@@ -364,4 +365,51 @@ export function regionalSectorGuidesBlock(settore: string, locale: RegionLocale)
       r.law,
     ],
   });
+}
+
+/* ───────────────────── Title e description ───────────────────── */
+
+const META_TAG: Record<RegionLocale, { short: string; adj: string }> = {
+  'en-gb': { short: 'UK', adj: 'UK' },
+  'en-us': { short: 'US', adj: 'US' },
+  'en-au': { short: 'Australia', adj: 'Australian' },
+  'en-ie': { short: 'Ireland', adj: 'Irish' },
+  'en-ca': { short: 'Canada', adj: 'Canadian' },
+};
+
+const DESC_MAX = 160;
+
+function tagTitle(title: string, short: string): string {
+  const m = title.match(/^(.*?)(\s[|\-]\s*GeoTapp)$/);
+  return m ? `${m[1]} (${short})${m[2]}` : `${title} (${short})`;
+}
+
+/**
+ * Title e description diversi per le cinque varianti inglesi sulle pagine che
+ * condividono il testo con /en/. Il title prende il paese fra parentesi prima del
+ * marchio; la description una frase sul paese quando ci sta nei 160 caratteri.
+ * Si applica sopra i metadati gia' calcolati dalla pagina, cosi' non cambia la
+ * logica di nessuna. Le altre lingue passano senza modifiche.
+ */
+export function applyRegionalMeta(md: Metadata, locale: string): Metadata {
+  if (!isRegionLocale(locale)) return md;
+  const tag = META_TAG[locale];
+  const raw = md.title;
+  const oldTitle =
+    typeof raw === 'string' ? raw : raw && 'absolute' in raw && raw.absolute ? raw.absolute : raw && 'default' in raw ? raw.default : null;
+  const out: Metadata = { ...md };
+  let newTitle: string | null = null;
+  if (oldTitle) {
+    newTitle = tagTitle(oldTitle, tag.short);
+    out.title = typeof raw === 'string' ? newTitle : raw && 'absolute' in raw ? { absolute: newTitle } : { ...(raw as object), default: newTitle } as Metadata['title'];
+  }
+  let newDesc: string | undefined;
+  if (typeof md.description === 'string') {
+    const add = ` For ${tag.adj} field teams.`;
+    newDesc = md.description.length + add.length <= DESC_MAX ? md.description + add : md.description;
+    out.description = newDesc;
+  }
+  if (md.openGraph) out.openGraph = { ...md.openGraph, ...(newTitle ? { title: newTitle } : {}), ...(newDesc ? { description: newDesc } : {}) } as Metadata['openGraph'];
+  if (md.twitter) out.twitter = { ...md.twitter, ...(newTitle ? { title: newTitle } : {}), ...(newDesc ? { description: newDesc } : {}) } as Metadata['twitter'];
+  return out;
 }
