@@ -667,6 +667,20 @@ export default function SettorePageLayout({ content, locale, settore, children }
         </section>
       )}
 
+      {/* ── Contesto regionale (solo varianti EN: norma del paese) ── */}
+      {content.regional_context && (
+        <section className="fq">
+          <div className="w"><div className="g">
+            <h2 className="r">{content.regional_context.title}</h2>
+            <div>
+              {content.regional_context.paras.map((para, i) => (
+                <p key={i} className="r" style={{ marginBottom: 14, color: '#475467' }}>{para}</p>
+              ))}
+            </div>
+          </div></div>
+        </section>
+      )}
+
       {/* ── FAQ ── */}
       <section className="fq">
         <div className="w"><div className="g">

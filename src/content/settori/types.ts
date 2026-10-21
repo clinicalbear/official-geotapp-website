@@ -102,6 +102,16 @@ export interface SettoreContent {
     paras: string[];
     link?: { href: string; label: string };
   }>;
+  /**
+   * Blocco regionale (solo varianti EN: en-gb, en-us, en-au, en-ie, en-ca).
+   * Nasce il 21/10/2026: l'ispezione GSC mostrava le varianti regionali al 94-96%
+   * identiche a /en/ e Google ne accorpava 320 su 445. Il testo qui e' scritto per
+   * il paese, con la norma di quel paese, non tradotto da /en/.
+   */
+  regional_context?: {
+    title: string;
+    paras: string[];
+  };
   schema_sector_name: string;
   schema_faq?: Array<{
     question: string;

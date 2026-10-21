@@ -1,6 +1,7 @@
 import type { AppLocale } from '@/lib/i18n/config';
 import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
 import type { SettoreContent } from '../types';
+import { applyRegionalOverride } from '../regional-overrides';
 import { localizeEurPricesDeep } from '@/lib/pricing';
 
 const map: Partial<Record<AppLocale, () => Promise<{ default: SettoreContent }>>> = {
@@ -25,5 +26,5 @@ const map: Partial<Record<AppLocale, () => Promise<{ default: SettoreContent }>>
 export async function getImpresaDiPulizieContent(locale: AppLocale): Promise<SettoreContent> {
   const loader = (map[locale] ?? map['en'])!;
   const mod = await loader();
-  return localizeEurPricesDeep(localizeEnglishDeep(mod.default, locale), locale);
+  return applyRegionalOverride('impresa-di-pulizie', locale, localizeEurPricesDeep(localizeEnglishDeep(mod.default, locale), locale));
 }
