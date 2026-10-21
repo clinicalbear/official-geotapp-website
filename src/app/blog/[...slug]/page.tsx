@@ -321,6 +321,26 @@ const ARTICLE_LEAD_MAGNETS: Record<string, string> = {
   'gps-integritetspolicy-anstallda-mall': 'informativa-gps',
   'facsimile-gps-personvernerklaering-ansatte': 'informativa-gps',
   'obrazec-uvedomleniya-gps-sotrudniki': 'informativa-gps',
+  // Le versioni di aprile e maggio dello stesso fac-simile e le guide "come farla bene"
+  // di agosto: parlano dello stesso documento ma non avevano il PDF (21/10/2026). Il
+  // tedesco di aprile e' quello che Google gia' mostra in pagina 1.
+  'gps-employee-privacy-notice-template-2026': 'informativa-gps',
+  'sample-gps-employee-information-notice-form-2026-ready-and-gdpr-compliant': 'informativa-gps',
+  'gps-clock-in-privacy-notice-uk': 'informativa-gps',
+  'muster-datenschutzerklaerung-gps-mitarbeiterortung-2026': 'informativa-gps',
+  'muster-fur-die-gps-mitarbeiterinformation-formular-2026-fertiggestellt-und-dsgvo-konform': 'informativa-gps',
+  'gps-datenschutzhinweis-zeiterfassung-richtig': 'informativa-gps',
+  'gps-volgen-personeel-avg-privacyverklaring-2026': 'informativa-gps',
+  'gps-inklokken-informatie-medewerkers-goed-geregeld': 'informativa-gps',
+  'geolocalisation-salaries-information-rgpd-2026': 'informativa-gps',
+  'geolocalizacion-empleados-informacion-rgpd-2026': 'informativa-gps',
+  'geolocalizacao-trabalhadores-informacao-rgpd-2026': 'informativa-gps',
+  'gps-sporing-medarbejdere-oplysning-skabelon-2026': 'informativa-gps',
+  'gps-overvakning-anstallda-information-mall-2026': 'informativa-gps',
+  'gps-sporing-ansatte-informasjon-mal-2026': 'informativa-gps',
+  'gps-otslezhivanie-sotrudnikov-uvedomlenie-gdpr-2026': 'informativa-gps',
+  'uvedomlenie-gps-sotrudniki-zakonnaya-otmetka': 'informativa-gps',
+  'informativa-gps-dipendenti-come-farla-bene': 'informativa-gps',
 };
 
 export default async function BlogArticlePage({ params }: Props) {
