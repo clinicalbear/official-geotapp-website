@@ -13,11 +13,32 @@ describe('override regionali EN', () => {
     expect(gb.regional_context?.paras.join(' ')).toContain('regulation 9');
   });
 
-  it('/en/ e le regioni non ancora scritte restano senza override', async () => {
+  it('/en/ resta senza override regionale', async () => {
     const en = await getPulizieContent('en');
-    const us = await getPulizieContent('en-us');
     expect(en.regional_context).toBeUndefined();
-    expect(us.regional_context).toBeUndefined();
+  });
+
+  it('ogni regione ha un blocco e un title propri su tutti e dieci i settori', () => {
+    const regions = ['en-gb', 'en-us', 'en-au', 'en-ie', 'en-ca'] as const;
+    const slugs = Object.keys(REGIONAL_OVERRIDES);
+    expect(slugs.length).toBe(10);
+    for (const slug of slugs) {
+      const titles = new Set<string>();
+      for (const r of regions) {
+        const o = (REGIONAL_OVERRIDES as any)[slug][r];
+        expect(o, `${slug} ${r}`).toBeTruthy();
+        expect(o.regional_context.paras.length).toBeGreaterThanOrEqual(3);
+        if (o.meta?.title) titles.add(o.meta.title);
+      }
+      // i title devono differire tra regioni (idraulici en-us/en-gb tengono REGIONAL_META)
+      expect(titles.size).toBeGreaterThanOrEqual(3);
+    }
+  });
+
+  it('ortografia coerente con la regione', () => {
+    const txt = (r: string) => JSON.stringify(Object.values(REGIONAL_OVERRIDES).map((m: any) => m[r]));
+    for (const r of ['en-us', 'en-ca']) expect(txt(r)).not.toMatch(/organis|summaris|licence/i);
+    for (const r of ['en-gb', 'en-au', 'en-ie']) expect(txt(r)).not.toMatch(/organiz|summariz/i);
   });
 
   it('il cantiere en-gb non perde le altre sezioni', async () => {
