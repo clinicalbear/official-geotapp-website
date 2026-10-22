@@ -48,3 +48,10 @@
   Content-Type: application/octet-stream
   Content-Disposition: attachment; filename="verificatore-geotapp.html"
   Cache-Control: public, no-transform, max-age=3600
+
+# Il .html viene reindirizzato (307) al percorso senza estensione, ed e' QUELLO che serve il file:
+# le intestazioni vanno messe anche li', altrimenti torna text/html e Cloudflare lo riscrive.
+/downloads/verificatore-geotapp
+  Content-Type: application/octet-stream
+  Content-Disposition: attachment; filename="verificatore-geotapp.html"
+  Cache-Control: public, no-transform, max-age=3600
