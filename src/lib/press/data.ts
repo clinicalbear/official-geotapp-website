@@ -46,6 +46,22 @@ export function pressRel(_item: PressItem): string {
 // VUOTI al lancio. Aggiungere una voce = la sezione compare da sola in pagina.
 export const PRESS_RELEASES: PressItem[] = [];
 export const PRESS_COVERAGE: PressItem[] = [
+  // ManagementSite (NL), contributo a firma Michele Angelo Petraroli, online dal 21/10/2026
+  // (data letta dal tag <time> dell'articolo). Proposto il 19/10; la redazione ha risposto il 20/10
+  // che e' una piattaforma aperta con selezione: l'80% finisce nel cestino, questo e' passato.
+  // Verificato online il 22/10/2026: HTTP 200, titolo dal <title> della pagina, canonical uguale
+  // all'URL. Nessun link a geotapp.com nella pagina (zero occorrenze di "geotapp", anche nella
+  // pagina autore): nessun flag follow. Chiesta la foto del profilo, il link va chiesto a parte.
+  // Logo ricavato da https://www.managementsite.nl/img/logo.svg (non fornito dalla testata).
+  {
+    date: '2026-10-21',
+    outlet: 'ManagementSite',
+    title: 'Wie zijn uren niet kan aantonen, heeft ze niet gewerkt',
+    url: 'https://www.managementsite.nl/wie-zijn-uren-niet-kan-aantonen-heeft-ze-niet-gewerkt',
+    locale: 'nl',
+    country: 'nl',
+    logo: '/press/managementsite.png',
+  },
   // Vigilanza Privata Online, lettera al direttore a firma Michele Angelo Petraroli, uscita il
   // 19/10/2026 (secondo contributo dopo quello di luglio). Verificato online il 19/10/2026:
   // HTTP 200, titolo dal <title> della pagina. Nessun link a geotapp.com nel pezzo (GeoTapp
