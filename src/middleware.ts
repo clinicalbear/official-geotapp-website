@@ -215,6 +215,11 @@ const GPS_SCHEDE_SLUGS = [
   'slovacchia', 'slovenia', 'spagna', 'svezia', 'svizzera', 'ucraina', 'ungheria',
 ];
 
+// Pagine che esistono solo in italiano (route con generateStaticParams solo 'it').
+const SITEMAP_IT_ONLY_ROUTES: SitemapRouteEntry[] = [
+  { path: '/risorse/manuale-gdpr-lavoro-sul-campo/', priority: 0.8, changeFrequency: 'monthly' },
+];
+
 const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/', priority: 1.0, changeFrequency: 'weekly' },
   { path: '/products/geotapp-flow/', priority: 0.95, changeFrequency: 'weekly' },
@@ -398,6 +403,19 @@ async function buildFullSitemap(): Promise<string> {
         `  </url>`,
       );
     }
+  }
+
+  // 1b. Pagine solo italiane (il contenuto esiste solo in IT): un URL, senza hreflang
+  //     e senza le altre lingue, che darebbero 404.
+  for (const { path, priority, changeFrequency } of SITEMAP_IT_ONLY_ROUTES) {
+    localeEntries.push(
+      `  <url>\n` +
+      `    <loc>${SITEMAP_BASE_URL}/it${path}</loc>\n` +
+      `    <lastmod>${today}</lastmod>\n` +
+      `    <changefreq>${changeFrequency}</changefreq>\n` +
+      `    <priority>${priority}</priority>\n` +
+      `  </url>`,
+    );
   }
 
   // 2. Blog posts: un solo giro sull'indice WP, con le traduzioni raggruppate.
