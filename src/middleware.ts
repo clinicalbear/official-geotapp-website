@@ -215,11 +215,6 @@ const GPS_SCHEDE_SLUGS = [
   'slovacchia', 'slovenia', 'spagna', 'svezia', 'svizzera', 'ucraina', 'ungheria',
 ];
 
-// Pagine che esistono solo in italiano (route con generateStaticParams solo 'it').
-const SITEMAP_IT_ONLY_ROUTES: SitemapRouteEntry[] = [
-  { path: '/risorse/manuale-gdpr-lavoro-sul-campo/', priority: 0.8, changeFrequency: 'monthly' },
-];
-
 const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/', priority: 1.0, changeFrequency: 'weekly' },
   { path: '/products/geotapp-flow/', priority: 0.95, changeFrequency: 'weekly' },
@@ -274,6 +269,10 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/risorse/politica-conservazione-dati/', priority: 0.85, changeFrequency: 'monthly' },
   { path: '/risorse/dossier-conformita/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/risorse/gps-presenze-senza-tracciamento/', priority: 0.85, changeFrequency: 'monthly' },
+  // Manuale e checklist scaricabili dietro email: pagina in tutte le lingue (nelle altre dieci
+  // dice che l'edizione tradotta e' in arrivo e intanto da' la copia italiana).
+  { path: '/risorse/manuale-gdpr-lavoro-sul-campo/', priority: 0.8, changeFrequency: 'monthly' },
+  { path: '/risorse/checklist-geolocalizzazione-squadre/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/roi-calculator/', priority: 0.75, changeFrequency: 'monthly' },
   // Pagina di iscrizione alla newsletter: indicizzabile, a differenza di /survey/.
   { path: '/newsletter/', priority: 0.6, changeFrequency: 'monthly' },
@@ -403,19 +402,6 @@ async function buildFullSitemap(): Promise<string> {
         `  </url>`,
       );
     }
-  }
-
-  // 1b. Pagine solo italiane (il contenuto esiste solo in IT): un URL, senza hreflang
-  //     e senza le altre lingue, che darebbero 404.
-  for (const { path, priority, changeFrequency } of SITEMAP_IT_ONLY_ROUTES) {
-    localeEntries.push(
-      `  <url>\n` +
-      `    <loc>${SITEMAP_BASE_URL}/it${path}</loc>\n` +
-      `    <lastmod>${today}</lastmod>\n` +
-      `    <changefreq>${changeFrequency}</changefreq>\n` +
-      `    <priority>${priority}</priority>\n` +
-      `  </url>`,
-    );
   }
 
   // 2. Blog posts: un solo giro sull'indice WP, con le traduzioni raggruppate.

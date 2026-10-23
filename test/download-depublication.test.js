@@ -10,10 +10,10 @@ function read(...parts) {
 }
 
 test('download route is removed from sitemap route lists', () => {
-  const sitemap = read('src', 'app', 'sitemap.ts');
+  // La sitemap vive solo nel middleware (src/app/sitemap.ts non esiste piu').
   const middleware = read('src', 'middleware.ts');
 
-  assert.doesNotMatch(sitemap, /path:\s*'\/download\/'/);
+  assert.ok(!fs.existsSync(path.join(rootDir, 'src', 'app', 'sitemap.ts')), 'sitemap.ts e\' tornato: la fonte deve essere una sola');
   assert.doesNotMatch(middleware, /path:\s*'\/download\/'/);
 });
 

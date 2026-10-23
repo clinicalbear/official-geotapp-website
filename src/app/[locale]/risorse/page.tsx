@@ -7,6 +7,7 @@ import type { AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
 import { JsonLd } from '@/components/seo/JsonLd';
 import LNastro from '@/components/LNastro';
+import { ASSETS as LEAD_ASSETS, COPY as LEAD_COPY, baseLocale } from '@/content/lead-assets';
 import './l-page.css';
 
 import RegionalNote from '@/components/RegionalNote';
@@ -124,14 +125,14 @@ export default async function RisorseHubPage({
                 </Link>
               );
             })}
-            {resolvedLocale === 'it' && (
-              <Link href={getLink('/risorse/manuale-gdpr-lavoro-sul-campo/')} className="r d1">
-                <span className="nn">{String(CARDS.length + 1).padStart(2, '0')}</span>
-                <h3>Manuale in PDF: posizione, orari e foto di chi lavora fuori sede</h3>
-                <p>Statuto dei lavoratori, GDPR, casi del Garante e modelli, in 94 pagine con le fonti.</p>
+            {(['manuale', 'checklist'] as const).map((k, j) => (
+              <Link key={k} href={getLink(LEAD_ASSETS[k].path)} className={`r d${((CARDS.length + j) % 4) + 1}`}>
+                <span className="nn">{String(CARDS.length + j + 1).padStart(2, '0')}</span>
+                <h3>{LEAD_COPY[baseLocale(resolvedLocale)][k].h1}</h3>
+                <p>{LEAD_COPY[baseLocale(resolvedLocale)][k].subtitle}</p>
                 <span className="go" aria-hidden="true">&rarr;</span>
               </Link>
-            )}
+            ))}
           </div>
         </div>
       </section>

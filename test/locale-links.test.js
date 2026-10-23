@@ -19,9 +19,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
-const { stripTypeScriptTypes } = require('node:module');
 const path = require('node:path');
-const { pathToFileURL } = require('node:url');
 
 const rootDir = path.join(__dirname, '..');
 
@@ -29,53 +27,7 @@ function read(...parts) {
   return fs.readFileSync(path.join(rootDir, ...parts), 'utf8');
 }
 
-async function loadLocaleRouting() {
-  const modulePath = path.join(
-    rootDir,
-    'src',
-    'lib',
-    'i18n',
-    'locale-routing.ts',
-  );
-  const configUrl = pathToFileURL(
-    path.join(rootDir, 'src', 'lib', 'i18n', 'config.ts'),
-  ).href;
-  const source = fs
-    .readFileSync(modulePath, 'utf8')
-    .replaceAll("'./config'", `'${configUrl}'`)
-    .replaceAll('"./config"', `"${configUrl}"`);
-
-  const transformed = stripTypeScriptTypes(source, {
-    mode: 'transform',
-  });
-
-  return import(
-    `data:text/javascript;charset=utf-8,${encodeURIComponent(transformed)}`
-  );
-}
-
-test('locale pathname helpers support explicit locale-prefixed routes', async () => {
-  const {
-    getLocaleFromPathname,
-    stripLocaleFromPathname,
-    localizePath,
-  } = await loadLocaleRouting();
-
-  assert.equal(getLocaleFromPathname('/fr/pricing'), 'fr');
-  assert.equal(getLocaleFromPathname('/en/products/geotapp-flow'), 'en');
-  assert.equal(getLocaleFromPathname('/pricing'), null);
-
-  assert.equal(stripLocaleFromPathname('/fr/pricing'), '/pricing');
-  assert.equal(stripLocaleFromPathname('/it'), '/');
-  assert.equal(stripLocaleFromPathname('/contact'), '/contact');
-
-  assert.equal(localizePath('/pricing', 'de'), '/de/pricing');
-  assert.equal(localizePath('/', 'it'), '/it');
-  assert.equal(
-    localizePath('/fr/products/geotapp-app', 'nl'),
-    '/nl/products/geotapp-app',
-  );
-});
+// I test sugli helper di locale-routing sono ora in src/lib/i18n/i18n-registry.test.ts (vitest).
 
 test('navbar and footer rely on shared locale helpers instead of binary en checks', () => {
   const navbar = read('src', 'components', 'Navbar.tsx');

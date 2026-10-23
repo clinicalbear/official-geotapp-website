@@ -46,54 +46,30 @@ async function loadModule(relativePath, replacements = {}) {
   );
 }
 
-test('dictionary registry exposes localized public copy for supported european locales', async () => {
-  const configUrl = pathToFileURL(
-    path.join(rootDir, 'src', 'lib', 'i18n', 'config.ts'),
-  ).href;
-  const itJson = JSON.stringify(
-    JSON.parse(read('src', 'dictionaries', 'it.json')),
-  );
-  const enJson = JSON.stringify(
-    JSON.parse(read('src', 'dictionaries', 'en.json')),
-  );
+// Il test sui valori dei dizionari e sul routing e' ora in src/lib/i18n/i18n-registry.test.ts (vitest):
+// il registro importa altri moduli e non si carica piu' con un data: URL.
 
-  const { getDictionary } = await loadModule('src/lib/i18n/dictionaries.ts', {
-    "'./config'": `'${configUrl}'`,
-    '"./config"': `"${configUrl}"`,
-    "import enDict from '@/dictionaries/en.json';": `const enDict = ${enJson};`,
-    'import enDict from "@/dictionaries/en.json";': `const enDict = ${enJson};`,
-    "import itDict from '@/dictionaries/it.json';": `const itDict = ${itJson};`,
-    'import itDict from "@/dictionaries/it.json";': `const itDict = ${itJson};`,
-  });
+test('no file reads the it/en dictionaries directly: everything goes through the shared registry', () => {
+  // Le pagine ora stanno in src/app/[locale]/ e spesso delegano a componenti: il criterio
+  // che conta e' che solo il registro importi i JSON italiano e inglese.
+  const allowed = new Set([
+    path.join('src', 'lib', 'i18n', 'dictionaries.ts'),
+    path.join('src', 'lib', 'risorse', 'gps-lavoratori-ue', 'fonte-non-ufficiale.test.ts'),
+  ]);
+  const offenders = [];
+  (function walk(dir) {
+    for (const entry of fs.readdirSync(path.join(rootDir, dir), { withFileTypes: true })) {
+      const rel = path.join(dir, entry.name);
+      if (entry.isDirectory()) walk(rel);
+      else if (/\.(ts|tsx)$/.test(entry.name) && !allowed.has(rel)) {
+        if (/dictionaries\/(it|en)\.json/.test(read(rel))) offenders.push(rel);
+      }
+    }
+  })('src');
+  assert.deepEqual(offenders, []);
 
-  assert.equal(getDictionary('fr').navbar.products, 'Produits');
-  assert.equal(getDictionary('de').navbar.pricing, 'Preise');
-  assert.equal(getDictionary('es').contact.form.send, 'Enviar');
-  assert.equal(getDictionary('pt').login_hub.flow.btn, 'Entrar no Flow');
-  assert.equal(getDictionary('nl').footer.rights, 'Alle rechten voorbehouden.');
-  assert.equal(getDictionary('sv').landing.hero_cta_primary, 'Kom igang nu');
-  assert.equal(getDictionary('da').login_hub.timetracker.btn, 'Log ind i TimeTracker');
-  assert.equal(getDictionary('nb').navbar.contact, 'Kontakt');
-  assert.equal(getDictionary('ru').contact.form.name, 'Imya');
-});
-
-test('main public pages use the shared dictionary registry instead of direct it/en imports', () => {
-  const files = [
-    ['src', 'app', 'page.tsx'],
-    ['src', 'app', 'pricing', 'page.tsx'],
-    ['src', 'app', 'contact', 'page.tsx'],
-    ['src', 'app', 'login', 'page.tsx'],
-    ['src', 'app', 'products', 'geotapp-flow', 'page.tsx'],
-    ['src', 'app', 'products', 'geotapp-app', 'page.tsx'],
-    ['src', 'components', 'Navbar.tsx'],
-    ['src', 'components', 'Footer.tsx'],
-  ];
-
-  for (const fileParts of files) {
-    const source = read(...fileParts);
-    assert.match(source, /@\/lib\/i18n\/dictionaries/);
-    assert.doesNotMatch(source, /@\/dictionaries\/it\.json/);
-    assert.doesNotMatch(source, /@\/dictionaries\/en\.json/);
+  for (const fileParts of [['src', 'components', 'Navbar.tsx'], ['src', 'components', 'Footer.tsx']]) {
+    assert.match(read(...fileParts), /@\/lib\/i18n\/dictionaries/);
   }
 });
 

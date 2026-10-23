@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { rateLimitOk, clientIp } from '@/lib/rate-limit';
+import { ASSETS } from '@/content/lead-assets';
 
 const ML_API = 'https://connect.mailerlite.com/api';
 
@@ -41,6 +42,11 @@ const LANG_GROUPS: Record<string, string> = {
 const LEAD_MAGNET_GROUPS: Record<string, string> = {
   'informativa-gps': '188186066672420802',
 };
+
+// Risorse scaricabili dietro email: il link al PDF si da' solo nella risposta, dopo l'iscrizione.
+const LEAD_FILES: Record<string, string> = Object.fromEntries(
+  Object.values(ASSETS).map((a) => [a.leadMagnet, a.file]),
+);
 
 export async function POST(req: NextRequest) {
   if (!rateLimitOk(`nl:${clientIp(req)}`, 5, 60_000)) {
@@ -117,5 +123,6 @@ export async function POST(req: NextRequest) {
     }
   }
 
-  return NextResponse.json({ ok: true });
+  const file = leadMagnet ? LEAD_FILES[leadMagnet] : undefined;
+  return NextResponse.json(file ? { ok: true, file } : { ok: true });
 }

@@ -44,6 +44,7 @@ export default function robots(): MetadataRoute.Robots {
           '/blog/wp-json/',
           '/blog/author/',
           '/candidatura/',
+          '/downloads/riservati/',
         ],
       },
     ],
