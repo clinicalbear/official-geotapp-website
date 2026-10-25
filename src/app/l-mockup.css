@@ -264,6 +264,9 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
   .steps2{flex-direction:column}
 }
 .art{padding:74px 0 90px}
+/* .wt.art: il padding verticale di .art non deve azzerare quello laterale di .wt */
+.wt.art{padding-left:46px;padding-right:46px}
+@media(max-width:900px){.wt.art{padding:48px 22px 64px}}
 .art .lay{display:grid;grid-template-columns:.26fr 1fr;gap:66px;align-items:start}
 .art .side{position:sticky;top:130px}
 .art .side .lb{color:#475467;margin-bottom:14px}
