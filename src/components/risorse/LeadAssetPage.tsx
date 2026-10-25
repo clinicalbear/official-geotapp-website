@@ -100,7 +100,7 @@ export async function LeadAssetPage({
                   alt={c.h1}
                   width={720}
                   height={1103}
-                  style={{ width: 240, maxWidth: '100%', height: 'auto', borderRadius: 4, boxShadow: '0 6px 24px rgba(11,23,54,.18)' }}
+                  style={{ width: 'min(360px, 100%)', height: 'auto', borderRadius: 4, boxShadow: '0 6px 24px rgba(11,23,54,.18)' }}
                 />
               )}
               <div style={{ flex: '1 1 320px' }}>
