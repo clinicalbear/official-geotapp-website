@@ -981,6 +981,8 @@
     "photo_download_2": "Foto del fundador (en el escenario)",
     "photo_download_3": "Foto del fundador (primer plano)",
     "photo_download_wide": "Foto del fundador (formato panorámico)",
+    "photo_download_studio": "Foto del fundador (en estudio)",
+    "photo_download_studio_wide": "Foto del fundador (en estudio, formato panorámico)",
     "asset_map": "Mapa GPS trabajadores UE",
     "asset_facsimile": "Plantilla de aviso de privacidad GPS",
     "asset_uk_consultation": "Respuesta a la consulta británica sobre monitorización laboral (PDF, en inglés)",

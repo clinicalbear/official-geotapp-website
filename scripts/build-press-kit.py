@@ -42,6 +42,8 @@ PHOTOS = [
     ("Founder-portrait", "michele-petraroli-3.webp"),
     ("Founder-portrait-2", "michele-petraroli-2.webp"),
     ("Founder-wide", "michele-petraroli-wide.webp"),
+    ("Founder-studio", "michele-petraroli-studio.webp"),
+    ("Founder-studio-wide", "michele-petraroli-studio-wide.webp"),
 ]
 
 # Testi del README. Solo questi sono scritti qui; boilerplate, fatti, bio e
