@@ -22,7 +22,7 @@ export const dynamic = 'force-dynamic';
 // arrivano ora dall'indice condiviso, che ricava il nome da Yoast e filtra in codice.
 // La foto non e' piu' disponibile da WordPress (niente avatar_urls): si usa il ritratto
 // del sito, lo stesso di /chi-siamo.
-const AUTHOR_PHOTO = '/michele-petraroli-3.webp';
+const AUTHOR_PHOTO = '/michele-petraroli-closeup.webp';
 const ARTICLES_SHOWN = 24;
 
 function detectLocale(headerStore: Headers, cookieValue: string | undefined): AppLocale {

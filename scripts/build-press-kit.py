@@ -39,9 +39,9 @@ LOGOS = [
     ("GeoTapp-Verifier", "logoVerifier.webp"),
 ]
 PHOTOS = [
-    ("Founder-portrait", "michele-petraroli-3.webp"),
+    ("Founder-portrait", "michele-petraroli-closeup.webp"),
     ("Founder-portrait-2", "michele-petraroli-2.webp"),
-    ("Founder-wide", "michele-petraroli-wide.webp"),
+    ("Founder-wide", "michele-petraroli-closeup-wide.webp"),
 ]
 
 # Testi del README. Solo questi sono scritti qui; boilerplate, fatti, bio e

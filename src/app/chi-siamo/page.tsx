@@ -99,7 +99,7 @@ export default function AboutPage() {
       <section className="sec warm"><div className="w"><div className="fnd">
         <div className="r-s">
           <Image
-            src="/michele-petraroli-3.webp"
+            src="/michele-petraroli-closeup.webp"
             alt={`${cs.founder.name}, ${cs.founder.role} GeoTapp`}
             width={640}
             height={640}

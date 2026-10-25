@@ -170,42 +170,42 @@ export default function StampaView({
       </div></div></section>
 
       {/* ── il fondatore ── */}
-      <section className="sec warm"><div className="w"><div className="fnd">
-        <div className="r-s" style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-          <Image
-            src="/michele-petraroli-3.webp"
-            alt={FOUNDER_ALT[locale] ?? FOUNDER_ALT.en}
-            width={640}
-            height={640}
-          />
-          <a href="/michele-petraroli-3.webp" download className="b2" style={{ fontSize: 13, textAlign: 'center' }}>
-            {d.photo_download_3}
-          </a>
-          <Image
-            src="/michele-petraroli-wide.webp"
-            alt={FOUNDER_ALT[locale] ?? FOUNDER_ALT.en}
-            width={1535}
-            height={1024}
-          />
-          <a href="/michele-petraroli-wide.webp" download className="b2" style={{ fontSize: 13, textAlign: 'center' }}>
-            {d.photo_download_wide}
-          </a>
-          <Image
-            src="/michele-petraroli-2.webp"
-            alt={FOUNDER_ALT_STAGE[locale] ?? FOUNDER_ALT_STAGE.en}
-            width={640}
-            height={640}
-          />
-          <a href="/michele-petraroli-2.webp" download className="b2" style={{ fontSize: 13, textAlign: 'center' }}>
-            {d.photo_download_2}
-          </a>
-        </div>
-        <div className="r d1">
+      <section className="sec warm"><div className="w">
+        <div className="fnd-t r">
           <p className="kk k" style={{ color: 'var(--seal-testo)' }}>{d.founder_label}</p>
           <h2 style={{ fontSize: 'clamp(26px,3.2vw,46px)' }}>Michele Angelo Petraroli</h2>
           <p style={{ color: '#344054', marginTop: 22, maxWidth: '60ch' }}>{d.founder_bio}</p>
         </div>
-      </div></div></section>
+        <div className="fnd-g r-s">
+          <figure className="f-sq">
+            <Image
+              src="/michele-petraroli-closeup.webp"
+              alt={FOUNDER_ALT[locale] ?? FOUNDER_ALT.en}
+              width={1254}
+              height={1254}
+            />
+            <a href="/michele-petraroli-closeup.webp" download className="b2">{d.photo_download_3}</a>
+          </figure>
+          <figure className="f-sq">
+            <Image
+              src="/michele-petraroli-2.webp"
+              alt={FOUNDER_ALT_STAGE[locale] ?? FOUNDER_ALT_STAGE.en}
+              width={863}
+              height={863}
+            />
+            <a href="/michele-petraroli-2.webp" download className="b2">{d.photo_download_2}</a>
+          </figure>
+          <figure className="f-wide">
+            <Image
+              src="/michele-petraroli-closeup-wide.webp"
+              alt={FOUNDER_ALT[locale] ?? FOUNDER_ALT.en}
+              width={2048}
+              height={1272}
+            />
+            <a href="/michele-petraroli-closeup-wide.webp" download className="b2">{d.photo_download_wide}</a>
+          </figure>
+        </div>
+      </div></section>
 
       {/* ── risorse per la stampa ── */}
       <section className="sec" id="risorse"><div className="w">
@@ -227,18 +227,18 @@ export default function StampaView({
               <span>{d.logo_download}</span>
             </a>
           ))}
-          <a href="/michele-petraroli-3.webp" download>
+          <a href="/michele-petraroli-closeup.webp" download>
             <span className="thumb">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/michele-petraroli-3.webp" alt={d.photo_download_3} loading="lazy" style={{ objectFit: 'cover', borderRadius: 8 }} />
+              <img src="/michele-petraroli-closeup.webp" alt={d.photo_download_3} loading="lazy" style={{ objectFit: 'cover', borderRadius: 8 }} />
             </span>
             <b>{d.photo_download_3}</b>
             <span>.webp</span>
           </a>
-          <a href="/michele-petraroli-wide.webp" download>
+          <a href="/michele-petraroli-closeup-wide.webp" download>
             <span className="thumb">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/michele-petraroli-wide.webp" alt={d.photo_download_wide} loading="lazy" style={{ objectFit: 'cover', borderRadius: 8 }} />
+              <img src="/michele-petraroli-closeup-wide.webp" alt={d.photo_download_wide} loading="lazy" style={{ objectFit: 'cover', borderRadius: 8 }} />
             </span>
             <b>{d.photo_download_wide}</b>
             <span>.webp</span>
