@@ -199,24 +199,6 @@ export default function StampaView({
           <a href="/michele-petraroli-2.webp" download className="b2" style={{ fontSize: 13, textAlign: 'center' }}>
             {d.photo_download_2}
           </a>
-          <Image
-            src="/michele-petraroli-studio.webp"
-            alt={FOUNDER_ALT[locale] ?? FOUNDER_ALT.en}
-            width={1254}
-            height={1254}
-          />
-          <a href="/michele-petraroli-studio.webp" download className="b2" style={{ fontSize: 13, textAlign: 'center' }}>
-            {d.photo_download_studio}
-          </a>
-          <Image
-            src="/michele-petraroli-studio-wide.webp"
-            alt={FOUNDER_ALT[locale] ?? FOUNDER_ALT.en}
-            width={2048}
-            height={1272}
-          />
-          <a href="/michele-petraroli-studio-wide.webp" download className="b2" style={{ fontSize: 13, textAlign: 'center' }}>
-            {d.photo_download_studio_wide}
-          </a>
         </div>
         <div className="r d1">
           <p className="kk k" style={{ color: 'var(--seal-testo)' }}>{d.founder_label}</p>
@@ -267,22 +249,6 @@ export default function StampaView({
               <img src="/michele-petraroli-2.webp" alt={d.photo_download_2} loading="lazy" style={{ objectFit: 'cover', borderRadius: 8 }} />
             </span>
             <b>{d.photo_download_2}</b>
-            <span>.webp</span>
-          </a>
-          <a href="/michele-petraroli-studio.webp" download>
-            <span className="thumb">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/michele-petraroli-studio.webp" alt={d.photo_download_studio} loading="lazy" style={{ objectFit: 'cover', borderRadius: 8 }} />
-            </span>
-            <b>{d.photo_download_studio}</b>
-            <span>.webp</span>
-          </a>
-          <a href="/michele-petraroli-studio-wide.webp" download>
-            <span className="thumb">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/michele-petraroli-studio-wide.webp" alt={d.photo_download_studio_wide} loading="lazy" style={{ objectFit: 'cover', borderRadius: 8 }} />
-            </span>
-            <b>{d.photo_download_studio_wide}</b>
             <span>.webp</span>
           </a>
           <a href={localizePath('/risorse/gps-lavoratori-ue/', locale)}>
