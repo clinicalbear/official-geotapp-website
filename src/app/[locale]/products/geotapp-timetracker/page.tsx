@@ -18,8 +18,8 @@ import {
 import { applyRegionalMeta } from '@/content/regional-pages';
 
 const appMeta: Record<string, { title: string; description: string }> = {
-  it: { title: 'GeoTapp TimeTracker - App Timbratura GPS per Tecnici sul Campo', description: 'GeoTapp TimeTracker è l\'app per i tecnici sul campo: timbrature con posizione e ora, foto di prova, note, report settimanali. Su Android e iOS, collegata a Flow.' },
-  en: { title: 'GeoTapp TimeTracker: GPS clock-in app for field crews', description: 'Location is recorded when your crew clocks in, takes a break or clocks out, and nothing automatically in between. Photos attach to the job. 14 days free.' },
+  it: { title: 'Rilevazione presenze con GPS per squadre sul campo | GeoTapp', description: 'GeoTapp TimeTracker è l\'app di rilevazione presenze per chi lavora sul campo: timbrature con posizione e ora, foto di prova, note, report settimanali. Su Android e iOS, collegata a Flow.' },
+  en: { title: 'Attendance management with GPS clock in/out for field crews | GeoTapp', description: 'GeoTapp TimeTracker is the attendance and clock in clock out app for field crews. Location is recorded at clock-in, break and clock-out, and nothing automatically in between. 14 days free.' },
   de: { title: 'GeoTapp TimeTracker: Stempel-App mit GPS für Teams im Außendienst', description: 'Der Standort wird bei Beginn, Pause und Ende erfasst, dazwischen automatisch nichts. Fotos hängen am Auftrag. 14 Tage kostenlos.' },
   fr: { title: 'GeoTapp TimeTracker : pointage GPS pour équipes terrain', description: 'La position est enregistrée à l\'arrivée, à la pause et au départ, rien d\'automatique entre les deux. Les photos sont liées au chantier. 14 jours gratuits.' },
   es: { title: 'GeoTapp TimeTracker: fichaje con GPS para equipos de campo', description: 'La ubicación se registra a la entrada, en la pausa y a la salida, nada automático entre medias. Las fotos van ligadas a la obra. 14 días gratis.' },
