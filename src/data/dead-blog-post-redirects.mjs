@@ -2,6 +2,11 @@
 // Sorgente: GSC Coverage 404 drilldown 2026-06-25 (128 post). Ognuno -> hub blog della sua lingua.
 // Generato per spegnere i 404 e recuperare l'equity residua. NON tocca i post vivi (match esatto).
 const voci = [
+  // 26/10/2026: GSC 404 drilldown. Ri-sluggati, non rimossi: il vecchio slug va al post vivo (stesso argomento, stessa data).
+  { source: "/blog/de/2026/04/09/von-excel-zum-gps-wie-ein-elektriker-12-000-e-pro-jahr-spart/", destination: "/blog/de/2026/04/09/von-excel-zum-gps-wie-ein-elektriker-12-000-e-pro-jahr-einsparen-kann/", permanent: true },
+  { source: "/blog/de/2026/04/09/von-excel-zum-gps-wie-ein-elektriker-12-000-e-pro-jahr-spart", destination: "/blog/de/2026/04/09/von-excel-zum-gps-wie-ein-elektriker-12-000-e-pro-jahr-einsparen-kann/", permanent: true },
+  { source: "/blog/en/2026/03/31/invisible-margin-how-much-do-micro-delays-in-the-field-really-cost-you/", destination: "/blog/en/2026/03/31/minor-delays-the-hidden-cost-that-eats-into-profits/", permanent: true },
+  { source: "/blog/en/2026/03/31/invisible-margin-how-much-do-micro-delays-in-the-field-really-cost-you", destination: "/blog/en/2026/03/31/minor-delays-the-hidden-cost-that-eats-into-profits/", permanent: true },
   // 10/08/2026: consolidato nella guida GDPR di novembre. Esce come 308 (Next emette
   // 308 per permanent: true), verificato live. Fuori dall'indice dal 29/06
   // (37 giorni a zero impressioni, "crawled - currently not indexed"), stesso territorio
