@@ -12,7 +12,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { trackEvent } from '@/lib/analytics';
 import { localizePath } from '@/lib/i18n/locale-routing';
-import { bannerText, copyForLocale, matchReferrer, DISMISS_KEY, OUTLET_KEY, SLOT_ID, type ReferrerRule } from '@/lib/press/referrer';
+import { bannerText, copyForLocale, matchReferrer, CTA_CLICKED_KEY, BAR_VAR, DISMISS_KEY, OUTLET_KEY, SLOT_ID, type ReferrerRule } from '@/lib/press/referrer';
 
 const DEFAULT_CTA_PATH = '/products/geotapp-timetracker';
 
@@ -23,7 +23,10 @@ export default function ReferrerBanner({ rules }: { rules: ReferrerRule[] }) {
 
   useEffect(() => {
     const slot = document.getElementById(SLOT_ID);
-    const release = () => { if (slot) slot.style.minHeight = ''; };
+    const release = () => {
+      if (slot) slot.style.minHeight = '';
+      document.documentElement.style.removeProperty(BAR_VAR);
+    };
     const rule = matchReferrer(document.referrer, rules, window.location.hostname);
     if (!rule) { release(); return; }
     try {
@@ -44,6 +47,27 @@ export default function ReferrerBanner({ rules }: { rules: ReferrerRule[] }) {
     trackEvent('press_referrer_banner_view', { outlet: rule.outlet });
   }, [rules]);
 
+  // Il menu e' fisso in cima e coprirebbe la barra (e la sua x): lo abbassiamo della parte di barra
+  // ancora visibile, che si riduce man mano che si scorre. Vedi `.nv,.nvl,.nvr` in l-mockup.css.
+  useEffect(() => {
+    if (!shown) return;
+    const slot = document.getElementById(SLOT_ID);
+    if (!slot) return;
+    const root = document.documentElement;
+    const aggiorna = () => {
+      // Il fondo della barra rispetto alla finestra: pieno a inizio pagina, 0 quando e' scrollata via.
+      root.style.setProperty(BAR_VAR, `${Math.max(0, Math.round(slot.getBoundingClientRect().bottom))}px`);
+    };
+    aggiorna();
+    window.addEventListener('scroll', aggiorna, { passive: true });
+    window.addEventListener('resize', aggiorna);
+    return () => {
+      window.removeEventListener('scroll', aggiorna);
+      window.removeEventListener('resize', aggiorna);
+      root.style.removeProperty(BAR_VAR);
+    };
+  }, [shown]);
+
   if (!shown) return null;
 
   const dismiss = () => {
@@ -54,6 +78,7 @@ export default function ReferrerBanner({ rules }: { rules: ReferrerRule[] }) {
     }
     const slot = document.getElementById(SLOT_ID);
     if (slot) slot.style.minHeight = '';
+    document.documentElement.style.removeProperty(BAR_VAR);
     setShown(null);
   };
 
@@ -66,7 +91,10 @@ export default function ReferrerBanner({ rules }: { rules: ReferrerRule[] }) {
       <span>{shown.text}</span>
       <Link
         href={shown.href}
-        onClick={() => trackEvent('press_referrer_banner_click', { outlet: shown.outlet })}
+        onClick={() => {
+          try { sessionStorage.setItem(CTA_CLICKED_KEY, '1'); } catch { /* ignore */ }
+          trackEvent('press_referrer_banner_click', { outlet: shown.outlet });
+        }}
         className="font-semibold text-brand-blue-ink hover:underline whitespace-nowrap"
       >
         {shown.cta} →

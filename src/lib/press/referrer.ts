@@ -1,5 +1,5 @@
 import type { AppLocale } from '@/lib/i18n/config';
-import type { PressItem } from './data';
+import type { PressItem, PressOffer } from './data';
 
 /**
  * Banner di benvenuto per chi arriva da una testata che ci ha linkato.
@@ -15,6 +15,7 @@ export type ReferrerRule = {
   locale: AppLocale;
   welcome?: string;
   cta?: { label: string; path: string };
+  offer?: PressOffer;
 };
 
 export type ReferrerCopy = { welcome: string; cta: string; close: string };
@@ -52,6 +53,7 @@ export function buildReferrerRules(items: PressItem[]): ReferrerRule[] {
       locale: i.locale,
       welcome: i.referrer.welcome,
       cta: i.referrer.cta,
+      offer: i.referrer.offer,
     }));
 }
 
@@ -73,6 +75,7 @@ export function matchReferrer(
 }
 
 export const SLOT_ID = 'press-slot';
+export const BAR_VAR = '--press-bar';
 export const DISMISS_KEY = 'gtapp_press_banner_dismissed';
 export const OUTLET_KEY = 'gtapp_press_outlet';
 
@@ -101,6 +104,26 @@ export function slotScript(rules: ReferrerRule[]): string {
     `var h=new URL(r).hostname.toLowerCase().replace(/^www\\./,'');var R=${json};` +
     `for(var i=0;i<R.length;i++){if(R[i].h.indexOf(h)>-1){var w=Math.max(innerWidth-32,200);` +
     `var one=Math.ceil((R[i].t+R[i].c+6)*6.6/w)==1;var l=one?1:Math.ceil(R[i].t*6.6/w)+1;` +
-    `s.style.minHeight=(l*20+16+(l>1?6:0))+'px';return}}}catch(e){}})();`
+    `var px=(l*20+16+(l>1?6:0))+'px';s.style.minHeight=px;document.documentElement.style.setProperty(${JSON.stringify(BAR_VAR)},px);return}}}catch(e){}})();`
   );
+}
+
+// Chiavi di sessione condivise fra banner, scheda e sondaggio.
+export const CTA_CLICKED_KEY = 'gtapp_press_cta_clicked';
+export const CARD_KEY = 'gtapp_press_card';
+// Le stesse che usa SurveyInvite: un solo overlay per visita, e mai prima della scelta sui cookie.
+export const VISIT_KEY = 'gtapp_modal_open_visit';
+export const CONSENT_KEY = 'gtapp_cookie_consent';
+
+/**
+ * True se in questa sessione il visitatore e' arrivato dal link di una testata. Chi arriva da un
+ * articolo non riceve il sondaggio ne' altri inviti (regola di Mike, 26/10/2026): ci pensa il banner.
+ * Alla visita successiva (sessione nuova) il sondaggio torna a valere come per tutti.
+ */
+export function arrivatoDallaStampa(): boolean {
+  try {
+    return !!sessionStorage.getItem(OUTLET_KEY);
+  } catch {
+    return false;
+  }
 }

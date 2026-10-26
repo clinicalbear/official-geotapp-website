@@ -3,11 +3,20 @@ import type { AppLocale } from '@/lib/i18n/config';
 // Banner per chi arriva dalla testata. Solo per uscite dove il link a noi e' VERIFICATO nella
 // pagina (non per le menzioni senza link: non portano lettori). Non dipende da `follow`: il
 // banner serve al lettore, non a Google, e un lettore da un link nofollow vale come gli altri.
+export type PressOffer = {
+  title: string;
+  text: string;
+  cta: string;
+  path: string;   // path canonico della pagina dell'offerta (con barra finale)
+  cover?: string; // immagine in /public
+};
+
 export type PressReferrer = {
   hosts: string[];          // host esatti da cui arriva il clic (senza "www."); mai un dominio padre
   welcome?: string;         // frase intera nella lingua del pezzo; assente = frase generica con {outlet}
   noReferrer?: boolean;     // il link nel pezzo ha rel="noreferrer": il browser NON manda il referrer, il banner non puo' scattare.
                             // Si tiene la voce per documentarlo e per chiedere alla testata di togliere noreferrer o aggiungere ?utm_source=
+  offer?: PressOffer;       // scheda in angolo dopo un po' (vedi ReferrerCard). SOLO per pezzi in italiano: il manuale esiste solo in italiano
   cta?: { label: string; path: string }; // path canonico (es. '/risorse/gps-lavoratori-ue'), localizzato sul `locale` del pezzo
 };
 
@@ -87,7 +96,19 @@ export const PRESS_COVERAGE: PressItem[] = [
     locale: 'it',
     country: 'it',
     logo: '/press/vigilanzaprivataonline-v2.png',
-    referrer: { hosts: ['vigilanzaprivataonline.com'] },
+    referrer: {
+      hosts: ['vigilanzaprivataonline.com'],
+      // Testata italiana: puo' avere il manuale (esiste solo in italiano, per la legge italiana).
+      welcome: 'Benvenuto, lettore di Vigilanza Privata Online. Qui trovi il manuale su posizione, orari e foto di chi lavora fuori sede (PDF, 96 pagine).',
+      cta: { label: 'Vedi il manuale', path: '/risorse/manuale-gdpr-lavoro-sul-campo' },
+      offer: {
+        title: 'Posizione, orari e foto di chi lavora fuori sede',
+        text: 'Manuale pratico tra Statuto dei lavoratori, GDPR e squadre sul campo. PDF di 96 pagine, con note e fonti.',
+        cta: 'Scarica il manuale',
+        path: '/risorse/manuale-gdpr-lavoro-sul-campo',
+        cover: '/downloads/manuale-copertina.webp',
+      },
+    },
   },
   // ISPER HR Review, n. 292 del 7 ottobre 2026. Articolo a firma Michele Angelo Petraroli,
   // concordato con Anna Manavella (isper.org). Logo forniti da lei il 21/09/2026

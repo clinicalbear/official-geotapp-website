@@ -25,6 +25,7 @@ import SiteAnalytics from '@/components/SiteAnalytics';
 import InternalTrafficBadge from '@/components/InternalTrafficBadge';
 import SurveyInvite from '@/components/SurveyInvite';
 import ReferrerBanner from '@/components/stampa/ReferrerBanner';
+import ReferrerCard from '@/components/stampa/ReferrerCard';
 import { PRESS_COVERAGE } from '@/lib/press/data';
 import { buildReferrerRules, slotScript, SLOT_ID } from '@/lib/press/referrer';
 import {
@@ -611,6 +612,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             quindi le pagine più viste del sito (home, trial, prodotti) non lo
             mostravano mai. Esce dopo la scelta sui cookie, una volta per browser. */}
         <SurveyInvite />
+        <ReferrerCard rules={buildReferrerRules(PRESS_COVERAGE)} />
         <ChatWidget />
         <InternalTrafficBadge />
               </DictionaryBridge>

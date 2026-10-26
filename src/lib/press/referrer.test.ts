@@ -1,6 +1,6 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, afterEach, vi } from 'vitest';
 import { PRESS_COVERAGE } from './data';
-import { buildReferrerRules, matchReferrer, copyForLocale, REFERRER_COPY, slotScript } from './referrer';
+import { buildReferrerRules, matchReferrer, copyForLocale, REFERRER_COPY, slotScript, arrivatoDallaStampa, OUTLET_KEY } from './referrer';
 import vm from 'node:vm';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 
@@ -97,5 +97,40 @@ describe('slotScript (riserva lo spazio prima del primo paint)', () => {
   });
   it('non contiene mai </script> (si inietta in una pagina)', () => {
     expect(slotScript(rules)).not.toMatch(/<\//);
+  });
+});
+
+describe('il manuale esiste solo in italiano', () => {
+  it('un\'offerta e ammessa solo su pezzi in italiano', () => {
+    for (const i of PRESS_COVERAGE) if (i.referrer?.offer) expect(i.locale, i.outlet).toBe('it');
+  });
+  it('Vigilanza ha il pulsante e la scheda sul manuale, con la copertina', () => {
+    const r = matchReferrer('https://www.vigilanzaprivataonline.com/x.html', rules)!;
+    expect(r.cta?.path).toBe('/risorse/manuale-gdpr-lavoro-sul-campo');
+    expect(r.offer?.path).toBe('/risorse/manuale-gdpr-lavoro-sul-campo');
+    expect(r.offer?.cover).toBe('/downloads/manuale-copertina.webp');
+  });
+  it('le testate straniere non hanno ne manuale ne scheda', () => {
+    for (const o of ['Human Resources', 'Personnel Today', 'AZ Big Media', 'COO Insider', 'Small Business Leader']) {
+      expect(rules.find((r) => r.outlet === o)?.offer, o).toBeUndefined();
+    }
+  });
+  it('il testo non promette conformita ne revisione', () => {
+    const r = matchReferrer('https://www.vigilanzaprivataonline.com/x.html', rules)!;
+    expect(JSON.stringify(r)).not.toMatch(/conform|garantisc|certific|revision/i);
+  });
+});
+
+describe('arrivatoDallaStampa (sondaggio sospeso in questa visita)', () => {
+  afterEach(() => vi.unstubAllGlobals());
+  it('true se la sessione porta il nome di una testata', () => {
+    vi.stubGlobal('sessionStorage', { getItem: (k: string) => (k === OUTLET_KEY ? 'Vigilanza Privata Online' : null) });
+    expect(arrivatoDallaStampa()).toBe(true);
+  });
+  it('false in una sessione nuova, o se lo storage non risponde', () => {
+    vi.stubGlobal('sessionStorage', { getItem: () => null });
+    expect(arrivatoDallaStampa()).toBe(false);
+    vi.stubGlobal('sessionStorage', { getItem: () => { throw new Error('bloccato'); } });
+    expect(arrivatoDallaStampa()).toBe(false);
   });
 });

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { trackEvent } from '@/lib/analytics';
 import { ePaginaDiCompito } from '@/lib/pagine-di-compito';
+import { arrivatoDallaStampa } from '@/lib/press/referrer';
 
 // Chiave PROPRIA (permanente): l'unica che spegne il modale per sempre.
 const STORAGE_KEY = 'gtapp_survey_modal_seen';
@@ -67,6 +68,10 @@ export default function SurveyInvite() {
       // rimonta quando si naviga dentro la stessa lingua, quindi chi arriva
       // sulla home e poi va al trial avrebbe il timer gia' partito addosso.
       if (ePaginaDiCompito(location.pathname)) return;
+      // Chi arriva dal link di una testata non riceve il sondaggio in questa visita (decisione
+      // del 26/10/2026): ha gia' il banner di benvenuto. Alla visita dopo torna a valere.
+      // Controllo qui e non all'avvio: l'effetto del banner puo' scrivere la testata dopo il nostro.
+      if (arrivatoDallaStampa()) return;
       // Il banner cookie chiede una scelta obbligata: aspettiamo che sia fatta.
       if (!localStorage.getItem(CONSENT_KEY)) return;
       shown = true;
