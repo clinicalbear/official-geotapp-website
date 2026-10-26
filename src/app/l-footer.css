@@ -15,6 +15,8 @@
 
 footer, footer > div, footer section{ background:var(--ink) !important; color:#B8C2D6 !important; }
 footer *{ border-color:rgba(247,249,252,.14) !important; }
+/* i loghi del blocco "Presente su": il bordo deve risaltare, non seguire il grigio del resto del footer */
+footer a.listed-on-badge{ border-color:#F7F9FC !important; }
 footer img[alt*="GeoTapp"], footer img[src*="Logo"]{ height:52px !important; width:auto !important; }
 footer h4, footer h3, footer strong, footer p strong{ color:var(--paper) !important;
   font-size:11px !important; letter-spacing:.16em !important; text-transform:uppercase !important; }
