@@ -15,6 +15,10 @@
  * perche' su KV quel pattern perde gli incrementi concorrenti (misurato in
  * produzione il 20/08/2026 con /api/consent).
  *
+ * Dal 26/10/2026 una seconda chiave per apertura, famiglia `r:`: host del referrer (senza
+ * percorso) e robot/umano, ricavato dall'user agent che poi NON viene scritto. Vedi
+ * `src/lib/link-brevi-origine.ts`.
+ *
  * Se il KV non c'e' (sviluppo locale) o la scrittura fallisce, il redirect
  * parte lo stesso: si perde il conteggio, non la persona.
  */
@@ -23,6 +27,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getCloudflareContext } from '@opennextjs/cloudflare';
 
 import { risolviLinkBreve } from '@/lib/link-brevi';
+import { chiaveOrigine } from '@/lib/link-brevi-origine';
 
 export const dynamic = 'force-dynamic';
 
@@ -50,6 +55,21 @@ export async function GET(req: NextRequest, ctx: { params: Promise<{ codice: str
       await kv.put(`l:${giorno}:${paese}:${etichetta}:${crypto.randomUUID()}`, '', {
         expirationTtl: 400 * 24 * 60 * 60,
       });
+      // Esperimento (26/10/2026): da dove arrivano davvero le aperture. Solo l'host del referrer
+      // e "robot/umano", mai user agent ne' percorso. Famiglia `r:`, vedi link-brevi-origine.ts.
+      // 90 giorni bastano: serve a decidere, non a conservare.
+      await kv.put(
+        chiaveOrigine({
+          giorno,
+          paese,
+          etichetta,
+          referer: req.headers.get('referer'),
+          userAgent: req.headers.get('user-agent'),
+          id: crypto.randomUUID(),
+        }),
+        '',
+        { expirationTtl: 90 * 24 * 60 * 60 },
+      );
     }
   } catch {
     // KV assente o quota esaurita: si prosegue.
