@@ -349,6 +349,9 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
       /* ignore */
     }
     updateConsent(analytics);
+    // Chi ha bisogno di sapere la scelta appena fatta (oggi il banner di benvenuto dalla stampa, per salvare
+    // la testata di provenienza solo dopo il consenso) ascolta questo evento.
+    window.dispatchEvent(new CustomEvent('gtapp:cookie-consent', { detail: { analytics } }));
     // Il conteggio aggregato parte SEMPRE, anche sul rifiuto: e' l'unico modo
     // di conoscere il denominatore. Non traccia la persona, conta la scelta.
     reportConsent(action, locale);

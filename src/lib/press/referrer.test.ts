@@ -1,6 +1,6 @@
 import { describe, it, expect, afterEach, vi } from 'vitest';
 import { PRESS_COVERAGE } from './data';
-import { buildReferrerRules, matchReferrer, copyForLocale, REFERRER_COPY, slotScript, arrivatoDallaStampa, OUTLET_KEY } from './referrer';
+import { buildReferrerRules, matchReferrer, copyForLocale, REFERRER_COPY, slotScript, arrivatoDallaStampa, analyticsConsentito, QUIET_KEY } from './referrer';
 import vm from 'node:vm';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 
@@ -123,8 +123,8 @@ describe('il manuale esiste solo in italiano', () => {
 
 describe('arrivatoDallaStampa (sondaggio sospeso in questa visita)', () => {
   afterEach(() => vi.unstubAllGlobals());
-  it('true se la sessione porta il nome di una testata', () => {
-    vi.stubGlobal('sessionStorage', { getItem: (k: string) => (k === OUTLET_KEY ? 'Vigilanza Privata Online' : null) });
+  it('true se la visita e arrivata da una testata (segnale senza nome)', () => {
+    vi.stubGlobal('sessionStorage', { getItem: (k: string) => (k === QUIET_KEY ? '1' : null) });
     expect(arrivatoDallaStampa()).toBe(true);
   });
   it('false in una sessione nuova, o se lo storage non risponde', () => {
@@ -132,5 +132,25 @@ describe('arrivatoDallaStampa (sondaggio sospeso in questa visita)', () => {
     expect(arrivatoDallaStampa()).toBe(false);
     vi.stubGlobal('sessionStorage', { getItem: () => { throw new Error('bloccato'); } });
     expect(arrivatoDallaStampa()).toBe(false);
+  });
+});
+
+describe('analyticsConsentito (il nome della testata si salva solo col consenso)', () => {
+  afterEach(() => vi.unstubAllGlobals());
+  const prova = (raw: string | null, modo?: string) => {
+    vi.stubGlobal('window', { __gtConsentMode: modo });
+    vi.stubGlobal('localStorage', { getItem: (k: string) => (k === 'gtapp_cookie_consent' ? raw : null) });
+    return analyticsConsentito();
+  };
+  it('true solo se la scelta salvata e "analytics: true"', () => {
+    expect(prova('{"analytics":true,"ts":1,"action":"accept"}')).toBe(true);
+  });
+  it('false se ha rifiutato, se non ha ancora scelto, o se il dato e illeggibile', () => {
+    expect(prova('{"analytics":false,"ts":1}')).toBe(false);
+    expect(prova(null)).toBe(false);
+    expect(prova('non json')).toBe(false);
+  });
+  it('true fuori dai paesi GDPR (regime rest: concesso di default, il banner non c\'e)', () => {
+    expect(prova(null, 'rest')).toBe(true);
   });
 });

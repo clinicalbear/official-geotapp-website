@@ -2,7 +2,8 @@
 
 /**
  * Benvenuto a chi arriva cliccando il link che una testata ci ha messo nel pezzo.
- * Legge solo document.referrer, non salva nulla oltre al "chiuso" in sessionStorage
+ * Legge solo document.referrer. In sessionStorage tiene: "chiuso", un segnale senza nome per non
+ * mandare il sondaggio in questa visita e, SOLO con il consenso analytics, il nome della testata
  * e non manda il referrer a nessun endpoint nostro. L'unico segnale e' un evento
  * analytics col nome della testata (passa dal consenso, come gli altri).
  * Referrer assente o di un'altra testata: non mostra niente.
@@ -12,7 +13,11 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { trackEvent } from '@/lib/analytics';
 import { localizePath } from '@/lib/i18n/locale-routing';
-import { bannerText, copyForLocale, matchReferrer, CTA_CLICKED_KEY, BAR_VAR, DISMISS_KEY, OUTLET_KEY, SLOT_ID, type ReferrerRule } from '@/lib/press/referrer';
+import {
+  bannerText, copyForLocale, matchReferrer, analyticsConsentito,
+  BAR_VAR, CONSENT_EVENT, CTA_CLICKED_KEY, DISMISS_KEY, OUTLET_KEY, QUIET_KEY, SLOT_ID,
+  type ReferrerRule,
+} from '@/lib/press/referrer';
 
 const DEFAULT_CTA_PATH = '/products/geotapp-timetracker';
 
@@ -29,10 +34,22 @@ export default function ReferrerBanner({ rules }: { rules: ReferrerRule[] }) {
     };
     const rule = matchReferrer(document.referrer, rules, window.location.hostname);
     if (!rule) { release(); return; }
+
+    // Due cose separate. (1) Segnale funzionale, senza nome: in questa visita niente sondaggio.
+    // (2) Il nome della testata, dato di misura: sul dispositivo solo con il consenso analytics,
+    // subito se c'e' gia', altrimenti appena la persona sceglie.
+    try { sessionStorage.setItem(QUIET_KEY, '1'); } catch { /* ignore */ }
+    const salvaTestata = () => {
+      if (!analyticsConsentito()) return;
+      try { sessionStorage.setItem(OUTLET_KEY, rule.outlet); } catch { /* ignore */ }
+    };
+    salvaTestata();
+    const onScelta = () => salvaTestata();
+    window.addEventListener(CONSENT_EVENT, onScelta);
+    const smonta = () => window.removeEventListener(CONSENT_EVENT, onScelta);
+
     try {
-      // La testata resta in sessione per marcare gli eventi trial_* (vedi analytics.ts), anche a banner chiuso.
-      sessionStorage.setItem(OUTLET_KEY, rule.outlet);
-      if (sessionStorage.getItem(DISMISS_KEY)) { release(); return; }
+      if (sessionStorage.getItem(DISMISS_KEY)) { release(); return smonta; }
     } catch {
       /* modalita' privata: il banner si mostra comunque, una volta per caricamento */
     }
@@ -45,6 +62,7 @@ export default function ReferrerBanner({ rules }: { rules: ReferrerRule[] }) {
       outlet: rule.outlet,
     });
     trackEvent('press_referrer_banner_view', { outlet: rule.outlet });
+    return smonta;
   }, [rules]);
 
   // Il menu e' fisso in cima e coprirebbe la barra (e la sua x): lo abbassiamo della parte di barra

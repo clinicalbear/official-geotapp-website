@@ -115,6 +115,12 @@ export const CARD_KEY = 'gtapp_press_card';
 export const VISIT_KEY = 'gtapp_modal_open_visit';
 export const CONSENT_KEY = 'gtapp_cookie_consent';
 
+// Segnale FUNZIONALE, senza nome della testata: "questa visita e' arrivata da una testata, niente inviti".
+// Vale solo per non disturbare; il nome (OUTLET_KEY) e' dato di misura e si salva solo col consenso analytics.
+export const QUIET_KEY = 'gtapp_quiet_visit';
+/** Evento che CookieConsentBanner emette quando la persona sceglie (detail.analytics: boolean). */
+export const CONSENT_EVENT = 'gtapp:cookie-consent';
+
 /**
  * True se in questa sessione il visitatore e' arrivato dal link di una testata. Chi arriva da un
  * articolo non riceve il sondaggio ne' altri inviti (regola di Mike, 26/10/2026): ci pensa il banner.
@@ -122,7 +128,22 @@ export const CONSENT_KEY = 'gtapp_cookie_consent';
  */
 export function arrivatoDallaStampa(): boolean {
   try {
-    return !!sessionStorage.getItem(OUTLET_KEY);
+    return !!sessionStorage.getItem(QUIET_KEY);
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Il consenso analytics c'e'? Fuori dai paesi GDPR il banner non si mostra e il regime e' "rest"
+ * (analytics concesso di default, vedi consent-mode.ts); altrove serve la scelta salvata.
+ * Il nome della testata e' un dato di misura: si scrive sul dispositivo solo se questo e' true.
+ */
+export function analyticsConsentito(): boolean {
+  try {
+    if ((window as unknown as { __gtConsentMode?: string }).__gtConsentMode === 'rest') return true;
+    const raw = localStorage.getItem(CONSENT_KEY);
+    return !!raw && JSON.parse(raw).analytics === true;
   } catch {
     return false;
   }
