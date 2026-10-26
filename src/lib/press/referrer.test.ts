@@ -40,12 +40,19 @@ describe('regole dalle uscite di stampa', () => {
     for (const r of rules) for (const h of r.hosts) expect(h).toBe(h.toLowerCase().replace(/^www\./, ''));
   });
   it('chi non ci linka non ha banner (ManagementSite, PME Magazine, ClockOn, GPO, Vigilanza, Risorse Umane)', () => {
-    const senzaLink = ['ManagementSite', 'PME Magazine', 'ClockOn', 'GPO Magazine', 'Vigilanza Privata Online', 'Risorse Umane HR'];
+    const senzaLink = ['ManagementSite', 'PME Magazine', 'ClockOn', 'GPO Magazine', 'Risorse Umane HR'];
     for (const o of senzaLink) expect(rules.find((r) => r.outlet === o), o).toBeUndefined();
   });
   it('ogni lingua del pezzo ha il suo testo', () => {
     for (const r of rules) expect(REFERRER_COPY[r.locale], r.outlet).toBeDefined();
     for (const l of SUPPORTED_LOCALES) expect(copyForLocale(l).welcome).toContain('{outlet}');
+  });
+});
+
+describe('Vigilanza Privata Online (firma con link dal 20/10)', () => {
+  it('ha il banner in italiano', () => {
+    const r = matchReferrer('https://www.vigilanzaprivataonline.com/lettere-al-direttore/x.html', rules)!;
+    expect(r.locale).toBe('it');
   });
 });
 

@@ -76,8 +76,9 @@ export const PRESS_COVERAGE: PressItem[] = [
   },
   // Vigilanza Privata Online, lettera al direttore a firma Michele Angelo Petraroli, uscita il
   // 19/10/2026 (secondo contributo dopo quello di luglio). Verificato online il 19/10/2026:
-  // HTTP 200, titolo dal <title> della pagina. Nessun link a geotapp.com nel pezzo (GeoTapp
-  // compare solo nella firma, come testo), quindi nessun flag follow. Logo gia' presente.
+  // HTTP 200, titolo dal <title> della pagina. Il 19/10 nel pezzo non c'era nessun link; dal 20/10 la firma
+  // ha <a href="http://geotapp.com/"> senza rel (registro backlink 20/10, riletto sulla pagina viva il
+  // 26/10/2026). Nessun flag follow (non ricambiamo), ma il link porta lettori: banner attivo.
   {
     date: '2026-10-19',
     outlet: 'Vigilanza Privata Online',
@@ -86,6 +87,7 @@ export const PRESS_COVERAGE: PressItem[] = [
     locale: 'it',
     country: 'it',
     logo: '/press/vigilanzaprivataonline-v2.png',
+    referrer: { hosts: ['vigilanzaprivataonline.com'] },
   },
   // ISPER HR Review, n. 292 del 7 ottobre 2026. Articolo a firma Michele Angelo Petraroli,
   // concordato con Anna Manavella (isper.org). Logo forniti da lei il 21/09/2026
