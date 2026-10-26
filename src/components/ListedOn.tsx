@@ -247,7 +247,7 @@ function CompactListedOn({ locale }: { locale: string }) {
           { name: 'SaaSworthy', url: URLS.saasworthy, logo: <SaaSworthyLogo scale={1} /> },
         ].map((p) => (
           <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer nofollow" aria-label={p.name} className="listed-on-badge"
-            style={{ opacity: 0.6, transition: 'opacity 0.2s', display: 'flex', alignItems: 'center', border: '1px solid #F7F9FC', borderRadius: 8, padding: '6px 12px' }}
+            style={{ opacity: 0.6, transition: 'opacity 0.2s', display: 'flex', alignItems: 'center' }}
             onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; }}
             onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.6'; }}
           >{p.logo}</a>
