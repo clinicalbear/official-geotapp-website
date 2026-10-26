@@ -1,5 +1,16 @@
 import type { AppLocale } from '@/lib/i18n/config';
 
+// Banner per chi arriva dalla testata. Solo per uscite dove il link a noi e' VERIFICATO nella
+// pagina (non per le menzioni senza link: non portano lettori). Non dipende da `follow`: il
+// banner serve al lettore, non a Google, e un lettore da un link nofollow vale come gli altri.
+export type PressReferrer = {
+  hosts: string[];          // host esatti da cui arriva il clic (senza "www."); mai un dominio padre
+  welcome?: string;         // frase intera nella lingua del pezzo; assente = frase generica con {outlet}
+  noReferrer?: boolean;     // il link nel pezzo ha rel="noreferrer": il browser NON manda il referrer, il banner non puo' scattare.
+                            // Si tiene la voce per documentarlo e per chiedere alla testata di togliere noreferrer o aggiungere ?utm_source=
+  cta?: { label: string; path: string }; // path canonico (es. '/risorse/gps-lavoratori-ue'), localizzato sul `locale` del pezzo
+};
+
 export type PressItem = {
   date: string;       // ISO 'YYYY-MM-DD'
   outlet: string;     // testata o ente
@@ -9,6 +20,7 @@ export type PressItem = {
   country?: string;   // ISO 3166-1 alpha-2 della nazione della TESTATA (it, fr, gb, us...):
                       // mostra la bandiera in pagina. Serve l'SVG in /public/flags/<country>.svg
   logo?: string;      // path in /public del logo della testata (opzionale)
+  referrer?: PressReferrer; // banner di benvenuto a chi arriva cliccando il link nel pezzo (vedi referrer.ts)
   follow?: boolean;   // reciprocità rel: true = diamo dofollow SOLO a chi ci ha dato un link dofollow;
                       // assente/false = nofollow (chi ci cita in nofollow o senza link). Fonti autorevoli solo.
 };
@@ -87,6 +99,9 @@ export const PRESS_COVERAGE: PressItem[] = [
     locale: 'it',
     country: 'it',
     logo: '/press/isperhrreview.png',
+    // rel="noopener noreferrer" sulle due ancore (letto sul grezzo il 18/10/2026): niente referrer,
+    // i clic arrivano come "direct" in GA4 (nota in backlinks-verified.json). Banner impossibile.
+    referrer: { hosts: ['isper.org'], noReferrer: true },
     follow: true, // DOFOLLOW: due ancore dentro il pezzo (fac-simile informativa GPS e
                   // /it/risorse/gps-lavoratori-ue/), rel="noopener noreferrer" letto sul grezzo
                   // il 18/10/2026, nessun nofollow. Sono nelle fonti, non nella riga d'autore.
@@ -100,6 +115,13 @@ export const PRESS_COVERAGE: PressItem[] = [
     locale: 'pt',
     country: 'pt',
     logo: '/press/hrportugal.png',
+    referrer: {
+      hosts: ['hrportugal.sapo.pt'],
+      // Niente "minimização de dados": non e' fra i claim approvati (docs/stampa/scheda-claim.md).
+      // La frase sotto e' il claim approvato, con l'avverbio, in portoghese.
+      welcome: 'Bem-vindo, leitor da Human Resources. Entre a entrada e a saída, nenhuma posição é registada automaticamente e de forma contínua: cada ponto nasce de um gesto do trabalhador.',
+      cta: { label: 'Ver como funciona', path: '/risorse/gps-presenze-senza-tracciamento' },
+    },
     follow: true, // DOFOLLOW dal 10/09/2026: Tania Reis ha aggiunto geotapp.com alla riga
                   // d'autore (post modificato alle 17:08 di Lisbona, otto minuti prima di
                   // scriverlo). Verificato sul contenuto servito: <a href="http://geotapp.com/"
@@ -155,6 +177,13 @@ export const PRESS_COVERAGE: PressItem[] = [
     locale: 'en',
     country: 'gb',
     logo: '/press/personneltoday.png',
+    referrer: {
+      hosts: ['personneltoday.com'],
+      // Il pezzo e' sulla posizione registrata a due soli istanti (entrata e uscita) e sul test di
+      // proporzionalita' dell'ICO. Stesso claim approvato della scheda, con l'avverbio.
+      welcome: 'Welcome, Personnel Today reader. Here is how GeoTapp records a position at the tap in and the tap out, with nothing recorded automatically in between.',
+      cta: { label: 'See how it works', path: '/risorse/gps-presenze-senza-tracciamento' },
+    },
     follow: true, // Dofollow verificato sull'HTML grezzo: <a href="https://geotapp.com/en-gb/">GeoTapp</a>
                   // nella bio autore, senza rel. Nella stessa pagina xperthr.co.uk e brightmine.com
                   // sono rel="sponsored", quindi il dofollow a noi e' una scelta della redazione.
@@ -172,6 +201,7 @@ export const PRESS_COVERAGE: PressItem[] = [
     locale: 'en',
     country: 'us',
     logo: '/press/cooinsider.png',
+    referrer: { hosts: ['cooinsider.com'] },
     follow: true, // Ci linkano in dofollow: rel="" verificato nel DOM sull'ancora "GeoTapp" ->
                   // https://geotapp.com/. Nella stessa pagina i profili LinkedIn degli altri
                   // esperti sono rel="nofollow", quindi e' una scelta, non distrazione.
@@ -201,6 +231,7 @@ export const PRESS_COVERAGE: PressItem[] = [
     locale: 'en',
     country: 'us',
     logo: '/press/smallbizleader.png',
+    referrer: { hosts: ['smallbizleader.com'] },
     // NIENTE follow: ci linkano in dofollow (rel="" verificato nel DOM), ma il dominio ha
     // Spam Score Moz 37% (fascia media) -> non ricambiamo. Reversibile in ogni momento.
   },
@@ -212,6 +243,7 @@ export const PRESS_COVERAGE: PressItem[] = [
     locale: 'en',
     country: 'us',
     logo: '/press/azbigmedia.png',
+    referrer: { hosts: ['azbigmedia.com'] },
     follow: true, // AZ Big Media ci linka in dofollow (rel="noopener", verificato).
                   // NB: dal 13/07/2026 questo flag NON concede piu' dofollow (pressRel torna
                   // sempre nofollow): resta solo come annotazione di chi ci linka dofollow.

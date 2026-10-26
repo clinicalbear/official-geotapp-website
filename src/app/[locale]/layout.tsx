@@ -24,6 +24,9 @@ import ChatWidget from '@/components/kairos/ChatWidget';
 import SiteAnalytics from '@/components/SiteAnalytics';
 import InternalTrafficBadge from '@/components/InternalTrafficBadge';
 import SurveyInvite from '@/components/SurveyInvite';
+import ReferrerBanner from '@/components/stampa/ReferrerBanner';
+import { PRESS_COVERAGE } from '@/lib/press/data';
+import { buildReferrerRules, slotScript, SLOT_ID } from '@/lib/press/referrer';
 import {
   EUR_PRICES,
   convertEurToLocale,
@@ -550,6 +553,12 @@ export default async function LocaleLayout({ children, params }: Props) {
             (homepage, sectors, products, pricing) but ad slots only exist on
             the blog. Moved to src/app/blog/layout.tsx where ad inventory lives.
             Saves ~75-90ms TBT across all non-blog pages. */}
+        {/* Benvenuto a chi arriva dal link in un pezzo di stampa: vedi lib/press/referrer.ts */}
+        {/* Il contenitore e lo script stanno nell'HTML statico: lo script riserva l'altezza prima del primo paint */}
+        <div id={SLOT_ID} suppressHydrationWarning>
+          <ReferrerBanner rules={buildReferrerRules(PRESS_COVERAGE)} />
+        </div>
+        <script dangerouslySetInnerHTML={{ __html: slotScript(buildReferrerRules(PRESS_COVERAGE)) }} />
         {/* Navbar FUORI dal wrapper overflow: un antenato con overflow!=visible rompe position:sticky */}
         <Navbar />
         {/* overflow-x-clip (non hidden): clip non crea uno scroll container,

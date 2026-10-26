@@ -43,6 +43,19 @@ function scheduleFlush(): void {
   setTimeout(tick, 200);
 }
 
+// Chi e' arrivato da una testata (lib/press/referrer.ts) porta il suo nome su tutti gli eventi trial_*,
+// cosi' in GA4 si vede quale pubblicazione porta chi poi apre il trial. Va registrato come dimensione
+// personalizzata (ambito evento) con il nome `press_outlet`.
+function parametriStampa(eventName: string): Record<string, string> {
+  if (!eventName.startsWith('trial_')) return {};
+  try {
+    const o = sessionStorage.getItem('gtapp_press_outlet');
+    return o ? { press_outlet: o } : {};
+  } catch {
+    return {};
+  }
+}
+
 export function trackEvent(
   eventName: string,
   params?: Record<string, string | number>,
@@ -69,7 +82,7 @@ export function trackEvent(
 
   // A57: ogni evento porta la variante cromatica del visitatore. Senza questo
   // l'esperimento cambierebbe il colore e non produrrebbe nessun numero.
-  const conVariante = { ...parametriEsperimento(), ...(params ?? {}) };
+  const conVariante = { ...parametriEsperimento(), ...parametriStampa(eventName), ...(params ?? {}) };
 
   if (typeof window.gtag === 'function') {
     window.gtag('event', eventName, conVariante);

@@ -25,6 +25,7 @@ import { SOURCE_LOGOS, REVIEWS_COPY } from '@/components/reviews-copy';
 import LNastro from '@/components/LNastro';
 import FeaturedIn from '@/components/FeaturedIn';
 import { featuredLabel } from '@/lib/press/labels';
+import { splitAroundAnchor } from '@/lib/inline-link';
 import TrustBar from '@/components/TrustBar';
 import RoiMini from '@/components/RoiMini';
 import DemoReportBanner from '@/components/DemoReportBanner';
@@ -358,7 +359,14 @@ export default function Home({ locale, jrSlot, fqSlot }: { locale?: string; jrSl
             <div>
               <h2>{dict.landing.report_section_title}</h2>
               <p className="s">{dict.landing.report_section_subtitle}</p>
-              <p className="b">{dict.landing.report_section_body}</p>
+              <p className="b">
+                {(() => {
+                  // Link testuale nel corpo verso TimeTracker: pesa piu' di quelli in fondo pagina.
+                  const parts = splitAroundAnchor(dict.landing.report_section_body, dict.landing.report_section_link_text);
+                  if (!parts) return dict.landing.report_section_body;
+                  return (<>{parts.before}<Link href={getLink('/products/geotapp-timetracker')}>{parts.anchor}</Link>{parts.after}</>);
+                })()}
+              </p>
               <ul>
                 <li>{dict.landing.report_feature_1}</li>
                 <li>{dict.landing.report_feature_2}</li>
