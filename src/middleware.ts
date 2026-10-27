@@ -1193,6 +1193,12 @@ export async function middleware(req: NextRequest) {
       if (isHtml && THEME_PAGES.some((p) => pathname === `/blog/${p}/` || pathname === `/blog/${p}`)) {
         headers.set('X-Robots-Tag', 'noindex, follow');
       }
+      // Feed RSS (27/10/2026): sono XML e non hanno meta robots, quindi Google li scansiona e li
+      // mette fra le "scansionate, non indicizzate" (circa un quinto dell'elenco di GSC).
+      // L'header e' l'unico modo di dirgli che non sono pagine; i lettori di feed non lo guardano.
+      if (isXml && /\/feed(?:\/(?:atom|rdf|rss2?))?\/?$/.test(pathname)) {
+        headers.set('X-Robots-Tag', 'noindex, follow');
+      }
 
       return new NextResponse(body, {
         status: wpRes.status,
