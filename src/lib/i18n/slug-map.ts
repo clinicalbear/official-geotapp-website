@@ -229,6 +229,12 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     da: 'overvaagningsindeks', sv: 'overvakningsindex', nb: 'overvakingsindeks', ru: 'indeks-nablyudeniya',
     'en-us': 'surveillance-index', 'en-gb': 'surveillance-index', 'en-au': 'surveillance-index', 'en-ie': 'surveillance-index', 'en-ca': 'surveillance-index',
   },
+  // Pagina "Quando qualcuno contesta il lavoro" (27/10/2026). Per ora solo italiano: le altre lingue
+  // si aggiungono con le loro pagine (vedi src/content/contestazioni/index.ts). Senza voce una lingua
+  // ricade sullo slug canonico.
+  'contestazioni': {
+    it: 'contestazioni',
+  },
   'gps-presenze-senza-tracciamento': {
     it: 'gps-presenze-senza-tracciamento', en: 'gps-attendance-without-tracking', de: 'gps-zeiterfassung-ohne-ueberwachung', nl: 'gps-aanwezigheid-zonder-volgen',
     fr: 'gps-presence-sans-surveillance', es: 'gps-fichaje-sin-vigilancia', pt: 'gps-ponto-sem-vigilancia',
