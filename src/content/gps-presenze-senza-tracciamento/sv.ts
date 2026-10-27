@@ -3,7 +3,7 @@ import type { PresenzeCopy } from './types';
 const sv: PresenzeCopy = {
   metaTitle: 'Kan GPS användas för närvaro utan att spåra anställda? - GeoTapp',
   metaDesc:
-    'Ja, om positionen bara registreras vid stämpling. Vad en italiensk domstol slog fast 2026, vad tillsynsmyndigheter faktiskt bötfäller, och vad ett GPS-system för närvaro egentligen registrerar.',
+    'Ja, om positionen bara registreras vid stämpling: in, rast och ut. Vad en italiensk domstol slog fast 2026, vad tillsynsmyndigheter faktiskt bötfäller, och vad ett GPS-system för närvaro egentligen registrerar.',
   h1: 'Kan GPS användas för närvaro utan att spåra anställda?',
   lede:
     'Ja. Ett system som bara fångar position i exakt det ögonblick en anställd stämplar in, tar rast eller stämplar ut övervakar inte personen löpande: det dokumenterar ett faktum. Det är precis den distinktionen som en italiensk domstol bekräftade 2026, och den stämmer med det som tillsynsmyndigheter faktiskt bötfäller: kontinuerlig spårning, inte den enskilda positionsregistreringen.',

@@ -29,6 +29,7 @@ import { splitAroundAnchor } from '@/lib/inline-link';
 import TrustBar from '@/components/TrustBar';
 import RoiMini from '@/components/RoiMini';
 import DemoReportBanner from '@/components/DemoReportBanner';
+import { DEMO_REPORT_DISPONIBILE } from '@/lib/demo-report';
 import VideoGiro from '@/components/VideoGiro';
 import HomeEffetti from './HomeEffetti';
 
@@ -428,9 +429,11 @@ export default function Home({ locale, jrSlot, fqSlot }: { locale?: string; jrSl
         <div className="wn">
           {/* Solo le due sezioni che usa: il dizionario intero finirebbe nei dati della pagina. */}
           <RoiMini dict={{ landing: { roi_mini: dict.landing.roi_mini }, roi: dict.roi }} locale={currentLocale} />
+          {DEMO_REPORT_DISPONIBILE && (
           <div id="rapportino" style={{ marginTop: 40, scrollMarginTop: 90 }}>
             <DemoReportBanner />
           </div>
+          )}
         </div>
       </section>
 

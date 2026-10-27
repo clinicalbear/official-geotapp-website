@@ -32,4 +32,6 @@ export interface ContestazioniCopy {
   faq: { title: string; items: ContestazioniFaqItem[] };
   next: { heading: string; paragraph: string; featuresLabel: string; pricingLabel: string };
   disclaimer: string;
+  /** Scheda in angolo per chi arriva da una testata e non ha cliccato la barra: invita a questa pagina. */
+  card: { title: string; text: string; cta: string };
 }

@@ -67,7 +67,7 @@ describe('Personnel Today', () => {
   it('frase propria con il claim approvato e risorsa senza tracciamento', () => {
     const r = matchReferrer('https://www.personneltoday.com/hr/gps-at-work/', rules)!;
     expect(r.welcome).toContain('action by the worker');
-    expect(r.cta?.path).toBe('/risorse/gps-presenze-senza-tracciamento');
+    expect(r.cta?.path).toBe('/contestazioni');
     expect(r.welcome!).not.toMatch(/Make Work Pay|compliant|GDPR/i);
   });
 });
@@ -121,7 +121,7 @@ describe('le frasi della barra (nessun nome di testata, solo claim approvati)', 
       const r = rules.find((x) => x.outlet === o)!;
       expect(r.welcome, o).toMatch(/gesto|action by the worker/i);
       expect(r.welcome, o).toMatch(/background|segundo plano/i);
-      expect(r.cta?.path, o).toBe('/risorse/gps-presenze-senza-tracciamento');
+      expect(r.cta?.path, o).toBe('/contestazioni');
     }
   });
   it('le testate operations parlano del report, non del GPS', () => {

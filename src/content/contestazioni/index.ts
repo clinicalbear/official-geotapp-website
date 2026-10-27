@@ -1,20 +1,36 @@
 import type { AppLocale } from '@/lib/i18n/config';
+import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
+import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
 import type { ContestazioniCopy } from './types';
 
 /**
- * Lingue in cui la pagina esiste. Si pubblica SOLO quando ci sono tutte e 11 (regola di Mike): fino
- * ad allora le altre lingue non hanno la pagina (404), non una copia italiana, e la pagina non entra
- * nella mappa del sito. Aggiungere una lingua = una riga qui, il suo file, e (a 11 su 11) la mappa del
- * sito e gli hreflang completi in page.tsx.
+ * La pagina esiste in tutte le lingue del sito: un file per lingua, scritto nativamente. Le varianti
+ * regionali dell'inglese (en-gb, en-us...) usano `en`, con l'ortografia adattata come nelle altre risorse.
  */
 const map: Partial<Record<AppLocale, () => Promise<{ default: ContestazioniCopy }>>> = {
   it: () => import('./it'),
+  en: () => import('./en'),
+  'en-us': () => import('./en'),
+  'en-gb': () => import('./en'),
+  'en-au': () => import('./en'),
+  'en-ie': () => import('./en'),
+  'en-ca': () => import('./en'),
+  de: () => import('./de'),
+  fr: () => import('./fr'),
+  es: () => import('./es'),
+  pt: () => import('./pt'),
+  nl: () => import('./nl'),
+  da: () => import('./da'),
+  sv: () => import('./sv'),
+  nb: () => import('./nb'),
+  ru: () => import('./ru'),
 };
 
-export const LOCALES_CONTESTAZIONI = Object.keys(map) as AppLocale[];
+export const LOCALES_CONTESTAZIONI = SUPPORTED_LOCALES.filter((l) => map[l as AppLocale]) as AppLocale[];
 
 export async function getContestazioniCopy(locale: string): Promise<ContestazioniCopy | null> {
   const loader = map[locale as AppLocale];
   if (!loader) return null;
-  return (await loader()).default;
+  const mod = await loader();
+  return localizeEnglishDeep(mod.default, locale as AppLocale);
 }

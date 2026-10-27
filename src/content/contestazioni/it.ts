@@ -14,7 +14,7 @@ import type { ContestazioniCopy } from './types';
 const it: ContestazioniCopy = {
   metaTitle: 'Contestazioni sul lavoro: cosa cambia con GeoTapp | GeoTapp',
   metaDesc:
-    'Quando un cliente o un dipendente contesta il lavoro, cosa hai in mano? La stessa discussione vista da tre parti: azienda, chi lavora e committente, con un report vero da verificare.',
+    'Quando un cliente o un dipendente contesta il lavoro, cosa hai in mano? La stessa discussione vista da tre parti: azienda, chi lavora e committente.',
   kicker: 'Contestazioni sul lavoro',
   h1: 'Quando qualcuno contesta il lavoro: cosa cambia con GeoTapp',
   lede:
@@ -130,6 +130,11 @@ const it: ContestazioniCopy = {
     paragraph: 'Se vuoi vedere funzione per funzione cosa c\'è dentro, o i prezzi, da qui.',
     featuresLabel: 'Cosa fa GeoTapp, funzione per funzione →',
     pricingLabel: 'Vedi i prezzi →',
+  },
+  card: {
+    title: 'Cosa cambia quando qualcuno contesta il lavoro',
+    text: "L'azienda, chi lavora e il committente a confronto.",
+    cta: 'Leggi la pagina',
   },
   disclaimer:
     'Questa pagina descrive cosa fa GeoTapp e non è consulenza legale. Per la tua situazione specifica rivolgiti a un consulente del lavoro o a un DPO.',

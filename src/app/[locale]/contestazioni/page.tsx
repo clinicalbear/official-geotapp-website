@@ -2,37 +2,31 @@ import type { Metadata } from 'next';
 import { Fragment } from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
+import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
 import { absoluteLocalizedUrl, buildBreadcrumbJsonLd } from '@/lib/risorse/gps-lavoratori-ue/jsonLd';
-import { getContestazioniCopy, LOCALES_CONTESTAZIONI } from '@/content/contestazioni';
+import { getContestazioniCopy } from '@/content/contestazioni';
 import RisorsaFaq from '@/components/risorse/RisorsaFaq';
 import DemoReportBanner from '@/components/DemoReportBanner';
+import { DEMO_REPORT_DISPONIBILE } from '@/lib/demo-report';
 import { JsonLd } from '@/components/seo/JsonLd';
 
 /**
  * "Quando qualcuno contesta il lavoro: cosa cambia con GeoTapp": la stessa contestazione vista da
- * tre parti (azienda, chi lavora, committente), con un report vero da scaricare e verificare.
- * E' una pagina sul PROBLEMA; per le funzioni una a una c'e' /features. Contenuto per lingua in
+ * tre parti (azienda, chi lavora, committente), cosa GeoTapp non fa, domande frequenti. E' una pagina
+ * sul PROBLEMA; per le funzioni una a una c'e' /features. Contenuto per lingua in
  * src/content/contestazioni/{locale}.ts, scritto nativamente, non tradotto.
  *
- * DA PUBBLICARE SOLO CON LE 11 LINGUE. Fino ad allora:
- *  - le lingue senza contenuto rispondono 404 (dynamicParams = false), non una copia italiana;
- *  - gli hreflang elencano solo le lingue che esistono (qui sotto);
- *  - la pagina NON e' nella mappa del sito (middleware.ts) e nessun link la raggiunge.
- * A 11 su 11: aggiungere la mappa del sito, tornare a buildLocaleAlternates e collegare la barra
- * e la scheda della stampa (lib/press/data.ts).
+ * Il report di esempio da scaricare e verificare (`sample` in ogni lingua) compare solo quando
+ * DEMO_REPORT_DISPONIBILE e' true: vedi DemoReportBanner.tsx per il perche'.
  *
  * Vestita come le altre risorse (.lp-risorsa-strumento, .ph, .art .body, stile in l-mockup.css).
  */
 
-export const dynamicParams = false;
-export function generateStaticParams() {
-  return LOCALES_CONTESTAZIONI.map((locale) => ({ locale }));
-}
+export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 const CANONICAL = '/contestazioni/';
 /** Data di pubblicazione/ultimo aggiornamento del contenuto (ISO), unica per tutte le lingue. */
@@ -52,14 +46,10 @@ export async function generateMetadata({
   const { locale } = await params;
   const copy = await getContestazioniCopy(locale);
   if (!copy) return {};
-  // hreflang solo per le lingue in cui la pagina esiste: elencarne altre darebbe 404 ai motori.
-  const languages = Object.fromEntries(
-    LOCALES_CONTESTAZIONI.map((l) => [l, buildCanonicalUrl(l, CANONICAL)]),
-  ) as Record<string, string>;
   return {
     title: { absolute: copy.metaTitle },
     description: copy.metaDesc,
-    alternates: { canonical: buildCanonicalUrl(locale, CANONICAL), languages },
+    alternates: buildLocaleAlternates(locale, CANONICAL),
     openGraph: {
       url: buildCanonicalUrl(locale, CANONICAL),
       type: 'article',
@@ -158,6 +148,7 @@ export default async function ContestazioniPage({
       </section>
 
       {/* ── il report di esempio, da provare ── */}
+      {DEMO_REPORT_DISPONIBILE && (
       <section className="sec warm">
         <div className="wt art">
           <div className="body">
@@ -171,6 +162,7 @@ export default async function ContestazioniPage({
           </div>
         </div>
       </section>
+      )}
 
       {/* ── cosa non fa ── */}
       <section className="sec">

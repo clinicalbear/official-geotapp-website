@@ -3,7 +3,7 @@ import type { PresenzeCopy } from './types';
 const it: PresenzeCopy = {
   metaTitle: 'Si può usare il GPS per le presenze senza tracciare i dipendenti? - GeoTapp',
   metaDesc:
-    'Sì, se la posizione si registra solo alla timbratura. Cosa dice il Tribunale di Cosenza, cosa sanziona il Garante Privacy, e cosa registra davvero un sistema di presenze GPS a norma.',
+    'Sì, se la posizione si registra solo quando il lavoratore timbra: entrata, pause, uscita. Cosa dice il Tribunale di Cosenza, cosa sanziona il Garante Privacy, e cosa registra davvero un sistema di presenze GPS.',
   h1: 'Si può usare il GPS per le presenze senza tracciare i dipendenti?',
   lede:
     'Sì. Un sistema che rileva la posizione solo nel momento in cui il lavoratore timbra l\'entrata, la pausa o l\'uscita non sorveglia la persona: documenta un fatto. Lo ha riconosciuto il Tribunale di Cosenza nel 2026, e lo confermano i provvedimenti del Garante Privacy che puniscono invece il tracciamento continuo.',

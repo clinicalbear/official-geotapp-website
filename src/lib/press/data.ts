@@ -91,7 +91,7 @@ export const PRESS_COVERAGE: PressItem[] = [
       hosts: ['vigilanzaprivataonline.com'],
       // Niente manuale: e' solo in italiano e non e' quello che vogliamo spingere (decisione di Mike, 27/10/2026).
       welcome: "Ti interessa il GPS sul lavoro? Ogni posizione registrata nasce da un gesto di chi lavora, e l'app non chiede il permesso di localizzazione in background.",
-      cta: { label: 'Vedi come funziona', path: '/risorse/gps-presenze-senza-tracciamento' },
+      cta: { label: 'Vedi come funziona', path: '/contestazioni' },
     },
   },
   // ISPER HR Review, n. 292 del 7 ottobre 2026. Articolo a firma Michele Angelo Petraroli,
@@ -127,7 +127,7 @@ export const PRESS_COVERAGE: PressItem[] = [
       // Niente "minimização de dados": non e' fra i claim approvati (docs/stampa/scheda-claim.md).
       // La frase sotto e' il claim approvato, con l'avverbio, in portoghese.
       welcome: 'Interessa-lhe o GPS no trabalho? Cada posição registada nasce de um gesto do trabalhador, e a aplicação não pede acesso à localização em segundo plano.',
-      cta: { label: 'Ver como funciona', path: '/risorse/gps-presenze-senza-tracciamento' },
+      cta: { label: 'Ver como funciona', path: '/contestazioni' },
     },
     follow: true, // DOFOLLOW dal 10/09/2026: Tania Reis ha aggiunto geotapp.com alla riga
                   // d'autore (post modificato alle 17:08 di Lisbona, otto minuti prima di
@@ -189,7 +189,7 @@ export const PRESS_COVERAGE: PressItem[] = [
       // Il pezzo e' sulla posizione registrata a due soli istanti (entrata e uscita) e sul test di
       // proporzionalita' dell'ICO. Stesso claim approvato della scheda, con l'avverbio.
       welcome: 'Thinking about GPS at work? Every location point starts with an action by the worker, and the app does not ask for background location access.',
-      cta: { label: 'See how it works', path: '/risorse/gps-presenze-senza-tracciamento' },
+      cta: { label: 'See how it works', path: '/contestazioni' },
     },
     follow: true, // Dofollow verificato sull'HTML grezzo: <a href="https://geotapp.com/en-gb/">GeoTapp</a>
                   // nella bio autore, senza rel. Nella stessa pagina xperthr.co.uk e brightmine.com
@@ -211,6 +211,7 @@ export const PRESS_COVERAGE: PressItem[] = [
     referrer: {
       hosts: ['cooinsider.com'],
       welcome: 'See what a finished job looks like as a report: times, location and photos, ready to send to your client.',
+      cta: { label: 'See how it works', path: '/contestazioni' },
     },
     follow: true, // Ci linkano in dofollow: rel="" verificato nel DOM sull'ancora "GeoTapp" ->
                   // https://geotapp.com/. Nella stessa pagina i profili LinkedIn degli altri
@@ -244,6 +245,7 @@ export const PRESS_COVERAGE: PressItem[] = [
     referrer: {
       hosts: ['smallbizleader.com'],
       welcome: 'See what a finished job looks like as a report: times, location and photos, ready to send to your client.',
+      cta: { label: 'See how it works', path: '/contestazioni' },
     },
     // NIENTE follow: ci linkano in dofollow (rel="" verificato nel DOM), ma il dominio ha
     // Spam Score Moz 37% (fascia media) -> non ricambiamo. Reversibile in ogni momento.
@@ -259,6 +261,7 @@ export const PRESS_COVERAGE: PressItem[] = [
     referrer: {
       hosts: ['azbigmedia.com'],
       welcome: 'See what a finished job looks like as a report: times, location and photos, ready to send to your client.',
+      cta: { label: 'See how it works', path: '/contestazioni' },
     },
     follow: true, // AZ Big Media ci linka in dofollow (rel="noopener", verificato).
                   // NB: dal 13/07/2026 questo flag NON concede piu' dofollow (pressRel torna

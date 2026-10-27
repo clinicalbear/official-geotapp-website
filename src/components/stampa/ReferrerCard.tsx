@@ -1,10 +1,11 @@
 'use client';
 
 /**
- * Secondo livello dell'accoglienza a chi arriva da una testata: una scheda in angolo che invita al
- * trial. Non e' un modale: non copre la pagina, non ha sfondo scuro, si chiude con la x o Esc.
- * Il testo e' quello che il sito usa gia' per il trial (titolo, sottotitolo e pulsante dei dizionari),
- * nella lingua della pagina in cui si trova la persona: nessuna frase nuova da controllare.
+ * Secondo livello dell'accoglienza a chi arriva da una testata: una scheda in angolo che invita alla
+ * pagina "Quando qualcuno contesta il lavoro", dove si capisce cosa fa GeoTapp e come aiuta azienda,
+ * chi lavora e committente. Non e' un modale: non copre la pagina, non ha sfondo scuro, si chiude con
+ * la x o Esc. Testo nella lingua della pagina in cui si trova la persona (`copy`, dal contenuto della
+ * pagina stessa).
  *
  * Non dipende dal referrer (sulle pagine dopo la prima non c'e' piu'): basta il segnale di visita
  * "arrivata dalla stampa" che mette la barra di benvenuto (QUIET_KEY, senza nome della testata).
@@ -12,33 +13,30 @@
  * Quando compare (tutte le condizioni insieme):
  *  - dopo 30 secondi sulla pagina oppure a meta' scroll, il primo dei due;
  *  - solo dopo che ha scelto sui cookie (come il sondaggio: niente sopra al banner cookie);
- *  - mai se ha chiuso la barra di benvenuto (ha detto di no); NON si ferma se ha cliccato il suo
- *    pulsante: chi ha letto la pagina di approfondimento e' proprio chi va invitato al trial;
- *  - mai su una pagina di compito (trial, contatto...), cioe' mai sul trial stesso;
+ *  - mai se ha chiuso la barra di benvenuto o ne ha cliccato il pulsante (e' gia' li' o ha detto di no);
+ *  - mai su una pagina di compito (trial, contatto...) ne' sulla pagina a cui invita;
  *  - mai se in questa visita c'e' gia' un altro overlay (stessa chiave del sondaggio), e una volta sola per sessione.
  */
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { trackEvent } from '@/lib/analytics';
-import { localizePath } from '@/lib/i18n/locale-routing';
 import { ePaginaDiCompito } from '@/lib/pagine-di-compito';
 import {
-  CARD_KEY, CONSENT_KEY, DISMISS_KEY, OUTLET_KEY, VISIT_KEY,
+  CARD_KEY, CONSENT_KEY, CTA_CLICKED_KEY, DISMISS_KEY, OUTLET_KEY, VISIT_KEY,
   arrivatoDallaStampa, cardCopyFor, copyForLocale, type CardCopy,
 } from '@/lib/press/referrer';
-import type { AppLocale } from '@/lib/i18n/config';
 
 const DOPO_MS = 30_000;
 const SCROLL_MINIMO = 0.5;
 
-type Mostrata = CardCopy & { href: string; close: string; lang: string };
+type Mostrata = CardCopy & { close: string; lang: string };
 
 function letto(k: string): string | null {
   try { return sessionStorage.getItem(k); } catch { return null; }
 }
 
-export default function ReferrerCard({ copy }: { copy: Record<string, CardCopy> }) {
+export default function ReferrerCard({ copy, href }: { copy: Record<string, CardCopy>; href: string }) {
   const [card, setCard] = useState<Mostrata | null>(null);
 
   useEffect(() => {
@@ -47,8 +45,9 @@ export default function ReferrerCard({ copy }: { copy: Record<string, CardCopy> 
     let fatto = false;
 
     const puoMostrare = () => {
-      if (letto(DISMISS_KEY) || letto(CARD_KEY) || letto(VISIT_KEY)) return false;
+      if (letto(DISMISS_KEY) || letto(CTA_CLICKED_KEY) || letto(CARD_KEY) || letto(VISIT_KEY)) return false;
       if (ePaginaDiCompito(location.pathname)) return false;
+      if (location.pathname === href) return false;
       try { if (!localStorage.getItem(CONSENT_KEY)) return false; } catch { return false; }
       return true;
     };
@@ -63,12 +62,7 @@ export default function ReferrerCard({ copy }: { copy: Record<string, CardCopy> 
         sessionStorage.setItem(CARD_KEY, '1');
         sessionStorage.setItem(VISIT_KEY, '1'); // un solo overlay per visita
       } catch { /* ignore */ }
-      setCard({
-        ...testo,
-        href: localizePath('/trial', lang as AppLocale),
-        close: copyForLocale(lang).close,
-        lang,
-      });
+      setCard({ ...testo, close: copyForLocale(lang).close, lang });
       trackEvent('press_offer_view', { locale: lang });
       window.removeEventListener('scroll', controlla);
       clearInterval(giro);
@@ -85,7 +79,7 @@ export default function ReferrerCard({ copy }: { copy: Record<string, CardCopy> 
       window.removeEventListener('scroll', controlla);
       clearInterval(giro);
     };
-  }, [copy]);
+  }, [copy, href]);
 
   useEffect(() => {
     if (!card) return;
@@ -117,11 +111,10 @@ export default function ReferrerCard({ copy }: { copy: Record<string, CardCopy> 
         <p id="press-offer-title" style={{ fontSize: 18, fontWeight: 800, color: '#0b1736', margin: '0 28px 6px 0', lineHeight: 1.25 }}>{card.title}</p>
         <p style={{ fontSize: 14, color: '#475569', margin: '0 0 16px', lineHeight: 1.45 }}>{card.text}</p>
         <Link
-          href={card.href}
+          href={href}
           onClick={() => {
-            // Stesso evento e stessa sorgente dei pulsanti trial del sito: la pagina del trial attribuisce la conversione.
+            try { sessionStorage.setItem(CTA_CLICKED_KEY, '1'); } catch { /* ignore */ }
             const press = letto(OUTLET_KEY); // c'e' solo col consenso analytics
-            trackEvent('trial_click', { cta_source: 'press_card', cta_locale: card.lang });
             trackEvent('press_offer_click', press ? { outlet: press } : { locale: card.lang });
             setCard(null);
           }}

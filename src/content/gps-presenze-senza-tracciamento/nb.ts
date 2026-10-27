@@ -3,7 +3,7 @@ import type { PresenzeCopy } from './types';
 const nb: PresenzeCopy = {
   metaTitle: 'Kan GPS brukes til oppmøte uten å spore ansatte? - GeoTapp',
   metaDesc:
-    'Ja, hvis posisjonen bare registreres ved stempling. Hva en italiensk domstol avgjorde i 2026, hva tilsynsmyndigheter faktisk bøtelegger, og hva et regelverksriktig GPS-oppmøtesystem registrerer.',
+    'Ja, hvis posisjonen bare registreres ved stempling: inn, pause og ut. Hva en italiensk domstol avgjorde i 2026, hva tilsynsmyndigheter faktisk bøtelegger, og hva et GPS-oppmøtesystem egentlig registrerer.',
   h1: 'Kan GPS brukes til oppmøte uten å spore ansatte?',
   lede:
     'Ja. Et system som bare fanger posisjonen i det nøyaktige øyeblikket en ansatt stempler inn, tar pause eller stempler ut, overvåker ikke personen løpende: det dokumenterer et faktum. Det er nøyaktig det skillet en italiensk domstol bekreftet i 2026, og det stemmer med det tilsynsmyndigheter faktisk bøtelegger: kontinuerlig sporing, ikke det enkeltstående posisjonsoppslaget.',

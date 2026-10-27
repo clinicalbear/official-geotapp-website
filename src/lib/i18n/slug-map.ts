@@ -229,11 +229,12 @@ export const SLUG_MAP: Record<string, Partial<Record<AppLocale, string>>> = {
     da: 'overvaagningsindeks', sv: 'overvakningsindex', nb: 'overvakingsindeks', ru: 'indeks-nablyudeniya',
     'en-us': 'surveillance-index', 'en-gb': 'surveillance-index', 'en-au': 'surveillance-index', 'en-ie': 'surveillance-index', 'en-ca': 'surveillance-index',
   },
-  // Pagina "Quando qualcuno contesta il lavoro" (27/10/2026). Per ora solo italiano: le altre lingue
-  // si aggiungono con le loro pagine (vedi src/content/contestazioni/index.ts). Senza voce una lingua
-  // ricade sullo slug canonico.
+  // Pagina "Quando qualcuno contesta il lavoro" (27/10/2026), in tutte le lingue. Slug scelti con i revisori di lingua.
   'contestazioni': {
-    it: 'contestazioni',
+    it: 'contestazioni', en: 'work-disputes', de: 'beanstandungen-der-arbeit', nl: 'betwist-werk',
+    fr: 'contestations-travail', es: 'discrepancias-trabajo', pt: 'contestacoes-no-trabalho',
+    da: 'uenighed-om-arbejdet', sv: 'tvister-om-arbete', nb: 'tvister-om-arbeid', ru: 'spory-o-rabote',
+    'en-us': 'work-disputes', 'en-gb': 'work-disputes', 'en-au': 'work-disputes', 'en-ie': 'work-disputes', 'en-ca': 'work-disputes',
   },
   'gps-presenze-senza-tracciamento': {
     it: 'gps-presenze-senza-tracciamento', en: 'gps-attendance-without-tracking', de: 'gps-zeiterfassung-ohne-ueberwachung', nl: 'gps-aanwezigheid-zonder-volgen',

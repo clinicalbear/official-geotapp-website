@@ -3,7 +3,7 @@ import type { PresenzeCopy } from './types';
 const pt: PresenzeCopy = {
   metaTitle: 'Ponto por GPS sem vigiar trabalhadores: pode-se? - GeoTapp',
   metaDesc:
-    'Sim, se a posição só for registada ao picar o ponto. O que disse o Tribunal de Cosenza em 2026, o que as autoridades sancionam e o que regista a GeoTapp.',
+    'Sim, se a posição só for registada quando se pica o ponto: entrada, pausas e saída. O que disse o Tribunal de Cosenza em 2026, o que as autoridades sancionam e o que regista a GeoTapp.',
   h1: 'Pode usar-se o GPS no registo de presenças sem vigiar os trabalhadores?',
   lede:
     'Sim. Um sistema que só regista a posição no momento exato em que um trabalhador pica o ponto de entrada, de uma pausa ou de saída não vigia a pessoa: documenta um facto. Um tribunal italiano reconheceu-o em 2026, e confirmam-no as decisões das autoridades de proteção de dados, que sancionam o rastreio contínuo, não o registo pontual da posição.',

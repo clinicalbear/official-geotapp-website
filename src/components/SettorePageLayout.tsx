@@ -19,6 +19,7 @@ import {
 import { JsonLd } from '@/components/seo/JsonLd';
 import UpdatedOnLine, { updatedIsoFor } from '@/components/seo/UpdatedOnLine';
 import DemoReportBanner from '@/components/DemoReportBanner';
+import { DEMO_REPORT_DISPONIBILE } from '@/lib/demo-report';
 import { trackEvent } from '@/lib/analytics';
 import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
 import {
@@ -734,13 +735,15 @@ export default function SettorePageLayout({ content, locale, settore, children }
         </div>
       </section>
 
-      {/* ── DEMO REPORT ── */}
+      {/* ── DEMO REPORT (nascosto finche' non c'e' un pacchetto valido: vedi lib/demo-report.ts) ── */}
+      {DEMO_REPORT_DISPONIBILE && (
       <section className="sec warm">
         <div className="wn">
           <p className="kk k" style={{ textAlign: 'center', marginBottom: 28 }}>{sl.see_real_report ?? 'See a real report'}</p>
           <DemoReportBanner />
         </div>
       </section>
+      )}
 
       {/* ── CTA FINALE ── */}
       <section className="end">

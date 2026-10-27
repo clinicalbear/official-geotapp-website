@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { trackEvent } from '@/lib/analytics';
 import PastigliaStato from '@/components/PastigliaStato';
+import { DEMO_REPORT_DISPONIBILE } from '@/lib/demo-report';
 import { DEFAULT_LOCALE, getLocaleFromPathname, localizePath } from '@/lib/i18n/locale-routing';
 
 const DEMO_REPORT_ID = 'GT-2026-0322-4472';
@@ -16,6 +17,7 @@ export default function DemoReportBanner() {
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
   const d = getDictionary(locale).home_sections.demo_banner;
+  if (!DEMO_REPORT_DISPONIBILE) return null;
   // A57, prova n.2: la pastiglia "Sigillato" con icona e parola contro il
   // riquadro nudo. Si legge su `demo_report_download`, come tendenza.
   // 24/09/2026: la pastiglia si rende SEMPRE e la mostra solo il CSS

@@ -37,7 +37,9 @@ import { notFound } from 'next/navigation';
 import { SUPPORTED_LOCALES, type AppLocale } from '@/lib/i18n/config';
 import { buildConsentDefaultScript } from '@/lib/consent-mode';
 import DictionaryBridge from '@/lib/i18n/DictionaryBridge';
-import { dizionarioComune, getDictionary } from '@/lib/i18n/dictionaries';
+import { dizionarioComune } from '@/lib/i18n/dictionaries';
+import { getContestazioniCopy } from '@/content/contestazioni';
+import { localizePath } from '@/lib/i18n/locale-routing';
 
 const BASE_URL = 'https://geotapp.com';
 
@@ -234,16 +236,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { description: data.description };
 }
 
-// Testo della scheda del trial per chi arriva dalla stampa: le stringhe che il sito usa gia' per il trial.
-function cardCopyAll(): Record<string, { title: string; text: string; cta: string }> {
-  const out: Record<string, { title: string; text: string; cta: string }> = {};
-  for (const l of SUPPORTED_LOCALES) {
-    const d = getDictionary(l);
-    out[l] = { title: d.landing.trial_cta_headline, text: d.landing.sticky_cta_subtitle, cta: d.navbar.cta };
-  }
-  return out;
-}
-
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
 
@@ -257,6 +249,10 @@ export default async function LocaleLayout({ children, params }: Props) {
   if (!(SUPPORTED_LOCALES as readonly string[]).includes(locale)) {
     notFound();
   }
+
+  // Scheda della stampa: invita alla pagina "Quando qualcuno contesta il lavoro", nella lingua della pagina.
+  const contestazioni = await getContestazioniCopy(locale);
+  const cardCopy = contestazioni ? { [locale]: contestazioni.card } : {};
 
   const data = LOCALE_SCHEMA[locale] ?? LOCALE_SCHEMA.en;
   const localeUrl = `${BASE_URL}/${locale}/`;
@@ -622,7 +618,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             quindi le pagine più viste del sito (home, trial, prodotti) non lo
             mostravano mai. Esce dopo la scelta sui cookie, una volta per browser. */}
         <SurveyInvite />
-        <ReferrerCard copy={cardCopyAll()} />
+        <ReferrerCard copy={cardCopy} href={localizePath('/contestazioni', locale as AppLocale)} />
         <ChatWidget />
         <InternalTrafficBadge />
               </DictionaryBridge>

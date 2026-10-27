@@ -3,7 +3,7 @@ import type { PresenzeCopy } from './types';
 const fr: PresenzeCopy = {
   metaTitle: 'Pointage GPS sans surveiller les salariés : possible ? - GeoTapp',
   metaDesc:
-    'Oui, si la position n\'est relevée qu\'au pointage. Ce qu\'a jugé le tribunal de Cosenza en 2026, ce que sanctionnent les autorités, ce qu\'enregistre GeoTapp.',
+    'Oui, si la position n\'est relevée qu\'aux pointages : arrivée, pause, départ. Ce qu\'a jugé le tribunal de Cosenza en 2026, ce que sanctionnent les autorités, ce qu\'enregistre GeoTapp.',
   h1: 'Peut-on utiliser le GPS pour le pointage sans surveiller les salariés ?',
   lede:
     'Oui. Un système qui ne relève la position qu\'au moment précis où un salarié pointe son arrivée, sa pause ou son départ ne surveille pas la personne : il documente un fait. Un tribunal italien l\'a reconnu en 2026, et les décisions des autorités de protection des données le confirment : elles sanctionnent le suivi continu, pas le relevé ponctuel de la position.',

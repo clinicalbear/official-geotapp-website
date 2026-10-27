@@ -3,7 +3,7 @@ import type { PresenzeCopy } from './types';
 const en: PresenzeCopy = {
   metaTitle: 'Can you use GPS for attendance without tracking employees? - GeoTapp',
   metaDesc:
-    'Yes, if the location is only captured at clock-in. What an Italian court ruled in 2026, what data protection authorities actually fine, and what a compliant GPS attendance system records.',
+    'Yes, if the location is only recorded when the worker clocks in, takes a break or clocks out. What an Italian court ruled in 2026, what data protection authorities actually fine, and what a GPS attendance system really records.',
   h1: 'Can you use GPS for attendance without tracking employees?',
   lede:
     'Yes. A system that only captures location at the exact moment a worker clocks in, takes a break, or clocks out is not surveillance: it documents a fact. An Italian court confirmed exactly this distinction in 2026, and it matches what data protection authorities actually fine: continuous tracking, not point-in-time location capture.',

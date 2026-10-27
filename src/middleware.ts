@@ -256,6 +256,7 @@ const SITEMAP_ROUTES: SitemapRouteEntry[] = [
   { path: '/chi-siamo/', priority: 0.55, changeFrequency: 'monthly' },
   { path: '/stampa/', priority: 0.5, changeFrequency: 'monthly' },
   { path: '/cos-e-geotapp/', priority: 0.7, changeFrequency: 'monthly' },
+  { path: '/contestazioni/', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/privacy/', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/terms/', priority: 0.3, changeFrequency: 'yearly' },
   { path: '/cookies/', priority: 0.3, changeFrequency: 'yearly' },

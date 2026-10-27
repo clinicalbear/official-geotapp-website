@@ -3,7 +3,7 @@ import type { PresenzeCopy } from './types';
 const nl: PresenzeCopy = {
   metaTitle: 'Kan gps voor aanwezigheid worden gebruikt zonder werknemers te volgen? - GeoTapp',
   metaDesc:
-    'Ja, als de locatie alleen bij het registreren wordt vastgelegd. Wat de rechtbank van Cosenza zegt, wat de Italiaanse toezichthouder (Garante Privacy) bestraft en wat een gps-systeem voor aanwezigheid dat aan de regels voldoet echt vastlegt.',
+    'Ja, als de locatie alleen wordt vastgelegd bij een registratie: komst, pauze, vertrek. Wat de rechtbank van Cosenza zegt, wat de Italiaanse toezichthouder (Garante Privacy) bestraft en wat een gps-systeem voor aanwezigheid echt vastlegt.',
   h1: 'Kan gps voor aanwezigheid worden gebruikt zonder werknemers te volgen?',
   lede:
     'Ja. Een systeem dat de locatie alleen vastlegt op het moment dat de medewerker zijn aankomst, pauze of vertrek registreert, bewaakt de persoon niet: het documenteert een feit. De rechtbank van Cosenza heeft dat in 2026 erkend, en de besluiten van de Garante Privacy, die juist doorlopende tracking bestraffen, bevestigen het.',

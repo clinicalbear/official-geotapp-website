@@ -3,7 +3,7 @@ import type { PresenzeCopy } from './types';
 const da: PresenzeCopy = {
   metaTitle: 'Kan GPS bruges til fremmøde uden at spore medarbejdere? - GeoTapp',
   metaDesc:
-    'Ja, hvis positionen kun registreres ved stempling. Hvad en italiensk domstol afgjorde i 2026, hvad tilsynsmyndigheder faktisk straffer, og hvad et GPS-system til fremmøde egentlig registrerer.',
+    'Ja, hvis positionen kun registreres, når man stempler ind, holder pause eller stempler ud. Hvad en italiensk domstol afgjorde i 2026, hvad tilsynsmyndigheder faktisk straffer, og hvad et GPS-system til fremmøde egentlig registrerer.',
   h1: 'Kan GPS bruges til fremmøde uden at spore medarbejdere?',
   lede:
     'Ja. Et system, der kun registrerer position i det præcise øjeblik en medarbejder stempler ind, holder pause eller stempler ud, overvåger ikke personen kontinuerligt: det dokumenterer et faktum. Det er præcis den skelnen, som en italiensk domstol bekræftede i 2026, og den stemmer overens med det, tilsynsmyndigheder faktisk straffer: kontinuerlig sporing, ikke det enkeltstående positionsopslag.',

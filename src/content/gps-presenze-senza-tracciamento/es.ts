@@ -3,7 +3,7 @@ import type { PresenzeCopy } from './types';
 const es: PresenzeCopy = {
   metaTitle: 'Fichaje por GPS sin vigilar a empleados: ¿se puede? - GeoTapp',
   metaDesc:
-    'Sí, si la posición solo se registra al fichar. Qué dijo el Tribunal de Cosenza en 2026, qué sancionan las autoridades y qué registra GeoTapp.',
+    'Sí, si la posición solo se registra cuando se ficha: entrada, pausas y salida. Qué dijo el Tribunal de Cosenza en 2026, qué sancionan las autoridades y qué registra GeoTapp.',
   h1: '¿Se puede usar el GPS para el fichaje sin vigilar a los empleados?',
   lede:
     'Sí. Un sistema que solo capta la posición en el momento exacto en que un trabajador ficha la entrada, una pausa o la salida no vigila a la persona: documenta un hecho. Lo reconoció un tribunal italiano en 2026, y lo confirman las resoluciones de las autoridades de protección de datos, que sancionan el seguimiento continuo, no el registro puntual de la posición.',

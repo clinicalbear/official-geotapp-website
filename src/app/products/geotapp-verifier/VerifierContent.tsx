@@ -19,6 +19,7 @@ import FeaturedIn from '@/components/FeaturedIn';
 import { featuredLabel } from '@/lib/press/labels';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import DemoReportBanner from '@/components/DemoReportBanner';
+import { DEMO_REPORT_DISPONIBILE } from '@/lib/demo-report';
 import VideoGiro from '@/components/VideoGiro';
 import { GIRO_INIZIO_VERIFICATORE } from '@/lib/video-giro';
 import type { AppLocale } from '@/lib/i18n/config';
@@ -318,12 +319,14 @@ console.log(result.integrityLevel);`}</pre>
           <p>{copy.online_verify_desc}</p>
         </div>
         <OnlineVerifier copy={copy} locale={locale} />
+        {DEMO_REPORT_DISPONIBILE && (
         <div style={{ marginTop: 40 }}>
           <p style={{ textAlign: 'center', fontSize: 14, color: '#475467', marginBottom: 16 }}>
             {NO_REPORT_HANDY[locale] ?? NO_REPORT_HANDY[locale.split('-')[0]] ?? NO_REPORT_HANDY.en}
           </p>
           <DemoReportBanner />
         </div>
+        )}
       </div></section>
 
       {/* LOCALE VS ONLINE */}
