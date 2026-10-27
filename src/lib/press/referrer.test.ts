@@ -1,6 +1,6 @@
 import { describe, it, expect, afterEach, vi } from 'vitest';
 import { PRESS_COVERAGE } from './data';
-import { buildReferrerRules, matchReferrer, copyForLocale, REFERRER_COPY, slotScript, arrivatoDallaStampa, analyticsConsentito, QUIET_KEY } from './referrer';
+import { buildReferrerRules, matchReferrer, copyForLocale, REFERRER_COPY, slotScript, arrivatoDallaStampa, analyticsConsentito, cardCopyFor, QUIET_KEY } from './referrer';
 import vm from 'node:vm';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 
@@ -34,7 +34,7 @@ describe('regole dalle uscite di stampa', () => {
     expect(r.locale).toBe('pt');
     expect(r.welcome).toBeTruthy();
     expect(r.welcome!.toLowerCase()).not.toContain('minimiza');
-    expect(r.welcome).toContain('automaticamente');
+    expect(r.welcome).toContain('gesto');
   });
   it('ogni host e normalizzato e mai un dominio padre nudo piu corto del necessario', () => {
     for (const r of rules) for (const h of r.hosts) expect(h).toBe(h.toLowerCase().replace(/^www\./, ''));
@@ -45,7 +45,7 @@ describe('regole dalle uscite di stampa', () => {
   });
   it('ogni lingua del pezzo ha il suo testo', () => {
     for (const r of rules) expect(REFERRER_COPY[r.locale], r.outlet).toBeDefined();
-    for (const l of SUPPORTED_LOCALES) expect(copyForLocale(l).welcome).toContain('{outlet}');
+    for (const l of SUPPORTED_LOCALES) { expect(copyForLocale(l).cta, l).toBeTruthy(); expect(copyForLocale(l).close, l).toBeTruthy(); }
   });
 });
 
@@ -64,9 +64,9 @@ describe('ISPER: il link ha noreferrer, il banner non puo scattare', () => {
 });
 
 describe('Personnel Today', () => {
-  it('frase propria con il claim approvato (avverbio) e risorsa senza tracciamento', () => {
+  it('frase propria con il claim approvato e risorsa senza tracciamento', () => {
     const r = matchReferrer('https://www.personneltoday.com/hr/gps-at-work/', rules)!;
-    expect(r.welcome).toContain('automatically');
+    expect(r.welcome).toContain('action by the worker');
     expect(r.cta?.path).toBe('/risorse/gps-presenze-senza-tracciamento');
     expect(r.welcome!).not.toMatch(/Make Work Pay|compliant|GDPR/i);
   });
@@ -100,24 +100,47 @@ describe('slotScript (riserva lo spazio prima del primo paint)', () => {
   });
 });
 
-describe('il manuale esiste solo in italiano', () => {
-  it('un\'offerta e ammessa solo su pezzi in italiano', () => {
-    for (const i of PRESS_COVERAGE) if (i.referrer?.offer) expect(i.locale, i.outlet).toBe('it');
-  });
-  it('Vigilanza ha il pulsante e la scheda sul manuale, con la copertina', () => {
-    const r = matchReferrer('https://www.vigilanzaprivataonline.com/x.html', rules)!;
-    expect(r.cta?.path).toBe('/risorse/manuale-gdpr-lavoro-sul-campo');
-    expect(r.offer?.path).toBe('/risorse/manuale-gdpr-lavoro-sul-campo');
-    expect(r.offer?.cover).toBe('/downloads/manuale-copertina.webp');
-  });
-  it('le testate straniere non hanno ne manuale ne scheda', () => {
-    for (const o of ['Human Resources', 'Personnel Today', 'AZ Big Media', 'COO Insider', 'Small Business Leader']) {
-      expect(rules.find((r) => r.outlet === o)?.offer, o).toBeUndefined();
+describe('le frasi della barra (nessun nome di testata, solo claim approvati)', () => {
+  it('ogni uscita con banner ha la sua frase, e nessuna nomina la testata (sembra controllo)', () => {
+    for (const i of PRESS_COVERAGE) {
+      if (!i.referrer || i.referrer.noReferrer) continue;
+      expect(i.referrer.welcome, i.outlet).toBeTruthy();
+      expect(i.referrer.welcome!.toLowerCase(), i.outlet).not.toContain(i.outlet.toLowerCase());
     }
   });
-  it('il testo non promette conformita ne revisione', () => {
-    const r = matchReferrer('https://www.vigilanzaprivataonline.com/x.html', rules)!;
-    expect(JSON.stringify(r)).not.toMatch(/conform|garantisc|certific|revision/i);
+  it('ogni regola attiva ha una frase', () => {
+    for (const r of rules) expect(r.welcome, r.outlet).toBeTruthy();
+  });
+  it('niente promesse vietate dalla scheda claim', () => {
+    for (const r of rules) {
+      expect(r.welcome, r.outlet).not.toMatch(/conform|compliant|certific|garantisc|guarantee|prova legale|never|nunca|mai |zero-knowledge|cifrat|encrypt/i);
+    }
+  });
+  it('le frasi sul GPS riprendono il claim approvato (un gesto di chi lavora, nessun permesso in background)', () => {
+    for (const o of ['Vigilanza Privata Online', 'Human Resources', 'Personnel Today']) {
+      const r = rules.find((x) => x.outlet === o)!;
+      expect(r.welcome, o).toMatch(/gesto|action by the worker/i);
+      expect(r.welcome, o).toMatch(/background|segundo plano/i);
+      expect(r.cta?.path, o).toBe('/risorse/gps-presenze-senza-tracciamento');
+    }
+  });
+  it('le testate operations parlano del report, non del GPS', () => {
+    for (const o of ['AZ Big Media', 'COO Insider', 'Small Business Leader']) {
+      expect(rules.find((r) => r.outlet === o)?.welcome, o).toMatch(/report/);
+    }
+  });
+  it('non c e piu nessun manuale ne offerta nelle regole', () => {
+    for (const r of rules) expect(Object.keys(r), r.outlet).not.toContain('offer');
+  });
+});
+
+describe('cardCopyFor (testo della scheda del trial per lingua della pagina)', () => {
+  const copy = { it: { title: 'T-it', text: 'x', cta: 'c' }, en: { title: 'T-en', text: 'x', cta: 'c' }, pt: { title: 'T-pt', text: 'x', cta: 'c' } };
+  it('lingua esatta, poi la base, poi l inglese', () => {
+    expect(cardCopyFor(copy, 'pt')?.title).toBe('T-pt');
+    expect(cardCopyFor(copy, 'en-gb')?.title).toBe('T-en');
+    expect(cardCopyFor(copy, 'da')?.title).toBe('T-en');
+    expect(cardCopyFor({}, 'it')).toBeNull();
   });
 });
 

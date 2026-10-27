@@ -1,5 +1,5 @@
 import type { AppLocale } from '@/lib/i18n/config';
-import type { PressItem, PressOffer } from './data';
+import type { PressItem } from './data';
 
 /**
  * Banner di benvenuto per chi arriva da una testata che ci ha linkato.
@@ -13,26 +13,25 @@ export type ReferrerRule = {
   hosts: string[];
   outlet: string;
   locale: AppLocale;
-  welcome?: string;
+  welcome: string;
   cta?: { label: string; path: string };
-  offer?: PressOffer;
 };
 
-export type ReferrerCopy = { welcome: string; cta: string; close: string };
+export type ReferrerCopy = { cta: string; close: string };
 
 // Lingua del PEZZO, non della pagina: chi viene da un articolo in olandese legge olandese.
 export const REFERRER_COPY: Record<string, ReferrerCopy> = {
-  it: { welcome: 'Benvenuto, lettore di {outlet}.', cta: 'Scopri come lavora GeoTapp', close: 'Chiudi' },
-  en: { welcome: 'Welcome, {outlet} reader.', cta: 'See how GeoTapp works', close: 'Close' },
-  de: { welcome: 'Willkommen, Leser von {outlet}.', cta: 'So arbeitet GeoTapp', close: 'Schließen' },
-  fr: { welcome: 'Bienvenue, lecteur de {outlet}.', cta: 'Découvrez GeoTapp', close: 'Fermer' },
-  es: { welcome: 'Bienvenido, lector de {outlet}.', cta: 'Descubra cómo funciona GeoTapp', close: 'Cerrar' },
-  pt: { welcome: 'Bem-vindo, leitor de {outlet}.', cta: 'Descubra como funciona a GeoTapp', close: 'Fechar' },
-  nl: { welcome: 'Welkom, lezer van {outlet}.', cta: 'Zo werkt GeoTapp', close: 'Sluiten' },
-  ru: { welcome: 'Добро пожаловать, читатель {outlet}.', cta: 'Как работает GeoTapp', close: 'Закрыть' },
-  da: { welcome: 'Velkommen, læser af {outlet}.', cta: 'Se hvordan GeoTapp virker', close: 'Luk' },
-  sv: { welcome: 'Välkommen, läsare av {outlet}.', cta: 'Se hur GeoTapp fungerar', close: 'Stäng' },
-  nb: { welcome: 'Velkommen, leser av {outlet}.', cta: 'Se hvordan GeoTapp fungerer', close: 'Lukk' },
+  it: { cta: 'Vedi come funziona', close: 'Chiudi' },
+  en: { cta: 'See how GeoTapp works', close: 'Close' },
+  de: { cta: 'So arbeitet GeoTapp', close: 'Schließen' },
+  fr: { cta: 'Découvrez GeoTapp', close: 'Fermer' },
+  es: { cta: 'Descubra cómo funciona GeoTapp', close: 'Cerrar' },
+  pt: { cta: 'Descubra como funciona a GeoTapp', close: 'Fechar' },
+  nl: { cta: 'Zo werkt GeoTapp', close: 'Sluiten' },
+  ru: { cta: 'Как работает GeoTapp', close: 'Закрыть' },
+  da: { cta: 'Se hvordan GeoTapp virker', close: 'Luk' },
+  sv: { cta: 'Se hur GeoTapp fungerar', close: 'Stäng' },
+  nb: { cta: 'Se hvordan GeoTapp fungerer', close: 'Lukk' },
 };
 
 export function copyForLocale(locale: string): ReferrerCopy {
@@ -46,14 +45,13 @@ export function normalizeHost(host: string): string {
 /** Le uscite con un banner, ridotte al minimo da passare al client. */
 export function buildReferrerRules(items: PressItem[]): ReferrerRule[] {
   return items
-    .filter((i): i is PressItem & { referrer: NonNullable<PressItem['referrer']> } => !!i.referrer && !i.referrer.noReferrer)
+    .filter((i): i is PressItem & { referrer: NonNullable<PressItem['referrer']> } => !!i.referrer && !i.referrer.noReferrer && !!i.referrer.welcome)
     .map((i) => ({
       hosts: i.referrer.hosts.map(normalizeHost),
       outlet: i.outlet,
       locale: i.locale,
-      welcome: i.referrer.welcome,
+      welcome: i.referrer.welcome as string,
       cta: i.referrer.cta,
-      offer: i.referrer.offer,
     }));
 }
 
@@ -82,7 +80,7 @@ export const OUTLET_KEY = 'gtapp_press_outlet';
 /** Testo che il banner mostrera' per questa regola (serve a stimare lo spazio da riservare). */
 export function bannerText(rule: ReferrerRule): { text: string; cta: string } {
   const c = copyForLocale(rule.locale);
-  return { text: rule.welcome ?? c.welcome.replace('{outlet}', rule.outlet), cta: rule.cta?.label ?? c.cta };
+  return { text: rule.welcome, cta: rule.cta?.label ?? c.cta };
 }
 
 /**
@@ -147,4 +145,13 @@ export function analyticsConsentito(): boolean {
   } catch {
     return false;
   }
+}
+
+/** Testo della scheda del trial, preso dai dizionari del sito (gia' controllati) e passato dal server. */
+export type CardCopy = { title: string; text: string; cta: string };
+
+/** Sceglie il testo per la lingua della pagina ("en-gb" -> "en"), con ripiego sull'inglese. */
+export function cardCopyFor(copy: Record<string, CardCopy>, lang: string): CardCopy | null {
+  const l = (lang || '').toLowerCase();
+  return copy[l] ?? copy[l.split('-')[0]] ?? copy.en ?? null;
 }

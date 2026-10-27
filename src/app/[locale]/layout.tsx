@@ -37,7 +37,7 @@ import { notFound } from 'next/navigation';
 import { SUPPORTED_LOCALES, type AppLocale } from '@/lib/i18n/config';
 import { buildConsentDefaultScript } from '@/lib/consent-mode';
 import DictionaryBridge from '@/lib/i18n/DictionaryBridge';
-import { dizionarioComune } from '@/lib/i18n/dictionaries';
+import { dizionarioComune, getDictionary } from '@/lib/i18n/dictionaries';
 
 const BASE_URL = 'https://geotapp.com';
 
@@ -232,6 +232,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const data = LOCALE_SCHEMA[locale] ?? LOCALE_SCHEMA.en;
   return { description: data.description };
+}
+
+// Testo della scheda del trial per chi arriva dalla stampa: le stringhe che il sito usa gia' per il trial.
+function cardCopyAll(): Record<string, { title: string; text: string; cta: string }> {
+  const out: Record<string, { title: string; text: string; cta: string }> = {};
+  for (const l of SUPPORTED_LOCALES) {
+    const d = getDictionary(l);
+    out[l] = { title: d.landing.trial_cta_headline, text: d.landing.sticky_cta_subtitle, cta: d.navbar.cta };
+  }
+  return out;
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
@@ -612,7 +622,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             quindi le pagine più viste del sito (home, trial, prodotti) non lo
             mostravano mai. Esce dopo la scelta sui cookie, una volta per browser. */}
         <SurveyInvite />
-        <ReferrerCard rules={buildReferrerRules(PRESS_COVERAGE)} />
+        <ReferrerCard copy={cardCopyAll()} />
         <ChatWidget />
         <InternalTrafficBadge />
               </DictionaryBridge>

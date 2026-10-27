@@ -3,20 +3,11 @@ import type { AppLocale } from '@/lib/i18n/config';
 // Banner per chi arriva dalla testata. Solo per uscite dove il link a noi e' VERIFICATO nella
 // pagina (non per le menzioni senza link: non portano lettori). Non dipende da `follow`: il
 // banner serve al lettore, non a Google, e un lettore da un link nofollow vale come gli altri.
-export type PressOffer = {
-  title: string;
-  text: string;
-  cta: string;
-  path: string;   // path canonico della pagina dell'offerta (con barra finale)
-  cover?: string; // immagine in /public
-};
-
 export type PressReferrer = {
   hosts: string[];          // host esatti da cui arriva il clic (senza "www."); mai un dominio padre
-  welcome?: string;         // frase intera nella lingua del pezzo; assente = frase generica con {outlet}
+  welcome?: string;         // frase intera nella lingua del pezzo, SENZA il nome della testata (sembra controllo). Obbligatoria per avere il banner
   noReferrer?: boolean;     // il link nel pezzo ha rel="noreferrer": il browser NON manda il referrer, il banner non puo' scattare.
                             // Si tiene la voce per documentarlo e per chiedere alla testata di togliere noreferrer o aggiungere ?utm_source=
-  offer?: PressOffer;       // scheda in angolo dopo un po' (vedi ReferrerCard). SOLO per pezzi in italiano: il manuale esiste solo in italiano
   cta?: { label: string; path: string }; // path canonico (es. '/risorse/gps-lavoratori-ue'), localizzato sul `locale` del pezzo
 };
 
@@ -98,16 +89,9 @@ export const PRESS_COVERAGE: PressItem[] = [
     logo: '/press/vigilanzaprivataonline-v2.png',
     referrer: {
       hosts: ['vigilanzaprivataonline.com'],
-      // Testata italiana: puo' avere il manuale (esiste solo in italiano, per la legge italiana).
-      welcome: 'Benvenuto, lettore di Vigilanza Privata Online. Qui trovi il manuale su posizione, orari e foto di chi lavora fuori sede (PDF, 96 pagine).',
-      cta: { label: 'Vedi il manuale', path: '/risorse/manuale-gdpr-lavoro-sul-campo' },
-      offer: {
-        title: 'Posizione, orari e foto di chi lavora fuori sede',
-        text: 'Manuale pratico tra Statuto dei lavoratori, GDPR e squadre sul campo. PDF di 96 pagine, con note e fonti.',
-        cta: 'Scarica il manuale',
-        path: '/risorse/manuale-gdpr-lavoro-sul-campo',
-        cover: '/downloads/manuale-copertina.webp',
-      },
+      // Niente manuale: e' solo in italiano e non e' quello che vogliamo spingere (decisione di Mike, 27/10/2026).
+      welcome: "Ti interessa il GPS sul lavoro? Ogni posizione registrata nasce da un gesto di chi lavora, e l'app non chiede il permesso di localizzazione in background.",
+      cta: { label: 'Vedi come funziona', path: '/risorse/gps-presenze-senza-tracciamento' },
     },
   },
   // ISPER HR Review, n. 292 del 7 ottobre 2026. Articolo a firma Michele Angelo Petraroli,
@@ -142,7 +126,7 @@ export const PRESS_COVERAGE: PressItem[] = [
       hosts: ['hrportugal.sapo.pt'],
       // Niente "minimização de dados": non e' fra i claim approvati (docs/stampa/scheda-claim.md).
       // La frase sotto e' il claim approvato, con l'avverbio, in portoghese.
-      welcome: 'Bem-vindo, leitor da Human Resources. Entre a entrada e a saída, nenhuma posição é registada automaticamente e de forma contínua: cada ponto nasce de um gesto do trabalhador.',
+      welcome: 'Interessa-lhe o GPS no trabalho? Cada posição registada nasce de um gesto do trabalhador, e a aplicação não pede acesso à localização em segundo plano.',
       cta: { label: 'Ver como funciona', path: '/risorse/gps-presenze-senza-tracciamento' },
     },
     follow: true, // DOFOLLOW dal 10/09/2026: Tania Reis ha aggiunto geotapp.com alla riga
@@ -204,7 +188,7 @@ export const PRESS_COVERAGE: PressItem[] = [
       hosts: ['personneltoday.com'],
       // Il pezzo e' sulla posizione registrata a due soli istanti (entrata e uscita) e sul test di
       // proporzionalita' dell'ICO. Stesso claim approvato della scheda, con l'avverbio.
-      welcome: 'Welcome, Personnel Today reader. Here is how GeoTapp records a position at the tap in and the tap out, with nothing recorded automatically in between.',
+      welcome: 'Thinking about GPS at work? Every location point starts with an action by the worker, and the app does not ask for background location access.',
       cta: { label: 'See how it works', path: '/risorse/gps-presenze-senza-tracciamento' },
     },
     follow: true, // Dofollow verificato sull'HTML grezzo: <a href="https://geotapp.com/en-gb/">GeoTapp</a>
@@ -224,7 +208,10 @@ export const PRESS_COVERAGE: PressItem[] = [
     locale: 'en',
     country: 'us',
     logo: '/press/cooinsider.png',
-    referrer: { hosts: ['cooinsider.com'] },
+    referrer: {
+      hosts: ['cooinsider.com'],
+      welcome: 'See what a finished job looks like as a report: times, location and photos, ready to send to your client.',
+    },
     follow: true, // Ci linkano in dofollow: rel="" verificato nel DOM sull'ancora "GeoTapp" ->
                   // https://geotapp.com/. Nella stessa pagina i profili LinkedIn degli altri
                   // esperti sono rel="nofollow", quindi e' una scelta, non distrazione.
@@ -254,7 +241,10 @@ export const PRESS_COVERAGE: PressItem[] = [
     locale: 'en',
     country: 'us',
     logo: '/press/smallbizleader.png',
-    referrer: { hosts: ['smallbizleader.com'] },
+    referrer: {
+      hosts: ['smallbizleader.com'],
+      welcome: 'See what a finished job looks like as a report: times, location and photos, ready to send to your client.',
+    },
     // NIENTE follow: ci linkano in dofollow (rel="" verificato nel DOM), ma il dominio ha
     // Spam Score Moz 37% (fascia media) -> non ricambiamo. Reversibile in ogni momento.
   },
@@ -266,7 +256,10 @@ export const PRESS_COVERAGE: PressItem[] = [
     locale: 'en',
     country: 'us',
     logo: '/press/azbigmedia.png',
-    referrer: { hosts: ['azbigmedia.com'] },
+    referrer: {
+      hosts: ['azbigmedia.com'],
+      welcome: 'See what a finished job looks like as a report: times, location and photos, ready to send to your client.',
+    },
     follow: true, // AZ Big Media ci linka in dofollow (rel="noopener", verificato).
                   // NB: dal 13/07/2026 questo flag NON concede piu' dofollow (pressRel torna
                   // sempre nofollow): resta solo come annotazione di chi ci linka dofollow.
