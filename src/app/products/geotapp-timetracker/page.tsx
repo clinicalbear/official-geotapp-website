@@ -428,11 +428,11 @@ export default function GeoTappApp() {
       <section className="shot"><div className="wn"><div className="fitwrap" style={{ gap: 26, flexWrap: 'wrap' }}>
         <div className="frame fit r-s"><div className="phone">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/TT1.webp" alt="GeoTapp TimeTracker - Dashboard" loading="eager" fetchPriority="high" />
+          <img src="/TT1.webp" alt={appDict.screenshot_dashboard_alt} loading="eager" fetchPriority="high" />
         </div></div>
         <div className="frame fit r-s d1"><div className="phone">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/TT2.webp" alt="GeoTapp TimeTracker - Menu" loading="lazy" />
+          <img src="/TT2.webp" alt={appDict.screenshot_menu_alt} loading="lazy" />
         </div></div>
       </div></div></section>
 

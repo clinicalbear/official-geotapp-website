@@ -83,6 +83,7 @@ export const bulgaria: SchedaPaese = {
       sv: 'Bulgarien har en enda nationell myndighet, CPDP; det finns ingen regional uppdelning.',
       nb: 'Bulgaria har én nasjonal myndighet, CPDP; det finnes ingen regional inndeling.',
       nl: 'Bulgarije heeft een enkele nationale autoriteit, de CPDP; er is geen regionale verdeling.',
+      ru: "В Болгарии единственный национальный орган, CPDP; региональных подразделений нет.",
     },
   },
 
@@ -99,6 +100,7 @@ export const bulgaria: SchedaPaese = {
         sv: 'Interna regler och information till de anställda om system för kontroll av tillträde, arbetstid och arbetsdisciplin (ZZLD art. 25i)',
         nb: 'Interne regler og informasjon til de ansatte om systemer for kontroll av tilgang, arbeidstid og arbeidsdisiplin (ZZLD art. 25и)',
         nl: 'Interne regels en informatie aan werknemers over systemen voor toegangs-, tijd- en disciplinecontrole (ZZLD art. 25i)',
+        ru: "Внутренние правила и информирование работников о системах контроля доступа, рабочего времени и дисциплины (ZZLD, ст. 25и)",
       },
       risposta: 'si',
       dettaglio: {
@@ -112,6 +114,7 @@ export const bulgaria: SchedaPaese = {
         sv: 'Arbetsgivaren ska anta interna regler och rutiner när system för kontroll av tillträde, arbetstid och arbetsdisciplin införs, ange deras omfattning, skyldigheter och former och göra dem kända för de anställda.',
         nb: 'Arbeidsgiveren må vedta interne regler og rutiner når det innføres systemer for kontroll av tilgang, arbeidstid og arbeidsdisiplin, med angivelse av omfang, plikter og metoder, og gjøre de ansatte kjent med dem.',
         nl: 'De werkgever moet interne regels en procedures vaststellen wanneer hij systemen voor toegangs-, arbeidstijd- en disciplinecontrole invoert, met vermelding van de reikwijdte, verplichtingen en methoden, en deze ter kennis van de werknemers brengen.',
+        ru: "При введении систем контроля доступа, рабочего времени и трудовой дисциплины работодатель должен принять внутренние правила и процедуры, указав в них сферу действия, обязанности и методы, и довести их до сведения работников.",
       },
       fonte: FONTE_ZZLD,
     },
@@ -127,6 +130,7 @@ export const bulgaria: SchedaPaese = {
         sv: 'Regler för storskalig behandling och för systematisk övervakning av allmänt tillgängliga platser, inklusive kameraövervakning (art. 25d)',
         nb: 'Regler for behandling i stor skala og for systematisk overvåking av områder som er tilgjengelige for allmennheten, inkludert kameraovervåking (art. 25д)',
         nl: 'Regels voor grootschalige verwerking en voor systematische monitoring van openbaar toegankelijke ruimten, met inbegrip van cameratoezicht (art. 25d)',
+        ru: "Правила обработки в крупном масштабе и систематического мониторинга зон, доступных для публики, включая видеонаблюдение (ст. 25д)",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -140,6 +144,7 @@ export const bulgaria: SchedaPaese = {
         sv: 'Den som utför storskalig behandling av personuppgifter, eller storskalig systematisk övervakning av allmänt tillgängliga platser (inklusive kameraövervakning), antar regler med lämpliga tekniska och organisatoriska åtgärder; för offentliga platser anger reglerna också rättsliga grunder, ändamål, omfattning, medel, lagring och radering, rätt till tillgång och offentlig information. För GPS på anställda är bara det första fallet relevant, det vill säga storskalig behandling.',
         nb: 'Den som foretar behandling av personopplysninger i stor skala, eller systematisk overvåking i stor skala av områder som er tilgjengelige for allmennheten (inkludert kameraovervåking), vedtar regler med egnede tekniske og organisatoriske tiltak; for offentlige områder angir reglene også rettslig grunnlag, formål, omfang, midler, lagring og sletting, rett til innsyn og informasjon til allmennheten. For GPS på ansatte er det derfor bare det første tilfellet som gjelder, altså behandling i stor skala.',
         nl: 'Wie persoonsgegevens op grote schaal verwerkt, of openbaar toegankelijke ruimten systematisch en op grote schaal monitort (inclusief cameratoezicht), stelt regels vast met passende technische en organisatorische maatregelen; voor openbare ruimten vermelden de regels ook rechtsgronden, doeleinden, reikwijdte, middelen, bewaring en wissing, recht op inzage en voorlichting van het publiek. Voor GPS bij werknemers telt dus alleen het eerste geval, namelijk een verwerking op grote schaal.',
+        ru: "Тот, кто осуществляет обработку персональных данных в крупном масштабе или систематический мониторинг в крупном масштабе зон, доступных для публики (включая видеонаблюдение), принимает правила с надлежащими техническими и организационными мерами; для публичных зон правила указывают также правовые основания, цели, объём, средства, хранение и удаление, право доступа и информирование публики. Для GPS-слежения за работниками поэтому имеет значение только первый случай, то есть обработка в крупном масштабе.",
       },
       fonte: FONTE_ZZLD,
     },
@@ -155,6 +160,7 @@ export const bulgaria: SchedaPaese = {
         sv: 'Förhandstillstånd från en myndighet före installationen',
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit voor installatie',
+        ru: "Предварительное разрешение органа до установки",
       },
       risposta: 'no',
       dettaglio: {
@@ -168,6 +174,7 @@ export const bulgaria: SchedaPaese = {
         sv: 'Inget förhandstillstånd från CPDP krävs; den personuppgiftsansvarige antar själv de interna reglerna och genomför DPIA när det krävs.',
         nb: 'Det kreves ingen forhåndstillatelse fra CPDP; den behandlingsansvarlige vedtar selv de interne reglene og gjennomfører DPIA når det kreves.',
         nl: 'Er is geen voorafgaande toestemming van de CPDP vereist; de verwerkingsverantwoordelijke stelt zelf de interne regels vast en voert de DPIA uit wanneer dat vereist is.',
+        ru: "Предварительное разрешение CPDP не требуется; оператор самостоятельно принимает внутренние правила и проводит DPIA, когда она требуется.",
       },
       fonte: FONTE_CPDP_DPIA,
     },
@@ -183,6 +190,7 @@ export const bulgaria: SchedaPaese = {
         sv: 'Grund = berättigat intresse (inte samtycke, på grund av obalansen i maktförhållandet); proportionalitet; ingen spårning vid privat användning av fordonet',
         nb: 'Grunnlag = berettiget interesse (ikke samtykke, på grunn av ubalansen i maktforholdet); proporsjonalitet; ingen sporing ved privat bruk av kjøretøyet',
         nl: 'Grondslag = gerechtvaardigd belang (niet de toestemming, vanwege de machtsongelijkheid); evenredigheid; geen tracking tijdens privegebruik van het voertuig',
+        ru: "Основание: законный интерес (не согласие, из-за неравенства сторон); соразмерность; никакого отслеживания во время личного использования автомобиля",
       },
       risposta: 'si',
       dettaglio: {
@@ -196,6 +204,7 @@ export const bulgaria: SchedaPaese = {
         sv: 'I sitt yttrande av den 24 november 2023 (LUKOIL-fallet, återanvändning av kameraövervakning för att bedöma anställda) anser CPDP att samtycke för den behandlingen inte är en tillämplig grund, på grund av anställningssammanhanget; för kameraövervakning av säkerhetsskäl erkänner yttrandet berättigat intresse (art. 6.1 f GDPR) som grund. CPDP:s vägledning om GPS-system i företagsfordon (daterad 2014, före GDPR) säger att arbetsgivaren får installera dem utan den anställdes samtycke endast när arbetets art eller försiktighetsåtgärder kräver det, måste informera föraren, reglera dem med interna regler och behandla uppgifterna endast för de angivna ändamålen; vid privat användning av fordonet får arbetsgivaren inte använda spårningsenheter om han inte visar ett rättsligt behov (till exempel stöld).',
         nb: 'I uttalelsen av 24. november 2023 (LUKOIL-saken, gjenbruk av kameraovervåking til å vurdere ansatte) mener CPDP at samtykke for den behandlingen ikke kan brukes som grunnlag, på grunn av arbeidsforholdets kontekst; for kameraovervåking av sikkerhetshensyn anerkjenner uttalelsen berettiget interesse (art. 6 nr. 1 bokstav f i GDPR) som grunnlag. CPDPs veiledning om GPS-systemer i firmabiler (fra 2014, før GDPR) sier at arbeidsgiveren bare kan installere dem uten den ansattes samtykke når arbeidets art eller forsiktighetstiltak krever det, må informere føreren, regulere dem med interne regler og bare behandle opplysningene til de fastsatte formålene; ved privat bruk av kjøretøyet kan arbeidsgiveren ikke bruke sporingsenheter, med mindre arbeidsgiveren påviser et rettslig behov (for eksempel tyveri).',
         nl: 'In zijn advies van 24 november 2023 (zaak LUKOIL, hergebruik van camerabewaking om werknemers te beoordelen) acht de CPDP toestemming voor die verwerking geen toepasbare grondslag, vanwege de arbeidscontext; voor camerabewaking om veiligheidsredenen erkent het advies het gerechtvaardigd belang (art. 6 lid 1 onder f AVG) als grondslag. De CPDP-gids over GPS-systemen in bedrijfsvoertuigen (uit 2014, van vóór de AVG) stelt dat de werkgever ze alleen zonder toestemming van de werknemer mag installeren wanneer de aard van het werk of voorzorgsmaatregelen dat vereisen, de bestuurder moet informeren, ze in interne regels moet vastleggen en de gegevens alleen mag verwerken voor de vastgelegde doeleinden; tijdens privégebruik van het voertuig mag hij geen trackingapparatuur gebruiken, tenzij hij een juridische noodzaak aantoont (bijvoorbeeld diefstal).',
+        ru: "В заключении от 24 ноября 2023 г. (дело LUKOIL, повторное использование видеонаблюдения для оценки работников) CPDP считает, что для такой обработки согласие не может быть применимым основанием из-за трудового контекста; для видеонаблюдения в целях безопасности заключение признаёт основанием законный интерес (ст. 6 п. 1 лит. f GDPR). Руководство CPDP по GPS-системам служебных автомобилей (2014 г., до GDPR) гласит, что работодатель может устанавливать их без согласия работника только тогда, когда этого требует характер работы или меры предосторожности, должен проинформировать водителя, урегулировать их внутренними правилами и обрабатывать данные только для установленных целей; при личном использовании автомобиля он не может применять устройства слежения, за исключением случаев, когда докажет правовую необходимость (например, кража).",
       },
       fonte: FONTE_CPDP_GUIDA,
       fonteAggiuntiva: FONTE_CPDP_LUKOIL,
@@ -212,6 +221,7 @@ export const bulgaria: SchedaPaese = {
         sv: 'Konsekvensbedömning (DPIA) för behandling av positionsuppgifter med profilering eller för systematisk övervakning',
         nb: 'Personvernkonsekvensvurdering (DPIA) for behandling av posisjonsdata med profilering eller for systematisk overvåking',
         nl: 'Gegevensbeschermingseffectbeoordeling (DPIA) voor de verwerking van locatiegegevens met profilering of voor systematische monitoring',
+        ru: "Оценка воздействия (DPIA) при обработке геолокационных данных с профилированием или при систематическом мониторинге",
       },
       risposta: 'si',
       dettaglio: {
@@ -225,6 +235,7 @@ export const bulgaria: SchedaPaese = {
         sv: 'CPDP:s förteckning (13 februari 2019) omfattar behandling av positionsuppgifter för profilering med rättsliga eller liknande betydande effekter. Förteckningen är inte uttömmande: CPDP påminner om att en konsekvensbedömning behövs så snart behandlingen kan medföra hög risk (art. 35.1 GDPR), och systematisk övervakning av anställda är normalt en behandling med hög risk enligt WP248-riktlinjerna som förteckningen bygger på.',
         nb: 'CPDPs liste (13. februar 2019) omfatter behandling av posisjonsdata med sikte på profilering med rettslige eller tilsvarende betydelige virkninger. Listen er ikke uttømmende: CPDP minner om at en personvernkonsekvensvurdering må gjennomføres hver gang behandlingen kan medføre høy risiko (art. 35 nr. 1 i GDPR), og systematisk overvåking av ansatte er normalt en behandling med høy risiko etter WP248-retningslinjene som listen bygger på.',
         nl: 'De CPDP-lijst (13 februari 2019) omvat de verwerking van locatiegegevens voor profilering met rechtsgevolgen of vergelijkbaar aanzienlijke gevolgen. De lijst is niet uitputtend: de CPDP wijst erop dat een effectbeoordeling nodig is telkens wanneer de verwerking een hoog risico kan inhouden (art. 35 lid 1 AVG), en de systematische monitoring van werknemers is volgens de WP248-richtsnoeren waarop de lijst berust doorgaans een verwerking met hoog risico.',
+        ru: "Перечень CPDP (13 февраля 2019 г.) включает обработку геолокационных данных в целях профилирования с правовыми или иными существенными последствиями. Перечень не является исчерпывающим: CPDP напоминает, что оценку воздействия необходимо проводить всякий раз, когда обработка может повлечь высокий риск (ст. 35 п. 1 GDPR), а систематический мониторинг работников, как правило, относится к обработке с высоким риском согласно руководящим принципам WP248, на которых основан перечень.",
       },
       fonte: FONTE_CPDP_DPIA,
     },
@@ -244,6 +255,7 @@ export const bulgaria: SchedaPaese = {
         sv: 'Anta interna regler för kontrollsystemen och gör dem kända för de anställda (art. 25i).',
         nb: 'Vedta interne regler om kontrollsystemene, og gjør de ansatte kjent med dem (art. 25и).',
         nl: 'Stel interne regels over de controlesystemen vast en breng deze ter kennis van de werknemers (art. 25i).',
+        ru: "Примите внутренние правила о системах контроля и доведите их до сведения работников (ст. 25и).",
       },
     },
     {
@@ -259,6 +271,7 @@ export const bulgaria: SchedaPaese = {
         sv: 'Fastställ en giltig rättslig grund (berättigat intresse, inte samtycke) och dokumentera proportionaliteten.',
         nb: 'Finn et gyldig rettslig grunnlag (berettiget interesse, ikke samtykke), og dokumenter proporsjonaliteten.',
         nl: 'Bepaal een geldige rechtsgrond (gerechtvaardigd belang, niet de toestemming) en documenteer de evenredigheid.',
+        ru: "Определите действительное правовое основание (законный интерес, не согласие) и задокументируйте соразмерность.",
       },
     },
     {
@@ -274,6 +287,7 @@ export const bulgaria: SchedaPaese = {
         sv: 'Genomför konsekvensbedömningen (DPIA) för systematisk övervakning eller positionsuppgifter.',
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) for systematisk overvåking eller posisjonsdata.',
         nl: 'Voer de effectbeoordeling (DPIA) uit voor systematische monitoring of locatiegegevens.',
+        ru: "Проведите оценку воздействия (DPIA) для систематического мониторинга или геолокационных данных.",
       },
     },
     {
@@ -289,6 +303,7 @@ export const bulgaria: SchedaPaese = {
         sv: 'Informera de anställda innan systemet aktiveras (art. 13 GDPR).',
         nb: 'Informer de ansatte før aktiveringen (art. 13 i GDPR).',
         nl: 'Informeer de werknemers voor de activering (art. 13 AVG).',
+        ru: "Проинформируйте работников до включения системы (ст. 13 GDPR).",
       },
     },
     {
@@ -304,6 +319,7 @@ export const bulgaria: SchedaPaese = {
         sv: 'Konfigurera systemet: ingen spårning vid privat användning av fordonet, endast för de angivna ändamålen.',
         nb: 'Konfigurer systemet: ingen sporing ved privat bruk av kjøretøyet, bare til de angitte formålene.',
         nl: 'Configureer het systeem: geen tracking tijdens privegebruik van het voertuig, uitsluitend voor de aangegeven doeleinden.',
+        ru: "Настройте систему: никакого отслеживания во время личного использования автомобиля, только для заявленных целей.",
       },
     },
     {
@@ -319,6 +335,7 @@ export const bulgaria: SchedaPaese = {
         sv: 'Om du byter system: när du byter övervakningssystem eller programvara ska du uppdatera och dela ut integritetsinformationen på nytt, och kontrollera om du måste informera eller samråda med de anställdas företrädare igen, där lagen kräver det. Leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och metoderna ändras ofta: den information som lämnades tidigare räcker inte.',
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og utlevere personvernopplysningene på nytt, og undersøke om du på ny må informere eller konsultere de ansattes representanter, der loven krever det. Ofte endrer leverandøren (databehandleren), de innsamlede opplysningene og metodene seg: opplysningene som ble utlevert tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        ru: "Если вы меняете систему или программу мониторинга, обновите и повторно вручите уведомление о защите данных и проверьте, нужно ли снова информировать представителей работников или проводить с ними консультации, если это предусмотрено законом. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее врученного уведомления недостаточно.",
       },
     },
   ],
@@ -346,6 +363,7 @@ export const bulgaria: SchedaPaese = {
       sv: 'upp till 20 miljoner euro eller 4 % av omsättningen (GDPR)',
       nb: 'opptil 20 millioner euro eller 4 % av omsetningen (GDPR)',
       nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
+      ru: "до 20 млн евро или 4% оборота (GDPR)",
     },
     casoCitato: {
       it: 'Non risulta una multa del CPDP specifica pubblicata per il GPS sui dipendenti. In un parere del 24 novembre 2023 il CPDP ha ritenuto inammissibile il riuso delle registrazioni di videosorveglianza per valutare il rendimento dei dipendenti di LUKOIL Bulgaria (riuso incompatibile, art. 6 par. 4 GDPR), senza multa. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).',
@@ -358,6 +376,7 @@ export const bulgaria: SchedaPaese = {
       sv: 'Det finns ingen specifik, offentliggjord CPDP-sanktion för GPS på anställda. I ett yttrande av den 24 november 2023 bedömde CPDP att återanvändningen av inspelningar från kameraövervakning för att utvärdera de anställdas prestation på LUKOIL Bulgaria var otillåten (oförenlig återanvändning, art. 6.4 GDPR), utan böter. Sanktionsrisken förblir den allmänna enligt GDPR (art. 83).',
       nb: 'Det er ikke offentliggjort noen konkret CPDP-bot for GPS på ansatte. I en uttalelse av 24. november 2023 fant CPDP at gjenbruk av opptak fra kameraovervåking for å vurdere prestasjonene til de ansatte i LUKOIL Bulgaria ikke var tillatt (uforenlig gjenbruk, art. 6 nr. 4 i GDPR), uten bot. Sanksjonsrisikoen er fortsatt den generelle etter GDPR (art. 83).',
       nl: 'Er is geen specifieke, gepubliceerde boete van de CPDP voor gps bij werknemers. In een advies van 24 november 2023 achtte de CPDP het hergebruik van cameratoezichtopnamen om de prestaties van werknemers van LUKOIL Bulgarije te beoordelen ontoelaatbaar (onverenigbaar hergebruik, art. 6 lid 4 AVG), zonder boete. Het sanctierisico blijft het algemene risico van de AVG (art. 83).',
+      ru: "Опубликованного штрафа CPDP, специально связанного с GPS-слежением за работниками, не обнаружено. В заключении от 24 ноября 2023 г. CPDP признал недопустимым повторное использование записей видеонаблюдения для оценки результативности работников LUKOIL Bulgaria (несовместимое повторное использование, ст. 6 п. 4 GDPR), без штрафа. Санкционный риск остаётся общим для GDPR (ст. 83).",
     },
     urlFonte: FONTE_CPDP_LUKOIL.url,
     tipoImporto: 'massimale',

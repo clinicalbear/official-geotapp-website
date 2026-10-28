@@ -682,6 +682,8 @@
       },
       "cta_title": "Geben Sie Ihren Technikern das richtige Werkzeug.",
       "cta_button": "Preise ansehen",
+      "screenshot_dashboard_alt": "GeoTapp TimeTracker - Dashboard",
+      "screenshot_menu_alt": "GeoTapp TimeTracker - Menü",
       "modal": {
         "status": "SYSTEMSTATUS: <span class=\"text-green-600\">BETRIEBSBEREIT</span>",
         "encryption": "DATEN: <span class=\"text-slate-400\">GESCHÜTZT</span>",

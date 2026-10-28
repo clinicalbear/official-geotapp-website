@@ -698,6 +698,8 @@
       },
       "cta_title": "Dai ai tuoi tecnici lo strumento giusto.",
       "cta_button": "Vedi i Prezzi",
+      "screenshot_dashboard_alt": "GeoTapp TimeTracker - Dashboard",
+      "screenshot_menu_alt": "GeoTapp TimeTracker - Menu",
       "modal": {
         "status": "STATO SISTEMA: <span class=\"text-green-600\">OPERATIVO</span>",
         "encryption": "DATI: <span class=\"text-slate-400\">PROTETTI</span>",

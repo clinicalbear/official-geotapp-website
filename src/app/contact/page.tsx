@@ -158,7 +158,7 @@ export default function ContactPage() {
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     className="in"
                     style={{ borderColor: fieldBorder(formData.company) }}
-                    placeholder="Nome Azienda Srl"
+                    placeholder={dict.form.company_placeholder}
                   />
                 </div>
 

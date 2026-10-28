@@ -682,6 +682,8 @@
       },
       "cta_title": "Da a tus técnicos la herramienta adecuada.",
       "cta_button": "Ver precios",
+      "screenshot_dashboard_alt": "GeoTapp TimeTracker - Panel",
+      "screenshot_menu_alt": "GeoTapp TimeTracker - Menú",
       "modal": {
         "status": "ESTADO DEL SISTEMA: <span class=\"text-green-600\">OPERATIVO</span>",
         "encryption": "DATOS: <span class=\"text-slate-400\">PROTEGIDOS</span>",

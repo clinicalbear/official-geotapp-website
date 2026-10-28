@@ -103,6 +103,7 @@ export const islanda: SchedaPaese = {
       sv: 'Island (EES) har en enda nationell myndighet, Persónuvernd; det finns ingen regional uppdelning.',
       nb: 'Island (EØS) har én nasjonal myndighet, Persónuvernd; det finnes ingen regional inndeling.',
       nl: 'IJsland (EER) heeft een enkele nationale autoriteit, de Persónuvernd; geen regionale opdeling.',
+      ru: "В Исландии (ЕЭЗ) один национальный орган, Persónuvernd; региональное деление отсутствует.",
     },
   },
 
@@ -119,6 +120,7 @@ export const islanda: SchedaPaese = {
         sv: 'Information i förväg till arbetstagarna och skylt om det övervakade området (regler 50/2023)',
         nb: 'Forhåndsinformasjon til de ansatte og et skilt om det overvåkede området (reglene 50/2023)',
         nl: 'Voorafgaande informatie aan werknemers en een bord over het bewaakte gebied (Regels 50/2023)',
+        ru: "Предварительное информирование работников и табличка о наблюдаемой зоне (Правила 50/2023)",
       },
       risposta: 'si',
       dettaglio: {
@@ -132,6 +134,7 @@ export const islanda: SchedaPaese = {
         sv: 'Elektronisk övervakning kräver ett tydligt och lagligt ändamål; den som övervakar måste ge besked med en skylt eller på annat tydligt sätt innan personen går in i det övervakade området eller övervakningen börjar (art. 8 st. 1). Grupper som vanligen vistas i området, till exempel personalen, ska dessutom få informationen enligt art. 12-13 GDPR på ett sätt som kan styrkas (art. 8 st. 3); för GPS hänvisar art. 13 st. 3 till denna regel.',
         nb: 'Elektronisk overvåking krever et klart og lovlig formål; den som overvåker, må gi beskjed med et skilt eller på en annen tydelig måte før personen går inn i det overvåkede området, eller før overvåkingen starter (art. 8 nr. 1). Grupper som vanligvis ferdes i området, for eksempel de ansatte, må i tillegg få opplysningene etter art. 12-13 i GDPR på en måte som kan dokumenteres (art. 8 nr. 3); for GPS henviser art. 13 nr. 3 til denne regelen.',
         nl: 'Elektronisch toezicht vereist een duidelijk en rechtmatig doel; wie toezicht houdt, moet dit kenbaar maken met een bord of op een andere duidelijke wijze voordat de persoon het bewaakte gebied betreedt of het toezicht begint (art. 8 lid 1). Groepen die het gebied gewoonlijk gebruiken, zoals personeel, moeten bovendien aantoonbaar de informatie van art. 12-13 AVG krijgen (art. 8 lid 3); voor gps verwijst art. 13 lid 3 naar deze regel.',
+        ru: "Электронное наблюдение требует чёткой и законной цели; тот, кто его осуществляет, должен уведомить об этом табличкой или иным очевидным способом до того, как лицо войдёт в наблюдаемую зону или наблюдение начнётся (ст. 8 п. 1). Группам, которые обычно бывают в зоне, например персоналу, информацию по ст. 12-13 GDPR нужно, кроме того, предоставлять так, чтобы это можно было доказать (ст. 8 п. 3); для GPS на это правило отсылает ст. 13 п. 3.",
       },
       fonte: FONTE_REGOLE_50_2023,
     },
@@ -147,6 +150,7 @@ export const islanda: SchedaPaese = {
         sv: 'Förhandstillstånd från en myndighet innan installation',
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit voor de installatie',
+        ru: "Предварительное разрешение органа до установки",
       },
       risposta: 'no',
       dettaglio: {
@@ -160,6 +164,7 @@ export const islanda: SchedaPaese = {
         sv: 'Något förhandstillstånd från Persónuvernd krävs inte; den personuppgiftsansvarige bedömer själv och dokumenterar lagligheten, med DPIA när det krävs.',
         nb: 'Det kreves ingen forhåndstillatelse fra Persónuvernd; den behandlingsansvarlige vurderer selv og dokumenterer at behandlingen er lovlig, med DPIA når det kreves.',
         nl: 'Er is geen voorafgaande toestemming van de Persónuvernd nodig; de verwerkingsverantwoordelijke beoordeelt zelf en documenteert de rechtmatigheid, met een DPIA waar vereist.',
+        ru: "Предварительное разрешение Persónuvernd не требуется; контролёр сам оценивает и документирует законность, с проведением DPIA, когда она необходима.",
       },
       fonte: FONTE_PERSUVERND_GPS,
     },
@@ -175,6 +180,7 @@ export const islanda: SchedaPaese = {
         sv: 'Grund = berättigat intresse med ett dokumenterat test, inte samtycke',
         nb: 'Grunnlag = berettiget interesse med en dokumentert vurdering, ikke samtykke',
         nl: 'Grondslag = gerechtvaardigd belang met een gedocumenteerde afweging, niet toestemming',
+        ru: "Основание: законный интерес с документированным тестом, а не согласие",
       },
       risposta: 'si',
       dettaglio: {
@@ -188,6 +194,7 @@ export const islanda: SchedaPaese = {
         sv: 'Den mest relevanta grunden är arbetsgivarens berättigade intresse; arbetsgivaren måste göra en dokumenterad bedömning av om intresset väger tyngre än arbetstagarnas rättigheter. Samtycke är i regel inte giltigt i anställningsförhållandet.',
         nb: 'Det mest relevante grunnlaget er arbeidsgiverens berettigede interesse; arbeidsgiveren må gjøre en dokumentert avveining mot de ansattes rettigheter. Samtykke er som regel ikke gyldig i et arbeidsforhold.',
         nl: 'De meest relevante grondslag is het gerechtvaardigd belang van de werkgever; de werkgever moet een gedocumenteerde belangenafweging maken ten opzichte van de rechten van de werknemers. Toestemming is in de arbeidsrelatie doorgaans niet geldig.',
+        ru: "Наиболее подходящее основание: законный интерес работодателя; работодатель должен провести документированную оценку преобладания этого интереса над правами работников. Согласие в трудовых отношениях, как правило, недействительно.",
       },
       fonte: FONTE_PERSUVERND_GPS,
     },
@@ -203,6 +210,7 @@ export const islanda: SchedaPaese = {
         sv: 'GPS endast om det finns ett särskilt behov; undvik ständig övervakning; ska kunna stängas av om fordonet även får användas privat',
         nb: 'GPS bare hvis det er et særlig behov; unngå kontinuerlig overvåking; skal kunne slås av hvis kjøretøyet også kan brukes privat',
         nl: 'GPS alleen bij een bijzondere behoefte; doorlopend toezicht vermijden; uitschakelbaar als het voertuig ook privé mag worden gebruikt',
+        ru: "GPS только при особой необходимости; избегать непрерывного наблюдения; возможность отключения, если транспортное средство разрешено использовать и в личных целях",
       },
       risposta: 'si',
       dettaglio: {
@@ -216,6 +224,7 @@ export const islanda: SchedaPaese = {
         sv: 'Användning av färdskrivare eller lokaliseringsenheter kräver ett särskilt behov; först ska det kontrolleras om mindre ingripande medel räcker, utan att gå längre än strikt nödvändigt (art. 4); om fordonet även får användas privat måste det vara möjligt att stänga av enheten och arbetstagaren ska informeras på ett sätt som kan styrkas (art. 13 st. 2).',
         nb: 'Bruk av fartsskrivere eller lokaliseringsenheter krever et særlig behov; først må det vurderes om mindre inngripende midler er nok, uten å gå lenger enn det som er strengt nødvendig (art. 4); hvis kjøretøyet også kan brukes privat, må det være mulig å slå av enheten, og den ansatte må informeres på en måte som kan dokumenteres (art. 13 nr. 2).',
         nl: 'Het gebruik van tachografen of locatieapparatuur vereist een bijzondere behoefte; eerst moet worden nagegaan of minder ingrijpende middelen volstaan, zonder verder te gaan dan strikt noodzakelijk (art. 4); mag het voertuig ook privé worden gebruikt, dan moet het apparaat kunnen worden uitgeschakeld en moet de werknemer aantoonbaar worden geïnformeerd (art. 13 lid 2).',
+        ru: "Использование тахографов или устройств определения местоположения требует особой необходимости; сначала нужно проверить, достаточно ли менее инвазивных средств, и не выходить за пределы строго необходимого (ст. 4); если транспортное средство может использоваться и в личных целях, должна быть возможность выключить устройство, а работника следует проинформировать так, чтобы это можно было доказать (ст. 13 п. 2).",
       },
       fonte: FONTE_PERSUVERND_GPS,
     },
@@ -231,6 +240,7 @@ export const islanda: SchedaPaese = {
         sv: 'Lagring av uppgifter från elektronisk övervakning: inte längre än nödvändigt och i inget fall längre än 90 dagar, med undantag',
         nb: 'Lagring av data fra elektronisk overvåking: ikke lenger enn nødvendig og under ingen omstendighet over 90 dager, med forbehold for unntak',
         nl: 'Bewaring van gegevens van elektronisch toezicht: niet langer dan nodig en in elk geval niet langer dan 90 dagen, behoudens uitzonderingen',
+        ru: "Хранение данных электронного наблюдения: не дольше необходимого и во всяком случае не дольше 90 дней, за исключениями",
       },
       risposta: 'si',
       dettaglio: {
@@ -244,6 +254,7 @@ export const islanda: SchedaPaese = {
         sv: 'Uppgifter från elektronisk övervakning lagras inte längre än vad som är nödvändigt för ändamålet och i inget fall längre än 90 dagar (regler 50/2023, art. 11 st. 2; gränsen höjdes från 30 till 90 dagar genom regler 1329/2025, art. 3). Undantag: där lagen tillåter det; personens samtycke till en längre period; loggar över åtgärder eller säkerhetskopior; behov av att fastställa, göra gällande eller försvara ett rättsligt anspråk; tillstånd från Persónuvernd; statens säkerhet.',
         nb: 'Data fra elektronisk overvåking lagres ikke lenger enn det som er nødvendig for formålet, og under ingen omstendighet over 90 dager (reglene 50/2023, art. 11 nr. 2; fristen ble økt fra 30 til 90 dager ved reglene 1329/2025, art. 3). Unntak: der loven tillater det; personens samtykke til en lengre periode; logger over handlinger eller sikkerhetskopier; behov for å fastslå, utøve eller forsvare et rettskrav; tillatelse fra Persónuvernd; statens sikkerhet.',
         nl: 'Gegevens van elektronisch toezicht worden niet langer bewaard dan nodig voor het doel en in elk geval niet langer dan 90 dagen (Regels 50/2023, art. 11 lid 2; de termijn is door Regels 1329/2025, art. 3, van 30 naar 90 dagen gebracht). Uitzonderingen: wanneer de wet het toestaat; toestemming van de persoon voor een langere periode; logboeken van handelingen of back-ups; noodzaak om een rechtsvordering vast te stellen, uit te oefenen of te verdedigen; toestemming van de Persónuvernd; staatsveiligheid.',
+        ru: "Данные электронного наблюдения не хранятся дольше необходимого для цели и во всяком случае не дольше 90 дней (Правила 50/2023, ст. 11 п. 2; срок увеличен с 30 до 90 дней Правилами 1329/2025, ст. 3). Исключения: когда это допускает закон; согласие лица на более длительный срок; журналы операций или резервные копии; необходимость установления, осуществления или защиты права в суде; разрешение Persónuvernd; безопасность государства.",
       },
       fonte: FONTE_REGOLE_1329_2025,
       fonteAggiuntiva: FONTE_REGOLE_50_2023,
@@ -260,6 +271,7 @@ export const islanda: SchedaPaese = {
         sv: 'Konsekvensbedömning (DPIA) för övervakning av de anställdas prestation eller beteende (Persónuvernds lista)',
         nb: 'Personvernkonsekvensvurdering (DPIA) ved overvåking av de ansattes prestasjoner eller atferd (Persónuvernds liste)',
         nl: 'Effectbeoordeling (DPIA) voor het monitoren van prestaties of gedrag van werknemers (Persónuvernd-lijst)',
+        ru: "Оценка воздействия (DPIA) при мониторинге результативности или поведения сотрудников (перечень Persónuvernd)",
       },
       risposta: 'si',
       dettaglio: {
@@ -273,6 +285,7 @@ export const islanda: SchedaPaese = {
         sv: 'Persónuvernds lista omfattar behandling som innebär övervakning av de anställdas prestation eller beteende bland de fall som alltid kräver en konsekvensbedömning.',
         nb: 'Persónuvernds liste tar med behandling som innebærer overvåking av de ansattes prestasjoner eller atferd blant tilfellene som alltid krever en personvernkonsekvensvurdering.',
         nl: 'De Persónuvernd-lijst rekent de verwerking die het monitoren van prestaties of gedrag van werknemers omvat tot de gevallen die altijd een effectbeoordeling vereisen.',
+        ru: "Перечень Persónuvernd включает обработку, связанную с мониторингом результативности или поведения сотрудников, среди случаев, всегда требующих оценки воздействия.",
       },
       fonte: FONTE_PERSUVERND_DPIA,
     },
@@ -292,6 +305,7 @@ export const islanda: SchedaPaese = {
         sv: "Kontrollera att det finns ett särskilt behov och ett tydligt och lagligt ändamål för GPS (regler 50/2023).",
         nb: 'Kontroller at det finnes et særlig behov og et klart og lovlig formål med GPS-en (reglene 50/2023).',
         nl: 'Controleer een bijzondere behoefte en een duidelijk en rechtmatig doel voor de GPS (Regels 50/2023).',
+        ru: "Проверьте наличие особой необходимости и чёткой и законной цели для GPS (Правила 50/2023).",
       },
     },
     {
@@ -307,6 +321,7 @@ export const islanda: SchedaPaese = {
         sv: 'Fastställ en giltig rättslig grund (berättigat intresse) och genomför den dokumenterade bedömningen.',
         nb: 'Finn et gyldig rettslig grunnlag (berettiget interesse), og gjennomfør den dokumenterte vurderingen.',
         nl: 'Bepaal een geldige rechtsgrondslag (gerechtvaardigd belang) en voer de gedocumenteerde afweging uit.',
+        ru: "Определите действительное правовое основание (законный интерес) и проведите документированную оценку.",
       },
     },
     {
@@ -322,6 +337,7 @@ export const islanda: SchedaPaese = {
         sv: 'Genomför konsekvensbedömningen (DPIA) för övervakning av de anställda.',
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) for overvåking av ansatte.',
         nl: 'Voer de effectbeoordeling (DPIA) uit voor het monitoren van werknemers.',
+        ru: "Проведите оценку воздействия (DPIA) для мониторинга сотрудников.",
       },
     },
     {
@@ -337,6 +353,7 @@ export const islanda: SchedaPaese = {
         sv: 'Informera arbetstagarna i förväg och skylta det övervakade området.',
         nb: 'Informer de ansatte på forhånd, og merk det overvåkede området med skilt.',
         nl: 'Informeer werknemers vooraf en markeer het bewaakte gebied.',
+        ru: "Заранее проинформируйте работников и обозначьте наблюдаемую зону.",
       },
     },
     {
@@ -352,6 +369,7 @@ export const islanda: SchedaPaese = {
         sv: 'Konfigurera systemet: ingen ständig övervakning, enhet som kan stängas av om fordonet får användas privat, ingen återanvändning för andra ändamål utan förhandsinformation.',
         nb: 'Konfigurer systemet: ingen kontinuerlig overvåking, enhet som kan slås av hvis kjøretøyet kan brukes privat, ingen gjenbruk til andre formål uten forhåndsvarsel.',
         nl: 'Configureer het systeem: geen doorlopend toezicht, apparaat uitschakelbaar als het voertuig privé mag worden gebruikt, geen hergebruik voor andere doeleinden zonder voorafgaande kennisgeving.',
+        ru: "Настройте систему: никакого непрерывного наблюдения, возможность отключения устройства, если транспортное средство может использоваться в личных целях, никакого повторного использования для иных целей без предварительного уведомления.",
       },
     },
     {
@@ -367,6 +385,7 @@ export const islanda: SchedaPaese = {
         sv: 'Om du byter system eller övervakningsprogram ska du uppdatera och lämna ut integritetsinformationen på nytt och kontrollera om du på nytt måste informera eller höra de anställdas företrädare, där lagen kräver det. Ofta ändras leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och metoderna: den information som lämnades tidigare räcker inte.',
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og utlevere personvernerklæringen på nytt, og sjekke om du igjen må informere eller rådføre deg med de ansattes representanter, der loven krever det. Ofte endres leverandøren (databehandleren), dataene som samles inn og metodene: informasjonen som ble utlevert tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        ru: "При смене системы или программы мониторинга обновите и повторно вручите информационное уведомление и проверьте, нужно ли снова информировать представителей работников или проводить с ними консультацию, если этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее врученного уведомления недостаточно.",
       },
     },
   ],
@@ -394,6 +413,7 @@ export const islanda: SchedaPaese = {
       sv: 'Olagligheten fastställd, utan böter',
       nb: 'Ulovlighet fastslått, uten bot',
       nl: 'onrechtmatigheid vastgesteld, zonder boete',
+      ru: "Незаконность установлена, штраф не назначен",
     },
     casoCitato: {
       it: "Persónuvernd, decisione 2022050836 dell'8 novembre 2023 (pubblicata l'8 dicembre 2023): Islandspostur (Poste islandesi) aveva usato i dati del cronotachigrafo/GPS di un veicolo aziendale per valutare il rendimento di un dipendente e giustificarne il licenziamento, cambiando la finalità (il dispositivo era stato presentato per sicurezza e qualità del servizio) senza preavviso. Trattamento dichiarato illecito, senza multa.",
@@ -406,6 +426,7 @@ export const islanda: SchedaPaese = {
       sv: "Persónuvernd, beslut 2022050836 av den 8 november 2023 (publicerat den 8 december 2023): Islandspostur (Isländska posten) hade använt uppgifterna från färdskrivaren/GPS:en i ett tjänstefordon för att bedöma en anställds prestation och motivera uppsägningen, och ändrade därmed ändamålet (enheten hade presenterats för säkerhet och servicekvalitet) utan förhandsinformation. Behandlingen förklarades olaglig, utan böter.",
       nb: 'Persónuvernd, vedtak 2022050836 av 8. november 2023 (offentliggjort 8. desember 2023): Islandspostur (Islands Post) hadde brukt dataene fra fartsskriveren/GPS-en i et firmakjøretøy til å vurdere en ansatts prestasjoner og begrunne en oppsigelse, og endret dermed formålet (enheten var blitt presentert som sikkerhet og servicekvalitet) uten forhåndsvarsel. Behandlingen ble erklært ulovlig, uten bot.',
       nl: 'Persónuvernd, beslissing 2022050836 van 8 november 2023 (gepubliceerd op 8 december 2023): Islandspostur (IJslandse Post) had de tachograaf-/GPS-gegevens van een bedrijfsvoertuig gebruikt om de prestaties van een werknemer te beoordelen en zijn ontslag te rechtvaardigen, waarbij het doel (het apparaat was gepresenteerd voor veiligheid en servicekwaliteit) zonder voorafgaande kennisgeving werd gewijzigd. De verwerking werd onrechtmatig verklaard, zonder boete.',
+      ru: "Persónuvernd, решение 2022050836 от 8 ноября 2023 г. (опубликовано 8 декабря 2023 г.): Islandspostur (Исландская почта) использовала данные тахографа/GPS служебного автомобиля для оценки результативности сотрудника и обоснования его увольнения, изменив цель (устройство было представлено как средство безопасности и качества услуг) без предварительного уведомления. Обработка признана незаконной, штраф не назначен.",
     },
     urlFonte: FONTE_PERSUVERND_ISLANDSPOSTUR.url,
     tipoImporto: 'caso-gps',

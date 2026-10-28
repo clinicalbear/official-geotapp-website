@@ -91,6 +91,7 @@ export const spagna: SchedaPaese = {
       sv: 'För privata företag är den behöriga myndigheten alltid den nationella AEPD. Vissa autonoma regioner (Katalonien APDCAT, Baskien AVPD) har en egen myndighet, men den gäller främst regionens offentliga sektor.',
       nb: 'For private virksomheter er den kompetente myndigheten alltid den nasjonale AEPD. Enkelte autonome regioner (Catalonia APDCAT, Baskerland AVPD) har sin egen myndighet, men den gjelder hovedsakelig regionens offentlige sektor.',
       nl: "Voor particuliere bedrijven is de bevoegde autoriteit altijd de nationale AEPD. Sommige autonome gemeenschappen (Catalonie APDCAT, Baskenland AVPD) hebben een eigen autoriteit, maar dit betreft vooral de publieke sector van de regio.",
+      ru: "Для частных компаний компетентным органом всегда является национальный AEPD. Некоторые автономные сообщества (Каталония APDCAT, Страна Басков AVPD) имеют собственный орган, но он касается преимущественно государственного сектора региона.",
     },
   },
 
@@ -107,6 +108,7 @@ export const spagna: SchedaPaese = {
         sv: 'Uttrycklig, tydlig och otvetydig information till de anställda före aktiveringen (LOPDGDD art. 90)',
         nb: 'Uttrykkelig, klar og utvetydig informasjon til de ansatte før aktivering (LOPDGDD art. 90)',
         nl: 'Uitdrukkelijke, duidelijke en ondubbelzinnige informatie aan werknemers voor activering (LOPDGDD art. 90)',
+        ru: "Прямое, ясное и недвусмысленное информирование работников до включения системы (LOPDGDD, ст. 90)",
       },
       risposta: 'si',
       dettaglio: {
@@ -120,6 +122,7 @@ export const spagna: SchedaPaese = {
         sv: 'Artikel 90 LOPDGDD tillåter behandling av geolokaliseringsuppgifter inom ramen för kontrollbefogenheterna enligt art. 20.3 i Workers\' Statute, men endast efter att de anställda (och, där sådana finns, deras företrädare) uttryckligen, tydligt och otvetydigt har informerats om anordningarnas förekomst och egenskaper och om sina rättigheter.',
         nb: 'Art. 90 LOPDGDD tillater behandling av geolokaliseringsdata til de kontrolloppgavene som følger av art. 20.3 i arbeidstakerloven (Estatuto de los Trabajadores), men bare etter at de ansatte (og, hvis de finnes, deres representanter) uttrykkelig, klart og utvetydig er informert om utstyrets eksistens og egenskaper og om sine rettigheter.',
         nl: "Art. 90 LOPDGDD staat de verwerking van geolocatiegegevens toe voor de controlebevoegdheden van art. 20.3 van het Werknemersstatuut, maar alleen nadat de werknemers (en, indien aanwezig, hun vertegenwoordigers) uitdrukkelijk, duidelijk en ondubbelzinnig zijn geinformeerd over het bestaan en de kenmerken van de apparaten en over hun rechten.",
+        ru: "Ст. 90 LOPDGDD разрешает обрабатывать геолокационные данные для контрольных функций по ст. 20.3 Статута трудящихся (Estatuto de los Trabajadores), но только после прямого, ясного и недвусмысленного информирования работников (и их представителей, если они есть) о наличии и характеристиках устройств и об их правах.",
       },
       fonte: FONTE_LOPDGDD_90,
     },
@@ -135,6 +138,7 @@ export const spagna: SchedaPaese = {
         sv: 'Information till de anställdas företrädare (Estatuto art. 64)',
         nb: 'Informasjon til de ansattes representanter (Estatuto art. 64)',
         nl: 'Informatie aan de werknemersvertegenwoordigers (Estatuto art. 64)',
+        ru: "Информирование представителей работников (Estatuto, ст. 64)",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -148,6 +152,7 @@ export const spagna: SchedaPaese = {
         sv: 'Artikel 64 i Estatuto ger företagsrådet rätt att bli informerat och att avge ett förhandsyttrande om införandet av system för organisation och övervakning av arbetet. Den gäller endast där de anställdas företrädare finns.',
         nb: 'Art. 64 i Estatuto gir bedriftsrådet rett til å bli informert og til å avgi en forutgående uttalelse om innføringen av systemer for organisering og kontroll av arbeidet. Det gjelder bare der det finnes ansattrepresentanter.',
         nl: "Art. 64 van het Statuut geeft de ondernemingsraad het recht om geinformeerd te worden en een voorafgaand advies uit te brengen over de invoering van systemen voor de organisatie en controle van het werk. Dit geldt alleen waar werknemersvertegenwoordigers bestaan.",
+        ru: "Ст. 64 Статута даёт производственному совету право быть информированным и дать предварительное заключение о внедрении систем организации и контроля труда. Действует только там, где есть представители работников.",
       },
       fonte: FONTE_ESTATUTO,
     },
@@ -163,6 +168,7 @@ export const spagna: SchedaPaese = {
         sv: 'Tillstånd från en arbetsmarknadsmyndighet före installationen',
         nb: 'Tillatelse fra en arbeidsmyndighet før installasjon',
         nl: 'Toestemming van een arbeidsautoriteit voor installatie',
+        ru: "Разрешение органа по труду до установки",
       },
       risposta: 'no',
       dettaglio: {
@@ -176,6 +182,7 @@ export const spagna: SchedaPaese = {
         sv: 'Spanien kräver varken ett administrativt tillstånd eller ett tillstånd från en arbetsmarknadsmyndighet för att installera ett geolokaliseringssystem. Skyddsåtgärderna är informationen enligt art. 90 LOPDGDD, informationen till företrädarna (art. 64) och GDPR.',
         nb: 'Spania krever ikke en administrativ tillatelse eller en tillatelse fra en arbeidsmyndighet for å installere et geolokaliseringssystem. Garantiene er informasjonen etter art. 90 LOPDGDD, informasjonen til representantene (art. 64) og GDPR.',
         nl: "Spanje vereist geen administratieve toestemming of toestemming van een arbeidsautoriteit om een geolocatiesysteem te installeren. De waarborgen zijn de informatie op grond van art. 90 LOPDGDD, de informatie aan de vertegenwoordigers (art. 64) en de AVG.",
+        ru: "Испания не требует административного разрешения или разрешения органа по труду для установки системы геолокации. Гарантиями служат информирование по ст. 90 LOPDGDD, информирование представителей (ст. 64) и GDPR.",
       },
       fonte: FONTE_LOPDGDD_90,
     },
@@ -191,6 +198,7 @@ export const spagna: SchedaPaese = {
         sv: 'Förbud mot löpande övervakning: minimering och proportionalitet',
         nb: 'Forbud mot kontinuerlig overvåking: dataminimering og proporsjonalitet',
         nl: 'Verbod op voortdurende bewaking: minimalisering en evenredigheid',
+        ru: "Запрет непрерывного наблюдения: минимизация и соразмерность",
       },
       risposta: 'si',
       dettaglio: {
@@ -204,6 +212,7 @@ export const spagna: SchedaPaese = {
         sv: 'AEPD kräver att geolokalisering ska vara proportionerlig och inte användas för permanent övervakning; om ändamålet är tidsregistrering får uppgifterna bara visa verksamhetens början och slut, inte positionen vid varje ögonblick, och systemet får inte vara i drift när arbetsdagen är slut.',
         nb: 'AEPD krever at geolokalisering er proporsjonal og ikke brukes til permanent overvåking; hvis formålet er tidsregistrering, kan opplysningene bare angi aktivitetens start og slutt, ikke posisjonen til enhver tid, og systemet skal ikke være i drift når arbeidsdagen er over.',
         nl: "De AEPD verlangt dat geolocatie evenredig is en niet wordt gebruikt voor permanente bewaking; als het doel tijdregistratie is, mogen de gegevens alleen het begin en het einde van de activiteit aangeven, niet de positie op elk moment, en mag het systeem na afloop van de werkdag niet in werking zijn.",
+        ru: "AEPD требует, чтобы геолокация была соразмерной и не использовалась для постоянного наблюдения. Если цель состоит в учёте рабочего времени, данные могут показывать только начало и конец деятельности, а не местоположение в каждый момент, и по окончании рабочего дня система не должна работать.",
       },
       fonte: FONTE_AEPD_GUIDA,
     },
@@ -219,6 +228,7 @@ export const spagna: SchedaPaese = {
         sv: 'Konsekvensbedömning avseende dataskydd (DPIA) för systematisk och uttömmande geolokalisering',
         nb: 'Personvernkonsekvensvurdering (DPIA) for systematisk og uttømmende geolokalisering',
         nl: 'Gegevensbeschermingseffectbeoordeling (DPIA) voor systematische en uitputtende geolocatie',
+        ru: "Оценка воздействия (EIPD) при систематической и исчерпывающей геолокации",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -232,6 +242,7 @@ export const spagna: SchedaPaese = {
         sv: 'AEPD:s förteckning omfattar, bland de behandlingar som kräver en konsekvensbedömning, sådana som innebär observation, övervakning, geolokalisering eller kontroll av den registrerade på ett systematiskt och uttömmande sätt. Det är ett kriterium, inte en automatisk skyldighet: enligt AEPD behövs en konsekvensbedömning i de flesta fall där behandlingen uppfyller två eller flera kriterier i förteckningen.',
         nb: 'AEPDs liste omfatter, blant de behandlingene som krever en personvernkonsekvensvurdering, dem som innebærer observasjon, overvåking, geolokalisering eller kontroll av den registrerte på en systematisk og uttømmende måte. Det er et kriterium, ikke en automatisk plikt: ifølge AEPD er en konsekvensvurdering nødvendig i de fleste tilfeller der behandlingen oppfyller to eller flere kriterier på listen.',
         nl: "De AEPD-lijst rekent tot de verwerkingen die een effectbeoordeling vereisen, die welke de waarneming, monitoring, geolocatie of controle van de betrokkene op systematische en uitputtende wijze met zich meebrengen. Dit is een criterium, geen automatische verplichting: volgens de AEPD is een effectbeoordeling in de meeste gevallen nodig waarin de verwerking aan twee of meer criteria van de lijst voldoet.",
+        ru: "Перечень AEPD включает среди операций обработки, требующих оценки воздействия, те, которые предполагают систематическое и исчерпывающее наблюдение, мониторинг, геолокацию или контроль субъекта данных. Это критерий, а не автоматическая обязанность: по мнению AEPD, EIPD нужна в большинстве случаев, когда обработка отвечает двум или более критериям перечня.",
       },
       fonte: FONTE_AEPD_DPIA,
     },
@@ -247,6 +258,7 @@ export const spagna: SchedaPaese = {
         sv: 'Giltig rättslig grund (art. 20.3 Estatuto / fullgörande av avtalet, GDPR art. 6)',
         nb: 'Gyldig rettslig grunnlag (art. 20.3 Estatuto / oppfyllelse av avtalen, GDPR art. 6)',
         nl: 'Geldige rechtsgrondslag (art. 20.3 Statuut / uitvoering van het contract, AVG art. 6)',
+        ru: "Действительное правовое основание (ст. 20.3 Статута / исполнение договора, GDPR ст. 6)",
       },
       risposta: 'si',
       dettaglio: {
@@ -260,6 +272,7 @@ export const spagna: SchedaPaese = {
         sv: 'Behandlingen bygger på arbetsgivarens kontrollbefogenhet (art. 20.3 Estatuto) och på fullgörandet av anställningsförhållandet, inom GDPR:s gränser; ett vidare ändamål som skulle tillåta löpande observation av de anställda är inte tillåtet.',
         nb: 'Behandlingen bygger på arbeidsgiverens kontrollmyndighet (art. 20.3 Estatuto) og på oppfyllelsen av arbeidsforholdet, innenfor rammene av GDPR; et videre formål som ville tillate kontinuerlig observasjon av de ansatte, er ikke tillatt.',
         nl: "De verwerking berust op de controlebevoegdheid van de werkgever (art. 20.3 Statuut) en op de uitvoering van de arbeidsrelatie, binnen de grenzen van de AVG; een ruimer doel dat de voortdurende observatie van werknemers mogelijk zou maken, is niet toegestaan.",
+        ru: "Обработка основана на контрольных полномочиях работодателя (ст. 20.3 Статута) и на исполнении трудовых отношений в пределах GDPR. Более широкая цель, допускающая непрерывное наблюдение за работниками, не разрешена.",
       },
       fonte: FONTE_AEPD_FAQ_GPS,
     },
@@ -279,6 +292,7 @@ export const spagna: SchedaPaese = {
         sv: 'Informera de anställda uttryckligen, tydligt och otvetydigt före aktiveringen (art. 90 LOPDGDD).',
         nb: 'Informer de ansatte uttrykkelig, klart og utvetydig før aktiveringen (art. 90 LOPDGDD).',
         nl: 'Informeer de werknemers uitdrukkelijk, duidelijk en ondubbelzinnig voor activering (art. 90 LOPDGDD).',
+        ru: "Прямо, ясно и недвусмысленно проинформируйте работников до включения системы (ст. 90 LOPDGDD).",
       },
     },
     {
@@ -294,6 +308,7 @@ export const spagna: SchedaPaese = {
         sv: 'Om de anställdas företrädare finns, informera dem och inhämta deras förhandsyttrande (art. 64 Estatuto).',
         nb: 'Hvis det finnes ansattrepresentanter, informer dem og innhent deres forutgående uttalelse (art. 64 Estatuto).',
         nl: 'Als er werknemersvertegenwoordigers zijn, informeer hen en verkrijg hun voorafgaand advies (art. 64 Statuut).',
+        ru: "Если есть представители работников, проинформируйте их и получите их предварительное заключение (ст. 64 Статута).",
       },
     },
     {
@@ -309,6 +324,7 @@ export const spagna: SchedaPaese = {
         sv: 'Fastställ en giltig rättslig grund (kontrollbefogenhet art. 20.3 Estatuto / fullgörande av avtalet).',
         nb: 'Fastsett et gyldig rettslig grunnlag (kontrollmyndighet art. 20.3 Estatuto / oppfyllelse av avtalen).',
         nl: 'Bepaal een geldige rechtsgrondslag (controlebevoegdheid art. 20.3 Statuut / uitvoering van het contract).',
+        ru: "Определите действительное правовое основание (контрольные полномочия по ст. 20.3 Статута / исполнение договора).",
       },
     },
     {
@@ -324,6 +340,7 @@ export const spagna: SchedaPaese = {
         sv: 'Genomför konsekvensbedömningen (DPIA) om geolokaliseringen är systematisk och uttömmande.',
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) hvis geolokaliseringen er systematisk og uttømmende.',
         nl: 'Voer de effectbeoordeling (DPIA) uit als de geolocatie systematisch en uitputtend is.',
+        ru: "Проведите оценку воздействия (EIPD), если геолокация систематическая и исчерпывающая.",
       },
     },
     {
@@ -339,6 +356,7 @@ export const spagna: SchedaPaese = {
         sv: 'Konfigurera systemet med minimering: ingen löpande övervakning, avstängning utanför arbetstid; om tidsregistrering behövs, endast början och slut.',
         nb: 'Konfigurer systemet med dataminimering: ingen kontinuerlig overvåking, avstenging utenfor arbeidstid; hvis tidsregistrering er nødvendig, bare start og slutt.',
         nl: 'Configureer het systeem met minimalisering: geen voortdurende bewaking, deactivering buiten werktijd; als tijdregistratie nodig is, alleen begin en einde.',
+        ru: "Настройте систему с учётом минимизации: без непрерывного наблюдения, с отключением вне рабочего времени. Если нужен учёт рабочего времени, фиксируйте только начало и конец.",
       },
     },
     {
@@ -354,6 +372,7 @@ export const spagna: SchedaPaese = {
         sv: 'Om du byter system: när du byter övervakningssystem eller programvara ska du uppdatera och dela ut integritetsinformationen på nytt, och kontrollera om du måste informera eller samråda med de anställdas företrädare igen, där lagen kräver det. Leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och metoderna ändras ofta: den information som lämnades tidigare räcker inte.',
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, oppdater og utlever personvernerklæringen på nytt, og kontroller om du på nytt må informere eller konsultere de ansattes representanter, der loven krever det. Leverandøren (databehandleren), de innsamlede opplysningene og fremgangsmåtene endrer seg ofte: den informasjonen som ble gitt tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        ru: "При смене системы или программы мониторинга обновите и повторно вручите уведомление о защите данных (informativa) и проверьте, нужно ли снова информировать представителей работников или консультироваться с ними, если это предусмотрено законом. Часто меняются поставщик (обработчик данных), собираемые данные и способы работы: ранее вручённого уведомления недостаточно.",
       },
     },
   ],
@@ -381,6 +400,7 @@ export const spagna: SchedaPaese = {
       sv: '200 000 €',
       nb: '200 000 €',
       nl: '200.000 €',
+      ru: "200 000 €",
     },
     casoCitato: {
       it: "AEPD contro Ares Capital S.A. (PS/00454/2024), risoluzione firmata il 4 marzo 2026 e pubblicata dall'AEPD il 14 aprile 2026: la società obbligava gli autisti a installare sul telefono personale app che raccoglievano in continuo la geolocalizzazione (oltre a foto e audio/video). Violazione della minimizzazione (art. 5.1.c), della base giuridica (art. 6.1, consenso non libero) e dell'informazione (art. 13 GDPR).",
@@ -393,6 +413,7 @@ export const spagna: SchedaPaese = {
       sv: 'AEPD mot Ares Capital S.A. (PS/00454/2024), beslut undertecknat den 4 mars 2026 och offentliggjort av AEPD den 14 april 2026: bolaget krävde att förarna skulle installera på sin privata telefon appar som löpande samlade in geolokalisering (liksom foton och ljud/video). Överträdelse av minimeringen (art. 5.1.c), av den rättsliga grunden (art. 6.1, samtycke som inte var frivilligt) och av informationsplikten (art. 13 GDPR).',
       nb: 'AEPD mot Ares Capital S.A. (PS/00454/2024), vedtak undertegnet 4. mars 2026 og offentliggjort av AEPD 14. april 2026: selskapet forpliktet sjåførene til å installere apper på sin private telefon som kontinuerlig samlet inn geolokalisering (i tillegg til bilder og lyd/video). Brudd på dataminimering (art. 5.1.c), på det rettslige grunnlaget (art. 6.1, samtykket var ikke frivillig) og på informasjonsplikten (art. 13 GDPR).',
       nl: "AEPD tegen Ares Capital S.A. (PS/00454/2024), op 4 maart 2026 ondertekend en door de AEPD op 14 april 2026 gepubliceerd besluit: het bedrijf verplichtte de chauffeurs om op hun persoonlijke telefoon apps te installeren die voortdurend de geolocatie verzamelden (naast foto's en audio/video). Schending van de minimalisering (art. 5.1.c), van de rechtsgrondslag (art. 6.1, toestemming niet vrij gegeven) en van de informatieplicht (art. 13 AVG).",
+      ru: "AEPD против Ares Capital S.A. (PS/00454/2024), решение подписано 4 марта 2026 г. и опубликовано AEPD 14 апреля 2026 г.: компания обязывала водителей устанавливать на личный телефон приложения, непрерывно собиравшие геолокацию (а также фото и аудио/видео). Нарушены принцип минимизации (ст. 5.1.c), правовое основание (ст. 6.1, согласие не было свободным) и обязанность информировать (ст. 13 GDPR).",
     },
     urlFonte: FONTE_AEPD_ARES.url,
     tipoImporto: 'caso-gps',

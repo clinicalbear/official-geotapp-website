@@ -91,6 +91,7 @@ export const lussemburgo: SchedaPaese = {
       sv: 'Luxemburg har en enda nationell myndighet, CNPD; det finns ingen regional uppdelning.',
       nb: 'Luxembourg har én nasjonal myndighet, CNPD; det er ingen regional oppdeling.',
       nl: 'Luxemburg heeft een enkele nationale autoriteit, de CNPD; geen regionale verdeling.',
+      ru: "В Люксембурге один национальный орган, CNPD; региональное деление отсутствует.",
     },
   },
 
@@ -107,6 +108,7 @@ export const lussemburgo: SchedaPaese = {
         sv: 'Information i förväg till den gemensamma kommittén eller personaldelegationen (i brist på sådan, ITM) och medbestämmande i de fall som anges (Code du travail art. L.261-1)',
         nb: 'Forhåndsinformasjon til den felles komiteen eller de ansattes delegasjon (hvis den ikke finnes, til ITM) og felles beslutning i de tilfellene som er fastsatt (Code du travail art. L.261-1)',
         nl: 'Voorafgaande informatie aan het gemengd comité of de personeelsafvaardiging (bij ontstentenis de ITM) en medebeslissing in de voorziene gevallen (Code du travail art. L.261-1)',
+        ru: "Предварительное информирование смешанного комитета или представительства персонала (при их отсутствии, ITM) и совместное принятие решения в предусмотренных случаях (Code du travail, ст. L.261-1)",
       },
       risposta: 'si',
       dettaglio: {
@@ -120,6 +122,7 @@ export const lussemburgo: SchedaPaese = {
         sv: 'Innan övervakning installeras måste arbetsgivaren i förväg informera den gemensamma kommittén eller, i brist på sådan, personaldelegationen eller, i brist på den, Inspection du travail et des mines (ITM), och beskriva ändamål, tillvägagångssätt och lagringstid samt formellt åta sig att inte använda uppgifterna för andra ändamål. Medbestämmande (art. L.211-8, L.414-9 och L.423-1) gäller endast för arbetstagarnas säkerhet och hälsa, kontroll av produktion eller prestation när det är det enda sättet att fastställa den exakta lönen, eller flextid, om det inte finns någon lagstadgad eller författningsenlig skyldighet.',
         nb: 'Før overvåking installeres, må arbeidsgiveren på forhånd informere den felles komiteen eller, hvis den ikke finnes, de ansattes delegasjon eller, hvis heller ikke den finnes, Inspection du travail et des mines (ITM), med angivelse av formål, fremgangsmåte og lagringstid og med en formell forpliktelse til ikke å bruke dataene til andre formål. Den felles beslutningen (art. L.211-8, L.414-9 og L.423-1) kreves bare for de ansattes sikkerhet og helse, kontroll av produksjon eller ytelse, når det er den eneste måten å fastsette den nøyaktige lønnen på, eller for fleksibel arbeidstid, med mindre det foreligger en rettslig eller regulatorisk forpliktelse.',
         nl: 'Voordat monitoring wordt geïnstalleerd, moet de werkgever vooraf het gemengd comité of, bij ontstentenis, de personeelsafvaardiging of, bij ontstentenis daarvan, de Inspection du travail et des mines (ITM) informeren, met beschrijving van doel, werkwijze en bewaartermijn en een formele verbintenis de gegevens niet voor andere doeleinden te gebruiken. Medebeslissing (art. L.211-8, L.414-9 en L.423-1) geldt alleen voor veiligheid en gezondheid van de werknemers, controle van productie of prestaties als dat het enige middel is om het juiste loon vast te stellen, of glijdende werktijd, tenzij er een wettelijke of reglementaire verplichting is.',
+        ru: "Перед установкой мониторинга работодатель должен заранее проинформировать смешанный комитет, при его отсутствии представительство персонала, а при отсутствии и его Inspection du travail et des mines (ITM), описав цели, способы и срок хранения и формально обязавшись не использовать данные для иных целей. Совместное принятие решения (ст. L.211-8, L.414-9 и L.423-1) требуется только для безопасности и здоровья работников, контроля производства или результатов работы, когда это единственный способ определить точный размер оплаты, либо при скользящем графике, за исключением случаев, когда существует обязанность, установленная законом или иным нормативным актом.",
       },
       fonte: FONTE_LOI_2018_L261_1,
     },
@@ -135,6 +138,7 @@ export const lussemburgo: SchedaPaese = {
         sv: 'Möjlighet för delegationen eller arbetstagarna att begära ett förhandsyttrande från CNPD inom 15 dagar (uppskjutande verkan)',
         nb: 'Mulighet for at delegasjonen eller de ansatte kan be CNPD om en forhåndsuttalelse innen 15 dager (oppsettende virkning)',
         nl: 'Mogelijkheid voor de afvaardiging of de werknemers om binnen 15 dagen een voorafgaand advies aan de CNPD te vragen (schorsende werking)',
+        ru: "Возможность для представительства или работников запросить предварительное заключение CNPD в течение 15 дней (с приостанавливающим действием)",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -148,6 +152,7 @@ export const lussemburgo: SchedaPaese = {
         sv: 'Personaldelegationen, eller i dess frånvaro de berörda arbetstagarna, kan inom 15 dagar efter förhandsinformationen begära ett yttrande från CNPD, och begäran har uppskjutande verkan; CNPD ska yttra sig inom en månad.',
         nb: 'De ansattes delegasjon eller, hvis den ikke finnes, de berørte ansatte kan innen 15 dager etter forhåndsinformasjonen be CNPD om en uttalelse, og anmodningen har oppsettende virkning; CNPD må uttale seg innen en måned.',
         nl: 'De personeelsafvaardiging of, bij ontstentenis daarvan, de betrokken werknemers kunnen binnen 15 dagen na de voorafgaande informatie een advies aan de CNPD vragen, en het verzoek heeft schorsende werking; de CNPD moet binnen een maand advies uitbrengen.',
+        ru: "Представительство персонала, а при его отсутствии заинтересованные работники, могут в течение 15 дней с момента предварительного информирования запросить заключение CNPD; запрос имеет приостанавливающее действие, а CNPD должна высказаться в течение одного месяца.",
       },
       fonte: FONTE_LOI_2018_L261_1,
     },
@@ -163,6 +168,7 @@ export const lussemburgo: SchedaPaese = {
         sv: 'Förhandstillstånd från en myndighet innan installation',
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit voor de installatie',
+        ru: "Предварительное разрешение органа до установки",
       },
       risposta: 'no',
       dettaglio: {
@@ -176,6 +182,7 @@ export const lussemburgo: SchedaPaese = {
         sv: "CNPD:s tidigare förhandstillstånd avskaffades med GDPR (lagen av den 2 augusti 2002 upphävdes genom lagen av den 1 augusti 2018, art. 72) och ersattes av information i förväg till personalen och, i de fall som anges, medbestämmande; skyldigheten att föra register över behandlingar kvarstår.",
         nb: 'CNPDs gamle forhåndstillatelse ble avskaffet med GDPR (loven av 2. august 2002 ble opphevet ved loven av 1. august 2018, art. 72) og er erstattet av forhåndsinformasjon til de ansattes representanter og, i de tilfellene som er fastsatt, en felles beslutning; plikten til å føre fortegnelsen over behandlingsaktiviteter består.',
         nl: 'De oude voorafgaande toestemming van de CNPD is met de AVG afgeschaft (de wet van 2 augustus 2002 is opgeheven door de wet van 1 augustus 2018, art. 72) en vervangen door voorafgaande informatie van de personeelsvertegenwoordiging en, in de voorziene gevallen, medebeslissing; de verplichting om het register van verwerkingsactiviteiten bij te houden blijft bestaan.',
+        ru: "Прежнее предварительное разрешение CNPD отменено с введением GDPR (закон от 2 августа 2002 г. отменён законом от 1 августа 2018 г., ст. 72) и заменено предварительным информированием персонала и, в предусмотренных случаях, совместным принятием решения; обязанность вести реестр операций обработки сохраняется.",
       },
       fonte: FONTE_LOI_2018_L261_1,
     },
@@ -191,6 +198,7 @@ export const lussemburgo: SchedaPaese = {
         sv: 'Grund = ett villkor i art. 6 GDPR och individuell information; ingen permanent spårning om privat användning är tillåten, ska kunna stängas av av arbetstagaren',
         nb: 'Grunnlag = et vilkår i art. 6 i GDPR og individuell informasjon; ingen permanent sporing hvis privat bruk er tillatt, mulig for den ansatte å slå av',
         nl: 'Grondslag = een voorwaarde van art. 6 AVG en individuele informatie; geen permanente tracering als prive-gebruik is toegestaan, door de werknemer uit te schakelen',
+        ru: "Основание: одно из условий ст. 6 GDPR и индивидуальное информирование; никакого постоянного отслеживания, если допускается личное использование, с возможностью отключения работником",
       },
       risposta: 'si',
       dettaglio: {
@@ -204,6 +212,7 @@ export const lussemburgo: SchedaPaese = {
         sv: 'Det krävs en grund enligt art. 6 GDPR och individuell information (art. 13); arbetsgivaren får inte övervaka utanför arbetstid, och om privat användning av fordonet är tillåten får systemet inte vara permanent och arbetstagaren måste kunna stänga av det.',
         nb: 'Det kreves et grunnlag etter art. 6 i GDPR og individuell informasjon (art. 13); arbeidsgiveren må ikke overvåke utenfor arbeidstid, og hvis privat bruk av kjøretøyet er tillatt, kan ikke systemet være permanent, og den ansatte må kunne slå det av.',
         nl: 'Een grondslag op grond van art. 6 AVG en de individuele informatie (art. 13) zijn vereist; de werkgever mag niet buiten werktijd monitoren, en als prive-gebruik van het voertuig is toegestaan, mag het systeem niet permanent blijven en moet de werknemer het kunnen uitschakelen.',
+        ru: "Нужно основание по ст. 6 GDPR и индивидуальное информирование (ст. 13); работодатель не может осуществлять наблюдение вне рабочего времени, а если допускается личное использование транспортного средства, система не может оставаться постоянно включённой, и работник должен иметь возможность её отключить.",
       },
       fonte: FONTE_CNPD_GEOLOC,
     },
@@ -219,6 +228,7 @@ export const lussemburgo: SchedaPaese = {
         sv: 'Konsekvensbedömning (AIPD) för geolokalisering som regelbundet eller systematiskt övervakar de anställda (till exempel för arbetstiden)',
         nb: 'Vurdering av personvernkonsekvenser (AIPD) ved geolokalisering som regelmessig eller systematisk overvåker ansatte (for eksempel av arbeidstiden)',
         nl: 'Effectbeoordeling (DPIA) voor geolocatie die werknemers regelmatig of stelselmatig monitort (bijvoorbeeld voor de arbeidstijd)',
+        ru: "Оценка воздействия (DPIA) для геолокации, которая регулярно или систематически контролирует сотрудников (например, для учёта рабочего времени)",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -232,6 +242,7 @@ export const lussemburgo: SchedaPaese = {
         sv: 'Enligt CNPD krävs en konsekvensbedömning om geolokaliseringen syftar till att regelbundet och systematiskt övervaka de anställda eller innebär en systematisk övervakning av dem (till exempel för att följa arbetstiden). Om den bara tjänar till att optimera arbetsprocesser utan att påverka de anställda är den inte nödvändigtvis obligatorisk.',
         nb: 'Ifølge CNPD kreves det en vurdering av personvernkonsekvenser hvis geolokaliseringen har som formål å overvåke de ansatte regelmessig og systematisk, eller innebærer en systematisk overvåking av dem (for eksempel for å følge arbeidstiden). Hvis den bare tjener til å optimalisere arbeidsprosesser uten å påvirke de ansatte, er den ikke nødvendigvis obligatorisk.',
         nl: 'Volgens de CNPD is een effectbeoordeling vereist als geolocatie bedoeld is om werknemers regelmatig en stelselmatig te controleren of tot stelselmatig toezicht leidt (bijvoorbeeld om de arbeidstijd te volgen). Dient ze alleen om werkprocessen te optimaliseren zonder de werknemers te raken, dan is ze niet noodzakelijk verplicht.',
+        ru: "По мнению CNPD, оценка воздействия нужна, если геолокация предназначена для регулярного и систематического контроля сотрудников или влечёт за собой систематическое наблюдение за ними (например, для отслеживания рабочего времени). Если она служит лишь оптимизации рабочих процессов и не затрагивает сотрудников, она не обязательно является обязательной.",
       },
       fonte: FONTE_CNPD_AIPD,
     },
@@ -251,6 +262,7 @@ export const lussemburgo: SchedaPaese = {
         sv: 'Informera den gemensamma kommittén eller personaldelegationen (i brist på sådan, ITM) i förväg och sätt, i de fall som anges, medbestämmandet i gång (art. L.261-1).',
         nb: 'Informer på forhånd den felles komiteen eller de ansattes delegasjon (hvis den ikke finnes, ITM), og sett i de tilfellene som er fastsatt, i gang den felles beslutningen (art. L.261-1).',
         nl: 'Informeer het gemengd comité of de personeelsafvaardiging (bij ontstentenis de ITM) vooraf en activeer in de voorziene gevallen de medebeslissing (art. L.261-1).',
+        ru: "Заранее проинформируйте смешанный комитет или представительство персонала (при их отсутствии, ITM) и в предусмотренных случаях задействуйте совместное принятие решения (ст. L.261-1).",
       },
     },
     {
@@ -266,6 +278,7 @@ export const lussemburgo: SchedaPaese = {
         sv: 'Ge delegationen eller arbetstagarna möjlighet att begära ett yttrande från CNPD inom 15 dagar (uppskjutande verkan).',
         nb: 'Gi delegasjonen eller de ansatte mulighet til å be CNPD om en uttalelse innen 15 dager (oppsettende virkning).',
         nl: 'Geef de afvaardiging of de werknemers de mogelijkheid om binnen 15 dagen een advies aan de CNPD te vragen (schorsende werking).',
+        ru: "Дайте представительству или работникам возможность запросить заключение CNPD в течение 15 дней (с приостанавливающим действием).",
       },
     },
     {
@@ -281,6 +294,7 @@ export const lussemburgo: SchedaPaese = {
         sv: 'Fastställ en rättslig grund enligt art. 6 GDPR och informera arbetstagarna individuellt (art. 13).',
         nb: 'Finn et rettslig grunnlag etter art. 6 i GDPR, og informer de ansatte individuelt (art. 13).',
         nl: 'Bepaal een rechtsgrondslag op grond van art. 6 AVG en informeer de werknemers individueel (art. 13).',
+        ru: "Определите правовое основание по ст. 6 GDPR и индивидуально проинформируйте работников (ст. 13).",
       },
     },
     {
@@ -296,6 +310,7 @@ export const lussemburgo: SchedaPaese = {
         sv: 'Genomför konsekvensbedömningen (AIPD) om geolokaliseringen regelbundet övervakar de anställda.',
         nb: 'Gjennomfør vurderingen av personvernkonsekvenser (AIPD) hvis geolokaliseringen regelmessig overvåker ansatte.',
         nl: 'Voer de effectbeoordeling (DPIA) uit als de geolocatie werknemers regelmatig monitort.',
+        ru: "Проведите оценку воздействия (DPIA), если геолокация регулярно контролирует сотрудников.",
       },
     },
     {
@@ -311,6 +326,7 @@ export const lussemburgo: SchedaPaese = {
         sv: 'Konfigurera systemet: ingen permanent spårning om privat användning är tillåten, ska kunna stängas av av arbetstagaren.',
         nb: 'Sett opp systemet: ingen permanent sporing hvis privat bruk er tillatt, mulig for den ansatte å slå av.',
         nl: 'Configureer het systeem: geen permanente tracering als prive-gebruik is toegestaan, door de werknemer uit te schakelen.',
+        ru: "Настройте систему: никакого постоянного отслеживания, если допускается личное использование, с возможностью отключения работником.",
       },
     },
     {
@@ -326,6 +342,7 @@ export const lussemburgo: SchedaPaese = {
         sv: 'Om du byter system eller övervakningsprogram ska du uppdatera och lämna ut integritetsinformationen på nytt och kontrollera om du på nytt måste informera eller höra de anställdas företrädare, där lagen kräver det. Ofta ändras leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och metoderna: den information som lämnades tidigare räcker inte.',
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og dele ut personverninformasjonen på nytt og vurdere om du på nytt må informere eller høre de ansattes representanter, der loven krever det. Ofte endrer leverandøren (databehandleren), de innsamlede opplysningene og metodene seg: informasjonen som ble delt ut tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        ru: "При смене системы или программы мониторинга обновите и повторно вручите информационное уведомление и проверьте, нужно ли снова информировать представителей работников или проводить с ними консультацию, если этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее врученного уведомления недостаточно.",
       },
     },
   ],
@@ -353,6 +370,7 @@ export const lussemburgo: SchedaPaese = {
       sv: '2 800 €',
       nb: '2 800 €',
       nl: '2.800 €',
+      ru: "2 800 €",
     },
     casoCitato: {
       it: "CNPD, deliberazione 11FR/2021 dell'8 aprile 2021: sanzione a una società per un sistema di geolocalizzazione dei veicoli di servizio gestito in modo illecito, con dati conservati troppo a lungo (2 anni e 4 mesi; art. 5, par. 1, lett. e) e con un'informazione carente ai lavoratori (art. 13). La multa di 2.800 euro sanziona questi due punti; la sicurezza insufficiente (art. 32) ha dato luogo solo a un'ingiunzione.",
@@ -365,6 +383,7 @@ export const lussemburgo: SchedaPaese = {
       sv: 'CNPD, beslut 11FR/2021 av den 8 april 2021: sanktion mot ett bolag för ett system för geolokalisering av tjänstefordon som drevs olagligt, med för lång lagring av uppgifter (2 år och 4 månader; art. 5.1 e) och bristfällig information till arbetstagarna (art. 13). Böterna på 2 800 euro avser dessa två punkter; den otillräckliga säkerheten (art. 32) ledde bara till ett föreläggande.',
       nb: 'CNPD, vedtak 11FR/2021 av 8. april 2021: en sanksjon mot et selskap for et system for geolokalisering av tjenestekjøretøy som ble drevet ulovlig, med for lang lagring av data (2 år og 4 måneder; art. 5 nr. 1 bokstav e) og mangelfull informasjon til de ansatte (art. 13). Boten på 2 800 euro sanksjonerer disse to punktene; den utilstrekkelige sikkerheten (art. 32) førte bare til et pålegg.',
       nl: 'CNPD, besluit 11FR/2021 van 8 april 2021: een sanctie tegen een onderneming voor een onrechtmatig geexploiteerd geolocatiesysteem voor dienstvoertuigen, met buitensporige gegevensbewaring (2 jaar en 4 maanden, art. 5, lid 1, onder e) en gebrekkige informatie aan de werknemers (art. 13). De boete van 2.800 euro bestraft deze twee punten; de onvoldoende beveiliging (art. 32) leidde alleen tot een bevel.',
+      ru: "CNPD, решение 11FR/2021 от 8 апреля 2021 г.: санкция в отношении компании за незаконно эксплуатируемую систему геолокации служебных автомобилей, с чрезмерно долгим хранением данных (2 года и 4 месяца; ст. 5 п. 1 б. e) и недостаточным информированием работников (ст. 13). Штраф в 2 800 евро наложен за эти два нарушения; недостаточная безопасность (ст. 32) повлекла лишь предписание.",
     },
     urlFonte: FONTE_CNPD_DECISIONE_11FR.url,
     tipoImporto: 'caso-gps',

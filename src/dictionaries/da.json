@@ -682,6 +682,8 @@
       },
       "cta_title": "Giv dine feltteknikere det rigtige værktøj.",
       "cta_button": "Se priser",
+      "screenshot_dashboard_alt": "GeoTapp TimeTracker - Dashboard",
+      "screenshot_menu_alt": "GeoTapp TimeTracker - Menu",
       "modal": {
         "status": "SYSTEMSTATUS: <span class=\"text-green-600\">OPERATIONEL</span>",
         "encryption": "DATA: <span class=\"text-slate-400\">BESKYTTET</span>",

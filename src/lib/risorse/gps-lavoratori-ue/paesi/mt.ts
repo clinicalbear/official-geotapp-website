@@ -82,6 +82,7 @@ export const malta: SchedaPaese = {
       sv: 'Malta har en enda nationell myndighet, IDPC; det finns ingen regional uppdelning.',
       nb: 'Malta har én nasjonal myndighet, IDPC; det er ingen regional oppdeling.',
       nl: 'Malta heeft een enkele nationale autoriteit, de IDPC; er is geen regionale verdeling.',
+      ru: "На Мальте один национальный орган, IDPC; региональное деление отсутствует.",
     },
   },
 
@@ -98,6 +99,7 @@ export const malta: SchedaPaese = {
         sv: 'Information i förväg till de anställda (art. 13) och en åtgärd som är strikt nödvändig och proportionell',
         nb: 'Forhåndsinformasjon til de ansatte (art. 13) og et tiltak som er strengt nødvendig og forholdsmessig',
         nl: 'Voorafgaande informatie aan de werknemers (art. 13) en een strikt noodzakelijke en evenredige maatregel',
+        ru: "Предварительное информирование работников (ст. 13) и строго необходимая и соразмерная мера",
       },
       risposta: 'si',
       dettaglio: {
@@ -111,6 +113,7 @@ export const malta: SchedaPaese = {
         sv: 'Varje övervakningsåtgärd måste vara strikt nödvändig och proportionell, med det minst ingripande medlet, och de anställda måste informeras tydligt innan övervakningen börjar, aldrig efteråt.',
         nb: 'Ethvert overvåkingstiltak må være strengt nødvendig og forholdsmessig og velge det minst inngripende middelet, og de ansatte må få tydelig beskjed før overvåkingen begynner, aldri etterpå.',
         nl: 'elke monitoringmaatregel moet strikt noodzakelijk en evenredig zijn, waarbij het minst ingrijpende middel wordt gekozen, en de werknemers moeten duidelijk worden geinformeerd voordat de monitoring begint, nooit erna.',
+        ru: "Любая мера мониторинга должна быть строго необходимой и соразмерной, с выбором наименее инвазивного средства, а работников следует чётко информировать до начала мониторинга, а не после.",
       },
       fonte: FONTE_IDPC_LAVORO,
     },
@@ -126,6 +129,7 @@ export const malta: SchedaPaese = {
         sv: 'Förhandstillstånd från en myndighet innan systemet installeras',
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit voor de installatie',
+        ru: "Предварительное разрешение органа до установки",
       },
       risposta: 'no',
       dettaglio: {
@@ -139,6 +143,7 @@ export const malta: SchedaPaese = {
         sv: 'Något förhandstillstånd från IDPC krävs inte; den personuppgiftsansvarige gör en egen bedömning och samråder med IDPC endast om en konsekvensbedömning visar en hög kvarstående risk.',
         nb: 'Det kreves ingen forhåndstillatelse fra IDPC; den behandlingsansvarlige foretar selv vurderingen og rådfører seg bare med IDPC hvis en vurdering av personvernkonsekvenser (DPIA) avdekker en høy restrisiko.',
         nl: 'er is geen voorafgaande toestemming van de IDPC vereist; de verwerkingsverantwoordelijke voert een zelfbeoordeling uit en raadpleegt de IDPC alleen als een DPIA een hoog restrisico aantoont.',
+        ru: "Предварительное разрешение IDPC не требуется; контролёр сам оценивает себя и консультируется с IDPC только в том случае, если DPIA выявляет высокий остаточный риск.",
       },
       fonte: FONTE_IDPC_DPIA,
     },
@@ -154,6 +159,7 @@ export const malta: SchedaPaese = {
         sv: 'Grunden är berättigat intresse (hög tröskel), inte samtycke',
         nb: 'Grunnlaget er berettiget interesse (høy terskel), ikke samtykke',
         nl: 'Grondslag = gerechtvaardigd belang (hoge drempel), niet de toestemming',
+        ru: "Основание: законный интерес (высокий порог), а не согласие",
       },
       risposta: 'si',
       dettaglio: {
@@ -167,6 +173,7 @@ export const malta: SchedaPaese = {
         sv: 'Samtycke är normalt inte giltigt i anställningsförhållandet på grund av maktobalansen, så en annan rättslig grund enligt artikel 6 i GDPR behövs: IDPC pekar på berättigat intresse, som kräver ett prov i tre delar (berättigat intresse, strikt nödvändighet, avvägning) och har en hög tröskel.',
         nb: 'Samtykke er normalt ikke gyldig i et arbeidsforhold på grunn av ubalansen i maktforholdet, så det kreves et annet rettslig grunnlag etter artikkel 6 i GDPR: IDPC peker på berettiget interesse, som krever en test i tre ledd (berettiget interesse, streng nødvendighet, avveining) og har en høy terskel.',
         nl: 'de toestemming is in de arbeidsverhouding doorgaans niet geldig vanwege de machtsongelijkheid, dus is een andere grondslag uit artikel 6 AVG nodig: de IDPC noemt het gerechtvaardigd belang, dat een driestappentoets vraagt (gerechtvaardigd belang, strikte noodzaak, afweging) en een hoge drempel kent.',
+        ru: "Согласие, как правило, недействительно в трудовых отношениях из-за неравенства сторон, поэтому нужно иное правовое основание по ст. 6 GDPR: IDPC указывает на законный интерес, который требует трёхэтапного теста (законный интерес, строгая необходимость, баланс интересов) и имеет высокий порог.",
       },
       fonte: FONTE_IDPC_LAVORO,
     },
@@ -182,6 +189,7 @@ export const malta: SchedaPaese = {
         sv: 'Ingen kontinuerlig eller permanent spårning; uppgiftsminimering',
         nb: 'Ingen løpende eller permanent sporing; dataminimering',
         nl: 'Geen continue of permanente tracking; gegevensminimalisatie',
+        ru: "Никакого непрерывного или постоянного отслеживания; минимизация данных",
       },
       risposta: 'si',
       dettaglio: {
@@ -195,6 +203,7 @@ export const malta: SchedaPaese = {
         sv: 'Endast ett minimum av nödvändiga uppgifter får samlas in, med den minst ingripande åtgärden. IDPC säger detta om kontinuerlig övervakning med webbkamera (mycket ingripande, i regel inte möjlig att motivera som nödvändig och proportionell) och, i beslut CDP/COMP/579/2025, om kontinuerlig filmning av ett vilorum; om GPS finns ingen specifik vägledning, så för kontinuerlig spårning gäller principen analogt.',
         nb: 'Det må bare samles inn det nødvendige minimum av opplysninger ved hjelp av det minst inngripende tiltaket. IDPC sier det om løpende webkamera-overvåking (svært inngripende, i de fleste tilfeller ikke begrunnet som nødvendig og forholdsmessig) og i vedtak CDP/COMP/579/2025 om løpende opptak av et hvilerom; den har ingen spesifikk veiledning om GPS, så for løpende sporing gjelder prinsippet analogt.',
         nl: 'er mag alleen het minimum aan noodzakelijke gegevens worden verzameld, met de minst ingrijpende maatregel. De IDPC zegt dit voor continu webcamtoezicht (zeer ingrijpend, meestal niet te rechtvaardigen als noodzakelijk en evenredig) en, in besluit CDP/COMP/579/2025, voor continue opname van een rustruimte; er is geen specifieke richtlijn over gps, dus voor continue tracking geldt het beginsel naar analogie.',
+        ru: "Следует собирать только минимум необходимых данных, применяя наименее инвазивную меру. IDPC заявляет об этом в отношении непрерывного наблюдения с помощью веб-камеры (крайне инвазивного, как правило не оправдываемого как необходимое и соразмерное) и в решении CDP/COMP/579/2025 в отношении непрерывной съёмки зоны отдыха; по GPS специального руководства у него нет, поэтому для непрерывного отслеживания принцип применяется по аналогии.",
       },
       fonte: FONTE_IDPC_LAVORO,
     },
@@ -210,6 +219,7 @@ export const malta: SchedaPaese = {
         sv: 'Konsekvensbedömning (DPIA) för geolokalisering och för bedömning av de anställdas prestation (IDPC:s lista)',
         nb: 'Vurdering av personvernkonsekvenser (DPIA) for geolokalisering og vurdering av ansattes ytelse (IDPCs liste)',
         nl: 'Effectbeoordeling (DPIA) voor geolocatie en voor de beoordeling van de prestaties van werknemers (IDPC-lijst)',
+        ru: "Оценка воздействия (DPIA) для геолокации и оценки результативности сотрудников (перечень IDPC)",
       },
       risposta: 'si',
       dettaglio: {
@@ -223,6 +233,7 @@ export const malta: SchedaPaese = {
         sv: 'IDPC:s lista omfattar behandling som innebär användning av geolokaliseringsuppgifter och bedömning av de anställdas prestation bland de behandlingar som kräver en konsekvensbedömning.',
         nb: 'IDPCs liste omfatter behandling som innebærer bruk av geolokaliseringsdata og vurdering av ansattes ytelse, blant behandlingene som krever en vurdering av personvernkonsekvenser.',
         nl: 'de IDPC-lijst rekent de verwerkingen die het gebruik van geolocatiegegevens en de beoordeling van de prestaties van werknemers omvatten tot die welke een effectbeoordeling vereisen.',
+        ru: "Перечень IDPC включает обработку, связанную с использованием данных геолокации и оценкой результативности сотрудников, среди случаев, требующих оценки воздействия.",
       },
       fonte: FONTE_IDPC_DPIA,
     },
@@ -242,6 +253,7 @@ export const malta: SchedaPaese = {
         sv: 'Kontrollera att åtgärden är strikt nödvändig och proportionell och välj det minst ingripande medlet.',
         nb: 'Kontroller at tiltaket er strengt nødvendig og forholdsmessig, og velg det minst inngripende middelet.',
         nl: 'Controleer of de maatregel strikt noodzakelijk en evenredig is en kies het minst ingrijpende middel.',
+        ru: "Проверьте, что мера строго необходима и соразмерна, и выберите наименее инвазивное средство.",
       },
     },
     {
@@ -257,6 +269,7 @@ export const malta: SchedaPaese = {
         sv: 'Identifiera en giltig rättslig grund (berättigat intresse, inte samtycke).',
         nb: 'Finn et gyldig rettslig grunnlag (berettiget interesse, ikke samtykke).',
         nl: 'Bepaal een geldige rechtsgrondslag (gerechtvaardigd belang, niet de toestemming).',
+        ru: "Определите действительное правовое основание (законный интерес, а не согласие).",
       },
     },
     {
@@ -272,6 +285,7 @@ export const malta: SchedaPaese = {
         sv: 'Genomför konsekvensbedömningen (DPIA) för geolokalisering av de anställda.',
         nb: 'Gjennomfør vurderingen av personvernkonsekvenser (DPIA) for geolokalisering av ansatte.',
         nl: 'Voer de effectbeoordeling (DPIA) uit voor de geolocatie van de werknemers.',
+        ru: "Проведите оценку воздействия (DPIA) для геолокации сотрудников.",
       },
     },
     {
@@ -287,6 +301,7 @@ export const malta: SchedaPaese = {
         sv: 'Informera de anställda tydligt innan övervakningen börjar.',
         nb: 'Informer de ansatte tydelig før overvåkingen begynner.',
         nl: 'Informeer de werknemers duidelijk voordat de monitoring begint.',
+        ru: "Чётко проинформируйте работников до начала мониторинга.",
       },
     },
     {
@@ -302,6 +317,7 @@ export const malta: SchedaPaese = {
         sv: 'Konfigurera systemet: ingen kontinuerlig spårning, endast det nödvändiga minimet.',
         nb: 'Sett opp systemet: ingen løpende sporing, bare det nødvendige minimum.',
         nl: 'Configureer het systeem: geen continue tracking, alleen het noodzakelijke minimum.',
+        ru: "Настройте систему: без непрерывного отслеживания, только необходимый минимум.",
       },
     },
     {
@@ -317,6 +333,7 @@ export const malta: SchedaPaese = {
         sv: 'Om du byter övervakningssystem eller programvara: uppdatera och lämna ut informationen om personuppgiftsbehandling på nytt, och kontrollera om du åter måste informera eller samråda med de anställdas företrädare, där lagen kräver det. Leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och arbetssätten ändras ofta: den information som lämnades tidigare räcker inte.',
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og dele ut personverninformasjonen på nytt og vurdere om du på nytt må informere eller høre de ansattes representanter, der loven krever det. Ofte endrer leverandøren (databehandleren), de innsamlede opplysningene og metodene seg: informasjonen som ble delt ut tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        ru: "Если вы меняете систему или программу мониторинга, обновите и повторно вручите информационное уведомление и проверьте, нужно ли вновь информировать представителей работников или проводить с ними консультации, там, где этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее вручённого уведомления недостаточно.",
       },
     },
   ],
@@ -344,6 +361,7 @@ export const malta: SchedaPaese = {
       sv: 'upp till 20 miljoner euro eller 4 % av omsättningen (GDPR)',
       nb: 'opptil 20 millioner euro eller 4 % av omsetningen (GDPR)',
       nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
+      ru: "до 20 млн евро или 4% оборота (GDPR)",
     },
     casoCitato: {
       it: "Nell'elenco delle decisioni pubblicate dall'IDPC non compare alcuna decisione su GPS o geolocalizzazione dei dipendenti, né una multa specifica. Il caso più vicino è CDP/COMP/579/2025 (decisione del 20 aprile 2026): la telecamera nella mensa aziendale che riprendeva i dipendenti in pausa, e le cui immagini erano state usate in un procedimento disciplinare, non poteva fondarsi sull'interesse legittimo (violazione degli artt. 5(2) e 6(1) GDPR); l'IDPC ha disposto ammonimento e rimozione della telecamera, senza multa. Non è un caso di GPS. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).",
@@ -356,6 +374,7 @@ export const malta: SchedaPaese = {
       sv: 'Bland de beslut som IDPC har offentliggjort finns inget beslut om GPS eller geolokalisering av anställda, och inget specifikt vite. Det närmaste fallet är CDP/COMP/579/2025 (beslut av den 20 april 2026): kameran i företagets matsal, som filmade de anställda under rasten och vars bilder hade använts i ett disciplinärt förfarande, kunde inte grundas på berättigat intresse (överträdelse av artiklarna 5.2 och 6.1 i GDPR); IDPC utfärdade en reprimand och beordrade att kameran skulle tas bort, utan vite. Det är inte ett GPS-fall. Sanktionsrisken är fortsatt den allmänna enligt GDPR (art. 83).',
       nb: 'Listen over vedtak som IDPC har offentliggjort, inneholder ikke noe vedtak om GPS eller geolokalisering av ansatte og ingen spesifikk bot. Den nærmeste saken er CDP/COMP/579/2025 (vedtak av 20. april 2026): Kameraet i bedriftens kantine, som filmet ansatte i pausen, og hvis opptak ble brukt i disiplinærsaker, kunne ikke støtte seg på berettiget interesse (brudd på artikkel 5 nr. 2 og artikkel 6 nr. 1 i GDPR); IDPC utstedte en irettesettelse og påla at kameraet ble fjernet, uten bot. Det er ikke en GPS-sak. Sanksjonsrisikoen er fortsatt den alminnelige etter GDPR (art. 83).',
       nl: "In de lijst van door de IDPC gepubliceerde besluiten staat geen besluit over gps of geolocatie van werknemers, en ook geen specifieke boete. De dichtstbijzijnde zaak is CDP/COMP/579/2025 (besluit van 20 april 2026): de camera in de bedrijfskantine, die werknemers tijdens hun pauze filmde en waarvan de beelden in een tuchtprocedure waren gebruikt, kon zich niet op gerechtvaardigd belang baseren (schending van art. 5(2) en 6(1) AVG); de IDPC gaf een berisping en gelastte het verwijderen van de camera, zonder boete. Het is geen gps-zaak. Het sanctierisico blijft het algemene risico onder de AVG (art. 83).",
+      ru: "В перечне решений, опубликованных IDPC, нет ни одного решения о GPS или геолокации сотрудников, ни отдельного штрафа. Ближайший случай: CDP/COMP/579/2025 (решение от 20 апреля 2026 г.). Камера в столовой компании, снимавшая сотрудников во время перерыва, записи которой использовались в дисциплинарном производстве, не могла опираться на законный интерес (нарушение ст. 5(2) и 6(1) GDPR); IDPC вынес предупреждение и распорядился демонтировать камеру, без штрафа. Это не случай GPS. Риск санкций остаётся общим для GDPR (ст. 83).",
     },
     urlFonte: FONTE_IDPC_DECISIONE.url,
     tipoImporto: 'massimale',

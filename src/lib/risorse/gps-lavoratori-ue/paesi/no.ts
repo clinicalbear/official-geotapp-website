@@ -98,6 +98,7 @@ export const norvegia: SchedaPaese = {
       sv: 'Norge (EES) har en enda nationell myndighet, Datatilsynet; det finns ingen regional uppdelning.',
       nb: 'Norge (EØS) har én nasjonal myndighet, Datatilsynet; det finnes ingen regional inndeling.',
       nl: 'Noorwegen (EER) heeft een enkele nationale autoriteit, het Datatilsynet; er is geen regionale onderverdeling.',
+      ru: "В Норвегии (ЕЭЗ) действует один национальный орган, Datatilsynet; региональное деление отсутствует.",
     },
   },
 
@@ -114,6 +115,7 @@ export const norvegia: SchedaPaese = {
         sv: 'Saklig grunn och inte oforholdsmessig (Arbeidsmiljøloven § 9-1)',
         nb: 'Saklig grunn og ikke uforholdsmessig (Arbeidsmiljøloven § 9-1)',
         nl: 'Objectieve reden (saklig grunn) en niet onevenredig (Arbeidsmiljoloven § 9-1)',
+        ru: "Объективная причина (saklig grunn) и отсутствие несоразмерности (Arbeidsmiljøloven § 9-1)",
       },
       risposta: 'si',
       dettaglio: {
@@ -127,6 +129,7 @@ export const norvegia: SchedaPaese = {
         sv: 'En kontrollåtgärd (inklusive GPS) är tillåten endast om den har en saklig grund i verksamhetens behov och inte innebär en oproportionerlig belastning för den anställde.',
         nb: 'Et kontrolltiltak (inkludert GPS) er bare tillatt hvis det har en saklig grunn i virksomhetens behov og ikke gir den ansatte en uforholdsmessig byrde.',
         nl: 'Een controlemaatregel (waaronder GPS) is alleen toegestaan als deze een objectieve reden heeft in de behoeften van de onderneming en geen onevenredige last voor de werknemer oplevert.',
+        ru: "Мера контроля (включая GPS) допускается, только если она имеет объективную причину в потребностях предприятия и не создаёт несоразмерного бремени для работника.",
       },
       fonte: FONTE_AML_KAP9,
     },
@@ -142,6 +145,7 @@ export const norvegia: SchedaPaese = {
         sv: 'Diskussion i förväg med företrädarna (tillitsvalgte) (§ 9-2)',
         nb: 'Forutgående drøfting med de tillitsvalgte (§ 9-2)',
         nl: 'Voorafgaand overleg met de werknemersvertegenwoordigers (tillitsvalgte) (§ 9-2)',
+        ru: "Предварительное обсуждение с представителями работников (tillitsvalgte) (§ 9-2)",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -155,6 +159,7 @@ export const norvegia: SchedaPaese = {
         sv: 'Arbetsgivaren ska så tidigt som möjligt diskutera åtgärden med de anställdas företrädare. Gäller där det finns företrädare (tillitsvalgte).',
         nb: 'Arbeidsgiveren må drøfte tiltaket med de ansattes tillitsvalgte så tidlig som mulig. Gjelder der det finnes tillitsvalgte.',
         nl: 'De werkgever moet de maatregel zo vroeg mogelijk met de werknemersvertegenwoordigers bespreken. Dit geldt waar vertegenwoordigers (tillitsvalgte) bestaan.',
+        ru: "Работодатель должен как можно раньше обсудить меру с представителями работников. Применяется там, где есть представители (tillitsvalgte).",
       },
       fonte: FONTE_AML_KAP9,
     },
@@ -170,6 +175,7 @@ export const norvegia: SchedaPaese = {
         sv: 'Förhandstillstånd från en myndighet innan systemet installeras',
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit voor de installatie',
+        ru: "Предварительное разрешение органа перед установкой",
       },
       risposta: 'no',
       dettaglio: {
@@ -183,6 +189,7 @@ export const norvegia: SchedaPaese = {
         sv: 'Kapitel 9 föreskriver inget förhandstillstånd från Datatilsynet; lagligheten är den personuppgiftsansvariges ansvar.',
         nb: 'Kapittel 9 krever ingen forhåndstillatelse fra Datatilsynet; det er den behandlingsansvarlige som har ansvaret for at behandlingen er lovlig.',
         nl: 'Hoofdstuk 9 voorziet niet in voorafgaande toestemming van het Datatilsynet; de rechtmatigheid is de verantwoordelijkheid van de verwerkingsverantwoordelijke.',
+        ru: "Глава 9 не предусматривает никакого предварительного разрешения Datatilsynet; за законность отвечает контролёр данных.",
       },
       fonte: FONTE_AML_KAP9,
     },
@@ -198,6 +205,7 @@ export const norvegia: SchedaPaese = {
         sv: 'Information i förväg till de anställda (ändamål, konsekvenser, varaktighet; § 9-2 + art. 13 GDPR)',
         nb: 'Forhåndsinformasjon til de ansatte (formål, konsekvenser, varighet; § 9-2 + art. 13 i GDPR)',
         nl: 'Voorafgaande informatie aan de werknemers (doel, gevolgen, duur; § 9-2 + art. 13 AVG)',
+        ru: "Предварительное информирование работников (цель, последствия, срок; § 9-2 и ст. 13 GDPR)",
       },
       risposta: 'si',
       dettaglio: {
@@ -211,6 +219,7 @@ export const norvegia: SchedaPaese = {
         sv: 'Innan åtgärden aktiveras informerar arbetsgivaren de anställda om åtgärdens ändamål, de praktiska konsekvenserna (hur den kommer att genomföras) och den beräknade varaktigheten.',
         nb: 'Før tiltaket aktiveres, informerer arbeidsgiveren de ansatte om formålet med tiltaket, de praktiske konsekvensene (hvordan det vil bli gjennomført) og den forventede varigheten.',
         nl: 'Voordat de werkgever deze activeert, informeert hij de werknemers over het doel van de maatregel, de praktische gevolgen (hoe deze wordt uitgevoerd) en de verwachte duur.',
+        ru: "Перед активацией работодатель информирует работников о цели меры, практических последствиях (как она будет осуществляться) и предполагаемом сроке.",
       },
       fonte: FONTE_AML_KAP9,
     },
@@ -226,6 +235,7 @@ export const norvegia: SchedaPaese = {
         sv: 'GPS i fordon endast för det angivna ändamålet, utan återanvändning för att bedöma prestation',
         nb: 'GPS i kjøretøy bare til det oppgitte formålet, uten gjenbruk for å vurdere prestasjoner',
         nl: 'GPS op voertuigen alleen voor het verklaarde doel, zonder hergebruik om de prestaties te beoordelen',
+        ru: "GPS в транспортных средствах только для заявленной цели, без повторного использования для оценки результатов работы",
       },
       risposta: 'si',
       dettaglio: {
@@ -239,6 +249,7 @@ export const norvegia: SchedaPaese = {
         sv: 'GPS i fordon är normalt en kontrollåtgärd: ändamålet ska anges, och de insamlade uppgifterna får inte återanvändas för att bedöma de anställdas prestation.',
         nb: 'GPS i kjøretøy er normalt et kontrolltiltak: formålet må angis, og de innsamlede dataene kan ikke gjenbrukes til å vurdere de ansattes prestasjoner.',
         nl: 'GPS op voertuigen is normaal gesproken een controlemaatregel: het doel moet worden gespecificeerd en de verzamelde gegevens mogen niet worden hergebruikt om de prestaties van werknemers te beoordelen.',
+        ru: "GPS в транспортных средствах, как правило, является мерой контроля: цель необходимо указать, а собранные данные нельзя повторно использовать для оценки результатов работы сотрудников.",
       },
       fonte: FONTE_DATATILSYNET_VEICOLI,
     },
@@ -254,6 +265,7 @@ export const norvegia: SchedaPaese = {
         sv: 'Konsekvensbedömning vid systematisk övervakning av anställda och positionsuppgifter',
         nb: 'Personvernkonsekvensvurdering for systematisk overvåking av ansatte og posisjonsdata',
         nl: 'Gegevensbeschermingseffectbeoordeling voor systematische monitoring van werknemers en locatiegegevens',
+        ru: "Оценка воздействия при систематическом мониторинге работников и данных о местоположении",
       },
       risposta: 'si',
       dettaglio: {
@@ -267,6 +279,7 @@ export const norvegia: SchedaPaese = {
         sv: 'Datatilsynet kräver alltid en konsekvensbedömning vid systematisk övervakning av anställda, och för positionsuppgifter i kombination med andra riskkriterier.',
         nb: 'Datatilsynet krever alltid en personvernkonsekvensvurdering for systematisk overvåking av ansatte, og for posisjonsdata kombinert med andre risikokriterier.',
         nl: 'Het Datatilsynet vereist altijd een gegevensbeschermingseffectbeoordeling voor de systematische monitoring van werknemers en voor locatiegegevens in combinatie met andere risicocriteria.',
+        ru: "Datatilsynet всегда требует оценки воздействия при систематическом мониторинге работников, а также при данных о местоположении в сочетании с другими критериями риска.",
       },
       fonte: FONTE_DATATILSYNET_DPIA,
     },
@@ -286,6 +299,7 @@ export const norvegia: SchedaPaese = {
         sv: 'Kontrollera att det finns en saklig grund (saklig grunn) och att åtgärden inte är oproportionerlig (§ 9-1).',
         nb: 'Kontroller at det finnes en saklig grunn (saklig grunn), og at tiltaket ikke er uforholdsmessig (§ 9-1).',
         nl: 'Controleer of er een objectieve reden (saklig grunn) is en dat de maatregel niet onevenredig is (§ 9-1).',
+        ru: "Проверьте наличие объективной причины (saklig grunn) и то, что мера не является несоразмерной (§ 9-1).",
       },
     },
     {
@@ -301,6 +315,7 @@ export const norvegia: SchedaPaese = {
         sv: 'Om det finns företrädare för de anställda, diskutera åtgärden med dem så tidigt som möjligt (§ 9-2).',
         nb: 'Hvis det finnes tillitsvalgte, drøft tiltaket med dem så tidlig som mulig (§ 9-2).',
         nl: 'Als er werknemersvertegenwoordigers zijn, bespreek de maatregel dan zo vroeg mogelijk met hen (§ 9-2).',
+        ru: "Если есть представители работников, как можно раньше обсудите с ними меру (§ 9-2).",
       },
     },
     {
@@ -316,6 +331,7 @@ export const norvegia: SchedaPaese = {
         sv: 'Informera de anställda om ändamål, konsekvenser och varaktighet innan du aktiverar.',
         nb: 'Informer de ansatte om formål, konsekvenser og varighet før du aktiverer.',
         nl: 'Informeer de werknemers over het doel, de gevolgen en de duur voordat u activeert.',
+        ru: "Проинформируйте работников о цели, последствиях и сроке до активации.",
       },
     },
     {
@@ -331,6 +347,7 @@ export const norvegia: SchedaPaese = {
         sv: 'Genomför konsekvensbedömningen vid systematisk övervakning eller positionsuppgifter.',
         nb: 'Gjennomfør personvernkonsekvensvurderingen for systematisk overvåking eller posisjonsdata.',
         nl: 'Voer de gegevensbeschermingseffectbeoordeling uit voor systematische monitoring of locatiegegevens.',
+        ru: "Проведите оценку воздействия при систематическом мониторинге или данных о местоположении.",
       },
     },
     {
@@ -346,6 +363,7 @@ export const norvegia: SchedaPaese = {
         sv: 'Konfigurera systemet: endast det angivna ändamålet, ingen återanvändning för att bedöma prestation.',
         nb: 'Konfigurer systemet: bare det oppgitte formålet, ingen gjenbruk for å vurdere prestasjoner.',
         nl: 'Configureer het systeem: alleen het verklaarde doel, geen hergebruik om de prestaties te beoordelen.',
+        ru: "Настройте систему: только заявленная цель, без повторного использования для оценки результатов работы.",
       },
     },
     {
@@ -361,6 +379,7 @@ export const norvegia: SchedaPaese = {
         sv: 'Om du byter övervakningssystem eller programvara: uppdatera och lämna ut informationen om personuppgiftsbehandling på nytt, och kontrollera om du åter måste informera eller samråda med de anställdas företrädare, där lagen kräver det. Leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och arbetssätten ändras ofta: den information som lämnades tidigare räcker inte.',
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og utlevere personvernerklæringen på nytt, og sjekke om du igjen må informere eller rådføre deg med de ansattes representanter, der loven krever det. Ofte endres leverandøren (databehandleren), dataene som samles inn og metodene: informasjonen som ble utlevert tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        ru: "Если вы меняете систему или программное обеспечение мониторинга, обновите и повторно вручите уведомление о защите данных и проверьте, нужно ли снова информировать представителей работников или проводить с ними консультации, если этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее вручённого уведомления недостаточно.",
       },
     },
   ],
@@ -388,6 +407,7 @@ export const norvegia: SchedaPaese = {
       sv: '100 000 NOK (cirka 8 500 euro)',
       nb: '100 000 NOK (ca. 8 500 euro)',
       nl: '100.000 NOK (ongeveer 8.500 euro)',
+      ru: "100 000 NOK (около 8 500 евро)",
     },
     casoCitato: {
       it: "Personvernnemnda, PVN-2017-07: un datore confrontava i dati GPS del veicolo aziendale con i fogli ore del dipendente, a sua insaputa, per controllare se avesse lavorato le ore dichiarate, riusando i dati per un nuovo scopo senza base giuridica. Deciso sotto la vecchia legge pre-GDPR, ma il principio (vietato riusare il GPS per controllare le ore) è confermato dalle linee guida attuali del Datatilsynet.",
@@ -400,6 +420,7 @@ export const norvegia: SchedaPaese = {
       sv: 'Personvernnemnda, PVN-2017-07: en arbetsgivare jämförde GPS-uppgifterna från tjänstefordonet med den anställdes tidrapporter, utan hans eller hennes vetskap, för att kontrollera om han eller hon hade arbetat de angivna timmarna, och återanvände därmed uppgifterna för ett nytt ändamål utan rättslig grund. Avgjort enligt den gamla lagen före GDPR, men principen (det är förbjudet att återanvända GPS för att kontrollera timmar) bekräftas av Datatilsynets nuvarande riktlinjer.',
       nb: 'Personvernnemnda, PVN-2017-07: en arbeidsgiver sammenlignet GPS-dataene fra firmabilen med den ansattes timelister, uten at den ansatte visste det, for å kontrollere om vedkommende hadde jobbet de oppgitte timene, og gjenbrukte dermed dataene til et nytt formål uten rettslig grunnlag. Avgjort etter den gamle loven fra før GDPR, men prinsippet (at det er forbudt å gjenbruke GPS til å kontrollere arbeidstid) bekreftes av Datatilsynets gjeldende veiledninger.',
       nl: 'Personvernnemnda, PVN-2017-07: een werkgever vergeleek de GPS-gegevens van het bedrijfsvoertuig zonder medeweten van de werknemer met diens urenstaten om te controleren of deze de opgegeven uren had gewerkt, waarbij de gegevens zonder rechtsgrond voor een nieuw doel werden hergebruikt. Beslist onder de oude wet van voor de AVG, maar het beginsel (het hergebruik van GPS om de uren te controleren is verboden) wordt bevestigd door de huidige richtlijnen van het Datatilsynet.',
+      ru: "Personvernnemnda, PVN-2017-07: работодатель без ведома работника сопоставлял данные GPS служебного автомобиля с табелем учёта рабочего времени работника, чтобы проверить, отработал ли он заявленные часы, повторно используя данные для новой цели без правового основания. Решение принято по прежнему закону, действовавшему до GDPR, но принцип (запрет повторно использовать GPS для проверки рабочих часов) подтверждается действующими руководствами Datatilsynet.",
     },
     urlFonte: FONTE_PVN_2017_07.url,
     tipoImporto: 'caso-gps',

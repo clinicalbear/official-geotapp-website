@@ -93,6 +93,7 @@ export const moldova: SchedaPaese = {
       sv: 'Moldavien är ett kandidatland utanför EU; sedan den 23 augusti 2026 gäller lag 195/2024, anpassad till GDPR, som har upphävt lag 133/2011. En enda nationell myndighet, CNPDCP; det finns ingen regional uppdelning.',
       nb: 'Moldova er et kandidatland utenfor EU; fra 23. august 2026 gjelder lov 195/2024, tilpasset GDPR, som har opphevet lov 133/2011. Én nasjonal myndighet, CNPDCP; ingen regional oppdeling.',
       nl: 'Moldavië is een kandidaat-lidstaat, buiten de EU; sinds 23 augustus 2026 geldt de op de AVG afgestemde wet 195/2024, die wet 133/2011 heeft ingetrokken. Er is één nationale autoriteit, het CNPDCP; geen regionale onderverdeling.',
+      ru: "Молдова является страной-кандидатом и не входит в ЕС; с 23 августа 2026 г. действует закон 195/2024, приведённый в соответствие с GDPR, который отменил закон 133/2011. Единственный национальный орган: CNPDCP; региональных органов нет.",
     },
   },
 
@@ -109,6 +110,7 @@ export const moldova: SchedaPaese = {
         sv: 'Giltig rättslig grund och information till arbetstagarna (lag 195/2024 + arbetslagen art. 91-94)',
         nb: 'Gyldig rettslig grunnlag og informasjon til de ansatte (lov 195/2024 + arbeidsloven art. 91-94)',
         nl: 'Geldige rechtsgrondslag en informatie aan werknemers (wet 195/2024 + Arbeidswetboek art. 91-94)',
+        ru: "Действительное правовое основание и информирование работников (закон 195/2024 + Трудовой кодекс, ст. 91-94)",
       },
       risposta: 'si',
       dettaglio: {
@@ -122,6 +124,7 @@ export const moldova: SchedaPaese = {
         sv: 'Arbetstagarnas uppgifter som samlas in med GPS är personuppgifter: lag 195/2024 (som den 23 augusti 2026 ersatte lag 133/2011; art. 13, information till den registrerade) och arbetslagen (art. 91-94: arbetsgivaren ska låta arbetstagarna mot underskrift ta del av dokumenten om behandlingen av deras uppgifter och om deras rättigheter och skyldigheter) gäller. Varken lagen eller arbetslagen innehåller någon särskild regel om GPS.',
         nb: 'Ansattdata som samles inn med GPS, er personopplysninger: lov 195/2024 (som 23. august 2026 avløste lov 133/2011; art. 13, informasjon til den registrerte) og arbeidsloven (art. 91-94: arbeidsgiveren må gjøre de ansatte kjent, mot underskrift, med dokumentene om behandlingen av dataene deres og med rettighetene og pliktene deres) gjelder. Verken loven eller arbeidsloven inneholder en særskilt regel om GPS.',
         nl: 'Via gps verzamelde werknemersgegevens zijn persoonsgegevens: wet 195/2024 (die op 23 augustus 2026 wet 133/2011 heeft vervangen; art. 13, informatie aan de betrokkene) en het Arbeidswetboek (art. 91-94: de werkgever moet werknemers tegen handtekening kennis laten nemen van de documenten over de verwerking van hun gegevens en van hun rechten en plichten) zijn van toepassing. Noch de wet noch het wetboek bevat een specifieke gps-regel.',
+        ru: "Данные работников, собираемые с помощью GPS, являются персональными данными: применяются закон 195/2024 (который с 23 августа 2026 г. заменил закон 133/2011; ст. 13, информирование субъекта данных) и Трудовой кодекс (ст. 91-94: работодатель обязан под роспись ознакомить работников с документами об обработке их данных и с их правами и обязанностями). Ни закон, ни Кодекс не содержат специальной нормы о GPS.",
       },
       fonte: FONTE_CODICE_LAVORO,
     },
@@ -137,6 +140,7 @@ export const moldova: SchedaPaese = {
         sv: 'Anmälan eller registrering i förväg hos en myndighet innan installation',
         nb: 'Forhåndsmelding eller registrering hos en myndighet før installasjon',
         nl: 'Voorafgaande melding of registratie bij een autoriteit voor installatie',
+        ru: "Предварительное уведомление или регистрация в органе перед установкой",
       },
       risposta: 'no',
       dettaglio: {
@@ -150,6 +154,7 @@ export const moldova: SchedaPaese = {
         sv: 'Skyldigheten att anmäla/registrera datasystem hos CNPDCP avskaffades den 10 januari 2022 och ersattes av en konsekvensbedömning som ansvaras av den personuppgiftsansvarige.',
         nb: 'Plikten til å melde/registrere datasystemer hos CNPDCP ble avskaffet 10. januar 2022 og erstattet av en vurdering av personvernkonsekvenser som den behandlingsansvarlige foretar.',
         nl: 'De verplichting om gegevenssystemen bij het CNPDCP te melden/registreren is op 10 januari 2022 afgeschaft en vervangen door een effectbeoordeling die door de verwerkingsverantwoordelijke wordt uitgevoerd.',
+        ru: "Обязанность уведомлять CNPDCP о системах данных или регистрировать их отменена с 10 января 2022 г. и заменена оценкой воздействия, которую проводит оператор.",
       },
       fonte: FONTE_DLA_PIPER,
     },
@@ -165,6 +170,7 @@ export const moldova: SchedaPaese = {
         sv: 'Grund = samtycke eller berättigat intresse',
         nb: 'Grunnlag = samtykke eller berettiget interesse',
         nl: 'Grondslag = toestemming of gerechtvaardigd belang',
+        ru: "Основание: согласие или законный интерес",
       },
       risposta: 'si',
       dettaglio: {
@@ -178,6 +184,7 @@ export const moldova: SchedaPaese = {
         sv: 'Behandlingen grundas på samtycke eller en annan grund, inklusive den personuppgiftsansvariges berättigade intresse (om inte den registrerades rättigheter väger tyngre).',
         nb: 'Behandlingen bygger på samtykke eller et annet grunnlag, herunder den behandlingsansvarliges berettigede interesse (med mindre den registrertes rettigheter går foran).',
         nl: 'De verwerking is gebaseerd op toestemming of een andere grondslag, waaronder het gerechtvaardigd belang van de verwerkingsverantwoordelijke (tenzij de rechten van de betrokkene prevaleren).',
+        ru: "Обработка основывается на согласии или ином основании, включая законный интерес оператора (если не преобладают права субъекта данных).",
       },
       fonte: FONTE_DLA_PIPER,
     },
@@ -193,6 +200,7 @@ export const moldova: SchedaPaese = {
         sv: 'Uppgiftsminimering och ändamålsbegränsning; ingen överdriven spårning utanför arbetstid',
         nb: 'Minimering og formålsbegrensning; ingen overdreven sporing utenfor arbeidstid',
         nl: 'Minimalisatie en doelbinding; geen overmatige tracking buiten werktijd',
+        ru: "Минимизация и ограничение цели; никакого чрезмерного отслеживания вне рабочего времени",
       },
       risposta: 'si',
       dettaglio: {
@@ -206,6 +214,7 @@ export const moldova: SchedaPaese = {
         sv: 'Principerna om ändamålsbegränsning och uppgiftsminimering gäller (art. 5.1 b-c i lag 195/2024): uppgifterna ska begränsas till vad som är nödvändigt för det angivna ändamålet. Ständig GPS-spårning eller spårning utanför arbetstid håller sig sannolikt inte inom den gränsen.',
         nb: 'Prinsippene om formålsbegrensning og dataminimering gjelder (art. 5 nr. 1 bokstav b-c i lov 195/2024): dataene skal være begrenset til det som er nødvendig for det oppgitte formålet. Kontinuerlig GPS-sporing eller sporing utenfor arbeidstid holder seg neppe innenfor denne grensen.',
         nl: 'De beginselen van doelbinding en dataminimalisatie zijn van toepassing (art. 5(1)(b)-(c) van wet 195/2024): gegevens moeten beperkt blijven tot wat nodig is voor het vermelde doel. Continue gps-tracking of tracking buiten werktijd blijft moeilijk binnen die grens.',
+        ru: "Действуют принципы ограничения цели и минимизации данных (ст. 5(1)(b)-(c) закона 195/2024): данные должны ограничиваться тем, что необходимо для заявленной цели. Непрерывное GPS-отслеживание или отслеживание вне рабочего времени вряд ли останется в этих пределах.",
       },
       fonte: FONTE_DLA_PIPER,
     },
@@ -221,6 +230,7 @@ export const moldova: SchedaPaese = {
         sv: 'Konsekvensbedömning (DPIA)',
         nb: 'Vurdering av personvernkonsekvenser (DPIA)',
         nl: 'Effectbeoordeling (DPIA)',
+        ru: "Оценка воздействия (DPIA)",
       },
       risposta: 'si',
       dettaglio: {
@@ -234,6 +244,7 @@ export const moldova: SchedaPaese = {
         sv: "Innan behandlingen påbörjas ska den personuppgiftsansvarige genomföra en konsekvensbedömning (art. 35 i lag 195/2024; sedan 2022 har den ersatt registreringen). CNPDCP:s lista (order 27/2022, ändrad från och med den 23 augusti 2026) kräver den när minst två kriterier är uppfyllda: GPS på arbetstagare uppfyller två (systematisk övervakning; anställda i förhållande till arbetsgivaren). Behandlingen, ändamålet och ett eventuellt berättigat intresse ska beskrivas.",
         nb: 'Før oppstart må den behandlingsansvarlige gjennomføre en vurdering av personvernkonsekvenser (art. 35 i lov 195/2024; siden 2022 har den avløst registreringen). CNPDCPs liste (ordre 27/2022, endret fra 23. august 2026) krever den når minst to kriterier er oppfylt: GPS på ansatte oppfyller to (systematisk overvåking; ansatte i forhold til arbeidsgiveren). Den skal beskrive behandlingen, formålet og en eventuell berettiget interesse.',
         nl: 'Voor aanvang moet de verwerkingsverantwoordelijke een effectbeoordeling uitvoeren (art. 35 van wet 195/2024; sinds 2022 vervangt zij de registratie). De lijst van het CNPDCP (bevel 27/2022, gewijzigd vanaf 23 augustus 2026) eist haar als minstens twee criteria gelden: gps bij werknemers voldoet aan twee (systematische monitoring; werknemers tegenover de werkgever). Beschrijf de verwerking, het doel en zo nodig het gerechtvaardigd belang.',
+        ru: "Перед началом обработки оператор должен провести оценку воздействия (ст. 35 закона 195/2024; с 2022 г. она заменила регистрацию). Перечень CNPDCP (приказ 27/2022, изменённый с 23 августа 2026 г.) требует её при наличии не менее двух критериев: GPS-слежение за работниками отвечает двум (систематический мониторинг; работники по отношению к работодателю). Необходимо описать обработку, цель и возможный законный интерес.",
       },
       fonte: FONTE_LISTA_DPIA,
     },
@@ -253,6 +264,7 @@ export const moldova: SchedaPaese = {
         sv: 'Fastställ en giltig rättslig grund (samtycke eller berättigat intresse).',
         nb: 'Finn et gyldig rettslig grunnlag (samtykke eller berettiget interesse).',
         nl: 'Bepaal een geldige rechtsgrondslag (toestemming of gerechtvaardigd belang).',
+        ru: "Определите действительное правовое основание (согласие или законный интерес).",
       },
     },
     {
@@ -268,6 +280,7 @@ export const moldova: SchedaPaese = {
         sv: 'Informera arbetstagarna om vilka uppgifter som samlas in och vem som har åtkomst till dem.',
         nb: 'Informer de ansatte om hvilke data som samles inn, og hvem som har tilgang til dem.',
         nl: 'Informeer werknemers over welke gegevens worden verzameld en wie er toegang toe heeft.',
+        ru: "Информируйте работников о том, какие данные собираются и кто имеет к ним доступ.",
       },
     },
     {
@@ -283,6 +296,7 @@ export const moldova: SchedaPaese = {
         sv: 'Genomför konsekvensbedömningen (DPIA) innan du aktiverar systemet.',
         nb: 'Gjennomfør vurderingen av personvernkonsekvenser (DPIA) før du aktiverer systemet.',
         nl: 'Voer de effectbeoordeling (DPIA) uit voordat u het systeem activeert.',
+        ru: "Проведите оценку воздействия (DPIA) до запуска системы.",
       },
     },
     {
@@ -298,6 +312,7 @@ export const moldova: SchedaPaese = {
         sv: 'Tillämpa uppgiftsminimering och ändamålsbegränsning.',
         nb: 'Bruk dataminimering og formålsbegrensning.',
         nl: 'Pas dataminimalisatie en doelbinding toe.',
+        ru: "Применяйте минимизацию данных и ограничение цели.",
       },
     },
     {
@@ -313,6 +328,7 @@ export const moldova: SchedaPaese = {
         sv: 'Konfigurera systemet: ingen ständig spårning eller spårning utanför arbetstid.',
         nb: 'Sett opp systemet: ingen kontinuerlig sporing eller sporing utenfor arbeidstid.',
         nl: 'Configureer het systeem: geen continue tracking of tracking buiten werktijd.',
+        ru: "Настройте систему: никакого непрерывного отслеживания и отслеживания вне рабочего времени.",
       },
     },
     {
@@ -328,6 +344,7 @@ export const moldova: SchedaPaese = {
         sv: 'Om du byter system eller övervakningsprogram ska du uppdatera och lämna ut integritetsinformationen på nytt och kontrollera om du på nytt måste informera eller höra de anställdas företrädare, där lagen kräver det. Ofta ändras leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och metoderna: den information som lämnades tidigare räcker inte.',
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og dele ut personverninformasjonen på nytt og vurdere om du på nytt må informere eller høre de ansattes representanter, der loven krever det. Ofte endrer leverandøren (databehandleren), de innsamlede opplysningene og metodene seg: informasjonen som ble delt ut tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        ru: "Если вы меняете систему или программу мониторинга, обновите и повторно вручите уведомление об обработке данных и проверьте, нужно ли снова информировать представителей работников или консультироваться с ними, где этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее врученного уведомления недостаточно.",
       },
     },
   ],
@@ -355,6 +372,7 @@ export const moldova: SchedaPaese = {
       sv: 'upp till 2 000 000 MDL (cirka 100 000 euro) eller 2 % av omsättningen, beroende på vilket som är högst (lag 195/2024, i kraft sedan den 23 augusti 2026)',
       nb: 'opptil 2 000 000 MDL (ca. 100 000 euro) eller 2 % av omsetningen, hvis det er høyere (lov 195/2024, i kraft siden 23. august 2026)',
       nl: 'tot 2.000.000 MDL (ongeveer 100.000 EUR) of 2% van de omzet, als dat hoger is (wet 195/2024, van kracht sinds 23 augustus 2026)',
+      ru: "до 2 000 000 MDL (около 100 000 евро) или 2% оборота, в зависимости от того, что больше (закон 195/2024, действует с 23 августа 2026 г.)",
     },
     casoCitato: {
       it: "Non risulta una decisione del CNPDCP specifica pubblicata sul GPS sui dipendenti. La legge 195/2024, applicabile dal 23 agosto 2026 al posto della 133/2011, recepisce il GDPR ma con un proprio impianto sanzionatorio (art. 88): fino a 1.000.000 MDL o l'1% del fatturato per le violazioni meno gravi e fino a 2.000.000 MDL o il 2% per quelle più gravi, vale l'importo più alto. Nel primo anno si applica il 10% della multa, nel secondo il 40%, dal terzo il 100% (art. 90(4)). Non valgono quindi i massimali europei da 20 milioni di euro.",
@@ -367,6 +385,7 @@ export const moldova: SchedaPaese = {
       sv: 'Det finns inget publicerat särskilt beslut från CNPDCP om GPS på anställda. Lag 195/2024, tillämplig från och med den 23 augusti 2026 i stället för lag 133/2011, genomför GDPR men med ett eget sanktionssystem (art. 88): upp till 1 000 000 MDL eller 1 % av omsättningen för mindre allvarliga överträdelser och upp till 2 000 000 MDL eller 2 % för de allvarligare, det högsta beloppet gäller. Under det första året tillämpas 10 % av böterna, under det andra 40 %, från det tredje 100 % (art. 90.4). De europeiska taken på 20 miljoner euro gäller därför inte.',
       nb: 'Det er ikke kjent noe spesifikt offentliggjort vedtak fra CNPDCP om GPS på ansatte. Lov 195/2024, som har vært anvendt siden 23. august 2026 i stedet for lov 133/2011, gjennomfører GDPR, men med sin egen sanksjonsordning (art. 88): opptil 1 000 000 MDL eller 1 % av omsetningen for de mindre alvorlige overtredelsene og opptil 2 000 000 MDL eller 2 % for de mer alvorlige, der det høyeste beløpet gjelder. Det første året anvendes 10 % av boten, det andre 40 %, fra det tredje 100 % (art. 90 nr. 4). De europeiske takene på 20 millioner euro gjelder derfor ikke.',
       nl: 'Er is geen specifiek gepubliceerd CNPDCP-besluit over gps bij werknemers. Wet 195/2024, sinds 23 augustus 2026 van toepassing in plaats van wet 133/2011, zet de AVG om maar met een eigen sanctiestelsel (art. 88): tot 1.000.000 MDL of 1% van de omzet voor lichtere inbreuken en tot 2.000.000 MDL of 2% voor de zwaardere, het hoogste bedrag geldt. In het eerste jaar geldt 10% van de boete, in het tweede 40%, vanaf het derde 100% (art. 90(4)). De Europese plafonds van 20 miljoen euro gelden hier dus niet.',
+      ru: "Конкретного опубликованного решения CNPDCP по GPS-слежению за работниками нет. Закон 195/2024, применяемый с 23 августа 2026 г. вместо закона 133/2011, транспонирует GDPR, но имеет собственную систему санкций (ст. 88): до 1 000 000 MDL или 1% оборота за менее тяжкие нарушения и до 2 000 000 MDL или 2% за более тяжкие, применяется большая сумма. В первый год применяется 10% штрафа, во второй 40%, с третьего года 100% (ст. 90(4)). Поэтому европейские максимумы в 20 млн евро не действуют.",
     },
     urlFonte: FONTE_DLA_PIPER.url,
     tipoImporto: 'massimale',

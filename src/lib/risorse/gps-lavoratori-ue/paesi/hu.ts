@@ -94,6 +94,7 @@ export const ungheria: SchedaPaese = {
       sv: 'Ungern har en enda nationell myndighet, NAIH; det finns ingen regional uppdelning.',
       nb: 'Ungarn har én nasjonal myndighet, NAIH; det finnes ingen regional inndeling.',
       nl: 'Hongarije heeft één nationale autoriteit, de NAIH; er is geen regionale verdeling.',
+      ru: "В Венгрии действует единый национальный орган, NAIH; региональных подразделений нет.",
     },
   },
 
@@ -110,6 +111,7 @@ export const ungheria: SchedaPaese = {
         sv: 'Skriftlig information i förväg till arbetstagarna om övervakningen och de tekniska medlen (arbetslagen art. 11/A)',
         nb: 'Skriftlig forhåndsinformasjon til arbeidstakerne om overvåkingen og de tekniske midlene (arbeidsloven art. 11/A)',
         nl: 'Voorafgaande schriftelijke informatie aan werknemers over de monitoring en de technische middelen (Arbeidswetboek art. 11/A)',
+        ru: "Предварительное письменное информирование работников о мониторинге и технических средствах (Трудовой кодекс, ст. 11/A)",
       },
       risposta: 'si',
       dettaglio: {
@@ -123,6 +125,7 @@ export const ungheria: SchedaPaese = {
         sv: 'Arbetstagaren får endast kontrolleras för handlingar som har samband med anställningsförhållandet; arbetsgivaren får använda tekniska medel, men måste informera arbetstagaren i förväg och skriftligen.',
         nb: 'Arbeidstakeren kan bare kontrolleres for handlinger som har sammenheng med arbeidsforholdet; arbeidsgiveren kan bruke tekniske midler, men må informere arbeidstakeren på forhånd og skriftlig.',
         nl: 'De werknemer mag alleen worden gecontroleerd voor gedragingen die verband houden met de arbeidsrelatie; de werkgever mag technische middelen gebruiken, maar moet hem vooraf en schriftelijk informeren.',
+        ru: "Контролировать работника можно только в отношении поведения, связанного с трудовыми отношениями; работодатель может использовать технические средства, но обязан заранее и письменно проинформировать работника.",
       },
       fonte: FONTE_MT_11A,
     },
@@ -138,6 +141,7 @@ export const ungheria: SchedaPaese = {
         sv: 'Övervakningen gäller endast handlingar som har samband med anställningsförhållandet; inskränkningar i personlighetsrättigheterna endast när det är strikt nödvändigt och proportionerligt (art. 11/A och art. 9)',
         nb: 'Overvåkingen gjelder bare handlinger som har sammenheng med arbeidsforholdet; begrensninger i personlighetsrettighetene bare når det er strengt nødvendig og forholdsmessig (art. 11/A og art. 9)',
         nl: 'De monitoring betreft alleen gedragingen die verband houden met de arbeidsrelatie; beperkingen van persoonlijkheidsrechten alleen als ze strikt noodzakelijk en evenredig zijn (art. 11/A en art. 9)',
+        ru: "Мониторинг касается только поведения, связанного с трудовыми отношениями; ограничения личных прав допускаются лишь при строгой необходимости и соразмерности (ст. 11/A и ст. 9)",
       },
       risposta: 'si',
       dettaglio: {
@@ -151,6 +155,7 @@ export const ungheria: SchedaPaese = {
         sv: 'Arbetstagaren får endast kontrolleras inom ramen för handlingar som har samband med anställningsförhållandet (art. 11/A st. 1). En inskränkning av hens personlighetsrättigheter är endast tillåten om den är strikt nödvändig av ett skäl som direkt hänger samman med anställningsförhållandets syfte och är proportionerlig; arbetsgivaren ska i förväg och skriftligen informera arbetstagaren om tillvägagångssätt, villkor och förväntad varaktighet samt om de omständigheter som visar nödvändighet och proportionalitet (art. 9 st. 2). På it-enheter som arbetsgivaren tillhandahåller får arbetsgivaren endast titta på arbetsrelaterade uppgifter (art. 11/A st. 3).',
         nb: 'Arbeidstakeren kan bare kontrolleres innenfor rammen av handlinger som har sammenheng med arbeidsforholdet (art. 11/A nr. 1). En begrensning av vedkommendes personlighetsrettigheter er bare tillatt hvis den er strengt nødvendig av en grunn som er direkte knyttet til arbeidsforholdets formål og er forholdsmessig; arbeidsgiveren må på forhånd og skriftlig informere arbeidstakeren om fremgangsmåte, vilkår og forventet varighet, og om omstendighetene som viser nødvendighet og forholdsmessighet (art. 9 nr. 2). På IT-enheter som arbeidsgiveren stiller til rådighet, kan arbeidsgiveren bare se på arbeidsrelaterte data (art. 11/A nr. 3).',
         nl: 'De werknemer mag alleen worden gecontroleerd binnen zijn gedrag dat verband houdt met de arbeidsrelatie (art. 11/A lid 1). Een beperking van zijn persoonlijkheidsrechten is alleen toegestaan als ze strikt noodzakelijk is om een reden die rechtstreeks met het doel van de arbeidsrelatie samenhangt en evenredig is; de werkgever moet hem vooraf schriftelijk informeren over de wijze, de voorwaarden en de verwachte duur en over de omstandigheden die noodzaak en evenredigheid aantonen (art. 9 lid 2). Op door de werkgever verstrekte IT-apparatuur mag hij alleen werkgerelateerde gegevens inzien (art. 11/A lid 3).',
+        ru: "Работника можно контролировать только в рамках поведения, связанного с трудовыми отношениями (ст. 11/A ч. 1). Ограничение его личных прав допускается лишь при строгой необходимости по причине, непосредственно связанной с целью трудовых отношений, и при соразмерности; работодатель обязан заранее и письменно проинформировать его о способах, условиях и предполагаемой продолжительности, а также об обстоятельствах, подтверждающих необходимость и соразмерность (ст. 9 ч. 2). На информационных устройствах, предоставленных работодателем, он может просматривать только данные, связанные с работой (ст. 11/A ч. 3).",
       },
       fonte: FONTE_MT_11A,
     },
@@ -166,6 +171,7 @@ export const ungheria: SchedaPaese = {
         sv: 'Förhandstillstånd från en myndighet innan installation',
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit vóór installatie',
+        ru: "Предварительное разрешение органа перед установкой",
       },
       risposta: 'no',
       dettaglio: {
@@ -179,6 +185,7 @@ export const ungheria: SchedaPaese = {
         sv: 'Något förhandstillstånd från NAIH krävs inte; arbetsgivaren bedömer själv rättslig grund och proportionalitet före införandet.',
         nb: 'Det kreves ingen forhåndstillatelse fra NAIH; arbeidsgiveren vurderer selv rettslig grunnlag og forholdsmessighet før innføringen.',
         nl: 'Er is geen voorafgaande toestemming van de NAIH vereist; de werkgever beoordeelt zelf de rechtsgrondslag en de evenredigheid vóór de invoering.',
+        ru: "Предварительное разрешение NAIH не требуется; работодатель сам оценивает правовое основание и соразмерность до внедрения.",
       },
       fonte: FONTE_GDPR,
     },
@@ -194,6 +201,7 @@ export const ungheria: SchedaPaese = {
         sv: 'Grund = berättigat intresse med ett dokumenterat intresseavvägningstest; GPS endast under arbetstid, inte utanför arbetstid, med möjlighet att avstå',
         nb: 'Grunnlag = berettiget interesse med en dokumentert interesseavveining; GPS bare i arbeidstiden, ikke utenfor arbeidstid, med mulighet til å velge bort',
         nl: 'Grondslag = gerechtvaardigd belang met een gedocumenteerde belangenafweging; GPS alleen tijdens werktijd, niet buiten diensttijd, met opt-out',
+        ru: "Основание: законный интерес с документированным тестом баланса интересов; GPS только в рабочее время, не вне его, с возможностью отказа",
       },
       risposta: 'si',
       dettaglio: {
@@ -207,6 +215,7 @@ export const ungheria: SchedaPaese = {
         sv: "Grunden är berättigat intresse, inte samtycke; arbetsgivaren måste först genomföra intresseavvägningstestet. Enligt NAIH lokaliserar GPS fordonet för arbetets skull, den följer inte arbetstagaren: endast under arbetstid, ingen kontroll utanför arbetstid, och arbetstagaren måste kunna stänga av den.",
         nb: 'Grunnlaget er berettiget interesse, ikke samtykke; arbeidsgiveren må først gjennomføre interesseavveiningen. Ifølge NAIH lokaliserer GPS kjøretøyet for arbeidets skyld, den følger ikke arbeidstakeren: bare i arbeidstiden, ingen kontroll utenfor arbeidstid, og arbeidstakeren må kunne slå den av.',
         nl: 'De grondslag is het gerechtvaardigd belang, niet de toestemming; de werkgever moet eerst de belangenafweging uitvoeren. Voor de NAIH lokaliseert het GPS het voertuig voor het werk, het volgt de werknemer niet: alleen tijdens werktijd, geen controle buiten diensttijd, en de werknemer moet het kunnen uitschakelen.',
+        ru: "Основанием служит законный интерес, а не согласие; работодатель должен сначала провести тест баланса интересов. По позиции NAIH GPS определяет местоположение транспортного средства для работы, а не следит за работником: только в рабочее время, никакого контроля вне рабочего времени, и работник должен иметь возможность его отключить.",
       },
       fonte: FONTE_NAIH_GUIDA,
     },
@@ -222,6 +231,7 @@ export const ungheria: SchedaPaese = {
         sv: "Konsekvensbedömning (DPIA) för övervakning av arbetstagarnas position och verksamhet (NAIH:s lista)",
         nb: 'Personvernkonsekvensvurdering (DPIA) for overvåking av arbeidstakernes posisjon og aktivitet (NAIHs liste)',
         nl: 'Gegevensbeschermingseffectbeoordeling (DPIA) voor de monitoring van de locatie en de activiteit van werknemers (NAIH-lijst)',
+        ru: "Оценка воздействия (DPIA) для мониторинга местоположения и деятельности работников (перечень NAIH)",
       },
       risposta: 'si',
       dettaglio: {
@@ -235,6 +245,7 @@ export const ungheria: SchedaPaese = {
         sv: "NAIH:s lista omfattar övervakning av de anställdas arbete och behandling av positionsuppgifter som innebär systematisk övervakning bland de fall som kräver en konsekvensbedömning.",
         nb: 'NAIHs liste tar med overvåking av de ansattes arbeid og behandling av posisjonsdata som innebærer systematisk overvåking blant tilfellene som krever en personvernkonsekvensvurdering.',
         nl: 'De NAIH-lijst omvat de monitoring van het werk van werknemers en de verwerking van locatiegegevens die op systematische monitoring wijst onder de gevallen die een effectbeoordeling vereisen.',
+        ru: "Перечень NAIH включает мониторинг работы сотрудников и обработку данных о местоположении, указывающую на систематический мониторинг, среди случаев, требующих оценки воздействия.",
       },
       fonte: FONTE_NAIH_DPIA,
     },
@@ -254,6 +265,7 @@ export const ungheria: SchedaPaese = {
         sv: 'Genomför intresseavvägningstestet för det berättigade intresset före införandet.',
         nb: 'Gjennomfør interesseavveiningen for den berettigede interessen før innføringen.',
         nl: 'Voer vóór de invoering de belangenafweging van het gerechtvaardigd belang uit.',
+        ru: "Проведите тест баланса интересов при законном интересе до внедрения.",
       },
     },
     {
@@ -269,6 +281,7 @@ export const ungheria: SchedaPaese = {
         sv: 'Informera arbetstagarna skriftligen och i förväg om övervakningen och de tekniska medlen (art. 11/A + art. 13 GDPR).',
         nb: 'Informer arbeidstakerne skriftlig og på forhånd om overvåkingen og de tekniske midlene (art. 11/A + art. 13 GDPR).',
         nl: 'Informeer de werknemers schriftelijk en vooraf over de monitoring en de technische middelen (art. 11/A + art. 13 AVG).',
+        ru: "Письменно и заранее проинформируйте работников о мониторинге и технических средствах (ст. 11/A + ст. 13 GDPR).",
       },
     },
     {
@@ -284,6 +297,7 @@ export const ungheria: SchedaPaese = {
         sv: 'Genomför konsekvensbedömningen (DPIA) för övervakning av arbetstagarnas position.',
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) for overvåking av arbeidstakernes posisjon.',
         nl: 'Voer de gegevensbeschermingseffectbeoordeling (DPIA) uit voor de monitoring van de locatie van werknemers.',
+        ru: "Проведите оценку воздействия (DPIA) для мониторинга местоположения работников.",
       },
     },
     {
@@ -299,6 +313,7 @@ export const ungheria: SchedaPaese = {
         sv: "Begränsa GPS till att lokalisera fordonet för arbetets skull: endast under arbetstid, ingen kontroll utanför arbetstid.",
         nb: 'Begrens GPS til å lokalisere kjøretøyet for arbeidets skyld: bare i arbeidstiden, ingen kontroll utenfor arbeidstid.',
         nl: 'Beperk het GPS tot het lokaliseren van het voertuig voor het werk: alleen tijdens werktijd, geen controle buiten diensttijd.',
+        ru: "Ограничьте GPS определением местоположения автомобиля для работы: только в рабочее время, без контроля вне рабочего времени.",
       },
     },
     {
@@ -314,6 +329,7 @@ export const ungheria: SchedaPaese = {
         sv: "Ge möjlighet att avstå så att GPS kan stängas av när fordonet står hos arbetstagaren utanför arbetstid.",
         nb: 'Gi mulighet til å velge bort, slik at GPS kan slås av når kjøretøyet blir hos arbeidstakeren utenfor arbeidstid.',
         nl: 'Voorzie een opt-out om het GPS uit te schakelen wanneer het voertuig buiten diensttijd bij de werknemer blijft.',
+        ru: "Предусмотрите возможность отключить GPS (opt-out), когда автомобиль остаётся у работника вне рабочего времени.",
       },
     },
     {
@@ -329,6 +345,7 @@ export const ungheria: SchedaPaese = {
         sv: 'Om du byter system eller övervakningsprogram ska du uppdatera och lämna ut integritetsinformationen på nytt och kontrollera om du på nytt måste informera eller höra de anställdas företrädare, där lagen kräver det. Ofta ändras leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och metoderna: den information som lämnades tidigare räcker inte.',
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og dele ut personverninformasjonen på nytt, og kontrollere om du på nytt må informere eller rådføre deg med arbeidstakernes representanter, der loven krever det. Ofte endres leverandøren (databehandleren), de innsamlede dataene og fremgangsmåtene: informasjonen som ble delt ut tidligere er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        ru: "Если вы меняете систему или программу мониторинга, обновите и повторно вручите уведомление о защите данных и проверьте, нужно ли снова информировать представителей работников или проводить с ними консультации, если это предусмотрено законом. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее врученного уведомления недостаточно.",
       },
     },
   ],
@@ -356,6 +373,7 @@ export const ungheria: SchedaPaese = {
       sv: '15 000 000 HUF (cirka 37 500 euro)',
       nb: '15 000 000 HUF (ca. 37 500 euro)',
       nl: '15.000.000 HUF (ongeveer 37.500 euro)',
+      ru: "15 000 000 HUF (около 37 500 евро)",
     },
     casoCitato: {
       it: "NAIH contro Auchan Magyarország (gennaio 2018, caso NAIH/2018/412/2/H): videosorveglianza sul luogo di lavoro senza una base giuridica adeguata, informazione carente ai lavoratori e violazione della limitazione della finalità. Multa 15.000.000 HUF (circa 37.500 euro). Non è un caso di GPS, ma è la sanzione più importante del NAIH sul monitoraggio dei dipendenti.",
@@ -368,6 +386,7 @@ export const ungheria: SchedaPaese = {
       sv: "NAIH mot Auchan Magyarország (januari 2018, ärende NAIH/2018/412/2/H): kameraövervakning på arbetsplatsen utan en tillräcklig rättslig grund, bristfällig information till arbetstagarna och brott mot principen om ändamålsbegränsning. Böter på 15 000 000 HUF (cirka 37 500 euro). Det är inte ett GPS-fall, men det är NAIH:s viktigaste sanktion när det gäller övervakning av anställda.",
       nb: 'NAIH mot Auchan Magyarország (januar 2018, sak NAIH/2018/412/2/H): kameraovervåking på arbeidsplassen uten tilstrekkelig rettslig grunnlag, mangelfull informasjon til arbeidstakerne og brudd på prinsippet om formålsbegrensning. Bot på 15 000 000 HUF (ca. 37 500 euro). Dette er ikke en GPS-sak, men det er NAIHs viktigste sanksjon når det gjelder overvåking av ansatte.',
       nl: 'NAIH tegen Auchan Magyarorszag (januari 2018, zaak NAIH/2018/412/2/H): videobewaking op de werkplek zonder een adequate rechtsgrondslag, gebrekkige informatie aan werknemers en schending van de doelbinding. Boete 15.000.000 HUF. Het is geen GPS-zaak, maar het is de referentiesanctie van de NAIH inzake de monitoring van werknemers.',
+      ru: "NAIH против Auchan Magyarország (январь 2018 г., дело NAIH/2018/412/2/H): видеонаблюдение на рабочем месте без надлежащего правового основания, недостаточное информирование работников и нарушение принципа ограничения цели. Штраф 15 000 000 HUF (около 37 500 евро). Это не дело о GPS, но это самое значимое взыскание NAIH за мониторинг работников.",
     },
     urlFonte: FONTE_NAIH_AUCHAN.url,
     tipoImporto: 'caso-affine',

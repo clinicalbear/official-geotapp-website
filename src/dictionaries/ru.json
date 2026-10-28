@@ -681,6 +681,8 @@
       },
       "cta_title": "Дайте своим техникам правильный инструмент.",
       "cta_button": "Смотреть цены",
+      "screenshot_dashboard_alt": "GeoTapp TimeTracker - Панель",
+      "screenshot_menu_alt": "GeoTapp TimeTracker - Меню",
       "modal": {
         "status": "СТАТУС СИСТЕМЫ: <span class=\"text-green-600\">РАБОТАЕТ</span>",
         "encryption": "ДАННЫЕ: <span class=\"text-slate-400\">ЗАЩИЩЕНЫ</span>",

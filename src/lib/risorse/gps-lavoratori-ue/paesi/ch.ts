@@ -98,6 +98,7 @@ export const svizzera: SchedaPaese = {
       sv: 'Schweiz står utanför EU. För privata arbetsgivare är den behöriga myndigheten den federala myndigheten (PFPDT/FDPIC); de kantonala myndigheterna omfattar kantonala offentliga organ.',
       nb: 'Sveits ligger utenfor EU. For private arbeidsgivere er det den føderale myndigheten (FDPIC) som er kompetent; de kantonale myndighetene dekker de offentlige kantonale organene.',
       nl: 'Zwitserland ligt buiten de EU. Voor particuliere werkgevers is de federale autoriteit (FDPIC/PFPDT) bevoegd; de kantonale autoriteiten dekken de kantonale openbare instanties.',
+      ru: "Швейцария не входит в ЕС. Для частных работодателей компетентен федеральный орган (IFPDT/FDPIC); кантональные органы контролируют кантональные публичные учреждения.",
     },
   },
 
@@ -114,6 +115,7 @@ export const svizzera: SchedaPaese = {
         sv: 'Förbud mot system som är avsedda att övervaka de anställdas beteende (OLT 3, art. 26)',
         nb: 'Forbud mot systemer som er ment å overvåke de ansattes atferd (OLT 3, art. 26)',
         nl: 'Verbod op systemen die bedoeld zijn om het gedrag van werknemers te bewaken (ArGV 3, art. 26)',
+        ru: "Запрет систем, предназначенных для наблюдения за поведением работников (OLT 3, ст. 26)",
       },
       risposta: 'si',
       dettaglio: {
@@ -127,6 +129,7 @@ export const svizzera: SchedaPaese = {
         sv: 'En central schweizisk regel, strängare än GDPR: det är förbjudet att använda system som är avsedda att övervaka de anställdas beteende på arbetsplatsen. Om de behövs av andra skäl (säkerhet, produktion, organisation) ska de utformas så att de inte skadar hälsan och rörelsefriheten, och ett system är förbjudet om det enbart eller huvudsakligen syftar till att övervaka beteende.',
         nb: 'En grunnleggende sveitsisk regel, strengere enn GDPR: det er forbudt å bruke systemer som er ment å overvåke de ansattes atferd på arbeidsplassen. Hvis de er nødvendige av andre grunner (sikkerhet, produksjon, organisering), må de utformes slik at de ikke skader helsen og bevegelsesfriheten, og et system er forbudt hvis det utelukkende eller i det vesentlige tar sikte på å overvåke atferden.',
         nl: 'Een centrale Zwitserse regel, strenger dan de AVG: het is verboden systemen te gebruiken die bedoeld zijn om het gedrag van werknemers op de werkplek te bewaken. Als ze om andere redenen nodig zijn (veiligheid, productie, organisatie), moeten ze zo zijn ontworpen dat ze de gezondheid en de bewegingsvrijheid niet schaden, en een systeem is verboden als het uitsluitend of in wezen gericht is op het bewaken van gedrag.',
+        ru: "Основное правило Швейцарии, более строгое, чем GDPR: запрещено использовать системы, предназначенные для наблюдения за поведением работников на рабочем месте. Если такие системы нужны по другим причинам (безопасность, производство, организация труда), их следует построить так, чтобы они не вредили здоровью и не ограничивали свободу передвижения; система запрещена, если она нацелена исключительно или преимущественно на наблюдение за поведением.",
       },
       fonte: FONTE_FDPIC_SORVEGLIANZA,
     },
@@ -142,6 +145,7 @@ export const svizzera: SchedaPaese = {
         sv: 'Behandling av uppgifter endast om den rör lämplighet för arbetet eller är nödvändig för avtalet (CO art. 328b)',
         nb: 'Behandling av opplysninger bare hvis den gjelder egnethet for jobben eller er nødvendig for avtalen (CO art. 328b)',
         nl: 'Gegevensverwerking alleen als die de geschiktheid voor het werk betreft of noodzakelijk is voor het contract (OR art. 328b)',
+        ru: "Обработка данных допускается, только если она связана с пригодностью к работе или необходима для исполнения договора (CO ст. 328b)",
       },
       risposta: 'si',
       dettaglio: {
@@ -155,6 +159,7 @@ export const svizzera: SchedaPaese = {
         sv: 'Arbetsgivaren får behandla den anställdes uppgifter endast om de rör lämpligheten för anställningen eller är nödvändiga för att fullgöra avtalet, med iakttagande av tro och heder samt proportionalitet.',
         nb: 'Arbeidsgiveren kan bare behandle den ansattes opplysninger hvis de gjelder vedkommendes egnethet for stillingen eller er nødvendige for oppfyllelsen av avtalen, under iakttakelse av god tro og forholdsmessighet.',
         nl: 'De werkgever mag de gegevens van de werknemer alleen verwerken als die betrekking hebben op zijn geschiktheid voor de baan of noodzakelijk zijn voor de uitvoering van het contract, met inachtneming van goede trouw en evenredigheid.',
+        ru: "Работодатель может обрабатывать данные работника, только если они касаются его пригодности к работе или необходимы для исполнения договора, при соблюдении добросовестности и пропорциональности.",
       },
       fonte: FONTE_FDPIC_DATORE,
     },
@@ -170,6 +175,7 @@ export const svizzera: SchedaPaese = {
         sv: 'Förhandstillstånd från en myndighet före installationen',
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit voordat u installeert',
+        ru: "Предварительное разрешение органа перед установкой",
       },
       risposta: 'no',
       dettaglio: {
@@ -183,6 +189,7 @@ export const svizzera: SchedaPaese = {
         sv: 'Inget förhandstillstånd från PFPDT/FDPIC behövs; arbetsgivaren bedömer själv lagligheten och proportionaliteten.',
         nb: 'Det kreves ingen forhåndstillatelse fra FDPIC; arbeidsgiveren vurderer selv lovligheten og forholdsmessigheten.',
         nl: 'Een voorafgaande toestemming van de FDPIC/PFPDT is niet nodig; de werkgever beoordeelt zelf de rechtmatigheid en de evenredigheid.',
+        ru: "Предварительное разрешение IFPDT не требуется; законность и пропорциональность работодатель оценивает самостоятельно.",
       },
       fonte: FONTE_FDPIC_SORVEGLIANZA,
     },
@@ -198,6 +205,7 @@ export const svizzera: SchedaPaese = {
         sv: 'Förhandsinformation till de anställda; ingen permanent övervakning av beteende',
         nb: 'Forhåndsinformasjon til de ansatte; ingen permanent overvåking av atferd',
         nl: 'Voorafgaande informatie van de werknemers; geen permanente bewaking van het gedrag',
+        ru: "Предварительное информирование работников; постоянное наблюдение за поведением не допускается",
       },
       risposta: 'si',
       dettaglio: {
@@ -211,6 +219,7 @@ export const svizzera: SchedaPaese = {
         sv: 'De anställda måste informeras i förväg; löpande, periodisk eller stickprovsbaserad övervakning som syftar till att övervaka beteende är förbjuden; det proportionerliga och minst ingripande medlet ska väljas.',
         nb: 'De ansatte må informeres på forhånd; en kontinuerlig, periodisk eller stikkprøvebasert overvåking med sikte på å kontrollere atferd er forbudt; det forholdsmessige og minst inngripende middelet må velges.',
         nl: 'De werknemers moeten vooraf worden geinformeerd; een doorlopende, periodieke of steekproefsgewijze controle om het gedrag te bewaken is verboden; er moet voor het evenredige en minst ingrijpende middel worden gekozen.',
+        ru: "Работников необходимо информировать заранее; запрещено непрерывное, периодическое или выборочное наблюдение, направленное на контроль поведения; следует выбирать соразмерное и наименее ущемляющее средство.",
       },
       fonte: FONTE_FDPIC_SORVEGLIANZA,
     },
@@ -226,6 +235,7 @@ export const svizzera: SchedaPaese = {
         sv: 'Konsekvensbedömning (DPIA, nLPD/revFADP art. 22) om behandlingen medför hög risk',
         nb: 'Personvernkonsekvensvurdering (DPIA, nLPD/revFADP art. 22) hvis behandlingen innebærer høy risiko',
         nl: 'Effectbeoordeling (DPIA, nLPD/revFADP art. 22) als de verwerking een hoog risico met zich meebrengt',
+        ru: "Оценка воздействия (AIPD, nLPD ст. 22), если обработка создаёт высокий риск",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -239,6 +249,7 @@ export const svizzera: SchedaPaese = {
         sv: 'nLPD/revFADP kräver en konsekvensbedömning endast när behandlingen kan medföra hög risk för personlighet eller grundläggande rättigheter (art. 22.1). Lagen ger som exempel storskalig behandling av känsliga uppgifter och systematisk övervakning av stora offentliga områden (stycke 2): GPS på anställda nämns inte, så det måste bedömas från fall till fall. Om en hög risk kvarstår efter riskreducering ska FDPIC höras (art. 23).',
         nb: 'nLPD/revFADP krever bare en personvernkonsekvensvurdering når behandlingen kan innebære høy risiko for personlighetsrettigheter eller grunnleggende rettigheter (art. 22 nr. 1). Loven nevner som eksempler behandling av sensitive opplysninger i stor skala og systematisk overvåking av store offentlige områder (nr. 2): GPS på ansatte er ikke nevnt, så det må vurderes fra sak til sak. Hvis høy risiko fortsatt foreligger etter avbøtende tiltak, må FDPIC høres (art. 23).',
         nl: 'De nLPD/revFADP vereist alleen een effectbeoordeling wanneer de verwerking een hoog risico kan inhouden voor de persoonlijkheid of de grondrechten (art. 22, lid 1). De wet noemt als voorbeelden grootschalige verwerking van gevoelige gegevens en systematische bewaking van grote openbare gebieden (lid 2): gps bij werknemers wordt niet genoemd en moet per geval worden beoordeeld. Blijft er na maatregelen een hoog risico, dan moet de FDPIC worden geraadpleegd (art. 23).',
+        ru: "nLPD требует оценки воздействия, только когда обработка может создавать высокий риск для личности или основных прав (ст. 22 ч. 1). В качестве примеров закон называет обработку чувствительных данных в большом объёме и систематическое наблюдение за обширными общественными зонами (ч. 2): GPS-слежение за работниками там не упомянуто, поэтому его нужно оценивать в каждом конкретном случае. Если высокий риск сохраняется и после принятых мер, необходимо обратиться в IFPDT (ст. 23).",
       },
       fonte: FONTE_NLPD,
     },
@@ -258,6 +269,7 @@ export const svizzera: SchedaPaese = {
         sv: 'Kontrollera att systemet inte är avsett att övervaka de anställdas beteende (OLT 3 art. 26): om det är det, är det förbjudet.',
         nb: 'Kontroller at systemet ikke er ment å overvåke de ansattes atferd (OLT 3 art. 26): hvis det er tilfellet, er det forbudt.',
         nl: 'Controleer dat het systeem niet bedoeld is om het gedrag van werknemers te bewaken (ArGV 3 art. 26): als dat zo is, is het verboden.',
+        ru: "Убедитесь, что система не предназначена для наблюдения за поведением работников (OLT 3 ст. 26): если предназначена, она запрещена.",
       },
     },
     {
@@ -273,6 +285,7 @@ export const svizzera: SchedaPaese = {
         sv: 'Se till att de behandlade uppgifterna rör lämpligheten för arbetet eller är nödvändiga för avtalet (CO art. 328b).',
         nb: 'Sørg for at opplysningene som behandles, gjelder egnethet for jobben eller er nødvendige for avtalen (CO art. 328b).',
         nl: 'Zorg ervoor dat de verwerkte gegevens betrekking hebben op de geschiktheid voor het werk of noodzakelijk zijn voor het contract (OR art. 328b).',
+        ru: "Убедитесь, что обрабатываемые данные касаются пригодности к работе или необходимы для исполнения договора (CO ст. 328b).",
       },
     },
     {
@@ -288,6 +301,7 @@ export const svizzera: SchedaPaese = {
         sv: 'Informera de anställda i förväg (där övervakningen påverkar hälsan ska du också samråda med dem: OLT 3 art. 6).',
         nb: 'Informer de ansatte på forhånd (der overvåkingen påvirker helsen, må du også høre dem: OLT 3 art. 6).',
         nl: 'Informeer de werknemers vooraf (raakt de controle de gezondheid, raadpleeg hen dan ook: OLT 3 art. 6).',
+        ru: "Заранее проинформируйте работников (если наблюдение влияет на здоровье, проведите с ними консультацию: OLT 3 ст. 6).",
       },
     },
     {
@@ -303,6 +317,7 @@ export const svizzera: SchedaPaese = {
         sv: 'Genomför konsekvensbedömningen (DPIA) om behandlingen medför hög risk.',
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) hvis behandlingen innebærer høy risiko.',
         nl: 'Voer de effectbeoordeling (DPIA) uit als de verwerking een hoog risico met zich meebrengt.',
+        ru: "Проведите оценку воздействия (AIPD), если обработка создаёт высокий риск.",
       },
     },
     {
@@ -318,6 +333,7 @@ export const svizzera: SchedaPaese = {
         sv: 'Konfigurera systemet proportionerligt mot det angivna ändamålet (t.ex. ruttplanering), utan detaljerad, löpande analys av beteende.',
         nb: 'Konfigurer systemet forholdsmessig i forhold til det angitte formålet (f.eks. ruteplanlegging), uten detaljerte, kontinuerlige analyser av atferd.',
         nl: 'Configureer het systeem evenredig aan het opgegeven doel (bijv. routeplanning), zonder gedetailleerde, doorlopende analyse van het gedrag.',
+        ru: "Настройте систему соразмерно заявленной цели (например, планирование маршрутов), без подробного и непрерывного анализа поведения.",
       },
     },
     {
@@ -333,6 +349,7 @@ export const svizzera: SchedaPaese = {
         sv: 'Om du byter system: när du byter övervakningssystem eller programvara ska du uppdatera och dela ut integritetsinformationen på nytt, och kontrollera om du måste informera eller samråda med de anställdas företrädare igen, där lagen kräver det. Leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och metoderna ändras ofta: den information som lämnades tidigare räcker inte.',
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og utlevere personvernopplysningene på nytt, og undersøke om du på ny må informere eller konsultere de ansattes representanter, der loven krever det. Ofte endrer leverandøren (databehandleren), de innsamlede opplysningene og metodene seg: opplysningene som ble utlevert tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        ru: "Если вы меняете систему или программу мониторинга, обновите и повторно вручите уведомление об обработке данных и проверьте, нужно ли снова информировать представителей работников или проводить с ними консультацию, там, где этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее вручённого уведомления недостаточно.",
       },
     },
   ],
@@ -348,6 +365,7 @@ export const svizzera: SchedaPaese = {
         da: 'FDPIC',
         sv: 'FDPIC',
         nb: 'FDPIC',
+        ru: "IFPDT/FDPIC",
       },
       portale: FONTE_FDPIC_DATORE.url,
       urlFonte: FONTE_FDPIC_DATORE.url,
@@ -369,6 +387,7 @@ export const svizzera: SchedaPaese = {
       sv: 'upp till 250 000 CHF, som regel burna av den ansvariga fysiska personen (företaget är ansvarigt endast upp till 50 000 CHF, där det vore oproportionerligt att identifiera den ansvariga personen), påförda av de kantonala straffrättsliga myndigheterna',
       nb: 'opptil 250.000 CHF, som hovedregel båret av den ansvarlige fysiske personen (virksomheten hefter bare opptil 50.000 CHF, hvis det ville være uforholdsmessig å finne den ansvarlige), ilagt av de kantonale strafferettslige myndighetene',
       nl: 'tot 250.000 CHF, in de regel ten laste van de verantwoordelijke natuurlijke persoon (het bedrijf is slechts aansprakelijk tot 50.000 CHF als het identificeren van de verantwoordelijke onevenredig zou zijn), opgelegd door de kantonale strafautoriteiten',
+      ru: "до 250 000 CHF, как правило, с ответственного физического лица (компания отвечает лишь до 50 000 CHF, если установление ответственного лица несоразмерно), назначаются кантональными уголовными органами",
     },
     casoCitato: {
       it: "Tribunale federale, ATF 130 II 425: il GPS sui veicoli aziendali è ammesso solo se proporzionato, per ragioni legittime e con informazione preventiva, ed è vietato se mira unicamente o essenzialmente a sorvegliare il comportamento del lavoratore (OLT 3 art. 26, più severo del GDPR). In Svizzera le multe della nLPD (art. 60-65) arrivano a 250.000 CHF e colpiscono di regola la persona fisica responsabile; l'impresa risponde solo fino a 50.000 CHF, se individuare il responsabile è sproporzionato. Le multe riguardano violazioni dolose di obblighi precisi (per esempio non informare le persone interessate), non ogni violazione dell'OLT 3.",
@@ -381,6 +400,7 @@ export const svizzera: SchedaPaese = {
       sv: 'Federala domstolen, ATF 130 II 425: GPS på företagsfordon är tillåtet endast om det är proportionerligt, av legitima skäl och med förhandsinformation, och det är förbjudet om det enbart eller huvudsakligen syftar till att övervaka den anställdes beteende (OLT 3 art. 26, strängare än GDPR). I Schweiz uppgår böterna enligt nLPD/revFADP (art. 60–65) till 250 000 CHF och riktas som regel mot den ansvariga fysiska personen; företaget är ansvarigt endast upp till 50 000 CHF, där det vore oproportionerligt att identifiera den ansvariga personen. Böterna gäller uppsåtliga överträdelser av specifika skyldigheter (till exempel att inte informera de berörda personerna), inte varje överträdelse av OLT 3.',
       nb: 'Forbundsdomstolen, ATF 130 II 425: GPS i firmabiler er bare tillatt hvis det er forholdsmessig, av legitime grunner og med forhåndsinformasjon, og det er forbudt hvis det utelukkende eller i det vesentlige tar sikte på å overvåke den ansattes atferd (OLT 3 art. 26, strengere enn GDPR). I Sveits er bøtene etter nLPD/revFADP (art. 60-65) opptil 250.000 CHF og rammer som hovedregel den ansvarlige fysiske personen; virksomheten hefter bare opptil 50.000 CHF, hvis det ville være uforholdsmessig å finne den ansvarlige. Bøtene gjelder forsettlige brudd på bestemte plikter (for eksempel å unnlate å informere de berørte personene), ikke ethvert brudd på OLT 3.',
       nl: 'Federaal Hooggerechtshof, ATF 130 II 425: gps op bedrijfsvoertuigen is alleen toegestaan als het evenredig is, om legitieme redenen en met voorafgaande informatie, en het is verboden als het uitsluitend of in wezen gericht is op het bewaken van het gedrag van de werknemer (OLT 3 art. 26, strenger dan de AVG). In Zwitserland reiken de boetes van de nLPD/revFADP (art. 60-65) tot 250.000 CHF en treffen ze in de regel de verantwoordelijke natuurlijke persoon; het bedrijf is slechts aansprakelijk tot 50.000 CHF als het identificeren van de verantwoordelijke onevenredig zou zijn. De boetes betreffen opzettelijke schendingen van bepaalde plichten (bijv. het niet informeren van betrokkenen), niet elke schending van de OLT 3.',
+      ru: "Федеральный суд, ATF 130 II 425: GPS на служебных автомобилях допускается, только если он соразмерен, преследует законные цели и применяется при предварительном информировании; он запрещён, если нацелен исключительно или преимущественно на наблюдение за поведением работника (OLT 3 ст. 26, строже, чем GDPR). В Швейцарии штрафы по nLPD (ст. 60-65) достигают 250 000 CHF и, как правило, налагаются на ответственное физическое лицо; предприятие отвечает лишь до 50 000 CHF, если установление ответственного лица несоразмерно. Штрафы относятся к умышленным нарушениям чётко определённых обязанностей (например, неинформирование заинтересованных лиц), а не к любому нарушению OLT 3.",
     },
     urlFonte: FONTE_NLPD.url,
     tipoImporto: 'massimale',

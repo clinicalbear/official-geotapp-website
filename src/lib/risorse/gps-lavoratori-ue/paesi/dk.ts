@@ -102,6 +102,7 @@ export const danimarca: SchedaPaese = {
       sv: 'Danmark har en enda nationell myndighet, Datatilsynet. En särskild egenskap: böter påförs inte av myndigheten utan av domstolarna, efter en anmälan från Datatilsynet till polisen.',
       nb: 'Danmark har én nasjonal myndighet, Datatilsynet. En særegenhet: bøter ilegges ikke av myndigheten, men av domstolene, etter at Datatilsynet har anmeldt saken til politiet.',
       nl: 'Denemarken heeft één nationale autoriteit, het Datatilsynet. Bijzonderheid: boetes worden niet opgelegd door de autoriteit, maar door de rechtbanken, nadat het Datatilsynet de zaak bij de politie heeft aangegeven.',
+      ru: "В Дании действует один национальный орган, Datatilsynet. Особенность: штрафы назначает суд по представлению Datatilsynet, направляемому через полицию.",
     },
   },
 
@@ -118,6 +119,7 @@ export const danimarca: SchedaPaese = {
         sv: 'Saklig grund (saglig grund) och proportionalitet i övervakningen',
         nb: 'Saklig grunn (saglig grund) og forholdsmessighet i overvåkingen',
         nl: 'Objectieve reden (saglig grund) en evenredigheid van de controle',
+        ru: "Объективная причина (saglig grund) и соразмерность контроля",
       },
       risposta: 'si',
       dettaglio: {
@@ -131,6 +133,7 @@ export const danimarca: SchedaPaese = {
         sv: 'Övervakning av anställda kräver behandling på en giltig grund som uppfyller kraven på saglighed (saklig grund) och proportionalitet: den får inte gå längre än vad som är nödvändigt för det angivna ändamålet.',
         nb: 'Overvåking av ansatte krever en behandling på et gyldig grunnlag som oppfyller kravene til saglighed (saklig grunn) og forholdsmessighet: den må ikke gå lenger enn det som er nødvendig for det oppgitte formålet.',
         nl: 'De controle van werknemers vereist een verwerking op een geldige grondslag die voldoet aan de eisen van saglighed (objectieve reden) en evenredigheid: zij mag niet verder gaan dan nodig is voor het opgegeven doel.',
+        ru: "Контроль за работниками требует обработки данных на действительном правовом основании, соответствующей требованиям saglighed (объективной причины) и соразмерности: контроль не должен выходить за рамки необходимого для заявленной цели.",
       },
       fonte: FONTE_DATATILSYNET_GUIDA,
     },
@@ -146,6 +149,7 @@ export const danimarca: SchedaPaese = {
         sv: 'Rättslig grund: kollektivavtal om övervakning, eller berättigat intresse',
         nb: 'Behandlingsgrunnlag: kollektiv avtale om kontrolltiltak, eller berettiget interesse',
         nl: 'Rechtsgrond: collectieve overeenkomst over controles, of gerechtvaardigd belang',
+        ru: "Правовое основание: коллективное соглашение о контроле либо законный интерес",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -159,6 +163,7 @@ export const danimarca: SchedaPaese = {
         sv: 'Om ett kollektivavtal om övervakning (t.ex. DA/LO-överenskommelsen) omfattar övervakningen är grunden den danska dataskyddslagen; saknas det är grunden den privata arbetsgivarens berättigade intresse. Kollektivavtalen innehåller egna regler om underrättelse.',
         nb: 'Hvis en kollektiv avtale om kontrolltiltak (f.eks. avtalen mellom arbeidsgiverorganisasjonen DA og fagbevegelsen LO) dekker overvåkingen, er grunnlaget den danske personvernloven; uten en slik avtale er grunnlaget den private arbeidsgiverens berettigede interesse. Kollektive avtaler har sine egne varslingsregler.',
         nl: 'Als een collectieve overeenkomst over controles (bijv. de DA/LO-overeenkomst) de bewaking dekt, is de grondslag de Deense gegevensbeschermingswet; bij gebreke daarvan is de grondslag het gerechtvaardigd belang van de particuliere werkgever. Collectieve overeenkomsten leggen eigen kennisgevingsregels op.',
+        ru: "Если мониторинг охватывается коллективным соглашением о контроле (например, соглашением между организациями работодателей, DA, и профсоюзов, LO), основанием служит датский закон о защите данных; при его отсутствии основанием служит законный интерес частного работодателя. Коллективные соглашения устанавливают собственные правила уведомления.",
       },
       fonte: FONTE_DATATILSYNET_GUIDA,
     },
@@ -174,6 +179,7 @@ export const danimarca: SchedaPaese = {
         sv: 'Förhandstillstånd från en myndighet före installationen',
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit vóór installatie',
+        ru: "Предварительное разрешение органа перед установкой",
       },
       risposta: 'no',
       dettaglio: {
@@ -187,6 +193,7 @@ export const danimarca: SchedaPaese = {
         sv: 'Inget förhandstillstånd från Datatilsynet krävs; det som gäller är ansvarsskyldighet och informationsplikt.',
         nb: 'Det kreves ingen forhåndstillatelse fra Datatilsynet; det som gjelder, er ansvarlighet pluss informasjonsplikten.',
         nl: 'Voorafgaande toestemming van het Datatilsynet is niet vereist; van toepassing zijn de verantwoordingsplicht en de informatieplicht.',
+        ru: "Предварительное разрешение Datatilsynet не требуется; действуют принцип подотчётности и обязанность информировать.",
       },
       fonte: FONTE_DATATILSYNET_GUIDA,
     },
@@ -202,6 +209,7 @@ export const danimarca: SchedaPaese = {
         sv: 'Förhandsinformation till de anställda (senast vid aktiveringen, art. 13 GDPR)',
         nb: 'Forhåndsinformasjon til de ansatte (senest ved aktiveringen, art. 13 i GDPR)',
         nl: 'Voorafgaande informatie aan werknemers (uiterlijk bij activering, art. 13 AVG)',
+        ru: "Предварительное информирование работников (не позднее активации, ст. 13 GDPR)",
       },
       risposta: 'si',
       dettaglio: {
@@ -215,6 +223,7 @@ export const danimarca: SchedaPaese = {
         sv: 'De anställda ska, senast när övervakningen aktiveras, informeras om ändamålet, omfattningen och användningen av uppgifterna, i en tydlig och lättillgänglig form.',
         nb: 'De ansatte skal senest når overvåkingen aktiveres, informeres om formål, omfang og bruk av opplysningene, i en klar og tilgjengelig form.',
         nl: 'De werknemers moeten uiterlijk bij activering van de controle op duidelijke en toegankelijke wijze worden geïnformeerd over het doel, de omvang en het gebruik van de gegevens.',
+        ru: "Работников необходимо информировать не позднее момента активации контроля о цели, объёме и использовании данных, в ясной и доступной форме.",
       },
       fonte: FONTE_DATATILSYNET_GUIDA,
     },
@@ -230,6 +239,7 @@ export const danimarca: SchedaPaese = {
         sv: 'GPS endast för ett legitimt ändamål, utan återanvändning för att övervaka förarens beteende eller position; ska kunna stängas av vid privat användning',
         nb: 'GPS bare til et legitimt formål, uten gjenbruk til å overvåke førerens atferd eller posisjon; kan slås av ved privat bruk',
         nl: 'GPS alleen voor een legitiem doel, zonder hergebruik om gedrag of locatie van de bestuurder te bewaken; uitschakelbaar bij privégebruik',
+        ru: "GPS только для законной цели, без повторного использования для наблюдения за поведением или местонахождением водителя; возможность отключения при личном использовании",
       },
       risposta: 'si',
       dettaglio: {
@@ -243,6 +253,7 @@ export const danimarca: SchedaPaese = {
         sv: 'GPS på fordon är tillåtet för att planera rutter, övervaka transporter eller för de anställdas säkerhet, men uppgifterna får inte återanvändas för att övervaka förarens beteende eller position; om privat användning är tillåten måste den anställde kunna stänga av GPS:en.',
         nb: 'GPS i kjøretøy er tillatt for å planlegge ruter, overvåke transport eller for de ansattes sikkerhet, men opplysningene kan ikke gjenbrukes til å overvåke førerens atferd eller posisjon; hvis privat bruk er tillatt, må den ansatte kunne slå av GPS-en.',
         nl: 'GPS op voertuigen is toegestaan om routes te plannen, het vervoer te bewaken of voor de veiligheid van werknemers, maar de gegevens mogen niet worden hergebruikt om het gedrag of de locatie van de bestuurder te bewaken; als privégebruik is toegestaan, moet de werknemer de GPS kunnen uitschakelen.',
+        ru: "GPS в транспортных средствах допускается для планирования маршрутов, мониторинга перевозок или обеспечения безопасности работников, но данные нельзя повторно использовать для наблюдения за поведением или местонахождением водителя; если личное использование разрешено, работник должен иметь возможность отключить GPS.",
       },
       fonte: FONTE_DATATILSYNET_GUIDA,
     },
@@ -258,6 +269,7 @@ export const danimarca: SchedaPaese = {
         sv: 'Konsekvensbedömning (DPIA) för positionsuppgifter i kombination med ett annat kriterium',
         nb: 'Personvernkonsekvensvurdering (DPIA) for posisjonsdata kombinert med et annet kriterium',
         nl: 'Effectbeoordeling (DPIA) voor locatiegegevens gecombineerd met een ander criterium',
+        ru: "Оценка воздействия (DPIA) для данных о местоположении в сочетании с другим критерием",
       },
       risposta: 'si',
       dettaglio: {
@@ -271,6 +283,7 @@ export const danimarca: SchedaPaese = {
         sv: 'Den danska förteckningen kräver alltid en konsekvensbedömning för behandling av positionsuppgifter i kombination med minst ett annat kriterium (WP248-riktlinjerna).',
         nb: 'Den danske listen krever alltid en personvernkonsekvensvurdering for behandling av posisjonsdata i kombinasjon med minst ett annet kriterium (WP248-retningslinjene).',
         nl: 'De Deense lijst vereist altijd een effectbeoordeling voor de verwerking van locatiegegevens in combinatie met ten minste één ander criterium (richtsnoeren WP248).',
+        ru: "Датский перечень всегда требует оценки воздействия при обработке данных о местоположении в сочетании по меньшей мере с одним другим критерием (руководство WP248).",
       },
       fonte: FONTE_DATATILSYNET_DPIA,
     },
@@ -290,6 +303,7 @@ export const danimarca: SchedaPaese = {
         sv: 'Kontrollera att det finns en saklig grund (saglig grund) och att övervakningen är proportionerlig.',
         nb: 'Kontroller at det finnes en saklig grunn (saglig grund), og at overvåkingen er forholdsmessig.',
         nl: 'Controleer een objectieve reden (saglig grund) en de evenredigheid van de controle.',
+        ru: "Проверьте наличие объективной причины (saglig grund) и соразмерность контроля.",
       },
     },
     {
@@ -305,6 +319,7 @@ export const danimarca: SchedaPaese = {
         sv: 'Fastställ den rättsliga grunden: kollektivavtal om övervakning, eller berättigat intresse; iaktta eventuella uppsägnings- eller underrättelsetider i kollektivavtalet.',
         nb: 'Finn behandlingsgrunnlaget: kollektiv avtale om kontrolltiltak, eller berettiget interesse; overhold eventuelle varsler som den kollektive avtalen fastsetter.',
         nl: 'Bepaal de rechtsgrond: collectieve overeenkomst over controles, of gerechtvaardigd belang; neem eventuele kennisgevingstermijnen uit de collectieve overeenkomst in acht.',
+        ru: "Определите правовое основание: коллективное соглашение о контроле либо законный интерес; соблюдайте возможные сроки уведомления, предусмотренные коллективным соглашением.",
       },
     },
     {
@@ -320,6 +335,7 @@ export const danimarca: SchedaPaese = {
         sv: 'Informera de anställda senast när övervakningen aktiveras (art. 13 GDPR).',
         nb: 'Informer de ansatte senest når overvåkingen aktiveres (art. 13 i GDPR).',
         nl: 'Informeer de werknemers uiterlijk bij de activering (art. 13 AVG).',
+        ru: "Проинформируйте работников не позднее момента активации (ст. 13 GDPR).",
       },
     },
     {
@@ -335,6 +351,7 @@ export const danimarca: SchedaPaese = {
         sv: 'Genomför konsekvensbedömningen (DPIA) för positionsuppgifterna.',
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) for posisjonsdata.',
         nl: 'Voer de effectbeoordeling (DPIA) voor de locatiegegevens uit.',
+        ru: "Проведите оценку воздействия (DPIA) для данных о местоположении.",
       },
     },
     {
@@ -350,6 +367,7 @@ export const danimarca: SchedaPaese = {
         sv: 'Konfigurera systemet: endast det angivna ändamålet, ingen återanvändning för att övervaka föraren, avstängning vid privat användning.',
         nb: 'Konfigurer systemet: bare det oppgitte formålet, ingen gjenbruk til å overvåke føreren, mulighet til å slå det av ved privat bruk.',
         nl: 'Configureer het systeem: alleen het opgegeven doel, geen hergebruik om de bestuurder te bewaken, uitschakeling bij privégebruik.',
+        ru: "Настройте систему: только заявленная цель, без повторного использования для наблюдения за водителем, отключение при личном использовании.",
       },
     },
     {
@@ -365,6 +383,7 @@ export const danimarca: SchedaPaese = {
         sv: 'Om du byter system: när du byter övervakningssystem eller programvara ska du uppdatera och dela ut integritetsinformationen på nytt, och kontrollera om du måste informera eller samråda med de anställdas företrädare igen, där lagen kräver det. Leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och metoderna ändras ofta: den information som lämnades tidigare räcker inte.',
         nb: 'Hvis du bytter system: når du bytter overvåkingssystem eller programvare, skal du oppdatere og dele ut personvernopplysningene på nytt, og kontrollere om du på nytt må informere eller rådføre deg med de ansattes representanter, der loven krever det. Leverandøren (databehandleren), de innsamlede opplysningene og metodene endrer seg ofte: opplysningene som ble gitt tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        ru: "Если вы меняете систему или программное обеспечение мониторинга, обновите и повторно вручите уведомление о защите данных и проверьте, нужно ли снова информировать представителей работников или проводить с ними консультации, если этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее вручённого уведомления недостаточно.",
       },
     },
   ],
@@ -392,6 +411,7 @@ export const danimarca: SchedaPaese = {
       sv: 'fastställs av domstolarna (upp till 20 miljoner euro eller 4 % av omsättningen, art. 83 GDPR)',
       nb: 'fastsatt av domstolene (opptil 20 millioner euro eller 4 % av omsetningen, art. 83 i GDPR)',
       nl: 'vastgesteld door de rechtbanken (tot 20 miljoen euro of 4% van de omzet, art. 83 AVG)',
+      ru: "назначается судами (до 20 млн евро или 4% оборота, ст. 83 GDPR)",
     },
     casoCitato: {
       it: "In Danimarca le sanzioni GDPR non le impone l'autorità garante: il Datatilsynet segnala il caso alla polizia e propone la multa; la fissa il tribunale. Nei cinque controlli del 2020 sull'obbligo di informazione nelle misure di controllo dei dipendenti (tra cui GPS sui veicoli e videosorveglianza) il Datatilsynet ha espresso 'critica serià (alvorlig kritik) in tre casi e 'criticà in due, senza multe in denaro. Attenzione al 2026: il controllo dei dipendenti da parte dei datori di lavoro è tra le aree prioritarie dei controlli dell'anno; il Datatilsynet ha annunciato controlli mirati sul trattamento dei dati personali fatto dai datori di lavoro per controllare i dipendenti.",
@@ -404,6 +424,7 @@ export const danimarca: SchedaPaese = {
       sv: 'I Danmark påförs GDPR-böter inte av tillsynsmyndigheten: Datatilsynet anmäler ärendet till polisen och föreslår bötesbeloppet; domstolen fastställer det. I de fem inspektionerna 2020 av informationsplikten vid övervakning av anställda (inklusive GPS på fordon och kameraövervakning) utfärdade Datatilsynet «allvarlig kritik» (alvorlig kritik) i tre fall och «kritik» i två, utan penningböter. Se upp för 2026: arbetsgivares övervakning av anställda är ett av årets prioriterade områden; Datatilsynet har aviserat riktade inspektioner av hur arbetsgivare behandlar personuppgifter för att övervaka sina anställda.',
       nb: 'I Danmark ilegges ikke GDPR-bøter av tilsynsmyndigheten: Datatilsynet anmelder saken til politiet og foreslår boten; den fastsettes av retten. I de fem kontrollene i 2020 av informasjonsplikten ved tiltak for overvåking av ansatte (herunder GPS i kjøretøy og videoovervåking) ga Datatilsynet «alvorlig kritik» i tre tilfeller og «kritik» i to, uten bøter. Vær oppmerksom på 2026: arbeidsgiveres overvåking av ansatte er blant årets prioriterte kontrollområder; Datatilsynet har varslet målrettede kontroller av hvordan arbeidsgivere behandler personopplysninger for å overvåke de ansatte.',
       nl: "In Denemarken legt niet de toezichthouder de AVG-boetes op: het Datatilsynet meldt de zaak bij de politie en stelt de boete voor; de rechter legt haar op. Bij de vijf inspecties van 2020 naar de informatieplicht bij controlemaatregelen ten aanzien van werknemers (waaronder gps in voertuigen en cameratoezicht) uitte het Datatilsynet in drie gevallen 'ernstige kritiek' (alvorlig kritik) en in twee gevallen 'kritiek', zonder geldboetes. Let op in 2026: het toezicht van werkgevers op werknemers is dit jaar een prioriteitsgebied; het Datatilsynet heeft gerichte inspecties aangekondigd naar de verwerking van persoonsgegevens door werkgevers om hun werknemers te controleren.",
+      ru: "В Дании штрафы по GDPR налагает не надзорный орган: Datatilsynet сообщает о деле в полицию и предлагает штраф, а размер штрафа определяет суд. В пяти проверках 2020 года, посвящённых обязанности информировать в мерах контроля за работниками (в том числе GPS в транспортных средствах и видеонаблюдение), Datatilsynet вынес «серьёзную критику» (alvorlig kritik) в трёх случаях и «критику» в двух, без денежных штрафов. Внимание на 2026 год: контроль за работниками со стороны работодателей входит в число приоритетных направлений проверок этого года; Datatilsynet объявил о целевых проверках обработки персональных данных работодателями для контроля за сотрудниками.",
     },
     urlFonte: FONTE_DATATILSYNET_CONTROLLI_2020.url,
     tipoImporto: 'massimale',

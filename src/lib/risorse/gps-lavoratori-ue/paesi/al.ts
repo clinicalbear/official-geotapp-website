@@ -76,6 +76,7 @@ export const albania: SchedaPaese = {
       sv: 'Albanien är ett kandidatland utanför EU med en egen nationell lag som är anpassad till GDPR (lag 124/2024). En enda nationell myndighet, IDP; ingen regional uppdelning.',
       nb: 'Albania er et kandidatland utenfor EU med sin egen nasjonale lov som er tilpasset GDPR (lov 124/2024). Én nasjonal myndighet, IDP; ingen regional inndeling.',
       nl: 'Albanie is een kandidaat-lidstaat, buiten de EU, met een eigen nationale wet die is afgestemd op de AVG (Wet 124/2024). Een enkele nationale autoriteit, de IDP; geen regionale opdeling.',
+      ru: "Албания является страной-кандидатом, не входит в ЕС и имеет собственный закон, приведённый в соответствие с GDPR (Закон 124/2024). Единый национальный орган, IDP; регионального разделения нет.",
     },
   },
 
@@ -92,6 +93,7 @@ export const albania: SchedaPaese = {
         sv: 'Förhandsinformation till de anställda och rättslig grund (lag 124/2024, art. 13)',
         nb: 'Forhåndsinformasjon til de ansatte og behandlingsgrunnlag (lov 124/2024, art. 13)',
         nl: 'Voorafgaande informatie aan werknemers en rechtsgrondslag (Wet 124/2024, art. 13)',
+        ru: "Предварительное информирование работников и правовое основание (Закон 124/2024, ст. 13)",
       },
       risposta: 'si',
       dettaglio: {
@@ -105,6 +107,7 @@ export const albania: SchedaPaese = {
         sv: 'Den anställde måste informeras om ändamålen och den rättsliga grunden innan uppgifterna samlas in; en av grunderna i art. 7 krävs (i praktiken berättigat intresse).',
         nb: 'Arbeidstakeren skal informeres om formål og behandlingsgrunnlag før opplysningene samles inn; ett av grunnlagene i art. 7 er nødvendig (i praksis berettiget interesse).',
         nl: 'De werknemer moet voor de gegevensverzameling worden geinformeerd over de doeleinden en de rechtsgrondslag; een van de grondslagen uit art. 7 is vereist (in de praktijk het gerechtvaardigd belang).',
+        ru: "Работника необходимо проинформировать о целях и правовом основании до сбора данных; требуется одно из оснований ст. 7 (на практике законный интерес).",
       },
       fonte: FONTE_LEGGE_124_2024,
     },
@@ -120,6 +123,7 @@ export const albania: SchedaPaese = {
         sv: 'Föregående anmälan till eller tillstånd från en myndighet före installationen',
         nb: 'Forhåndsmelding til eller tillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande melding aan of toestemming van een autoriteit voor de installatie',
+        ru: "Предварительное уведомление или разрешение органа до установки",
       },
       risposta: 'no',
       dettaglio: {
@@ -133,6 +137,7 @@ export const albania: SchedaPaese = {
         sv: 'Den tidigare anmälan/registreringen hos IDP avskaffades genom lag 124/2024; den personuppgiftsansvarige för ett internt register över behandlingar.',
         nb: 'Den tidligere meldingen/registreringen hos IDP ble avskaffet ved lov 124/2024; den behandlingsansvarlige fører et internt register over behandlingene.',
         nl: 'De oude melding/registratie bij de IDP is afgeschaft met Wet 124/2024; de verwerkingsverantwoordelijke houdt een intern register van de verwerkingsactiviteiten bij.',
+        ru: "Прежнее уведомление/регистрация в IDP отменены Законом 124/2024; оператор ведёт внутренний реестр операций обработки.",
       },
       fonte: FONTE_LEGGE_124_2024,
     },
@@ -148,6 +153,7 @@ export const albania: SchedaPaese = {
         sv: 'Grund = berättigat intresse, inte samtycke',
         nb: 'Grunnlag = berettiget interesse, ikke samtykke',
         nl: 'Grondslag = gerechtvaardigd belang, niet de toestemming',
+        ru: "Основание = законный интерес, а не согласие",
       },
       risposta: 'si',
       dettaglio: {
@@ -161,6 +167,7 @@ export const albania: SchedaPaese = {
         sv: 'Den vanliga grunden är berättigat intresse (art. 7), inte samtycke, som i anställningsförhållandet knappast kan lämnas frivilligt.',
         nb: 'Det vanlige grunnlaget er berettiget interesse (art. 7), ikke samtykke, som i et arbeidsforhold neppe kan gis frivillig.',
         nl: 'De gebruikelijke grondslag is het gerechtvaardigd belang (art. 7), niet de toestemming, die in de arbeidsverhouding nauwelijks vrij kan zijn.',
+        ru: "Обычное основание: законный интерес (ст. 7), а не согласие, которое в трудовых отношениях вряд ли может быть свободным.",
       },
       fonte: FONTE_LEGGE_124_2024,
     },
@@ -176,6 +183,7 @@ export const albania: SchedaPaese = {
         sv: 'Specifikt ändamål, uppgiftsminimering och begränsad lagring (lag 124/2024, art. 6)',
         nb: 'Spesifikt formål, dataminimering og begrenset lagring (lov 124/2024, art. 6)',
         nl: "Specifiek doel, minimale gegevensverwerking en beperkte bewaring (Wet 124/2024, art. 6)",
+        ru: "Конкретная цель, минимизация данных и ограниченный срок хранения (Закон 124/2024, ст. 6)",
       },
       risposta: 'si',
       dettaglio: {
@@ -189,6 +197,7 @@ export const albania: SchedaPaese = {
         sv: 'Principerna i art. 6 gäller också för GPS på anställda: ett specificerat och legitimt ändamål, uppgifter som är adekvata och begränsade till vad som är nödvändigt, och lagring som inte varar längre än nödvändigt. IDP:s riktlinje nr 03/2025 gäller kameraövervakning, inte GPS: den tillämpar samma principer med prövningen av det minst ingripande medlet och kortast möjliga lagring, och ska läsas enbart som en fingervisning om metod.',
         nb: 'Prinsippene i art. 6 gjelder også for GPS på ansatte: et bestemt og legitimt formål, opplysninger som er adekvate og begrenset til det som er nødvendig, og lagring som ikke varer lenger enn nødvendig. IDPs retningslinje nr. 03/2025 gjelder videoovervåking, ikke GPS: den anvender de samme prinsippene med kriteriet om det minst inngripende middelet og kortest mulig lagring, og skal bare leses som en veiledning i metode.',
         nl: "De beginselen van art. 6 gelden ook voor GPS bij werknemers: een bepaald en legitiem doel, gegevens die passend zijn en beperkt tot wat nodig is, bewaring niet langer dan nodig. Richtsnoer nr. 03/2025 van de IDP gaat over camerabewaking, niet over GPS: het past dezelfde beginselen toe met de toets van het minst ingrijpende middel en de kortst mogelijke bewaring, en is alleen als methodische aanwijzing te lezen.",
+        ru: "Принципы ст. 6 действуют и для GPS на работниках: определённая и законная цель, данные адекватные и ограниченные необходимым, хранение не дольше необходимого. Руководство IDP № 03/2025 касается видеонаблюдения, а не GPS: оно применяет те же принципы с критерием наименее инвазивного средства и максимально короткого хранения, и его следует читать лишь как методологический ориентир.",
       },
       fonte: FONTE_LEGGE_124_2024,
     },
@@ -204,6 +213,7 @@ export const albania: SchedaPaese = {
         sv: 'Konsekvensbedömning (DPIA), obligatorisk från och med 17 januari 2027 (art. 31)',
         nb: 'Personvernkonsekvensvurdering (DPIA), obligatorisk fra 17. januar 2027 (art. 31)',
         nl: "Effectbeoordeling (DPIA), verplicht vanaf 17 januari 2027 (art. 31)",
+        ru: "Оценка воздействия (DPIA), обязательна с 17 января 2027 г. (ст. 31)",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -217,6 +227,7 @@ export const albania: SchedaPaese = {
         sv: 'Art. 31 i lag 124/2024 kräver en konsekvensbedömning när en behandling sannolikt medför hög risk, men den träder i kraft två år efter offentliggörandet i Official Gazette (17 januari 2025), alltså den 17 januari 2027 (art. 101.2). Fram till dess är det ännu inget rättsligt krav: det är lämpligt att genomföra den redan nu för GPS på anställda. Förteckningen över behandlingar som kräver en fastställs av IDP (art. 31.7); lagen (art. 31.6) nämner tre fall: en systematisk och omfattande bedömning av personliga egenskaper som bygger på automatiserad behandling, inklusive profilering; storskalig behandling av känsliga uppgifter; storskalig systematisk övervakning av allmänt tillgängliga platser. GPS som poängsätter körbeteende kan falla under det första.',
         nb: 'Art. 31 i lov 124/2024 krever en personvernkonsekvensvurdering når en behandling sannsynligvis medfører høy risiko, men den trer i kraft to år etter kunngjøringen i den offisielle lovtidende (17. januar 2025), altså 17. januar 2027 (art. 101 nr. 2). Frem til da er det ennå ikke et lovkrav: det er lurt å gjennomføre den allerede nå for GPS på ansatte. Listen over behandlinger som krever en, fastsettes av IDP (art. 31 nr. 7); loven (art. 31 nr. 6) nevner tre tilfeller: en systematisk og omfattende vurdering av personlige forhold basert på automatisert behandling, herunder profilering; behandling av sensitive opplysninger i stor skala; systematisk overvåking i stor skala av områder som er tilgjengelige for allmennheten. GPS som gir poeng for kjøreatferd, kan falle inn under det første.',
         nl: "Art. 31 van Wet 124/2024 schrijft een effectbeoordeling voor wanneer de verwerking waarschijnlijk een hoog risico meebrengt, maar treedt twee jaar na publicatie in het Staatsblad (17 januari 2025) in werking, dus op 17 januari 2027 (art. 101, lid 2). Tot die tijd is het nog geen wettelijke plicht: het is raadzaam haar nu al uit te voeren voor GPS bij werknemers. De lijst van verwerkingen waarvoor ze nodig is, stelt de IDP vast (art. 31, lid 7); de wet (art. 31, lid 6) noemt drie gevallen: een systematische en uitgebreide beoordeling van persoonlijke aspecten op basis van geautomatiseerde verwerking, waaronder profilering; grootschalige verwerking van gevoelige gegevens; stelselmatige grootschalige monitoring van openbaar toegankelijke ruimten. GPS dat rijgedrag scoort, kan onder het eerste vallen.",
+        ru: "Ст. 31 Закона 124/2024 предусматривает оценку воздействия, когда обработка может повлечь высокий риск, но вступает в силу через два года после публикации в официальном вестнике (17 января 2025 г.), то есть 17 января 2027 г. (ст. 101, ч. 2). До этого момента она ещё не является обязанностью по закону: для GPS на работниках её целесообразно провести уже сейчас. Перечень операций обработки, для которых она требуется, устанавливает IDP (ст. 31, ч. 7); закон (ст. 31, ч. 6) называет три случая: систематическая и всесторонняя оценка личных аспектов на основе автоматизированной обработки, включая профилирование; обработка чувствительных данных в крупном масштабе; систематическое наблюдение в крупном масштабе за общедоступными зонами. GPS, выставляющий баллы за манеру вождения, может подпадать под первый случай.",
       },
       fonte: FONTE_LEGGE_124_2024,
     },
@@ -236,6 +247,7 @@ export const albania: SchedaPaese = {
         sv: 'Fastställ en giltig rättslig grund (berättigat intresse, art. 7) och för det interna registret över behandlingar.',
         nb: 'Finn et gyldig behandlingsgrunnlag (berettiget interesse, art. 7), og før det interne registeret over behandlingene.',
         nl: 'Bepaal een geldige rechtsgrondslag (gerechtvaardigd belang, art. 7) en houd het interne verwerkingsregister bij.',
+        ru: "Определите действительное правовое основание (законный интерес, ст. 7) и ведите внутренний реестр операций обработки.",
       },
     },
     {
@@ -251,6 +263,7 @@ export const albania: SchedaPaese = {
         sv: 'Informera de anställda innan du samlar in uppgifter (art. 13).',
         nb: 'Informer de ansatte før opplysningene samles inn (art. 13).',
         nl: 'Informeer de werknemers voordat u gegevens verzamelt (art. 13).',
+        ru: "Проинформируйте работников до сбора данных (ст. 13).",
       },
     },
     {
@@ -266,6 +279,7 @@ export const albania: SchedaPaese = {
         sv: 'Kontrollera om det finns ett mindre ingripande medel och fastställ ett specifikt ändamål.',
         nb: 'Undersøk om det finnes et mindre inngripende middel, og fastsett et spesifikt formål.',
         nl: 'Controleer het minst ingrijpende middel en een specifiek doel.',
+        ru: "Проверьте наличие наименее инвазивного средства и конкретной цели.",
       },
     },
     {
@@ -281,6 +295,7 @@ export const albania: SchedaPaese = {
         sv: 'Förbered konsekvensbedömningen (DPIA) för GPS på anställda: skyldigheten enligt art. 31 gäller från och med 17 januari 2027 (art. 101.2) när behandlingen sannolikt medför hög risk, men det är lämpligt att göra den redan nu.',
         nb: 'Forbered personvernkonsekvensvurderingen (DPIA) for GPS på ansatte: plikten etter art. 31 gjelder fra 17. januar 2027 (art. 101 nr. 2) når behandlingen sannsynligvis medfører høy risiko, men det er lurt å gjøre den allerede nå.',
         nl: 'Bereid de effectbeoordeling (DPIA) voor GPS bij werknemers voor: de plicht van art. 31 geldt vanaf 17 januari 2027 (art. 101, lid 2) als de verwerking waarschijnlijk een hoog risico meebrengt, maar het is raadzaam haar nu al uit te voeren.',
+        ru: "Подготовьте оценку воздействия (DPIA) для GPS на работниках: обязанность по ст. 31 действует с 17 января 2027 г. (ст. 101, ч. 2), если обработка может повлечь высокий риск, но целесообразно провести её уже сейчас.",
       },
     },
     {
@@ -296,6 +311,7 @@ export const albania: SchedaPaese = {
         sv: 'Konfigurera systemet med uppgiftsminimering och minsta möjliga lagring.',
         nb: 'Konfigurer systemet med dataminimering og kortest mulig lagring.',
         nl: 'Configureer het systeem met gegevensminimalisatie en minimale bewaring.',
+        ru: "Настройте систему с минимизацией данных и минимальным сроком хранения.",
       },
     },
     {
@@ -311,6 +327,7 @@ export const albania: SchedaPaese = {
         sv: 'Om du byter system: när du byter övervakningssystem eller programvara ska du uppdatera och dela ut integritetsinformationen på nytt, och kontrollera om du måste informera eller samråda med de anställdas företrädare igen, där lagen kräver det. Leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och metoderna ändras ofta: den information som lämnades tidigare räcker inte.',
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og dele ut personvernerklæringen på nytt, og undersøke om du igjen må informere eller rådføre deg med de ansattes representanter, der loven krever det. Ofte endrer leverandøren (databehandleren), de innsamlede opplysningene og metodene seg: informasjonen som ble gitt tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        ru: "Если вы меняете систему или программу мониторинга, обновите и повторно вручите информационное уведомление и проверьте, нужно ли вновь информировать представителей работников или проводить с ними консультации, там, где этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее вручённого уведомления недостаточно.",
       },
     },
   ],
@@ -338,6 +355,7 @@ export const albania: SchedaPaese = {
       sv: '2 miljarder ALL (över 20 miljoner €) eller 4 % av den totala globala årsomsättningen',
       nb: '2 milliarder ALL (over 20 millioner €) eller 4 % av den samlede globale årsomsetningen',
       nl: '2 miljard ALL (meer dan 20 miljoen EUR) of 4% van de wereldwijde jaaromzet',
+      ru: "2 млрд ALL (свыше 20 млн €) или 4% годового мирового оборота",
     },
     casoCitato: {
       it: 'Massimale di legge, non una multa inflitta. Legge 124/2024, che per le violazioni più gravi prevede fino a 2.000.000.000 di lek oppure, per le società commerciali, il 4% del fatturato mondiale annuo dell\'esercizio precedente, se superiore. Un secondo scaglione si ferma a 1 miliardo di lek o al 2%. Non risulta pubblicata dall\'IDP una sanzione specifica sul GPS applicato ai dipendenti.',
@@ -350,6 +368,7 @@ export const albania: SchedaPaese = {
       sv: 'Lagstadgat tak, inte ett påfört bötesbelopp. Lag 124/2024 föreskriver för de allvarligaste överträdelserna upp till 2 000 000 000 ALL eller, för handelsbolag, 4 % av den totala globala årsomsättningen under föregående räkenskapsår, beroende på vilket som är högst. En andra nivå stannar vid 1 miljard ALL eller 2 %. Ingen specifik IDP-sanktion för GPS på anställda har offentliggjorts.',
       nb: 'Lovens maksimum, ikke en bot som er ilagt. Lov 124/2024 fastsetter for de alvorligste overtredelsene inntil 2 000 000 000 lek eller, for handelsselskaper, 4 % av den samlede globale årsomsetningen i det foregående regnskapsåret, avhengig av hva som er høyest. Et andre trinn stopper ved 1 milliard lek eller 2 %. IDP har ikke offentliggjort noen konkret sanksjon for GPS brukt på ansatte.',
       nl: 'Wettelijk maximum, geen opgelegde boete. Wet 124/2024 voorziet voor de zwaarste inbreuken in ten hoogste ALL 2.000.000.000 of, voor handelsvennootschappen, 4% van de wereldwijde jaaromzet van het voorgaande boekjaar, als dat hoger is. Een tweede trap stopt bij ALL 1 miljard of 2%. Een specifieke boete van de IDP over GPS bij werknemers is niet gepubliceerd.',
+      ru: "Законодательный максимум, а не наложенный штраф. Закон 124/2024 за наиболее серьёзные нарушения предусматривает до 2.000.000.000 леков или, для коммерческих компаний, 4% годового мирового оборота за предыдущий финансовый год, если эта сумма выше. Вторая ступень ограничивается 1 млрд леков или 2%. Опубликованной IDP отдельной санкции за GPS в отношении сотрудников не обнаружено.",
     },
     urlFonte: 'https://idp.al/wp-content/uploads/2025/03/Law-no.124-2024.pdf',
     tipoImporto: 'massimale',

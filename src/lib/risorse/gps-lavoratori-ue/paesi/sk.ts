@@ -96,6 +96,7 @@ export const slovacchia: SchedaPaese = {
       sv: 'Slovakien har en enda nationell myndighet, UOOU SR; det finns ingen regional uppdelning.',
       nb: 'Slovakia har én nasjonal myndighet, UOOU SR; det finnes ingen regional inndeling.',
       nl: 'Slowakije heeft een enkele nationale autoriteit, de UOOU SR; er is geen regionale verdeling.',
+      ru: "В Словакии действует единый национальный орган, UOOU SR; региональных подразделений нет.",
     },
   },
 
@@ -112,6 +113,7 @@ export const slovacchia: SchedaPaese = {
         sv: 'Diskussion med de anställdas företrädare om kontrollens omfattning, sätt och varaktighet, samt information i förväg (Zákonník práce art. 13 stycke 4)',
         nb: 'Drøfting med de ansattes representanter om kontrollens omfang, måte og varighet, samt forhåndsinformasjon (Zákonník práce art. 13 ledd 4)',
         nl: 'Overleg met de werknemersvertegenwoordigers over de omvang, wijze en duur van de controle, en voorafgaande informatie (Zakonnik prace art. 13 lid 4)',
+        ru: "Обсуждение с представителями работников объёма, способов и срока контроля и предварительное информирование (Zákonník práce, ст. 13 абз. 4)",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -125,6 +127,7 @@ export const slovacchia: SchedaPaese = {
         sv: 'Om arbetsgivaren inför en kontrollmekanism ska den diskutera kontrollens omfattning, sätt och varaktighet med de anställdas företrädare och informera de anställda om den. Diskussionen med företrädarna gäller där sådana finns; informationen till de anställda gäller alltid.',
         nb: 'Hvis arbeidsgiveren innfører en kontrollmekanisme, skal vedkommende drøfte kontrollens omfang, måte og varighet med de ansattes representanter og informere de ansatte om den. Drøftingen med representantene gjelder der slike finnes; informasjonen til de ansatte gjelder alltid.',
         nl: 'Als de werkgever een controlemechanisme invoert, moet hij met de werknemersvertegenwoordigers de omvang, wijze en duur van de controle bespreken en de werknemers hierover informeren. Het overleg met de vertegenwoordigers geldt waar zij bestaan; de informatie aan de werknemers geldt altijd.',
+        ru: "Если работодатель вводит механизм контроля, он должен обсудить с представителями работников объём, способы и срок контроля и проинформировать об этом работников. Обсуждение с представителями требуется там, где они существуют; информирование работников требуется всегда.",
       },
       fonte: FONTE_ZP_13,
     },
@@ -140,6 +143,7 @@ export const slovacchia: SchedaPaese = {
         sv: 'Förbud mot att övervaka utan allvarliga skäl som hänger samman med verksamhetens art, utan förvarning (art. 13 stycke 4)',
         nb: 'Forbud mot å overvåke uten alvorlige grunner knyttet til virksomhetens art, uten forhåndsvarsel (art. 13 ledd 4)',
         nl: 'Verbod op controle zonder ernstige redenen die inherent zijn aan de aard van de activiteit, zonder voorafgaande kennisgeving (art. 13 lid 4)',
+        ru: "Запрет наблюдать без серьёзных причин, обусловленных характером деятельности, и без предварительного уведомления (ст. 13 абз. 4)",
       },
       risposta: 'si',
       dettaglio: {
@@ -153,6 +157,7 @@ export const slovacchia: SchedaPaese = {
         sv: 'Arbetsgivaren får inte, utan allvarliga skäl som hänger samman med verksamhetens särskilda art, kränka den anställdes privatliv på arbetsplatsen och i arbetsgivarens gemensamma utrymmen genom att övervaka honom eller henne utan att ha förvarnat i förväg.',
         nb: 'Arbeidsgiveren kan ikke, uten alvorlige grunner knyttet til virksomhetens særlige art, krenke den ansattes privatliv på arbeidsplassen og i arbeidsgiverens fellesarealer ved å overvåke vedkommende uten å ha varslet på forhånd.',
         nl: 'De werkgever mag, zonder ernstige redenen die inherent zijn aan de bijzondere aard van zijn activiteit, de privacy van de werknemer op de werkplek en in de gemeenschappelijke ruimten van de werkgever niet schenden door hem te controleren zonder hem vooraf te hebben gewaarschuwd.',
+        ru: "Работодатель не вправе без серьёзных причин, обусловленных особым характером его деятельности, нарушать частную жизнь работника на рабочем месте и в общих помещениях работодателя, ведя за ним наблюдение без предварительного уведомления.",
       },
       fonte: FONTE_ZP_13,
     },
@@ -168,6 +173,7 @@ export const slovacchia: SchedaPaese = {
         sv: 'Förhandstillstånd från en myndighet innan systemet installeras',
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit voor installatie',
+        ru: "Предварительное разрешение органа перед установкой",
       },
       risposta: 'no',
       dettaglio: {
@@ -181,6 +187,7 @@ export const slovacchia: SchedaPaese = {
         sv: 'Något förhandstillstånd från UOOU SR behövs inte; den personuppgiftsansvarige agerar på eget ansvar, med DPIA när den krävs, och myndigheten ingriper i efterhand.',
         nb: 'Det kreves ingen forhåndstillatelse fra UOOU SR; den behandlingsansvarlige handler på eget ansvar, med personvernkonsekvensvurdering (DPIA) der det kreves, og myndigheten griper inn i etterkant.',
         nl: 'Er is geen voorafgaande toestemming van de UOOU SR nodig; de verwerkingsverantwoordelijke handelt onder eigen verantwoordelijkheid, met een DPIA waar vereist, en de autoriteit grijpt achteraf in.',
+        ru: "Предварительное разрешение UOOU SR не требуется; оператор действует под собственную ответственность, с проведением DPIA, когда она требуется, а орган вмешивается впоследствии.",
       },
       fonte: FONTE_GDPR,
     },
@@ -196,6 +203,7 @@ export const slovacchia: SchedaPaese = {
         sv: 'Grunden är berättigat intresse (inte samtycke); proportionerlig GPS, ingen övervakning vid privat användning',
         nb: 'Grunnlaget er berettiget interesse (ikke samtykke); proporsjonal GPS, ingen overvåking ved privat bruk',
         nl: 'Rechtsgrond = gerechtvaardigd belang (niet toestemming); proportionele GPS, geen controle tijdens privegebruik',
+        ru: "Основание: законный интерес (не согласие); соразмерный GPS, никакого мониторинга при личном использовании",
       },
       risposta: 'si',
       dettaglio: {
@@ -209,6 +217,7 @@ export const slovacchia: SchedaPaese = {
         sv: 'Att införa en kontroll är en möjlighet för arbetsgivaren, inte en skyldighet enligt lag: grunden är normalt berättigat intresse (art. 6.1 f GDPR), efter en proportionalitetsprövning. För GPS i fordon uppmanar yttrandet WP249, som UOOU SR har publicerat, till att bedöma nödvändighet och proportionalitet, att ge den anställde möjlighet att stänga av spårningen när fordonet även används privat, och noterar att det är osannolikt att det finns en rättslig grund för att lokalisera honom eller henne utanför den överenskomna arbetstiden.',
         nb: 'Å innføre en kontroll er en mulighet for arbeidsgiveren, ikke en plikt etter loven: grunnlaget er normalt berettiget interesse (art. 6.1 f GDPR), etter en proporsjonalitetsvurdering. For GPS i kjøretøy oppfordrer uttalelsen WP249, som UOOU SR har publisert, til å vurdere nødvendighet og proporsjonalitet, til å gi den ansatte mulighet til å slå av sporingen når kjøretøyet også brukes privat, og bemerker at det er usannsynlig at det finnes et rettslig grunnlag for å lokalisere vedkommende utenfor den avtalte arbeidstiden.',
         nl: 'Een controle invoeren is een bevoegdheid van de werkgever, geen wettelijke plicht: de grondslag is doorgaans het gerechtvaardigd belang (art. 6 lid 1 onder f AVG), na een evenredigheidstoets. Voor GPS in een voertuig vraagt het door de UOOU SR gepubliceerde advies WP249 om noodzaak en evenredigheid te toetsen, de werknemer de mogelijkheid te geven het volgen uit te schakelen wanneer het voertuig ook privé wordt gebruikt, en merkt op dat een rechtsgrond om het buiten de afgesproken werktijd te lokaliseren onwaarschijnlijk is.',
+        ru: "Введение контроля является правом работодателя, а не обязанностью по закону: основанием, как правило, служит законный интерес (ст. 6 п. 1 подп. f GDPR) после теста соразмерности. Для GPS на транспортном средстве мнение WP249, опубликованное UOOU SR, требует оценить необходимость и соразмерность, дать работнику возможность отключать отслеживание, когда транспортное средство используется также в личных целях, и отмечает, что правовое основание для определения его местоположения вне согласованного рабочего времени маловероятно.",
       },
       fonte: FONTE_UOOU_WP249,
       fonteAggiuntiva: FONTE_UOOU_LICEITA,
@@ -225,6 +234,7 @@ export const slovacchia: SchedaPaese = {
         sv: 'Konsekvensbedömning (DPIA) vid systematisk övervakning av anställda, inklusive GPS (UOOU SR:s lista)',
         nb: 'Personvernkonsekvensvurdering (DPIA) ved systematisk overvåking av ansatte, inkludert GPS (UOOU SR-listen)',
         nl: 'Effectbeoordeling (DPIA) voor de systematische controle van werknemers, inclusief GPS (lijst van de UOOU SR)',
+        ru: "Оценка воздействия (DPIA) для систематического мониторинга работников, включая GPS (перечень UOOU SR)",
       },
       risposta: 'si',
       dettaglio: {
@@ -238,6 +248,7 @@ export const slovacchia: SchedaPaese = {
         sv: 'Den slovakiska listan upptar bland de behandlingar som alltid kräver en DPIA övervakning av de anställdas arbete (punkt 9: sårbara registrerade och systematisk övervakning) och behandling av positionsuppgifter tillsammans med ytterligare ett kriterium i WP248 (punkt 3). GPS nämns inte, men omfattas normalt av båda.',
         nb: 'Den slovakiske listen oppfører blant behandlingene som alltid krever en DPIA overvåking av de ansattes arbeid (punkt 9: sårbare registrerte og systematisk overvåking) og behandling av posisjonsopplysninger sammen med et ytterligere kriterium i WP248 (punkt 3). GPS nevnes ikke, men omfattes normalt av begge.',
         nl: 'De Slowaakse lijst noemt onder de verwerkingen waarvoor altijd een DPIA nodig is het monitoren van het werk van werknemers (punt 9: kwetsbare betrokkenen en systematische monitoring) en de verwerking van locatiegegevens samen met een ander WP248-criterium (punt 3). GPS wordt niet genoemd, maar valt doorgaans onder beide.',
+        ru: "Словацкий перечень включает среди операций, всегда требующих DPIA, мониторинг работы сотрудников (пункт 9: уязвимые субъекты данных и систематический мониторинг) и обработку данных о местоположении в сочетании с другим критерием WP248 (пункт 3). GPS прямо не назван, но, как правило, подпадает под оба пункта.",
       },
       fonte: FONTE_UOOU_DPIA,
     },
@@ -257,6 +268,7 @@ export const slovacchia: SchedaPaese = {
         sv: 'Kontrollera att det finns allvarliga skäl som hänger samman med din verksamhets art för kontrollen.',
         nb: 'Kontroller at det finnes alvorlige grunner knyttet til virksomhetens art som begrunner kontrollen.',
         nl: 'Controleer op ernstige, aan de aard van uw activiteit inherente redenen voor de controle.',
+        ru: "Проверьте наличие серьёзных причин, обусловленных характером вашей деятельности, оправдывающих контроль.",
       },
     },
     {
@@ -272,6 +284,7 @@ export const slovacchia: SchedaPaese = {
         sv: 'Diskutera kontrollens omfattning, sätt och varaktighet med de anställdas företrädare och informera de anställda i förväg.',
         nb: 'Drøft kontrollens omfang, måte og varighet med de ansattes representanter, og informer de ansatte på forhånd.',
         nl: 'Bespreek met de werknemersvertegenwoordigers de omvang, wijze en duur van de controle, en informeer de werknemers vooraf.',
+        ru: "Обсудите с представителями работников объём, способы и срок контроля и заранее проинформируйте работников.",
       },
     },
     {
@@ -287,6 +300,7 @@ export const slovacchia: SchedaPaese = {
         sv: 'Identifiera en giltig rättslig grund (normalt berättigat intresse, inte samtycke).',
         nb: 'Finn et gyldig rettslig grunnlag (normalt berettiget interesse, ikke samtykke).',
         nl: 'Bepaal een geldige rechtsgrond (in de regel gerechtvaardigd belang, niet toestemming).',
+        ru: "Определите действительное правовое основание (как правило, законный интерес, не согласие).",
       },
     },
     {
@@ -302,6 +316,7 @@ export const slovacchia: SchedaPaese = {
         sv: 'Genomför konsekvensbedömningen (DPIA) vid systematisk övervakning.',
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) ved systematisk overvåking.',
         nl: 'Voer de effectbeoordeling (DPIA) uit voor de systematische controle.',
+        ru: "Проведите оценку воздействия (DPIA) для систематического мониторинга.",
       },
     },
     {
@@ -317,6 +332,7 @@ export const slovacchia: SchedaPaese = {
         sv: 'Konfigurera systemet proportionerligt: ingen övervakning vid privat användning av fordonet.',
         nb: 'Konfigurer systemet proporsjonalt: ingen overvåking ved privat bruk av kjøretøyet.',
         nl: 'Configureer het systeem op een proportionele manier: geen controle tijdens het privegebruik van het voertuig.',
+        ru: "Настройте систему соразмерно: никакого мониторинга при личном использовании транспортного средства.",
       },
     },
     {
@@ -332,6 +348,7 @@ export const slovacchia: SchedaPaese = {
         sv: 'Om du byter övervakningssystem eller programvara: uppdatera och lämna ut informationen om personuppgiftsbehandling på nytt, och kontrollera om du åter måste informera eller samråda med de anställdas företrädare, där lagen kräver det. Leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och arbetssätten ändras ofta: den information som lämnades tidigare räcker inte.',
         nb: 'Hvis du bytter overvåkingssystem eller programvare: oppdater og utlever informasjonen om behandling av personopplysninger på nytt, og kontroller om du på nytt må informere eller rådføre deg med de ansattes representanter, der loven krever det. Leverandøren (databehandleren), de innsamlede opplysningene og arbeidsmåtene endrer seg ofte: informasjonen som ble utlevert tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        ru: "При смене системы или программы мониторинга обновите и повторно вручите уведомление об обработке данных, а также проверьте, нужно ли снова информировать представителей работников или консультироваться с ними, если этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее врученного уведомления недостаточно.",
       },
     },
   ],
@@ -359,6 +376,7 @@ export const slovacchia: SchedaPaese = {
       sv: '20 miljoner € eller 4 % av den globala årsomsättningen',
       nb: '20 millioner € eller 4 % av global årsomsetning',
       nl: '20 miljoen EUR of 4% van de wereldwijde jaaromzet',
+      ru: "20 млн € или 4% общемирового годового оборота",
     },
     casoCitato: {
       it: "La cifra indicata è il massimo previsto dalla legge (art. 83 GDPR). Nella relazione annuale 2025 (par. 9.2.1) l'UOOU SR riporta un caso di geolocalizzazione dei dipendenti: un datore registrava e conservava la posizione di chi lavorava da casa nel momento in cui timbrava l'inizio e la fine del lavoro su un terminale virtuale. Mancava una base giuridica, perché il Codice del lavoro impone di registrare l'orario e non la posizione, e l'informativa era incompleta. L'autorità ha inflitto una multa e misure correttive, ma l'importo non è pubblicato.",
@@ -371,6 +389,7 @@ export const slovacchia: SchedaPaese = {
       sv: 'Det angivna beloppet är det maximum som lagen föreskriver (art. 83 GDPR). I årsrapporten för 2025 (stycke 9.2.1) redovisar UOOU SR ett fall av geolokalisering av anställda: en arbetsgivare registrerade och lagrade positionen för personer som arbetade hemifrån när de stämplade in och ut från en virtuell terminal. Rättslig grund saknades, eftersom arbetslagen kräver att arbetstiden registreras och inte positionen, och informationen var ofullständig. Myndigheten utdömde ett vite och korrigerande åtgärder, men beloppet är inte offentliggjort.',
       nb: 'Det oppgitte beløpet er maksimum som loven fastsetter (art. 83 GDPR). I årsrapporten for 2025 (punkt 9.2.1) redegjør UOOU SR for en sak om geolokalisering av ansatte: en arbeidsgiver registrerte og lagret posisjonen til personer som jobbet hjemmefra da de stemplet inn og ut på en virtuell terminal. Det manglet rettslig grunnlag, fordi arbeidsloven krever at arbeidstiden registreres og ikke posisjonen, og informasjonen var ufullstendig. Myndigheten ila en bot og korrigerende tiltak, men beløpet er ikke offentliggjort.',
       nl: 'Wettelijk maximum, geen opgelegde boete: artikel 83 AVG geldt. In haar jaarverslag 2025 (paragraaf 9.2.1) beschrijft de UOOU SR een geval van geolocatie van werknemers: een werkgever registreerde en bewaarde de locatie van thuiswerkers op het moment dat zij begin en einde van het werk op een virtuele terminal registreerden. Er was geen rechtsgrondslag, omdat het Arbeidswetboek voorschrijft de arbeidstijd te registreren en niet de locatie, en de informatie aan de betrokkenen was onvolledig. De autoriteit legde een boete en corrigerende maatregelen op, maar het bedrag is niet gepubliceerd.',
+      ru: "Указанная сумма является максимумом, предусмотренным законом (ст. 83 GDPR). В годовом отчёте за 2025 год (п. 9.2.1) UOOU SR описывает случай геолокации работников: работодатель записывал и хранил местоположение тех, кто работал из дома, в момент отметки начала и окончания работы на виртуальном терминале. Правового основания не было, поскольку Трудовой кодекс требует учитывать рабочее время, а не местоположение, а уведомление об обработке данных было неполным. Орган назначил штраф и корректирующие меры, но размер штрафа не опубликован.",
     },
     urlFonte: FONTE_UOOU_RELAZIONE_2025.url,
     tipoImporto: 'massimale',

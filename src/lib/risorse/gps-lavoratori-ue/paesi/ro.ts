@@ -85,6 +85,7 @@ export const romania: SchedaPaese = {
       sv: 'Rumänien har en enda nationell myndighet, ANSPDCP; det finns ingen regional uppdelning.',
       nb: 'Romania har én nasjonal myndighet, ANSPDCP; ingen regional inndeling.',
       nl: 'Roemenië heeft één nationale autoriteit, de ANSPDCP; er is geen regionale verdeling.',
+      ru: "В Румынии действует единый национальный орган, ANSPDCP; региональное разделение отсутствует.",
     },
   },
 
@@ -101,6 +102,7 @@ export const romania: SchedaPaese = {
         sv: 'Obligatorisk, fullständig och uttrycklig information i förväg till de anställda (lag 190/2018 art. 5 bokstav b)',
         nb: 'Obligatorisk, fullstendig og uttrykkelig forhåndsinformasjon til de ansatte (lov 190/2018 art. 5 bokstav b)',
         nl: 'Verplichte, volledige en uitdrukkelijke voorafgaande informatie aan de werknemers (Wet 190/2018 art. 5 lett. b)',
+        ru: "Обязательное, полное и чёткое предварительное информирование работников (Закон 190/2018, ст. 5 буква b)",
       },
       risposta: 'si',
       dettaglio: {
@@ -114,6 +116,7 @@ export const romania: SchedaPaese = {
         sv: 'När övervakningssystem med elektroniska kommunikationsmedel används (ANSPDCP tillämpar art. 5 även på GPS, fallet Tehnoplus) och de anställdas uppgifter behandlas på grund av arbetsgivarens berättigade intresse, är behandlingen tillåten endast om arbetsgivaren i förväg har lämnat de anställda obligatorisk, fullständig och uttrycklig information.',
         nb: 'Når det brukes overvåkingssystemer via elektroniske kommunikasjonsmidler (ANSPDCP anvender art. 5 også på GPS, Tehnoplus-saken), og de ansattes opplysninger behandles på grunnlag av arbeidsgiverens berettigede interesse, er behandlingen bare tillatt hvis arbeidsgiveren på forhånd har gitt de ansatte obligatorisk, fullstendig og uttrykkelig informasjon.',
         nl: 'wanneer monitoringsystemen via elektronische communicatiemiddelen worden gebruikt (de ANSPDCP past art. 5 ook toe op GPS, zaak Tehnoplus) en werknemersgegevens worden verwerkt voor het gerechtvaardigd belang van de werkgever, is de verwerking alleen toegestaan als de werkgever de werknemers vooraf verplicht, volledig en uitdrukkelijk heeft geïnformeerd.',
+        ru: "Когда применяются системы мониторинга с использованием электронных средств связи (ANSPDCP применяет ст. 5 и к GPS, дело Tehnoplus) и данные сотрудников обрабатываются на основании законного интереса работодателя, обработка допускается, только если работодатель предоставил работникам обязательное, полное и чёткое предварительное информирование.",
       },
       fonte: FONTE_LEGGE_190_ART5,
     },
@@ -129,6 +132,7 @@ export const romania: SchedaPaese = {
         sv: 'Samråd i förväg med fackföreningen eller de anställdas företrädare (art. 5 bokstav c)',
         nb: 'Forhåndshøring av fagforeningen eller de ansattes representanter (art. 5 bokstav c)',
         nl: 'Voorafgaande raadpleging van de vakbond of van de werknemersvertegenwoordigers (art. 5 lett. c)',
+        ru: "Предварительная консультация с профсоюзом или представителями сотрудников (ст. 5 буква c)",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -142,6 +146,7 @@ export const romania: SchedaPaese = {
         sv: 'Innan övervakningssystem införs ska arbetsgivaren samråda med fackföreningen eller, i förekommande fall, med de anställdas företrädare. Gäller där sådana finns.',
         nb: 'Før overvåkingssystemene innføres, skal arbeidsgiveren høre fagforeningen eller, der det er aktuelt, de ansattes representanter. Gjelder der slike finnes.',
         nl: 'voordat de monitoringsystemen worden ingevoerd, moet de werkgever de vakbond of, in voorkomend geval, de werknemersvertegenwoordigers raadplegen. Dit geldt waar zij bestaan.',
+        ru: "Перед введением систем мониторинга работодатель должен провести консультацию с профсоюзом или, при необходимости, с представителями сотрудников. Применяется там, где они существуют.",
       },
       fonte: FONTE_LEGGE_190_ART5,
     },
@@ -157,6 +162,7 @@ export const romania: SchedaPaese = {
         sv: 'Förhandstillstånd från en myndighet innan systemet installeras',
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit vóór de installatie',
+        ru: "Предварительное разрешение органа перед установкой",
       },
       risposta: 'no',
       dettaglio: {
@@ -170,6 +176,7 @@ export const romania: SchedaPaese = {
         sv: 'Lagen gör övervakning beroende av villkoren i art. 5, men inte av ett förhandstillstånd från ANSPDCP.',
         nb: 'Loven gjør overvåking avhengig av vilkårene i art. 5, men ikke av en forhåndstillatelse fra ANSPDCP.',
         nl: 'de wet onderwerpt het monitoren aan de voorwaarden van art. 5, maar niet aan een voorafgaande toestemming van de ANSPDCP.',
+        ru: "Закон ставит мониторинг в зависимость от условий ст. 5, но не от предварительного разрешения ANSPDCP.",
       },
       fonte: FONTE_LEGGE_190_ART5,
     },
@@ -185,6 +192,7 @@ export const romania: SchedaPaese = {
         sv: 'Mindre ingripande medel har redan visat sig ineffektiva och ett övervägande berättigat intresse (art. 5 bokstav a, d)',
         nb: 'Mindre inngripende midler har allerede vist seg uten virkning, og den berettigede interessen veier tyngst (art. 5 bokstav a, d)',
         nl: 'Minder ingrijpende middelen die al ondoeltreffend zijn gebleken en overwegend gerechtvaardigd belang (art. 5 lett. a, d)',
+        ru: "Менее интрузивные средства уже оказались неэффективными, и законный интерес преобладает (ст. 5 буквы a, d)",
       },
       risposta: 'si',
       dettaglio: {
@@ -198,6 +206,7 @@ export const romania: SchedaPaese = {
         sv: 'Övervakning är tillåten endast om andra mindre ingripande former inte redan har visat sig effektiva och om arbetsgivarens berättigade intresse väger tyngre än de anställdas rättigheter.',
         nb: 'Overvåking er bare tillatt hvis andre, mindre inngripende former ikke allerede har vist seg virkningsfulle, og hvis arbeidsgiverens berettigede interesse veier tyngre enn de ansattes rettigheter.',
         nl: 'het monitoren is alleen toegestaan als andere, minder ingrijpende vormen niet al doeltreffend zijn gebleken en als het gerechtvaardigd belang van de werkgever zwaarder weegt dan de rechten van de werknemers.',
+        ru: "Мониторинг допускается, только если другие, менее интрузивные формы уже оказались неэффективными и если законный интерес работодателя преобладает над правами работников.",
       },
       fonte: FONTE_LEGGE_190_ART5,
     },
@@ -213,6 +222,7 @@ export const romania: SchedaPaese = {
         sv: 'Proportionerlig lagring, inte längre än 30 dagar med undantag (art. 5 bokstav e)',
         nb: 'Forholdsmessig lagring, ikke lenger enn 30 dager med unntak (art. 5 bokstav e)',
         nl: 'Evenredige bewaring, niet langer dan 30 dagen behoudens uitzonderingen (art. 5 lett. e)',
+        ru: "Соразмерный срок хранения, не более 30 дней, за исключением особых случаев (ст. 5 буква e)",
       },
       risposta: 'si',
       dettaglio: {
@@ -226,6 +236,7 @@ export const romania: SchedaPaese = {
         sv: 'Lagringstiden ska stå i proportion till ändamålet och får inte överstiga 30 dagar, utom i fall som föreskrivs i lag eller som är vederbörligen motiverade.',
         nb: 'Lagringstiden skal stå i forhold til formålet og være høyst 30 dager, unntatt i tilfeller som er fastsatt i lov eller behørig begrunnet.',
         nl: 'de bewaartermijn moet evenredig zijn aan het doel en mag niet langer zijn dan 30 dagen, behoudens bij wet voorziene of naar behoren gerechtvaardigde gevallen.',
+        ru: "Срок хранения должен быть соразмерен цели и не превышать 30 дней, за исключением случаев, предусмотренных законом или надлежащим образом обоснованных.",
       },
       fonte: FONTE_LEGGE_190_ART5,
     },
@@ -241,6 +252,7 @@ export const romania: SchedaPaese = {
         sv: 'Konsekvensbedömning (DPIA) vid systematisk geolokalisering av anställda (Decizia 174/2018)',
         nb: 'Personvernkonsekvensvurdering (DPIA) for systematisk geolokalisering av ansatte (Decizia 174/2018)',
         nl: 'Effectbeoordeling (DPIA) voor de systematische geolokalisatie van werknemers (Decizia 174/2018)',
+        ru: "Оценка воздействия (DPIA) при систематической геолокации сотрудников (Decizia 174/2018)",
       },
       risposta: 'si',
       dettaglio: {
@@ -254,6 +266,7 @@ export const romania: SchedaPaese = {
         sv: 'Den nationella listan gör konsekvensbedömning obligatorisk vid systematisk övervakning i stor skala av sårbara personer (inklusive anställda) och vid systematisk behandling av positionsuppgifter.',
         nb: 'Den nasjonale listen gjør personvernkonsekvensvurdering obligatorisk for systematisk overvåking i stor skala av sårbare personer (inkludert ansatte) og for systematisk behandling av posisjonsdata.',
         nl: 'de nationale lijst maakt de effectbeoordeling verplicht voor het systematisch grootschalig monitoren van kwetsbare personen (waaronder werknemers) en voor de systematische verwerking van locatiegegevens.',
+        ru: "Национальный перечень делает оценку воздействия обязательной для систематического мониторинга в большом масштабе в отношении уязвимых лиц (включая сотрудников) и для систематической обработки данных о местоположении.",
       },
       fonte: FONTE_ANSPDCP_DPIA,
     },
@@ -273,6 +286,7 @@ export const romania: SchedaPaese = {
         sv: 'Informera de anställda i förväg, obligatoriskt, fullständigt och uttryckligt (art. 5 bokstav b).',
         nb: 'Informer de ansatte på forhånd, obligatorisk, fullstendig og uttrykkelig (art. 5 bokstav b).',
         nl: 'Informeer de werknemers vooraf, verplicht, volledig en uitdrukkelijk (art. 5 lett. b).',
+        ru: "Заранее проинформируйте работников обязательным, полным и чётким образом (ст. 5 буква b).",
       },
     },
     {
@@ -288,6 +302,7 @@ export const romania: SchedaPaese = {
         sv: 'Samråd med fackföreningen eller de anställdas företrädare innan du inför systemet (art. 5 bokstav c).',
         nb: 'Rådfør deg med fagforeningen eller de ansattes representanter før systemet innføres (art. 5 bokstav c).',
         nl: 'Raadpleeg de vakbond of de werknemersvertegenwoordigers voordat u het systeem invoert (art. 5 lett. c).',
+        ru: "Проведите консультацию с профсоюзом или представителями сотрудников до введения системы (ст. 5 буква c).",
       },
     },
     {
@@ -303,6 +318,7 @@ export const romania: SchedaPaese = {
         sv: 'Kontrollera att andra mindre ingripande medel inte redan har räckt och dokumentera det övervägande berättigade intresset.',
         nb: 'Kontroller at andre, mindre inngripende midler ikke allerede har vært tilstrekkelige, og dokumenter den berettigede interessen som veier tyngst.',
         nl: 'Controleer of andere, minder ingrijpende middelen niet al volstonden en documenteer het overwegende gerechtvaardigde belang.',
+        ru: "Убедитесь, что другие, менее интрузивные средства уже оказались недостаточными, и задокументируйте преобладающий законный интерес.",
       },
     },
     {
@@ -318,6 +334,7 @@ export const romania: SchedaPaese = {
         sv: 'Genomför konsekvensbedömningen (DPIA) vid systematisk geolokalisering.',
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) for den systematiske geolokaliseringen.',
         nl: 'Voer de effectbeoordeling (DPIA) uit voor de systematische geolokalisatie.',
+        ru: "Проведите оценку воздействия (DPIA) для систематической геолокации.",
       },
     },
     {
@@ -333,6 +350,7 @@ export const romania: SchedaPaese = {
         sv: 'Begränsa lagringen till 30 dagar, utom motiverade undantag; använd uppgifterna endast för det angivna ändamålet.',
         nb: 'Begrens lagringen til 30 dager, unntatt begrunnede unntak; bruk opplysningene bare til det oppgitte formålet.',
         nl: 'Beperk de bewaring tot 30 dagen behoudens gerechtvaardigde uitzonderingen; gebruik de gegevens alleen voor het verklaarde doel.',
+        ru: "Ограничьте хранение 30 днями, за исключением обоснованных случаев; используйте данные только для заявленной цели.",
       },
     },
     {
@@ -348,6 +366,7 @@ export const romania: SchedaPaese = {
         sv: 'Om du byter övervakningssystem eller programvara: uppdatera och lämna ut informationen om personuppgiftsbehandling på nytt, och kontrollera om du åter måste informera eller samråda med de anställdas företrädare, där lagen kräver det. Leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och arbetssätten ändras ofta: den information som lämnades tidigare räcker inte.',
         nb: 'Hvis du bytter overvåkingssystem eller programvare, må du oppdatere og dele ut personvernerklæringen på nytt, og undersøke om du igjen må informere eller rådføre deg med de ansattes representanter, der loven krever det. Ofte endres leverandøren (databehandleren), de innsamlede opplysningene og metodene: informasjonen som ble gitt tidligere er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        ru: "Если вы меняете систему или программу мониторинга, обновите и повторно вручите уведомление об обработке данных и проверьте, нужно ли снова информировать представителей работников или проводить с ними консультацию, там, где этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее вручённого уведомления недостаточно.",
       },
     },
   ],
@@ -375,6 +394,7 @@ export const romania: SchedaPaese = {
       sv: '5 000 €',
       nb: '5 000 euro',
       nl: '5.000 €',
+      ru: "5 000 €",
     },
     casoCitato: {
       it: 'ANSPDCP contro Tehnoplus Industry SRL (23 marzo 2023): tracciamento GPS di un veicolo aziendale assegnato a un dipendente, con trattamento eccessivo dei dati di localizzazione fuori dall\'orario di servizio, senza aver prima esaurito metodi meno intrusivi, senza informare il dipendente e con conservazione oltre i 30 giorni. Multa complessiva 5.000 euro (3.000 + 2.000).',
@@ -387,6 +407,7 @@ export const romania: SchedaPaese = {
       sv: 'ANSPDCP mot Tehnoplus Industry SRL (23 mars 2023): GPS-spårning av ett tjänstefordon som tilldelats en anställd, med överdriven behandling av positionsuppgifter utanför arbetstid, utan att först ha uttömt mindre ingripande metoder, utan att informera den anställde och med lagring över 30 dagar. Sammanlagt vite 5 000 euro (3 000 + 2 000).',
       nb: 'ANSPDCP mot Tehnoplus Industry SRL (23. mars 2023): GPS-sporing av et firmakjøretøy tildelt en ansatt, med for omfattende behandling av posisjonsdata utenfor arbeidstid, uten først å ha uttømt mindre inngripende metoder, uten å informere den ansatte og med lagring ut over 30 dager. Samlet bot 5 000 euro (3 000 + 2 000).',
       nl: 'ANSPDCP tegen Tehnoplus Industry SRL (23 maart 2023): GPS-tracking van een aan een werknemer toegewezen bedrijfsvoertuig, met buitensporige verwerking van locatiegegevens buiten diensttijd, zonder eerst minder ingrijpende methoden te hebben uitgeput, zonder de werknemer te informeren en met bewaring langer dan 30 dagen. Totale boete 5.000 euro (3.000 + 2.000).',
+      ru: "ANSPDCP против Tehnoplus Industry SRL (23 марта 2023 г.): GPS-слежение за служебным автомобилем, закреплённым за сотрудником, с чрезмерной обработкой данных о местоположении вне рабочего времени, без предварительного исчерпания менее интрузивных методов, без информирования сотрудника и с хранением данных свыше 30 дней. Общий штраф 5 000 евро (3 000 + 2 000).",
     },
     urlFonte: FONTE_ANSPDCP_TEHNOPLUS.url,
     tipoImporto: 'caso-gps',

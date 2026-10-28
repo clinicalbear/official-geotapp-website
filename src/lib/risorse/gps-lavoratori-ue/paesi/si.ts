@@ -94,6 +94,7 @@ export const slovenia: SchedaPaese = {
       sv: 'Slovenien har en enda nationell myndighet, IP-RS; det finns ingen regional uppdelning. Den nationella lagen ZVOP-2 är ny (2023), så antalet offentliggjorda sanktioner är ännu litet.',
       nb: 'Slovenia har én nasjonal myndighet, IP-RS; det finnes ingen regional inndeling. Den nasjonale loven ZVOP-2 er ny (2023), så det er fortsatt få offentliggjorte sanksjoner.',
       nl: 'Slovenie heeft een enkele nationale autoriteit, de IP-RS; er is geen regionale verdeling. De nationale wet ZVOP-2 is recent (2023), dus er zijn nog weinig gepubliceerde boetes.',
+      ru: "В Словении действует единый национальный орган, IP-RS; региональных подразделений нет. Национальный закон ZVOP-2 принят недавно (2023), поэтому опубликованных санкций пока немного.",
     },
   },
 
@@ -110,6 +111,7 @@ export const slovenia: SchedaPaese = {
         sv: 'Proportionalitetsprövning: urskillningslös spårning av anställda saknar rättslig grund (IP-RS)',
         nb: 'Proporsjonalitetsvurdering: vilkårlig sporing av ansatte mangler rettslig grunnlag (IP-RS)',
         nl: 'Evenredigheidstoets: het ongedifferentieerd volgen van werknemers heeft geen rechtsgrondslag (IP-RS)',
+        ru: "Тест соразмерности: неизбирательное отслеживание работников не имеет правового основания (IP-RS)",
       },
       risposta: 'si',
       dettaglio: {
@@ -123,6 +125,7 @@ export const slovenia: SchedaPaese = {
         sv: 'Enligt den slovenska tillsynsmyndigheten når urskillningslös GPS-spårning av anställda inte upp till nödvändighetskravet för utövandet av anställningsförhållandets rättigheter och skyldigheter: i så fall saknas rättslig grund. Proportionalitetsprövningen måste klaras (nödvändighet, lämplighet, proportionalitet i strikt mening).',
         nb: 'Ifølge den slovenske tilsynsmyndigheten oppfyller vilkårlig GPS-sporing av ansatte ikke nødvendighetskravet for utøvelsen av arbeidsforholdets rettigheter og plikter: i så fall mangler det rettslige grunnlaget. Proporsjonalitetsvurderingen må bestås (nødvendighet, egnethet, proporsjonalitet i snever forstand).',
         nl: "Volgens de Sloveense autoriteit voldoet het ongedifferentieerd volgen van werknemers via GPS niet aan de noodzakelijkheidsnorm voor de uitoefening van de rechten en plichten van de arbeidsverhouding: in dat geval ontbreekt de rechtsgrondslag. De evenredigheidstoets (noodzaak, geschiktheid, evenredigheid in strikte zin) moet worden doorstaan.",
+        ru: "По позиции словенского надзорного органа неизбирательное отслеживание работников по GPS не отвечает стандарту необходимости для осуществления прав и обязанностей из трудовых отношений: в таком случае правовое основание отсутствует. Необходимо пройти тест соразмерности (необходимость, пригодность, соразмерность в узком смысле).",
       },
       fonte: FONTE_IPRS_GPS,
     },
@@ -138,6 +141,7 @@ export const slovenia: SchedaPaese = {
         sv: 'Rättslig grund = fullgörande av avtal (ZDR-1 art. 48) eller berättigat intresse, inte samtycke',
         nb: 'Rettslig grunnlag = oppfyllelse av avtalen (ZDR-1 art. 48) eller berettiget interesse, ikke samtykke',
         nl: 'Rechtsgrondslag = uitvoering van de overeenkomst (ZDR-1 art. 48) of gerechtvaardigd belang, niet de toestemming',
+        ru: "Правовое основание: исполнение договора (ZDR-1, ст. 48) или законный интерес, но не согласие",
       },
       risposta: 'si',
       dettaglio: {
@@ -151,6 +155,7 @@ export const slovenia: SchedaPaese = {
         sv: 'Grunden är fullgörandet av anställningsförhållandet (art. 48 ZDR-1) eller berättigat intresse; den anställdes samtycke är sällan giltigt på grund av maktobalansen.',
         nb: 'Grunnlaget er oppfyllelsen av arbeidsforholdet (art. 48 ZDR-1) eller berettiget interesse; den ansattes samtykke er sjelden gyldig på grunn av skjevheten i maktforholdet.',
         nl: "De grondslag is de uitvoering van de arbeidsverhouding (art. 48 ZDR-1) of het gerechtvaardigd belang; de toestemming van de werknemer is door de machtsongelijkheid nauwelijks geldig.",
+        ru: "Основанием служит исполнение трудовых отношений (ст. 48 ZDR-1) или законный интерес; согласие работника вряд ли будет действительным из-за неравенства сторон.",
       },
       fonte: FONTE_IPRS_GPS,
     },
@@ -166,6 +171,7 @@ export const slovenia: SchedaPaese = {
         sv: 'Förhandstillstånd från en myndighet innan systemet installeras',
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit voor installatie',
+        ru: "Предварительное разрешение органа перед установкой",
       },
       risposta: 'no',
       dettaglio: {
@@ -179,6 +185,7 @@ export const slovenia: SchedaPaese = {
         sv: 'Något förhandstillstånd från IP-RS behövs inte; den personuppgiftsansvarige bedömer själv rättslig grund, proportionalitet och DPIA.',
         nb: 'Det kreves ingen forhåndstillatelse fra IP-RS; den behandlingsansvarlige vurderer selv rettslig grunnlag, proporsjonalitet og personvernkonsekvensvurdering (DPIA).',
         nl: "Er is geen voorafgaande toestemming van de IP-RS nodig; de verwerkingsverantwoordelijke beoordeelt zelf de rechtsgrondslag, de evenredigheid en de DPIA.",
+        ru: "Предварительное разрешение IP-RS не требуется; оператор сам оценивает правовое основание, соразмерность и DPIA.",
       },
       fonte: FONTE_IPRS_GPS,
     },
@@ -194,6 +201,7 @@ export const slovenia: SchedaPaese = {
         sv: 'Ingen kontinuerlig övervakning: endast enstaka eller aktuella uppgifter, ingen permanent lagring; säkerhetsenhet som kan stängas av',
         nb: 'Ingen løpende overvåking: bare enkeltstående eller øyeblikkelige opplysninger, ingen permanent lagring; sikkerhetsenhet som kan slås av',
         nl: 'Geen continue bewaking: alleen momentopname- of realtimegegevens, geen permanente opslag; uitschakelbaar veiligheidsapparaat',
+        ru: "Никакого непрерывного наблюдения: только точечные данные или данные в реальном времени, без постоянного хранения; устройство безопасности с возможностью отключения",
       },
       risposta: 'si',
       dettaglio: {
@@ -207,6 +215,7 @@ export const slovenia: SchedaPaese = {
         sv: 'Enligt IP-RS är kontinuerlig spårning inte proportionerlig när enstaka eller aktuella uppgifter utan lagring skulle räcka; en enhet som enbart är till för säkerhet ska kunna förbli avstängd tills den anställde aktiverar den.',
         nb: 'Ifølge IP-RS er løpende sporing ikke proporsjonal når enkeltstående eller øyeblikkelige opplysninger uten lagring ville være nok; en enhet som bare er til for sikkerhet, skal kunne forbli avslått til den ansatte aktiverer den.',
         nl: "Voor de IP-RS is continu volgen niet evenredig wanneer momentopname- of realtimegegevens zonder opslag zouden volstaan; een apparaat dat uitsluitend voor de veiligheid bedoeld is, moet uitgeschakeld kunnen blijven totdat de werknemer het inschakelt.",
+        ru: "По позиции IP-RS непрерывное отслеживание несоразмерно, когда достаточно точечных данных или данных в реальном времени без хранения; устройство, предназначенное только для безопасности, должно оставаться отключённым, пока работник сам его не включит.",
       },
       fonte: FONTE_IPRS_GPS,
     },
@@ -222,6 +231,7 @@ export const slovenia: SchedaPaese = {
         sv: 'Information till de anställda och intern akt; information till arbetstagarrådet om ett sådant finns (ZSDU)',
         nb: 'Informasjon til de ansatte og internt regelverk; informasjon til arbeidstakerrådet hvis det finnes et (ZSDU)',
         nl: 'Informatie aan werknemers en intern besluit; informatie van de ondernemingsraad indien aanwezig (ZSDU)',
+        ru: "Информирование работников и внутренний акт; информирование совета работников, если он существует (ZSDU)",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -235,6 +245,7 @@ export const slovenia: SchedaPaese = {
         sv: 'Arbetsgivaren ska informera de anställda (art. 13 GDPR) och, enligt IP-RS, innan systemet införs anta en intern akt (reglemente) som beskriver funktion, insamlade uppgifter, ändamål och lagringstider. Där det finns ett arbetstagarråd föreskriver lagen om de anställdas delaktighet (ZSDU, art. 89-90) i allmänhet att det ska informeras innan beslut om teknikförändringar fattas; för GPS finns ingen särskild regel (det samråd med företrädare som ZVOP-2 föreskriver gäller kameraövervakning).',
         nb: 'Arbeidsgiveren skal informere de ansatte (art. 13 GDPR) og, ifølge IP-RS, før systemet innføres vedta et internt regelverk som beskriver funksjon, innsamlede opplysninger, formål og lagringstider. Der det finnes et arbeidstakerråd, fastsetter loven om de ansattes medvirkning (ZSDU, art. 89-90) generelt at det skal informeres før beslutninger om teknologiendringer tas; for GPS finnes det ingen særskilt regel (rådføringen med representanter som ZVOP-2 fastsetter, gjelder kameraovervåking).',
         nl: "De werkgever moet de werknemers informeren (art. 13 AVG) en volgens de IP-RS vóór de invoering van het systeem een intern besluit (reglement) vaststellen dat de werking, de verzamelde gegevens, de doeleinden en de bewaartermijnen beschrijft. Waar een ondernemingsraad bestaat, verplicht de wet over de medezeggenschap van werknemers (ZSDU, art. 89-90) in het algemeen om deze vóór besluiten over technologische wijzigingen te informeren; voor GPS bestaat geen specifieke regel (de raadpleging van vertegenwoordigers in de ZVOP-2 betreft camerabewaking).",
+        ru: "Работодатель должен проинформировать работников (ст. 13 GDPR) и, по позиции IP-RS, до внедрения системы принять внутренний акт (положение), описывающий работу системы, собираемые данные, цели и сроки хранения. Там, где существует совет работников, закон об участии работников в управлении (ZSDU, ст. 89-90) в целом требует информировать его до принятия решений об изменении технологий; специального правила для GPS нет (консультации с представителями, предусмотренные ZVOP-2, касаются видеонаблюдения).",
       },
       fonte: FONTE_IPRS_SLEDENJE,
     },
@@ -250,6 +261,7 @@ export const slovenia: SchedaPaese = {
         sv: 'Konsekvensbedömning (DPIA) för geolokalisering och de anställdas uppgifter (IP-RS:s lista)',
         nb: "Personvernkonsekvensvurdering (DPIA) for geolokalisering og de ansattes opplysninger (IP-RS' liste)",
         nl: 'Gegevensbeschermingseffectbeoordeling (DPIA) voor geolocatie en werknemersgegevens (lijst van de IP-RS)',
+        ru: "Оценка воздействия (DPIA) для геолокации и данных работников (перечень IP-RS)",
       },
       risposta: 'si',
       dettaglio: {
@@ -263,6 +275,7 @@ export const slovenia: SchedaPaese = {
         sv: 'Tillsynsmyndigheten rekommenderar att göra en konsekvensbedömning innan GPS-enheter införs, och geolokalisering och de anställdas uppgifter finns på listan som kräver en sådan.',
         nb: 'Tilsynsmyndigheten anbefaler å gjennomføre en personvernkonsekvensvurdering før GPS-enheter innføres, og geolokalisering og de ansattes opplysninger står på listen som krever en slik.',
         nl: "De autoriteit beveelt aan een effectbeoordeling uit te voeren voordat GPS-apparaten worden ingevoerd, en geolocatie en werknemersgegevens staan op de lijst die deze vereist.",
+        ru: "Надзорный орган рекомендует провести оценку воздействия до внедрения GPS-устройств, а геолокация и данные работников входят в перечень, который её требует.",
       },
       fonte: FONTE_IPRS_DPIA,
     },
@@ -282,6 +295,7 @@ export const slovenia: SchedaPaese = {
         sv: 'Klara proportionalitetsprövningen: ingen urskillningslös spårning, välj det minst ingripande medlet.',
         nb: 'Bestå proporsjonalitetsvurderingen: ingen vilkårlig sporing, velg det minst inngripende middelet.',
         nl: 'Doorsta de evenredigheidstoets: geen ongedifferentieerd volgen, kies het minst ingrijpende middel.',
+        ru: "Пройдите тест соразмерности: никакого неизбирательного отслеживания, выбирайте наименее инвазивное средство.",
       },
     },
     {
@@ -297,6 +311,7 @@ export const slovenia: SchedaPaese = {
         sv: 'Identifiera en giltig rättslig grund (fullgörande av avtal, art. 48 ZDR-1, eller berättigat intresse).',
         nb: 'Finn et gyldig rettslig grunnlag (oppfyllelse av avtalen, art. 48 ZDR-1, eller berettiget interesse).',
         nl: 'Bepaal een geldige rechtsgrondslag (uitvoering van de overeenkomst, art. 48 ZDR-1, of gerechtvaardigd belang).',
+        ru: "Определите действительное правовое основание (исполнение договора, ст. 48 ZDR-1, или законный интерес).",
       },
     },
     {
@@ -312,6 +327,7 @@ export const slovenia: SchedaPaese = {
         sv: 'Anta en intern akt och informera de anställda; informera arbetstagarrådet om ett sådant finns.',
         nb: 'Vedta et internt regelverk og informer de ansatte; informer arbeidstakerrådet hvis det finnes et.',
         nl: 'Stel een intern besluit vast en informeer de werknemers; informeer de ondernemingsraad indien aanwezig.',
+        ru: "Примите внутренний акт и проинформируйте работников; проинформируйте совет работников, если он существует.",
       },
     },
     {
@@ -327,6 +343,7 @@ export const slovenia: SchedaPaese = {
         sv: 'Genomför konsekvensbedömningen (DPIA) innan du inför GPS.',
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) før du innfører GPS.',
         nl: 'Voer de gegevensbeschermingseffectbeoordeling (DPIA) uit voordat u de GPS invoert.',
+        ru: "Проведите оценку воздействия (DPIA) до внедрения GPS.",
       },
     },
     {
@@ -342,6 +359,7 @@ export const slovenia: SchedaPaese = {
         sv: 'Konfigurera systemet: ingen kontinuerlig övervakning, ingen permanent lagring, säkerhetsenheter som kan stängas av.',
         nb: 'Konfigurer systemet: ingen løpende overvåking, ingen permanent lagring, sikkerhetsenheter som kan slås av.',
         nl: 'Configureer het systeem: geen continue bewaking, geen permanente opslag, uitschakelbare veiligheidsapparaten.',
+        ru: "Настройте систему: никакого непрерывного наблюдения, никакого постоянного хранения, устройства безопасности с возможностью отключения.",
       },
     },
     {
@@ -357,6 +375,7 @@ export const slovenia: SchedaPaese = {
         sv: 'Om du byter övervakningssystem eller programvara: uppdatera och lämna ut informationen om personuppgiftsbehandling på nytt, och kontrollera om du åter måste informera eller samråda med de anställdas företrädare, där lagen kräver det. Leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och arbetssätten ändras ofta: den information som lämnades tidigare räcker inte.',
         nb: 'Hvis du bytter overvåkingssystem eller programvare: oppdater og utlever informasjonen om behandling av personopplysninger på nytt, og kontroller om du på nytt må informere eller rådføre deg med de ansattes representanter, der loven krever det. Leverandøren (databehandleren), de innsamlede opplysningene og arbeidsmåtene endrer seg ofte: informasjonen som ble utlevert tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        ru: "При смене системы или программы мониторинга обновите и повторно вручите уведомление об обработке данных, а также проверьте, нужно ли снова информировать представителей работников или консультироваться с ними, если этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее врученного уведомления недостаточно.",
       },
     },
   ],
@@ -384,6 +403,7 @@ export const slovenia: SchedaPaese = {
       sv: '6 000 euro för företaget och 600 för den ansvariga personen (IP-RS, 2026)',
       nb: '6 000 euro til selskapet og 600 til den ansvarlige personen (IP-RS, 2026)',
       nl: '6.000 euro voor het bedrijf en 600 voor de verantwoordelijke persoon (IP-RS, 2026)',
+      ru: "6 000 евро компании и 600 евро ответственному лицу (IP-RS, 2026)",
     },
     casoCitato: {
       it: "Il 15 aprile 2026 l'IP-RS ha comunicato una multa di 6.000 euro (600 euro alla persona responsabile) a un'azienda pubblica di servizi che raccoglieva in modo continuo e indiscriminato i dati di posizione dei dipendenti dai GPS dei veicoli aziendali, senza una base giuridica valida, senza valutare mezzi meno invasivi e senza informare adeguatamente i lavoratori. Il massimo di legge resta quello del GDPR, fino a 20 milioni di euro o il 4% del fatturato (art. 83; ZVOP-2 art. 95).",
@@ -396,6 +416,7 @@ export const slovenia: SchedaPaese = {
       sv: 'Den 15 april 2026 meddelade IP-RS ett vite på 6 000 euro (600 euro för den ansvariga personen) mot ett offentligt tjänsteföretag som kontinuerligt och urskillningslöst samlade in de anställdas positionsuppgifter från GPS i tjänstefordon, utan giltig rättslig grund, utan att bedöma mindre ingripande medel och utan att informera de anställda på ett tillfredsställande sätt. Lagens maximum är fortfarande GDPR:s, upp till 20 miljoner euro eller 4 % av omsättningen (art. 83; ZVOP-2 art. 95).',
       nb: 'Den 15. april 2026 meddelte IP-RS en bot på 6 000 euro (600 euro til den ansvarlige personen) til et offentlig tjenesteselskap som løpende og vilkårlig samlet inn de ansattes posisjonsopplysninger fra GPS i tjenestebiler, uten gyldig rettslig grunnlag, uten å vurdere mindre inngripende midler og uten å informere de ansatte på en tilfredsstillende måte. Lovens maksimum er fortsatt GDPRs, opptil 20 millioner euro eller 4 % av omsetningen (art. 83; ZVOP-2 art. 95).',
       nl: "Op 15 april 2026 maakte de IP-RS een boete van 6.000 euro bekend (600 euro voor de verantwoordelijke persoon) voor een openbaar nutsbedrijf dat de locatiegegevens van werknemers via de GPS-units van bedrijfsvoertuigen continu en ongedifferentieerd verzamelde, zonder geldige rechtsgrondslag, zonder mildere middelen te onderzoeken en zonder de werknemers voldoende te informeren. Het wettelijke maximum blijft dat van de AVG, tot 20 miljoen euro of 4% van de omzet (art. 83; ZVOP-2 art. 95).",
+      ru: "15 апреля 2026 г. IP-RS сообщил о штрафе в 6 000 евро (600 евро ответственному лицу) в отношении государственной коммунальной компании, которая непрерывно и неизбирательно собирала данные о местоположении работников с GPS служебных автомобилей без действительного правового основания, не оценив менее инвазивные средства и не проинформировав работников надлежащим образом. Максимум, установленный законом, остаётся тем же, что и в GDPR: до 20 млн евро или 4% оборота (ст. 83; ZVOP-2, ст. 95).",
     },
     urlFonte: FONTE_IPRS_MULTA_2026.url,
     tipoImporto: 'caso-gps',

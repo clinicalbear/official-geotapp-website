@@ -106,6 +106,7 @@ export const estonia: SchedaPaese = {
       sv: 'Estland har en enda nationell myndighet, AKI; ingen regional uppdelning. En särskild egenskap: GDPR-böter går via förfarandet för förseelser (misdemeanour); sedan november 2023 är taket anpassat till GDPR.',
       nb: 'Estland har én nasjonal myndighet, AKI; ingen regional inndeling. En særegenhet: GDPR-bøter går gjennom prosedyren for mindre lovbrudd; bøtetaket er GDPRs.',
       nl: 'Estland heeft een enkele nationale autoriteit, de AKI; geen regionale verdeling. Een bijzonderheid: AVG-boetes lopen via de overtredingsprocedure; sinds november 2023 is het plafond afgestemd op de AVG.',
+      ru: "В Эстонии единственный национальный орган, AKI; региональных подразделений нет. Особенность: штрафы по GDPR налагаются в порядке производства по проступкам; верхний предел штрафов такой же, как в GDPR.",
     },
   },
 
@@ -122,6 +123,7 @@ export const estonia: SchedaPaese = {
         sv: 'Förhandsinformation till de anställda och en dokumenterad rättslig grund (berättigat intresse, inte samtycke)',
         nb: 'Forhåndsinformasjon til de ansatte og et dokumentert behandlingsgrunnlag (berettiget interesse, ikke samtykke)',
         nl: 'Voorafgaande informatie aan werknemers en een gedocumenteerde rechtsgrond (gerechtvaardigd belang, niet toestemming)',
+        ru: "Предварительное информирование работников и задокументированное правовое основание (законный интерес, не согласие)",
       },
       risposta: 'si',
       dettaglio: {
@@ -135,6 +137,7 @@ export const estonia: SchedaPaese = {
         sv: 'Arbetsgivaren ska förklara för de anställda på vilken rättslig grund GPS:en installeras; i anställningsförhållandet är samtycke normalt inte en giltig grund på grund av maktobalansen, och grunden är som regel berättigat intresse (med en stödjande analys) eller fullgörande av anställningsavtalet.',
         nb: 'Arbeidsgiveren må forklare de ansatte på hvilket behandlingsgrunnlag GPS installeres; i arbeidsforholdet er samtykke normalt ikke et gyldig grunnlag på grunn av den skjeve maktbalansen, og grunnlaget er som hovedregel berettiget interesse (med en tilhørende analyse) eller oppfyllelse av arbeidsavtalen.',
         nl: 'De werkgever moet werknemers uitleggen op welke rechtsgrond de GPS is geïnstalleerd; in de arbeidsrelatie is toestemming door de machtsongelijkheid doorgaans geen geldige grondslag, en de grondslag is in de regel gerechtvaardigd belang (met een onderbouwende analyse) of uitvoering van de arbeidsovereenkomst.',
+        ru: "Работодатель должен объяснить работникам, на каком правовом основании устанавливается GPS; в трудовых отношениях согласие, как правило, не является действительным основанием из-за неравенства сторон: основанием, как правило, служит законный интерес (с соответствующим анализом) либо исполнение трудового договора.",
       },
       fonte: FONTE_AKI_RAPPORTI,
     },
@@ -150,6 +153,7 @@ export const estonia: SchedaPaese = {
         sv: 'Obligatoriskt samtycke eller överenskommelse med företagsrådet före installationen',
         nb: 'Obligatorisk samtykke eller avtale med et bedriftsråd før installasjon',
         nl: 'Verplichte instemming of overeenkomst van de ondernemingsraad voor de installatie',
+        ru: "Обязательное согласие или соглашение производственного совета до установки",
       },
       risposta: 'no',
       dettaglio: {
@@ -163,6 +167,7 @@ export const estonia: SchedaPaese = {
         sv: 'Estland kräver inget obligatoriskt samtycke eller någon överenskommelse med ett företagsråd; filtren är GDPR, AKI:s riktlinjer och principen om nödvändighet och proportionalitet. Med minst 30 anställda måste arbetsgivaren dock informera och samråda med de anställdas förtroendeman (eller, om det saknas, de anställda) om planerade beslut som sannolikt medför väsentliga förändringar i arbetets organisation: detta kan omfatta införandet av ett övervakningssystem (Employees\' Trustee Act, §§ 17 och 20).',
         nb: 'Estland krever ikke et obligatorisk samtykke eller en avtale med et bedriftsråd; rammene er GDPR, AKIs retningslinjer og prinsippet om nødvendighet og forholdsmessighet. Med minst 30 ansatte må arbeidsgiveren imidlertid informere og rådføre seg med de ansattes tillitsvalgte (eller, hvis det ikke finnes noen, de ansatte) om planlagte beslutninger som sannsynligvis medfører vesentlige endringer i organiseringen av arbeidet: det kan omfatte innføringen av et overvåkingssystem (loven om tillitsvalgte, §§ 17 og 20).',
         nl: 'Estland vereist geen verplichte instemming of overeenkomst van een ondernemingsraad; de toetsstenen zijn de AVG, de richtsnoeren van de AKI en het beginsel van noodzaak en evenredigheid. Bij minstens 30 werknemers moet de werkgever echter de vertrouwenspersoon van de werknemers (of, bij ontstentenis, de werknemers) informeren en raadplegen over voorgenomen besluiten die tot belangrijke wijzigingen in de arbeidsorganisatie leiden: dit kan de invoering van een monitoringsysteem betreffen (wet op de vertrouwenspersoon van werknemers, §§ 17 en 20).',
+        ru: "Эстонское право не предусматривает обязательного согласия или соглашения производственного совета; ограничениями служат GDPR, руководящие указания AKI и принцип необходимости и соразмерности. Однако при численности не менее 30 работников работодатель должен информировать доверенное лицо работников (а при его отсутствии самих работников) и проводить с ним консультации по решениям, влекущим существенные изменения в организации труда: это может относиться и к введению системы мониторинга (закон о доверенном лице работников, §§ 17 и 20).",
       },
       fonte: FONTE_TUIS,
     },
@@ -178,6 +183,7 @@ export const estonia: SchedaPaese = {
         sv: 'Förhandstillstånd från en myndighet före installationen',
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit voor de installatie',
+        ru: "Предварительное разрешение органа до установки",
       },
       risposta: 'no',
       dettaglio: {
@@ -191,6 +197,7 @@ export const estonia: SchedaPaese = {
         sv: 'Inget förhandstillstånd från AKI krävs; den personuppgiftsansvarige bedömer själv den rättsliga grunden och proportionaliteten.',
         nb: 'Det kreves ingen forhåndstillatelse fra AKI; den behandlingsansvarlige vurderer selv behandlingsgrunnlag og forholdsmessighet.',
         nl: 'Een voorafgaande toestemming van de AKI is niet nodig; de verwerkingsverantwoordelijke beoordeelt zelf de rechtsgrond en de evenredigheid.',
+        ru: "Предварительное разрешение AKI не требуется; оператор самостоятельно оценивает правовое основание и соразмерность.",
       },
       fonte: FONTE_AKI_RAPPORTI,
     },
@@ -206,6 +213,7 @@ export const estonia: SchedaPaese = {
         sv: 'Proportionerlig GPS, med den minst ingripande åtgärden; ingen löpande spårning utanför arbetstid',
         nb: 'Forholdsmessig GPS med det minst inngripende tiltaket; ingen løpende sporing utenfor arbeidstid',
         nl: 'Evenredige GPS met de minst ingrijpende maatregel; geen realtime volgen buiten werktijd',
+        ru: "Соразмерный GPS с наименее инвазивной мерой; никакого отслеживания в реальном времени вне рабочего времени",
       },
       risposta: 'si',
       dettaglio: {
@@ -219,6 +227,7 @@ export const estonia: SchedaPaese = {
         sv: 'För AKI är övervakningsanordningar (GPS inkluderat) det mest intensiva intrånget i privatlivet: arbetsgivaren ska välja den åtgärd som är minst skadlig för den anställde, ha en rättslig grund och behandla uppgifter proportionerligt mot riskerna. Enligt AKI:s vägledning från 2011 (före GDPR) får arbetsgivaren inte följa en anställd löpande med GPS utanför arbetstid.',
         nb: 'For AKI er overvåkingsutstyr (herunder GPS) det mest intensive inngrepet i privatlivet: arbeidsgiveren må velge det tiltaket som er minst skadelig for den ansatte, ha et behandlingsgrunnlag og behandle opplysningene forholdsmessig i forhold til risikoen. Ifølge AKIs veiledning fra 2011 (før GDPR) kan ikke arbeidsgiveren følge en ansatt løpende med GPS utenfor arbeidstid.',
         nl: "Volgens de AKI zijn bewakingsapparaten (gps inbegrepen) de meest intensieve inbreuk op het privéleven: de werkgever moet de voor de werknemer minst schadelijke maatregel kiezen, een rechtsgrond hebben en de gegevens evenredig aan de risico's verwerken. Volgens de gids van de AKI uit 2011 (van vóór de AVG) mag de werkgever een werknemer buiten werktijd niet in realtime met gps volgen.",
+        ru: "По мнению AKI, устройства наблюдения (включая GPS) представляют собой наиболее сильное вмешательство в частную жизнь: работодатель должен выбрать меру, наименее вредную для работника, иметь правовое основание и обрабатывать данные соразмерно рискам. Согласно руководству AKI 2011 г. (до GDPR) работодатель не может следить за работником с помощью GPS в реальном времени вне рабочего времени.",
       },
       fonte: FONTE_AKI_RAPPORTI,
     },
@@ -234,6 +243,7 @@ export const estonia: SchedaPaese = {
         sv: 'Konsekvensbedömning (DPIA) för systematisk övervakning av de anställdas verksamhet och löpande positionsspårning (AKI:s förteckning)',
         nb: 'Personvernkonsekvensvurdering (DPIA) for systematisk overvåking av de ansattes aktiviteter og løpende sporing av posisjon (AKIs liste)',
         nl: 'Gegevensbeschermingseffectbeoordeling (DPIA) voor de systematische monitoring van de activiteiten van werknemers en het realtime volgen van de locatie (AKI-lijst)',
+        ru: "Оценка воздействия (DPIA) при систематическом мониторинге деятельности работников и отслеживании местоположения в реальном времени (перечень AKI)",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -247,6 +257,7 @@ export const estonia: SchedaPaese = {
         sv: 'AKI:s förteckning omfattar, bland de fall som kräver en konsekvensbedömning, storskalig behandling som innebär systematisk övervakning av de anställdas verksamhet och storskalig behandling som innebär löpande positionsspårning. Skyldigheten gäller alltså storskalig behandling (antal registrerade, uppgiftsmängd, varaktighet, geografisk omfattning); under den tröskeln måste risken ändå bedömas från fall till fall.',
         nb: 'AKIs liste omfatter, blant tilfellene som krever en personvernkonsekvensvurdering, behandling i stor skala som innebærer systematisk overvåking av de ansattes aktiviteter, og behandling i stor skala som innebærer løpende sporing av posisjon. Plikten gjelder derfor behandling i stor skala (antall registrerte, datamengde, varighet, geografisk utstrekning); under den terskelen må risikoen likevel vurderes fra sak til sak.',
         nl: 'De AKI-lijst noemt onder de gevallen die een effectbeoordeling vereisen de grootschalige verwerking met systematische monitoring van de activiteiten van werknemers en de grootschalige verwerking met realtime locatiebepaling. De verplichting geldt dus voor grootschalige verwerkingen (aantal betrokkenen, gegevensvolume, duur, geografische reikwijdte); daaronder moet het risico per geval worden beoordeeld.',
+        ru: "Перечень AKI включает в число случаев, требующих оценки воздействия, обработку в крупном масштабе, предполагающую систематический мониторинг деятельности работников, и обработку в крупном масштабе, предполагающую отслеживание местоположения в реальном времени. Таким образом, обязанность возникает для обработки в крупном масштабе (число субъектов данных, объём данных, продолжительность, географический охват); ниже этого порога риск всё равно необходимо оценивать в каждом случае отдельно.",
       },
       fonte: FONTE_AKI_DPIA,
     },
@@ -266,6 +277,7 @@ export const estonia: SchedaPaese = {
         sv: 'Fastställ en giltig rättslig grund (berättigat intresse, inte samtycke) och dokumentera den.',
         nb: 'Finn et gyldig behandlingsgrunnlag (berettiget interesse, ikke samtykke), og dokumenter det.',
         nl: 'Bepaal een geldige rechtsgrond (gerechtvaardigd belang, niet toestemming) en documenteer deze.',
+        ru: "Определите действительное правовое основание (законный интерес, не согласие) и задокументируйте его.",
       },
     },
     {
@@ -281,6 +293,7 @@ export const estonia: SchedaPaese = {
         sv: 'Kontrollera att behandlingen är proportionerlig mot de faktiska riskerna.',
         nb: 'Kontroller at behandlingen er forholdsmessig i forhold til de faktiske risikoene.',
         nl: 'Controleer of de verwerking evenredig is aan de werkelijke risicos.',
+        ru: "Убедитесь, что обработка соразмерна реальным рискам.",
       },
     },
     {
@@ -296,6 +309,7 @@ export const estonia: SchedaPaese = {
         sv: 'Genomför konsekvensbedömningen (DPIA) om den systematiska övervakningen eller den löpande positionsspårningen är storskalig, och bedöm under alla omständigheter risken.',
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) hvis den systematiske overvåkingen eller den løpende sporingen av posisjon skjer i stor skala, og vurder under alle omstendigheter risikoen.',
         nl: 'Voer de gegevensbeschermingseffectbeoordeling (DPIA) uit als de systematische monitoring of het realtime volgen grootschalig is, en beoordeel in elk geval het risico.',
+        ru: "Проведите оценку воздействия (DPIA), если систематический мониторинг или отслеживание в реальном времени ведётся в крупном масштабе, и в любом случае оцените риск.",
       },
     },
     {
@@ -311,6 +325,7 @@ export const estonia: SchedaPaese = {
         sv: 'Informera de anställda i förväg (art. 13 GDPR) och förklara GPS:ens rättsliga grund.',
         nb: 'Informer de ansatte på forhånd (art. 13 i GDPR), og forklar behandlingsgrunnlaget for GPS-en.',
         nl: 'Informeer de werknemers vooraf (art. 13 AVG) en leg de rechtsgrond van de GPS uit.',
+        ru: "Заранее проинформируйте работников (ст. 13 GDPR), объяснив правовое основание GPS.",
       },
     },
     {
@@ -326,6 +341,7 @@ export const estonia: SchedaPaese = {
         sv: 'Konfigurera systemet: ingen löpande spårning utanför arbetstid och den minst ingripande åtgärden som är möjlig.',
         nb: 'Konfigurer systemet: ingen løpende sporing utenfor arbeidstid og det minst mulig inngripende tiltaket.',
         nl: 'Configureer het systeem: geen realtime volgen buiten werktijd en de minst ingrijpende maatregel.',
+        ru: "Настройте систему: никакого отслеживания в реальном времени вне рабочего времени и наименее инвазивная из возможных мер.",
       },
     },
     {
@@ -341,6 +357,7 @@ export const estonia: SchedaPaese = {
         sv: 'Om du byter system: när du byter övervakningssystem eller programvara ska du uppdatera och dela ut integritetsinformationen på nytt, och kontrollera om du måste informera eller samråda med de anställdas företrädare igen, där lagen kräver det. Leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och metoderna ändras ofta: den information som lämnades tidigare räcker inte.',
         nb: 'Hvis du bytter system: når du bytter overvåkingssystem eller programvare, skal du oppdatere og dele ut personvernopplysningene på nytt, og kontrollere om du på nytt må informere eller rådføre deg med de ansattes representanter, der loven krever det. Leverandøren (databehandleren), de innsamlede opplysningene og metodene endrer seg ofte: opplysningene som ble gitt tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        ru: "Если вы меняете систему или программу мониторинга, обновите и повторно вручите уведомление о защите данных и проверьте, нужно ли снова информировать представителей работников или проводить с ними консультации, если это предусмотрено законом. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее врученного уведомления недостаточно.",
       },
     },
   ],
@@ -368,6 +385,7 @@ export const estonia: SchedaPaese = {
       sv: 'upp till 20 miljoner euro eller 4 % av omsättningen (GDPR)',
       nb: 'opptil 20 millioner euro eller 4 % av omsetningen (GDPR)',
       nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
+      ru: "до 20 млн евро или 4% оборота (GDPR)",
     },
     casoCitato: {
       it: "Non risulta una multa dell'AKI specifica pubblicata per il GPS sui dipendenti. In Estonia le multe GDPR passano per la procedura per contravvenzioni, di cui l'AKI è l'organo extragiudiziale; il tetto della legge estone (art. 65 della legge sulla protezione dei dati) coincide con quello del GDPR: fino a 20 milioni di euro o 4% del fatturato mondiale. Dal 1° novembre 2023 queste contravvenzioni si prescrivono in tre anni. L'AKI ha pubblicato indicazioni specifiche su videosorveglianza, GPS e altri strumenti di controllo dei dipendenti.",
@@ -380,6 +398,7 @@ export const estonia: SchedaPaese = {
       sv: 'Det finns ingen specifik, offentliggjord AKI-sanktion för GPS på anställda. I Estland går GDPR-böter via förfarandet för förseelser (misdemeanour), där AKI är organet utanför domstol; taket i estnisk rätt (Personal Data Protection Act, § 65) motsvarar GDPR: upp till 20 miljoner euro eller 4 % av den globala omsättningen. Sedan den 1 november 2023 omfattas dessa förseelser av en preskriptionstid på tre år. AKI har offentliggjort särskild vägledning om kameraövervakning, GPS och andra verktyg för övervakning av anställda.',
       nb: 'Det er ikke offentliggjort noen konkret AKI-bot for GPS på ansatte. I Estland går GDPR-bøter gjennom prosedyren for mindre lovbrudd (misdemeanour-prosedyren), der AKI er det utenrettslige organet; taket i estisk lov (§ 65 i loven om beskyttelse av personopplysninger) tilsvarer GDPRs: opptil 20 millioner euro eller 4 % av den globale omsetningen. Fra 1. november 2023 foreldes disse lovbruddene etter tre år. AKI har offentliggjort spesifikk veiledning om videoovervåking, GPS og andre verktøy for overvåking av ansatte.',
       nl: "Er is geen specifieke, gepubliceerde boete van de AKI voor GPS bij werknemers bekend. In Estland lopen AVG-boetes via de overtredingsprocedure, waarin de AKI de buitengerechtelijke instantie is; het plafond in de Estse wet (wet bescherming persoonsgegevens, § 65) komt overeen met de AVG: tot 20 miljoen euro of 4% van de wereldwijde omzet. Sinds 1 november 2023 verjaren deze overtredingen na drie jaar. De AKI heeft specifieke richtsnoeren gepubliceerd over cameratoezicht, gps en andere controlemiddelen voor werknemers.",
+      ru: "Опубликованного штрафа AKI, специально связанного с GPS-слежением за работниками, не обнаружено. В Эстонии штрафы по GDPR налагаются в порядке производства по проступкам, в котором AKI выступает внесудебным органом; верхний предел по эстонскому закону (ст. 65 закона о защите данных) совпадает с пределом GDPR: до 20 млн евро или 4% мирового оборота. С 1 ноября 2023 г. срок давности по таким проступкам составляет три года. AKI опубликовал специальные указания по видеонаблюдению, GPS и другим средствам контроля работников.",
     },
     urlFonte: FONTE_IKS.url,
     tipoImporto: 'massimale',

@@ -97,6 +97,7 @@ export const grecia: SchedaPaese = {
       sv: 'Grekland har en enda nationell myndighet, HDPA; det finns ingen regional uppdelning.',
       nb: 'Hellas har én nasjonal myndighet, HDPA; det finnes ingen regional inndeling.',
       nl: 'Griekenland heeft één nationale autoriteit, de HDPA; er is geen regionale verdeling.',
+      ru: "В Греции один национальный орган, HDPA; регионального разделения нет.",
     },
   },
 
@@ -113,6 +114,7 @@ export const grecia: SchedaPaese = {
         sv: 'Information till arbetstagarna om ändamål, typ av insamlade uppgifter och lagringstid',
         nb: 'Informasjon til arbeidstakerne om formål, type innsamlede data og lagringstid',
         nl: 'Informeren van werknemers over de doeleinden, het type verzamelde gegevens en de bewaartermijn',
+        ru: "Информирование работников о целях, видах собираемых данных и сроке хранения",
       },
       risposta: 'si',
       dettaglio: {
@@ -126,6 +128,7 @@ export const grecia: SchedaPaese = {
         sv: 'Arbetsgivaren ska informera arbetstagarna om ändamålet med behandlingen, vilken typ av uppgifter som registreras och lagringstiden.',
         nb: 'Arbeidsgiveren må informere arbeidstakerne om formålet med behandlingen, hvilken type data som registreres og lagringstiden.',
         nl: 'de werkgever moet de werknemers informeren over het doel van de verwerking, het type vastgelegde gegevens en de bewaartermijn.',
+        ru: "Работодатель обязан информировать работников о цели обработки, видах регистрируемых данных и сроке хранения.",
       },
       fonte: FONTE_HDPA_FAQ,
     },
@@ -141,6 +144,7 @@ export const grecia: SchedaPaese = {
         sv: 'Geolokaliseringen får inte syfta till att övervaka arbetstagaren; begränsad till arbetstiden och en förutbestämd rutt',
         nb: 'Geolokaliseringen må ikke ha som mål å overvåke arbeidstakeren; begrenset til arbeidstiden og en fastlagt rute',
         nl: 'De geolocatie mag niet gericht zijn op het bewaken van de werknemer; beperkt tot de werktijden en een vooraf bepaalde route',
+        ru: "Геолокация не должна быть направлена на наблюдение за работником; ограничена рабочим временем и заранее определённым маршрутом",
       },
       risposta: 'si',
       dettaglio: {
@@ -154,6 +158,7 @@ export const grecia: SchedaPaese = {
         sv: 'Enligt HDPA kränker installationen av ett geolokaliseringssystem inte arbetstagarens privatsfär när den inte syftar till att övervaka arbetstagaren; den ska begränsas till arbetstiden och en förutbestämd rutt.',
         nb: 'Ifølge HDPA krenker ikke installasjon av et geolokaliseringssystem arbeidstakerens privatsfære når det ikke har som mål å overvåke vedkommende; det må begrenses til arbeidstiden og en fastlagt rute.',
         nl: 'volgens de HDPA tast de installatie van een geolocatiesysteem de privésfeer van de werknemer niet aan wanneer het niet gericht is op het bewaken ervan; het moet beperkt blijven tot de werktijden en een vooraf bepaalde route.',
+        ru: "По мнению HDPA, установка системы геолокации не нарушает частную сферу работника, если она не направлена на наблюдение за ним; её следует ограничить рабочим временем и заранее определённым маршрутом.",
       },
       fonte: FONTE_HDPA_FAQ,
     },
@@ -169,6 +174,7 @@ export const grecia: SchedaPaese = {
         sv: 'Förhandstillstånd från en myndighet innan installation',
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit vóór installatie',
+        ru: "Предварительное разрешение органа до установки",
       },
       risposta: 'no',
       dettaglio: {
@@ -182,6 +188,7 @@ export const grecia: SchedaPaese = {
         sv: "Något förhandstillstånd från HDPA krävs inte; förhandssamråd är endast föreskrivet om DPIA:n visar en hög kvarstående risk.",
         nb: 'Det kreves ingen forhåndstillatelse fra HDPA; forhåndsdrøfting er bare foreskrevet hvis DPIA-en viser en høy restrisiko.',
         nl: 'er is geen voorafgaande toestemming van de HDPA nodig; voorafgaande raadpleging is alleen voorzien als de DPIA een hoog restrisico aan het licht brengt.',
+        ru: "Предварительное разрешение HDPA не требуется; предварительная консультация предусмотрена только в случае, если DPIA выявляет высокий остаточный риск.",
       },
       fonte: FONTE_HDPA_FAQ,
     },
@@ -197,6 +204,7 @@ export const grecia: SchedaPaese = {
         sv: 'Förutbestämd rutt och arbetstid, ingen användning utanför arbetstid; lagring i högst en månad',
         nb: 'Fastlagt rute og arbeidstid, ingen bruk utenfor arbeidstid; lagring i høyst én måned',
         nl: 'Vooraf bepaalde route en werktijden, geen gebruik buiten werktijd; bewaring niet langer dan een maand',
+        ru: "Заранее определённые маршрут и время, без использования вне рабочего времени; хранение не более одного месяца",
       },
       risposta: 'si',
       dettaglio: {
@@ -210,6 +218,7 @@ export const grecia: SchedaPaese = {
         sv: 'Enligt HDPA är systemet förenligt om arbetstagaren följer en förutbestämd rutt under bestämda arbetstider, geolokaliseringen sker inom den rutten och fordonet inte används utanför arbetstid; uppgifterna lagras endast så länge som det är nödvändigt och i inget fall längre än en månad; säkerhetsåtgärder tillämpas, åtkomsten är begränsad till behöriga personer och tekniker för pseudonymisering eller kryptering används; arbetstagaren har rätt att få tillgång till uppgifterna. Om systemet installeras enbart för att hjälpa arbetstagaren att hitta till destinationen ska det uteslutande tjäna det syftet och arbetstagaren kan stänga av det när hen vill.',
         nb: 'Ifølge HDPA er systemet i samsvar med reglene hvis arbeidstakeren følger en fastlagt rute i bestemte arbeidstider, geolokaliseringen skjer innenfor den ruten og kjøretøyet ikke brukes utenfor arbeidstid; dataene lagres bare så lenge det er nødvendig og i alle tilfeller i høyst én måned; det gjennomføres sikkerhetstiltak, bare autoriserte personer har tilgang, og det brukes teknikker for pseudonymisering eller kryptering; arbeidstakeren har rett til innsyn i dataene. Hvis systemet bare er installert for å hjelpe arbeidstakeren med å finne frem til målet, skal det utelukkende tjene dette formålet, og arbeidstakeren kan slå det av når vedkommende vil.',
         nl: 'volgens de HDPA is het systeem conform als de werknemer tijdens bepaalde werktijden een vooraf bepaalde route volgt, de geolokalisatie binnen die route plaatsvindt en het voertuig niet buiten werktijd wordt gebruikt; gegevens worden slechts zo lang als nodig bewaard en in elk geval niet langer dan een maand; er gelden beveiligingsmaatregelen, de toegang is beperkt tot bevoegde personen en er worden technieken voor pseudonimisering of versleuteling toegepast; de werknemer heeft recht op inzage in de gegevens. Als het systeem alleen is geïnstalleerd om de werknemer te helpen de bestemming te vinden, moet het uitsluitend daarvoor dienen en kan de werknemer het uitschakelen wanneer hij dat wil.',
+        ru: "По мнению HDPA, система соответствует требованиям, если работник следует заранее определённым маршрутом в определённые рабочие часы, геолокация осуществляется в пределах этого маршрута, а транспортное средство не используется вне рабочего времени; данные хранятся только необходимое время и в любом случае не более одного месяца; принимаются меры безопасности, доступ имеют только уполномоченные лица, применяются методы псевдонимизации или шифрования; у работника есть право доступа к данным. Если система установлена лишь для того, чтобы помочь работнику найти место назначения, она должна служить исключительно этой цели, и работник может отключить её в любой момент.",
       },
       fonte: FONTE_HDPA_FAQ,
     },
@@ -225,6 +234,7 @@ export const grecia: SchedaPaese = {
         sv: 'Konsekvensbedömning (DPIA) för systematisk övervakning av arbetstagarnas position (beslut 65/2018)',
         nb: 'Personvernkonsekvensvurdering (DPIA) for systematisk overvåking av arbeidstakernes posisjon (vedtak 65/2018)',
         nl: 'Effectbeoordeling (DPIA) voor de systematische monitoring van de locatie van werknemers (Besluit 65/2018)',
+        ru: "Оценка воздействия (DPIA) при систематическом мониторинге местоположения работников (Решение 65/2018)",
       },
       risposta: 'si',
       dettaglio: {
@@ -238,6 +248,7 @@ export const grecia: SchedaPaese = {
         sv: "HDPA:s lista omfattar systematisk övervakning av de anställdas position bland de behandlingar som kräver en konsekvensbedömning.",
         nb: 'HDPAs liste tar med systematisk overvåking av de ansattes posisjon blant behandlingene som krever en personvernkonsekvensvurdering.',
         nl: 'de HDPA-lijst noemt de systematische monitoring van de locatie van werknemers onder de verwerkingen die een effectbeoordeling vereisen.',
+        ru: "Перечень HDPA включает систематический мониторинг местоположения сотрудников среди видов обработки, требующих оценки воздействия.",
       },
       fonte: FONTE_HDPA_DPIA,
     },
@@ -253,6 +264,7 @@ export const grecia: SchedaPaese = {
         sv: 'Rättslig grund = strikt nödvändighet för anställningsavtalet; samtycke endast i undantagsfall (lag 4624/2019 art. 27)',
         nb: 'Rettslig grunnlag = streng nødvendighet for arbeidsavtalen; samtykke bare unntaksvis (lov 4624/2019 art. 27)',
         nl: 'Rechtsgrond = strikte noodzaak voor de arbeidsovereenkomst; toestemming alleen bij uitzondering (Wet 4624/2019 art. 27)',
+        ru: "Правовое основание = строгая необходимость для трудового договора; согласие только в исключительных случаях (Закон 4624/2019, ст. 27)",
       },
       risposta: 'si',
       dettaglio: {
@@ -266,6 +278,7 @@ export const grecia: SchedaPaese = {
         sv: 'Art. 27 tillåter behandling av arbetstagarnas uppgifter för anställningsavtalet endast om det är strikt nödvändigt; samtycke får endast användas i undantagsfall och vid bedömningen av om det är frivilligt beaktas arbetstagarens beroendeställning och omständigheterna (det ska vara skriftligt eller elektroniskt, tydligt åtskilt från avtalet, med information om rätten att återkalla det). Den personuppgiftsansvarige tillämpar i alla händelser principerna i art. 5 GDPR (art. 27.5).',
         nb: 'Art. 27 tillater behandling av arbeidstakernes data for arbeidsavtalen bare hvis det er strengt nødvendig; samtykke kan bare brukes unntaksvis, og når man vurderer om det er frivillig, tas det hensyn til arbeidstakerens avhengighet og omstendighetene (det må være skriftlig eller elektronisk, tydelig atskilt fra avtalen, med opplysning om retten til å trekke det tilbake). Den behandlingsansvarlige anvender i alle tilfeller prinsippene i art. 5 GDPR (art. 27 nr. 5).',
         nl: 'art. 27 staat de verwerking van werknemersgegevens voor de arbeidsovereenkomst alleen toe als die strikt noodzakelijk is; toestemming mag alleen bij uitzondering worden gebruikt en bij de beoordeling of zij vrij is gegeven worden de afhankelijkheid van de werknemer en de omstandigheden in aanmerking genomen (zij moet schriftelijk of elektronisch zijn, duidelijk te onderscheiden van het contract, met informatie over het recht van intrekking). In elk geval past de verwerkingsverantwoordelijke de beginselen van art. 5 AVG toe (art. 27 lid 5).',
+        ru: "Статья 27 допускает обработку данных работников для целей трудового договора только при строгой необходимости; согласие может использоваться лишь в исключительных случаях, а при оценке его добровольности учитываются зависимость работника и обстоятельства (оно должно быть письменным или электронным, отличимым от договора, с информацией о праве на отзыв). В любом случае контролёр применяет принципы ст. 5 GDPR (ст. 27 ч. 5).",
       },
       fonte: FONTE_LEGGE_4624,
     },
@@ -285,6 +298,7 @@ export const grecia: SchedaPaese = {
         sv: 'Informera arbetstagarna om ändamål, insamlade uppgifter och lagringstid.',
         nb: 'Informer arbeidstakerne om formål, innsamlede data og lagringstid.',
         nl: 'Informeer de werknemers over de doeleinden, de verzamelde gegevens en de bewaartermijn.',
+        ru: "Информируйте работников о целях, собираемых данных и сроке хранения.",
       },
     },
     {
@@ -300,6 +314,7 @@ export const grecia: SchedaPaese = {
         sv: 'Kontrollera att geolokaliseringen inte syftar till att övervaka arbetstagaren och att den är begränsad till arbetstiden och en förutbestämd rutt.',
         nb: 'Kontroller at geolokaliseringen ikke har som mål å overvåke arbeidstakeren og er begrenset til arbeidstiden og en fastlagt rute.',
         nl: 'Controleer of de geolocatie niet gericht is op het bewaken van de werknemer en beperkt is tot de werktijden en een vooraf bepaalde route.',
+        ru: "Убедитесь, что геолокация не направлена на наблюдение за работником и ограничена рабочим временем и заранее определённым маршрутом.",
       },
     },
     {
@@ -315,6 +330,7 @@ export const grecia: SchedaPaese = {
         sv: 'Fastställ en giltig rättslig grund (nödvändighet för anställningsavtalet; samtycke endast i undantagsfall, lag 4624/2019 art. 27).',
         nb: 'Finn et gyldig rettslig grunnlag (nødvendighet for arbeidsavtalen; samtykke bare unntaksvis, lov 4624/2019 art. 27).',
         nl: 'Bepaal een geldige rechtsgrond (noodzaak voor de arbeidsovereenkomst; toestemming alleen bij uitzondering, Wet 4624/2019 art. 27).',
+        ru: "Определите действительное правовое основание (необходимость для трудового договора; согласие только в исключительных случаях, З. 4624/2019, ст. 27).",
       },
     },
     {
@@ -330,6 +346,7 @@ export const grecia: SchedaPaese = {
         sv: 'Genomför konsekvensbedömningen (DPIA) för systematisk övervakning av position.',
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) for systematisk overvåking av posisjon.',
         nl: 'Voer de effectbeoordeling (DPIA) uit voor de systematische monitoring van de locatie.',
+        ru: "Проведите оценку воздействия (DPIA) для систематического мониторинга местоположения.",
       },
     },
     {
@@ -345,6 +362,7 @@ export const grecia: SchedaPaese = {
         sv: 'Konfigurera systemet: förutbestämd rutt och arbetstid, ingen användning av fordonet utanför arbetstid, lagring i högst en månad.',
         nb: 'Konfigurer systemet: fastlagt rute og arbeidstid, ingen bruk av kjøretøyet utenfor arbeidstid, lagring i høyst én måned.',
         nl: 'Configureer het systeem: vooraf bepaalde route en werktijden, geen gebruik van het voertuig buiten werktijd, bewaring niet langer dan een maand.',
+        ru: "Настройте систему: заранее определённые маршрут и время, без использования транспортного средства вне рабочего времени, хранение не более одного месяца.",
       },
     },
     {
@@ -360,6 +378,7 @@ export const grecia: SchedaPaese = {
         sv: 'Om du byter system eller övervakningsprogram ska du uppdatera och lämna ut integritetsinformationen på nytt och kontrollera om du på nytt måste informera eller höra de anställdas företrädare, där lagen kräver det. Ofta ändras leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och metoderna: den information som lämnades tidigare räcker inte.',
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og dele ut personverninformasjonen på nytt, og kontrollere om du på nytt må informere eller rådføre deg med arbeidstakernes representanter, der loven krever det. Ofte endres leverandøren (databehandleren), de innsamlede dataene og fremgangsmåtene: informasjonen som ble delt ut tidligere er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        ru: "Если вы меняете систему или программное обеспечение для мониторинга, обновите и повторно вручите информирование, а также проверьте, нужно ли снова информировать или консультировать представителей работников, где это предусмотрено законом. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее вручённого информирования недостаточно.",
       },
     },
   ],
@@ -387,6 +406,7 @@ export const grecia: SchedaPaese = {
       sv: '2 000 €',
       nb: '2 000 €',
       nl: '2.000 €',
+      ru: "2.000 €",
     },
     casoCitato: {
       it: "HDPA (Garante greco), decisione n. 6/2024 del 16 febbraio 2024: un datore aveva usato il GPS del veicolo aziendale per localizzare un dipendente mentre era in congedo legittimo, fuori dall'orario di lavoro. Multa 2.000 euro per violazione del principio di liceità (art. 5.1.a GDPR), più un'ammonizione per l'informazione insufficiente sul funzionamento del sistema (artt. 5.1.a, 12, 13 e 5.2 GDPR).",
@@ -399,6 +419,7 @@ export const grecia: SchedaPaese = {
       sv: "HDPA (den grekiska dataskyddsmyndigheten), beslut nr 6/2024 av den 16 februari 2024: en arbetsgivare hade använt GPS:en i tjänstefordonet för att lokalisera en anställd under lagenlig ledighet, utanför arbetstid. Böter på 2 000 euro för brott mot principen om laglighet (art. 5.1 a GDPR), plus en reprimand för otillräcklig information om hur systemet fungerar (art. 5.1 a, 12, 13 och 5.2 GDPR).",
       nb: 'HDPA (gresk datatilsyn), vedtak nr. 6/2024 av 16. februar 2024: en arbeidsgiver hadde brukt GPS-en i firmabilen til å lokalisere en ansatt som hadde lovlig fri, utenfor arbeidstid. Bot på 2 000 euro for brudd på prinsippet om lovlighet (art. 5 nr. 1 bokstav a GDPR), pluss en irettesettelse for utilstrekkelig informasjon om hvordan systemet fungerer (art. 5 nr. 1 bokstav a, art. 12, 13 og art. 5 nr. 2 GDPR).',
       nl: 'HDPA (Griekse gegevensbeschermingsautoriteit), besluit van 16 februari 2024: een werkgever had de gps van het bedrijfsvoertuig gebruikt om een werknemer te lokaliseren terwijl deze met rechtmatig verlof was, buiten werktijd. Een boete van 2.000 euro wegens schending van het beginsel van rechtmatigheid (art. 5 lid 1 onder a AVG), plus een berisping wegens onvoldoende informatie over de werking van het systeem (art. 5 lid 1 onder a, art. 12, 13 en art. 5 lid 2 AVG).',
+      ru: "HDPA (греческий надзорный орган), решение № 6/2024 от 16 февраля 2024 г.: работодатель использовал GPS служебного автомобиля, чтобы определить местоположение сотрудника, находившегося в законном отпуске, вне рабочего времени. Штраф 2.000 евро за нарушение принципа законности (ст. 5.1.a GDPR), а также предупреждение за недостаточное информирование о работе системы (ст. 5.1.a, 12, 13 и 5.2 GDPR).",
     },
     urlFonte: FONTE_HDPA_SANZIONE.url,
     tipoImporto: 'caso-gps',

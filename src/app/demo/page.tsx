@@ -196,7 +196,7 @@ export default function DemoPage() {
 
                     <p style={{ marginTop: 20, fontSize: 13, color: 'rgba(247,249,252,.5)', textAlign: 'center' }}>
                       {d.no_spam ?? "No spam. Your data is handled according to our"}{' '}
-                      <a href={localizePath('/privacy/', l)} style={{ color: 'var(--lime)', borderBottom: '1px solid rgba(34,181,115,.4)' }}>Privacy Policy</a>.
+                      <a href={localizePath('/privacy/', l)} style={{ color: 'var(--lime)', borderBottom: '1px solid rgba(34,181,115,.4)' }}>{dict.footer.privacy}</a>.
                     </p>
                   </motion.form>
                 )}

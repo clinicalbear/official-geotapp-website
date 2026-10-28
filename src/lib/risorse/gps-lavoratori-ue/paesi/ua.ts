@@ -100,6 +100,7 @@ export const ucraina: SchedaPaese = {
       sv: 'Ukraina är ett kandidatland utanför EU och tillämpar inte GDPR. Lag 2297-VI från 2010 gäller, med samtycket i centrum; en reform anpassad till GDPR väntar. Myndighet: Ombudsmannen (Ombudsman). Krigskontext: tillämpningen är begränsad och oregelbunden.',
       nb: 'Ukraina er et kandidatland utenfor EU og anvender ikke GDPR. Lov 2297-VI fra 2010 gjelder, med samtykket i sentrum; en reform tilpasset GDPR venter. Myndighet: ombudsmannen (Ombudsman). Krigskontekst: håndhevingen er begrenset og uregelmessig.',
       nl: 'Oekraine is een kandidaat-lidstaat, buiten de EU, en past de AVG niet toe. De wet 2297-VI van 2010 geldt en is sterk op toestemming gericht; een aan de AVG aangepaste hervorming is in afwachting. De autoriteit is de Ombudsman. Oorlogscontext: de handhaving is beperkt en onregelmatig.',
+      ru: "Украина является страной-кандидатом, не входит в ЕС и не применяет GDPR. Действует Закон 2297-VI 2010 года, построенный на согласии; реформа, согласованная с GDPR, ожидается. Орган: Уполномоченный по правам человека (Ombudsman). Условия войны: применение ограничено и нерегулярно.",
     },
   },
 
@@ -116,6 +117,7 @@ export const ucraina: SchedaPaese = {
         sv: 'Giltig rättslig grund (art. 11) och information i förväg till de anställda',
         nb: 'Gyldig rettslig grunnlag (art. 11) og forhåndsinformasjon til de ansatte',
         nl: 'Geldige rechtsgrondslag (art. 11) en voorafgaande informatie aan werknemers',
+        ru: "Действительное правовое основание (ст. 11) и предварительное информирование работников",
       },
       risposta: 'si',
       dettaglio: {
@@ -129,6 +131,7 @@ export const ucraina: SchedaPaese = {
         sv: 'Behandling av de anställdas uppgifter (inklusive GPS) kräver en av de sex grunderna i art. 11 i lag 2297-VI; de anställda ska informeras om personuppgiftsansvarig, uppgifter, ändamål, rättigheter och mottagare, vid insamlingen (inom 30 arbetsdagar endast om uppgifterna inte samlas in från dem själva; art. 12).',
         nb: 'Behandling av de ansattes opplysninger (inkludert GPS) krever ett av de seks grunnlagene i art. 11 i lov 2297-VI; de ansatte skal informeres om behandlingsansvarlig, opplysninger, formål, rettigheter og mottakere ved innsamlingen (innen 30 arbeidsdager bare hvis opplysningene ikke samles inn fra dem selv; art. 12).',
         nl: 'De verwerking van werknemersgegevens (waaronder GPS) vereist een van de zes grondslagen van art. 11 van Wet 2297-VI; werknemers moeten worden geinformeerd over de verwerkingsverantwoordelijke, de gegevens, de doeleinden, hun rechten en de ontvangers, bij de verzameling (binnen 30 werkdagen alleen als de gegevens niet bij hen worden verzameld; art. 12).',
+        ru: "Обработка данных работников (включая GPS) требует одного из шести оснований ст. 11 Закона 2297-VI; работников нужно информировать об операторе, данных, целях, правах и получателях в момент сбора (в течение 30 рабочих дней только если данные собираются не у них; ст. 12).",
       },
       fonte: FONTE_LEGGE_2297,
     },
@@ -144,6 +147,7 @@ export const ucraina: SchedaPaese = {
         sv: 'Tillstånd eller registrering hos en myndighet i förväg innan systemet installeras',
         nb: 'Forhåndstillatelse eller registrering hos en myndighet før installasjon',
         nl: 'Voorafgaande toestemming of registratie bij een autoriteit voor de installatie',
+        ru: "Предварительное разрешение или регистрация в органе перед установкой",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -157,6 +161,7 @@ export const ucraina: SchedaPaese = {
         sv: 'Den obligatoriska registreringen av databaser avskaffades från och med den 1 januari 2014; det finns dock kvar en anmälan till Ombudsmannen, inom 30 arbetsdagar från starten, för behandlingar med särskild risk, bland dem den plats där personen befinner sig och hans eller hennes förflyttningar (art. 9 i lagen; order 1/02-14, punkt 1.2). Undantagen är behandling som är nödvändig för att utöva rättigheter och fullgöra skyldigheter för den personuppgiftsansvarige i anställningsförhållanden enligt lag (punkt 2.1.3): om GPS omfattas av detta undantag eller inte ska bedömas från fall till fall.',
         nb: 'Den obligatoriske registreringen av databaser ble avskaffet fra og med 1. januar 2014; det gjenstår imidlertid en melding til ombudsmannen, innen 30 arbeidsdager fra oppstart, for behandlinger med særlig risiko, blant dem stedet der personen befinner seg og vedkommendes forflytninger (art. 9 i loven; order 1/02-14, punkt 1.2). Unntatt er behandling som er nødvendig for å utøve rettigheter og oppfylle plikter for den behandlingsansvarlige i arbeidsforhold i henhold til loven (punkt 2.1.3): om GPS omfattes av dette unntaket eller ikke, må vurderes fra sak til sak.',
         nl: 'De verplichte registratie van databanken is per 1 januari 2014 afgeschaft; de melding aan de Ombudsman binnen 30 werkdagen na aanvang blijft echter vereist voor verwerkingen met een bijzonder risico, waaronder de verblijfplaats en verplaatsingen van een persoon (art. 9 van de wet; bevel 1/02-14, punt 1.2). Vrijgesteld is de verwerking die nodig is om rechten uit te oefenen en verplichtingen na te komen van de verantwoordelijke in arbeidsverhoudingen krachtens de wet (punt 2.1.3): of gps hieronder valt, moet per geval worden beoordeeld.',
+        ru: "Обязательная регистрация баз данных отменена с 1 января 2014 г.; однако сохраняется уведомление Уполномоченного по правам человека в течение 30 рабочих дней с начала обработки для обработок с особым риском, среди которых местонахождение лица и его перемещения (ст. 9 закона; приказ 1/02-14, пункт 1.2). Из этого исключена обработка, необходимая для осуществления прав и исполнения обязанностей оператора в трудовых отношениях на основании закона (пункт 2.1.3): подпадает ли GPS под это исключение, нужно оценивать в каждом случае.",
       },
       fonte: FONTE_ORDINE_1_02_14,
     },
@@ -172,6 +177,7 @@ export const ucraina: SchedaPaese = {
         sv: 'Grunden är den anställdes dokumenterade samtycke eller en annan grund i art. 11',
         nb: 'Grunnlaget er den ansattes dokumenterte samtykke eller et annet grunnlag i art. 11',
         nl: 'Grondslag = gedocumenteerde toestemming van de werknemer of een andere grondslag van art. 11',
+        ru: "Основание = документированное согласие работника или иное основание ст. 11",
       },
       risposta: 'si',
       dettaglio: {
@@ -185,6 +191,7 @@ export const ucraina: SchedaPaese = {
         sv: 'Art. 11 räknar upp sex grunder: samtycket (punkt 1) är den första, men det finns också nödvändigheten att skydda den personuppgiftsansvariges legitima intressen, såvida inte den registrerades grundläggande rättigheter väger tyngre (punkt 6); ändamålet ska formuleras i de dokument som reglerar den personuppgiftsansvariges verksamhet (art. 6(1)). För GPS är det lämpligt att informera i förväg, dokumentera samtycket och fastställa ett skriftligt ändamål.',
         nb: 'Art. 11 oppregner seks grunnlag: samtykket (punkt 1) er det første, men det finnes også nødvendigheten av å beskytte den behandlingsansvarliges berettigede interesser, med mindre den registrertes grunnleggende rettigheter veier tyngre (punkt 6); formålet skal formuleres i dokumentene som regulerer den behandlingsansvarliges virksomhet (art. 6(1)). For GPS er det hensiktsmessig å informere på forhånd, dokumentere samtykket og fastsette et skriftlig formål.',
         nl: 'Art. 11 noemt zes grondslagen: toestemming (punt 1) staat voorop, maar ook de noodzaak om de gerechtvaardigde belangen van de verantwoordelijke te beschermen, tenzij de grondrechten van de betrokkene zwaarder wegen (punt 6); het doel moet worden vastgelegd in de documenten die de activiteit van de verantwoordelijke regelen (art. 6(1)). Voor gps is het raadzaam vooraf te informeren, de toestemming te documenteren en een schriftelijk doel vast te leggen.',
+        ru: "Ст. 11 перечисляет шесть оснований: согласие (пункт 1) указано первым, но есть и необходимость защиты законных интересов оператора, если не преобладают основные права субъекта данных (пункт 6); цель должна быть сформулирована в документах, регулирующих деятельность оператора (ст. 6(1)). Для GPS целесообразно заранее информировать, документировать согласие и определить цель письменно.",
       },
       fonte: FONTE_LEGGE_2297,
     },
@@ -200,6 +207,7 @@ export const ucraina: SchedaPaese = {
         sv: 'Behandling begränsad till det angivna ändamålet (ändamålsbegränsning)',
         nb: 'Behandling begrenset til det oppgitte formålet (formålsbegrensning)',
         nl: 'Verwerking beperkt tot het aangegeven doel (doelbinding)',
+        ru: "Обработка в пределах заявленной цели (ограничение цели)",
       },
       risposta: 'si',
       dettaglio: {
@@ -213,6 +221,7 @@ export const ucraina: SchedaPaese = {
         sv: 'Uppgifterna ska behandlas endast för det angivna ändamålet och deras innehåll ska vara adekvat och inte överdrivet i förhållande till det (art. 6(1) och 6(3)); den personuppgiftsansvariges anställda får använda dem endast för sina egna yrkesuppgifter (art. 10(3)).',
         nb: 'Opplysningene skal behandles bare for det oppgitte formålet, og innholdet skal være relevant og ikke for omfattende i forhold til det (art. 6(1) og 6(3)); den behandlingsansvarliges ansatte kan bare bruke dem til sine egne yrkesoppgaver (art. 10(3)).',
         nl: 'De gegevens mogen alleen worden verwerkt voor het aangegeven doel en hun inhoud moet daarvoor passend en niet bovenmatig zijn (art. 6(1) en 6(3)); de medewerkers van de verwerkingsverantwoordelijke mogen ze alleen gebruiken voor hun eigen beroepstaken (art. 10(3)).',
+        ru: "Данные обрабатываются только для заявленной цели, а их содержание должно быть адекватным и не избыточным по отношению к ней (ст. 6(1) и 6(3)); работники оператора могут использовать их только для своих профессиональных задач (ст. 10(3)).",
       },
       fonte: FONTE_LEGGE_2297,
     },
@@ -228,6 +237,7 @@ export const ucraina: SchedaPaese = {
         sv: 'Konsekvensbedömning (DPIA)',
         nb: 'Personvernkonsekvensvurdering (DPIA)',
         nl: 'Gegevensbeschermingseffectbeoordeling (DPIA)',
+        ru: "Оценка воздействия (DPIA)",
       },
       risposta: 'no',
       dettaglio: {
@@ -241,6 +251,7 @@ export const ucraina: SchedaPaese = {
         sv: 'Den gällande lagen kräver ingen konsekvensbedömning; det kommer att föreskrivas först av den eventuella reformen anpassad till GDPR (lagförslag 8153), som ännu inte har trätt i kraft.',
         nb: 'Gjeldende lov krever ingen personvernkonsekvensvurdering; det vil først bli fastsatt av en eventuell reform tilpasset GDPR (lovforslag 8153), som ennå ikke har trådt i kraft.',
         nl: 'De huidige wet vereist geen effectbeoordeling; dit zou pas worden voorgeschreven door de eventuele aan de AVG aangepaste hervorming (wetsvoorstel 8153), die nog niet van kracht is.',
+        ru: "Действующий закон не требует оценки воздействия; она будет предусмотрена только возможной реформой, приведённой в соответствие с GDPR (законопроект 8153), которая пока не вступила в силу.",
       },
       fonte: FONTE_LEGGE_2297,
     },
@@ -260,6 +271,7 @@ export const ucraina: SchedaPaese = {
         sv: 'Identifiera en giltig rättslig grund (normalt samtycke) och fastställ ett skriftligt ändamål.',
         nb: 'Finn et gyldig rettslig grunnlag (normalt samtykke) og fastsett et skriftlig formål.',
         nl: 'Bepaal een geldige rechtsgrondslag (in de regel toestemming) en leg een schriftelijk doel vast.',
+        ru: "Определите действительное правовое основание (как правило, согласие) и сформулируйте цель обработки в письменном виде.",
       },
     },
     {
@@ -275,6 +287,7 @@ export const ucraina: SchedaPaese = {
         sv: 'Informera de anställda om uppgifter, ändamål, rättigheter och mottagare (vid insamlingen; inom 30 arbetsdagar endast om uppgifterna inte samlas in från dem själva).',
         nb: 'Informer de ansatte om opplysninger, formål, rettigheter og mottakere (ved innsamlingen; innen 30 arbeidsdager bare hvis opplysningene ikke samles inn fra dem selv).',
         nl: 'Informeer de werknemers over de gegevens, de doeleinden, hun rechten en de ontvangers (bij de verzameling; binnen 30 werkdagen alleen als de gegevens niet bij hen worden verzameld).',
+        ru: "Информируйте работников о данных, целях, правах и получателях (в момент сбора; в течение 30 рабочих дней только если данные собираются не у самих работников).",
       },
     },
     {
@@ -290,6 +303,7 @@ export const ucraina: SchedaPaese = {
         sv: 'Dokumentera den anställdes samtycke till geolokalisering.',
         nb: 'Dokumenter den ansattes samtykke til geolokalisering.',
         nl: 'Documenteer de toestemming van de werknemer voor geolocatie.',
+        ru: "Документируйте согласие работника на геолокацию.",
       },
     },
     {
@@ -305,6 +319,7 @@ export const ucraina: SchedaPaese = {
         sv: 'Begränsa behandlingen till det angivna ändamålet.',
         nb: 'Begrens behandlingen til bare det oppgitte formålet.',
         nl: 'Beperk de verwerking tot uitsluitend het aangegeven doel.',
+        ru: "Ограничьте обработку только заявленной целью.",
       },
     },
     {
@@ -320,6 +335,7 @@ export const ucraina: SchedaPaese = {
         sv: 'Håll i minnet den kommande reformen (lagförslag 8153): om den träder i kraft inför den regler enligt GDPR-modellen (information i förväg, inga enbart automatiserade beslut, DPIA).',
         nb: 'Husk den kommende reformen (lovforslag 8153): hvis den trer i kraft, innfører den regler etter GDPR-modellen (forhåndsinformasjon, ingen utelukkende automatiserte avgjørelser, DPIA).',
         nl: 'Houd rekening met de op handen zijnde hervorming (wetsvoorstel 8153): als deze in werking treedt, voert zij regels in AVG-stijl in (voorafgaande informatie, geen uitsluitend geautomatiseerde besluiten, DPIA).',
+        ru: "Учитывайте предстоящую реформу (законопроект 8153): если она вступит в силу, она введёт правила в стиле GDPR (предварительное информирование, запрет решений, принимаемых исключительно автоматизированно, DPIA).",
       },
     },
     {
@@ -335,6 +351,7 @@ export const ucraina: SchedaPaese = {
         sv: 'Om du byter övervakningssystem eller programvara: uppdatera och lämna ut informationen om personuppgiftsbehandling på nytt, och kontrollera om du åter måste informera eller samråda med de anställdas företrädare, där lagen kräver det. Leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och arbetssätten ändras ofta: den information som lämnades tidigare räcker inte.',
         nb: 'Hvis du bytter overvåkingssystem eller programvare: oppdater og utlever informasjonen om behandling av personopplysninger på nytt, og kontroller om du på nytt må informere eller rådføre deg med de ansattes representanter, der loven krever det. Leverandøren (databehandleren), de innsamlede opplysningene og arbeidsmåtene endrer seg ofte: informasjonen som ble utlevert tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        ru: "Если вы меняете систему или программу мониторинга, обновите и повторно вручите уведомление об обработке данных и проверьте, нужно ли снова информировать представителей работников или консультироваться с ними, где этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее врученного уведомления недостаточно.",
       },
     },
   ],
@@ -362,6 +379,7 @@ export const ucraina: SchedaPaese = {
       sv: 'För tjänstemän eller ansvariga och enskilda näringsidkare (lagen bötfäller inte bolag): 200 till 1 000 skattefria minimibelopp vid första överträdelsen, upp till 2 000 vid upprepning inom ett år (art. 188-39 CAO; cirka 3 400-34 000 UAH, vid 17 UAH per minimibelopp)',
       nb: 'For tjenestepersoner eller ansvarlige og enkeltpersonforetak (loven ilegger ikke selskaper bot): 200 til 1 000 skattefrie minimumsbeløp ved første overtredelse, opptil 2 000 ved gjentakelse innen ett år (art. 188-39 CAO; ca. 3 400-34 000 UAH, ved 17 UAH per minimumsbeløp)',
       nl: 'Voor ambtenaren of verantwoordelijken en eenmanszaken (het Wetboek beboet geen vennootschappen): 200 tot 1.000 belastingvrije minima bij een eerste overtreding, tot 2.000 bij herhaling binnen een jaar (art. 188-39 Wetboek van administratieve overtredingen; ongeveer 3.400-34.000 UAH, bij 17 UAH per minimum)',
+      ru: "Для должностных лиц и индивидуальных предпринимателей (Кодекс не предусматривает штрафов для компаний): от 200 до 1 000 необлагаемых минимумов при первом нарушении, до 2 000 при повторном в течение года (ст. 188-39 КоАП Украины, CAO; примерно 3 400-34 000 UAH, по 17 UAH за минимум)",
     },
     casoCitato: {
       it: "Non risulta una decisione ucraina specifica e pubblicata sul GPS sui dipendenti, e l'applicazione è limitata. Le sanzioni amministrative attuali: per funzionari e imprenditori individuali (il Codice non multa le società), da 200 a 1.000 minimi non imponibili alla prima violazione, fino a 2.000 se ripetuta entro un anno (art. 188-39 CAO; circa 3.400-34.000 UAH, a 17 UAH per minimo). La riforma in attesa (ddl 8153, approvato in prima lettura il 20 novembre 2024 e in attesa della seconda) porterebbe sanzioni in stile GDPR (fino a 150 milioni di UAH o 8% del fatturato), ma non è in vigore.",
@@ -374,6 +392,7 @@ export const ucraina: SchedaPaese = {
       sv: 'Det finns inget specifikt, offentliggjort ukrainskt beslut om GPS på anställda, och tillämpningen är begränsad. De nuvarande administrativa sanktionerna: för tjänstemän eller ansvariga och enskilda näringsidkare (lagen bötfäller inte bolag), 200 till 1 000 skattefria minimibelopp vid första överträdelsen, upp till 2 000 vid upprepning inom ett år (art. 188-39 CAO; cirka 3 400-34 000 UAH, vid 17 UAH per minimibelopp). Den väntande reformen (lagförslag 8153, godkänt i första behandlingen den 20 november 2024 och i väntan på den andra) skulle medföra sanktioner enligt GDPR-modellen (upp till 150 miljoner UAH eller 8 % av omsättningen), men är inte i kraft.',
       nb: 'Det finnes ingen spesifikk, offentliggjort ukrainsk avgjørelse om GPS på ansatte, og håndhevingen er begrenset. De gjeldende administrative sanksjonene: for tjenestepersoner eller ansvarlige og enkeltpersonforetak (loven ilegger ikke selskaper bot), 200 til 1 000 skattefrie minimumsbeløp ved første overtredelse, opptil 2 000 ved gjentakelse innen ett år (art. 188-39 CAO; ca. 3 400-34 000 UAH, ved 17 UAH per minimumsbeløp). Den ventende reformen (lovforslag 8153, godkjent i første behandling 20. november 2024 og i påvente av den andre) ville medføre sanksjoner etter GDPR-modellen (opptil 150 millioner UAH eller 8 % av omsetningen), men er ikke i kraft.',
       nl: 'Er is geen specifieke, gepubliceerde Oekraiense beslissing over GPS-volging van werknemers, en de handhaving is beperkt. De huidige administratieve boetes: voor ambtenaren of verantwoordelijken en eenmanszaken (het Wetboek beboet geen vennootschappen), 200 tot 1.000 belastingvrije minima bij een eerste overtreding, tot 2.000 bij herhaling binnen een jaar (art. 188-39 Wetboek van administratieve overtredingen; ongeveer 3.400-34.000 UAH, bij 17 UAH per minimum). De aanhangige hervorming (wetsvoorstel 8153) zou boetes in AVG-stijl invoeren (tot 150 miljoen UAH of 8% van de omzet), maar is niet van kracht.',
+      ru: "Конкретного опубликованного решения в Украине по GPS-слежению за работниками нет, а практика применения ограничена. Действующие административные санкции: для должностных лиц и индивидуальных предпринимателей (Кодекс не предусматривает штрафов для компаний) от 200 до 1 000 необлагаемых минимумов при первом нарушении, до 2 000 при повторном в течение года (ст. 188-39 КоАП Украины, CAO; примерно 3 400-34 000 UAH, по 17 UAH за минимум). Ожидаемая реформа (законопроект 8153, одобренный в первом чтении 20 ноября 2024 г. и ожидающий второго чтения) ввела бы санкции в стиле GDPR (до 150 млн UAH или 8% оборота), но она не вступила в силу.",
     },
     urlFonte: FONTE_KUPAP.url,
     tipoImporto: 'massimale',

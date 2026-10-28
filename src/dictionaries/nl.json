@@ -682,6 +682,8 @@
       },
       "cta_title": "Geef uw monteurs het juiste gereedschap.",
       "cta_button": "Bekijk de prijzen",
+      "screenshot_dashboard_alt": "GeoTapp TimeTracker - Dashboard",
+      "screenshot_menu_alt": "GeoTapp TimeTracker - Menu",
       "modal": {
         "status": "SYSTEEMSTATUS: <span class=\"text-green-600\">OPERATIONEEL</span>",
         "encryption": "GEGEVENS: <span class=\"text-slate-400\">BEVEILIGD</span>",

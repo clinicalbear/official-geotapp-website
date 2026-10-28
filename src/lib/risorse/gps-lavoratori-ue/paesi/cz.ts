@@ -95,6 +95,7 @@ export const repubblicaCeca: SchedaPaese = {
       sv: 'Tjeckien har en enda nationell myndighet, UOOU; det finns ingen regional uppdelning.',
       nb: 'Tsjekkia har én nasjonal myndighet, UOOU; det finnes ingen regional inndeling.',
       nl: 'Tsjechië heeft één nationale autoriteit, de UOOU; er is geen regionale verdeling.',
+      ru: "В Чешской Республике один национальный орган, UOOU; регионального разделения нет.",
     },
   },
 
@@ -111,6 +112,7 @@ export const repubblicaCeca: SchedaPaese = {
         sv: 'Direkt information till de anställda om övervakningens omfattning och sätt (Zákoník práce art. 316)',
         nb: 'Direkte informasjon til de ansatte om omfanget av og måten for overvåkingen (Zákoník práce art. 316)',
         nl: 'Rechtstreekse informatie aan werknemers over de omvang en de wijze van de monitoring (Zakonik prace art. 316)',
+        ru: "Прямое информирование работников об объёме и способах мониторинга (Zákoník práce, ст. 316)",
       },
       risposta: 'si',
       dettaglio: {
@@ -124,6 +126,7 @@ export const repubblicaCeca: SchedaPaese = {
         sv: 'Om det finns ett allvarligt skäl till övervakningen är arbetsgivaren skyldig att direkt informera de anställda om kontrollens omfattning och hur den genomförs.',
         nb: 'Dersom det foreligger en alvorlig grunn til overvåkingen, er arbeidsgiveren pliktig til å informere de ansatte direkte om omfanget av kontrollen og måten den gjennomføres på.',
         nl: 'Als er een ernstige reden voor de monitoring bestaat, is de werkgever verplicht de werknemers rechtstreeks te informeren over de omvang van de controle en de wijze waarop deze wordt uitgevoerd.',
+        ru: "Если для мониторинга есть серьёзная причина, работодатель обязан напрямую информировать работников об объёме контроля и о способе его осуществления.",
       },
       fonte: FONTE_ZP_316,
     },
@@ -139,6 +142,7 @@ export const repubblicaCeca: SchedaPaese = {
         sv: 'Förbud mot att övervaka anställda utan ett allvarligt skäl som hör ihop med verksamhetens art (art. 316)',
         nb: 'Forbud mot å overvåke ansatte uten en alvorlig grunn som henger sammen med virksomhetens art (art. 316)',
         nl: 'Verbod om werknemers te surveilleren zonder een ernstige, aan de aard van de activiteit inherente reden (art. 316)',
+        ru: "Запрет наблюдать за работниками без серьёзной причины, связанной с характером деятельности (ст. 316)",
       },
       risposta: 'si',
       dettaglio: {
@@ -152,6 +156,7 @@ export const repubblicaCeca: SchedaPaese = {
         sv: 'Utan ett allvarligt skäl som hör ihop med verksamhetens särskilda art får arbetsgivaren inte inkräkta på den anställdes privatliv genom att utsätta honom eller henne för öppen eller dold övervakning på arbetsplatsen och i arbetsgivarens gemensamma utrymmen. Bestämmelsen nämner inte GPS, men UOOU och domstolen i Prag (6 A 42/2013) tillämpade den på spårningen av brevbärarnas rutter.',
         nb: 'Uten en alvorlig grunn som henger sammen med virksomhetens særlige art kan ikke arbeidsgiveren krenke den ansattes personvern ved å utsette vedkommende for åpen eller skjult overvåking på arbeidsplassen og i arbeidsgiverens fellesarealer. Bestemmelsen nevner ikke GPS, men UOOU og domstolen i Praha (6 A 42/2013) har anvendt den på sporing av postbudenes ruter.',
         nl: 'Zonder een ernstige, aan de bijzondere aard van zijn activiteit inherente reden mag de werkgever de privacy van de werknemer niet schenden door hem op de werkplekken en in de gemeenschappelijke ruimten van de werkgever aan open of verborgen toezicht te onderwerpen. De bepaling noemt GPS niet, maar de UOOU en de rechtbank van Praag (6 A 42/2013) pasten haar toe op het volgen van de routes van postbodes.',
+        ru: "Работодатель не вправе без серьёзной причины, связанной с особым характером его деятельности, нарушать неприкосновенность частной жизни работника на рабочих местах и в общих помещениях работодателя, подвергая его открытому или скрытому наблюдению. Норма не упоминает GPS, но UOOU и Пражский суд (6 A 42/2013) применили её к отслеживанию маршрутов почтальонов.",
       },
       fonte: FONTE_ZP_316,
     },
@@ -167,6 +172,7 @@ export const repubblicaCeca: SchedaPaese = {
         sv: 'Förhandstillstånd från en myndighet före installationen',
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit voor installatie',
+        ru: "Предварительное разрешение органа до установки",
       },
       risposta: 'no',
       dettaglio: {
@@ -180,6 +186,7 @@ export const repubblicaCeca: SchedaPaese = {
         sv: 'Inget förhandstillstånd från UOOU krävs; den personuppgiftsansvarige bedömer själv den rättsliga grunden och proportionaliteten, med en DPIA där det krävs.',
         nb: 'Det kreves ingen forhåndstillatelse fra UOOU; den behandlingsansvarlige vurderer selv behandlingsgrunnlag og forholdsmessighet, med DPIA der det kreves.',
         nl: 'Er is geen voorafgaande toestemming van de UOOU vereist; de verwerkingsverantwoordelijke beoordeelt zelf de rechtsgrond en de evenredigheid, met een DPIA waar vereist.',
+        ru: "Предварительное разрешение UOOU не требуется; контролёр самостоятельно оценивает правовое основание и соразмерность, при необходимости с DPIA.",
       },
       fonte: FONTE_GDPR,
     },
@@ -195,6 +202,7 @@ export const repubblicaCeca: SchedaPaese = {
         sv: 'Proportionerlig GPS (skydd av tillgångar, körjournal), inte löpande övervakning; möjlighet att avstå vid privat användning',
         nb: 'Forholdsmessig GPS (beskyttelse av verdier, kjørebok), ikke kontinuerlig overvåking; reservasjonsrett ved privat bruk',
         nl: 'Evenredig GPS (bescherming van het vermogen, rittenregistratie), geen continue controle; opt-out voor privégebruik',
+        ru: "Соразмерный GPS (защита имущества, журнал поездок), а не постоянный контроль; opt-out для личного использования",
       },
       risposta: 'si',
       dettaglio: {
@@ -208,6 +216,7 @@ export const repubblicaCeca: SchedaPaese = {
         sv: 'GPS på ett fordon håller när det tjänar konkreta ändamål som skydd av tillgångar och körjournal (i en inspektion 2014 fann UOOU inget intrång i privatlivet i en GPS med elektronisk körjournal, stöldskydd och en brytare för privat/tjänst), inte när det blir intensiv eller ständig övervakning av de anställda (art. 316 stycke 2; domstolen i Prag 6 A 42/2013 om spårning av brevbärarnas hela rutt). För privat användning av fordonet nämner yttrandet WP249, publicerat av UOOU, möjligheten att avstå som den viktigaste åtgärden.',
         nb: 'GPS på et kjøretøy holder når det tjener konkrete formål som beskyttelse av verdier og kjørebok (ved en kontroll i 2014 så UOOU ingen krenkelse av personvernet i en GPS med elektronisk kjørebok, tyverisikring og en bryter for privat/tjeneste), ikke når det blir en intensiv eller konstant overvåking av de ansatte (art. 316 ledd 2; domstolen i Praha 6 A 42/2013 om sporing av postbudenes hele rute). Ved privat bruk av kjøretøyet nevner uttalelse WP249, offentliggjort av UOOU, reservasjonsrett som det viktigste tiltaket.',
         nl: 'GPS in een voertuig houdt stand wanneer het concrete doelen dient, zoals de bescherming van het vermogen en de rittenregistratie (bij een controle in 2014 zag de UOOU geen inbreuk op de privacy bij een GPS met elektronisch rittenboek, diefstalbeveiliging en een schakelaar privé/zakelijk), niet wanneer het intensieve of voortdurende controle van werknemers wordt (art. 316 lid 2; rechtbank Praag 6 A 42/2013 over het volgen van de volledige route van postbodes). Voor privégebruik van het voertuig noemt het door de UOOU gepubliceerde advies WP249 de opt-out als belangrijkste maatregel.',
+        ru: "GPS на транспортном средстве допустим, когда служит конкретным целям, таким как защита имущества и ведение журнала поездок (при проверке 2014 года UOOU не усмотрел вмешательства в частную жизнь в GPS с электронной путевой книгой, защитой от кражи и переключателем личное/служебное использование), но не тогда, когда превращается в интенсивный или постоянный контроль работников (ст. 316 ч. 2; Пражский суд 6 A 42/2013 об отслеживании всего маршрута почтальонов). Для личного использования автомобиля заключение WP249, опубликованное UOOU, называет основной мерой opt-out.",
       },
       fonte: FONTE_UOOU_VZ2014,
       fonteAggiuntiva: FONTE_UOOU_GPS,
@@ -224,6 +233,7 @@ export const repubblicaCeca: SchedaPaese = {
         sv: 'Konsekvensbedömning (DPIA) för övervakning av de anställdas position eller förflyttningar (UOOU:s förteckning)',
         nb: 'Personvernkonsekvensvurdering (DPIA) for overvåking av de ansattes posisjon eller bevegelser (UOOUs liste)',
         nl: 'Effectbeoordeling (DPIA) voor de monitoring van de locatie of beweging van werknemers (UOOU-lijst)',
+        ru: "Оценка воздействия (DPIA) при мониторинге местоположения или перемещений работников (перечень UOOU)",
       },
       risposta: 'si',
       dettaglio: {
@@ -237,6 +247,7 @@ export const repubblicaCeca: SchedaPaese = {
         sv: 'I UOOU:s förteckning är övervakning av personers förflyttningar och position (koordinater) ett av kriterierna; övervakning av anställda räknas bara om den spårar deras förflyttningar eller löpande följer deras verksamhet. En DPIA utlöses när dessutom minst en annan kritisk egenskap eller fem betydande egenskaper gäller.',
         nb: 'På UOOUs liste er overvåking av personers bevegelser og posisjon (koordinater) ett av kriteriene; overvåking av ansatte teller bare dersom den følger bevegelsene deres eller løpende følger aktiviteten deres. En DPIA utløses når det i tillegg gjelder minst ett annet kritisk kjennetegn eller fem vesentlige.',
         nl: 'In de UOOU-lijst is het monitoren van beweging en positie van personen (coördinaten) een van de criteria; het monitoren van werknemers telt alleen mee als het hun beweging volgt of hun activiteit voortdurend nagaat. Een DPIA is nodig wanneer daarnaast minstens een ander kritiek kenmerk of vijf significante kenmerken gelden.',
+        ru: "В перечне UOOU мониторинг перемещений и местоположения людей (координаты) является одним из критериев; мониторинг работников учитывается только тогда, когда он непрерывно отслеживает их перемещения или деятельность. DPIA обязательна, если, помимо этого, у обработки есть как минимум ещё одна характеристика, которую UOOU считает критической, либо пять характеристик, которые он считает существенными.",
       },
       fonte: FONTE_UOOU_DPIA,
     },
@@ -256,6 +267,7 @@ export const repubblicaCeca: SchedaPaese = {
         sv: 'Kontrollera att det finns ett allvarligt skäl som hör ihop med verksamhetens art för övervakningen (art. 316).',
         nb: 'Kontroller at det finnes en alvorlig grunn til overvåkingen som henger sammen med virksomhetens art (art. 316).',
         nl: 'Controleer of er een ernstige, aan de aard van uw activiteit inherente reden voor de monitoring bestaat (art. 316).',
+        ru: "Проверьте наличие серьёзной причины, связанной с характером вашей деятельности, для мониторинга (ст. 316).",
       },
     },
     {
@@ -271,6 +283,7 @@ export const repubblicaCeca: SchedaPaese = {
         sv: 'Fastställ en giltig rättslig grund (normalt berättigat intresse, inte samtycke).',
         nb: 'Finn et gyldig behandlingsgrunnlag (normalt berettiget interesse, ikke samtykke).',
         nl: 'Bepaal een geldige rechtsgrond (doorgaans gerechtvaardigd belang, niet toestemming).',
+        ru: "Определите действительное правовое основание (как правило, законный интерес, а не согласие).",
       },
     },
     {
@@ -286,6 +299,7 @@ export const repubblicaCeca: SchedaPaese = {
         sv: 'Genomför konsekvensbedömningen (DPIA) för övervakning av de anställdas position.',
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) for overvåking av de ansattes posisjon.',
         nl: 'Voer de effectbeoordeling (DPIA) uit voor de monitoring van de locatie van werknemers.',
+        ru: "Проведите оценку воздействия (DPIA) для мониторинга местоположения работников.",
       },
     },
     {
@@ -301,6 +315,7 @@ export const repubblicaCeca: SchedaPaese = {
         sv: 'Informera de anställda direkt om kontrollens omfattning och sätt (art. 316 + art. 13 GDPR).',
         nb: 'Informer de ansatte direkte om omfanget av og måten for kontrollen (art. 316 + art. 13 GDPR).',
         nl: 'Informeer de werknemers rechtstreeks over de omvang en de wijze van de controle (art. 316 + art. 13 AVG).',
+        ru: "Напрямую информируйте работников об объёме и способах контроля (ст. 316 + ст. 13 GDPR).",
       },
     },
     {
@@ -316,6 +331,7 @@ export const repubblicaCeca: SchedaPaese = {
         sv: 'Konfigurera systemet proportionerligt: ingen löpande övervakning, möjlighet att avstå vid privat användning.',
         nb: 'Konfigurer systemet forholdsmessig: ingen kontinuerlig overvåking, reservasjonsrett ved privat bruk.',
         nl: 'Configureer het systeem op een evenredige manier: geen continue controle, opt-out voor privégebruik.',
+        ru: "Настройте систему соразмерно: без постоянного контроля, с opt-out для личного использования.",
       },
     },
     {
@@ -331,6 +347,7 @@ export const repubblicaCeca: SchedaPaese = {
         sv: 'Om du byter system: när du byter övervakningssystem eller programvara ska du uppdatera och dela ut integritetsinformationen på nytt, och kontrollera om du måste informera eller samråda med de anställdas företrädare igen, där lagen kräver det. Leverantören (personuppgiftsbiträdet), de insamlade uppgifterna och metoderna ändras ofta: den information som lämnades tidigare räcker inte.',
         nb: 'Hvis du bytter system: når du bytter overvåkingssystem eller programvare, skal du oppdatere og dele ut personvernopplysningene på nytt, og kontrollere om du på nytt må informere eller rådføre deg med de ansattes representanter, der loven krever det. Leverandøren (databehandleren), de innsamlede opplysningene og metodene endrer seg ofte: opplysningene som ble gitt tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
+        ru: "Если вы меняете систему или программное обеспечение для мониторинга, обновите и повторно вручите информирование, а также проверьте, нужно ли снова информировать или консультировать представителей работников, где это предусмотрено законом. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее вручённого информирования недостаточно.",
       },
     },
   ],
@@ -358,6 +375,7 @@ export const repubblicaCeca: SchedaPaese = {
       sv: 'upp till 20 miljoner euro eller 4 % av omsättningen (GDPR)',
       nb: 'opptil 20 millioner euro eller 4 % av omsetningen (GDPR)',
       nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
+      ru: "до 20 млн евро или 4% оборота (GDPR)",
     },
     casoCitato: {
       it: "Il caso di riferimento è l'UOOU contro Česká pošta (Poste Ceche). Il controllo, dal 25 aprile al 25 settembre 2012, ha accertato la violazione del § 5 c. 2 della vecchia legge sulla protezione dei dati: mancava una base giuridica per monitorare in modo sistematico gli spostamenti dei portalettere nei loro distretti (relazione annuale UOOU 2012). Le misure correttive imposte dall'UOOU sono state confermate nel 2017 dal Tribunale municipale di Praga (6 A 42/2013), che parla di 7.777 distretti di recapito. Secondo epravo.cz (fonte non ufficiale) la multa fu di 80.000 CZK: la cifra non compare nelle fonti ufficiali che abbiamo aperto, per questo mostriamo il massimale del GDPR. Il caso è anteriore al GDPR, ma il principio resta.",
@@ -370,6 +388,7 @@ export const repubblicaCeca: SchedaPaese = {
       sv: 'Referensfallet är UOOU mot Česká pošta (Tjeckiska posten). Inspektionen, från den 25 april till den 25 september 2012, konstaterade en överträdelse av § 5 stycke 2 i den gamla dataskyddslagen: det fanns ingen rättslig grund för att systematiskt övervaka brevbärarnas förflyttningar i deras distrikt (UOOU:s årsrapport 2012). De korrigerande åtgärder som UOOU påförde fastställdes 2017 av Prags stadsdomstol (6 A 42/2013), som hänvisar till 7 777 utdelningsdistrikt. Enligt epravo.cz (inte en officiell källa) var böterna 80 000 CZK: beloppet förekommer inte i de officiella källor vi öppnade, och därför visar vi GDPR-maximum. Fallet föregår GDPR, men principen står kvar.',
       nb: 'Referansesaken er UOOU mot Česká pošta (Tsjekkisk Post). Kontrollen, fra 25. april til 25. september 2012, konstaterte et brudd på § 5 ledd 2 i den gamle personvernloven: det fantes ikke noe behandlingsgrunnlag for å overvåke postbudenes bevegelser i distriktene deres systematisk (UOOUs årsrapport 2012). De korrigerende tiltakene som UOOU pålegde, ble stadfestet i 2017 av byretten i Praha (6 A 42/2013), som nevner 7 777 utdelingsdistrikter. Ifølge epravo.cz (en uoffisiell kilde) var boten 80 000 CZK: beløpet står ikke i de offisielle kildene vi åpnet, og derfor viser vi GDPR-maksimum. Saken er eldre enn GDPR, men prinsippet gjelder fortsatt.',
       nl: "De referentiezaak is UOOU tegen Česká pošta (Tsjechische Post). De controle van 25 april tot 25 september 2012 stelde een schending vast van § 5, lid 2, van de oude gegevensbeschermingswet: er was geen rechtsgrond om de verplaatsingen van postbodes in hun wijken stelselmatig te volgen (jaarverslag UOOU 2012). De door de UOOU opgelegde corrigerende maatregelen werden in 2017 bevestigd door de gemeentelijke rechtbank van Praag (6 A 42/2013), die spreekt van 7.777 bestelwijken. Volgens epravo.cz (geen officiële bron) bedroeg de boete 80.000 CZK: dat bedrag staat niet in de officiële bronnen die we hebben geopend, daarom tonen we het maximum van de AVG. De zaak dateert van voor de AVG, maar het beginsel blijft overeind.",
+      ru: "Образцовый случай: UOOU против Česká pošta (Чешская почта). Проверка, проведённая с 25 апреля по 25 сентября 2012 г., выявила нарушение § 5 ч. 2 прежнего закона о защите данных: отсутствовало правовое основание для систематического наблюдения за перемещениями почтальонов на их участках (годовой отчёт UOOU за 2012 год). Корректирующие меры, наложенные UOOU, были подтверждены в 2017 году Муниципальным судом Праги (6 A 42/2013), который говорит о 7.777 участках доставки. По данным epravo.cz (неофициальный источник), штраф составил 80.000 CZK: эта сумма не фигурирует в изученных нами официальных источниках, поэтому мы указываем максимальный размер по GDPR. Случай предшествует GDPR, но принцип остаётся в силе.",
     },
     urlFonte: FONTE_UOOU_VZ2012.url,
     tipoImporto: 'massimale',
