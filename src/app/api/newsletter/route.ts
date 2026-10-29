@@ -123,6 +123,32 @@ export async function POST(req: NextRequest) {
     }
   }
 
+  // Manuale e checklist: oltre a MailerLite, ogni scaricamento va nel CRM (sezione "Manuale"),
+  // che lo conta senza avviare nessuna email. Si aspetta la risposta per un massimo di 4 secondi,
+  // perche' una chiamata lasciata in volo puo' essere tagliata a risposta inviata. Se il CRM non
+  // risponde non si blocca nulla: il contatto e' gia' su MailerLite.
+  if (leadMagnet && Object.values(ASSETS).some((a) => a.leadMagnet === leadMagnet)) {
+    const base = process.env.CRM_LEAD_ENDPOINT;
+    const crmSecret = process.env.CRM_SYNC_SECRET;
+    if (base && crmSecret) {
+      try {
+        await fetch(new URL('/api/lead/asset-download', base).toString(), {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-sync-secret': crmSecret },
+          body: JSON.stringify({
+            asset: leadMagnet,
+            email,
+            locale,
+            country: req.headers.get('cf-ipcountry') ?? undefined,
+          }),
+          signal: AbortSignal.timeout(4000),
+        });
+      } catch (err) {
+        console.error('[newsletter] CRM asset-download notify failed:', err);
+      }
+    }
+  }
+
   const file = leadMagnet ? LEAD_FILES[leadMagnet] : undefined;
   return NextResponse.json(file ? { ok: true, file } : { ok: true });
 }
