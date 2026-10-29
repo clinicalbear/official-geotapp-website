@@ -398,7 +398,7 @@ export const COPY: Record<BaseLocale, Record<AssetKey, AssetCopy>> = {
       h1: 'Posizione, orari e foto di chi lavora fuori sede',
       subtitle: 'Manuale pratico tra Statuto dei lavoratori, GDPR e squadre sul campo',
       p1: 'Un titolare di PMI con una squadra sul campo si trova davanti a due leggi e a due cancelli: lo Statuto dei lavoratori, con l\'accordo sindacale o l\'autorizzazione dell\'Ispettorato, e il GDPR, con finalità, informativa, conservazione e diritti. Superare uno dei due non vuol dire aver superato l\'altro. Il manuale mette in fila le regole, i provvedimenti del Garante, le note dell\'Ispettorato e le sentenze, e dice quali domande farsi prima di accendere qualunque strumento.',
-      p2: 'Sono 17 capitoli, un glossario e otto appendici con tracce di informativa, valutazione d\'impatto, registro dei trattamenti, relazione per l\'Ispettorato, risposta a una richiesta di accesso e clausole per il fornitore. Ogni affermazione ha la sua nota a piè di pagina, con il link alla fonte (quando è pubblica) e l\'indicazione di quanto la fonte è stata letta direttamente. È la bozza 3 e non è ancora stata sottoposta a revisione di un professionista.',
+      p2: 'Sono 17 capitoli, un glossario e otto appendici con tracce di informativa, valutazione d\'impatto, registro dei trattamenti, relazione per l\'Ispettorato, risposta a una richiesta di accesso e clausole per il fornitore. Ogni affermazione ha la sua nota a piè di pagina, con il link alla fonte (quando è pubblica) e l\'indicazione di quanto la fonte è stata letta direttamente.',
     },
     checklist: {
       metaTitle: 'Checklist: le 10 domande prima di attivare GPS, orari e foto (PDF)',
@@ -416,7 +416,7 @@ export const COPY: Record<BaseLocale, Record<AssetKey, AssetCopy>> = {
       h1: 'Location, working hours and photos of field workers',
       subtitle: 'A practical manual on the Italian Workers\' Statute and the GDPR for teams working off-site',
       p1: 'An owner of a small business with a field team faces two laws and two gates: the Workers\' Statute, with a union agreement or authorisation from the Labour Inspectorate, and the GDPR, with purpose, notice, retention and rights. Passing one does not mean passing the other. The manual lays out the rules, the decisions of the Italian data protection authority, the Inspectorate\'s notes and the case law, and says which questions to ask before switching on any tool.',
-      p2: 'It has 17 chapters, a glossary and eight appendices with outlines for a privacy notice, a data protection impact assessment, a record of processing, a report for the Inspectorate, a reply to an access request and supplier clauses. Every statement has its footnote with the link to the source (when it is public) and how far the source was read directly. It is draft 3 and has not yet been reviewed by a professional.',
+      p2: 'It has 17 chapters, a glossary and eight appendices with outlines for a privacy notice, a data protection impact assessment, a record of processing, a report for the Inspectorate, a reply to an access request and supplier clauses. Every statement has its footnote with the link to the source (when it is public) and how far the source was read directly.',
     },
     checklist: {
       metaTitle: 'Checklist: 10 questions before switching on GPS, hours and photos (Italy, PDF)',
@@ -434,7 +434,7 @@ export const COPY: Record<BaseLocale, Record<AssetKey, AssetCopy>> = {
       h1: 'Standort, Arbeitszeiten und Fotos von Mitarbeitenden im Außendienst',
       subtitle: 'Praxishandbuch zum italienischen Arbeitnehmerstatut und zur DSGVO für Teams im Einsatz vor Ort',
       p1: 'Wer ein kleines Unternehmen mit einem Team im Außendienst führt, steht vor zwei Gesetzen und zwei Toren: dem Arbeitnehmerstatut, mit Betriebsvereinbarung oder Genehmigung der Arbeitsaufsicht, und der DSGVO, mit Zweck, Information, Speicherdauer und Rechten. Das eine Tor zu passieren heißt nicht, das andere passiert zu haben. Das Handbuch ordnet die Regeln, die Entscheidungen der italienischen Datenschutzbehörde, die Hinweise der Arbeitsaufsicht und die Rechtsprechung und nennt die Fragen, die vor dem Einschalten jedes Werkzeugs zu stellen sind.',
-      p2: 'Es umfasst 17 Kapitel, ein Glossar und acht Anhänge mit Mustern für Datenschutzhinweis, Datenschutz-Folgenabschätzung, Verarbeitungsverzeichnis, Bericht an die Arbeitsaufsicht, Antwort auf ein Auskunftsersuchen und Klauseln für den Lieferanten. Jede Aussage hat ihre Fußnote mit Link zur Quelle (wenn öffentlich) und dem Hinweis, wie weit die Quelle direkt gelesen wurde. Es ist Entwurf 3 und noch nicht von einer Fachperson geprüft.',
+      p2: 'Es umfasst 17 Kapitel, ein Glossar und acht Anhänge mit Mustern für Datenschutzhinweis, Datenschutz-Folgenabschätzung, Verarbeitungsverzeichnis, Bericht an die Arbeitsaufsicht, Antwort auf ein Auskunftsersuchen und Klauseln für den Lieferanten. Jede Aussage hat ihre Fußnote mit Link zur Quelle (wenn öffentlich) und dem Hinweis, wie weit die Quelle direkt gelesen wurde.',
     },
     checklist: {
       metaTitle: 'Checkliste: 10 Fragen vor dem Einschalten von GPS, Zeiten und Fotos (Italien, PDF)',
@@ -452,7 +452,7 @@ export const COPY: Record<BaseLocale, Record<AssetKey, AssetCopy>> = {
       h1: 'Position, horaires et photos des équipes sur le terrain',
       subtitle: 'Manuel pratique sur le Statut des travailleurs italien et le RGPD pour les équipes hors site',
       p1: 'Le dirigeant d\'une petite entreprise avec une équipe sur le terrain se trouve devant deux lois et deux portes : le Statut des travailleurs, avec l\'accord syndical ou l\'autorisation de l\'Inspection du travail, et le RGPD, avec finalité, information, conservation et droits. Franchir l\'une ne veut pas dire avoir franchi l\'autre. Le manuel met en ordre les règles, les décisions de l\'autorité italienne de protection des données, les notes de l\'Inspection et la jurisprudence, et dit quelles questions se poser avant d\'activer le moindre outil.',
-      p2: 'Il compte 17 chapitres, un glossaire et huit annexes avec des trames d\'information, d\'analyse d\'impact, de registre des traitements, de rapport pour l\'Inspection, de réponse à une demande d\'accès et de clauses pour le fournisseur. Chaque affirmation a sa note de bas de page, avec le lien vers la source (quand elle est publique) et l\'indication de la part lue directement. C\'est la version provisoire 3, pas encore relue par un professionnel.',
+      p2: 'Il compte 17 chapitres, un glossaire et huit annexes avec des trames d\'information, d\'analyse d\'impact, de registre des traitements, de rapport pour l\'Inspection, de réponse à une demande d\'accès et de clauses pour le fournisseur. Chaque affirmation a sa note de bas de page, avec le lien vers la source (quand elle est publique) et l\'indication de la part lue directement.',
     },
     checklist: {
       metaTitle: 'Checklist : 10 questions avant d\'activer le GPS, les horaires et les photos (Italie, PDF)',
@@ -470,7 +470,7 @@ export const COPY: Record<BaseLocale, Record<AssetKey, AssetCopy>> = {
       h1: 'Ubicación, horarios y fotos de quien trabaja fuera de la sede',
       subtitle: 'Manual práctico sobre el Estatuto de los Trabajadores italiano y el RGPD para equipos sobre el terreno',
       p1: 'El titular de una pequeña empresa con un equipo sobre el terreno se encuentra ante dos leyes y dos puertas: el Estatuto de los Trabajadores, con el acuerdo sindical o la autorización de la Inspección de Trabajo, y el RGPD, con finalidad, información, conservación y derechos. Pasar una no significa haber pasado la otra. El manual ordena las reglas, las decisiones de la autoridad italiana de protección de datos, las notas de la Inspección y la jurisprudencia, y dice qué preguntas hacerse antes de activar cualquier herramienta.',
-      p2: 'Tiene 17 capítulos, un glosario y ocho apéndices con esquemas de información, evaluación de impacto, registro de tratamientos, informe para la Inspección, respuesta a una solicitud de acceso y cláusulas para el proveedor. Cada afirmación tiene su nota al pie, con el enlace a la fuente (cuando es pública) y la indicación de cuánto se leyó directamente. Es el borrador 3 y aún no lo ha revisado un profesional.',
+      p2: 'Tiene 17 capítulos, un glosario y ocho apéndices con esquemas de información, evaluación de impacto, registro de tratamientos, informe para la Inspección, respuesta a una solicitud de acceso y cláusulas para el proveedor. Cada afirmación tiene su nota al pie, con el enlace a la fuente (cuando es pública) y la indicación de cuánto se leyó directamente.',
     },
     checklist: {
       metaTitle: 'Lista de verificación: 10 preguntas antes de activar GPS, horarios y fotos (Italia, PDF)',
@@ -488,7 +488,7 @@ export const COPY: Record<BaseLocale, Record<AssetKey, AssetCopy>> = {
       h1: 'Localização, horários e fotos de quem trabalha fora da sede',
       subtitle: 'Manual prático sobre o Estatuto dos Trabalhadores italiano e o RGPD para equipas no terreno',
       p1: 'O titular de uma pequena empresa com uma equipa no terreno depara-se com duas leis e duas portas: o Estatuto dos Trabalhadores, com o acordo sindical ou a autorização da Inspeção do Trabalho, e o RGPD, com finalidade, informação, conservação e direitos. Passar uma não significa ter passado a outra. O manual põe por ordem as regras, as decisões da autoridade italiana de proteção de dados, as notas da Inspeção e a jurisprudência, e diz que perguntas fazer antes de ligar qualquer ferramenta.',
-      p2: 'Tem 17 capítulos, um glossário e oito apêndices com esquemas de informação, avaliação de impacto, registo de tratamentos, relatório para a Inspeção, resposta a um pedido de acesso e cláusulas para o fornecedor. Cada afirmação tem a sua nota de rodapé, com a ligação à fonte (quando é pública) e a indicação do quanto foi lido diretamente. É o rascunho 3 e ainda não foi revisto por um profissional.',
+      p2: 'Tem 17 capítulos, um glossário e oito apêndices com esquemas de informação, avaliação de impacto, registo de tratamentos, relatório para a Inspeção, resposta a um pedido de acesso e cláusulas para o fornecedor. Cada afirmação tem a sua nota de rodapé, com a ligação à fonte (quando é pública) e a indicação do quanto foi lido diretamente.',
     },
     checklist: {
       metaTitle: 'Checklist: 10 perguntas antes de ligar GPS, horários e fotos (Itália, PDF)',
@@ -506,7 +506,7 @@ export const COPY: Record<BaseLocale, Record<AssetKey, AssetCopy>> = {
       h1: 'Locatie, werktijden en foto\'s van medewerkers buiten de vestiging',
       subtitle: 'Praktisch handboek over het Italiaanse arbeidsstatuut en de AVG voor teams in het veld',
       p1: 'De eigenaar van een klein bedrijf met een team in het veld staat voor twee wetten en twee poorten: het arbeidsstatuut, met een akkoord met de vakbonden of toestemming van de arbeidsinspectie, en de AVG, met doel, informatie, bewaartermijn en rechten. De ene poort door zijn betekent niet dat je door de andere bent. Het handboek zet de regels, de besluiten van de Italiaanse toezichthouder, de notities van de inspectie en de rechtspraak op een rij en zegt welke vragen je moet stellen voordat je een hulpmiddel aanzet.',
-      p2: 'Het telt 17 hoofdstukken, een woordenlijst en acht bijlagen met schema\'s voor privacyverklaring, gegevensbeschermingseffectbeoordeling, verwerkingsregister, verslag voor de inspectie, antwoord op een inzageverzoek en clausules voor de leverancier. Elke bewering heeft een voetnoot met de link naar de bron (als die openbaar is) en de aanduiding hoeveel van de bron direct is gelezen. Het is concept 3 en nog niet door een professional beoordeeld.',
+      p2: 'Het telt 17 hoofdstukken, een woordenlijst en acht bijlagen met schema\'s voor privacyverklaring, gegevensbeschermingseffectbeoordeling, verwerkingsregister, verslag voor de inspectie, antwoord op een inzageverzoek en clausules voor de leverancier. Elke bewering heeft een voetnoot met de link naar de bron (als die openbaar is) en de aanduiding hoeveel van de bron direct is gelezen.',
     },
     checklist: {
       metaTitle: 'Checklist: 10 vragen voordat je GPS, werktijden en foto\'s aanzet (Italië, PDF)',
@@ -524,7 +524,7 @@ export const COPY: Record<BaseLocale, Record<AssetKey, AssetCopy>> = {
       h1: 'Position, arbejdstid og fotos af medarbejdere i marken',
       subtitle: 'Praktisk håndbog om den italienske arbejdstagerlov og GDPR for hold, der arbejder ude',
       p1: 'Ejeren af en lille virksomhed med et hold i marken står over for to love og to porte: arbejdstagerloven, med overenskomst med fagforeningerne eller tilladelse fra arbejdstilsynet, og GDPR, med formål, information, opbevaring og rettigheder. At komme gennem den ene betyder ikke, at man er kommet gennem den anden. Håndbogen stiller reglerne, den italienske tilsynsmyndigheds afgørelser, tilsynets noter og retspraksis op og siger, hvilke spørgsmål man skal stille, før man tænder for noget værktøj.',
-      p2: 'Den har 17 kapitler, en ordliste og otte bilag med skabeloner til privatlivsinformation, konsekvensanalyse, fortegnelse over behandlingsaktiviteter, rapport til tilsynet, svar på en anmodning om indsigt og klausuler til leverandøren. Hver påstand har sin fodnote med link til kilden (når den er offentlig) og angivelse af, hvor meget af kilden der er læst direkte. Det er udkast 3 og er endnu ikke gennemgået af en fagperson.',
+      p2: 'Den har 17 kapitler, en ordliste og otte bilag med skabeloner til privatlivsinformation, konsekvensanalyse, fortegnelse over behandlingsaktiviteter, rapport til tilsynet, svar på en anmodning om indsigt og klausuler til leverandøren. Hver påstand har sin fodnote med link til kilden (når den er offentlig) og angivelse af, hvor meget af kilden der er læst direkte.',
     },
     checklist: {
       metaTitle: 'Tjekliste: 10 spørgsmål før du tænder for GPS, arbejdstid og fotos (Italien, PDF)',
@@ -542,7 +542,7 @@ export const COPY: Record<BaseLocale, Record<AssetKey, AssetCopy>> = {
       h1: 'Position, arbetstider och foton av personal ute på fältet',
       subtitle: 'Praktisk handbok om den italienska arbetstagarstadgan och GDPR för team som arbetar ute',
       p1: 'Ägaren till ett litet företag med ett team på fältet står inför två lagar och två portar: arbetstagarstadgan, med avtal med facket eller tillstånd från arbetsinspektionen, och GDPR, med ändamål, information, lagring och rättigheter. Att ta sig igenom den ena betyder inte att man tagit sig igenom den andra. Handboken ordnar reglerna, den italienska tillsynsmyndighetens beslut, inspektionens skrivelser och rättspraxis, och säger vilka frågor man ska ställa innan man slår på något verktyg.',
-      p2: 'Den har 17 kapitel, en ordlista och åtta bilagor med underlag för integritetsinformation, konsekvensbedömning, register över behandlingar, rapport till inspektionen, svar på en begäran om tillgång och klausuler för leverantören. Varje påstående har sin fotnot med länk till källan (när den är offentlig) och uppgift om hur mycket av källan som lästs direkt. Det är utkast 3 och har ännu inte granskats av en fackperson.',
+      p2: 'Den har 17 kapitel, en ordlista och åtta bilagor med underlag för integritetsinformation, konsekvensbedömning, register över behandlingar, rapport till inspektionen, svar på en begäran om tillgång och klausuler för leverantören. Varje påstående har sin fotnot med länk till källan (när den är offentlig) och uppgift om hur mycket av källan som lästs direkt.',
     },
     checklist: {
       metaTitle: 'Checklista: 10 frågor innan du slår på GPS, arbetstider och foton (Italien, PDF)',
@@ -560,7 +560,7 @@ export const COPY: Record<BaseLocale, Record<AssetKey, AssetCopy>> = {
       h1: 'Posisjon, arbeidstid og bilder av ansatte i felt',
       subtitle: 'Praktisk håndbok om den italienske arbeidstakerloven (Statuto dei lavoratori) og GDPR for team som jobber ute',
       p1: 'Eieren av en liten bedrift med et team i felt står overfor to lover og to porter: arbeidstakerloven, med avtale med fagforeningen eller tillatelse fra arbeidstilsynet, og GDPR, med formål, informasjon, lagring og rettigheter. Å komme gjennom den ene betyr ikke at man er kommet gjennom den andre. Håndboken setter reglene, den italienske tilsynsmyndighetens vedtak, tilsynets notater og rettspraksis i rekkefølge, og sier hvilke spørsmål man bør stille før man slår på noe verktøy.',
-      p2: 'Den har 17 kapitler, en ordliste og åtte vedlegg med maler for personvernerklæring, personvernkonsekvensvurdering, protokoll over behandlingsaktiviteter, rapport til tilsynet, svar på en innsynsforespørsel og klausuler for leverandøren. Hver påstand har sin fotnote med lenke til kilden (når den er offentlig) og opplysning om hvor mye av kilden som er lest direkte. Det er utkast 3 og er ennå ikke gjennomgått av en fagperson.',
+      p2: 'Den har 17 kapitler, en ordliste og åtte vedlegg med maler for personvernerklæring, personvernkonsekvensvurdering, protokoll over behandlingsaktiviteter, rapport til tilsynet, svar på en innsynsforespørsel og klausuler for leverandøren. Hver påstand har sin fotnote med lenke til kilden (når den er offentlig) og opplysning om hvor mye av kilden som er lest direkte.',
     },
     checklist: {
       metaTitle: 'Sjekkliste: 10 spørsmål før du slår på GPS, arbeidstid og bilder (Italia, PDF)',
@@ -578,7 +578,7 @@ export const COPY: Record<BaseLocale, Record<AssetKey, AssetCopy>> = {
       h1: 'Геолокация, рабочее время и фотографии сотрудников, работающих вне офиса',
       subtitle: 'Практическое руководство по итальянскому Статуту трудящихся и GDPR для выездных бригад',
       p1: 'Владелец небольшой компании с бригадой на выезде стоит перед двумя законами и двумя воротами: Статутом трудящихся, с соглашением с профсоюзом или разрешением трудовой инспекции, и GDPR, с целью, информированием, сроками хранения и правами. Пройти одни ворота не значит пройти другие. Руководство выстраивает правила, решения итальянского органа по защите данных, письма инспекции и судебную практику и говорит, какие вопросы задать себе перед включением любого инструмента.',
-      p2: 'В нём 17 глав, глоссарий и восемь приложений с заготовками уведомления о конфиденциальности, оценки воздействия, реестра обработки, отчёта для инспекции, ответа на запрос о доступе и положений для поставщика. У каждого утверждения есть сноска со ссылкой на источник (если он публичный) и пометкой о том, насколько источник был прочитан напрямую. Это черновик 3, он ещё не проверен специалистом.',
+      p2: 'В нём 17 глав, глоссарий и восемь приложений с заготовками уведомления о конфиденциальности, оценки воздействия, реестра обработки, отчёта для инспекции, ответа на запрос о доступе и положений для поставщика. У каждого утверждения есть сноска со ссылкой на источник (если он публичный) и пометкой о том, насколько источник был прочитан напрямую.',
     },
     checklist: {
       metaTitle: 'Чек-лист: 10 вопросов перед включением GPS, учёта времени и фото (Италия, PDF)',
