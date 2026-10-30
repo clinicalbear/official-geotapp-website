@@ -344,5 +344,10 @@ html.ib-art .article-content a.ib-src em.ko::before { content: "! "; }
 @media (min-width: 1200px) { html.ib-art a.ib-next { margin-right: -300px !important; } html.ib-art a.ib-next .cv { min-height: 320px; } }
 
 /* telefono: niente pulsante nella barra (decisione di Mike 30/10/2026: con la pallina e' piu' largo e stringeva l'icona del menu);
-   resta nella barra fissa in basso e nel menu */
-@media (max-width: 900px) { html body .nvr .nv-cta, html body header.nv .nv-cta { display: none !important; } }
+   al suo posto l'icona del menu */
+@media (max-width: 900px) {
+  html body .nvr .nv-cta:not(#ib-a):not(#ib-b):not(#ib-c), html body header.nv .nv-cta:not(#ib-a):not(#ib-b):not(#ib-c) { display: none !important; }
+  /* al posto del pulsante: carrello e icona del menu sulla destra della pillola */
+  html body header.nv .ne:not(#r-x) { position: fixed !important; right: 24px !important; top: 21px !important; height: 58px; display: flex !important; align-items: center; gap: 14px;
+    transform: none !important; margin: 0 !important; z-index: 85; pointer-events: auto; }
+}
