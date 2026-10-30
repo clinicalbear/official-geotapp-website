@@ -11,6 +11,7 @@ import '../l-mockup.css';
 // non si carica, e il blog usciva coi link piu' spenti e i loghi a colori).
 import '../l-footer.css';
 import '../l-palette.css';
+import '../ibrida.css'; // stile ibrido 30/10/2026: barra a pillola, pulsanti, ombre, testi a riempimento (public/ibrida/ibrida.js)
 import { clsx } from 'clsx';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -76,6 +77,7 @@ export default async function BlogLayout({ children }: { children: ReactNode }) 
         <InternalTrafficBadge />
         <CookieConsentBanner locale={locale} />
               </DictionaryBridge>
+        <Script id="ibrida" src="/ibrida/ibrida.js" strategy="afterInteractive" />
       </body>
     </html>
   );

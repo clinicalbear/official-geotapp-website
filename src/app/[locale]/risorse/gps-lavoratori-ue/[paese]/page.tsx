@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { buildLocaleAlternates } from '@/lib/i18n/locale-metadata';
+import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
@@ -75,13 +75,21 @@ async function generateMetadataBase({
   const title = dict.metaTitleScheda.replace('{paese}', nomePaese);
   const description = dict.metaDescScheda.replace('{paese}', nomePaese);
 
+  const path = `/risorse/gps-lavoratori-ue/${scheda.slugCanonico}/`;
   return {
     title: { absolute: title },
     description,
-    alternates: buildLocaleAlternates(
-      locale,
-      `/risorse/gps-lavoratori-ue/${scheda.slugCanonico}/`,
-    ),
+    alternates: buildLocaleAlternates(locale, path),
+    // Senza questi, le anteprime social (LinkedIn, WhatsApp) ereditavano dal layout titolo e descrizione
+    // generici in inglese e og:url della home (trovato il 30/10/2026).
+    openGraph: {
+      url: buildCanonicalUrl(locale, path),
+      type: 'article',
+      title,
+      description,
+      images: [{ url: '/og-default.png', width: 1200, height: 630, alt: title }],
+    },
+    twitter: { card: 'summary_large_image', title, description, images: ['/og-default.png'] },
   };
 }
 
