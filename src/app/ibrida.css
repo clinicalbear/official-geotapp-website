@@ -351,3 +351,16 @@ html.ib-art .article-content a.ib-src em.ko::before { content: "! "; }
   html body header.nv .ne:not(#r-x) { position: fixed !important; right: 24px !important; top: 21px !important; height: 58px; display: flex !important; align-items: center; gap: 14px;
     transform: none !important; margin: 0 !important; z-index: 85; pointer-events: auto; }
 }
+
+/* modulo dei contatti: i campi erano trasparenti con bordo navy sul riquadro navy, non si vedeva dove scrivere.
+   Ora campi bianchi, testo navy, segnaposto grigio, bordo verde quando ci scrivi. */
+html body .form .in:not(#ib-a), html body .form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not(#ib-a), html body .form select:not(#ib-a), html body .form textarea:not(#ib-a) {
+  background: #F7F9FC !important; color: #0B1736 !important; -webkit-text-fill-color: #0B1736; border: 1px solid rgb(247 249 252 / .35) !important; border-radius: 14px !important;
+  box-shadow: 0 1px 2px rgb(0 0 0 / .12) !important; padding: 12px 14px !important; }
+html body .form input::placeholder, html body .form textarea::placeholder { color: #667085 !important; -webkit-text-fill-color: #667085; opacity: 1; }
+html body .form select option { color: #0B1736; background: #fff; }
+html body .form .in:not(#ib-a):focus, html body .form input:not(#ib-a):focus, html body .form select:not(#ib-a):focus, html body .form textarea:not(#ib-a):focus { outline: none; border-color: #22B573 !important; box-shadow: 0 0 0 3px rgb(34 181 115 / .35) !important; }
+html body .form .in:not(#ib-a), html body .form input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not(#ib-a), html body .form select:not(#ib-a), html body .form textarea:not(#ib-a) { width: 100% !important; box-sizing: border-box; display: block; }
+html body .form textarea:not(#ib-a) { min-height: 140px; resize: vertical; }
+html body .form select:not(#ib-a) { -webkit-appearance: none; appearance: none; padding-right: 42px !important; cursor: pointer;
+  background: #F7F9FC url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B1736' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") right 14px center / 16px no-repeat !important; }
