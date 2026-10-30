@@ -342,3 +342,7 @@ html.ib-art .article-content a.ib-src em.ko::before { content: "! "; }
 @media (min-width: 1200px) { html.ib-art .article-content a.ib-src { border-radius: 18px; } }
 /* "Leggi il prossimo" largo come l'immagine in mezzo all'articolo (colonna + margine delle note) */
 @media (min-width: 1200px) { html.ib-art a.ib-next { margin-right: -300px !important; } html.ib-art a.ib-next .cv { min-height: 320px; } }
+
+/* telefono: niente pulsante nella barra (decisione di Mike 30/10/2026: con la pallina e' piu' largo e stringeva l'icona del menu);
+   resta nella barra fissa in basso e nel menu */
+@media (max-width: 900px) { html body .nvr .nv-cta, html body header.nv .nv-cta { display: none !important; } }

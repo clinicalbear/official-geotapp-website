@@ -296,6 +296,7 @@
   function navGap() {
     var ne = document.querySelector('header.nv .ne'), lang = document.querySelector('.fx-lang-btn') || document.querySelector('.nvr select');
     if (!ne || !lang) return; ne.style.transform = '';
+    if (innerWidth <= 900 || !lang.getBoundingClientRect().width) return;   // sul telefono la lingua e' nascosta: misurare da li' spingeva il menu fuori schermo
     var kids = Array.prototype.filter.call(ne.children, function (k) { return k.getBoundingClientRect().width > 0; }); if (!kids.length) return;
     var right = Math.max.apply(null, kids.map(function (k) { return k.getBoundingClientRect().right; }));
     var gap = lang.getBoundingClientRect().left - right;
