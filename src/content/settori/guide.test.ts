@@ -26,6 +26,17 @@ describe('guide del blog per settore', () => {
   });
 
   it('le varianti inglesi regionali usano le guide inglesi', () => {
-    expect(guidePerSettore('edilizia', 'en-gb')).toEqual(guidePerSettore('edilizia', 'en'));
+    expect(guidePerSettore('pulizie', 'en-au').length).toBeGreaterThan(0);
+  });
+});
+
+describe('guide legate a un Paese', () => {
+  it('Davis-Bacon solo negli Stati Uniti, la legge irlandese solo in Irlanda', () => {
+    const titoli = (l: string) => guidePerSettore('edilizia', l).map((g) => g.titolo).join(' | ');
+    expect(titoli('en-us')).toContain('Davis-Bacon');
+    expect(titoli('en-gb')).not.toContain('Davis-Bacon');
+    expect(titoli('en-gb')).not.toContain('Ireland');
+    expect(titoli('en-ie')).toContain('Ireland');
+    expect(titoli('en')).not.toContain('Davis-Bacon');
   });
 });

@@ -11,7 +11,8 @@
  */
 import type { SettoreSlug } from './types';
 
-export type GuidaSettore = { titolo: string; href: string };
+/** `solo`: articolo legato a un Paese, si mostra solo su quelle varianti (es. Davis-Bacon solo en-us). */
+export type GuidaSettore = { titolo: string; href: string; solo?: string[] };
 
 export const GUIDE_SETTORE: Record<string, Partial<Record<SettoreSlug, GuidaSettore[]>>> = {
   "it": {
@@ -48,7 +49,7 @@ export const GUIDE_SETTORE: Record<string, Partial<Record<SettoreSlug, GuidaSett
   "en": {
     "pulizie": [
       { titolo: "App for Cleaning Companies: What to Check Before You Choose", href: "/blog/en/2026/04/21/cleaning-company-app-what-to-check/" },
-      { titolo: "GPS Tracking for Cleaners: UK ICO-Compliant Setup in 2026", href: "/blog/en/2026/06/01/gps-tracking-cleaners-uk-2026/" },
+      { titolo: "GPS Tracking for Cleaners: UK ICO-Compliant Setup in 2026", href: "/blog/en/2026/06/01/gps-tracking-cleaners-uk-2026/", solo: ['en-gb'] },
       { titolo: "Time tracking for cleaning companies: proof, not paperwork", href: "/blog/en/2026/06/29/time-tracking-cleaning-companies-proof/" },
       { titolo: "GPS tracking of cleaning staff: what you can actually do without getting fined", href: "/blog/en/2026/05/18/gps-tracking-of-cleaning-staff-what-you-can-actually-do-without-getting-fined/" },
     ],
@@ -72,8 +73,8 @@ export const GUIDE_SETTORE: Record<string, Partial<Record<SettoreSlug, GuidaSett
       { titolo: "GPS Time Tracking for Plumbers: Recover the 12% You Lose to Disputes", href: "/blog/en/2026/06/03/gps-time-tracking-plumbers-uk-2026/" },
     ],
     "edilizia": [
-      { titolo: "Construction Sectoral Employment Order (SEO) and GPS site logs in Ireland", href: "/blog/en/2026/07/03/construction-seo-gps-site-logs-ireland/" },
-      { titolo: "Davis-Bacon prevailing wage compliance: GPS time tracking for federal construction projects", href: "/blog/en/2026/05/18/davis-bacon-prevailing-wage-gps-time-tracking-2026/" },
+      { titolo: "Construction Sectoral Employment Order (SEO) and GPS site logs in Ireland", href: "/blog/en/2026/07/03/construction-seo-gps-site-logs-ireland/", solo: ['en-ie'] },
+      { titolo: "Davis-Bacon prevailing wage compliance: GPS time tracking for federal construction projects", href: "/blog/en/2026/05/18/davis-bacon-prevailing-wage-gps-time-tracking-2026/", solo: ['en-us'] },
       { titolo: "Construction Site Attendance Software: Guide for Building Companies 2026", href: "/blog/en/2026/04/21/construction-site-attendance-software-guide/" },
       { titolo: "GPS site attendance app: who’s on site right now and how many hours we’ll bill the client", href: "/blog/en/2026/05/19/gps-site-attendance-app-whos-on-site-right-now-and-how-many-hours-well-bill-the-client/" },
     ],
@@ -252,5 +253,5 @@ export const GUIDE_TITOLO: Record<string, string> = {
 export function guidePerSettore(settore: SettoreSlug, locale: string, gia: string[] = []): GuidaSettore[] {
   const base = locale.split('-')[0];
   const lista = GUIDE_SETTORE[base]?.[settore] ?? [];
-  return lista.filter((g) => !gia.includes(g.href));
+  return lista.filter((g) => !gia.includes(g.href) && (!g.solo || g.solo.includes(locale)));
 }
