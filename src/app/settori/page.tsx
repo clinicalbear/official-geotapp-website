@@ -88,7 +88,6 @@ export default function SettoriPage({ locale }: Props) {
     { slug: 'termoidraulici', label: sectorNames.termoidraulici, desc: copy.termoidraulici_desc },
     { slug: 'edilizia', label: sectorNames.edilizia, desc: copy.edilizia_desc },
     { slug: 'manutenzione', label: sectorNames.manutenzione, desc: copy.manutenzione_desc },
-    { slug: 'impianti', label: sectorNames.impianti, desc: copy.impianti_desc },
   ];
 
   return (

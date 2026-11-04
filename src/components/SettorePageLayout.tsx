@@ -225,7 +225,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
     nb: 'Andre sektorer', ru: 'Другие отрасли',
   };
   const otherNames = OTHER_SETTORI[locale] ?? OTHER_SETTORI.en;
-  const otherSettori = (['pulizie', 'installatori', 'sicurezza', 'elettricisti', 'idraulici', 'termoidraulici', 'edilizia', 'impianti', 'manutenzione'] as SettoreSlug[]).filter((s) => s !== settore);
+  const otherSettori = (['pulizie', 'installatori', 'sicurezza', 'elettricisti', 'idraulici', 'termoidraulici', 'edilizia', 'manutenzione'] as SettoreSlug[]).filter((s) => s !== settore);
 
   // Risorse normative (audit internal linking 2026-05-23): stessa mappa di prima.
   const NORM_TITLE: Record<string, string> = {

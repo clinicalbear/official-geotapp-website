@@ -187,7 +187,7 @@ export default function Home({ locale, jrSlot, fqSlot }: { locale?: string; jrSl
   ];
 
   const sectorSlugs = ['installatori', 'pulizie', 'sicurezza', 'elettricisti', 'idraulici',
-    'termoidraulici', 'edilizia', 'manutenzione', 'impianti'];
+    'termoidraulici', 'edilizia', 'manutenzione'];
 
   return (
     <div className="lp-l lp-home">

@@ -83,7 +83,6 @@ export default function Navbar() {
     { href: getLink('/settori/termoidraulici'), label: dict.sectors.termoidraulici },
     { href: getLink('/settori/edilizia'), label: dict.sectors.edilizia },
     { href: getLink('/settori/manutenzione'), label: dict.sectors.manutenzione },
-    { href: getLink('/settori/impianti'), label: dict.sectors.impianti },
   ];
 
   const products = [

@@ -19,7 +19,6 @@ const SETTORI = [
   { slug: 'termoidraulici', img: '/settori/termoidraulici.webp', pos: '72% 30%' },
   { slug: 'edilizia',       img: '/settori/edilizia.webp', pos: '55% 35%' },
   { slug: 'manutenzione',   img: '/settori/manutenzione.webp', pos: '47% 30%' },
-  { slug: 'impianti',       img: '/settori/impianti.webp', pos: '72% 30%' },
 ] as const;
 
 export default function LSettori() {
