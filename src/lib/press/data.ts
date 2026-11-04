@@ -58,6 +58,34 @@ export function pressRel(_item: PressItem): string {
 // VUOTI al lancio. Aggiungere una voce = la sezione compare da sola in pagina.
 export const PRESS_RELEASES: PressItem[] = [];
 export const PRESS_COVERAGE: PressItem[] = [
+  // Gastgewerbe-Magazin (DE), Gastbeitrag a firma Michele Angelo Petraroli, online dal 04/11/2026
+  // (datePublished 2026-11-04T04:15:00+00:00 nello schema della pagina). Proposto il 26/10 a
+  // redaktion@, accettato il 28/10 da David J. Knepper (Head of Content); link alla pubblicazione
+  // mandato il 04/11 da Miriam Grothe (Chefredakteurin). Il link di approvazione promesso prima
+  // della pubblicazione NON e' arrivato. Editore Inproma GmbH (Wuppertal), testata indipendente,
+  // proposta diretta, nessun rapporto con Featured/Connectively.
+  // Verificato il 04/11/2026 sull'HTML grezzo: HTTP 200, titolo dal <title>, autore nello schema.
+  // Unico link a noi: «Mehr Informationen», rel="noopener" (dofollow), aggiunto dalla redazione
+  // (nel nostro testo non c'era). All'uscita puntava a https://geotapp.com/de/k (404); su nostra
+  // richiesta Grothe lo ha corretto il 04/11 in https://geotapp.com/de/, riletto sul grezzo. Logo ricavato da
+  // https://gastgewerbe-magazin.de/wp-content/uploads/2021/08/Gastgewerbe-Magazin.svg.
+  {
+    date: '2026-11-04',
+    outlet: 'Gastgewerbe-Magazin',
+    title: 'Zeiterfassung ohne Ortung: Was Gesetz und Datenschutz tatsächlich verlangen',
+    url: 'https://gastgewerbe-magazin.de/zeiterfassung-ohne-ortung-was-gesetz-und-datenschutz-tatsaechlich-verlangen-73774',
+    locale: 'de',
+    country: 'de',
+    logo: '/press/gastgewerbemagazin.png',
+    referrer: {
+      hosts: ['gastgewerbe-magazin.de'],
+      // Stesso claim approvato delle altre voci, con la formulazione gia' rivista di contestazioni/de.ts.
+      welcome: 'Interessiert Sie GPS bei der Arbeit? Ein Standort wird nur durch eine Handlung der Beschäftigten erfasst, und die App fragt nicht nach der Standortberechtigung im Hintergrund.',
+      cta: { label: 'So funktioniert es', path: '/contestazioni' },
+    },
+    follow: true, // DOFOLLOW: <a href="https://geotapp.com/de/" rel="noopener">, letto sul grezzo il
+                  // 04/11/2026 dopo la correzione. NB: dal 13/07/2026 il flag NON concede piu' dofollow in uscita.
+  },
   // ManagementSite (NL), contributo a firma Michele Angelo Petraroli, online dal 21/10/2026
   // (data letta dal tag <time> dell'articolo). Proposto il 19/10; la redazione ha risposto il 20/10
   // che e' una piattaforma aperta con selezione: l'80% finisce nel cestino, questo e' passato.
