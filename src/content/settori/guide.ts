@@ -166,6 +166,9 @@ export const GUIDE_SETTORE: Record<string, Partial<Record<SettoreSlug, GuidaSett
     ],
   },
   "es": {
+    "sicurezza": [
+      { titolo: "Software de gestión guardias de seguridad España 2026", href: "/blog/es/2026/05/14/software-gestion-guardias-seguridad-espana-2026/" },
+    ],
     "pulizie": [
       { titolo: "Subrogación de plantilla en limpieza: qué pasa con las horas", href: "/blog/es/2026/08/11/subrogacion-plantilla-limpieza-cambio-contrata/" },
       { titolo: "Software para empresas de limpieza 2026: qué buscar y qué evitar", href: "/blog/es/2026/05/09/software-empresa-limpieza-2026-guia/" },
@@ -236,6 +239,54 @@ export const GUIDE_SETTORE: Record<string, Partial<Record<SettoreSlug, GuidaSett
   },
 };
 
+/**
+ * Mestieri vicini (04/11/2026): sul blog mancano articoli dedicati a idraulici,
+ * termoidraulici e manutenzione in quasi tutte le lingue. Finche' non ci sono, la
+ * pagina mostra le guide del mestiere piu' affine, che parlano davvero dello stesso lavoro.
+ */
+export const VICINI: Partial<Record<SettoreSlug, SettoreSlug[]>> = {
+  idraulici: ['termoidraulici', 'installatori'],
+  termoidraulici: ['idraulici', 'installatori'],
+  manutenzione: ['installatori', 'elettricisti'],
+  elettricisti: ['installatori'],
+  installatori: ['elettricisti'],
+};
+
+/** Lingue senza articoli dedicati a un mestiere (anche fra i vicini): guide generali su orario e prova delle ore. */
+export const GUIDE_GENERALI: Record<string, GuidaSettore[]> = {
+  pt: [
+    { titolo: "Mudança de hora e turnos noturnos: quem paga essa hora", href: "/blog/pt/2026/09/29/mudanca-hora-trabalho-noturno/" },
+    { titolo: "Artigo 202.º: o registo que a ACT pede sem avisar", href: "/blog/pt/2026/09/14/artigo-202-registo-tempos-trabalho-act/" },
+    { titolo: "Picagem GPS: a informação aos trabalhadores feita bem", href: "/blog/pt/2026/08/04/picagem-gps-informacao-trabalhadores/" },
+    { titolo: "Deslocação como tempo de trabalho: o que diz a sentença Tyco", href: "/blog/pt/2026/08/18/deslocacao-tempo-de-trabalho-sentenca-tyco/" },
+  ],
+  da: [
+    { titolo: "Vintertid, nattevagt og den ekstra time ingen skrev ned", href: "/blog/da/2026/09/29/vintertid-nattevagt-ekstra-time/" },
+    { titolo: "Kørsel som arbejdstid: det afgjorde Tyco-dommen", href: "/blog/da/2026/08/18/koersel-som-arbejdstid-tyco-dommen/" },
+    { titolo: "GPS i varevognen: hvad Datatilsynet kræver af dig i 2026", href: "/blog/da/2026/06/15/gps-varevogn-datatilsynet-medarbejdere-2026/" },
+    { titolo: "Er ventetid arbejdstid? Sådan ser hullet ud efter 1. juli 2024", href: "/blog/da/2026/09/08/ventetid-arbejdstid-tidsregistrering/" },
+  ],
+  nb: [
+    { titolo: "Hvem betaler den ekstra timen nattevakten jobber?", href: "/blog/nb/2026/09/29/nattarbeid-tidsomstilling-betalt-time/" },
+    { titolo: "Pause som arbeidstid, når bilen er hele pauserommet", href: "/blog/nb/2026/09/15/pause-som-arbeidstid-pauserom/" },
+    { titolo: "Slik gjør du GPS-stempling lovlig og brukbar som bevis", href: "/blog/nb/2026/08/04/gps-stempling-lovlig-og-bevis/" },
+    { titolo: "Ventetid på jobb, er det arbeidstid og hvem betaler?", href: "/blog/nb/2026/09/08/ventetid-arbeidstid-hvem-betaler/" },
+  ],
+  ru: [
+    { titolo: "Обеденный перерыв по ТК РФ, когда его обязаны оплатить", href: "/blog/ru/2026/09/15/obedennyy-pereryv-oplata-tk-rf/" },
+    { titolo: "Время в пути и рабочее время: что говорит ТК РФ", href: "/blog/ru/2026/08/18/vremya-v-puti-kak-rabochee-vremya/" },
+    { titolo: "Как доказать часы ночной смены по ТК РФ", href: "/blog/ru/2026/09/29/nochnaya-smena-oplata-chasov/" },
+    { titolo: "Уведомление о GPS для сотрудников: как сделать отметку законной", href: "/blog/ru/2026/08/04/uvedomlenie-gps-sotrudniki-zakonnaya-otmetka/" },
+  ],
+};
+
+export const GUIDE_TITOLO_GENERALE: Record<string, string> = {
+  ru: 'Полезные руководства',
+  pt: 'Guias úteis',
+  da: 'Nyttige guides',
+  nb: 'Nyttige guider',
+};
+
 export const GUIDE_TITOLO: Record<string, string> = {
   it: 'Le guide per il tuo settore',
   en: 'Guides for your trade',
@@ -252,6 +303,25 @@ export const GUIDE_TITOLO: Record<string, string> = {
 /** Le guide della pagina, senza quelle gia' nel blocco normativo (stesso href). */
 export function guidePerSettore(settore: SettoreSlug, locale: string, gia: string[] = []): GuidaSettore[] {
   const base = locale.split('-')[0];
-  const lista = GUIDE_SETTORE[base]?.[settore] ?? [];
-  return lista.filter((g) => !gia.includes(g.href) && (!g.solo || g.solo.includes(locale)));
+  const ok = (g: GuidaSettore) => !gia.includes(g.href) && (!g.solo || g.solo.includes(locale));
+  const proprie = (GUIDE_SETTORE[base]?.[settore] ?? []).filter(ok);
+  if (proprie.length >= 2) return proprie;
+  // Pochi o nessun articolo sul mestiere: si completa con i mestieri vicini, senza doppioni.
+  const viste = new Set(proprie.map((g) => g.href));
+  const altre: GuidaSettore[] = [];
+  for (const v of VICINI[settore] ?? []) {
+    for (const g of (GUIDE_SETTORE[base]?.[v] ?? []).filter(ok)) {
+      if (!viste.has(g.href)) { viste.add(g.href); altre.push(g); }
+    }
+  }
+  return [...proprie, ...altre].slice(0, 4);
+}
+
+/** Titolo e guide della sezione: quelle del mestiere, oppure le generali della lingua. */
+export function sezioneGuide(settore: SettoreSlug, locale: string, gia: string[] = []): { titolo: string; guide: GuidaSettore[] } {
+  const base = locale.split('-')[0];
+  const guide = guidePerSettore(settore, locale, gia);
+  if (guide.length > 0) return { titolo: GUIDE_TITOLO[base] ?? GUIDE_TITOLO.en, guide };
+  const generali = (GUIDE_GENERALI[base] ?? []).filter((g) => !gia.includes(g.href));
+  return { titolo: GUIDE_TITOLO_GENERALE[base] ?? GUIDE_TITOLO[base] ?? GUIDE_TITOLO.en, guide: generali };
 }

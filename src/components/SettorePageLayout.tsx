@@ -12,7 +12,7 @@ import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { SettoreContent, SettoreSlug } from '@/content/settori/types';
 import { haPaginaRisorse } from '@/content/settori/risorse-disponibili'
-import { guidePerSettore, GUIDE_TITOLO } from '@/content/settori/guide';
+import { sezioneGuide } from '@/content/settori/guide';
 import {
   ALL_REGIONAL_FAQ,
   ALL_REGIONAL_FAQ_TITLES,
@@ -312,8 +312,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
     ?? NORM_TITLE[locale.split('-')[0]]
     ?? NORM_TITLE.en;
 
-  const guide = guidePerSettore(settore, locale, (normLinks ?? []).map((l) => l.href));
-  const guideTitolo = GUIDE_TITOLO[locale.split('-')[0]] ?? GUIDE_TITOLO.en;
+  const { titolo: guideTitolo, guide } = sezioneGuide(settore, locale, (normLinks ?? []).map((l) => l.href));
   const regionalItemsRaw = ALL_REGIONAL_FAQ[settore]?.[locale];
   const regionalItems = regionalItemsRaw ? localizeEnglishDeep(regionalItemsRaw, locale) : regionalItemsRaw;
   const regionalTitle = ALL_REGIONAL_FAQ_TITLES[settore]?.[locale] ?? 'Regional compliance';

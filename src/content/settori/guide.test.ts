@@ -40,3 +40,18 @@ describe('guide legate a un Paese', () => {
     expect(titoli('en')).not.toContain('Davis-Bacon');
   });
 });
+
+describe('nessuna pagina settore senza guide', () => {
+  const SETTORI = ['pulizie', 'sicurezza', 'installatori', 'elettricisti', 'idraulici', 'termoidraulici', 'edilizia', 'manutenzione'] as const;
+  const LINGUE = ['it', 'en', 'en-gb', 'en-us', 'de', 'nl', 'fr', 'es', 'pt', 'da', 'sv', 'nb', 'ru'];
+  it('ogni settore in ogni lingua ha almeno una guida', async () => {
+    const { sezioneGuide } = await import('./guide');
+    const vuote: string[] = [];
+    for (const l of LINGUE) for (const s of SETTORI) if (sezioneGuide(s, l).guide.length === 0) vuote.push(`${l}/${s}`);
+    expect(vuote).toEqual([]);
+  });
+  it('le guide generali russe hanno un titolo che non promette il mestiere', async () => {
+    const { sezioneGuide } = await import('./guide');
+    expect(sezioneGuide('termoidraulici', 'ru').titolo).toBe('Полезные руководства');
+  });
+});
