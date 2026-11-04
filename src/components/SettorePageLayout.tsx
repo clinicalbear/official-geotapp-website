@@ -11,7 +11,8 @@ import { localizePath } from '@/lib/i18n/locale-routing';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { SettoreContent, SettoreSlug } from '@/content/settori/types';
-import { haPaginaRisorse } from '@/content/settori/risorse-disponibili';
+import { haPaginaRisorse } from '@/content/settori/risorse-disponibili'
+import { guidePerSettore, GUIDE_TITOLO } from '@/content/settori/guide';
 import {
   ALL_REGIONAL_FAQ,
   ALL_REGIONAL_FAQ_TITLES,
@@ -311,6 +312,8 @@ export default function SettorePageLayout({ content, locale, settore, children }
     ?? NORM_TITLE[locale.split('-')[0]]
     ?? NORM_TITLE.en;
 
+  const guide = guidePerSettore(settore, locale, (normLinks ?? []).map((l) => l.href));
+  const guideTitolo = GUIDE_TITOLO[locale.split('-')[0]] ?? GUIDE_TITOLO.en;
   const regionalItemsRaw = ALL_REGIONAL_FAQ[settore]?.[locale];
   const regionalItems = regionalItemsRaw ? localizeEnglishDeep(regionalItemsRaw, locale) : regionalItemsRaw;
   const regionalTitle = ALL_REGIONAL_FAQ_TITLES[settore]?.[locale] ?? 'Regional compliance';
@@ -707,6 +710,18 @@ export default function SettorePageLayout({ content, locale, settore, children }
               </>
             )}
 
+            {guide.length > 0 && (
+              <div style={{ marginTop: 56, paddingTop: 34, borderTop: '1px solid rgba(11,23,54,.16)' }}>
+                <h3 style={{ marginBottom: 16 }}>{guideTitolo}</h3>
+                <ul className="rows">
+                  {guide.map((g) => (
+                    <li key={g.href}>
+                      <Link href={g.href}>{g.titolo} &rarr;</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
             {normLinks && normLinks.length > 0 && (
               <div style={{ marginTop: 56, paddingTop: 34, borderTop: '1px solid rgba(11,23,54,.16)' }}>
                 <h3 style={{ marginBottom: 16 }}>{normTitle}</h3>
