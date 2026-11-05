@@ -333,7 +333,7 @@ function buildAppSoftware(locale: AppLocale) {
       availability: 'https://schema.org/InStock',
       url: `https://geotapp.com/${locale}/trial/`,
       description: locale === 'fr'
-        ? `Essai gratuit de 14 jours. Formules payantes à partir de ${rate.formatted} par poste et par mois, hors TVA.`
+        ? `Essai gratuit de 14 jours. Formules payantes à partir de ${rate.formatted} par licence et par mois, hors TVA.`
         : locale === 'es'
         ? `Prueba gratuita de 14 días. Planes de pago desde ${rate.formatted} por puesto y mes, IVA no incluido.`
         : locale === 'pt'
