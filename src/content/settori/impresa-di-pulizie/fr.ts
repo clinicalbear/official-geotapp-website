@@ -162,7 +162,7 @@ const content: SettoreContent = {
       },
       {
         q: "Combien coûte GeoTapp pour une entreprise de propreté ?",
-        a: "GeoTapp Flow démarre à 39 € par mois ; chaque agent équipé de l'appli TimeTracker coûte 3 € de plus par mois (2,50 € à partir du 26e poste). L'abonnement court sur 12 mois minimum. Les prix sont hors TVA. Vous pouvez l'essayer gratuitement pendant 14 jours, sans carte bancaire.",
+        a: "GeoTapp Flow démarre à 39 € par mois ; chaque agent équipé de l'appli TimeTracker coûte 3 € de plus par mois (2,50 € à partir de la 26e licence). L'abonnement court sur 12 mois minimum. Les prix sont hors TVA. Vous pouvez l'essayer gratuitement pendant 14 jours, sans carte bancaire.",
       },
       {
         q: "GeoTapp fait-il du suivi GPS des agents ?",
@@ -179,7 +179,7 @@ const content: SettoreContent = {
   },
 
   pricing_hint: {
-    label: "Postes TimeTracker à partir de",
+    label: "Licences TimeTracker à partir de",
     per: "par agent et par mois, en plus de l'offre Flow à partir de 39 € par mois (hors TVA)",
     note: "Essai gratuit de 14 jours",
   },

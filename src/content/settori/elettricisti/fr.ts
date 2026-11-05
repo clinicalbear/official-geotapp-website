@@ -197,7 +197,7 @@ const content: SettoreContent = {
     secondary: "Voir les tarifs",
   },
   pricing_hint: {
-    label: "Postes TimeTracker à partir de",
+    label: "Licences TimeTracker à partir de",
     per: "par technicien et par mois, en plus de l'offre Flow à partir de 39 € par mois (hors TVA)",
     note: "Essai gratuit de 14 jours",
   },

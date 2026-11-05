@@ -106,7 +106,7 @@ const LOCALE_SCHEMA: Record<string, LocaleSchemaData> = {
       'Application native pour les opérateurs de terrain sur Android et iOS (GeoTapp TimeTracker)',
       'Vérificateur gratuit, y compris hors ligne (GeoTapp Verifier)',
     ],
-    offersDescription: 'Essai gratuit de 14 jours, sans carte. Ensuite, un abonnement GeoTapp Flow et des postes TimeTracker à partir de {price} par opérateur et par mois, durée minimale de 12 mois',
+    offersDescription: 'Essai gratuit de 14 jours, sans carte. Ensuite, un abonnement GeoTapp Flow et des licences TimeTracker à partir de {price} par opérateur et par mois, durée minimale de 12 mois',
   },
   es: {
     description:

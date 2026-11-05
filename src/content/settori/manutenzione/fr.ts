@@ -117,7 +117,7 @@ const content: SettoreContent = {
       },
       {
         q: 'Combien coûte GeoTapp pour une entreprise de maintenance ?',
-        a: 'GeoTapp Flow démarre à 39 € par mois ; les postes TimeTracker pour les techniciens coûtent 3 € par mois chacun jusqu\'à 25. Abonnement d\'une durée minimale de 12 mois. Vous pouvez d\'abord l\'essayer gratuitement pendant 14 jours, sans carte bancaire. Prix hors TVA.',
+        a: 'GeoTapp Flow démarre à 39 € par mois ; les licences TimeTracker pour les techniciens coûtent 3 € par mois chacune jusqu\'à 25. Abonnement d\'une durée minimale de 12 mois. Vous pouvez d\'abord l\'essayer gratuitement pendant 14 jours, sans carte bancaire. Prix hors TVA.',
       },
     ],
   },
@@ -131,7 +131,7 @@ const content: SettoreContent = {
   },
 
   pricing_hint: {
-    label: 'Postes TimeTracker à partir de',
+    label: 'Licences TimeTracker à partir de',
     per: 'par opérateur et par mois, plus le forfait Flow à partir de 39 € par mois',
     note: 'Essai gratuit de 14 jours',
   },

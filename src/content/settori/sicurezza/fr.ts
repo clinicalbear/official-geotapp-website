@@ -175,7 +175,7 @@ const content: SettoreContent = {
     secondary: 'Voir les tarifs',
   },
   pricing_hint: {
-    label: 'Postes TimeTracker à partir de',
+    label: 'Licences TimeTracker à partir de',
     per: 'par opérateur et par mois, plus le forfait Flow à partir de 39 € par mois',
     note: 'Essai gratuit de 14 jours',
   },
