@@ -369,7 +369,7 @@ function SectorCard({
           <h3 className="font-semibold text-[14px] leading-tight text-slate-800 group-hover:text-primary transition-colors duration-150">
             {label}
           </h3>
-          <p className="text-[11.5px] text-slate-400 leading-snug mt-0.5 line-clamp-1">{desc}</p>
+          <p className="text-xs text-slate-500 leading-snug mt-0.5 line-clamp-1">{desc}</p>
         </div>
         <div className="shrink-0 text-slate-200 group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-150">
           <ArrowRight size={15} />
@@ -403,14 +403,14 @@ function ArticleCard({ article, sectorLabel, index, campaign }: {
         </div>
         <div className="flex-1 min-w-0 flex flex-col justify-center">
           {sectorLabel && (
-            <span className="inline-flex self-start items-center text-[9px] font-bold uppercase tracking-[0.08em] text-primary bg-primary/10 px-1.5 py-0.5 rounded mb-1">
+            <span className="inline-flex self-start items-center text-xs font-bold uppercase tracking-[0.08em] text-primary bg-primary/10 px-1.5 py-0.5 rounded mb-1">
               {sectorLabel}
             </span>
           )}
           <h3 className="font-semibold text-[13px] leading-snug text-slate-800 line-clamp-2 group-hover:text-primary transition-colors duration-150">
             {article.title}
           </h3>
-          <p className="text-[11px] text-slate-400 line-clamp-1 mt-0.5 leading-normal">{article.excerpt}</p>
+          <p className="text-xs text-slate-500 line-clamp-1 mt-0.5 leading-normal">{article.excerpt}</p>
         </div>
         <div className="shrink-0 self-center text-slate-200 group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-150">
           <ArrowRight size={15} />
@@ -493,7 +493,7 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
             <text x="22" y="17" fontFamily="'Poppins', sans-serif" fontWeight="700" fontSize="14" fill="#0b1736" letterSpacing="-0.3">GeoTapp</text>
           </svg>
         </Link>
-        <span className="text-[10px] font-semibold text-slate-400 tracking-[0.12em] uppercase">Instagram</span>
+        <span className="text-xs font-semibold text-slate-500 tracking-[0.12em] uppercase">Instagram</span>
       </motion.nav>
 
       {/* USCITA STAMPA, solo in tedesco: il reel su Instagram dice "Link in der Bio" e il link deve stare qui, per primo */}
@@ -511,7 +511,7 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="font-semibold text-[14px] leading-tight text-slate-800 group-hover:text-[#15803d] transition-colors duration-150">Zeiterfassung ohne Ortung: Was Gesetz und Datenschutz tatsächlich verlangen</h3>
-              <p className="text-[11.5px] text-slate-400 leading-snug mt-0.5 line-clamp-1">Unser Beitrag im Gastgewerbe-Magazin</p>
+              <p className="text-xs text-slate-500 leading-snug mt-0.5 line-clamp-1">Unser Beitrag im Gastgewerbe-Magazin</p>
             </div>
             <div className="shrink-0 text-primary/50 group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-150">
               <ArrowRight size={15} />
@@ -534,7 +534,7 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="font-semibold text-[14px] leading-tight text-slate-800 group-hover:text-[#0e7c99] transition-colors duration-150">{survey.label}</h3>
-            <p className="text-[11.5px] text-slate-400 leading-snug mt-0.5 line-clamp-1">{survey.note}</p>
+            <p className="text-xs text-slate-500 leading-snug mt-0.5 line-clamp-1">{survey.note}</p>
           </div>
           <div className="shrink-0 text-[#19B5D8]/50 group-hover:text-[#19B5D8] group-hover:translate-x-0.5 transition-all duration-150">
             <ArrowRight size={15} />
@@ -556,7 +556,7 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="font-semibold text-[14px] leading-tight text-slate-800 group-hover:text-[#15803d] transition-colors duration-150">{(FEATURED[textLocale] || FEATURED.en).label}</h3>
-            <p className="text-[11.5px] text-slate-400 leading-snug mt-0.5 line-clamp-1">{(FEATURED[textLocale] || FEATURED.en).sub}</p>
+            <p className="text-xs text-slate-500 leading-snug mt-0.5 line-clamp-1">{(FEATURED[textLocale] || FEATURED.en).sub}</p>
           </div>
           <div className="shrink-0 text-primary/50 group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-150">
             <ArrowRight size={15} />
@@ -570,7 +570,7 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
           transition={{ duration: 0.4, ease: 'easeOut' }}
           className="flex items-end justify-between mb-5">
           <div>
-            <p className="text-[10px] font-bold text-primary uppercase tracking-[0.14em] mb-1">{t.blogLabel}</p>
+            <p className="text-xs font-bold text-primary uppercase tracking-[0.14em] mb-1">{t.blogLabel}</p>
             <h2 className="font-display font-bold text-lg text-slate-900 leading-tight">{t.blogTitle}</h2>
           </div>
           <Link href={withUtm('https://geotapp.com/blog', 'ig_links_blog', 'blog_all')} target="_blank" rel="noopener noreferrer"
@@ -632,7 +632,7 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
             <ArrowRight size={17} className="group-hover:translate-x-0.5 transition-transform duration-150" />
           </Link>
         </motion.div>
-        <motion.p variants={fadeUp} custom={4} className="text-[11.5px] text-slate-400 font-medium mb-4">
+        <motion.p variants={fadeUp} custom={4} className="text-xs text-slate-500 font-medium mb-4">
           {t.ctaPrimaryNote}
         </motion.p>
 
@@ -658,7 +658,7 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
         <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }} transition={{ duration: 0.4, ease: 'easeOut' }}
           className="mb-5">
-          <p className="text-[10px] font-bold text-primary uppercase tracking-[0.14em] mb-1">{t.sectorEyebrow}</p>
+          <p className="text-xs font-bold text-primary uppercase tracking-[0.14em] mb-1">{t.sectorEyebrow}</p>
           <h2 className="font-display font-bold text-lg text-slate-900 leading-tight">{t.sectorTitle}</h2>
         </motion.div>
         <motion.div initial="hidden" whileInView="show" viewport={{ once: true, margin: '-30px' }}
@@ -701,7 +701,7 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
           viewport={{ once: true, margin: '-40px' }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-[#f7f9fc] via-white to-[#e7f7ef] p-6 text-center">
           <div aria-hidden="true" className="pointer-events-none absolute -top-12 -right-12 w-32 h-32 rounded-full bg-primary/15 blur-2xl" />
-          <p className="relative text-[10px] font-bold text-primary uppercase tracking-[0.14em] mb-2">{t.bottomEyebrow}</p>
+          <p className="relative text-xs font-bold text-primary uppercase tracking-[0.14em] mb-2">{t.bottomEyebrow}</p>
           <h3 className="relative font-display font-bold text-[20px] text-slate-900 leading-tight mb-2">
             {t.bottomTitle}
           </h3>
@@ -720,7 +720,7 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
       <section className="px-6 py-8 max-w-md mx-auto">
         <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-30px' }} transition={{ duration: 0.4 }}>
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.14em] mb-3.5">{t.quickLabel}</p>
+          <p className="text-xs font-bold text-slate-400 uppercase tracking-[0.14em] mb-3.5">{t.quickLabel}</p>
         </motion.div>
         <motion.ul initial="hidden" whileInView="show" viewport={{ once: true, margin: '-20px' }}
           variants={stagger} className={isL ? 'rows' : 'space-y-2'}>
@@ -735,10 +735,10 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
         <div className="h-px bg-gradient-to-r from-transparent via-slate-100 to-transparent mb-8" />
         <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-20px' }} transition={{ duration: 0.4 }}>
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.14em] mb-4 text-center">{t.followUs}</p>
-          <div className="flex items-center justify-center gap-3">
+          <p className="text-xs font-bold text-slate-400 uppercase tracking-[0.14em] mb-4 text-center">{t.followUs}</p>
+          <div className="flex flex-wrap items-center justify-center gap-3">
             <a href="https://t.me/geotapp" target="_blank" rel="noopener noreferrer nofollow" aria-label="Telegram"
-              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#0088cc]/8 border border-[#0088cc]/20 text-[#0088cc] text-sm font-semibold hover:bg-[#0088cc]/15 transition-all duration-150 active:scale-[0.97]">
+              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#006a9e]/8 border border-[#006a9e]/20 text-[#006a9e] text-sm font-semibold hover:bg-[#006a9e]/15 transition-all duration-150 active:scale-[0.97]">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 13.9l-2.965-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.983.659z"/>
               </svg>
@@ -770,7 +770,7 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
           <path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 10 5 10s5-6.25 5-10c0-2.76-2.24-5-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="#22B573" />
           <text x="17" y="13" fontFamily="'Poppins', sans-serif" fontWeight="700" fontSize="11" fill="#0b1736" letterSpacing="-0.2">GeoTapp</text>
         </svg>
-        <p className="text-[11px] text-slate-400 space-x-2">
+        <p className="text-xs text-slate-500 space-x-2">
           <span>© {new Date().getFullYear()} GeoTapp</span>
           <span className="text-slate-200">·</span>
           <Link href={`https://geotapp.com/${langPath}${translatePath('/privacy/', locale as AppLocale)}`} className="hover:text-slate-600 transition-colors">{t.privacy}</Link>

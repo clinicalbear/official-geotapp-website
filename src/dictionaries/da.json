@@ -413,9 +413,9 @@
       }
     },
     "calculator": {
-      "title": "TimeTracker licensberegner",
-      "subtitle": "Estimér din årlige arbejdsstyrkeinvestering.",
-      "active_users": "Aktive medarbejdere",
+      "title": "Hvad du betaler for dine medarbejdere",
+      "subtitle": "Sæt skyderen på dit antal medarbejdere, og se årsprisen.",
+      "active_users": "Medarbejdere",
       "discount_threshold": "rabatgrænse",
       "cost_per_user": "Gennemsnitlig pris pr. bruger",
       "per_month": "/md",
@@ -427,7 +427,14 @@
       "enterprise_desc": "Over 150 pladser aftales prisen: skriv til os, så sender vi et tilbud.",
       "request_quote": "Anmod om et tilbud",
       "add_to_cart": "Læg pladserne i indkøbskurven",
-      "secure_payment": "Sikker betaling via Stripe. Moms beregnes ved checkout."
+      "secure_payment": "Sikker betaling via Stripe. Moms beregnes ved checkout.",
+      "seats_valuetext": "{n} medarbejdere",
+      "seats_valuetext_over": "Over {n} medarbejdere",
+      "seats_valuetext_one": "1 medarbejder",
+      "fit_title": "Med {n} medarbejdere er {plan} nok",
+      "fit_title_one": "Med 1 medarbejder er {plan} nok",
+      "fit_promo": "Inkluderet i tilbuddet",
+      "fit_total_promo": "I alt første år (ekskl. moms)"
     },
     "simulator": {
       "section_title": "Beregn dit tilbud",
@@ -496,7 +503,8 @@
         "team": "TimeTracker-pladser, der kan aktiveres: 15, heraf 1 inkluderet i prisen*",
         "business": "TimeTracker-pladser, der kan aktiveres: ubegrænset, heraf 5 inkluderet i prisen*"
       },
-      "footnote": "* Med årsafslutningstilbuddet 2026 er der de første 12 måneder 1 plads (Solo og Team) eller 5 pladser (Business) inkluderet i prisen, og grænsen for samtidigt aktive pladser er højere (Solo 5, Team 15). TimeTracker-pladser ud over de inkluderede købes separat. Fjerner du en medarbejders adgang, bliver pladsen ledig med det samme."
+      "footnote": "* Med årsafslutningstilbuddet 2026 er der de første 12 måneder 1 plads (Solo og Team) eller 5 pladser (Business) inkluderet i prisen, og grænsen for samtidigt aktive pladser er højere (Solo 5, Team 15). TimeTracker-pladser ud over de inkluderede købes separat. Fjerner du en medarbejders adgang, bliver pladsen ledig med det samme.",
+      "banner_short": "Årsafslutningstilbud 2026: Tegn abonnement senest den 18. december 2026, og få TimeTracker-pladser inkluderet i 12 måneder, med mulighed for at aktivere flere."
     },
     "per_year": "/år",
     "title_gradient": "Brugere på kontoret, plus en plads pr. medarbejder i marken.",
@@ -507,7 +515,34 @@
     "no_monthly_option": "Ingen månedlig mulighed",
     "add_btn": "Tilføj",
     "tracker_footnote": "* TimeTracker-pladser købes særskilt. Flow-planen fastsætter, hvor mange der kan være aktive samtidig, ikke hvor mange der er inkluderet. Fjernelse af adgang for en medarbejder frigiver pladsen straks.",
-    "recommended": "Anbefalet"
+    "recommended": "Anbefalet",
+    "compare": {
+      "users": "Flow-brugere",
+      "seats": "TimeTracker-pladser",
+      "clients": "Kunder",
+      "automations": "Automatiseringer",
+      "api": "API-adgang",
+      "reports": "Rapporter",
+      "support": "Support",
+      "unlimited": "Ubegrænset",
+      "yes": "Ja",
+      "no": "Nej",
+      "reports_basic": "Basis",
+      "reports_operational": "Operative",
+      "reports_advanced": "Avancerede",
+      "support_standard": "Standard",
+      "support_priority": "Prioriteret",
+      "seats_up_to": "op til {n}",
+      "seats_included_one": "1 inkluderet i 12 måneder",
+      "seats_included_many": "{n} inkluderet i 12 måneder"
+    },
+    "hero_price": "Flow fra {flow}/måned, plus {seat}/måned pr. medarbejder. Ekskl. moms.",
+    "addon_title": "Tilføj dine medarbejdere i TimeTracker",
+    "add_to_cart_btn": "Læg i kurven",
+    "proof_title": "Din kunde kan selv tjekke, at rapporten er uændret",
+    "proof_body": "Hver opgave bliver til en rapport med tidspunkter, placering og fotos. Din kunde kan selv tjekke, at den ikke er ændret, gratis og uden konto.",
+    "faq_title": "Ofte stillede spørgsmål",
+    "proof_link": "Sådan tjekker din kunde rapporten"
   },
   "contact": {
     "title": "Lad os tale om dit <span class=\"text-primary\">arbejde</span>.",

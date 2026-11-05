@@ -104,6 +104,7 @@ export default function SettoriPage({ locale }: Props) {
             {h1a}
             {h1b && <><br /><em>{h1b}</em></>}
           </h1>
+          <h2 className="sr-only">{sectorsLabel}</h2>
           <p className="lede">{copy.subtitle}</p>
         </div>
       </section>

@@ -496,7 +496,7 @@ export default function CookieConsentBanner({ locale }: { locale: string }) {
                 flexWrap: 'wrap',
               }}
             >
-              <p style={{ margin: 0, fontSize: '0.7rem', color: '#94a3b8', lineHeight: 1.4, flex: '1 1 200px' }}>
+              <p style={{ margin: 0, fontSize: '0.75rem', color: '#b8c2d6', lineHeight: 1.4, flex: '1 1 200px' }}>
                 {t.dismissHint}
               </p>
               <button type="button" onClick={() => setModalOpen(true)} style={btnGhostStyle}>

@@ -1,3 +1,5 @@
+import { SLUG_MAP } from './i18n/slug-map';
+
 /**
  * Le pagine dove chi arriva sta FACENDO una cosa, non leggendo.
  *
@@ -23,7 +25,16 @@ export const PAGINE_DI_COMPITO: readonly string[] = [
   'newsletter',
   'delete-account', // sta cancellando: e' l'ultimo momento per un popup
   'verify-report',  // sta verificando un documento, spesso non e' un cliente
+  'pricing',        // sta scegliendo un piano: sul telefono il modale copriva la promo a meta' frase
 ];
+
+/**
+ * Gli stessi nomi anche tradotti: in tedesco i prezzi stanno in `/de/preise/`, e
+ * guardando solo il nome canonico il modale usciva lo stesso (trovato il 05/11/2026).
+ */
+const NOMI_DI_COMPITO: ReadonlySet<string> = new Set(
+  PAGINE_DI_COMPITO.flatMap((nome) => [nome, ...Object.values(SLUG_MAP[nome] ?? {})]),
+);
 
 /**
  * True se il percorso e' una pagina di compito.
@@ -34,5 +45,5 @@ export const PAGINE_DI_COMPITO: readonly string[] = [
  */
 export function ePaginaDiCompito(pathname: string): boolean {
   const segmenti = pathname.split('/').filter(Boolean).slice(0, 2);
-  return segmenti.some((s) => PAGINE_DI_COMPITO.includes(s.toLowerCase()));
+  return segmenti.some((s) => NOMI_DI_COMPITO.has(s.toLowerCase()));
 }

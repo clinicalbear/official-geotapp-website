@@ -41,7 +41,7 @@ export default async function BlogLayout({ children }: { children: ReactNode }) 
         {/* Internal traffic toggle, same as [locale]/layout.tsx. Visit
             ?gt_internal=on/off to opt-out/in for this browser. */}
         <Script id="internal-traffic-toggle" strategy="beforeInteractive">
-          {`(function(){try{var url=new URL(window.location.href);var p=url.searchParams.get('gt_internal');if(p==='on')localStorage.setItem('gt_skip_analytics','1');if(p==='off')localStorage.removeItem('gt_skip_analytics');if(p==='on'||p==='off'){url.searchParams.delete('gt_internal');history.replaceState(null,'',url.toString());}window.__gtSkip=localStorage.getItem('gt_skip_analytics')==='1';if(window.__gtSkip)console.warn('[GeoTapp] Internal traffic, analytics DISABLED. ?gt_internal=off to re-enable.');}catch(_){}})();`}
+          {`(function(){try{var url=new URL(window.location.href);var p=url.searchParams.get('gt_internal');if(p==='on')localStorage.setItem('gt_skip_analytics','1');if(p==='off')localStorage.removeItem('gt_skip_analytics');if(p==='on'||p==='off'){url.searchParams.delete('gt_internal');history.replaceState(null,'',url.toString());}window.__gtSkip=localStorage.getItem('gt_skip_analytics')==='1';var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h==='[::1]'||/\\.local$/.test(h)||/^(10\\.|192\\.168\\.|172\\.(1[6-9]|2\\d|3[01])\\.)/.test(h))window.__gtSkip=true;if(window.__gtSkip)console.warn('[GeoTapp] Internal traffic, analytics DISABLED. ?gt_internal=off to re-enable.');}catch(_){}})();`}
         </Script>
         {/* Google Consent Mode v2, client-side dal cookie gt_geo: l'HTML del
             blog e' edge-cached (fix 5xx 01/07), il regime per-visitatore non

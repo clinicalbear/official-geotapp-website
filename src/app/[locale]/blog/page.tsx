@@ -1,3 +1,4 @@
+import { tagliaAParola } from '@/lib/taglia-testo';
 import type { Metadata } from 'next';
 import './l-page.css';
 import { getDictionary } from '@/lib/i18n/dictionaries';
@@ -181,7 +182,7 @@ async function buildPostList(all: Awaited<ReturnType<typeof fetchAllPosts>>, loc
       id: p.id,
       slug: p.slug,
       title: stripHtml(p.title?.rendered ?? ''),
-      excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 160),
+      excerpt: tagliaAParola(stripHtml(p.excerpt?.rendered ?? ''), 160),
       date: p.date,
       url: normalizeUrl(p.link, p.slug),
       image: mediaMap.get(p.featured_media) ?? null,

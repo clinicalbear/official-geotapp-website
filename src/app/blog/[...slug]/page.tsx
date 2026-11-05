@@ -18,6 +18,7 @@ import Comments, { type CommentItem } from '@/components/blog/Comments';
 import { detectPostLocale } from '@/lib/blog-locale';
 import { canonicalBlogPath, requestedBlogPath } from '@/lib/blog-canonical';
 import { sanitizeWpHtml } from '@/lib/sanitize-wp';
+import { tagliaAParola } from '@/lib/taglia-testo';
 import { blogFaqJsonLd, extractBlogFaq } from '@/lib/blog-faq';
 
 export const dynamic = 'force-dynamic';
@@ -147,7 +148,7 @@ function resolvePostData(post: WPPost, locale: string) {
   // Allowlist-sanitize il contenuto WP prima del render (difesa in profondità
   // contro XSS da WordPress compromesso, vedi src/lib/sanitize-wp.ts).
   const content = sanitizeWpHtml(post.content.rendered);
-  const excerpt = stripHtml(post.excerpt.rendered).slice(0, 160);
+  const excerpt = tagliaAParola(stripHtml(post.excerpt.rendered), 160);
   const date = post.date;
 
   const media = post._embedded?.['wp:featuredmedia']?.[0];
@@ -205,7 +206,7 @@ function mapRelatedPost(p: any): RelatedPost {
     id: p.id,
     slug: p.slug,
     title: stripHtml(p.title?.rendered ?? ''),
-    excerpt: stripHtml(p.excerpt?.rendered ?? '').slice(0, 140),
+    excerpt: tagliaAParola(stripHtml(p.excerpt?.rendered ?? ''), 140),
     date: p.date,
     url: normalizeUrl(p.link, p.slug),
     image: p._embedded?.['wp:featuredmedia']?.[0]?.source_url ?? null,
@@ -454,7 +455,7 @@ export default async function BlogArticlePage({ params }: Props) {
       <article className="art">
         <div className="w">
           <div className="lay">
-            <ArticleSidebar headings={headings} locale={locale} categories={categories} date={date} readingTime={readingTime} title={title} />
+            <ArticleSidebar headings={headings} locale={locale} categories={categories} title={title} />
             <ArticleContent
               html={contentWithIds}
               locale={locale}

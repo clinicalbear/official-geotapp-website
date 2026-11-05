@@ -53,7 +53,7 @@ export default function ArticleHero({
           {formattedDate}
           {readingTime > 0 && <> &middot; {readingTime} min</>}
         </p>
-        <h1>{title}</h1>
+        <h1 className={title.length > 100 ? 'molto-lungo' : title.length > 60 ? 'lungo' : undefined}>{title}</h1>
         <div className="acts">
           <Link
             className="b1"
@@ -61,9 +61,6 @@ export default function ArticleHero({
             onClick={() => trackEvent('trial_click', { cta_source: 'blog_article_hero' })}
           >
             {cta.btn}
-          </Link>
-          <Link className="b2" href={blogHref}>
-            {dict.navbar.blog}
           </Link>
         </div>
       </div>

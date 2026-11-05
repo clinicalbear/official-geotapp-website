@@ -413,21 +413,28 @@
       }
     },
     "calculator": {
-      "title": "TimeTracker Lizenzrechner",
-      "subtitle": "Schätzen Sie Ihre jährliche Arbeitsinvestition.",
-      "active_users": "Aktive Benutzer",
+      "title": "Was Sie für Ihre Mitarbeiter zahlen",
+      "subtitle": "Stellen Sie den Regler auf die Zahl Ihrer Mitarbeiter und sehen Sie die Jahressumme.",
+      "active_users": "Mitarbeiter",
       "discount_threshold": "Rabattschwelle",
-      "cost_per_user": "Durchschnittliche Kosten pro Benutzer",
+      "cost_per_user": "Durchschnittliche Kosten pro Nutzer",
       "per_month": "/Monat",
       "standard_rate": "Standardtarif (1–25 à {price})",
       "mixed_rate": "Mischtarif (Mengenrabatt angewendet)",
       "annual_total": "Jahresbetrag (zzgl. MwSt.)",
       "annual_billing_note": "Einmalige Jahresabrechnung",
       "enterprise_plan": "Über 150 Plätze",
-      "enterprise_desc": "Ab 150 Plätzen wird der Preis individuell vereinbart: Schreiben Sie uns, wir senden Ihnen ein Angebot.",
+      "enterprise_desc": "Über 150 Plätzen wird der Preis individuell vereinbart: Schreiben Sie uns, wir senden Ihnen ein Angebot.",
       "request_quote": "Angebot anfordern",
       "add_to_cart": "Plätze in den Warenkorb legen",
-      "secure_payment": "Sichere Zahlung über Stripe. MwSt. wird beim Checkout berechnet."
+      "secure_payment": "Sichere Zahlung über Stripe. MwSt. wird beim Checkout berechnet.",
+      "seats_valuetext": "{n} Mitarbeiter",
+      "seats_valuetext_over": "Mehr als {n} Mitarbeiter",
+      "seats_valuetext_one": "1 Mitarbeiter",
+      "fit_title": "Bei {n} Mitarbeitern reicht {plan}",
+      "fit_title_one": "Bei 1 Mitarbeiter reicht {plan}",
+      "fit_promo": "Im Angebot enthalten",
+      "fit_total_promo": "Summe im ersten Jahr (zzgl. MwSt.)"
     },
     "simulator": {
       "section_title": "Berechnen Sie Ihr Angebot",
@@ -496,7 +503,8 @@
         "team": "Aktivierbare TimeTracker-Plätze: 15, davon 1 im Preis enthalten*",
         "business": "Aktivierbare TimeTracker-Plätze: unbegrenzt, davon 5 im Preis enthalten*"
       },
-      "footnote": "* Beim Jahresendangebot 2026 (Abschluss bis zum 18. Dezember 2026) sind in den ersten 12 Monaten 1 Platz (Solo und Team) bzw. 5 Plätze (Business) im Preis enthalten, und die Obergrenze gleichzeitig aktiver Plätze ist höher (Solo 5, Team 15). TimeTracker-Plätze über die enthaltenen hinaus werden gesondert erworben. Wird einem Mitarbeiter der Zugang entzogen, ist der Platz sofort wieder frei."
+      "footnote": "* Beim Jahresendangebot 2026 (Abschluss bis zum 18. Dezember 2026) sind in den ersten 12 Monaten 1 Platz (Solo und Team) bzw. 5 Plätze (Business) im Preis enthalten, und die Obergrenze gleichzeitig aktiver Plätze ist höher (Solo 5, Team 15). TimeTracker-Plätze über die enthaltenen hinaus werden gesondert erworben. Wird einem Mitarbeiter der Zugang entzogen, ist der Platz sofort wieder frei.",
+      "banner_short": "Jahresendangebot 2026: Bei Abschluss bis zum 18. Dezember 2026 sind TimeTracker-Plätze für 12 Monate inklusive, und Sie können mehr aktivieren."
     },
     "per_year": "/Jahr",
     "title_gradient": "Nutzer im Büro, plus ein Platz für jede Person im Einsatz.",
@@ -507,7 +515,34 @@
     "no_monthly_option": "Keine monatliche Option",
     "add_btn": "Hinzufügen",
     "tracker_footnote": "* TimeTracker-Plätze werden gesondert erworben. Der Flow-Plan legt fest, wie viele gleichzeitig aktiv sein können, nicht wie viele enthalten sind. Das Entfernen des Mitarbeiterzugangs gibt den Platz sofort frei.",
-    "recommended": "Empfohlen"
+    "recommended": "Empfohlen",
+    "compare": {
+      "users": "Flow-Nutzer",
+      "seats": "TimeTracker-Plätze",
+      "clients": "Kunden",
+      "automations": "Automatisierungen",
+      "api": "API-Zugang",
+      "reports": "Berichte",
+      "support": "Support",
+      "unlimited": "Unbegrenzt",
+      "yes": "Ja",
+      "no": "Nein",
+      "reports_basic": "Basis",
+      "reports_operational": "Operativ",
+      "reports_advanced": "Erweitert",
+      "support_standard": "Standard",
+      "support_priority": "Prioritär",
+      "seats_up_to": "bis zu {n}",
+      "seats_included_one": "1 inklusive für 12 Monate",
+      "seats_included_many": "{n} inklusive für 12 Monate"
+    },
+    "hero_price": "Flow ab {flow}/Monat, plus {seat}/Monat pro Mitarbeiter im Außendienst. Zzgl. MwSt.",
+    "addon_title": "Mitarbeiter im Außendienst mit TimeTracker hinzufügen",
+    "add_to_cart_btn": "In den Warenkorb",
+    "proof_title": "Ihr Kunde kann prüfen, dass der Bericht unverändert ist",
+    "proof_body": "Jeder Einsatz wird zu einem Bericht mit Zeiten, Standort und Fotos. Ihr Kunde kann selbst prüfen, dass der Bericht nicht verändert wurde, kostenlos und ohne Konto.",
+    "faq_title": "Häufige Fragen",
+    "proof_link": "So prüft Ihr Kunde den Bericht"
   },
   "contact": {
     "title": "Sprechen wir über <span class=\"text-primary\">Ihre Arbeit</span>.",

@@ -167,3 +167,59 @@
 /* Prima di 1000px il mockup fa impilare .lay a colonna unica (regola gia'
    in l-mockup.css): qui la sidebar resta visibile invece di sparire, cosi'
    indice/condividi/CTA restano raggiungibili anche da mobile. */
+
+/* Struttura dell'articolo (analisi del 05/11/2026) */
+.lp-articolo .ph h1.lungo { font-size: clamp(30px, 3.8vw, 60px); max-width: 26ch; }
+.lp-articolo .ph h1.molto-lungo { font-size: clamp(26px, 3vw, 46px); max-width: 34ch; }
+.lp-articolo .ph .crumb a { display: inline-block; padding: 12px 0; margin: -12px 0; }
+.lp-articolo .art .toc-t { display: none; }
+.lp-articolo .art .body { min-width: 0; }
+
+@media (min-width: 1001px) {
+  /* La colonna fissa non puo' essere piu' alta dello schermo: il fondo si vedeva solo a fine articolo. */
+  .lp-articolo .art .side {
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    padding: 4px 8px 4px 4px;
+  }
+}
+/* Senza note a margine la colonna destra restava vuota: indice e testo si centrano.
+   Tra 1001 e 1199px le note stanno comunque nel testo. */
+@media (min-width: 1001px) and (max-width: 1199px) {
+  .lp-articolo .art .lay { grid-template-columns: 250px minmax(0, 640px); justify-content: center; gap: 50px; }
+  .lp-articolo .art .body, .lp-articolo .art .body .article-content { max-width: none; }
+}
+@media (min-width: 1200px) {
+  .lp-articolo .art .lay:not(:has(.ib-note)) { grid-template-columns: 266px minmax(0, 660px); justify-content: center; }
+  .lp-articolo .art .lay:not(:has(.ib-note)) .body,
+  .lp-articolo .art .lay:not(:has(.ib-note)) .body .article-content { max-width: none; }
+  html.ib-art .lp-articolo .art .lay:not(:has(.ib-note)) .article-content figure.ib-wide,
+  html.ib-art .lp-articolo .art .lay:not(:has(.ib-note)) .article-content .ib-pull,
+  html.ib-art .lp-articolo .art .lay:not(:has(.ib-note)) a.ib-next { margin-right: 0 !important; }
+}
+/* Telefono e tablet: autore e indice chiuso, poi subito l'articolo; il resto dopo. */
+@media (max-width: 1000px) {
+  .lp-articolo .art { padding-top: 34px; }
+  .lp-articolo .art .lay { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+  .lp-articolo .art .side { display: contents; }
+  .lp-articolo .art .side .au { order: 1; margin-bottom: 18px; }
+  .lp-articolo .art .side .side-indice { order: 2; margin-bottom: 30px; }
+  .lp-articolo .art .body { order: 3; max-width: none; }
+  .lp-articolo .art .side .side-fine { order: 4; margin-top: 44px; }
+  .lp-articolo .art .side .side-indice .lb { display: none; }
+  .lp-articolo .art .toc-t {
+    display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 48px;
+    padding: 0 16px; border: 1px solid rgba(11, 23, 54, .18); border-radius: 12px;
+    background: #fff; color: var(--ink); font-size: 12px; cursor: pointer;
+  }
+  .lp-articolo .art .toc-t span { font-size: 20px; letter-spacing: 0; line-height: 1; }
+  .lp-articolo .art .side nav.toc { display: none; margin-top: 12px; }
+  .lp-articolo .art .side nav.toc.open { display: block; }
+}
+/* Tabelle sul telefono: si scorrono di lato invece di schiacciare le colonne a 44px. */
+@media (max-width: 640px) {
+  .lp-articolo .art .body .article-content th,
+  .lp-articolo .art .body .article-content td { min-width: 112px; padding: 9px 10px; font-size: 14px; overflow-wrap: normal; hyphens: manual; }
+}
+@media (max-width: 1000px) { .lp-articolo .art .body .py-16 { padding-top: 0; padding-bottom: 24px; } }

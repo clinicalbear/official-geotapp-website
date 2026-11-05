@@ -275,7 +275,7 @@ body {
   font-family:
     var(--font-display),
     'Poppins',
-    'Inter',
+    var(--font-body),
     system-ui,
     -apple-system,
     sans-serif;
@@ -308,7 +308,7 @@ h6,
   font-family:
     var(--font-display),
     'Poppins',
-    'Inter',
+    var(--font-body),
     system-ui,
     -apple-system,
     sans-serif;

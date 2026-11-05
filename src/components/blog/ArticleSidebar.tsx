@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { trackEvent } from '@/lib/analytics';
 import { localizePath } from '@/lib/i18n/locale-routing';
 import type { AppLocale } from '@/lib/i18n/config';
 
@@ -10,26 +9,24 @@ interface ArticleSidebarProps {
   headings: Array<{ id: string; text: string; level: number }>;
   locale: string;
   categories?: Array<{ slug: string; name: string }>;
-  date?: string;
-  readingTime?: number;
   title?: string;
 }
 
 const SIDEBAR_LABELS: Record<string, {
-  toc: string; cta_title: string; cta_desc: string; cta_btn: string;
+  toc: string;
   share: string; copied: string; product_desc: string; product_btn: string;
 }> = {
-  it: { toc: 'In questo articolo', cta_title: 'Prova GeoTapp gratis', cta_desc: '14 giorni di prova gratuita. Nessuna carta di credito. Setup in 2 minuti.', cta_btn: 'Inizia ora', share: 'Condividi', copied: 'Copiato!', product_desc: 'Scopri come GeoTapp risolve questo problema', product_btn: 'Scopri di più' },
-  en: { toc: 'In this article', cta_title: 'Try GeoTapp free', cta_desc: '14-day free trial. No credit card required. Setup in 2 minutes.', cta_btn: 'Start now', share: 'Share', copied: 'Copied!', product_desc: 'See how GeoTapp solves this problem', product_btn: 'Learn more' },
-  de: { toc: 'In diesem Artikel', cta_title: 'GeoTapp kostenlos testen', cta_desc: '14 Tage kostenlos. Keine Kreditkarte. Setup in 2 Minuten.', cta_btn: 'Jetzt starten', share: 'Teilen', copied: 'Kopiert!', product_desc: 'So löst GeoTapp dieses Problem', product_btn: 'Mehr erfahren' },
-  fr: { toc: 'Dans cet article', cta_title: 'Essayez GeoTapp', cta_desc: '14 jours gratuits. Sans carte bancaire. Prêt en 2 minutes.', cta_btn: 'Commencer', share: 'Partager', copied: 'Copié !', product_desc: 'Découvrez comment GeoTapp résout ce problème', product_btn: 'En savoir plus' },
-  nl: { toc: 'In dit artikel', cta_title: 'Probeer GeoTapp gratis', cta_desc: '14 dagen gratis proberen. Geen creditcard. Klaar in 2 minuten.', cta_btn: 'Nu starten', share: 'Delen', copied: 'Gekopieerd!', product_desc: 'Ontdek hoe GeoTapp dit probleem oplost', product_btn: 'Meer informatie' },
-  es: { toc: 'En este artículo', cta_title: 'Prueba GeoTapp gratis', cta_desc: '14 días gratis. Sin tarjeta de crédito. Listo en 2 minutos.', cta_btn: 'Empieza ahora', share: 'Compartir', copied: '¡Copiado!', product_desc: 'Descubre cómo GeoTapp resuelve esto', product_btn: 'Saber más' },
-  pt: { toc: 'Neste artigo', cta_title: 'Experimente o GeoTapp grátis', cta_desc: '14 dias de teste gratuito. Sem cartão de crédito. Pronto em 2 minutos.', cta_btn: 'Começar agora', share: 'Partilhar', copied: 'Copiado!', product_desc: 'Descubra como o GeoTapp resolve este problema', product_btn: 'Saber mais' },
-  da: { toc: 'I denne artikel', cta_title: 'Prøv GeoTapp gratis', cta_desc: '14 dages gratis prøveperiode. Intet kreditkort. Klar på 2 minutter.', cta_btn: 'Start nu', share: 'Del', copied: 'Kopieret!', product_desc: 'Se hvordan GeoTapp løser dette', product_btn: 'Læs mere' },
-  sv: { toc: 'I den här artikeln', cta_title: 'Prova GeoTapp gratis', cta_desc: '14 dagars gratis provperiod. Inget kreditkort. Klart på 2 minuter.', cta_btn: 'Börja nu', share: 'Dela', copied: 'Kopierat!', product_desc: 'Se hur GeoTapp löser det här', product_btn: 'Läs mer' },
-  nb: { toc: 'I denne artikkelen', cta_title: 'Prøv GeoTapp gratis', cta_desc: '14 dagers gratis prøveperiode. Ingen kredittkort. Klar på 2 minutter.', cta_btn: 'Start nå', share: 'Del', copied: 'Kopiert!', product_desc: 'Se hvordan GeoTapp løser dette', product_btn: 'Les mer' },
-  ru: { toc: 'В этой статье', cta_title: 'Попробуйте GeoTapp бесплатно', cta_desc: '14 дней бесплатно. Без банковской карты. Готово за 2 минуты.', cta_btn: 'Начать', share: 'Поделиться', copied: 'Скопировано!', product_desc: 'Узнайте, как GeoTapp решает это', product_btn: 'Подробнее' },
+  it: { toc: 'In questo articolo', share: 'Condividi', copied: 'Copiato!', product_desc: 'Scopri come GeoTapp risolve questo problema', product_btn: 'Scopri di più' },
+  en: { toc: 'In this article', share: 'Share', copied: 'Copied!', product_desc: 'See how GeoTapp solves this problem', product_btn: 'Learn more' },
+  de: { toc: 'In diesem Artikel', share: 'Teilen', copied: 'Kopiert!', product_desc: 'So löst GeoTapp dieses Problem', product_btn: 'Mehr erfahren' },
+  fr: { toc: 'Dans cet article', share: 'Partager', copied: 'Copié !', product_desc: 'Découvrez comment GeoTapp résout ce problème', product_btn: 'En savoir plus' },
+  nl: { toc: 'In dit artikel', share: 'Delen', copied: 'Gekopieerd!', product_desc: 'Ontdek hoe GeoTapp dit probleem oplost', product_btn: 'Meer informatie' },
+  es: { toc: 'En este artículo', share: 'Compartir', copied: '¡Copiado!', product_desc: 'Descubre cómo GeoTapp resuelve esto', product_btn: 'Saber más' },
+  pt: { toc: 'Neste artigo', share: 'Partilhar', copied: 'Copiado!', product_desc: 'Descubra como o GeoTapp resolve este problema', product_btn: 'Saber mais' },
+  da: { toc: 'I denne artikel', share: 'Del', copied: 'Kopieret!', product_desc: 'Se hvordan GeoTapp løser dette', product_btn: 'Læs mere' },
+  sv: { toc: 'I den här artikeln', share: 'Dela', copied: 'Kopierat!', product_desc: 'Se hur GeoTapp löser det här', product_btn: 'Läs mer' },
+  nb: { toc: 'I denne artikkelen', share: 'Del', copied: 'Kopiert!', product_desc: 'Se hvordan GeoTapp løser dette', product_btn: 'Les mer' },
+  ru: { toc: 'В этой статье', share: 'Поделиться', copied: 'Скопировано!', product_desc: 'Узнайте, как GeoTapp решает это', product_btn: 'Подробнее' },
 };
 
 // Badge "dati in Europa" — localizzato in tutte e 11 le lingue (claim accurato: dati di lavoro in UE)
@@ -106,7 +103,7 @@ function ShareButtons({ title, copiedLabel, locale }: { title: string; copiedLab
           target={s.label === 'Email' ? '_self' : '_blank'}
           rel="noopener noreferrer nofollow"
           aria-label={s.label}
-          className="p-2 text-slate-400 rounded-lg transition-all duration-200 hover:bg-slate-50"
+          className="inline-flex h-11 w-11 items-center justify-center text-slate-500 rounded-lg transition-all duration-200 hover:bg-slate-50"
           onMouseEnter={(e) => { e.currentTarget.style.color = s.hoverColor; }}
           onMouseLeave={(e) => { e.currentTarget.style.color = ''; }}
         >
@@ -116,7 +113,7 @@ function ShareButtons({ title, copiedLabel, locale }: { title: string; copiedLab
       <button
         onClick={handleCopy}
         aria-label={locale === 'nl' ? 'Link kopiëren' : locale === 'fr' ? 'Copier le lien' : locale === 'es' ? 'Copiar enlace' : locale === 'pt' ? 'Copiar ligação' : locale === 'da' ? 'Kopiér link' : locale === 'nb' ? 'Kopier lenke' : locale === 'sv' ? 'Kopiera länk' : locale === 'ru' ? 'Скопировать ссылку' : 'Copy link'}
-        className={`p-2 rounded-lg transition-all duration-200 ${copied ? 'text-green-500 bg-green-50' : 'text-slate-400 hover:bg-slate-50'}`}
+        className={`inline-flex h-11 w-11 items-center justify-center rounded-lg transition-all duration-200 ${copied ? 'text-green-700 bg-green-50' : 'text-slate-500 hover:bg-slate-50'}`}
         onMouseEnter={(e) => { if (!copied) e.currentTarget.style.color = '#22B573'; }}
         onMouseLeave={(e) => { if (!copied) e.currentTarget.style.color = ''; }}
       >
@@ -126,8 +123,11 @@ function ShareButtons({ title, copiedLabel, locale }: { title: string; copiedLab
   );
 }
 
-export default function ArticleSidebar({ headings, locale, categories = [], date, readingTime, title = '' }: ArticleSidebarProps) {
+export default function ArticleSidebar({ headings, locale, categories = [], title = '' }: ArticleSidebarProps) {
   const [activeId, setActiveId] = useState<string>('');
+  const [indiceAperto, setIndiceAperto] = useState(false);
+  // Oltre le 12 voci l'indice elenca solo i capitoli: con i sottotitoli arrivava a 23 righe.
+  const voci = headings.length > 12 ? headings.filter((h) => h.level === 2) : headings;
   const labels = SIDEBAR_LABELS[locale] || SIDEBAR_LABELS['en'];
   const euBadge = EU_BADGE[locale] || EU_BADGE['en'];
   const product = detectProduct(categories);
@@ -165,43 +165,21 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
         </div>
       </div>
 
-      {/* Timbratura digitale: data e tempo di lettura dell'articolo */}
-      <div className="panel" style={{ padding: '14px 16px', marginBottom: '30px' }}>
-        <div className="flex items-center gap-2 mb-3">
-          <span className="live" />
-          <span className="k" style={{ fontSize: '10px', color: 'var(--seal-testo)' }}>Clock-in</span>
-          {categories[0] && (
-            <span
-              className="ml-auto px-2 py-0.5 text-[8px] font-semibold rounded-full uppercase tracking-wider text-white"
-              style={{ backgroundColor: product.color }}
-            >
-              {categories[0].name}
-            </span>
-          )}
-        </div>
-        <div className="flex items-center gap-4">
-          <div>
-            <span className="text-[8px] uppercase tracking-widest block mb-0.5" style={{ color: '#475467' }}>Date</span>
-            <span className="text-[13px] tracking-wide">
-              {date ? new Date(date).toLocaleDateString('en-GB', { timeZone: 'UTC', day: '2-digit', month: '2-digit', year: 'numeric' }).replace(/\//g, '.') : ''}
-            </span>
-          </div>
-          <div className="w-px h-8" style={{ background: 'rgba(11,23,54,.14)' }} />
-          <div>
-            <span className="text-[8px] uppercase tracking-widest block mb-0.5" style={{ color: '#475467' }}>Duration</span>
-            <span className="text-[13px] tracking-wide">
-              00:{readingTime ? String(readingTime).padStart(2, '0') : '00'}:00
-            </span>
-          </div>
-        </div>
-      </div>
-
-      {/* Indice */}
-      {headings.length > 0 && (
-        <>
+      {/* Indice: sul telefono e' chiuso, cosi' l'articolo comincia subito */}
+      {voci.length > 0 && (
+        <div className="side-indice">
           <p className="lb k">{labels.toc}</p>
-          <nav className="toc">
-            {headings.map((heading) => (
+          <button
+            type="button"
+            className="toc-t k"
+            aria-expanded={indiceAperto}
+            onClick={() => setIndiceAperto((v) => !v)}
+          >
+            {labels.toc}
+            <span aria-hidden="true">{indiceAperto ? '−' : '+'}</span>
+          </button>
+          <nav className={`toc${indiceAperto ? ' open' : ''}`} onClick={() => setIndiceAperto(false)}>
+            {voci.map((heading) => (
               <a
                 key={heading.id}
                 href={`#${heading.id}`}
@@ -212,47 +190,36 @@ export default function ArticleSidebar({ headings, locale, categories = [], date
               </a>
             ))}
           </nav>
-        </>
+        </div>
       )}
 
-      {/* Prodotto collegato alla categoria dell'articolo */}
-      <Link href={localizePath(product.href, locale as AppLocale)} className="panel" style={{ display: 'block', padding: '22px 20px', marginTop: '30px' }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={product.logo}
-          alt={product.name}
-          style={{ maxHeight: '44px', maxWidth: '150px', width: 'auto', margin: '0 auto 14px', objectFit: 'contain' }}
-        />
-        <p className="text-[12px] text-center" style={{ color: '#475467' }}>{labels.product_desc}</p>
-        <span className="k" style={{ display: 'block', textAlign: 'center', marginTop: '10px', fontSize: '11px', color: 'var(--seal-testo)' }}>
-          {labels.product_btn} &rarr;
-        </span>
-      </Link>
-
-      {/* Dati in Europa, residenza UE dei dati di lavoro */}
-      <Link href={`/${locale}/privacy/`} className="panel" style={{ display: 'block', padding: '18px 20px', marginTop: '18px' }}>
-        <p className="text-[13px] font-bold leading-snug">{euBadge.title}</p>
-        <p className="text-[11px] mt-1" style={{ color: '#475467' }}>{euBadge.desc}</p>
-      </Link>
-
-      {/* CTA trial */}
-      <div className="panel" style={{ padding: '20px', marginTop: '18px' }}>
-        <p className="text-[13px] font-bold">{labels.cta_title}</p>
-        <p className="text-[11px] mt-1.5" style={{ color: '#475467' }}>{labels.cta_desc}</p>
-        <Link
-          href={`/${locale}/trial/`}
-          onClick={() => trackEvent('trial_click', { cta_source: 'blog_sidebar', cta_locale: locale })}
-          className="b1"
-          style={{ display: 'block', textAlign: 'center', marginTop: '14px', fontSize: '13px', padding: '12px 20px' }}
-        >
-          {labels.cta_btn}
+      {/* Sul telefono questo blocco va dopo l'articolo (vedi l-page.css) */}
+      <div className="side-fine">
+        {/* Prodotto collegato alla categoria dell'articolo */}
+        <Link href={localizePath(product.href, locale as AppLocale)} className="panel" style={{ display: 'block', padding: '22px 20px', marginTop: '30px' }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={product.logo}
+            alt={product.name}
+            style={{ maxHeight: '44px', maxWidth: '150px', width: 'auto', margin: '0 auto 14px', objectFit: 'contain' }}
+          />
+          <p className="text-[13px] text-center" style={{ color: '#475467' }}>{labels.product_desc}</p>
+          <span className="k" style={{ display: 'block', textAlign: 'center', marginTop: '10px', fontSize: '12px', color: 'var(--seal-testo)' }}>
+            {labels.product_btn} &rarr;
+          </span>
         </Link>
-      </div>
 
-      {/* Condividi */}
-      <div className="share">
-        <p className="lb k">{labels.share}</p>
-        <ShareButtons title={title} copiedLabel={labels.copied} locale={locale} />
+        {/* Dati in Europa, residenza UE dei dati di lavoro */}
+        <Link href={`/${locale}/privacy/`} className="panel" style={{ display: 'block', padding: '18px 20px', marginTop: '18px' }}>
+          <p className="text-[14px] font-bold leading-snug">{euBadge.title}</p>
+          <p className="text-[13px] mt-1" style={{ color: '#475467' }}>{euBadge.desc}</p>
+        </Link>
+
+        {/* Condividi */}
+        <div className="share">
+          <p className="lb k">{labels.share}</p>
+          <ShareButtons title={title} copiedLabel={labels.copied} locale={locale} />
+        </div>
       </div>
     </aside>
   );

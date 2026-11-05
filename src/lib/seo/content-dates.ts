@@ -18,7 +18,7 @@ export const CONTENT_DATES: Record<string, string> = {
   "products/geotapp-timetracker": "2026-10-01",
   "products/geotapp-verifier": "2026-10-01",
   "cos-e-geotapp": "2026-10-01",
-  "pricing": "2026-10-01",
+  "pricing": "2026-11-05",
   "roi-calculator": "2026-09-30"
 };
 

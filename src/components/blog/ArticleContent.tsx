@@ -48,7 +48,7 @@ function MidArticleCta({ locale }: { locale: string }) {
   return (
     <div className="my-12 rounded-2xl border border-primary/20 bg-gradient-to-r from-[#22B573]/5 to-[#19B5D8]/5 p-8 text-center">
       <p className="text-lg font-bold text-slate-900">{labels.title}</p>
-      <p className="text-sm text-slate-500 mt-2">{labels.desc}</p>
+      <p className="text-sm text-slate-600 mt-2">{labels.desc}</p>
       <Link
         href={`/${locale}/trial/`}
         onClick={() => trackEvent('trial_click', { cta_source: 'blog_article' })}

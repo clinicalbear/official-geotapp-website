@@ -12,7 +12,7 @@ describe('ePaginaDiCompito', () => {
   it('copre le altre pagine dove si sta facendo qualcosa', () => {
     for (const p of ['/it/abbonati/', '/login', '/en/demo/', '/it/contact/',
                      '/it/success/', '/fr/survey/', '/it/delete-account/',
-                     '/verify-report/', '/it/newsletter/']) {
+                     '/verify-report/', '/it/newsletter/', '/it/pricing/', '/de/preise/', '/es/contacto/']) {
       expect(ePaginaDiCompito(p), p).toBe(true);
     }
   });

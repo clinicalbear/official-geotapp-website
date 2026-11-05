@@ -27,7 +27,7 @@ export default function LicenzaContenuto({ locale }: { locale: string }) {
   const text = LICENSE[locale] || LICENSE[locale.split('-')[0]] || LICENSE.en;
   return (
     <div className="bg-white border-t border-slate-100">
-      <p className="max-w-3xl mx-auto px-6 py-6 text-center text-xs leading-relaxed text-slate-400">
+      <p className="max-w-3xl mx-auto px-6 py-6 text-center text-xs leading-relaxed text-slate-600">
         {text}
       </p>
     </div>

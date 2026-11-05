@@ -180,7 +180,9 @@ function formatAmount(
     currency,
     minimumFractionDigits: fractionDigits,
     maximumFractionDigits: fractionDigits,
-  }).format(amount);
+    // Altrimenti in italiano e spagnolo esce "1990,00 €" e, nelle stesse pagine, "10.000,00 €".
+    useGrouping: 'always',
+  } as Intl.NumberFormatOptions).format(amount);
 }
 
 // Public formatter so callers can format arbitrary amounts they already converted.

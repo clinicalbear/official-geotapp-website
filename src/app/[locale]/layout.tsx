@@ -303,7 +303,8 @@ export default async function LocaleLayout({ children, params }: Props) {
   };
 
   return (
-    <html lang={locale}>
+    // Gli esperimenti A/B scrivono data-exp-* su <html> prima dell'idratazione.
+    <html lang={locale} suppressHydrationWarning>
       <head>
         {/* ── Critical preconnects ───────────────────────────────────────────
             next/font/google already handles fonts.googleapis.com and
@@ -519,6 +520,13 @@ export default async function LocaleLayout({ children, params }: Props) {
                   history.replaceState(null, '', url.toString());
                 }
                 window.__gtSkip = localStorage.getItem('gt_skip_analytics') === '1';
+              } catch(_) { /* localStorage blocked: ignore */ }
+              try {
+                /* Server locale e reti private: le prove non entrano mai in GA4
+                   (30/10/2026: da 127.0.0.1 arrivavano le sessioni di /it-restyle-b). */
+                var h = location.hostname;
+                if (h === 'localhost' || h === '127.0.0.1' || h === '[::1]' || /\\.local$/.test(h)
+                    || /^(10\\.|192\\.168\\.|172\\.(1[6-9]|2\\d|3[01])\\.)/.test(h)) { window.__gtSkip = true; }
                 if (window.__gtSkip) {
                   console.warn('[GeoTapp] Internal traffic, analytics DISABLED on this browser. Run ?gt_internal=off to re-enable.');
                 }
@@ -562,6 +570,14 @@ export default async function LocaleLayout({ children, params }: Props) {
             the blog. Moved to src/app/blog/layout.tsx where ad inventory lives.
             Saves ~75-90ms TBT across all non-blog pages. */}
         {/* Benvenuto a chi arriva dal link in un pezzo di stampa: vedi lib/press/referrer.ts */}
+        {/* Senza JavaScript nessuno aggiunge .in alle comparse: titoli e card restavano invisibili. */}
+        <noscript>
+          <style>{'.r,.r-s,.r-l,.r-r{opacity:1!important;transform:none!important}'}</style>
+        </noscript>
+        {/* Primo elemento della pagina: da qui il salto serve davvero, prima dei link della barra. */}
+        <a href="#contenuto" className="salta-al-contenuto">
+          {SALTA[locale as keyof typeof SALTA] ?? SALTA.en}
+        </a>
         {/* Il contenitore e lo script stanno nell'HTML statico: lo script riserva l'altezza prima del primo paint */}
         <div id={SLOT_ID} suppressHydrationWarning>
           <ReferrerBanner rules={buildReferrerRules(PRESS_COVERAGE)} />
@@ -595,9 +611,6 @@ export default async function LocaleLayout({ children, params }: Props) {
                 uno screen reader si rifa' tutta la barra a ogni pagina: sono
                 una dozzina di link prima di arrivare al testo. Sta fuori
                 schermo e compare solo quando prende il fuoco. */}
-            <a href="#contenuto" className="salta-al-contenuto">
-              {SALTA[locale as keyof typeof SALTA] ?? SALTA.en}
-            </a>
             <main id="contenuto" tabIndex={-1}>{children}</main>
             <Footer />
           </div>

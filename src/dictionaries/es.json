@@ -413,9 +413,9 @@
       }
     },
     "calculator": {
-      "title": "Calculadora de licencias TimeTracker",
-      "subtitle": "Estima tu inversión anual en plantilla.",
-      "active_users": "Usuarios activos",
+      "title": "Cuánto pagas por tus operarios",
+      "subtitle": "Mueve el deslizador hasta tu número de operarios y mira el total anual.",
+      "active_users": "Operarios",
       "discount_threshold": "Umbral de descuento",
       "cost_per_user": "Coste medio por usuario",
       "per_month": "/mes",
@@ -427,7 +427,14 @@
       "enterprise_desc": "A partir de 150 puestos el precio se acuerda: escríbenos y te preparamos un presupuesto.",
       "request_quote": "Solicitar presupuesto",
       "add_to_cart": "Añadir los puestos al carrito",
-      "secure_payment": "Pago seguro vía Stripe. IVA calculado en el checkout."
+      "secure_payment": "Pago seguro vía Stripe. IVA calculado en el checkout.",
+      "seats_valuetext": "{n} operarios",
+      "seats_valuetext_over": "Más de {n} operarios",
+      "seats_valuetext_one": "1 operario",
+      "fit_title": "Con {n} operarios te basta {plan}",
+      "fit_title_one": "Con 1 operario te basta {plan}",
+      "fit_promo": "Incluidos en la promo",
+      "fit_total_promo": "Total primer año (+IVA)"
     },
     "simulator": {
       "section_title": "Calcula tu presupuesto",
@@ -496,7 +503,8 @@
         "team": "Puestos TimeTracker activables: 15, 1 incluido en el precio*",
         "business": "Puestos TimeTracker activables: ilimitados, 5 incluidos en el precio*"
       },
-      "footnote": "* Con la promo de fin de 2026, durante los primeros 12 meses el precio del plan incluye 1 puesto TimeTracker (Solo y Team) o 5 (Business) y los límites de puestos activos a la vez son más altos (Solo 5, Team 15). Los puestos que superan los incluidos se pagan aparte. Al retirar el acceso a un empleado, el puesto queda libre al momento."
+      "footnote": "* Con la promo de fin de 2026, durante los primeros 12 meses el precio del plan incluye 1 puesto TimeTracker (Solo y Team) o 5 (Business) y los límites de puestos activos a la vez son más altos (Solo 5, Team 15). Los puestos que superan los incluidos se pagan aparte. Al retirar el acceso a un empleado, el puesto queda libre al momento.",
+      "banner_short": "Promo de fin de 2026: si te suscribes hasta el 18 de diciembre de 2026 inclusive tienes puestos TimeTracker incluidos durante 12 meses y puedes activar más."
     },
     "tracker_footnote": "* Los puestos TimeTracker se compran aparte. El plan Flow determina cuántos pueden estar activos a la vez, no cuántos están incluidos. Al eliminar el acceso de un empleado, el puesto queda libre de inmediato.",
     "per_year": "/año",
@@ -507,7 +515,34 @@
     "annual_savings": "Ahorro anual:",
     "no_monthly_option": "Sin opción mensual",
     "add_btn": "Añadir",
-    "recommended": "Recomendado"
+    "recommended": "Recomendado",
+    "compare": {
+      "users": "Usuarios de Flow",
+      "seats": "Puestos de TimeTracker",
+      "clients": "Clientes",
+      "automations": "Automatizaciones",
+      "api": "Acceso API",
+      "reports": "Informes",
+      "support": "Soporte",
+      "unlimited": "Sin límite",
+      "yes": "Sí",
+      "no": "No",
+      "reports_basic": "Básicos",
+      "reports_operational": "Operativos",
+      "reports_advanced": "Avanzados",
+      "support_standard": "Estándar",
+      "support_priority": "Prioritario",
+      "seats_up_to": "hasta {n}",
+      "seats_included_one": "1 incluido durante 12 meses",
+      "seats_included_many": "{n} incluidos durante 12 meses"
+    },
+    "hero_price": "Flow desde {flow}/mes, más {seat}/mes por cada operario. IVA no incluido.",
+    "addon_title": "Añade a tus operarios con TimeTracker",
+    "add_to_cart_btn": "Añadir al carrito",
+    "proof_title": "Tu cliente puede comprobar que el informe está intacto",
+    "proof_body": "Cada intervención se convierte en un informe con las horas, la ubicación y las fotos. Tu cliente puede comprobar por sí mismo que no se ha modificado, gratis y sin registrarse.",
+    "faq_title": "Preguntas frecuentes",
+    "proof_link": "Cómo comprueba tu cliente el informe"
   },
   "contact": {
     "title": "Hablemos de tu <span class=\"text-primary\">trabajo</span>.",

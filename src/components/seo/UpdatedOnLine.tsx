@@ -42,7 +42,7 @@ export default function UpdatedOnLine({
       style={{
         textAlign: 'center',
         fontSize: 12.5,
-        color: '#98a2b3',
+        color: '#475467',
         padding: '18px 20px 32px',
         margin: 0,
       }}

@@ -51,12 +51,12 @@ export default function LoginPage() {
               transition={{ delay: 0.2 }}
               className="crd r-l"
             >
-              <div className="crd-i" style={{ background: 'rgba(25,181,216,.12)', color: '#19B5D8' }}>
+              <div className="crd-i" style={{ background: 'rgba(25,181,216,.12)', color: '#0B6F88' }}>
                 <Database size={40} />
               </div>
               <h2>GeoTapp FLOW</h2>
               <p>{dict.flow.desc}</p>
-              <div className="crd-cta" style={{ color: '#19B5D8' }}>
+              <div className="crd-cta" style={{ color: '#0B6F88' }}>
                 {dict.flow.btn}
                 <ArrowRight size={18} />
               </div>

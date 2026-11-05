@@ -19,7 +19,7 @@ summary::-webkit-details-marker{display:none}
 .browser{border-radius:12px;overflow:hidden;background:#fff;border:1px solid rgba(11,23,54,.1); box-shadow:0 30px 70px -34px rgba(11,23,54,.45)}
 .browser .bar{display:flex;align-items:center;gap:6px;padding:10px 13px;background:#F2F4F7;border-bottom:1px solid rgba(11,23,54,.08)}
 .browser .bar i{width:9px;height:9px;border-radius:50%;background:rgba(11,23,54,.16);display:block}
-.browser .bar b{margin-left:10px;font-size:11px;font-weight:500;color:#475467;letter-spacing:.02em}
+.browser .bar b{margin-left:10px;font-size:12px;font-weight:500;color:#475467;letter-spacing:.02em}
 .browser img{width:100%;aspect-ratio:1862/967;object-fit:cover;object-position:top;display:block}
 .sheet{width:330px;flex:none;background:#fff;padding:10px;border-radius:4px; box-shadow:0 1px 0 rgba(11,23,54,.08),0 34px 74px -30px rgba(11,23,54,.45)}
 .sheet img{width:100%;aspect-ratio:401/941;object-fit:cover;object-position:top;display:block;border-radius:2px}
@@ -74,7 +74,7 @@ summary::-webkit-details-marker{display:none}
    Nemmeno il verde sigillo #15803D basta: fa 5,02 sul BIANCO ma 4,40 sulla carta
    #F7F9FC, che e' il fondo vero di queste pagine. Questo fa 5,67 sulla carta e
    6,47 sul bianco. (Audit EAA del 23/09/2026.) */
---seal-testo:#15803D}
+--seal-testo:#126E36}
 h1,h2,h3,.big{font-family:var(--font-display);font-weight:800;letter-spacing:-.018em;line-height:1.06}
 .k{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500}
 .w{max-width:1500px;margin:0 auto;padding:0 46px}
@@ -88,9 +88,9 @@ h1,h2,h3,.big{font-family:var(--font-display);font-weight:800;letter-spacing:-.0
 .load .bar{width:230px;height:2px;background:rgba(247,249,252,.16);overflow:hidden}
 .load .bar i{display:block;height:100%;background:var(--lime);transform:scaleX(0);transform-origin:left; animation:fill 1.3s cubic-bezier(.6,0,.2,1) .22s forwards}
 .nv{position:fixed;top:0;left:0;right:0;z-index:80;mix-blend-mode:difference}
-.nv .w{display:flex;align-items:center;gap:30px;min-height:100px}
+.nv .w{display:flex;align-items:center;gap:30px;min-height:80px}
 .nvl{position:fixed;top:0;left:0;right:0;z-index:82;pointer-events:none}
-.nvl .w{display:flex;align-items:center;min-height:100px}
+.nvl .w{display:flex;align-items:center;min-height:80px}
 .nvl img{height:48px;width:auto;pointer-events:auto}
 .mn{display:flex;gap:26px;margin-left:196px}
 .mn a{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#fff;position:relative;overflow:hidden;height:16px;display:block}
@@ -221,7 +221,7 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
 .ft{background:var(--ink);color:#B8C2D6;padding:92px 0 34px;font-size:14.5px}
 .ft .g{display:grid;grid-template-columns:1.6fr repeat(4,1fr);gap:42px}
 .ft img{height:52px;width:auto;margin-bottom:20px}
-.ft h4{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--paper);margin-bottom:18px;font-weight:500}
+.ft h3,.ft h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--paper);margin-bottom:18px;font-weight:500}
 .ft a{display:block;margin-bottom:11px;transition:color .3s,transform .3s}
 .ft a:hover{color:var(--sky);transform:translateX(5px)}
 .ft p{max-width:34ch;line-height:1.6;color:#98A2B3}
@@ -281,7 +281,7 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
 .art .body>p{margin-bottom:26px;font-size:18.5px;line-height:1.72;color:#1D2939}
 .art .body>p.lead{font-size:22px;line-height:1.6;color:var(--ink)}
 .art .body h2{font-size:clamp(24px,2.8vw,40px);margin:52px 0 22px}
-.art .body h3{font-family:'Inter',sans-serif;font-weight:600;text-transform:none;letter-spacing:0;font-size:21px;margin:38px 0 14px}
+.art .body h3{font-family:var(--font-body),sans-serif;font-weight:600;text-transform:none;letter-spacing:0;font-size:21px;margin:38px 0 14px}
 .art .body ul{margin:0 0 28px}
 .art .body li{padding:11px 0 11px 28px;position:relative;border-bottom:1px solid rgba(11,23,54,.09);font-size:17px;color:#344054}
 .art .body li::before{content:'';position:absolute;left:0;top:22px;width:14px;height:1px;background:var(--seal)}
@@ -314,8 +314,8 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
 .posts .ph img{width:100%;height:100%;object-fit:cover;filter:none; transition:transform 1.2s cubic-bezier(.16,1,.3,1),filter .7s}
 .posts a:hover .ph img{transform:scale(1.07);filter:none}
 .posts .m{display:flex;gap:12px;color:#475467;margin-bottom:10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
-.posts h3{font-family:'Inter',sans-serif;font-weight:500;text-transform:none;font-size:18.5px;line-height:1.38;letter-spacing:0}
-.pag{display:flex;gap:10px;justify-content:center;margin-top:64px}
+.posts h3{font-family:var(--font-body),sans-serif;font-weight:500;text-transform:none;font-size:18.5px;line-height:1.38;letter-spacing:0}
+.pag{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:64px}
 .pag a{border:1px solid rgba(11,23,54,.2);width:44px;height:44px;display:grid;place-content:center;font-size:14px;transition:background .3s,color .3s}
 .pag a:hover,.pag a.on{background:var(--ink);color:var(--paper)}
 @media(max-width:1000px){
@@ -447,9 +447,11 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
 .vat{margin-top:26px;font-size:13.5px;color:#475467}
 .calc{display:grid;grid-template-columns:1.02fr .98fr;gap:64px;align-items:start}
 .calc .seats{font-family:var(--font-display);font-weight:800;font-size:clamp(64px,8vw,132px);line-height:1.02;color:var(--lime);letter-spacing:-.03em}
-.calc .seats small{font-family:'Inter',sans-serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase; color:rgba(247,249,252,.6);display:block;margin-top:14px;font-weight:500}
+.calc .seats small{font-family:var(--font-body),sans-serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase; color:rgba(247,249,252,.6);display:block;margin-top:14px;font-weight:500}
 .calc .sl{margin:38px 0 10px}
-.calc input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:3px;background:rgba(247,249,252,.22);outline:none;cursor:pointer}
+.calc input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:3px;background:rgba(247,249,252,.22);outline:none;cursor:pointer;touch-action:pan-y}
+.calc input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 3px var(--ink),0 0 0 6px var(--paper)}
+.calc input[type=range]:focus-visible::-moz-range-thumb{box-shadow:0 0 0 3px var(--ink),0 0 0 6px var(--paper)}
 .calc input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%; background:var(--seal);border:0;cursor:pointer;box-shadow:0 0 0 6px rgba(34,181,115,.18)}
 .calc input[type=range]::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:var(--seal);border:0;cursor:pointer}
 .calc .ends{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,249,252,.68)}
@@ -667,7 +669,7 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
 .seq .cnt .num{position:relative;height:70px;width:96px;overflow:hidden}
 .seq .cnt .num span{position:absolute;right:0;top:0;font-family:var(--font-display);font-weight:800;font-size:70px;line-height:1.04;color:#fff; opacity:0;transform:translateY(62%);transition:opacity .5s cubic-bezier(.2,.8,.25,1),transform .5s cubic-bezier(.2,.8,.25,1)}
 .seq .cnt .num span.on{opacity:1;transform:none}
-.seq .cnt .of{color:rgba(247,249,252,.42);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase}
+.seq .cnt .of{color:rgba(247,249,252,.72);font-size:12px;letter-spacing:.2em;text-transform:uppercase}
 .seq .cnt .tk{display:flex;flex-direction:column;gap:8px;align-items:flex-end;margin-top:8px}
 .seq .cnt .tk i{display:block;width:26px;height:2px;background:rgba(247,249,252,.24);transition:width .5s,background .5s}
 .seq .cnt .tk i.on{width:58px;background:var(--lime)}
@@ -790,7 +792,7 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
 .jr .ph img{width:100%;height:100%;object-fit:cover;filter:none;transition:transform 1.2s cubic-bezier(.16,1,.3,1),filter .7s}
 .jr a:hover .ph img{transform:scale(1.07);filter:none}
 .jr .m{display:flex;gap:14px;color:#475467;margin-bottom:12px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase}
-.jr h3{font-family:'Inter',sans-serif;font-weight:500;text-transform:none;font-size:19px;line-height:1.36;letter-spacing:0}
+.jr h3{font-family:var(--font-body),sans-serif;font-weight:500;text-transform:none;font-size:19px;line-height:1.36;letter-spacing:0}
 @media(max-width:900px){
   .jr .g{grid-template-columns:1fr}
 }
@@ -815,7 +817,7 @@ details.closing .ct>p{padding-bottom:0;opacity:0;transition:padding-bottom .55s 
 @keyframes holdline{from{width:0}to{width:100%}}
 
 /* varianti abbonamento → .lp-abbonamento */
-.lp-abbonamento{font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.62; -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.lp-abbonamento{font-family:var(--font-body),system-ui,sans-serif;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.62; -webkit-font-smoothing:antialiased;overflow-x:hidden}
 
 /* varianti index → .lp-home */
 .lp-home .acts{display:flex;gap:22px;align-items:center}
@@ -934,8 +936,8 @@ main:has(> .lp-l){padding-top:0}
   padding:2px 0 !important;border-radius:0 !important;box-shadow:none !important}
 .nv-lang select option{color:#0B1736;background:#F7F9FC;text-transform:none}
 /* carrello */
-.nv-cart{position:relative;background:none;border:0;color:#fff;cursor:pointer;padding:2px;display:flex}
-.nv-cart span{position:absolute;top:-5px;right:-7px;width:15px;height:15px;border-radius:50%;
+.nv-cart{position:relative;background:none;border:0;color:#fff;cursor:pointer;padding:12px;margin:-10px;display:flex}
+.nv-cart span{position:absolute;top:5px;right:3px;width:15px;height:15px;border-radius:50%;
   background:#22B573;color:#0B1736;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center}
 /* azione nella barra: pillola piena (fuori dal negativo, resta verde) */
 .nv-cta{background:#22B573;color:#0B1736 !important;padding:13px 26px;border-radius:99px;
@@ -1019,8 +1021,8 @@ main:has(> .lp-l){padding-top:0}
 .ft .news .kk{color:#22B573;margin-bottom:16px}
 .ft .news p{max-width:48ch}
 @media(max-width:900px){.ft .news{grid-template-columns:1fr;gap:26px}}
-.ft .soc{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
-.ft .soc a{color:#98A2B3;transition:color .3s;display:inline-flex;margin-bottom:0}
+.ft .soc{display:flex;gap:0;align-items:center;flex-wrap:wrap;margin-left:-13px}
+.ft .soc a{color:#98A2B3;transition:color .3s;display:inline-flex;margin-bottom:0;padding:13px}
 .ft .soc a:hover{color:var(--sky);transform:none}
 .ft .fiscal{color:#98A2B3;font-size:12.5px}
 /* la newsletter dentro la coda: campi a filo su nero */
@@ -1054,7 +1056,7 @@ main:has(> .lp-l){padding-top:0}
   border-top:1px solid rgba(11,23,54,.16) !important;box-shadow:none !important}
 .fq-wrap details:last-of-type{border-bottom:1px solid rgba(11,23,54,.16) !important}
 .fq-wrap summary{padding:24px 46px 24px 0 !important}
-.fq-wrap summary h3{font-family:'Inter',system-ui,sans-serif !important;text-transform:none !important;
+.fq-wrap summary h3{font-family:var(--font-body),system-ui,sans-serif !important;text-transform:none !important;
   font-size:17.5px !important;font-weight:500 !important;letter-spacing:0 !important}
 .fq-wrap details p{max-width:74ch}
 
@@ -1097,14 +1099,14 @@ main:has(> .lp-l){padding-top:0}
 /* faq: resta solo il piu' del mockup, via il chevron del componente */
 .fq-wrap summary svg{display:none !important}
 /* la pillola d'azione vive FUORI dal negativo, nei suoi colori veri */
-.nvr{position:fixed;top:0;right:0;z-index:82;display:flex;align-items:center;min-height:100px;padding:0 46px}
+.nvr{position:fixed;top:0;right:0;z-index:82;display:flex;align-items:center;min-height:80px;padding:0 46px}
 /* il menu e' fisso in cima: se sopra c'e' la barra di benvenuto dalla stampa (ReferrerBanner), scende della sua altezza */
 .nv,.nvl,.nvr{top:var(--press-bar,0px)}
 .ne{margin-right:345px}
 @media(max-width:1350px){.ne{margin-right:325px}}
 @media(max-width:900px){.nvr{padding:0 22px}.ne{margin-right:300px}
   .nv-cta{padding:11px 18px;font-size:12px !important}}
-@media(max-width:520px){.nv-lang{display:none}
+@media(max-width:520px){
   /* sotto i 520px logo pieno + carrello + hamburger + CTA non ci stanno:
      il carrello finiva SOPRA il logotipo. Misure ridotte, niente sovrapposizioni. */
   .nvl img{height:36px !important}
@@ -1172,7 +1174,13 @@ main:has(> .lp-l){padding-top:0}
   color:#0B1736 !important;border-radius:99px !important;padding:9px 14px !important;
   font-size:12px !important;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;
   box-shadow:0 6px 18px -10px rgba(11,23,54,.4) !important}
-@media(max-width:520px){.nv-lang-chip{display:none}}
+/* Finche' c'e' il pulsante del menu (1080px, vedi .nvh) la lingua si sceglie dentro
+   il menu: nella barra il selettore finiva sopra carrello e menu.
+   La parte vuota di .nvr sta sopra la barra e non deve prendere i tocchi. */
+.nvr{pointer-events:none}
+.nvr>*{pointer-events:auto}
+@media(max-width:1080px){.nv-lang-chip{display:none}
+  .nvm .nv-lang{display:flex}}
 /* card risorse stampa: anteprima visiva */
 .lp-stampa .dl2 a .thumb, .dl2 a .thumb{display:flex;align-items:center;justify-content:center;
   height:72px;margin-bottom:14px;background:#fff;border:1px solid rgba(11,23,54,.1);border-radius:6px;
@@ -1291,4 +1299,81 @@ a[class*="bg-emerald-500"]{background-color:#10b981 !important;color:#fff !impor
   .seq .stick{display:flex;flex-direction:column}
   .seq .hd{position:relative}
   .seq .hold{position:relative;inset:auto;flex:1;align-items:flex-start;padding-top:40px;z-index:4}
+}
+
+/* Sul tocco ogni link deve avere almeno 44px di altezza. */
+@media (pointer:coarse){
+  .ft .g a:not(.soc a){display:flex;align-items:center;min-height:2.75rem;margin-bottom:0}
+  .ph .crumb a{display:inline-flex;align-items:center;min-height:2.75rem}
+  .ft select,.ft input{min-height:2.75rem}
+}
+
+/* Griglie e tabelle su schermi stretti: una colonna '1fr' non scende sotto il
+   contenuto piu' largo, e allargava trial, demo, contatti, pagine legali, settori
+   e confronti oltre lo schermo. La pagina non scorreva: il testo veniva tagliato. */
+.lp-l article,.lp-l .tr>*,.lp-l .gl>*,.lp-l .two>*,.lp-l .grid3>*,.lp-l .tbl .rw>*,.lp-l .cmp .rw>*{min-width:0;overflow-wrap:anywhere}
+.lp-l h2,.lp-l h3,.lp-l .cardn b{overflow-wrap:break-word;hyphens:auto}
+.lp-l .side a,.lp-l .side p{overflow-wrap:anywhere}
+.lp-l .gl>.side,.lp-l .gl>.body{max-width:100%}
+.lp-l p,.lp-l li,.lp-l dd{text-wrap:pretty}
+.lp-l p,.lp-l li,.lp-l blockquote{max-width:72ch}
+.lp-l .l-center p,.lp-l .text-center p,.lp-l p.text-center{margin-inline:auto}
+.lp-l .foot{color:#475467}
+.lp-l .pg1 .kk,.lp-l .pg3 .kk{color:var(--lime)!important}
+.lp-l .split>*{min-width:0}
+.lp-l .foot{opacity:1!important}
+.lp-legale a{color:var(--seal-testo)}
+.geo-eyebrow{color:var(--seal-testo)!important}
+.lp-l form label span{text-transform:none;letter-spacing:.02em}
+.sec:not(.ink) .text-geo-gradient{background:none;color:var(--seal-testo);-webkit-text-fill-color:currentColor}
+input::placeholder,textarea::placeholder{color:#667085}
+.ft input::placeholder,.ink input::placeholder,.news input::placeholder{color:#B8C2D6}
+@media (max-width:480px){
+  .lp-l h1,.lp-l h2,.lp-l h3{overflow-wrap:anywhere}
+  .lp-l .w>*,.lp-l .wt>*,.lp-l .wn>*{min-width:0;max-width:100%}
+  .form{padding:28px 18px}
+  .lp-l .tbl .hd2{font-size:.9375rem}
+  .lp-l .tbl .c{font-size:1rem}
+  .lp-l .cmp .rw>*{padding-inline:.5rem;font-size:.875rem}
+}
+/* Home su telefono e tablet: l'effetto "pagina coperta" scuriva il contenuto
+   mentre lo si leggeva. */
+@media(max-width:1200px),(hover:none){
+  .lp-home .scr::before{display:none}
+  .lp-home .scr>.w{opacity:1;transform:none}
+  .lp-home .pg3 p{opacity:.92}
+  .lp-home .pg3 p.kk{opacity:1}
+}
+/* I pannelli prodotto si aprono col mouse: senza mouse o senza spazio stanno uno
+   sotto l'altro, tutti aperti, senza schermate sopra il testo e con la foto piu' chiara. */
+@media(max-width:1200px),(hover:none){
+  .lp-home .acc .dev{display:none!important}
+  .lp-home .acc{flex-direction:column;height:auto;min-height:0}
+  .lp-home .acc .p,.lp-home .acc .p:first-child,.lp-home .acc .p:hover,.lp-home .acc:hover .p{
+    flex:none!important;height:auto;min-height:420px;border-left:0;border-top:1px solid rgba(247,249,252,.14)}
+  .lp-home .acc .p:first-child{border-top:0}
+  .lp-home .acc .ct{height:auto;min-height:420px;width:100%;padding:56px 22px 40px}
+  .lp-home .acc .p .cl2{opacity:1!important;max-height:none!important;overflow:visible}
+  .lp-home .acc .p h3{font-size:clamp(24px,4.5vw,34px)!important}
+  .lp-home .acc .p>img.bg{filter:brightness(.62)!important;transform:scale(1)!important}
+  .lp-home .acc .p>img.bg.flip{transform:scale(-1,1)!important}
+  .lp-home .acc .p .sh{background:linear-gradient(180deg,rgba(11,23,54,.34),rgba(11,23,54,.72))}
+  .lp-home .acc .p .kk,.lp-home .acc .p .cl2 a{color:#7DE8B6!important}
+  .lp-home .acc .cl2 p,.lp-home .acc .cl2 li{color:rgba(247,249,252,.94)}
+  .lp-home .acc .kk,.lp-home .acc .cl2{text-shadow:0 1px 10px rgba(11,23,54,.65)}
+}
+/* Settori in home: sono 8, quindi 4x2 o 2x4. Con 3 colonne l'ultima riga restava bucata. */
+@media(min-width:641px){.lp-home .set .setg{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1201px){
+  .lp-home .set .setg{grid-template-columns:repeat(4,1fr)}
+  .lp-home .setg .cp{padding:24px}
+  .lp-home .setg h3{font-size:24px}
+  .lp-home .setg p{font-size:14px}
+}
+.ft form p{font-size:.8125rem;color:#B8C2D6}
+/* Sul telefono due colonne da 113px spezzavano le parole a meta'. */
+@media(max-width:640px){.lp-l .mods{grid-template-columns:1fr!important}.lp-l .mods article{padding:28px 22px 30px}}
+/* Il controllo anti-bot ha una larghezza fissa di 300px. */
+@media (max-width:360px){
+  .tr>.form{margin-inline:-22px;padding-inline:10px}
 }

@@ -317,6 +317,7 @@ export default async function ConfrontoIndexPage({ params }: { params: Promise<{
           <div className="w">
             <p className="kk k"><s />{c.badge}</p>
             <h1>GeoTapp vs<br /><em>{c.title_suffix}</em></h1>
+            <h2 className="sr-only">GeoTapp vs {c.title_suffix}</h2>
             <p className="lede">{c.intro}</p>
             <div className="acts">
               <TrialCTALink href={`/${locale}/trial/`} source="confronto_index" className="b1">{c.cta_btn}</TrialCTALink>

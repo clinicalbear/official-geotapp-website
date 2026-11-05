@@ -413,9 +413,9 @@
       }
     },
     "calculator": {
-      "title": "TimeTracker License Calculator",
-      "subtitle": "Estimate your annual workforce investment.",
-      "active_users": "Active users",
+      "title": "What you pay for your operators",
+      "subtitle": "Move the slider to your number of operators and see the annual total.",
+      "active_users": "Operators",
       "discount_threshold": "Discount threshold",
       "cost_per_user": "Average cost per user",
       "per_month": "/month",
@@ -427,7 +427,14 @@
       "enterprise_desc": "Above 150 seats the price is agreed: write to us and we will send you a quote.",
       "request_quote": "Request a quote",
       "add_to_cart": "Add the seats to the cart",
-      "secure_payment": "Secure payment via Stripe. VAT calculated at checkout."
+      "secure_payment": "Secure payment via Stripe. VAT calculated at checkout.",
+      "seats_valuetext": "{n} operators",
+      "seats_valuetext_over": "More than {n} operators",
+      "seats_valuetext_one": "1 operator",
+      "fit_title": "With {n} operators, {plan} is enough",
+      "fit_title_one": "With 1 operator, {plan} is enough",
+      "fit_promo": "Included with the offer",
+      "fit_total_promo": "First-year total (+VAT)"
     },
     "simulator": {
       "section_title": "Calculate your quote",
@@ -496,7 +503,8 @@
         "team": "TimeTracker seats you can activate: 15, 1 included in the price*",
         "business": "TimeTracker seats you can activate: unlimited, 5 included in the price*"
       },
-      "footnote": "* With the year-end 2026 offer, for the first 12 months the plan includes 1 TimeTracker seat (Solo and Team) or 5 (Business) and raises how many seats can be active at the same time (Solo 5, Team 15). Seats beyond the included ones are paid for separately. Removing an employee's access frees the seat immediately."
+      "footnote": "* With the year-end 2026 offer, for the first 12 months the plan includes 1 TimeTracker seat (Solo and Team) or 5 (Business) and raises how many seats can be active at the same time (Solo 5, Team 15). Seats beyond the included ones are paid for separately. Removing an employee's access frees the seat immediately.",
+      "banner_short": "Year-end 2026 offer: subscribe by 18 December 2026 and get TimeTracker seats included for 12 months, with room to activate more."
     },
     "per_year": "/year",
     "title_gradient": "Office users, plus a seat for every worker.",
@@ -507,7 +515,34 @@
     "no_monthly_option": "No monthly option",
     "add_btn": "Add",
     "tracker_footnote": "* TimeTracker seats are purchased separately. The Flow plan sets how many can be active at the same time, not how many are included. Removing an employee's access frees the seat immediately.",
-    "recommended": "Recommended"
+    "recommended": "Recommended",
+    "compare": {
+      "users": "Flow users",
+      "seats": "TimeTracker seats",
+      "clients": "Clients",
+      "automations": "Automations",
+      "api": "API access",
+      "reports": "Reports",
+      "support": "Support",
+      "unlimited": "Unlimited",
+      "yes": "Yes",
+      "no": "No",
+      "reports_basic": "Basic",
+      "reports_operational": "Operational",
+      "reports_advanced": "Advanced",
+      "support_standard": "Standard",
+      "support_priority": "Priority",
+      "seats_up_to": "up to {n}",
+      "seats_included_one": "1 included for 12 months",
+      "seats_included_many": "{n} included for 12 months"
+    },
+    "hero_price": "Flow from {flow}/month, plus {seat}/month per operator. Excluding VAT.",
+    "addon_title": "Add your operators with TimeTracker",
+    "add_to_cart_btn": "Add to cart",
+    "proof_title": "Your client can check the report is unchanged",
+    "proof_body": "Every job becomes a report with times, location and photos. Your client can check for themselves that it hasn't been changed, free and without an account.",
+    "faq_title": "Frequently asked questions",
+    "proof_link": "How your client verifies the report"
   },
   "contact": {
     "title": "Let's talk about your <span class=\"text-primary\">work</span>.",

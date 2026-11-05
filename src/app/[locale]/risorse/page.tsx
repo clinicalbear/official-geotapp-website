@@ -103,6 +103,7 @@ export default async function RisorseHubPage({
         <div className="w">
           <p className="kk k"><s />{dict.navbar.resources}</p>
           <h1>{hub.h1}</h1>
+          <h2 className="sr-only">{hub.h1}</h2>
           <p className="lede">{hub.intro}</p>
           <div className="acts">
             <Link className="b1" href={getLink('/trial')}>{dict.landing.hero_cta_primary}</Link>

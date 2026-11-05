@@ -91,7 +91,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4>{t.products}</h4>
+            <h3>{t.products}</h3>
             <Link href={getLink('/products/geotapp-flow')}>{t.flow}</Link>
             <Link href={getLink('/products/geotapp-timetracker')}>{t.timetracker}</Link>
             <Link href={getLink('/products/geotapp-verifier')}>{t.verifier}</Link>
@@ -101,7 +101,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4>{t.solutions}</h4>
+            <h3>{t.solutions}</h3>
             <Link href={getLink('/settori')}>{t.sectors}</Link>
             <Link href={getLink('/settori/pulizie')}>{t.cleaning}</Link>
             <Link href={getLink('/settori/installatori')}>{t.installers}</Link>
@@ -109,7 +109,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4>{t.resources}</h4>
+            <h3>{t.resources}</h3>
             <Link href={getLink('/blog')}>{t.blog}</Link>
             <Link href={getLink('/guida')}>{t.guide}</Link>
             <Link href={getLink('/video')}>{t.video}</Link>
@@ -117,7 +117,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4>{t.company}</h4>
+            <h3>{t.company}</h3>
             <Link href={getLink('/chi-siamo')}>{t.about}</Link>
             <Link href={getLink('/stampa')}>{t.press}</Link>
             <Link href={getLink('/cos-e-geotapp')}>{t.whatis}</Link>
@@ -127,7 +127,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4>{t.legal}</h4>
+            <h3>{t.legal}</h3>
             <Link href={getLink('/privacy')}>{t.privacy}</Link>
             <Link href={getLink('/terms')}>{t.terms}</Link>
             <Link href={getLink('/cookies')}>{t.cookies}</Link>

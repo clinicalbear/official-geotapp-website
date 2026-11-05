@@ -413,9 +413,9 @@
       }
     },
     "calculator": {
-      "title": "TimeTracker licensräknare",
-      "subtitle": "Uppskatta din årliga personalinvestering.",
-      "active_users": "Aktiva medarbetare",
+      "title": "Vad du betalar för dina medarbetare",
+      "subtitle": "Ställ reglaget på ditt antal medarbetare och se årskostnaden.",
+      "active_users": "Medarbetare",
       "discount_threshold": "Rabattgräns",
       "cost_per_user": "Genomsnittlig kostnad per användare",
       "per_month": "/mån",
@@ -427,7 +427,14 @@
       "enterprise_desc": "Över 150 platser avtalas priset: skriv till oss så skickar vi en offert.",
       "request_quote": "Begär offert",
       "add_to_cart": "Lägg platserna i varukorgen",
-      "secure_payment": "Säker betalning via Stripe. Moms beräknas vid utcheckning."
+      "secure_payment": "Säker betalning via Stripe. Moms beräknas vid utcheckning.",
+      "seats_valuetext": "{n} medarbetare",
+      "seats_valuetext_over": "Fler än {n} medarbetare",
+      "seats_valuetext_one": "1 medarbetare",
+      "fit_title": "Med {n} medarbetare räcker {plan}",
+      "fit_title_one": "Med 1 medarbetare räcker {plan}",
+      "fit_promo": "Ingår i erbjudandet",
+      "fit_total_promo": "Totalt första året (exkl. moms)"
     },
     "simulator": {
       "section_title": "Beräkna din offert",
@@ -496,7 +503,8 @@
         "team": "TimeTracker-platser som kan aktiveras: 15, varav 1 ingår i priset*",
         "business": "TimeTracker-platser som kan aktiveras: obegränsat, varav 5 ingår i priset*"
       },
-      "footnote": "* Med årsslutserbjudandet 2026 ingår de första 12 månaderna 1 plats (Solo och Team) eller 5 platser (Business) i priset, och fler platser kan vara aktiva samtidigt (Solo 5, Team 15). TimeTracker-platser utöver de som ingår köps separat. Tar du bort en medarbetares åtkomst blir platsen ledig direkt."
+      "footnote": "* Med årsslutserbjudandet 2026 ingår de första 12 månaderna 1 plats (Solo och Team) eller 5 platser (Business) i priset, och fler platser kan vara aktiva samtidigt (Solo 5, Team 15). TimeTracker-platser utöver de som ingår köps separat. Tar du bort en medarbetares åtkomst blir platsen ledig direkt.",
+      "banner_short": "Årsslutserbjudande 2026: Teckna senast den 18 december 2026 så ingår TimeTracker-platser i 12 månader, och du kan aktivera fler."
     },
     "tracker_footnote": "* TimeTracker-platser köps separat. Flow-planen avgör hur många som kan vara aktiva samtidigt, inte hur många som ingår. Att ta bort åtkomst för en medarbetare frigör platsen omedelbart.",
     "per_year": "/år",
@@ -507,7 +515,34 @@
     "annual_savings": "Årlig besparing:",
     "no_monthly_option": "Inget månadsalternativ",
     "add_btn": "Lägg till",
-    "recommended": "Rekommenderad"
+    "recommended": "Rekommenderad",
+    "compare": {
+      "users": "Flow-användare",
+      "seats": "TimeTracker-platser",
+      "clients": "Kunder",
+      "automations": "Automatiseringar",
+      "api": "API-åtkomst",
+      "reports": "Rapporter",
+      "support": "Support",
+      "unlimited": "Obegränsat",
+      "yes": "Ja",
+      "no": "Nej",
+      "reports_basic": "Grundläggande",
+      "reports_operational": "Operativa",
+      "reports_advanced": "Avancerade",
+      "support_standard": "Standard",
+      "support_priority": "Prioriterad",
+      "seats_up_to": "upp till {n}",
+      "seats_included_one": "1 ingår i 12 månader",
+      "seats_included_many": "{n} ingår i 12 månader"
+    },
+    "hero_price": "Flow från {flow}/månad, plus {seat}/månad per medarbetare. Exkl. moms.",
+    "addon_title": "Lägg till dina medarbetare i TimeTracker",
+    "add_to_cart_btn": "Lägg i varukorgen",
+    "proof_title": "Din kund kan själv kontrollera att rapporten är oförändrad",
+    "proof_body": "Varje uppdrag blir en rapport med tider, plats och foton. Din kund kan själv kontrollera att den inte har ändrats, gratis och utan konto.",
+    "faq_title": "Vanliga frågor",
+    "proof_link": "Så kontrollerar din kund rapporten"
   },
   "contact": {
     "title": "Låt oss prata om ditt <span class=\"text-primary\">arbete</span>.",

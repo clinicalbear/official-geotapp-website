@@ -363,7 +363,7 @@
               "Foto di prova",
               "Report settimanali"
             ],
-            "button": "Vedi Calcolatore"
+            "button": "Calcola il totale"
           }
         ]
       },
@@ -413,9 +413,9 @@
       }
     },
     "calculator": {
-      "title": "Calcolatore Licenze TimeTracker",
-      "subtitle": "Stima il tuo investimento annuale per la forza lavoro.",
-      "active_users": "Collaboratori attivi",
+      "title": "Quanto paghi con i tuoi operatori",
+      "subtitle": "Sposta il cursore sul numero di operatori e vedi il totale annuale.",
+      "active_users": "Operatori",
       "discount_threshold": "soglia sconto",
       "cost_per_user": "Costo medio per utente",
       "per_month": "/mese",
@@ -427,7 +427,14 @@
       "enterprise_desc": "Oltre 150 postazioni il prezzo si concorda: scrivici e ti facciamo un preventivo.",
       "request_quote": "Richiedi un preventivo",
       "add_to_cart": "Aggiungi le postazioni al carrello",
-      "secure_payment": "Pagamento sicuro via Stripe. IVA calcolata al checkout."
+      "secure_payment": "Pagamento sicuro via Stripe. IVA calcolata al checkout.",
+      "seats_valuetext": "{n} operatori",
+      "seats_valuetext_over": "Oltre {n} operatori",
+      "seats_valuetext_one": "1 operatore",
+      "fit_title": "Con {n} operatori ti basta {plan}",
+      "fit_title_one": "Con 1 operatore ti basta {plan}",
+      "fit_promo": "Comprese con la promo",
+      "fit_total_promo": "Totale primo anno (+IVA)"
     },
     "simulator": {
       "section_title": "Calcola il tuo preventivo",
@@ -496,7 +503,8 @@
         "team": "Postazioni TimeTracker attivabili: 15, di cui 1 compresa nel prezzo*",
         "business": "Postazioni TimeTracker attivabili: illimitate, di cui 5 comprese nel prezzo*"
       },
-      "footnote": "* Con la promo fine 2026, per i primi 12 mesi il piano comprende 1 postazione TimeTracker (Solo e Team) o 5 (Business) e alza il numero di postazioni attive insieme (Solo 5, Team 15). Le postazioni oltre quelle comprese si acquistano a parte. Rimuovendo l'accesso a un dipendente il posto si libera subito."
+      "footnote": "* Con la promo fine 2026, per i primi 12 mesi il piano comprende 1 postazione TimeTracker (Solo e Team) o 5 (Business) e alza il numero di postazioni attive insieme (Solo 5, Team 15). Le postazioni oltre quelle comprese si acquistano a parte. Rimuovendo l'accesso a un dipendente il posto si libera subito.",
+      "banner_short": "Promo fine 2026: abbonandoti entro il 18 dicembre 2026 hai postazioni TimeTracker comprese per 12 mesi e puoi attivarne di più."
     },
     "per_year": "/anno",
     "title_gradient": "Utenti d'ufficio e una postazione per ogni operatore.",
@@ -507,7 +515,34 @@
     "no_monthly_option": "Nessuna opzione mensile",
     "add_btn": "Aggiungi",
     "tracker_footnote": "* Le postazioni TimeTracker si acquistano a parte. Il piano Flow stabilisce quante se ne possono tenere attive insieme, non quante sono comprese. Rimuovendo l'accesso a un dipendente il posto si libera subito.",
-    "recommended": "Consigliato"
+    "recommended": "Consigliato",
+    "compare": {
+      "users": "Utenti Flow",
+      "seats": "Postazioni TimeTracker",
+      "clients": "Clienti",
+      "automations": "Automazioni",
+      "api": "Accesso API",
+      "reports": "Report",
+      "support": "Supporto",
+      "unlimited": "Senza limiti",
+      "yes": "Sì",
+      "no": "No",
+      "reports_basic": "Base",
+      "reports_operational": "Operativi",
+      "reports_advanced": "Avanzati",
+      "support_standard": "Standard",
+      "support_priority": "Prioritario",
+      "seats_up_to": "fino a {n}",
+      "seats_included_one": "1 compresa per 12 mesi",
+      "seats_included_many": "{n} comprese per 12 mesi"
+    },
+    "hero_price": "Flow da {flow}/mese, più {seat}/mese per ogni operatore. IVA esclusa.",
+    "addon_title": "Aggiungi gli operatori con TimeTracker",
+    "add_to_cart_btn": "Aggiungi al carrello",
+    "proof_title": "Il cliente può verificare che il report sia intatto",
+    "proof_body": "Ogni intervento diventa un rapportino con orari, posizione e foto. Il cliente può controllare da solo che non sia stato modificato, gratis e senza account.",
+    "faq_title": "Domande frequenti",
+    "proof_link": "Come il cliente verifica il report"
   },
   "contact": {
     "title": "Parliamo del tuo <span class=\"text-primary\">lavoro</span>.",

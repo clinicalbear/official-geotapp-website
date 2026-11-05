@@ -413,9 +413,9 @@
       }
     },
     "calculator": {
-      "title": "Calculateur de licences TimeTracker",
-      "subtitle": "Estimez votre investissement annuel en main-d'œuvre.",
-      "active_users": "Utilisateurs actifs",
+      "title": "Ce que vous payez pour vos opérateurs",
+      "subtitle": "Déplacez le curseur jusqu'à votre nombre d'opérateurs et voyez le total annuel.",
+      "active_users": "Opérateurs",
       "discount_threshold": "Seuil de remise",
       "cost_per_user": "Coût moyen par utilisateur",
       "per_month": "/mois",
@@ -427,7 +427,14 @@
       "enterprise_desc": "Au-delà de 150 postes, le prix se convient ensemble : écrivez-nous et nous vous envoyons un devis.",
       "request_quote": "Demander un devis",
       "add_to_cart": "Ajouter les postes au panier",
-      "secure_payment": "Paiement sécurisé via Stripe. TVA calculée au moment du paiement."
+      "secure_payment": "Paiement sécurisé via Stripe. TVA calculée au moment du paiement.",
+      "seats_valuetext": "{n} opérateurs",
+      "seats_valuetext_over": "Plus de {n} opérateurs",
+      "seats_valuetext_one": "1 opérateur",
+      "fit_title": "Avec {n} opérateurs, {plan} suffit",
+      "fit_title_one": "Avec 1 opérateur, {plan} suffit",
+      "fit_promo": "Inclus dans l'offre",
+      "fit_total_promo": "Total première année (+ TVA)"
     },
     "simulator": {
       "section_title": "Calculez votre devis",
@@ -496,7 +503,8 @@
         "team": "Postes TimeTracker activables : 15, dont 1 inclus dans le prix*",
         "business": "Postes TimeTracker activables : illimités, dont 5 inclus dans le prix*"
       },
-      "footnote": "* Avec l'offre de fin 2026, pendant les 12 premiers mois, la formule inclut 1 poste TimeTracker (Solo et Team) ou 5 (Business) dans le prix et relève le nombre de postes actifs en même temps (Solo 5, Team 15). Les postes au-delà de ceux inclus s'achètent séparément. Retirer l'accès d'un salarié libère le poste immédiatement."
+      "footnote": "* Avec l'offre de fin 2026, pendant les 12 premiers mois, la formule inclut 1 poste TimeTracker (Solo et Team) ou 5 (Business) dans le prix et relève le nombre de postes actifs en même temps (Solo 5, Team 15). Les postes au-delà de ceux inclus s'achètent séparément. Retirer l'accès d'un salarié libère le poste immédiatement.",
+      "banner_short": "Offre fin 2026 : abonnez-vous au plus tard le 18 décembre 2026 et profitez de postes TimeTracker inclus pendant 12 mois, avec la possibilité d'en activer davantage."
     },
     "tracker_footnote": "* Les postes TimeTracker s'achètent séparément. Le plan Flow fixe combien peuvent être actifs en même temps, pas combien sont inclus. Supprimer l'accès d'un employé libère la place immédiatement.",
     "per_year": "/an",
@@ -507,7 +515,34 @@
     "annual_savings": "Économie annuelle :",
     "no_monthly_option": "Pas d'option mensuelle",
     "add_btn": "Ajouter",
-    "recommended": "Recommandé"
+    "recommended": "Recommandé",
+    "compare": {
+      "users": "Utilisateurs Flow",
+      "seats": "Postes TimeTracker",
+      "clients": "Clients",
+      "automations": "Automatisations",
+      "api": "Accès API",
+      "reports": "Rapports",
+      "support": "Support",
+      "unlimited": "Sans limite",
+      "yes": "Oui",
+      "no": "Non",
+      "reports_basic": "De base",
+      "reports_operational": "Opérationnels",
+      "reports_advanced": "Avancés",
+      "support_standard": "Standard",
+      "support_priority": "Prioritaire",
+      "seats_up_to": "jusqu'à {n}",
+      "seats_included_one": "1 inclus pendant 12 mois",
+      "seats_included_many": "{n} inclus pendant 12 mois"
+    },
+    "hero_price": "Flow à partir de {flow}/mois, plus {seat}/mois par opérateur. Hors TVA.",
+    "addon_title": "Ajoutez vos opérateurs avec TimeTracker",
+    "add_to_cart_btn": "Ajouter au panier",
+    "proof_title": "Votre client peut vérifier que le rapport est intact",
+    "proof_body": "Chaque intervention devient un rapport avec les horaires, la position et les photos. Votre client peut vérifier lui-même que le rapport n'a pas été modifié, gratuitement et sans compte.",
+    "faq_title": "Questions fréquentes",
+    "proof_link": "Comment votre client vérifie le rapport"
   },
   "contact": {
     "title": "Parlons de votre <span class=\"text-primary\">travail</span>.",

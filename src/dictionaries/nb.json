@@ -413,9 +413,9 @@
       }
     },
     "calculator": {
-      "title": "TimeTracker lisensgenerator",
-      "subtitle": "Estimer din årlige arbeidsstyrkeinvestering.",
-      "active_users": "Aktive brukere",
+      "title": "Hva du betaler for medarbeiderne dine",
+      "subtitle": "Sett glidebryteren på antall medarbeidere, og se årsprisen.",
+      "active_users": "Medarbeidere",
       "discount_threshold": "Rabattgrense",
       "cost_per_user": "Gjennomsnittlig kostnad per bruker",
       "per_month": "/md",
@@ -427,7 +427,14 @@
       "enterprise_desc": "Over 150 plasser avtales prisen: skriv til oss, så sender vi et tilbud.",
       "request_quote": "Be om tilbud",
       "add_to_cart": "Legg plassene i handlekurven",
-      "secure_payment": "Sikker betaling via Stripe. Mva beregnes ved kassen."
+      "secure_payment": "Sikker betaling via Stripe. Mva beregnes ved kassen.",
+      "seats_valuetext": "{n} medarbeidere",
+      "seats_valuetext_over": "Over {n} medarbeidere",
+      "seats_valuetext_one": "1 medarbeider",
+      "fit_title": "Med {n} medarbeidere holder {plan}",
+      "fit_title_one": "Med 1 medarbeider holder {plan}",
+      "fit_promo": "Inkludert i tilbudet",
+      "fit_total_promo": "Totalt første år (eks. mva.)"
     },
     "simulator": {
       "section_title": "Beregn ditt tilbud",
@@ -496,7 +503,8 @@
         "team": "TimeTracker-plasser som kan aktiveres: 15, hvorav 1 inkludert i prisen*",
         "business": "TimeTracker-plasser som kan aktiveres: ubegrenset, hvorav 5 inkludert i prisen*"
       },
-      "footnote": "* Med årsslutttilbudet 2026 følger det de første 12 månedene med 1 plass (Solo og Team) eller 5 plasser (Business) i prisen, og flere plasser kan være aktive samtidig (Solo 5, Team 15). TimeTracker-plasser utover de inkluderte kjøpes separat. Fjerner du en ansatts tilgang, blir plassen ledig med en gang."
+      "footnote": "* Med årsslutttilbudet 2026 følger det de første 12 månedene med 1 plass (Solo og Team) eller 5 plasser (Business) i prisen, og flere plasser kan være aktive samtidig (Solo 5, Team 15). TimeTracker-plasser utover de inkluderte kjøpes separat. Fjerner du en ansatts tilgang, blir plassen ledig med en gang.",
+      "banner_short": "Årsslutttilbud 2026: Tegn abonnement innen 18. desember 2026, så er TimeTracker-plasser inkludert i 12 måneder, og du kan aktivere flere."
     },
     "tracker_footnote": "* TimeTracker-plasser kjøpes separat. Flow-planen bestemmer hvor mange som kan være aktive samtidig, ikke hvor mange som er inkludert. Å fjerne tilgang for en ansatt frigjør plassen umiddelbart.",
     "per_year": "/år",
@@ -507,7 +515,34 @@
     "annual_savings": "Årlig besparelse:",
     "no_monthly_option": "Ingen månedlig mulighet",
     "add_btn": "Legg til",
-    "recommended": "Anbefalt"
+    "recommended": "Anbefalt",
+    "compare": {
+      "users": "Flow-brukere",
+      "seats": "TimeTracker-plasser",
+      "clients": "Kunder",
+      "automations": "Automatiseringer",
+      "api": "API-tilgang",
+      "reports": "Rapporter",
+      "support": "Support",
+      "unlimited": "Ubegrenset",
+      "yes": "Ja",
+      "no": "Nei",
+      "reports_basic": "Grunnleggende",
+      "reports_operational": "Operative",
+      "reports_advanced": "Avanserte",
+      "support_standard": "Standard",
+      "support_priority": "Prioritert",
+      "seats_up_to": "opptil {n}",
+      "seats_included_one": "1 inkludert i 12 måneder",
+      "seats_included_many": "{n} inkludert i 12 måneder"
+    },
+    "hero_price": "Flow fra {flow}/måned, pluss {seat}/måned per medarbeider. Eks. mva.",
+    "addon_title": "Legg til medarbeiderne dine i TimeTracker",
+    "add_to_cart_btn": "Legg i handlekurven",
+    "proof_title": "Kunden din kan selv sjekke at rapporten er uendret",
+    "proof_body": "Hvert oppdrag blir en rapport med tider, posisjon og bilder. Kunden din kan selv sjekke at den ikke er endret, gratis og uten konto.",
+    "faq_title": "Vanlige spørsmål",
+    "proof_link": "Slik sjekker kunden din rapporten"
   },
   "contact": {
     "title": "La oss snakke om <span class=\"text-primary\">arbeidet</span> ditt.",

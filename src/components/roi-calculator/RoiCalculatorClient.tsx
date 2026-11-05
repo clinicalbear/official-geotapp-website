@@ -117,7 +117,7 @@ function SliderField({
   return (
     <div className={dark ? 'fld' : 'space-y-2'}>
       <div className="flex justify-between items-center">
-        <label className={dark ? '' : 'text-sm font-medium text-gray-700'}>{label}</label>
+        <label className={dark ? '' : 'text-sm font-medium text-gray-700'} style={dark ? { color: '#f7f9fc' } : undefined}>{label}</label>
         <span
           className={dark ? '' : 'text-sm font-bold text-blue-600'}
           style={dark ? { color: 'var(--lime)', fontWeight: 600, fontSize: 14 } : undefined}

@@ -413,9 +413,9 @@
       }
     },
     "calculator": {
-      "title": "Calculator voor TimeTracker-licenties",
-      "subtitle": "Schat uw jaarlijkse investering in uw personeel.",
-      "active_users": "Actieve medewerkers",
+      "title": "Wat u betaalt voor uw medewerkers",
+      "subtitle": "Zet de schuifregelaar op uw aantal medewerkers en bekijk het jaartotaal.",
+      "active_users": "Medewerkers",
       "discount_threshold": "Kortingsdrempel",
       "cost_per_user": "Gemiddelde kosten per gebruiker",
       "per_month": "/maand",
@@ -427,7 +427,14 @@
       "enterprise_desc": "Boven de 150 plaatsen spreken we de prijs af: schrijf ons en we sturen u een offerte.",
       "request_quote": "Offerte aanvragen",
       "add_to_cart": "Voeg de plaatsen toe aan de winkelwagen",
-      "secure_payment": "Veilige betaling via Stripe. Btw wordt berekend bij het afrekenen."
+      "secure_payment": "Veilige betaling via Stripe. Btw wordt berekend bij het afrekenen.",
+      "seats_valuetext": "{n} medewerkers",
+      "seats_valuetext_over": "Meer dan {n} medewerkers",
+      "seats_valuetext_one": "1 medewerker",
+      "fit_title": "Met {n} medewerkers volstaat {plan}",
+      "fit_title_one": "Met 1 medewerker volstaat {plan}",
+      "fit_promo": "Inbegrepen in de actie",
+      "fit_total_promo": "Totaal eerste jaar (excl. btw)"
     },
     "simulator": {
       "section_title": "Bereken uw offerte",
@@ -496,7 +503,8 @@
         "team": "Activeerbare TimeTracker-plaatsen: 15, waarvan 1 inbegrepen in de prijs*",
         "business": "Activeerbare TimeTracker-plaatsen: onbeperkt, waarvan 5 inbegrepen in de prijs*"
       },
-      "footnote": "* Met de eindejaarsactie 2026 zijn de eerste 12 maanden 1 plaats (Solo en Team) of 5 plaatsen (Business) in de prijs inbegrepen en mogen er meer plaatsen tegelijk actief zijn (Solo 5, Team 15). TimeTracker-plaatsen boven de inbegrepen plaatsen worden apart aangeschaft. Trekt u de toegang van een medewerker in, dan komt de plaats direct vrij."
+      "footnote": "* Met de eindejaarsactie 2026 zijn de eerste 12 maanden 1 plaats (Solo en Team) of 5 plaatsen (Business) in de prijs inbegrepen en mogen er meer plaatsen tegelijk actief zijn (Solo 5, Team 15). TimeTracker-plaatsen boven de inbegrepen plaatsen worden apart aangeschaft. Trekt u de toegang van een medewerker in, dan komt de plaats direct vrij.",
+      "banner_short": "Eindejaarsactie 2026: neemt u uiterlijk 18 december 2026 een abonnement, dan zijn TimeTracker-plaatsen 12 maanden inbegrepen en kunt u er meer activeren."
     },
     "per_year": "/jaar",
     "title_gradient": "Gebruikers op kantoor en een plaats voor elke medewerker in het veld.",
@@ -507,7 +515,34 @@
     "no_monthly_option": "Geen maandelijkse optie",
     "add_btn": "Toevoegen",
     "tracker_footnote": "* TimeTracker-plaatsen worden apart aangeschaft. Het Flow-plan bepaalt hoeveel er tegelijk actief kunnen zijn, niet hoeveel er inbegrepen zijn. Het verwijderen van toegang voor een medewerker maakt de plek direct vrij.",
-    "recommended": "Aanbevolen"
+    "recommended": "Aanbevolen",
+    "compare": {
+      "users": "Flow-gebruikers",
+      "seats": "TimeTracker-plaatsen",
+      "clients": "Klanten",
+      "automations": "Automatiseringen",
+      "api": "API-toegang",
+      "reports": "Rapporten",
+      "support": "Support",
+      "unlimited": "Onbeperkt",
+      "yes": "Ja",
+      "no": "Nee",
+      "reports_basic": "Basis",
+      "reports_operational": "Operationeel",
+      "reports_advanced": "Geavanceerd",
+      "support_standard": "Standaard",
+      "support_priority": "Prioriteit",
+      "seats_up_to": "tot {n}",
+      "seats_included_one": "1 inbegrepen voor 12 maanden",
+      "seats_included_many": "{n} inbegrepen voor 12 maanden"
+    },
+    "hero_price": "Flow vanaf {flow}/maand, plus {seat}/maand per buitendienstmedewerker. Excl. btw.",
+    "addon_title": "Voeg uw buitendienstmedewerkers toe met TimeTracker",
+    "add_to_cart_btn": "In winkelwagen",
+    "proof_title": "Uw klant kan controleren dat de werkbon ongewijzigd is",
+    "proof_body": "Elke klus wordt een werkbon met tijden, locatie en foto's. Uw klant kan zelf controleren dat de werkbon niet is gewijzigd, gratis en zonder account.",
+    "faq_title": "Veelgestelde vragen",
+    "proof_link": "Zo controleert uw klant de werkbon"
   },
   "contact": {
     "title": "Laten we praten over uw <span class=\"text-primary\">werk</span>.",

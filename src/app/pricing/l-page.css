@@ -6,23 +6,20 @@
    mockup (2 colonne, poi 1) cosi' da non spingere le card sotto una larghezza
    leggibile. Le regole di base (.plans, .plan, .calc, .box...) restano quelle
    globali di src/app/l-mockup.css: qui solo lo scarto dovuto alla quarta card. */
-.lp-prezzi .plans {
-  grid-template-columns: repeat(4, 1fr);
+.lp-prezzi {
+  --muted: #475467;
+  --line: rgba(11, 23, 54, .1);
+  --line-strong: rgba(11, 23, 54, .16);
 }
-@media (max-width: 1200px) {
-  .lp-prezzi .plans {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.lp-prezzi .plans {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 @media (max-width: 1000px) {
   .lp-prezzi .plans {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
-/* Serve da ancora di posizionamento al badge "Best Value" (oggi mai attivo,
-   nessun prodotto lo imposta, ma la classe resta agganciata e deve restare
-   funzionante se un domani viene attivato). */
 .lp-prezzi .plan {
   position: relative;
 }
@@ -45,10 +42,101 @@
   opacity: 1;
 }
 
-/* Il calcolatore (.calc) e' gia' scoperto in l-mockup.css per il solo mobile
-   (grid-template-columns:1fr). Qui restiamo dentro .sec.ink: nessuna aggiunta
-   necessaria, la card e' quella globale. */
+/* Promo fine 2026: badge sulle card Flow e riga sotto il titolo. Testo scuro sul
+   verde: il bianco si fermava a 2.6:1. */
+.lp-prezzi .plan-promo{display:inline-block;align-self:flex-start;margin-bottom:.75rem;padding:.25rem .625rem;border-radius:999px;background:var(--seal);color:var(--ink);font-size:.75rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase}
+.lp-prezzi .promo-banner{margin-top:1rem;max-width:62ch;padding:.75rem .875rem;background:rgba(34,181,115,.14);border-radius:6px;font-size:1rem;line-height:1.5;color:var(--paper)}
 
-/* Promo fine 2026: badge sulle card Flow e riga sotto il titolo. */
-.lp-prezzi .plan-promo{display:inline-block;align-self:flex-start;margin-bottom:10px;padding:4px 10px;border-radius:999px;background:#22B573;color:#fff;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
-.lp-prezzi .promo-banner{margin-top:14px;max-width:62ch;padding:10px 14px;border-left:4px solid #22B573;background:rgba(34,181,115,.08);border-radius:6px;font-size:15px;line-height:1.5}
+/* Il titolo occupava da solo tutto il primo schermo. */
+.lp-prezzi .ph h1{font-size:clamp(2.125rem,1.4rem + 3vw,4rem);max-width:24ch}
+.lp-prezzi .ph .lede{font-size:1.125rem;margin-top:1.25rem}
+.lp-prezzi .hero-price{margin-top:.875rem;max-width:60ch;font-size:1.25rem;font-weight:600;line-height:1.4;color:var(--paper)}
+
+.lp-prezzi .plans-title{max-width:none;font:inherit;font-size:.8125rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.lp-prezzi .plan .tag{margin-bottom:.75rem;font-size:.75rem}
+.lp-prezzi .plan h3{font-size:1.625rem}
+.lp-prezzi .plan .desc{font-size:1rem;min-height:calc(3 * 1.6em)}
+.lp-prezzi .plan-price{margin:.25rem 0 1.25rem}
+.lp-prezzi .plan-price .big,.lp-prezzi .addon .big{font-size:1.875rem}
+.lp-prezzi .plan-unit{font-size:.8125rem;font-weight:500;color:var(--muted)}
+.lp-prezzi .plan-vat{display:block;margin-top:.125rem}
+.lp-prezzi .plan-monthly{margin-top:.5rem;font-size:.9375rem}
+.lp-prezzi .plan-save{display:block;margin-top:.25rem;color:var(--seal-testo)}
+
+/* Le stesse righe su ogni piano, per confrontarli a colpo d'occhio. */
+.lp-prezzi .plan-rows{flex:1;margin:0 0 1.875rem}
+.lp-prezzi .plan-rows>div{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.125rem 1rem;padding:.625rem 0;border-bottom:1px solid var(--line);font-size:.9375rem;line-height:1.35}
+.lp-prezzi .plan-rows dt{color:var(--muted)}
+.lp-prezzi .plan-rows dt,.lp-prezzi .plan-rows dd{min-width:0;overflow-wrap:anywhere}
+.lp-prezzi .plan-rows dd{margin:0 0 0 auto;font-weight:600;text-align:right}
+.lp-prezzi .plan-rows dd::first-letter{text-transform:uppercase}
+.lp-prezzi .plan-rows dd small{display:block;margin-top:.125rem;font-size:.8125rem;font-weight:400;color:var(--muted)}
+.lp-prezzi .plan-rows dd small::first-letter{text-transform:uppercase}
+
+.lp-prezzi .plan-rec{outline:2px solid var(--seal);outline-offset:-2px;z-index:1}
+.lp-prezzi .plan-rec-badge{position:absolute;top:.875rem;right:.875rem;padding:.1875rem .625rem;border-radius:999px;background:var(--ink);color:var(--paper);font-size:.75rem;font-weight:600}
+
+.lp-prezzi .plan .plan-add{min-height:2.875rem;margin-top:.5rem;padding:0;border-bottom:0;font-size:.9375rem;font-weight:500;text-decoration:underline;text-underline-offset:.2em;opacity:1}
+.lp-prezzi .acts .b2{display:inline-flex;align-items:center;min-height:2.75rem}
+
+.lp-prezzi .plans-trial{margin-top:1.5rem;font-size:1.25rem;font-weight:700;text-align:center}
+
+.lp-prezzi .addon{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,.9fr);gap:2rem;align-items:start;margin-top:1.5rem;padding:1.75rem 2rem;border:1px solid var(--line-strong);background:var(--paper)}
+.lp-prezzi .addon-logo{display:block;width:auto;height:3.5rem;margin-bottom:.75rem}
+.lp-prezzi .addon h3{font-size:1.375rem;margin-bottom:.5rem}
+.lp-prezzi .addon .desc{font-size:1rem;color:var(--muted)}
+.lp-prezzi .addon-list{padding-top:.25rem}
+.lp-prezzi .addon-list li{padding:.5rem 0;border-bottom:1px solid var(--line);font-size:.9375rem}
+.lp-prezzi .addon-price .tag{margin-bottom:.5rem;color:var(--seal-testo);font-size:.75rem}
+.lp-prezzi .addon-price .b1{display:inline-flex;margin-top:1rem}
+@media (max-width:1000px){.lp-prezzi .addon{grid-template-columns:minmax(0,1fr);gap:1.25rem;padding:1.5rem}}
+
+.lp-prezzi .vat{font-size:.875rem;max-width:68ch}
+.lp-prezzi p{text-wrap:pretty}
+
+/* Calcolatore */
+.lp-prezzi .calc{grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr)}
+.lp-prezzi .calc>*{min-width:0}
+.lp-prezzi .calc h2{font-size:clamp(1.875rem,1.2rem + 2.6vw,3.5rem)}
+.lp-prezzi .calc-sub{margin-top:1.125rem;max-width:46ch;color:rgba(247,249,252,.78)}
+.lp-prezzi .calc-note{margin-top:1.375rem;font-size:.875rem;color:rgba(247,249,252,.78)}
+.lp-prezzi .calc-unit{font-family:var(--font-sans,Inter),sans-serif;font-size:.875rem;font-weight:400}
+.lp-prezzi .calc .ends{position:relative;display:block;height:1.25rem;margin-top:.875rem;font-size:.8125rem;letter-spacing:.06em}
+.lp-prezzi .calc .ends span{position:absolute;top:0;white-space:nowrap}
+.lp-prezzi .calc .fit{margin-bottom:.5rem;font-size:1.25rem;font-weight:700;line-height:1.3;color:var(--ink)}
+.lp-prezzi .calc .box .row b{font-size:1.25rem}
+.lp-prezzi .calc .box .row small{display:block;margin-top:.125rem;font-size:.8125rem}
+.lp-prezzi .calc .box .row .rate{padding:0}
+.lp-prezzi .calc .box .row.tot b{font-size:clamp(2rem,1.3rem + 2.6vw,3.25rem)}
+.lp-prezzi .calc .tiers span{display:block;opacity:1;font-size:.8125rem}
+.lp-prezzi .calc .box .b1{display:block}
+.lp-prezzi .calc .box .tot{flex-wrap:wrap;gap:.25rem 1rem}
+.lp-prezzi .calc .box .tot b{line-height:1.1;overflow-wrap:anywhere}
+.lp-prezzi .calc .box .row{flex-wrap:wrap}
+.lp-prezzi .calc .calc-add{display:block;width:100%;min-height:2.75rem;margin-top:.5rem;background:none;border:0;color:var(--ink);font:inherit;font-size:.9375rem;font-weight:500;text-decoration:underline;text-underline-offset:.2em;cursor:pointer}
+@media (max-width:1000px){.lp-prezzi .calc{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:420px){
+  .lp-prezzi .calc .tiers{flex-direction:column}
+  .lp-prezzi .calc .tiers div{border-right:0;border-bottom:1px solid rgba(247,249,252,.2)}
+  .lp-prezzi .calc .tiers div:last-child{border-bottom:0}
+  .lp-prezzi .calc .box{padding:1.75rem 1.25rem}
+}
+
+/* Il report: e' quello che si compra, e fin qui la pagina non lo mostrava. */
+.lp-prezzi .proof{padding-bottom:0}
+.lp-prezzi .proof-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:3rem;align-items:center}
+.lp-prezzi .proof-img{display:block;width:100%;height:26rem;object-fit:cover;object-position:top;border:1px solid var(--line-strong);border-radius:8px;box-shadow:0 12px 40px rgba(11,23,54,.12)}
+@media (max-width:760px){.lp-prezzi .proof-grid{grid-template-columns:minmax(0,1fr);gap:1.75rem}.lp-prezzi .proof-img{height:20rem}}
+.lp-prezzi .proof h2,.lp-prezzi .faq-sec h2{font-size:clamp(1.75rem,1.2rem + 2vw,3rem)}
+.lp-prezzi .proof-body{margin:.875rem 0 1rem;max-width:62ch;font-size:1.125rem;color:var(--muted)}
+.lp-prezzi .proof .b2{display:inline-flex;align-items:center;min-height:2.75rem}
+
+.lp-prezzi .faq-list{columns:2;column-gap:3rem;margin-top:1.75rem}
+.lp-prezzi .faq-item{break-inside:avoid;padding-bottom:1.75rem}
+.lp-prezzi .faq-item h3{font-size:1.125rem;margin-bottom:.375rem}
+.lp-prezzi .faq-item p{font-size:1rem;color:var(--muted);max-width:60ch}
+@media (max-width:760px){.lp-prezzi .faq-list{columns:1}}
+
+/* La frase piu' forte della pagina stava su una foto quasi invisibile. */
+.lp-prezzi .end img.bg{filter:brightness(.5)}
+.lp-prezzi .end .ov{background:linear-gradient(180deg,rgba(11,23,54,.5),rgba(11,23,54,.85))}

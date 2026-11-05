@@ -37,6 +37,7 @@ export default function FeaturesPage() {
       <section className="ph">
         <div className="w">
           <h1>{t.title}</h1>
+          <h2 className="sr-only">{t.title}</h2>
           <p className="lede">{t.subtitle}</p>
           <div className="acts">
             <Link className="b1" href={getLink('/trial')}>{nav.cta}</Link>

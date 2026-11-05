@@ -74,6 +74,10 @@ export default function SurveyInvite() {
       if (arrivatoDallaStampa()) return;
       // Il banner cookie chiede una scelta obbligata: aspettiamo che sia fatta.
       if (!localStorage.getItem(CONSENT_KEY)) return;
+      // Mai sopra la testata: sul telefono copriva il pulsante principale della pagina.
+      // Sulle pagine troppo corte per scorrere si mostra lo stesso.
+      const scorribile = document.documentElement.scrollHeight > window.innerHeight * 1.6;
+      if (scorribile && window.scrollY < window.innerHeight * 0.8) return;
       shown = true;
       sessionStorage.setItem(VISIT_KEY, '1'); // un solo modale in questa visita
       localStorage.setItem(SHARED_KEY, '1'); // la newsletter cede la precedenza
@@ -143,7 +147,7 @@ export default function SurveyInvite() {
             style={{ filter: 'brightness(0) invert(1)', height: '36px', width: 'auto' }} />
           <button onClick={dismiss} aria-label={(() => { const l = (document.documentElement.lang || '').toLowerCase(); return l.startsWith('fr') ? 'Fermer' : l.startsWith('es') ? 'Cerrar' : l.startsWith('pt') ? 'Fechar' : l.startsWith('da') ? 'Luk' : l.startsWith('sv') ? 'Stäng' : l.startsWith('nb') || l.startsWith('no') ? 'Lukk' : l.startsWith('ru') ? 'Закрыть' : 'Close'; })()} style={{
             background: 'rgba(247,249,252,0.25)', border: 'none', borderRadius: '50%',
-            width: 30, height: 30, display: 'flex', alignItems: 'center', justifyContent: 'center',
+            width: 44, height: 44, display: 'flex', alignItems: 'center', justifyContent: 'center',
             color: '#fff', fontSize: 18, cursor: 'pointer', lineHeight: 1,
           }}>×</button>
         </div>

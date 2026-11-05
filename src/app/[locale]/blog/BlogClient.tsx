@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef } from 'react';
 import Link from 'next/link';
 import MapBackground from '@/components/blog/MapBackground';
 import LNastro from '@/components/LNastro';
@@ -365,11 +365,43 @@ function nomeCategoria(nome: string, locale: string): string {
   return britishToVariant(alias ?? pulito, locale);
 }
 
+const FILTRI_PRINCIPALI = 6;
+
+const PAROLE_ELENCO: Record<string, { altri: string; prima: string; dopo: string }> = {
+  it: { altri: 'Altri', prima: 'Pagina precedente', dopo: 'Pagina successiva' },
+  en: { altri: 'More', prima: 'Previous page', dopo: 'Next page' },
+  de: { altri: 'Weitere', prima: 'Vorherige Seite', dopo: 'Nächste Seite' },
+  fr: { altri: 'Autres', prima: 'Page précédente', dopo: 'Page suivante' },
+  es: { altri: 'Otros', prima: 'Página anterior', dopo: 'Página siguiente' },
+  pt: { altri: 'Outros', prima: 'Página anterior', dopo: 'Página seguinte' },
+  nl: { altri: 'Meer', prima: 'Vorige pagina', dopo: 'Volgende pagina' },
+  da: { altri: 'Flere', prima: 'Forrige side', dopo: 'Næste side' },
+  sv: { altri: 'Fler', prima: 'Föregående sida', dopo: 'Nästa sida' },
+  nb: { altri: 'Flere', prima: 'Forrige side', dopo: 'Neste side' },
+  ru: { altri: 'Ещё', prima: 'Предыдущая страница', dopo: 'Следующая страница' },
+};
+
+// Prima, ultima e le vicine a quella aperta: null e' il salto con i puntini.
+function numeriPagina(pagina: number, totale: number): Array<number | null> {
+  if (totale <= 7) return Array.from({ length: totale }, (_, i) => i);
+  const scelte = new Set([0, totale - 1, pagina - 1, pagina, pagina + 1]);
+  const ordinate = [...scelte].filter((n) => n >= 0 && n < totale).sort((a, b) => a - b);
+  const risultato: Array<number | null> = [];
+  ordinate.forEach((n, i) => {
+    if (i > 0 && n - ordinate[i - 1] > 1) risultato.push(null);
+    risultato.push(n);
+  });
+  return risultato;
+}
+
 export default function BlogClient({ locale, posts }: { locale: AppLocale; posts: Post[] }) {
   const dict = getDictionary(locale);
   const b = dict.blog;
   const [page, setPage] = useState(0);
   const [activeCat, setActiveCat] = useState<string>('all');
+  const [tuttiFiltri, setTuttiFiltri] = useState(false);
+  const elenco = useRef<HTMLDivElement>(null);
+  const paroleElenco = PAROLE_ELENCO[locale.split('-')[0]] ?? PAROLE_ELENCO.en;
 
   // Le categorie arrivano da WordPress, con doppioni («GeoTapp» due volte, «guide» e
   // «Guide Pratiche») e nomi che promettono troppo («certificata»). Qui si mostrano con
@@ -409,6 +441,16 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
   const featured = visible[0] ?? null;
   const rest = visible.slice(1);
 
+  // Si torna in cima all'elenco: i numeri stanno in fondo e la pagina nuova comincia sopra.
+  function vaiAPagina(i: number) {
+    setPage(i);
+    elenco.current?.scrollIntoView({ block: 'start', behavior: 'instant' });
+  }
+
+  // I filtri piu' usati restano in vista, gli altri sotto "Altri": erano fino a 22 pulsanti.
+  const filtriVisibili = tuttiFiltri ? categories : categories.slice(0, FILTRI_PRINCIPALI);
+  const altriFiltri = categories.length - FILTRI_PRINCIPALI;
+
   function handleCatClick(slug: string) {
     setActiveCat(slug);
     setPage(0);
@@ -440,7 +482,7 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
       </section>
 
       <section className="sec">
-        <div className="w">
+        <div className="w elenco-blog" ref={elenco}>
           {posts.length === 0 ? (
             <p>{b.no_posts}</p>
           ) : (
@@ -470,7 +512,7 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
                   <button className={activeCat === 'all' ? 'on' : ''} onClick={() => handleCatClick('all')}>
                     {b.cat_all}
                   </button>
-                  {categories.map((cat) => (
+                  {filtriVisibili.map((cat) => (
                     <button
                       key={cat.slug}
                       className={activeCat === cat.slug ? 'on' : ''}
@@ -479,6 +521,11 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
                       {cat.name}
                     </button>
                   ))}
+                  {altriFiltri > 0 && !tuttiFiltri && (
+                    <button onClick={() => setTuttiFiltri(true)}>
+                      {paroleElenco.altri} ({altriFiltri})
+                    </button>
+                  )}
                 </div>
               )}
 
@@ -503,13 +550,28 @@ export default function BlogClient({ locale, posts }: { locale: AppLocale; posts
               )}
 
               {totalPages > 1 && (
-                <div className="pag r">
-                  {Array.from({ length: totalPages }, (_, i) => (
-                    <button key={i} className={i === page ? 'on' : ''} onClick={() => setPage(i)}>
-                      {i + 1}
-                    </button>
-                  ))}
-                </div>
+                <nav className="pag">
+                  {page > 0 && (
+                    <button aria-label={paroleElenco.prima} onClick={() => vaiAPagina(page - 1)}>&larr;</button>
+                  )}
+                  {numeriPagina(page, totalPages).map((n, i) =>
+                    n === null ? (
+                      <span key={`gap-${i}`} aria-hidden="true">&hellip;</span>
+                    ) : (
+                      <button
+                        key={n}
+                        className={n === page ? 'on' : ''}
+                        aria-current={n === page ? 'page' : undefined}
+                        onClick={() => vaiAPagina(n)}
+                      >
+                        {n + 1}
+                      </button>
+                    ),
+                  )}
+                  {page < totalPages - 1 && (
+                    <button aria-label={paroleElenco.dopo} onClick={() => vaiAPagina(page + 1)}>&rarr;</button>
+                  )}
+                </nav>
               )}
             </>
           )}

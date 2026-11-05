@@ -32,6 +32,8 @@
   history.pushState = function (st, ti, url) { var before = location.pathname; push.apply(this, arguments); if (location.pathname !== before) location.reload(); };
   function langPicker() {
     var sel = document.querySelector('.nvr select'); if (!sel || sel.dataset.fxLang) return; sel.dataset.fxLang = '1';
+    // Il pulsante qui sotto lo sostituisce: il select nascosto non deve prendere il fuoco.
+    sel.tabIndex = -1; sel.setAttribute('aria-hidden', 'true');
     var lab = sel.closest('label') || sel.parentNode;
     var split = function (txt) { var m = txt.trim().match(/^(\S+)\s+(.*)$/); return m ? [m[1], m[2]] : ['', txt.trim()]; };
     var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'fx-lang-btn';
@@ -342,7 +344,7 @@
     /\b\d{1,2}\s(?:gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)(?:\s\d{4})?(?=[^.]{0,40}\b(?:entro|scadenz|termine))/i,   // "il 2 dicembre 2026 e' la data entro cui ..."
     /\b\d+(?:,\d+)?\s?%/];
   function articleLayout() {
-    if (!/^\/blog\/\d{4}\//.test(location.pathname)) return;
+    if (!/^\/blog\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?\d{4}\//.test(location.pathname)) return;   // anche /blog/de/2026/...: i tradotti restavano senza impaginazione
     // il testo di un articolo puo' essere diviso in piu' blocchi .article-content (fra uno e l'altro il sito mette altre schede):
     // tutto quello che segue vale per l'articolo intero, con i capitoli numerati di seguito
     var blocks = Array.prototype.slice.call(document.querySelectorAll('.article-content')); var ac = blocks[0];

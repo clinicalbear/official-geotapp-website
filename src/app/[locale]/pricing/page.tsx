@@ -312,7 +312,8 @@ async function generateMetadataBase({ params }: { params: Promise<{ locale: stri
 }
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
-import PricingPage from '../../pricing/page';
+import PricingContent from '../../pricing/PricingContent';
+import { getDictionary } from '@/lib/i18n/dictionaries';
 import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
 import { localizeEurPricesDeep } from '@/lib/pricing';
 
@@ -328,14 +329,38 @@ export default async function LocalePricingPage({ params }: { params: Promise<{ 
     ],
   };
   const pricingSchema = buildPricingSchema(locale as AppLocale);
+  const faqItems = ((faq as { mainEntity?: Array<{ name: string; acceptedAnswer: { text: string } }> } | undefined)?.mainEntity) ?? [];
+  const faqTitle = (getDictionary(locale as AppLocale).pricing as { faq_title?: string }).faq_title ?? '';
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ ...pricingSchema, name: PRICING_SCHEMA_NAME[locale] ?? PRICING_SCHEMA_NAME.en }) }} />
       {faq && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />}
-      <PricingPage />
-      <RegionalNote block={isRegionLocale(locale) ? regionalPageBlock('pricing', locale) : null} />
-      <UpdatedOnLine pageKey="pricing" locale={locale as AppLocale} />
+      {/* Le domande stanno anche nella pagina, non solo nei dati strutturati: sono i
+          dubbi di chi sta per decidere, e Google vuole che i dati marcati si vedano. */}
+      <PricingContent
+        beforeEnd={
+          <>
+            {faqItems.length > 0 && (
+              <section className="sec faq-sec">
+                <div className="w">
+                  <h2 className="r">{faqTitle}</h2>
+                  <div className="faq-list">
+                    {faqItems.map((q) => (
+                      <div key={q.name} className="faq-item">
+                        <h3>{q.name}</h3>
+                        <p>{q.acceptedAnswer.text}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </section>
+            )}
+            <RegionalNote block={isRegionLocale(locale) ? regionalPageBlock('pricing', locale) : null} />
+            <UpdatedOnLine pageKey="pricing" locale={locale as AppLocale} />
+          </>
+        }
+      />
     </>
   );
 }
