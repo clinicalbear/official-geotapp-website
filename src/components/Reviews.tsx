@@ -77,12 +77,6 @@ export default function Reviews({ locale }: { locale: string }) {
                   <p
                     lang={lang}
                     className="text-slate-700 text-base leading-relaxed italic"
-                    style={{
-                      display: '-webkit-box',
-                      WebkitLineClamp: 6,
-                      WebkitBoxOrient: 'vertical',
-                      overflow: 'hidden',
-                    }}
                   >
                     {`“${text.quote}”`}
                   </p>
@@ -95,7 +89,10 @@ export default function Reviews({ locale }: { locale: string }) {
                         {reviewerLine(r, locale).meta}
                       </div>
                     )}
-                    <div className="inline-flex items-center gap-2 mt-3 text-xs text-slate-600 group-hover:text-slate-900 transition">
+                    <div
+                      className="inline-flex items-center gap-2 mt-3 text-xs transition"
+                      style={{ background: '#F7F9FC', color: '#0B1736', borderRadius: 999, padding: '6px 12px' }}
+                    >
                       <Logo />
                       <ExternalLink size={12} />
                     </div>
@@ -125,8 +122,7 @@ export default function Reviews({ locale }: { locale: string }) {
             animation-play-state: paused;
           }
           .reviews-card {
-            width: 340px;
-            height: 340px;
+            width: min(380px, 82vw);
             flex-shrink: 0;
             margin-right: 2rem;
           }

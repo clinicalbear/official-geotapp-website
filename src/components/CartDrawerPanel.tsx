@@ -8,8 +8,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { getDictionary } from '@/lib/i18n/dictionaries';
-import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
+import { DEFAULT_LOCALE, getLocaleFromPathname } from '@/lib/i18n/locale-routing';
+import { promoFine2026Attiva } from '@/lib/promo-fine-2026';
+import { POSTAZIONI_PIANO, type PianoFlow } from '@/lib/piano-per-operatori';
 import {
+  calculateTrackerQuote,
   formatLocalAmount,
   getCurrencyForLocale,
   type CurrencyCode,
@@ -38,10 +41,36 @@ export default function CartDrawerPanel() {
 
   // Totals in display currency (sum of displayAmount). EUR totals also computed
   // for the checkout payload (backend authoritative).
-  const monthlyDisplay = items
+  // Promo: con un piano Flow nel carrello il CRM non fattura le postazioni comprese.
+  // Qui si mostra la stessa cifra che poi si paga.
+  const pianoInCarrello = items.find((i) => i.metadata?.product_key === 'GEOTAPP_FLOW')?.metadata?.license_type;
+  const comprese =
+    promoFine2026Attiva() && pianoInCarrello
+      ? POSTAZIONI_PIANO[String(pianoInCarrello).toLowerCase() as PianoFlow]?.compresePromo ?? 0
+      : 0;
+  const testoComprese = getDictionary(locale ?? DEFAULT_LOCALE).pricing.compare as Record<string, string>;
+  const righe = items.map((item) => {
+    const operatori = Number(item.metadata?.employeeCount);
+    if (item.metadata?.product_key !== 'GEOTAPP_APP' || !(operatori > 0) || comprese === 0) {
+      return { ...item, nota: '' };
+    }
+    const daPagare = Math.max(operatori - comprese, 0);
+    const conto = daPagare > 0 ? calculateTrackerQuote(daPagare, locale ?? DEFAULT_LOCALE) : null;
+    const nota = comprese === 1
+      ? testoComprese.seats_included_one
+      : testoComprese.seats_included_many.replace('{n}', String(Math.min(comprese, operatori)));
+    return {
+      ...item,
+      displayAmount: conto?.display.totalAnnual.amount ?? 0,
+      displayFormatted: conto?.display.totalAnnual.formatted ?? formatLocalAmount(0, cartCurrency, locale),
+      nota,
+    };
+  });
+
+  const monthlyDisplay = righe
     .filter((i) => i.period === 'mo')
     .reduce((acc, i) => acc + i.displayAmount, 0);
-  const yearlyDisplay = items
+  const yearlyDisplay = righe
     .filter((i) => i.period === 'year')
     .reduce((acc, i) => acc + i.displayAmount, 0);
 
@@ -171,7 +200,7 @@ export default function CartDrawerPanel() {
                   <p>{dict.empty}</p>
                 </div>
               ) : (
-                items.map((item) => (
+                righe.map((item) => (
                   <div
                     key={item.id}
                     className="bg-slate-50 p-4 rounded-xl border border-slate-200 flex gap-4"
@@ -190,6 +219,7 @@ export default function CartDrawerPanel() {
                       </div>
                       <div className="text-sm text-slate-500 mb-2">
                         {item.metadata?.details || dict.license_default}
+                        {item.nota && <span className="block mt-1 font-semibold text-[#126E36]">{item.nota}</span>}
                       </div>
                       <div className="flex items-end justify-between">
                         <div className="text-xs text-slate-400 font-bold uppercase tracking-wider">

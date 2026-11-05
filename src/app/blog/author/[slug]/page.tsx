@@ -4,7 +4,8 @@ import { cookies, headers } from 'next/headers';
 import Link from 'next/link';
 import { Linkedin, BadgeCheck, ExternalLink } from 'lucide-react';
 import { getDictionary } from '@/lib/i18n/dictionaries';
-import { SUPPORTED_LOCALES, DEFAULT_LOCALE, type AppLocale } from '@/lib/i18n/config';
+import type { AppLocale } from '@/lib/i18n/config';
+import { detectLocale } from '@/lib/i18n/detect-locale';
 import { sanitizeWpHtml } from '@/lib/sanitize-wp';
 import {
   findAuthorBySlug,
@@ -24,24 +25,6 @@ export const dynamic = 'force-dynamic';
 // del sito, lo stesso di /chi-siamo.
 const AUTHOR_PHOTO = '/michele-petraroli-closeup.webp';
 const ARTICLES_SHOWN = 24;
-
-function detectLocale(headerStore: Headers, cookieValue: string | undefined): AppLocale {
-  // 1. Cookie wins
-  if (cookieValue && (SUPPORTED_LOCALES as readonly string[]).includes(cookieValue)) {
-    return cookieValue as AppLocale;
-  }
-  // 2. Accept-Language header
-  const al = headerStore.get('accept-language') ?? '';
-  const candidates = al
-    .split(',')
-    .map((s) => s.trim().split(';')[0].toLowerCase());
-  for (const c of candidates) {
-    if ((SUPPORTED_LOCALES as readonly string[]).includes(c)) return c as AppLocale;
-    const base = c.split('-')[0];
-    if ((SUPPORTED_LOCALES as readonly string[]).includes(base)) return base as AppLocale;
-  }
-  return DEFAULT_LOCALE;
-}
 
 function stripHtml(s: string): string {
   return s

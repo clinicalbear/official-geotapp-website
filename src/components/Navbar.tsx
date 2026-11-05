@@ -8,6 +8,8 @@ import Image from 'next/image';
 import { useCart } from '@/store/cart';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { percorsoCanonico } from '@/lib/i18n/percorso-canonico';
+import type { AppLocale } from '@/lib/i18n/config';
 import {
   DEFAULT_LOCALE,
   getLocaleFromPathname,
@@ -34,7 +36,7 @@ function CartButton({ label }: { label: string }) {
  * qualsiasi fondo, con il marchio su un livello separato cosi' resta nei suoi
  * colori veri. Le tendine scendono come una fascia nera da sotto la barra.
  */
-export default function Navbar() {
+export default function Navbar({ localeFissa }: { localeFissa?: AppLocale } = {}) {
   const [open, setOpen] = useState<'' | 'products' | 'sectors'>('');
   // Le icone dei prodotti (iconaFlow da sola pesa 60 KB) si montano solo dopo la prima
   // apertura del menu: con il menu chiuso stavano comunque nello schermo, quindi il
@@ -44,17 +46,18 @@ export default function Navbar() {
   const [mobile, setMobile] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const pathname = usePathname();
-  const currentLocale = getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
+  const currentLocale = localeFissa ?? getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
   const dict = getDictionary(currentLocale).navbar;
 
   const getLink = (path: string) => localizePath(path, currentLocale);
 
   // Dynamic CTA based on current page (logica invariata dal sito attuale)
-  const isTrialPage = pathname.includes('/trial');
+  const percorso = percorsoCanonico(pathname);
+  const isTrialPage = /^\/trial(\/|$)/.test(percorso);
   const isBlogArticle = /\/blog\/.+/.test(pathname);
-  const isPricingPage = pathname.includes('/pricing') || pathname.includes('/prezzi') || pathname.includes('/preise') || pathname.includes('/priser') || pathname.includes('/tarifs') || pathname.includes('/precios') || pathname.includes('/tarieven');
-  const isSectorPage = pathname.includes('/settori');
-  const isHomepage = pathname === '/' || /^\/[a-z]{2}\/?$/.test(pathname);
+  const isPricingPage = /^\/pricing(\/|$)/.test(percorso);
+  const isSectorPage = /^\/settori(\/|$)/.test(percorso);
+  const isHomepage = percorso === '/';
 
   let ctaText = dict.cta_trial ?? dict.cta;
   let ctaHref = getLink('/trial');

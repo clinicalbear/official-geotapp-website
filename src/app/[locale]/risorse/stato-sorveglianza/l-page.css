@@ -84,7 +84,7 @@
 }
 .lp-stato .st-rlab { font-size: 0.9rem; min-width: 0; }
 .lp-stato .st-row-multa .st-rlab { display: flex; flex-direction: column; gap: 1px; }
-.lp-stato .st-paese { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.6; }
+.lp-stato .st-paese { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.6; }
 .lp-stato .st-row-multa .st-rlab a {
   color: inherit; text-decoration: underline; text-underline-offset: 2px;
   text-decoration-color: rgba(21, 128, 61, 0.6);

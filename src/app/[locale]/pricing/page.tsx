@@ -313,6 +313,7 @@ async function generateMetadataBase({ params }: { params: Promise<{ locale: stri
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 import PricingContent from '../../pricing/PricingContent';
+import { promoFine2026Attiva } from '@/lib/promo-fine-2026';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
 import { localizeEurPricesDeep } from '@/lib/pricing';
@@ -321,6 +322,17 @@ export default async function LocalePricingPage({ params }: { params: Promise<{ 
   const { locale } = await params;
   const pricingFaq = buildPricingFAQ(locale as AppLocale);
   const faq = pricingFaq[locale] ?? (locale.startsWith('en-') ? localizeEnglishDeep(localizeEurPricesDeep(pricingFaq['en'], locale), locale) : pricingFaq['en']);
+  // Durante la promo la domanda sui 5 operatori dice anche cosa e' compreso: il conto
+  // qui sopra da solo sembrava piu' alto di quello del calcolatore.
+  const notaPromo = promoFine2026Attiva()
+    ? String((getDictionary(locale as AppLocale).pricing as { promo_fine_2026?: { footnote?: string } }).promo_fine_2026?.footnote ?? '').replace(/^\*\s*/, '')
+    : '';
+  const domandeFaq = (faq as { mainEntity?: Array<{ name: string; acceptedAnswer: { text: string } }> } | undefined)?.mainEntity;
+  domandeFaq?.forEach((q) => {
+    if (notaPromo && /\b5\b/.test(q.name) && !q.acceptedAnswer.text.includes(notaPromo)) {
+      q.acceptedAnswer.text = `${q.acceptedAnswer.text} ${notaPromo}`;
+    }
+  });
   const breadcrumb = PRICING_BREADCRUMB[locale] ?? {
     '@context': 'https://schema.org', '@type': 'BreadcrumbList',
     itemListElement: [
@@ -339,6 +351,7 @@ export default async function LocalePricingPage({ params }: { params: Promise<{ 
       {/* Le domande stanno anche nella pagina, non solo nei dati strutturati: sono i
           dubbi di chi sta per decidere, e Google vuole che i dati marcati si vedano. */}
       <PricingContent
+        promoIniziale={promoFine2026Attiva()}
         beforeEnd={
           <>
             {faqItems.length > 0 && (

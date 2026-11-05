@@ -223,3 +223,5 @@
   .lp-articolo .art .body .article-content td { min-width: 112px; padding: 9px 10px; font-size: 14px; overflow-wrap: normal; hyphens: manual; }
 }
 @media (max-width: 1000px) { .lp-articolo .art .body .py-16 { padding-top: 0; padding-bottom: 24px; } }
+/* L'invito scritto dentro il testo su WordPress si aggiunge a quello di meta' articolo. */
+.lp-articolo .art .body .article-content .article-cta:has(a[href*="/trial"]) { display: none; }

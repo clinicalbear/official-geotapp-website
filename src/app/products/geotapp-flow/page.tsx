@@ -789,7 +789,7 @@ export default function GeoTappApp() {
                   <span className="nn">{String(i + 1).padStart(2, '0')}</span>
                   <h3>{sys.systemName}</h3>
                   <p>{sys.shortDescription}</p>
-                  <span className="k" style={{ display: 'inline-block', marginTop: 12, fontSize: 11, color: '#15803D' }}>
+                  <span className="k" style={{ display: 'inline-block', marginTop: 12, fontSize: 12, color: '#15803D' }}>
                     {(flowDict as { label_open?: string }).label_open ?? 'Learn more'} &rarr;
                   </span>
                 </article>

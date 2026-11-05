@@ -443,7 +443,7 @@ a:hover {
 
 /* ===== BLOG — READING TIME BADGE ===== */
 .card-reading-time {
-  font-size: 0.72rem;
+  font-size: 0.8125rem;
   color: #94a3b8;
   display: inline-flex;
   align-items: center;

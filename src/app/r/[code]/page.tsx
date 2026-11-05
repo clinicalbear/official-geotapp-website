@@ -600,19 +600,19 @@ export default async function PaginaCodice({
 
       <dl className="mt-6 grid gap-4 sm:grid-cols-3">
         <div>
-          <dt className="text-[11px] uppercase tracking-wider text-[#667085]">
+          <dt className="text-[12px] uppercase tracking-wider text-[#667085]">
             {t.issuedBy}
           </dt>
           <dd className="mt-1">{esito.aziendaNome || '—'}</dd>
         </div>
         <div>
-          <dt className="text-[11px] uppercase tracking-wider text-[#667085]">
+          <dt className="text-[12px] uppercase tracking-wider text-[#667085]">
             {t.job}
           </dt>
           <dd className="mt-1">{esito.commessa || '—'}</dd>
         </div>
         <div>
-          <dt className="text-[11px] uppercase tracking-wider text-[#667085]">
+          <dt className="text-[12px] uppercase tracking-wider text-[#667085]">
             {t.sealedOn}
           </dt>
           <dd className="mt-1">{data ?? '—'}</dd>
@@ -639,7 +639,7 @@ export default async function PaginaCodice({
             </a>
           </p>
         ) : null}
-        <p className="mt-4 text-[11px] uppercase tracking-wider text-[#667085]">
+        <p className="mt-4 text-[12px] uppercase tracking-wider text-[#667085]">
           {t.fingerprint}
         </p>
         <p className="font-mono text-sm break-all">{coda(esito.zipSha256)}</p>

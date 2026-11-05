@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import type { AppLocale } from '@/lib/i18n/config';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import {
   DEFAULT_LOCALE,
@@ -34,9 +35,9 @@ const FOOTER_LABELS: Record<string, {
 };
 
 /** Coda della direzione L: nero pieno, marchio grande, colonne a filo. */
-export default function Footer() {
+export default function Footer({ localeFissa }: { localeFissa?: AppLocale } = {}) {
   const pathname = usePathname();
-  const currentLocale = getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
+  const currentLocale = localeFissa ?? getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
   const dict = getDictionary(currentLocale).footer;
   const t = FOOTER_LABELS[currentLocale] ?? FOOTER_LABELS.en;
   const getLink = (path: string) => localizePath(path, currentLocale);

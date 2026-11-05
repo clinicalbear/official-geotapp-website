@@ -15,14 +15,20 @@ import {
   getVolumeRateMonthly,
   getCurrencyForLocale,
 } from '@/lib/pricing';
-import { pianoPerOperatori } from '@/lib/piano-per-operatori';
+import { pianoPerOperatori, type PianoFlow } from '@/lib/piano-per-operatori';
 import { promoFine2026Attiva } from '@/lib/promo-fine-2026';
 
 // Direzione L: stessa logica di sempre (calculateTrackerQuote, useCart), vestito
 // nel registro del mockup docs/redesign-sito-2026-07/esplorazione/prezzi.html
 // (.calc a due colonne, .seats in Anton, .tiers, .box). Componente usato SOLO
 // da questa pagina: className liberi qui, nessun'altra route lo importa.
-export default function PricingCalculator() {
+export default function PricingCalculator({
+  promoIniziale = false,
+  aggiungiPiano,
+}: {
+  promoIniziale?: boolean;
+  aggiungiPiano?: (piano: PianoFlow) => void;
+} = {}) {
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
   const dict = getDictionary(locale);
@@ -36,7 +42,7 @@ export default function PricingCalculator() {
   const quote = calculateTrackerQuote(employees, locale);
   // Nel browser, come il badge sulle card: una data decisa alla build resterebbe
   // accesa oltre la scadenza.
-  const [promo, setPromo] = useState(false);
+  const [promo, setPromo] = useState(promoIniziale);
   useEffect(() => {
     setPromo(promoFine2026Attiva());
   }, []);
@@ -61,9 +67,11 @@ export default function PricingCalculator() {
 
   const handleAddToCart = () => {
     if (!quote || quote.isCustom) return;
+    // Il conto mostrato qui e' piano + postazioni: nel carrello devono entrare tutti e due.
+    aggiungiPiano?.(fit.piano);
     addItem({
       id: 'prod_TZxemMJkQrWryr',
-      name: 'GeoTapp Timetracker License',
+      name: 'GeoTapp TimeTracker',
       price: quote.eur.totalAnnual,
       currency: getCurrencyForLocale(locale),
       displayAmount: quote.display.totalAnnual.amount,
@@ -71,7 +79,7 @@ export default function PricingCalculator() {
       period: 'year',
       quantity: 1,
       metadata: {
-        details: `${employees} Collaborators Plan`,
+        details: employees === 1 ? pc.seats_valuetext_one : pc.seats_valuetext.replace('{n}', String(employees)),
         employeeCount: employees,
         product_key: 'GEOTAPP_APP',
         license_type: 'BUSINESS',
@@ -193,7 +201,7 @@ export default function PricingCalculator() {
               {dict.navbar.cta_start ?? dict.navbar.cta}
             </Link>
             <button className="b2 calc-add" onClick={handleAddToCart}>
-              {pc.add_to_cart}
+              {dict.pricing.add_to_cart_btn}
             </button>
           </div>
         ) : (

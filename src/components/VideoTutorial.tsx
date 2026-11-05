@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { Play } from 'lucide-react';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
 import {
@@ -111,16 +110,6 @@ export default function VideoTutorial({
               className="h-full w-full object-cover"
               priority={false}
             />
-            <span className="absolute inset-0 flex items-center justify-center">
-              {/* Posizione e forma nello style: fra le classi, `absolute` e
-                  `rounded-full` insieme le spegne redesign-l.css:185. */}
-              <span
-                className="flex h-16 w-16 items-center justify-center bg-white/95 shadow-xl transition-transform group-hover:scale-110"
-                style={{ borderRadius: 999 }}
-              >
-                <Play size={26} className="ml-1 fill-[#123047] text-[#123047]" />
-              </span>
-            </span>
           </button>
         )}
       </div>

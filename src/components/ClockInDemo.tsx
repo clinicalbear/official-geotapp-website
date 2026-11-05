@@ -90,7 +90,7 @@ export default function ClockInDemo({ dict }: Props) {
                 initial={reduced ? false : { opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.35 }}
-                className="absolute top-3 left-3 geo-glass rounded-xl px-3 py-1.5 font-mono-tech text-[11px] leading-tight text-slate-700"
+                className="absolute top-3 left-3 geo-glass rounded-xl px-3 py-1.5 font-mono-tech text-[12px] leading-tight text-slate-700"
               >
                 <span className="font-bold text-slate-900">{FAKE_LAT}</span> · {FAKE_LON}
               </motion.div>
@@ -118,7 +118,7 @@ export default function ClockInDemo({ dict }: Props) {
                 transition={{ duration: 0.3 }}
                 className="absolute inset-4 rounded-2xl ring-2 ring-white/70 pointer-events-none"
               >
-                <span className="absolute top-2 right-2 flex items-center gap-1.5 geo-glass rounded-full px-2.5 py-1 text-[11px] font-semibold text-slate-700">
+                <span className="absolute top-2 right-2 flex items-center gap-1.5 geo-glass rounded-full px-2.5 py-1 text-[12px] font-semibold text-slate-700">
                   <Camera size={13} className="text-slate-600" />
                   {t.step_photo}
                 </span>
@@ -139,7 +139,7 @@ export default function ClockInDemo({ dict }: Props) {
                 <div className="w-9 h-9 rounded-full bg-emerald-700 flex items-center justify-center shadow-md shadow-emerald-500/30">
                   <ShieldCheck size={18} className="text-white" />
                 </div>
-                <div className="font-mono-tech text-[11px] leading-tight text-slate-600">
+                <div className="font-mono-tech text-[12px] leading-tight text-slate-600">
                   <div className="text-slate-900 font-bold flex items-center gap-1">
                     <Lock size={11} className="text-emerald-700" />
                     {t.step_sealed}

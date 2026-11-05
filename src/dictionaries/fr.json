@@ -381,7 +381,7 @@
               "Support prioritaire",
               "Automatisations",
               "Rapports avancés",
-              "Postes TimeTracker activables : illimités (non inclus dans l'abonnement)*"
+              "Licences TimeTracker activables : illimitées (non incluses dans l'abonnement)*"
             ]
           },
           {
@@ -394,7 +394,7 @@
               "Pointages terrain",
               "Rapports opérationnels",
               "Intégrations",
-              "Postes TimeTracker activables : 5 (non inclus dans l'abonnement)*"
+              "Licences TimeTracker activables : 5 (non incluses dans l'abonnement)*"
             ]
           },
           {
@@ -406,7 +406,7 @@
               "Gestion des tâches",
               "Rapports de base",
               "Intégrations essentielles",
-              "Postes TimeTracker activables : 2 (non inclus dans l'abonnement)*"
+              "Licences TimeTracker activables : 2 (non incluses dans l'abonnement)*"
             ]
           }
         ]
@@ -423,10 +423,10 @@
       "mixed_rate": "Tarif mixte (remise volume appliquée)",
       "annual_total": "Total annuel (+TVA)",
       "annual_billing_note": "Facturation annuelle en une seule fois",
-      "enterprise_plan": "Plus de 150 postes",
-      "enterprise_desc": "Au-delà de 150 postes, le prix se convient ensemble : écrivez-nous et nous vous envoyons un devis.",
+      "enterprise_plan": "Plus de 150 licences",
+      "enterprise_desc": "Au-delà de 150 licences, le prix se convient ensemble : écrivez-nous et nous vous envoyons un devis.",
       "request_quote": "Demander un devis",
-      "add_to_cart": "Ajouter les postes au panier",
+      "add_to_cart": "Ajouter les licences au panier",
       "secure_payment": "Paiement sécurisé via Stripe. TVA calculée au moment du paiement.",
       "seats_valuetext": "{n} opérateurs",
       "seats_valuetext_over": "Plus de {n} opérateurs",
@@ -446,7 +446,7 @@
       "per_month": "/mois",
       "per_user_annual": "par utilisateur, facturation annuelle",
       "selected_badge": "Sélectionné",
-      "enterprise_plan": "Plus de 150 postes",
+      "enterprise_plan": "Plus de 150 licences",
       "enterprise_desc": "Pour les grandes organisations, nous proposons des solutions personnalisées.",
       "enterprise_cta": "Contactez-nous pour un devis",
       "company_placeholder": "Nom de l'entreprise",
@@ -497,18 +497,18 @@
     },
     "promo_fine_2026": {
       "badge": "Offre de fin 2026 · jusqu'au 18 décembre",
-      "banner": "Offre de fin 2026 : en vous abonnant au plus tard le 18 décembre 2026, pendant les 12 premiers mois, un poste TimeTracker est inclus dans le prix de Solo et de Team, cinq dans celui de Business, et vous pouvez activer plus de postes (Solo jusqu'à 5, Team jusqu'à 15, Business illimités).",
+      "banner": "Offre de fin 2026 : en vous abonnant au plus tard le 18 décembre 2026, pendant les 12 premiers mois, une licence TimeTracker est incluse dans le prix de Solo et de Team, cinq dans celui de Business, et vous pouvez activer plus de licences (Solo jusqu'à 5, Team jusqu'à 15, Business illimités).",
       "ceiling": {
-        "solo": "Postes TimeTracker activables : 5, dont 1 inclus dans le prix*",
-        "team": "Postes TimeTracker activables : 15, dont 1 inclus dans le prix*",
-        "business": "Postes TimeTracker activables : illimités, dont 5 inclus dans le prix*"
+        "solo": "Licences TimeTracker activables : 5, dont 1 incluse dans le prix*",
+        "team": "Licences TimeTracker activables : 15, dont 1 incluse dans le prix*",
+        "business": "Licences TimeTracker activables : illimitées, dont 5 incluses dans le prix*"
       },
-      "footnote": "* Avec l'offre de fin 2026, pendant les 12 premiers mois, la formule inclut 1 poste TimeTracker (Solo et Team) ou 5 (Business) dans le prix et relève le nombre de postes actifs en même temps (Solo 5, Team 15). Les postes au-delà de ceux inclus s'achètent séparément. Retirer l'accès d'un salarié libère le poste immédiatement.",
-      "banner_short": "Offre fin 2026 : abonnez-vous au plus tard le 18 décembre 2026 et profitez de postes TimeTracker inclus pendant 12 mois, avec la possibilité d'en activer davantage."
+      "footnote": "* Avec l'offre de fin 2026, pendant les 12 premiers mois, la formule inclut 1 licence TimeTracker (Solo et Team) ou 5 (Business) dans le prix et relève le nombre de licences actives en même temps (Solo 5, Team 15). Les licences au-delà de celles incluses s'achètent séparément. Retirer l'accès d'un salarié libère le licence immédiatement.",
+      "banner_short": "Offre fin 2026 : abonnez-vous au plus tard le 18 décembre 2026 et profitez de licences TimeTracker incluses pendant 12 mois, avec la possibilité d'en activer davantage."
     },
-    "tracker_footnote": "* Les postes TimeTracker s'achètent séparément. Le plan Flow fixe combien peuvent être actifs en même temps, pas combien sont inclus. Supprimer l'accès d'un employé libère la place immédiatement.",
+    "tracker_footnote": "* Les licences TimeTracker s'achètent séparément. Le plan Flow fixe combien peuvent être actives en même temps, pas combien sont incluses. Supprimer l'accès d'un employé libère la place immédiatement.",
     "per_year": "/an",
-    "title_gradient": "Des utilisateurs au bureau, un poste pour chaque opérateur.",
+    "title_gradient": "Des utilisateurs au bureau, une licence pour chaque opérateur.",
     "or_monthly": "ou",
     "per_month_short": "/mois",
     "price_excl_vat": "hors TVA",
@@ -518,7 +518,7 @@
     "recommended": "Recommandé",
     "compare": {
       "users": "Utilisateurs Flow",
-      "seats": "Postes TimeTracker",
+      "seats": "Licences TimeTracker",
       "clients": "Clients",
       "automations": "Automatisations",
       "api": "Accès API",
@@ -533,8 +533,8 @@
       "support_standard": "Standard",
       "support_priority": "Prioritaire",
       "seats_up_to": "jusqu'à {n}",
-      "seats_included_one": "1 inclus pendant 12 mois",
-      "seats_included_many": "{n} inclus pendant 12 mois"
+      "seats_included_one": "1 incluse pendant 12 mois",
+      "seats_included_many": "{n} incluses pendant 12 mois"
     },
     "hero_price": "Flow à partir de {flow}/mois, plus {seat}/mois par opérateur. Hors TVA.",
     "addon_title": "Ajoutez vos opérateurs avec TimeTracker",
@@ -1115,7 +1115,7 @@
     "benefits": [
       {
         "title": "Le plus grand plan, pas une version réduite",
-        "desc": "Vous essayez GeoTapp Flow à pleine puissance : tous les modules, des utilisateurs bureau illimités et 50 postes TimeTracker actifs dès le premier jour. Avec l'abonnement, les modules de Flow sont compris dans le plan ; on ne paie à part que les postes de pointage, sur le terrain avec TimeTracker et au bureau dans Flow."
+        "desc": "Vous essayez GeoTapp Flow à pleine puissance : tous les modules, des utilisateurs bureau illimités et 50 licences TimeTracker actives dès le premier jour. Avec l'abonnement, les modules de Flow sont compris dans le plan ; on ne paie à part que les licences de pointage, sur le terrain avec TimeTracker et au bureau dans Flow."
       },
       {
         "title": "Aucune carte bancaire requise",

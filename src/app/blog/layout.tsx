@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
-import { headers } from 'next/headers';
+import { cookies, headers } from 'next/headers';
+import { detectLocale } from '@/lib/i18n/detect-locale';
 import { fontiPerLingua } from '@/lib/fonts';
 import '../globals.css';
 // Sistema grafico "direzione L": qui SOLO per le route del blog headless
@@ -33,7 +34,11 @@ export default async function BlogLayout({ children }: { children: ReactNode }) 
   // via header x-blog-locale (parsata dal path /blog/{lang}/...). Le route blog
   // sono force-dynamic, quindi headers() qui non cambia il modello di rendering.
   // Fallback 'en' per le route senza header (es. /blog/author/).
-  const locale = (await headers()).get('x-blog-locale') ?? 'en';
+  const headerStore = await headers();
+  // Pagine senza lingua nell'indirizzo (es. /blog/author/): stessa scelta della pagina,
+  // altrimenti barra e contenuto parlavano lingue diverse e React scartava la pagina (#418).
+  const locale = (headerStore.get('x-blog-locale') ??
+    detectLocale(headerStore, (await cookies()).get('geotapp_locale')?.value)) as AppLocale;
 
   return (
     <html lang={locale}>
@@ -63,13 +68,13 @@ export default async function BlogLayout({ children }: { children: ReactNode }) 
         <DictionaryBridge locale={locale} dict={getDictionary(locale as AppLocale)}>
         <SiteAnalytics />
         {/* Navbar FUORI dal wrapper overflow: un antenato con overflow!=visible rompe position:sticky */}
-        <Navbar />
+        <Navbar localeFissa={locale} />
         {/* Osservatore globale dei reveal .r/.r-l/.r-r/.r-s (direzione L) */}
         <LEffetti />
         <div className="relative min-h-screen overflow-x-clip">
           <div className="relative z-10">
             <main>{children}</main>
-            <Footer />
+            <Footer localeFissa={locale} />
           </div>
         </div>
         <SurveyInvite />

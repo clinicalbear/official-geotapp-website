@@ -55,3 +55,12 @@
 .lp-blog .feat .m, .lp-blog .posts .m { font-size: 12px; }
 .lp-blog .pag span { width: 28px; height: 44px; display: grid; place-content: center; color: #475467; }
 @media (pointer: coarse) { .lp-blog .cats button { min-height: 44px; } }
+
+/* Ultima riga della griglia: l'ultima scheda si allarga invece di lasciare un buco. */
+@media (min-width: 1001px) {
+  .lp-blog .posts > a:last-child:nth-child(3n + 1) { grid-column: span 3; }
+  .lp-blog .posts > a:last-child:nth-child(3n + 2) { grid-column: span 2; }
+}
+@media (min-width: 701px) and (max-width: 1000px) {
+  .lp-blog .posts > a:last-child:nth-child(2n + 1) { grid-column: span 2; }
+}

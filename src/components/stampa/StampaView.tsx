@@ -307,7 +307,7 @@ export default function StampaView({
               <li key={i}>
                 <a href={item.url} target="_blank" rel={pressRel(item)} style={{ display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'baseline' }}>
                   <time dateTime={item.date} style={{ fontSize: 12.5, color: '#475467', fontVariantNumeric: 'tabular-nums' }}>{fmtPressDate(item.date)}</time>
-                  <span className="k" style={{ color: 'var(--seal-testo)', fontSize: 11 }}>{item.outlet}</span>
+                  <span className="k" style={{ color: 'var(--seal-testo)', fontSize: 12 }}>{item.outlet}</span>
                   <span style={{ flex: 1 }}>{item.title}</span>
                 </a>
               </li>

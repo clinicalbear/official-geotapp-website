@@ -402,7 +402,7 @@ export default function NewsletterForm({
           </p>
         )}
 
-        <p style={{ margin: 0, fontSize: '0.72rem', color: '#94a3b8', fontFamily: 'var(--font-body)' }}>
+        <p style={{ margin: 0, fontSize: '0.8125rem', color: '#B8C2D6', fontFamily: 'var(--font-body)' }}>
           {t.privacy}
         </p>
       </form>

@@ -163,7 +163,7 @@ const PLAN_LIMITS = {
   business: { users: null, clients: null, automations: null, api: true, reports: 'reports_advanced', support: 'support_priority' },
 } as const;
 
-export default function PricingContent({ beforeEnd }: { beforeEnd?: ReactNode }) {
+export default function PricingContent({ beforeEnd, promoIniziale = false }: { beforeEnd?: ReactNode; promoIniziale?: boolean }) {
   const { addItem, toggleCart } = useCart();
   const pathname = usePathname();
   const currentLocale = getLocaleFromPathname(pathname) ?? DEFAULT_LOCALE;
@@ -233,7 +233,7 @@ export default function PricingContent({ beforeEnd }: { beforeEnd?: ReactNode })
   // Promo di fine 2026. Si accende solo nel browser: la pagina e' generata in
   // anticipo, e una data decisa al momento della build resterebbe accesa oltre
   // la scadenza. Il 19/12 il badge sparisce senza ripubblicare.
-  const [promoOn, setPromoOn] = useState(false);
+  const [promoOn, setPromoOn] = useState(promoIniziale);
   useEffect(() => {
     setPromoOn(promoFine2026Attiva());
   }, []);
@@ -261,6 +261,28 @@ export default function PricingContent({ beforeEnd }: { beforeEnd?: ReactNode })
     if (!promoT) return undefined;
     const n = POSTAZIONI_PIANO[key].compresePromo;
     return n === 1 ? c.seats_included_one : c.seats_included_many.replace('{n}', String(n));
+  };
+
+  // Il calcolatore mette nel carrello anche il piano che ha proposto: uno solo alla volta.
+  const aggiungiPianoAlCarrello = (chiave: 'solo' | 'team' | 'business') => {
+    const prodotto = categories
+      .flatMap((c: any) => c?.products ?? [])
+      .find((p: any) => p.priceKey === chiave);
+    if (!prodotto) return;
+    useCart.getState().items
+      .filter((i) => i.metadata?.product_key === 'GEOTAPP_FLOW')
+      .forEach((i) => useCart.getState().removeItem(i.id));
+    addItem({
+      id: prodotto.id,
+      name: prodotto.name,
+      price: prodotto.priceEur,
+      currency: cartCurrency,
+      displayAmount: prodotto.priceDisplay,
+      displayFormatted: prodotto.price,
+      period: 'year',
+      quantity: 1,
+      metadata: { details: prodotto.desc, ...(prodotto.metadata || {}) },
+    });
   };
 
   const renderPlanCard = (product: any, delayClass: string) => {
@@ -425,7 +447,7 @@ export default function PricingContent({ beforeEnd }: { beforeEnd?: ReactNode })
 
       <section className="sec ink">
         <div className="w">
-          <PricingCalculator />
+          <PricingCalculator promoIniziale={promoIniziale} aggiungiPiano={aggiungiPianoAlCarrello} />
         </div>
       </section>
 

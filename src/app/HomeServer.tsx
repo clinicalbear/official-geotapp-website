@@ -237,14 +237,16 @@ export default function Home({ locale, jrSlot, fqSlot }: { locale?: string; jrSl
                   un rapportino sigillato si', e chi lo scarica e' un contatto
                   migliore di chi si iscrive per curiosita'. Porta al pannello
                   del rapportino demo piu' in basso nella stessa pagina. */}
-              <a
-                className="b2"
-                href="#rapportino"
-                data-traccia="demo_report_cta"
-                data-fonte="homepage_hero"
-              >
-                {dict.landing.hero_cta_report}
-              </a>
+              {DEMO_REPORT_DISPONIBILE && (
+                <a
+                  className="b2"
+                  href="#rapportino"
+                  data-traccia="demo_report_cta"
+                  data-fonte="homepage_hero"
+                >
+                  {dict.landing.hero_cta_report}
+                </a>
+              )}
             </div>
             {/* 01/10/2026: "Credibilita' 3/10" nel test dei 5 secondi — sopra la
                 piega non c'era nessuna prova terza, solo le funzioni dichiarate
@@ -636,8 +638,8 @@ export default function Home({ locale, jrSlot, fqSlot }: { locale?: string; jrSl
           data-traccia="trust_badge_click"
           data-fonte="homepage_sticky"
         >
-          <span aria-hidden="true" className="text-[11px] leading-none text-[#22B573]">★★★★★</span>
-          <span className="text-[11px] text-slate-500">{trustLineText}</span>
+          <span aria-hidden="true" className="text-[12px] leading-none text-[#22B573]">★★★★★</span>
+          <span className="text-[12px] text-slate-500">{trustLineText}</span>
         </a>
         <p className="text-xs text-slate-500 text-center mb-1">
           {(dict.landing as any)?.sticky_cta_subtitle ?? '14 giorni gratis, nessuna carta di credito'}
