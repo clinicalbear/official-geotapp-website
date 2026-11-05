@@ -574,7 +574,7 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
             <h2 className="font-display font-bold text-lg text-slate-900 leading-tight">{t.blogTitle}</h2>
           </div>
           <Link href={withUtm('https://geotapp.com/blog', 'ig_links_blog', 'blog_all')} target="_blank" rel="noopener noreferrer"
-            className="text-xs font-medium text-slate-400 hover:text-primary transition-colors pb-0.5">
+            className="inline-flex min-h-[44px] items-center text-xs font-medium text-slate-500 hover:text-primary transition-colors">
             {t.blogAll}
           </Link>
         </motion.div>

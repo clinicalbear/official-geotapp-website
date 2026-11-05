@@ -23,7 +23,7 @@
    scendeva a 2,83:1 sul fondo scuro. Si applica al solo span interno.
    (Audit EAA del 23/09/2026.) */
 .lp-prodotto-timetracker .l-store > span { display: block; }
-.lp-prodotto-timetracker .l-store > span > span { display: block; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; opacity: .75; }
+.lp-prodotto-timetracker .l-store > span > span { display: block; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; opacity: .75; }
 .lp-prodotto-timetracker .l-store b { display: block; font-size: 15px; font-weight: 600; }
 
 @media (max-width: 700px) {

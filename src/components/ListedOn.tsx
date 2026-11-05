@@ -159,7 +159,7 @@ const SlashdotLogo = ({ scale }: { scale: number }) => (
 const TopBusinessSoftwareLogo = ({ scale }: { scale: number }) => (
   <svg width={210 * scale} height={32 * scale} viewBox="0 0 210 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <rect x="2" y="4" width="24" height="24" rx="4" fill="#1E40AF"/>
-    <text x="9" y="22" fontFamily="var(--font-display)" fontSize="14" fontWeight="800" fill="#fff">TBS</text>
+    <text x="14" y="20" textAnchor="middle" fontFamily="var(--font-display)" fontSize="9" fontWeight="800" fill="#fff">TBS</text>
     <text x="32" y="23" fontFamily="var(--font-display)" fontSize="14" fontWeight="700" fill="#1E40AF">Top Business Software</text>
   </svg>
 );

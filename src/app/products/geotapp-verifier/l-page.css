@@ -20,7 +20,7 @@
 }
 .lp-prodotto-verifier .l-code .hd {
   display: flex; align-items: center; gap: 8px; padding: 12px 16px;
-  font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: rgba(247, 249, 252, .55);
+  font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: rgba(247, 249, 252, .55);
 }
 .lp-prodotto-verifier .l-code .hd i { width: 9px; height: 9px; border-radius: 50%; background: rgba(247, 249, 252, .25); display: block; }
 .lp-prodotto-verifier .l-code pre { margin: 0; padding: 20px; font-size: 13px; line-height: 1.6; color: var(--lime); overflow-x: auto; }
