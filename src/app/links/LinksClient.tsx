@@ -302,6 +302,8 @@ const UI: Record<string, UIStrings> = {
   },
 };
 
+const GASTGEWERBE_URL = 'https://gastgewerbe-magazin.de/zeiterfassung-ohne-ortung-was-gesetz-und-datenschutz-tatsaechlich-verlangen-73774';
+
 // ─── Survey (link in cima, localizzato) ──────────────────────────────────────
 const SURVEY: Record<string, { label: string; note: string }> = {
   it: { label: 'Fiducia o prova? Dillo in 2 minuti', note: 'Sondaggio anonimo, niente da vendere' },
@@ -493,6 +495,30 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
         </Link>
         <span className="text-[10px] font-semibold text-slate-400 tracking-[0.12em] uppercase">Instagram</span>
       </motion.nav>
+
+      {/* USCITA STAMPA, solo in tedesco: il reel su Instagram dice "Link in der Bio" e il link deve stare qui, per primo */}
+      {textLocale === 'de' && (
+        <motion.section initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: 'easeOut', delay: 0.03 }}
+          className="px-6 pt-1 pb-3 max-w-md mx-auto">
+          <a
+            href={GASTGEWERBE_URL}
+            target="_blank" rel="noopener noreferrer nofollow"
+            onClick={() => trackEvent('press_click', { cta_source: 'links_featured_gastgewerbe', cta_locale: locale })}
+            className="group flex items-center gap-3.5 p-4 rounded-2xl border border-primary/25 bg-gradient-to-r from-primary/8 to-primary/5 hover:border-primary/45 transition-all duration-200 active:scale-[0.98]">
+            <div className="shrink-0 w-11 h-11 rounded-xl bg-primary/12 border border-primary/20 flex items-center justify-center text-[#15803d]">
+              <Award size={20} strokeWidth={2} />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="font-semibold text-[14px] leading-tight text-slate-800 group-hover:text-[#15803d] transition-colors duration-150">Zeiterfassung ohne Ortung: Was Gesetz und Datenschutz tatsächlich verlangen</h3>
+              <p className="text-[11.5px] text-slate-400 leading-snug mt-0.5 line-clamp-1">Unser Beitrag im Gastgewerbe-Magazin</p>
+            </div>
+            <div className="shrink-0 text-primary/50 group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-150">
+              <ArrowRight size={15} />
+            </div>
+          </a>
+        </motion.section>
+      )}
 
       {/* SURVEY — primo link cliccabile (campagna sondaggio, localizzato) */}
       <motion.section initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
