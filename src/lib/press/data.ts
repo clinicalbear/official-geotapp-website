@@ -58,6 +58,24 @@ export function pressRel(_item: PressItem): string {
 // VUOTI al lancio. Aggiungere una voce = la sezione compare da sola in pagina.
 export const PRESS_RELEASES: PressItem[] = [];
 export const PRESS_COVERAGE: PressItem[] = [
+  {
+    date: '2026-11-05',
+    outlet: 'Human Resources',
+    title: 'O registo do tempo de quem trabalha na rua',
+    url: 'https://hrportugal.sapo.pt/o-registo-do-tempo-de-quem-trabalha-na-rua/',
+    locale: 'pt',
+    country: 'pt',
+    logo: '/press/hrportugal.png',
+    referrer: {
+      hosts: ['hrportugal.sapo.pt'],
+      // Stessa frase della voce del 09/09: matchReferrer prende la prima voce con questo host.
+      welcome: 'Interessa-lhe o GPS no trabalho? Cada posição registada nasce de um gesto do trabalhador, e a aplicação não pede acesso à localização em segundo plano.',
+      cta: { label: 'Ver como funciona', path: '/contestazioni' },
+    },
+    follow: true, // <a href="https://geotapp.com/pt/" target="_blank" rel="noopener">GeoTapp</a> nella riga
+                  // d'autore, letto sul grezzo il 05/11/2026, nessun nofollow. Gruppo Multipublicacoes.
+  },
+
   // Gastgewerbe-Magazin (DE), Gastbeitrag a firma Michele Angelo Petraroli, online dal 04/11/2026
   // (datePublished 2026-11-04T04:15:00+00:00 nello schema della pagina). Proposto il 26/10 a
   // redaktion@, accettato il 28/10 da David J. Knepper (Head of Content); link alla pubblicazione
