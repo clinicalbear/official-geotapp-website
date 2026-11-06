@@ -550,7 +550,7 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="font-semibold text-[14px] leading-tight text-slate-800 group-hover:text-[#15803d] transition-colors duration-150">O registo do tempo de quem trabalha na rua</h3>
-            <p className="text-xs text-slate-500 leading-snug mt-0.5 line-clamp-1">{HR_PORTUGAL_NOTE[textLocale] ?? HR_PORTUGAL_NOTE.en}</p>
+            <p className="text-xs text-slate-500 leading-snug mt-0.5">{HR_PORTUGAL_NOTE[textLocale] ?? HR_PORTUGAL_NOTE.en}</p>
           </div>
           <div className="shrink-0 text-primary/50 group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-150">
             <ArrowRight size={15} />
