@@ -304,6 +304,22 @@ const UI: Record<string, UIStrings> = {
 
 const GASTGEWERBE_URL = 'https://gastgewerbe-magazin.de/zeiterfassung-ohne-ortung-was-gesetz-und-datenschutz-tatsaechlich-verlangen-73774';
 
+// Uscita su Human Resources Portugal (05/11/2026): il titolo resta quello del pezzo, in portoghese.
+const HR_PORTUGAL_URL = 'https://hrportugal.sapo.pt/o-registo-do-tempo-de-quem-trabalha-na-rua/';
+const HR_PORTUGAL_NOTE: Record<string, string> = {
+  it: 'Il nostro articolo su Human Resources Portugal',
+  en: 'Our article in Human Resources Portugal',
+  de: 'Unser Beitrag bei Human Resources Portugal',
+  fr: 'Notre article dans Human Resources Portugal',
+  es: 'Nuestro artículo en Human Resources Portugal',
+  pt: 'O nosso artigo na Human Resources Portugal',
+  nl: 'Ons artikel in Human Resources Portugal',
+  da: 'Vores artikel i Human Resources Portugal',
+  sv: 'Vår artikel i Human Resources Portugal',
+  nb: 'Vår artikkel i Human Resources Portugal',
+  ru: 'Наша статья в Human Resources Portugal',
+};
+
 // ─── Survey (link in cima, localizzato) ──────────────────────────────────────
 const SURVEY: Record<string, { label: string; note: string }> = {
   it: { label: 'Fiducia o prova? Dillo in 2 minuti', note: 'Sondaggio anonimo, niente da vendere' },
@@ -519,6 +535,28 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
           </a>
         </motion.section>
       )}
+
+      {/* USCITA STAMPA, in tutte le lingue: i post su Instagram rimandano alla testata e il link deve stare qui */}
+      <motion.section initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, ease: 'easeOut', delay: 0.04 }}
+        className="px-6 pt-1 pb-3 max-w-md mx-auto">
+        <a
+          href={HR_PORTUGAL_URL}
+          target="_blank" rel="noopener noreferrer nofollow"
+          onClick={() => trackEvent('press_click', { cta_source: 'links_featured_hrportugal', cta_locale: locale })}
+          className="group flex items-center gap-3.5 p-4 rounded-2xl border border-primary/25 bg-gradient-to-r from-primary/8 to-primary/5 hover:border-primary/45 transition-all duration-200 active:scale-[0.98]">
+          <div className="shrink-0 w-11 h-11 rounded-xl bg-primary/12 border border-primary/20 flex items-center justify-center text-[#15803d]">
+            <Award size={20} strokeWidth={2} />
+          </div>
+          <div className="flex-1 min-w-0">
+            <h3 className="font-semibold text-[14px] leading-tight text-slate-800 group-hover:text-[#15803d] transition-colors duration-150">O registo do tempo de quem trabalha na rua</h3>
+            <p className="text-xs text-slate-500 leading-snug mt-0.5 line-clamp-1">{HR_PORTUGAL_NOTE[textLocale] ?? HR_PORTUGAL_NOTE.en}</p>
+          </div>
+          <div className="shrink-0 text-primary/50 group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-150">
+            <ArrowRight size={15} />
+          </div>
+        </a>
+      </motion.section>
 
       {/* SURVEY — primo link cliccabile (campagna sondaggio, localizzato) */}
       <motion.section initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
