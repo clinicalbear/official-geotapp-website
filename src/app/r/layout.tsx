@@ -17,6 +17,7 @@ import type { ReactNode } from 'react';
 import DictionaryBridge from '@/lib/i18n/DictionaryBridge';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import '../globals.css';
+import AssetRecoveryScript from '@/components/AssetRecoveryScript';
 
 export default function LayoutCodice({
   children,
@@ -25,6 +26,7 @@ export default function LayoutCodice({
 }) {
   return (
     <html lang="en">
+      <head><AssetRecoveryScript /></head>
       <body className="bg-[#F2F4F7] antialiased"><DictionaryBridge locale="en" dict={getDictionary('en')}>{children}</DictionaryBridge></body>
     </html>
   );

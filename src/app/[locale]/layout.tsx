@@ -41,6 +41,7 @@ import DictionaryBridge from '@/lib/i18n/DictionaryBridge';
 import { dizionarioComune } from '@/lib/i18n/dictionaries';
 import { getContestazioniCopy } from '@/content/contestazioni';
 import { localizePath } from '@/lib/i18n/locale-routing';
+import AssetRecoveryScript from '@/components/AssetRecoveryScript';
 
 const BASE_URL = 'https://geotapp.com';
 
@@ -306,6 +307,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     // Gli esperimenti A/B scrivono data-exp-* su <html> prima dell'idratazione.
     <html lang={locale} suppressHydrationWarning>
       <head>
+        <AssetRecoveryScript />
         {/* ── Critical preconnects ───────────────────────────────────────────
             next/font/google already handles fonts.googleapis.com and
             fonts.gstatic.com internally, no manual preconnect needed.

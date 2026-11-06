@@ -25,6 +25,7 @@ import '../globals.css';
 import '../redesign-l.css';
 import '../l-mockup.css';
 import '../l-palette.css';
+import AssetRecoveryScript from '@/components/AssetRecoveryScript';
 
 export default function LayoutVerifica({
   children,
@@ -33,6 +34,7 @@ export default function LayoutVerifica({
 }) {
   return (
     <html lang="en">
+      <head><AssetRecoveryScript /></head>
       <body className="antialiased">
         <DictionaryBridge locale="en" dict={getDictionary('en')}>
         <main>{children}</main>

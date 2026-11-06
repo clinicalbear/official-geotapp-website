@@ -10,6 +10,7 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import '../globals.css';
+import AssetRecoveryScript from '@/components/AssetRecoveryScript';
 
 export const metadata: Metadata = {
   robots: { index: false, follow: false, nocache: true },
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
 export default function LayoutCandidatura({ children }: { children: ReactNode }) {
   return (
     <html lang="it">
+      <head><AssetRecoveryScript /></head>
       <body style={{ margin: 0, background: '#F7F9FC' }}>{children}</body>
     </html>
   );

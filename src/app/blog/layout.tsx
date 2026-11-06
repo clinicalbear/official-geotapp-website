@@ -27,6 +27,7 @@ import { buildConsentDefaultScript } from '@/lib/consent-mode';
 import DictionaryBridge from '@/lib/i18n/DictionaryBridge';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
+import AssetRecoveryScript from '@/components/AssetRecoveryScript';
 
 
 export default async function BlogLayout({ children }: { children: ReactNode }) {
@@ -43,6 +44,7 @@ export default async function BlogLayout({ children }: { children: ReactNode }) 
   return (
     <html lang={locale}>
       <head>
+        <AssetRecoveryScript />
         {/* Internal traffic toggle, same as [locale]/layout.tsx. Visit
             ?gt_internal=on/off to opt-out/in for this browser. */}
         <Script id="internal-traffic-toggle" strategy="beforeInteractive">

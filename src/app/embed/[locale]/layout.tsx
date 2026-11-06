@@ -4,6 +4,7 @@ import '../../globals.css';
 import DictionaryBridge from '@/lib/i18n/DictionaryBridge';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
+import AssetRecoveryScript from '@/components/AssetRecoveryScript';
 
 /**
  * Layout per i widget incorporabili (/embed/...). Route fuori da [locale], quindi
@@ -25,6 +26,7 @@ export default async function EmbedLayout({
   const { locale } = await params;
   return (
     <html lang={locale} className={fontiPerLingua(locale).join(' ')}>
+      <head><AssetRecoveryScript /></head>
       <body className="font-sans antialiased bg-white text-slate-900">
         <DictionaryBridge locale={locale} dict={getDictionary(locale as AppLocale)}>{children}        </DictionaryBridge>
       </body>
