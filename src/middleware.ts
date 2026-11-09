@@ -805,6 +805,9 @@ export async function middleware(req: NextRequest) {
     // Articoli linkati senza data nel permalink (vecchio schema /blog/slug/):
     // GSC 09/11/2026 li dava in 404, l'articolo esiste con la data.
     const UNDATED_POSTS: Record<string, string> = {
+      // Slug tedesco accorciato e poi rinominato (GSC 09/11/2026).
+      '/blog/de/2026/04/01/unbezahlte-dienstleistungen-warum-die-klagen-2025-zunahmen/':
+        '/blog/de/2026/04/01/unbezahlte-dienstleistungen-warum-die-zahl-der-rechtsstreitigkeiten-im-jahr-2025-zunimmt/',
       '/blog/geolocalizzazione-dipendenti-gdpr-guida-legale/': '/blog/2025/11/20/geolocalizzazione-dipendenti-gdpr-guida-legale/',
       '/blog/gps-privacy-notice-employees-automatic-geotapp-flow/': '/blog/en/2026/05/04/gps-privacy-notice-employees-automatic-geotapp-flow/',
       '/blog/tempo-sprecato-in-azienda-come-geotapp-timetracker-rivela-inefficienze-nascoste-da-migliaia-di-euro-al-mese/':
