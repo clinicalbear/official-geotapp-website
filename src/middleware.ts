@@ -802,6 +802,19 @@ export async function middleware(req: NextRequest) {
     const PRODUCTS = new Set(['products', ...values('products')]);
     const PAGE_ALIAS: Record<string, string> = { contato: 'contact', 'quem-somos': 'chi-siamo', handleiding: 'guida' };
 
+    // Articoli linkati senza data nel permalink (vecchio schema /blog/slug/):
+    // GSC 09/11/2026 li dava in 404, l'articolo esiste con la data.
+    const UNDATED_POSTS: Record<string, string> = {
+      '/blog/geolocalizzazione-dipendenti-gdpr-guida-legale/': '/blog/2025/11/20/geolocalizzazione-dipendenti-gdpr-guida-legale/',
+      '/blog/gps-privacy-notice-employees-automatic-geotapp-flow/': '/blog/en/2026/05/04/gps-privacy-notice-employees-automatic-geotapp-flow/',
+      '/blog/tempo-sprecato-in-azienda-come-geotapp-timetracker-rivela-inefficienze-nascoste-da-migliaia-di-euro-al-mese/':
+        '/blog/2026/03/11/tempo-sprecato-in-azienda-come-geotapp-timetracker-rivela-inefficienze-nascoste-da-migliaia-di-euro-al-mese/',
+    };
+    const undatedTarget = UNDATED_POSTS[pathname.endsWith('/') ? pathname : `${pathname}/`];
+    if (undatedTarget) {
+      return NextResponse.redirect(new URL(undatedTarget, req.url), 301);
+    }
+
     const seg = pathname.split('/').filter(Boolean);
     const loc = seg[0];
     let target: string | null = null;
