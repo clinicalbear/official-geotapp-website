@@ -318,7 +318,7 @@ export default function StampaView({
 
       {/* ── pubblicazioni: chi ha scritto di noi ── */}
       {hasPress(PRESS_COVERAGE) && (
-        <section className="sec warm"><div className="w">
+        <section className="sec warm covfull"><div className="w">
           <div className="hd">
             <h2 className="r">
               {d.coverage_label}

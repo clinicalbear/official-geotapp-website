@@ -1222,6 +1222,8 @@ main:has(> .lp-l){padding-top:0}
 .covg time{font-size:12.5px;color:#475467;font-variant-numeric:tabular-nums}
 .covg .out{color:var(--seal-testo);font-size:12px}
 .covg .ti{line-height:1.4}
+/* la tabella delle pubblicazioni usa tutta la larghezza della pagina (10/11/2026), non i 1500px del contenitore */
+.covfull>.w{max-width:none}
 /* Su telefono la colonna del logo era larga 96px e il logo ci stava dentro alto
    30px: briciole illeggibili, ed e' l'unica cosa che dice a colpo d'occhio CHI
    ha scritto di noi. Qui la riga si impila: il logo va in cima grande quanto la
