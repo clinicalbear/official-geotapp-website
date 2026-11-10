@@ -304,6 +304,22 @@ const UI: Record<string, UIStrings> = {
 
 const GASTGEWERBE_URL = 'https://gastgewerbe-magazin.de/zeiterfassung-ohne-ortung-was-gesetz-und-datenschutz-tatsaechlich-verlangen-73774';
 
+// Uscita su BygTek (10/11/2026): debatindlæg di Michele Angelo Petraroli, il titolo resta quello del pezzo, in danese.
+const BYGTEK_URL = 'https://bygtek.dk/artikel/debat/debat-hvad-taeller-som-dokumentation-naar-det-er-en-anden-der-har-udfoert-arbejdet';
+const BYGTEK_NOTE: Record<string, string> = {
+  it: 'Il nostro intervento su BygTek',
+  en: 'Our opinion piece in BygTek',
+  de: 'Unser Debattenbeitrag in BygTek',
+  fr: 'Notre tribune dans BygTek',
+  es: 'Nuestro artículo de opinión en BygTek',
+  pt: 'O nosso artigo de opinião na BygTek',
+  nl: 'Ons opiniestuk in BygTek',
+  da: 'Vores debatindlæg i BygTek',
+  sv: 'Vår debattartikel i BygTek',
+  nb: 'Vårt debattinnlegg i BygTek',
+  ru: 'Наша авторская статья в BygTek',
+};
+
 // Uscita su Human Resources Portugal (05/11/2026): il titolo resta quello del pezzo, in portoghese.
 const HR_PORTUGAL_URL = 'https://hrportugal.sapo.pt/o-registo-do-tempo-de-quem-trabalha-na-rua/';
 const HR_PORTUGAL_NOTE: Record<string, string> = {
@@ -535,6 +551,28 @@ export default function LinksClient({ articles, locale = 'it', variant = 'legacy
           </a>
         </motion.section>
       )}
+
+      {/* USCITA STAMPA BygTek (10/11/2026), in tutte le lingue: i post su Instagram dicono "link in bio" e il link deve stare qui, per primo */}
+      <motion.section initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, ease: 'easeOut', delay: 0.035 }}
+        className="px-6 pt-1 pb-3 max-w-md mx-auto">
+        <a
+          href={BYGTEK_URL}
+          target="_blank" rel="noopener noreferrer nofollow"
+          onClick={() => trackEvent('press_click', { cta_source: 'links_featured_bygtek', cta_locale: locale })}
+          className="group flex items-center gap-3.5 p-4 rounded-2xl border border-primary/25 bg-gradient-to-r from-primary/8 to-primary/5 hover:border-primary/45 transition-all duration-200 active:scale-[0.98]">
+          <div className="shrink-0 w-11 h-11 rounded-xl bg-primary/12 border border-primary/20 flex items-center justify-center text-[#15803d]">
+            <Award size={20} strokeWidth={2} />
+          </div>
+          <div className="flex-1 min-w-0">
+            <h3 className="font-semibold text-[14px] leading-tight text-slate-800 group-hover:text-[#15803d] transition-colors duration-150">Debat: Hvad tæller som dokumentation, når det er en anden, der har udført arbejdet?</h3>
+            <p className="text-xs text-slate-500 leading-snug mt-0.5">{BYGTEK_NOTE[textLocale] ?? BYGTEK_NOTE.en}</p>
+          </div>
+          <div className="shrink-0 text-primary/50 group-hover:text-primary group-hover:translate-x-0.5 transition-all duration-150">
+            <ArrowRight size={15} />
+          </div>
+        </a>
+      </motion.section>
 
       {/* USCITA STAMPA, in tutte le lingue: i post su Instagram rimandano alla testata e il link deve stare qui */}
       <motion.section initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
