@@ -58,6 +58,21 @@ export function pressRel(_item: PressItem): string {
 // VUOTI al lancio. Aggiungere una voce = la sezione compare da sola in pagina.
 export const PRESS_RELEASES: PressItem[] = [];
 export const PRESS_COVERAGE: PressItem[] = [
+  // BygTek (DK), debatindlæg a firma Michele Angelo Petraroli, online dal 10/11/2026 (mail di
+  // Daniel Christensen, journalist, 10/11 13:44). Proposto il 06/11 a redaktionen@odsgard.dk, solo per
+  // il sito (l'edizione di BygTek-avis non c'e' stata). Il pezzo NON ha link a noi: GeoTapp e'
+  // solo testo nella didascalia e nella riga d'autore (letto sul grezzo il 10/11/2026), quindi niente
+  // `referrer`. Link a geotapp.com/da/ chiesto alla redazione il 10/11. Testata di Odsgard Forlag.
+  {
+    date: '2026-11-10',
+    outlet: 'BygTek',
+    title: 'Debat: Hvad tæller som dokumentation, når det er en anden, der har udført arbejdet?',
+    url: 'https://bygtek.dk/artikel/debat/debat-hvad-taeller-som-dokumentation-naar-det-er-en-anden-der-har-udfoert-arbejdet',
+    locale: 'da',
+    country: 'dk',
+    logo: '/press/bygtek.png',
+  },
+
   {
     date: '2026-11-05',
     outlet: 'Human Resources',
