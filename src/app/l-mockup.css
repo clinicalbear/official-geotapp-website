@@ -1224,6 +1224,8 @@ main:has(> .lp-l){padding-top:0}
 .covg .ti{line-height:1.4}
 /* la tabella delle pubblicazioni usa tutta la larghezza della pagina (10/11/2026), non i 1500px del contenitore */
 .covfull>.w{max-width:none}
+/* .lp-l li limita ogni elemento di lista a 72ch (659px): la tabella deve riempire la riga */
+.lp-l .covg li,.covg li{max-width:none}
 /* Su telefono la colonna del logo era larga 96px e il logo ci stava dentro alto
    30px: briciole illeggibili, ed e' l'unica cosa che dice a colpo d'occhio CHI
    ha scritto di noi. Qui la riga si impila: il logo va in cima grande quanto la
