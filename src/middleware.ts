@@ -2,7 +2,7 @@
 
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { LOCALE_COOKIE_NAME, SUPPORTED_LOCALES } from '@/lib/i18n/config';
+import { LOCALE_COOKIE_NAME, SUPPORTED_LOCALES, PUBLISHED_LOCALES, isSuspendedLocale } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import {
   getLocaleFromPathname,
@@ -369,8 +369,17 @@ function isDepublishedBlogTestUrl(url: string): boolean {
   }
 }
 
+/** /blog/<lingua sospesa>/... (es. /blog/ru/2026/...). Accetta un URL assoluto o un percorso. */
+function isSuspendedBlogPath(urlOrPath: string): boolean {
+  let p = urlOrPath;
+  try { p = new URL(urlOrPath, SITE_ORIGIN).pathname; } catch { /* percorso gia' relativo */ }
+  const m = p.match(/^\/blog\/([a-z]{2}(?:-[a-z]{2})?)(?:\/|$)/);
+  return !!m && isSuspendedLocale(m[1]);
+}
+
 async function buildFullSitemap(): Promise<string> {
-  const locales = SUPPORTED_LOCALES as readonly string[];
+  // Solo le lingue pubblicate: quelle sospese (SUSPENDED_LOCALES) restano fuori dalla sitemap.
+  const locales = PUBLISHED_LOCALES as readonly string[];
   const today = new Date().toISOString().split('T')[0];
 
   // 1. Locale pages: all locales × all routes with hreflang alternates.
@@ -554,6 +563,8 @@ async function buildFullSitemap(): Promise<string> {
     for (const row of rows) {
       const url = toUrl(row);
       if (isDepublishedBlogTestUrl(url)) continue;
+      // Articoli in una lingua sospesa: restano su WordPress, fuori dalla sitemap.
+      if ((row.gtmsa_lang && isSuspendedLocale(row.gtmsa_lang)) || isSuspendedBlogPath(url)) continue;
       if (seen.has(url)) continue;
       seen.add(url);
       const lastmod = (row.modified as string).split('T')[0];
@@ -656,6 +667,22 @@ export async function middleware(req: NextRequest) {
     res.headers.set('X-Content-Type-Options', 'nosniff');
     res.headers.set('Content-Security-Policy', 'frame-ancestors *');
     return res;
+  }
+
+  // 00. Lingue SOSPESE (SUSPENDED_LOCALES in lib/i18n/config.ts, dall'11/11/2026 il russo).
+  // Le pagine e gli articoli restano (niente cancellato): chi li apre va alla versione
+  // inglese con un 302 temporaneo, cosi' la riattivazione non lascia redirect permanenti
+  // in cache nei browser e nei motori. noindex sul redirect per toglierle dall'indice.
+  {
+    const first = pathname.split('/')[1] ?? '';
+    const isBlogSuspended = isSuspendedBlogPath(pathname);
+    if (isSuspendedLocale(first) || isBlogSuspended) {
+      const target = isBlogSuspended ? '/en/blog/' : '/en/';
+      const sospeso = NextResponse.redirect(new URL(target, req.url), 302);
+      sospeso.headers.set('X-Robots-Tag', 'noindex, follow');
+      sospeso.headers.set('Cache-Control', 'no-store');
+      return sospeso;
+    }
   }
 
   // 0. /{paese}/... → /{lingua}/... (308). Vedi COUNTRY_TO_LOCALE.

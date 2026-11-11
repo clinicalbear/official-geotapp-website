@@ -1,7 +1,7 @@
 
 
 import type { Metadata } from 'next';
-import { SUPPORTED_LOCALES } from '@/lib/i18n/config';
+import { PUBLISHED_LOCALES } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import { HREFLANG } from '@/lib/i18n/locale-metadata';
 import { HOME_META } from '@/lib/i18n/home-metadata';
@@ -273,7 +273,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // HREFLANG mappa importata da locale-metadata.ts (single source of truth, audit 2026-05-23).
   // Prima qui c'era una mappa inline che divergeva su en-* (en-us vs en-US): consolidata.
   const languages = Object.fromEntries(
-    SUPPORTED_LOCALES.map((l) => [HREFLANG[l] ?? l, `${BASE_URL}/${l}/`]),
+    PUBLISHED_LOCALES.map((l) => [HREFLANG[l] ?? l, `${BASE_URL}/${l}/`]),
   ) as Record<string, string>;
   languages['x-default'] = `${BASE_URL}/en/`;
 

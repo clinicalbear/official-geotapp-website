@@ -16,6 +16,7 @@ import LeadMagnetInline from '@/components/blog/LeadMagnetInline';
 import MapBackground from '@/components/blog/MapBackground';
 import Comments, { type CommentItem } from '@/components/blog/Comments';
 import { detectPostLocale } from '@/lib/blog-locale';
+import { isSuspendedLocale } from '@/lib/i18n/config';
 import { canonicalBlogPath, requestedBlogPath } from '@/lib/blog-canonical';
 import { sanitizeWpHtml } from '@/lib/sanitize-wp';
 import { tagliaAParola } from '@/lib/taglia-testo';
@@ -279,6 +280,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // il post stesso, quindi si emette solo se esiste almeno un'altra lingua.
   const languages: Record<string, string> = {};
   for (const [lang, link] of Object.entries(post.gt_translations ?? {})) {
+    // Lingua sospesa (es. ru): la traduzione resta su WordPress ma non si annuncia.
+    if (isSuspendedLocale(lang)) continue;
     try {
       const u = new URL(link);
       const path = u.hostname === 'blog.geotapp.com' ? `/blog${u.pathname}` : u.pathname;

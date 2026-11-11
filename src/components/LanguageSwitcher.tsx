@@ -5,7 +5,7 @@ import { clsx } from 'clsx';
 import {
   LOCALE_COOKIE_NAME,
   LOCALE_LABELS,
-  SUPPORTED_LOCALES,
+  PUBLISHED_LOCALES,
   type AppLocale,
 } from '@/lib/i18n/config';
 import {
@@ -42,7 +42,7 @@ export default function LanguageSwitcher({
         }}
         className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 outline-none transition-colors hover:border-slate-300 focus:border-slate-400"
       >
-        {SUPPORTED_LOCALES.map((locale) => (
+        {PUBLISHED_LOCALES.map((locale) => (
           <option key={locale} value={locale}>
             {LOCALE_LABELS[locale]}
           </option>

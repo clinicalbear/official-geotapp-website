@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { SUPPORTED_LOCALES } from './config';
+import { PUBLISHED_LOCALES } from './config';
 import { translatePath } from './slug-map';
 import type { AppLocale } from './config';
 
@@ -103,7 +103,7 @@ export function buildLocaleAlternates(
   path: string,
 ): Metadata['alternates'] {
   const languages = Object.fromEntries(
-    SUPPORTED_LOCALES.map((l) => {
+    PUBLISHED_LOCALES.map((l) => {
       const localizedPath = translatePath(path, l as AppLocale);
       return [HREFLANG[l] ?? l, `${BASE}/${l}${localizedPath}`];
     }),

@@ -4,6 +4,7 @@ import {
   COUNTRY_TO_LOCALE,
   DEFAULT_LOCALE,
   SUPPORTED_LOCALES,
+  isSuspendedLocale,
   type AppLocale,
 } from './config';
 import { REVERSE_SLUG_MAP, translatePath } from './slug-map';
@@ -70,8 +71,9 @@ export function resolveLocale({
   countryCode,
   acceptLanguage,
 }: ResolveLocaleInput): AppLocale {
+  // Una lingua sospesa (SUSPENDED_LOCALES) non si sceglie mai da cookie o browser.
   const cookieMatch = normalizeLocaleCode(cookieLocale);
-  if (cookieMatch) {
+  if (cookieMatch && !isSuspendedLocale(cookieMatch)) {
     return cookieMatch;
   }
 
@@ -79,7 +81,7 @@ export function resolveLocale({
   // sul paese. Riflette la lingua che la persona LEGGE, ovunque si trovi fisicamente
   // (es. italiano espatriato a Berlino -> italiano, non tedesco). Il cookie resta
   // sopra a tutto (scelta esplicita dell'utente); il paese è la riserva.
-  const acceptLanguageMatch = parseAcceptLanguage(acceptLanguage)[0];
+  const acceptLanguageMatch = parseAcceptLanguage(acceptLanguage).filter((l) => !isSuspendedLocale(l))[0];
   if (acceptLanguageMatch) {
     return acceptLanguageMatch;
   }

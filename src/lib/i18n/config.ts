@@ -20,6 +20,26 @@ export const SUPPORTED_LOCALES = [
 
 export type AppLocale = (typeof SUPPORTED_LOCALES)[number];
 
+/**
+ * Lingue SOSPESE (11/11/2026, decisione di Mike): restano nel codice, nei
+ * dizionari e nel blog, ma non si pubblicano. Niente selettore, niente sitemap,
+ * niente hreflang, e il middleware rimanda con un 302 (temporaneo) chi apre
+ * /ru/... o /blog/ru/... alla versione inglese. Per riattivare basta svuotare
+ * questo elenco. Motivo del russo: sanzioni UE (Reg. 833/2014 art. 5n) e
+ * localizzazione dei dati (152-FZ art. 18.5), vedi
+ * docs/legale/localizzati-2026-11/RU/00-ricerca.md.
+ */
+export const SUSPENDED_LOCALES: ReadonlyArray<AppLocale> = ['ru'];
+
+export function isSuspendedLocale(locale: string): boolean {
+  return (SUSPENDED_LOCALES as readonly string[]).includes(locale);
+}
+
+/** Lingue pubblicate: quelle da mostrare, da mettere in sitemap e negli hreflang. */
+export const PUBLISHED_LOCALES: ReadonlyArray<AppLocale> = SUPPORTED_LOCALES.filter(
+  (l) => !isSuspendedLocale(l),
+);
+
 export const DEFAULT_LOCALE: AppLocale = 'it';
 
 export const LOCALE_COOKIE_NAME = 'geotapp_locale';
@@ -73,7 +93,7 @@ export const COUNTRY_TO_LOCALE: Partial<Record<string, AppLocale>> = {
   DK: 'da',
   SE: 'sv',
   NO: 'nb',
-  RU: 'ru',
+  // RU: 'ru' sospeso dall'11/11/2026 (vedi SUSPENDED_LOCALES): i visitatori dalla Russia ricadono sull'inglese.
 };
 
 /**
