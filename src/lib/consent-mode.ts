@@ -53,7 +53,12 @@ export function buildConsentDefaultScript(): string {
       var GDPR = ${JSON.stringify(GDPR_COUNTRIES)};
       var m = document.cookie.match(/(?:^|;\\s*)${GEO_COOKIE}=([A-Z]{2})/);
       var country = m ? m[1] : '';
-      var mode = (!country || GDPR.indexOf(country) !== -1) ? 'eu' : 'rest';
+      // Dall'11/11/2026 (decisione di Mike) il consenso si chiede in TUTTI i paesi:
+      // fuori dall'UE Analytics partiva attivo senza banner (US, CA, AU, RU...).
+      // Il ramo 'rest' resta nel codice ma non scatta piu'. GDPR e country restano
+      // calcolati per chi in futuro volesse un regime diverso per paese.
+      var mode = 'eu';
+      void GDPR; void country;
       gtag('consent', 'default', {
         analytics_storage: 'denied',
         ad_storage: 'denied',
