@@ -2,7 +2,8 @@
 
 // 24/09/2026: le entrate non usano piu' framer-motion (34 KB a ogni prima visita per una
 // dissolvenza) ma le classi .r di LEffetti, che fanno lo stesso in CSS su tutto il sito.
-import { PRESS_COVERAGE, hasPress, pressRel } from '@/lib/press/data';
+import { hasPress, pressRel } from '@/lib/press/data';
+import { useCopertura } from '@/lib/press/use-copertura';
 import { FEATURED_LABEL, featuredLabel } from '@/lib/press/labels';
 
 export { FEATURED_LABEL };
@@ -78,7 +79,8 @@ const styles = `
 
 export default function FeaturedIn({ locale }: { locale: string }) {
   // Same data source as /stampa: add a PressItem there and it shows up here too.
-  if (!hasPress(PRESS_COVERAGE)) return null;
+  const copertura = useCopertura();
+  if (!hasPress(copertura)) return null;
   const label = featuredLabel(locale);
 
   return (
@@ -104,10 +106,10 @@ export default function FeaturedIn({ locale }: { locale: string }) {
       <div className="featured-in-viewport">
         <div
           className="featured-in-track"
-          style={{ ['--fi-duration' as string]: `${Math.max(24, PRESS_COVERAGE.length * 7)}s` }}
+          style={{ ['--fi-duration' as string]: `${Math.max(24, copertura.length * 7)}s` }}
         >
           {[0, 1, 2].map((copy) =>
-            PRESS_COVERAGE.map((item) => (
+            copertura.map((item) => (
               <a
                 key={`${copy}-${item.outlet}`}
                 href={item.url}

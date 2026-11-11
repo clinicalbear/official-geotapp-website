@@ -43,7 +43,8 @@ const PRESS_SOCIALS: { label: string; href: string; Icon: ComponentType<{ size?:
 import type { SiteDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
 import { localizePath } from '@/lib/i18n/locale-routing';
-import { PRESS_RELEASES, PRESS_COVERAGE, hasPress, pressRel } from '@/lib/press/data';
+import { PRESS_RELEASES, hasPress, pressRel } from '@/lib/press/data';
+import { useCopertura } from '@/lib/press/use-copertura';
 import LNastro from '@/components/LNastro';
 import PressKitForm from '@/components/stampa/PressKitForm';
 import FeaturedIn from '@/components/FeaturedIn';
@@ -109,6 +110,7 @@ export default function StampaView({
   allResourcesLabel: string;
 }) {
   const { copied, copy } = useCopy();
+  const copertura = useCopertura();
   const facts = d.facts.filter((f) => !f.v.includes('{{'));
 
   return (
@@ -317,7 +319,7 @@ export default function StampaView({
       )}
 
       {/* ── pubblicazioni: chi ha scritto di noi ── */}
-      {hasPress(PRESS_COVERAGE) && (
+      {hasPress(copertura) && (
         <section className="sec warm covfull"><div className="w">
           <div className="hd">
             <h2 className="r">
@@ -331,7 +333,7 @@ export default function StampaView({
             </h2>
           </div>
           <ul className="rows covg">
-            {[...PRESS_COVERAGE].sort((a, b) => b.date.localeCompare(a.date)).map((item, i) => {
+            {[...copertura].sort((a, b) => b.date.localeCompare(a.date)).map((item, i) => {
               const riga = (
                 <>
                   <span className="lg">

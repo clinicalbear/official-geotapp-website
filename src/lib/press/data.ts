@@ -21,6 +21,9 @@ export type PressItem = {
                       // mostra la bandiera in pagina. Serve l'SVG in /public/flags/<country>.svg
   logo?: string;      // path in /public del logo della testata (opzionale)
   referrer?: PressReferrer; // banner di benvenuto a chi arriva cliccando il link nel pezzo (vedi referrer.ts)
+  visibleFrom?: string; // ISO con fuso ('2026-11-23T14:00:00+01:00'): prima di quel momento la voce NON compare ne' in /stampa
+                      // ne' nella fascia loghi. Serve per le uscite programmate: si prepara tutto in anticipo e il sito la mostra da solo.
+                      // Si valuta nel browser (vedi use-copertura.ts), quindi non serve un nuovo deploy a quell'ora.
   follow?: boolean;   // reciprocità rel: true = diamo dofollow SOLO a chi ci ha dato un link dofollow;
                       // assente/false = nofollow (chi ci cita in nofollow o senza link). Fonti autorevoli solo.
 };
@@ -58,6 +61,24 @@ export function pressRel(_item: PressItem): string {
 // VUOTI al lancio. Aggiungere una voce = la sezione compare da sola in pagina.
 export const PRESS_RELEASES: PressItem[] = [];
 export const PRESS_COVERAGE: PressItem[] = [
+  // Upphandling24 (SE), debattartikel a firma Michele Angelo Petraroli. Pubblicazione fissata dalla redazione
+  // (Bettina Bieberstein Lee, 11/11/2026) per il 23/11/2026 alle 14:00: `visibleFrom` tiene la voce spenta fino a
+  // quel momento, poi compare da sola in /stampa e nella fascia loghi (nessun deploy).
+  // DA VERIFICARE IL 23/11 con la pagina online: (1) l'URL: questo e' il collegamento corto di WordPress
+  // (?p=119533, dall'anteprima), che dopo la pubblicazione dovrebbe reindirizzare all'indirizzo vero; sostituirlo
+  // con quello definitivo; (2) il titolo esatto (questo e' quello che Mike ha scritto a Maria Agren e che sta nelle
+  // grafiche social); (3) se la riga d'autore ha un link a geotapp.com e con che `rel`: se c'e' va aggiunto
+  // `referrer` (banner) e `follow`; (4) testata indipendente (e' il giornale di Upphandling24, nessun gruppo noto).
+  {
+    date: '2026-11-23',
+    visibleFrom: '2026-11-23T14:00:00+01:00',
+    outlet: 'Upphandling24',
+    title: 'Avtalat på papper, följt i praktiken?',
+    url: 'https://upphandling24.se/?p=119533',
+    locale: 'sv',
+    country: 'se',
+    logo: '/press/upphandling24.png',
+  },
   // BygTek (DK), debatindlæg a firma Michele Angelo Petraroli, online dal 10/11/2026 (mail di
   // Daniel Christensen, journalist, 10/11 13:44). Proposto il 06/11 a redaktionen@odsgard.dk, solo per
   // il sito (l'edizione di BygTek-avis non c'e' stata). Il pezzo NON ha link a noi: GeoTapp e'
@@ -347,6 +368,11 @@ export const PRESS_COVERAGE: PressItem[] = [
     logo: '/press/logoHR.png',
   },
 ];
+
+/** Le voci visibili adesso. `adesso` null (render del server e primo render del browser) = solo quelle senza data di uscita. */
+export function pressVisibili(items: PressItem[], adesso: number | null): PressItem[] {
+  return items.filter((i) => !i.visibleFrom || (adesso !== null && Date.parse(i.visibleFrom) <= adesso));
+}
 
 export function hasPress(items: PressItem[]): boolean {
   return items.length > 0;
