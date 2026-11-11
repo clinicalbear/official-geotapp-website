@@ -1419,7 +1419,10 @@ section.recensioni-blocco+.fq,.recensioni-blocco+*+.fq,.rev+.fq{padding-top:clam
 /* l-footer.css e i fogli di pagina vincevano su queste regole: titoletti del pie' di pagina
    grandi e loghi "Presente su" contornati e sdoppiati. */
 footer.ft h3{font-size:12px!important;font-weight:500!important;letter-spacing:.16em!important;font-family:var(--font-body),sans-serif!important}
-footer.ft .listed svg{filter:brightness(0) invert(.86)!important}
+footer.ft .listed svg{filter:brightness(0) invert(.86)!important;transition:filter .3s}
+/* al passaggio tornano i colori veri, col contorno chiaro di 1px (l-footer.css) perche' i nomi scuri si leggano sul blu */
+footer.ft .listed a:hover svg, footer.ft .listed a:focus-visible svg{
+  filter:drop-shadow(1px 0 0 #F7F9FC) drop-shadow(-1px 0 0 #F7F9FC) drop-shadow(0 1px 0 #F7F9FC) drop-shadow(0 -1px 0 #F7F9FC)!important; opacity:1!important}
 summary>svg{display:none!important}
 @media(pointer:coarse){
   .lp-l input[type=checkbox],.lp-l input[type=radio]{width:22px!important;height:22px!important}
