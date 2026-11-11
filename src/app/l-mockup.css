@@ -1419,10 +1419,11 @@ section.recensioni-blocco+.fq,.recensioni-blocco+*+.fq,.rev+.fq{padding-top:clam
 /* l-footer.css e i fogli di pagina vincevano su queste regole: titoletti del pie' di pagina
    grandi e loghi "Presente su" contornati e sdoppiati. */
 footer.ft h3{font-size:12px!important;font-weight:500!important;letter-spacing:.16em!important;font-family:var(--font-body),sans-serif!important}
-footer.ft .listed svg{filter:brightness(0) invert(.86)!important;transition:filter .3s}
-/* al passaggio tornano i colori veri, col contorno chiaro di 1px (l-footer.css) perche' i nomi scuri si leggano sul blu */
+/* Stessa lista di filtri a riposo e al passaggio (brightness, invert, 4 drop-shadow): solo cosi' il browser sa interpolare e il cambio e' una dissolvenza, non uno scatto. */
+footer.ft .listed svg{filter:brightness(0) invert(.86) drop-shadow(0 0 0 rgba(247,249,252,0)) drop-shadow(-0 0 0 rgba(247,249,252,0)) drop-shadow(0 0 0 rgba(247,249,252,0)) drop-shadow(0 -0 0 rgba(247,249,252,0))!important;transition:filter .35s ease,opacity .35s ease}
+/* al passaggio tornano i colori veri, con un contorno chiaro di mezzo pixel per quattro lati (l-footer.css) perche' i nomi scuri si leggano sul blu */
 footer.ft .listed a:hover svg, footer.ft .listed a:focus-visible svg{
-  filter:drop-shadow(1px 0 0 #F7F9FC) drop-shadow(-1px 0 0 #F7F9FC) drop-shadow(0 1px 0 #F7F9FC) drop-shadow(0 -1px 0 #F7F9FC)!important; opacity:1!important}
+  filter:brightness(1) invert(0) drop-shadow(.5px 0 0 #F7F9FC) drop-shadow(-.5px 0 0 #F7F9FC) drop-shadow(0 .5px 0 #F7F9FC) drop-shadow(0 -.5px 0 #F7F9FC)!important; opacity:1!important}
 summary>svg{display:none!important}
 @media(pointer:coarse){
   .lp-l input[type=checkbox],.lp-l input[type=radio]{width:22px!important;height:22px!important}
