@@ -202,7 +202,7 @@ export default function VerifierContent({ copy, locale }: VerifierContentProps) 
       <section className="shot"><div className="wn"><div className="fitwrap">
         <div className="frame fit r-s"><div className="sheet">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/verifier-report.webp" alt="GeoTapp Verifier, report storico commessa con integrity check" loading="eager" fetchPriority="high" />
+          <img src="/verifier-report.webp" alt={`GeoTapp Verifier: ${dict.landing.hero_cta_report}`} loading="eager" fetchPriority="high" />
         </div></div>
       </div></div></section>
 

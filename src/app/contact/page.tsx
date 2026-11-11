@@ -171,7 +171,7 @@ export default function ContactPage() {
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="in"
                     style={{ borderColor: fieldBorder(formData.email) }}
-                    placeholder="mario@azienda.com"
+                    placeholder={dict.form.email_placeholder}
                   />
                 </div>
 

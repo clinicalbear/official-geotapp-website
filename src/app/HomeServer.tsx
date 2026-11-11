@@ -380,7 +380,7 @@ export default function Home({ locale, jrSlot, fqSlot }: { locale?: string; jrSl
             <div className="stage">
               <div className="sheet">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/verifier-report.webp" alt="Report sigillato GeoTapp" loading="lazy" />
+                <img src="/verifier-report.webp" alt={dict.landing.hero_cta_report} loading="lazy" />
               </div>
             </div>
           </div>
