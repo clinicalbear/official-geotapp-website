@@ -79,6 +79,22 @@ export const PRESS_COVERAGE: PressItem[] = [
     country: 'se',
     logo: '/press/upphandling24.png',
   },
+  // Computerworld (DK), klumme (rubrica d'opinione) a firma Michele Angelo Petraroli, online dal 12/11/2026
+  // alle 13:15 (redattore Qendrim Fazliu, debat@cw.dk; pitch del 26/10). Il pezzo NON ha link a noi: GeoTapp e'
+  // solo testo nella riga d'autore "Stifter af GeoTapp" (letto sul grezzo il 12/11/2026, zero `geotapp.com`),
+  // quindi niente `referrer`. Link a geotapp.com/da/ chiesto da Mike il 28/10 alle 11:56, nessuna risposta: non si
+  // richiede (decisione di Mike, 12/11). Il riquadro "Annonceindlaeg tema Cloud & AI" nella pagina e' un banner
+  // pubblicitario automatico del sito (rel="sponsored"), non il pezzo: uscita non sponsorizzata. Proprieta' della
+  // testata (gruppo editoriale) non verificata.
+  {
+    date: '2026-11-12',
+    outlet: 'Computerworld',
+    title: 'Jeres it-systemer ved mere om medarbejderne, end I måske tror',
+    url: 'https://www.computerworld.dk/art/297496/jeres-it-systemer-ved-mere-om-medarbejderne-end-i-maaske-tror',
+    locale: 'da',
+    country: 'dk',
+    logo: '/press/computerworld.png',
+  },
   // BygTek (DK), debatindlæg a firma Michele Angelo Petraroli, online dal 10/11/2026 (mail di
   // Daniel Christensen, journalist, 10/11 13:44). Proposto il 06/11 a redaktionen@odsgard.dk, solo per
   // il sito (l'edizione di BygTek-avis non c'e' stata). Il pezzo NON ha link a noi: GeoTapp e'
