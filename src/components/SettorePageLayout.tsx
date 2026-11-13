@@ -574,7 +574,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
       {content.cosa_cambia && (
         <section className="sec ink">
           <div className="w">
-            <h2 className="r" style={{ textAlign: 'center', marginBottom: 52, ...(content.cosa_cambia.title.length > 40 ? { maxWidth: 'none', fontSize: 'clamp(22px, 2.3vw, 36px)' } : {}) }}>{content.cosa_cambia.title}</h2>
+            <h2 className="r" style={{ textAlign: 'center', marginBottom: 52, ...(content.cosa_cambia.title.length > 40 ? { maxWidth: 'none', fontSize: 'clamp(20px, 2vw, 32px)' } : {}) }}>{content.cosa_cambia.title}</h2>
             <div className="grid3">
               {content.cosa_cambia.items.map((item, i) => (
                 <article key={i} className={`cardn r d${Math.min(i + 1, 4)}`}>
