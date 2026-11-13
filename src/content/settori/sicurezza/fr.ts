@@ -134,6 +134,39 @@ const content: SettoreContent = {
     ],
   },
 
+  // Modulo Emergenze (13/11/2026): explanation on the sector page, requested by Mike.
+  // Cautious wording: the plan belongs to the customer, notifications may not
+  // arrive, no "certification".
+  cosa_cambia: {
+    title: 'Urgences et exercices : votre plan, activable d\'une simple pression',
+    items: [
+      {
+        title: 'Plan du site avec sorties et équipements',
+        desc: 'Chargez le plan du site ou de l\'événement, en image ou en PDF, et repérez les sorties, les points de rassemblement, les extincteurs, les défibrillateurs et les accès des secours. Dessinez les zones et, pour chacune, l\'ordre des sorties. Le plan reste le vôtre : GeoTapp le rend activable, il ne le remplace pas et ne le valide pas.',
+      },
+      {
+        title: 'Protocoles et équipes selon les attestations',
+        desc: 'Pour chaque scénario, comme un incendie, une évacuation ou un malaise, rédigez les étapes et les rôles. GeoTapp signale quand une équipe n\'a aucun membre dont l\'attestation est valable à la date de l\'événement, et rappelle les échéances des attestations et des vérifications du matériel que vous avez saisies. La décision vous revient.',
+      },
+      {
+        title: 'Déclenchement avec double confirmation',
+        desc: 'Le coordinateur choisit le scénario et touche sur le plan le point du danger. Chaque membre de l\'équipe reçoit sur son téléphone son rôle, les étapes et les sorties dans l\'ordre, sans celles qui sont bloquées ou proches du danger. Une notification peut ne pas arriver, par exemple si le téléphone est éteint : c\'est pourquoi chacun confirme.',
+      },
+      {
+        title: 'Qui a répondu, et en combien de temps',
+        desc: 'Chacun répond d\'une pression : présent, j\'arrive, je ne peux pas. Le tableau de bord montre qui a répondu et après combien de temps, relance ceux qui manquent et, si une sortie est bloquée, met à jour les sorties de tous.',
+      },
+      {
+        title: 'Exercices avec temps mesurés',
+        desc: 'Le même déroulement en mode exercice : aucun secours n\'est appelé, et les temps de réponse de chacun sont conservés, à exporter en PDF ou en CSV.',
+      },
+      {
+        title: 'Le plan sur le téléphone, même sans réseau',
+        desc: 'Le PDF du plan d\'urgence est téléchargé à l\'avance sur le téléphone de chaque membre de l\'équipe et s\'ouvre sans connexion. Le journal de qui a fait quoi est chaîné : une entrée modifiée après coup ne correspond plus aux autres.',
+      },
+    ],
+  },
+
   cta_mid: {
     title: 'Vous voulez voir comment ça fonctionne sur un vrai cas de contestation ?',
     body: 'Essayez-le sur le service réel, de l\'agent qui pointe à son poste au rapport que reçoit le donneur d\'ordre : 14 jours gratuits, sans carte bancaire.',

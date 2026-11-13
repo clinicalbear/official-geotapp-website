@@ -132,6 +132,39 @@ const content: SettoreContent = {
     ],
   },
 
+  // Modulo Emergenze (13/11/2026): explanation on the sector page, requested by Mike.
+  // Cautious wording: the plan belongs to the customer, notifications may not
+  // arrive, no "certification".
+  cosa_cambia: {
+    title: 'Emergências e simulacros: o seu plano, ativável com um toque',
+    items: [
+      {
+        title: 'Planta com saídas e meios',
+        desc: 'Carregue a planta do local ou do evento, em imagem ou PDF, e assinale saídas, pontos de reunião, extintores, desfibrilhadores e acessos dos meios de socorro. Desenhe as zonas e, para cada uma, a ordem das saídas. O plano continua a ser seu: a GeoTapp torna-o ativável, não o substitui nem o valida.',
+      },
+      {
+        title: 'Protocolos e equipas por certificado',
+        desc: 'Para cada cenário, como incêndio, evacuação ou mal-estar, escreva os passos e as funções. A GeoTapp assinala quando numa equipa falta alguém com o certificado válido na data do evento, e lembra os prazos dos certificados e das verificações dos meios que tiver registado. A decisão continua a ser sua.',
+      },
+      {
+        title: 'Ativação com dupla confirmação',
+        desc: 'O coordenador escolhe o cenário e toca na planta o ponto do perigo. Cada elemento da equipa recebe no telemóvel a sua função, os passos e as saídas por ordem, sem as que estão bloqueadas ou perto do perigo. Uma notificação pode não chegar, por exemplo com o telemóvel desligado: por isso cada um confirma.',
+      },
+      {
+        title: 'Quem respondeu, e em quanto tempo',
+        desc: 'Cada um responde com um toque: presente, a caminho, não posso. O painel mostra quem respondeu e ao fim de quanto tempo, volta a avisar quem falta e, se uma saída estiver bloqueada, atualiza as saídas de todos.',
+      },
+      {
+        title: 'Simulacros com os tempos medidos',
+        desc: 'O mesmo fluxo em modo simulacro: não se chama nenhum socorro e ficam os tempos de resposta de cada um, para exportar em PDF ou CSV.',
+      },
+      {
+        title: 'O plano no telemóvel, mesmo sem rede',
+        desc: 'O PDF do plano de emergência é descarregado com antecedência para o telemóvel de quem está na equipa e abre-se sem ligação. O registo de quem fez o quê é encadeado: uma entrada alterada depois já não corresponde às restantes.',
+      },
+    ],
+  },
+
   cta_mid: {
     title: 'Quer ver como funciona num caso real de contestação?',
     body: 'Experimente no serviço real, do vigilante que pica o ponto no posto atribuído ao relatório que o cliente recebe: 14 dias grátis, sem cartão de crédito.',

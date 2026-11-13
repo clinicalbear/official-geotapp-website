@@ -132,6 +132,39 @@ const content: SettoreContent = {
     ],
   },
 
+  // Modulo Emergenze (13/11/2026): spiegazione nella pagina di settore,
+  // richiesta di Mike. Linguaggio prudente (scheda claim): il piano e' del
+  // cliente, le notifiche possono non arrivare, nessuna "certificazione".
+  cosa_cambia: {
+    title: 'Emergenze ed esercitazioni: il vostro piano, attivabile con un tocco',
+    items: [
+      {
+        title: 'Planimetria con uscite e presidi',
+        desc: 'Caricate la pianta del sito o dell\'evento, come immagine o PDF, e segnate uscite, punti di raccolta, estintori, defibrillatori e accessi dei soccorsi. Disegnate le zone e, per ognuna, l\'ordine delle uscite. Il piano resta vostro: GeoTapp lo rende attivabile, non lo sostituisce e non lo valida.',
+      },
+      {
+        title: 'Protocolli e squadre per attestato',
+        desc: 'Per ogni scenario, come incendio, evacuazione o malore, scrivete i passi e i ruoli. GeoTapp segnala se in una squadra manca un addetto con l\'attestato valido alla data dell\'evento, e ricorda le scadenze di attestati e verifiche dei presidi che avete inserito. La decisione resta vostra.',
+      },
+      {
+        title: 'Attivazione con doppia conferma',
+        desc: 'Il coordinatore sceglie lo scenario e tocca sulla pianta il punto del pericolo. Ogni persona della squadra riceve sul telefono il suo ruolo, i passi e le uscite in ordine, senza quelle bloccate o vicine al pericolo. Una notifica può non arrivare, per esempio a telefono spento: per questo ognuno conferma.',
+      },
+      {
+        title: 'Chi ha risposto, e in quanto tempo',
+        desc: 'Ognuno risponde con un tocco: presente, in arrivo, non posso. Il cruscotto mostra chi ha risposto e dopo quanto, risollecita chi manca e, se un\'uscita è bloccata, aggiorna le uscite di tutti.',
+      },
+      {
+        title: 'Esercitazioni con i tempi misurati',
+        desc: 'Lo stesso flusso in modalità esercitazione: non si chiama nessun soccorso e restano i tempi di risposta di ciascuno, da esportare in PDF o CSV.',
+      },
+      {
+        title: 'Il piano sul telefono, anche senza rete',
+        desc: 'Il PDF del piano di emergenza viene scaricato in anticipo sul telefono di chi è in squadra e si apre anche senza connessione. La cronologia di chi ha fatto cosa è a catena: una voce modificata dopo non torna più con le altre.',
+      },
+    ],
+  },
+
   cta_mid: {
     title: 'Vuoi vedere come funziona su un caso reale di contestazione?',
     body: 'Provalo sul servizio vero, dalla guardia che timbra al posto assegnato al report che riceve il committente: 14 giorni gratis, senza carta di credito.',

@@ -132,6 +132,39 @@ const content: SettoreContent = {
     ],
   },
 
+  // Modulo Emergenze (13/11/2026): explanation on the sector page, requested by Mike.
+  // Cautious wording: the plan belongs to the customer, notifications may not
+  // arrive, no "certification".
+  cosa_cambia: {
+    title: 'Notfälle und Übungen: Ihr Plan, mit einem Tipp aktivierbar',
+    items: [
+      {
+        title: 'Lageplan mit Ausgängen und Ausstattung',
+        desc: 'Laden Sie den Plan des Objekts oder der Veranstaltung als Bild oder PDF hoch und markieren Sie Ausgänge, Sammelplätze, Feuerlöscher, Defibrillatoren und Zufahrten für Rettungskräfte. Zeichnen Sie die Zonen und legen Sie für jede die Reihenfolge der Ausgänge fest. Der Plan bleibt Ihrer: GeoTapp macht ihn aktivierbar, ersetzt ihn nicht und prüft ihn nicht.',
+      },
+      {
+        title: 'Abläufe und Teams nach Nachweis',
+        desc: 'Schreiben Sie für jedes Szenario, etwa Brand, Evakuierung oder medizinischer Notfall, die Schritte und Rollen auf. GeoTapp weist darauf hin, wenn in einem Team niemand einen am Veranstaltungstag gültigen Nachweis hat, und erinnert an Ablaufdaten von Nachweisen und Prüfungen der Ausstattung, die Sie erfasst haben. Die Entscheidung bleibt bei Ihnen.',
+      },
+      {
+        title: 'Auslösung mit doppelter Bestätigung',
+        desc: 'Die Einsatzleitung wählt das Szenario und tippt auf dem Plan die Gefahrenstelle an. Jede Person im Team erhält auf dem Telefon ihre Rolle, die Schritte und die Ausgänge in der richtigen Reihenfolge, ohne gesperrte oder nahe der Gefahr liegende. Eine Benachrichtigung kann ausbleiben, zum Beispiel bei ausgeschaltetem Telefon: Deshalb bestätigt jede Person selbst.',
+      },
+      {
+        title: 'Wer geantwortet hat, und wie schnell',
+        desc: 'Jede Person antwortet mit einem Tipp: da, unterwegs, kann nicht. Das Dashboard zeigt, wer wann geantwortet hat, erinnert die, die fehlen, und aktualisiert bei einem gesperrten Ausgang die Ausgänge für alle.',
+      },
+      {
+        title: 'Übungen mit gemessenen Zeiten',
+        desc: 'Derselbe Ablauf im Übungsmodus: Es wird kein Rettungsdienst gerufen, und die Antwortzeiten jeder Person bleiben gespeichert, exportierbar als PDF oder CSV.',
+      },
+      {
+        title: 'Der Plan auf dem Telefon, auch ohne Netz',
+        desc: 'Das PDF des Notfallplans wird vorab auf das Telefon der Teammitglieder geladen und öffnet sich auch ohne Verbindung. Der Verlauf, wer was getan hat, ist verkettet: Ein nachträglich geänderter Eintrag passt nicht mehr zu den anderen.',
+      },
+    ],
+  },
+
   cta_mid: {
     title: 'Sie möchten sehen, wie es in einem echten Streitfall funktioniert?',
     body: 'Testen Sie es an einem echten Einsatz, von der Sicherheitskraft, die am zugewiesenen Posten stempelt, bis zum Bericht, den der Auftraggeber erhält: 14 Tage kostenlos, ohne Kreditkarte.',

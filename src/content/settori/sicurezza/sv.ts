@@ -132,6 +132,39 @@ const content: SettoreContent = {
     ],
   },
 
+  // Modulo Emergenze (13/11/2026): explanation on the sector page, requested by Mike.
+  // Cautious wording: the plan belongs to the customer, notifications may not
+  // arrive, no "certification".
+  cosa_cambia: {
+    title: 'Nödlägen och övningar: din plan, redo med en tryckning',
+    items: [
+      {
+        title: 'Planritning med utgångar och utrustning',
+        desc: 'Ladda upp planen över platsen eller evenemanget som bild eller PDF och markera utgångar, samlingsplatser, brandsläckare, hjärtstartare och tillfarter för räddningstjänst. Rita zonerna och ange ordningen på utgångarna för varje zon. Planen är fortfarande din: GeoTapp gör den möjlig att aktivera, men ersätter den inte och godkänner den inte.',
+      },
+      {
+        title: 'Rutiner och lag efter intyg',
+        desc: 'Skriv stegen och rollerna för varje scenario, till exempel brand, utrymning eller akut sjukdom. GeoTapp varnar om ett lag saknar någon med ett intyg som är giltigt på evenemangets datum, och påminner om när intyg och kontroller av utrustning går ut, de du har lagt in. Beslutet är fortfarande ditt.',
+      },
+      {
+        title: 'Aktivering med dubbel bekräftelse',
+        desc: 'Koordinatorn väljer scenario och trycker på planen där faran finns. Varje person i laget får sin roll, stegen och utgångarna i ordning på telefonen, utan de som är blockerade eller nära faran. En avisering kan utebli, till exempel om telefonen är avstängd: därför bekräftar alla själva.',
+      },
+      {
+        title: 'Vem har svarat, och hur snabbt',
+        desc: 'Alla svarar med en tryckning: på plats, på väg, kan inte. Översikten visar vem som har svarat och efter hur lång tid, påminner dem som saknas och uppdaterar utgångarna för alla om en utgång är blockerad.',
+      },
+      {
+        title: 'Övningar med uppmätta tider',
+        desc: 'Samma flöde i övningsläge: ingen räddningstjänst larmas, och allas svarstider sparas, redo att exporteras som PDF eller CSV.',
+      },
+      {
+        title: 'Planen i telefonen, även utan nät',
+        desc: 'PDF:en med nödplanen laddas ned i förväg till telefonen hos dem som ingår i laget och öppnas utan uppkoppling. Tidslinjen över vem som gjorde vad är kedjad: en post som ändrats i efterhand stämmer inte längre med de andra.',
+      },
+    ],
+  },
+
   cta_mid: {
     title: 'Vill du se hur det fungerar i en riktig tvist?',
     body: 'Testa det på den riktiga tjänsten, från väktaren som stämplar på sin post till rapporten som beställaren får: 14 dagar gratis, utan kreditkort.',

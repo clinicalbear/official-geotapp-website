@@ -132,6 +132,39 @@ const content: SettoreContent = {
     ],
   },
 
+  // Modulo Emergenze (13/11/2026): explanation on the sector page, requested by Mike.
+  // Cautious wording: the plan belongs to the customer, notifications may not
+  // arrive, no "certification".
+  cosa_cambia: {
+    title: 'Nødsituationer og øvelser: din plan, klar med et tryk',
+    items: [
+      {
+        title: 'Plantegning med udgange og udstyr',
+        desc: 'Upload planen over stedet eller arrangementet som billede eller PDF, og marker udgange, samlingssteder, brandslukkere, hjertestartere og adgang for redningsmandskab. Tegn zonerne og angiv rækkefølgen af udgange for hver zone. Planen forbliver din: GeoTapp gør den klar til brug, men erstatter den ikke og godkender den ikke.',
+      },
+      {
+        title: 'Protokoller og hold efter certifikat',
+        desc: 'Skriv trinene og rollerne for hvert scenarie, for eksempel brand, evakuering eller ildebefindende. GeoTapp giver besked, hvis der på et hold ikke er en person med et certifikat, der er gyldigt på arrangementets dato, og minder dig om udløb af certifikater og eftersyn af udstyr, som du har lagt ind. Beslutningen er stadig din.',
+      },
+      {
+        title: 'Aktivering med dobbelt bekræftelse',
+        desc: 'Koordinatoren vælger scenariet og trykker på planen, hvor faren er. Hver person på holdet får sin rolle, trinene og udgangene i rækkefølge på telefonen, uden dem der er spærret eller tæt på faren. En notifikation kan udeblive, for eksempel hvis telefonen er slukket: derfor bekræfter alle selv.',
+      },
+      {
+        title: 'Hvem har svaret, og hvor hurtigt',
+        desc: 'Alle svarer med et tryk: til stede, på vej, kan ikke. Overblikket viser, hvem der har svaret og efter hvor lang tid, minder dem der mangler, og opdaterer udgangene for alle, hvis en udgang er spærret.',
+      },
+      {
+        title: 'Øvelser med målte tider',
+        desc: 'Samme forløb i øvelsestilstand: Der kaldes ingen redning, og hver persons svartider bliver gemt, så de kan eksporteres som PDF eller CSV.',
+      },
+      {
+        title: 'Planen på telefonen, også uden net',
+        desc: 'PDF\'en med nødplanen hentes på forhånd til telefonen hos dem på holdet og kan åbnes uden forbindelse. Tidslinjen over, hvem der har gjort hvad, er kædet sammen: En post, der er ændret bagefter, passer ikke længere sammen med de andre.',
+      },
+    ],
+  },
+
   cta_mid: {
     title: 'Vil du se, hvordan det virker i en rigtig tvist?',
     body: 'Prøv det på den rigtige opgave, fra vagten, der stempler på sin post, til rapporten, som kunden modtager: 14 dage gratis, uden kreditkort.',

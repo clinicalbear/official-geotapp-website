@@ -132,6 +132,39 @@ const content: SettoreContent = {
     ],
   },
 
+  // Modulo Emergenze (13/11/2026): explanation on the sector page, requested by Mike.
+  // Cautious wording: the plan belongs to the customer, notifications may not
+  // arrive, no "certification".
+  cosa_cambia: {
+    title: 'Emergencies and drills: your plan, ready to activate with one tap',
+    items: [
+      {
+        title: 'Floor plan with exits and equipment',
+        desc: 'Upload the plan of the site or event, as an image or PDF, and mark exits, assembly points, extinguishers, defibrillators and rescue access points. Draw the zones and set the order of exits for each one. The plan stays yours: GeoTapp makes it actionable, it does not replace it or validate it.',
+      },
+      {
+        title: 'Protocols and teams by certificate',
+        desc: 'For each scenario, such as fire, evacuation or a medical emergency, write the steps and roles. GeoTapp flags when a team has no member with a certificate valid on the event date, and reminds you of the certificate expiries and equipment checks you have entered. The decision stays with you.',
+      },
+      {
+        title: 'Activation with double confirmation',
+        desc: 'The coordinator picks the scenario and taps the danger point on the plan. Each team member receives their role, the steps and the exits in order on their phone, leaving out the ones that are blocked or close to the danger. A notification may not arrive, for example if the phone is off: that is why everyone confirms.',
+      },
+      {
+        title: 'Who replied, and how fast',
+        desc: 'Everyone replies with a tap: present, on my way, can\'t. The dashboard shows who replied and after how long, chases those who haven\'t and, if an exit is blocked, updates the exits for everyone.',
+      },
+      {
+        title: 'Drills with timed responses',
+        desc: 'The same flow in drill mode: no emergency service is called, and each person\'s response times are kept, ready to export as PDF or CSV.',
+      },
+      {
+        title: 'The plan on the phone, even offline',
+        desc: 'The PDF of the emergency plan is downloaded in advance to the phone of each team member and opens without a connection. The timeline of who did what is chained: an entry modified afterwards no longer matches the others.',
+      },
+    ],
+  },
+
   cta_mid: {
     title: 'Want to see how it handles a real dispute?',
     body: 'Try it on a real service, from the guard clocking in at the assigned post to the report the client receives: 14 days free, no credit card.',

@@ -132,6 +132,39 @@ const content: SettoreContent = {
     ],
   },
 
+  // Modulo Emergenze (13/11/2026): explanation on the sector page, requested by Mike.
+  // Cautious wording: the plan belongs to the customer, notifications may not
+  // arrive, no "certification".
+  cosa_cambia: {
+    title: 'Noodgevallen en oefeningen: uw plan, met één tik te activeren',
+    items: [
+      {
+        title: 'Plattegrond met uitgangen en middelen',
+        desc: 'Upload de plattegrond van de locatie of het evenement, als afbeelding of pdf, en markeer uitgangen, verzamelpunten, brandblussers, defibrillatoren en toegangen voor hulpdiensten. Teken de zones en bepaal per zone de volgorde van de uitgangen. Het plan blijft van u: GeoTapp maakt het activeerbaar, vervangt het niet en keurt het niet goed.',
+      },
+      {
+        title: 'Protocollen en teams per certificaat',
+        desc: 'Schrijf voor elk scenario, zoals brand, ontruiming of onwel worden, de stappen en rollen op. GeoTapp meldt wanneer in een team niemand een certificaat heeft dat op de dag van het evenement geldig is, en herinnert u aan de vervaldata van certificaten en controles van middelen die u hebt ingevoerd. De beslissing blijft bij u.',
+      },
+      {
+        title: 'Activering met dubbele bevestiging',
+        desc: 'De coördinator kiest het scenario en tikt op de plattegrond het gevaarpunt aan. Elk teamlid krijgt op de telefoon de eigen rol, de stappen en de uitgangen op volgorde, zonder de uitgangen die geblokkeerd zijn of dicht bij het gevaar liggen. Een melding kan uitblijven, bijvoorbeeld als de telefoon uit staat: daarom bevestigt iedereen zelf.',
+      },
+      {
+        title: 'Wie heeft gereageerd, en hoe snel',
+        desc: 'Iedereen reageert met een tik: aanwezig, onderweg, kan niet. Het dashboard toont wie heeft gereageerd en na hoeveel tijd, herinnert wie nog ontbreekt en werkt bij een geblokkeerde uitgang de uitgangen voor iedereen bij.',
+      },
+      {
+        title: 'Oefeningen met gemeten tijden',
+        desc: 'Dezelfde werkwijze in oefenmodus: er worden geen hulpdiensten gebeld en de reactietijden van ieder blijven bewaard, te exporteren als pdf of CSV.',
+      },
+      {
+        title: 'Het plan op de telefoon, ook zonder verbinding',
+        desc: 'De pdf van het noodplan wordt vooraf naar de telefoon van de teamleden gedownload en opent ook zonder verbinding. De tijdlijn van wie wat heeft gedaan is geketend: een achteraf gewijzigde regel past niet meer bij de andere.',
+      },
+    ],
+  },
+
   cta_mid: {
     title: 'Wilt u zien hoe het werkt bij een echt geval van betwisting?',
     body: 'Probeer het op de echte dienst, van de bewaker die op de toegewezen post registreert tot het rapport dat de opdrachtgever ontvangt: 14 dagen gratis, zonder creditcard.',

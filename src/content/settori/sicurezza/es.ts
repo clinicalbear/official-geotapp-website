@@ -132,6 +132,39 @@ const content: SettoreContent = {
     ],
   },
 
+  // Modulo Emergenze (13/11/2026): explanation on the sector page, requested by Mike.
+  // Cautious wording: the plan belongs to the customer, notifications may not
+  // arrive, no "certification".
+  cosa_cambia: {
+    title: 'Emergencias y simulacros: tu plan, activable con un toque',
+    items: [
+      {
+        title: 'Plano con salidas y medios',
+        desc: 'Sube el plano del recinto o del evento, como imagen o PDF, y marca salidas, puntos de reunión, extintores, desfibriladores y accesos de los servicios de emergencia. Dibuja las zonas y, para cada una, el orden de las salidas. El plan sigue siendo tuyo: GeoTapp lo hace activable, no lo sustituye ni lo valida.',
+      },
+      {
+        title: 'Protocolos y equipos según acreditaciones',
+        desc: 'Para cada escenario, como incendio, evacuación o malestar, escribe los pasos y los roles. GeoTapp avisa si en un equipo falta una persona con la acreditación vigente en la fecha del evento, y recuerda los vencimientos de acreditaciones y revisiones de los medios que hayas introducido. La decisión sigue siendo tuya.',
+      },
+      {
+        title: 'Activación con doble confirmación',
+        desc: 'El coordinador elige el escenario y toca en el plano el punto del peligro. Cada persona del equipo recibe en su teléfono su rol, los pasos y las salidas en orden, sin las bloqueadas o cercanas al peligro. Una notificación puede no llegar, por ejemplo con el teléfono apagado: por eso cada uno confirma.',
+      },
+      {
+        title: 'Quién ha respondido, y en cuánto tiempo',
+        desc: 'Cada uno responde con un toque: presente, voy, no puedo. El panel muestra quién ha respondido y cuánto ha tardado, vuelve a avisar a quien falta y, si una salida está bloqueada, actualiza las salidas de todos.',
+      },
+      {
+        title: 'Simulacros con los tiempos medidos',
+        desc: 'El mismo flujo en modo simulacro: no se llama a ningún servicio de emergencia y se conservan los tiempos de respuesta de cada uno, para exportar en PDF o CSV.',
+      },
+      {
+        title: 'El plan en el teléfono, también sin cobertura',
+        desc: 'El PDF del plan de emergencia se descarga con antelación en el teléfono de quienes están en el equipo y se abre sin conexión. El historial de quién hizo qué está encadenado: una entrada modificada después ya no coincide con las demás.',
+      },
+    ],
+  },
+
   cta_mid: {
     title: '¿Quieres ver cómo funciona en un caso real de disputa?',
     body: 'Pruébalo en el servicio real, desde el vigilante que ficha en el puesto asignado hasta el informe que recibe el cliente: 14 días gratis, sin tarjeta de crédito.',
