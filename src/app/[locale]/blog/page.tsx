@@ -9,6 +9,7 @@ import BlogClient, { type Post } from './BlogClient';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { detectPostLocale } from '@/lib/blog-locale';
 import { mapLimit, sharedPeek, sharedSWR } from '@/lib/shared-swr';
+import { wpImmagine } from '@/lib/wp-webp';
 
 const WP = 'https://blog.geotapp.com';
 const HEADERS = { host: 'blog.geotapp.com', 'x-geotapp-proxy': '1', 'x-forwarded-proto': 'https' };
@@ -123,7 +124,7 @@ async function fetchMediaMap(ids: number[]): Promise<Map<number, string>> {
     const map = new Map<number, string>();
     for (const m of data) {
       const sizes = m.media_details?.sizes ?? {};
-      const url = (sizes.medium_large ?? sizes.large ?? sizes.medium ?? sizes.full)?.source_url ?? m.source_url;
+      const url = wpImmagine((sizes.medium_large ?? sizes.large ?? sizes.medium ?? sizes.full)?.source_url ?? m.source_url);
       if (url) map.set(m.id, url);
     }
     return map;

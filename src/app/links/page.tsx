@@ -20,6 +20,7 @@ import type { Metadata } from 'next';
 import LinksClient, { type Article } from './LinksClient';
 import { detectPostLocale } from '@/lib/blog-locale';
 import { blogPostPath, getPostIndex } from '@/lib/wp-post-index';
+import { wpImmagine } from '@/lib/wp-webp';
 
 // Render on demand (stesso pattern dell'hub blog): con ISR la pagina veniva
 // pre-renderizzata in build, dove le fetch WP falliscono → cache vuota per 1h
@@ -117,7 +118,7 @@ async function getLatestArticles(): Promise<Article[]> {
               sizes?.large?.source_url ??
               sizes?.medium?.source_url ??
               m.source_url;
-            if (url) mediaMap[m.id] = url;
+            if (url) mediaMap[m.id] = wpImmagine(url);
           }
         }
       } catch {

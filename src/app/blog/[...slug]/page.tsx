@@ -21,6 +21,7 @@ import { canonicalBlogPath, requestedBlogPath } from '@/lib/blog-canonical';
 import { sanitizeWpHtml } from '@/lib/sanitize-wp';
 import { tagliaAParola } from '@/lib/taglia-testo';
 import { blogFaqJsonLd, extractBlogFaq } from '@/lib/blog-faq';
+import { wpImmagine } from '@/lib/wp-webp';
 
 export const dynamic = 'force-dynamic';
 
@@ -154,7 +155,7 @@ function resolvePostData(post: WPPost, locale: string) {
 
   const media = post._embedded?.['wp:featuredmedia']?.[0];
   const sizes = media?.media_details?.sizes ?? {};
-  const featuredImage = sizes.large?.source_url ?? sizes.medium_large?.source_url ?? sizes.medium?.source_url ?? media?.source_url ?? null;
+  const featuredImage = wpImmagine(sizes.large?.source_url ?? sizes.medium_large?.source_url ?? sizes.medium?.source_url ?? media?.source_url ?? null);
 
   const categories = post._embedded?.['wp:term']?.[0]?.map((t) => ({ id: t.id, slug: t.slug, name: t.name })) ?? [];
 
@@ -210,7 +211,7 @@ function mapRelatedPost(p: any): RelatedPost {
     excerpt: tagliaAParola(stripHtml(p.excerpt?.rendered ?? ''), 140),
     date: p.date,
     url: normalizeUrl(p.link, p.slug),
-    image: p._embedded?.['wp:featuredmedia']?.[0]?.source_url ?? null,
+    image: wpImmagine(p._embedded?.['wp:featuredmedia']?.[0]?.source_url ?? null),
   };
 }
 

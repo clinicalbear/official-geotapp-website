@@ -10,6 +10,7 @@
  * (SSR/server components, dove jsdom/DOMPurify non girano) sia nel browser.
  */
 import { FilterXSS, getDefaultWhiteList } from 'xss';
+import { wpHtmlImmagini } from './wp-webp';
 
 // Estende l'allowlist di default con i tag/attributi che WordPress emette
 // davvero nei nostri articoli: figure/figcaption, iframe per embed video,
@@ -48,5 +49,5 @@ const filter = new FilterXSS({
 /** Sanitizza HTML WordPress per il rendering via dangerouslySetInnerHTML. */
 export function sanitizeWpHtml(html: string): string {
   if (!html) return '';
-  return filter.process(html);
+  return wpHtmlImmagini(filter.process(html));
 }

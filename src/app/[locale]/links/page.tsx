@@ -3,6 +3,7 @@ import './l-page.css';
 import LinksClient, { type Article, type Sector } from '../../links/LinksClient';
 import { detectPostLocale, toBlogLocale } from '@/lib/blog-locale';
 import { getPostIndex, type WpIndexPost } from '@/lib/wp-post-index';
+import { wpImmagine } from '@/lib/wp-webp';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 // Render on demand (stesso pattern dell'hub blog): con ISR la pagina veniva
@@ -178,7 +179,7 @@ async function fetchMediaMap(ids: number[]): Promise<Record<number, string>> {
   const map: Record<number, string> = {};
   for (const m of data) {
     const s = m.media_details?.sizes;
-    const url = s?.medium_large?.source_url ?? s?.large?.source_url ?? s?.medium?.source_url ?? m.source_url;
+    const url = wpImmagine(s?.medium_large?.source_url ?? s?.large?.source_url ?? s?.medium?.source_url ?? m.source_url);
     if (url) map[m.id] = url;
   }
   return map;
