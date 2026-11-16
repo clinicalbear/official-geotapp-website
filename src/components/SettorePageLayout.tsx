@@ -84,7 +84,7 @@ function CmpTable({
 const DEEPEN_LABEL: Record<string, string> = {
   it: 'Approfondisci', en: 'Go deeper', de: 'Mehr dazu', fr: 'Approfondir', es: 'Profundizar',
   pt: 'Aprofundar', nl: 'Lees verder', sv: 'Läs vidare', da: 'Gå mere i dybden', nb: 'Gå dypere',
-  ru: 'Подробнее',
+  el: 'Μάθε περισσότερα', ru: 'Подробнее',
 };
 
 const CLASSIC_CLOCKIN: Record<string, string> = {

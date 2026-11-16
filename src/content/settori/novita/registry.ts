@@ -91,9 +91,16 @@ export const IMPIANTI_RIMANDI: SettoreSlug[] = ['elettricisti', 'idraulici'];
 
 export const SHOTS_BASE = '/img/novita-2026-11';
 
-/** Cartella delle immagini per locale: en-us, en-gb... usano la cartella `en`. */
+/**
+ * Lingue senza schermate proprie: usano quelle di un'altra lingua (mappatura esplicita,
+ * nessun file duplicato). Il greco mostra le schermate inglesi finche' non ci sono le sue.
+ */
+export const SHOTS_FOLDER_FALLBACK: Readonly<Record<string, string>> = { el: 'en' };
+
+/** Cartella delle immagini per locale: en-us, en-gb... usano la cartella `en`, el usa `en`. */
 export function shotsFolder(locale: string): string {
-  return locale.split('-')[0];
+  const base = locale.split('-')[0];
+  return SHOTS_FOLDER_FALLBACK[base] ?? base;
 }
 
 /** Percorso pubblico di una schermata. */

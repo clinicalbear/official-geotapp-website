@@ -760,10 +760,12 @@ export async function middleware(req: NextRequest) {
     const m = pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\/([a-z-]+)\/([a-z-]+)\/?$/);
     if (m) {
       const [, loc, parent, child] = m;
-      const sectorsSlug = (SLUG_MAP['settori'] as Record<string, string>)?.[loc];
+      // Il greco non ha slug tradotti (usa quelli italiani): senza questo ripiego i due
+      // doppioni ritirati risponderebbero 404 invece del 301.
+      const sectorsSlug = (SLUG_MAP['settori'] as Record<string, string>)?.[loc] ?? (loc === 'el' ? 'settori' : undefined);
       for (const [dead, live] of RITIRATI) {
-        const deadSlug = (SLUG_MAP[dead] as Record<string, string>)?.[loc];
-        const liveSlug = (SLUG_MAP[live] as Record<string, string>)?.[loc];
+        const deadSlug = (SLUG_MAP[dead] as Record<string, string>)?.[loc] ?? (loc === 'el' ? dead : undefined);
+        const liveSlug = (SLUG_MAP[live] as Record<string, string>)?.[loc] ?? (loc === 'el' ? live : undefined);
         if (sectorsSlug && deadSlug && liveSlug && parent === sectorsSlug && child === deadSlug) {
           return NextResponse.redirect(new URL(`/${loc}/${sectorsSlug}/${liveSlug}/`, req.url), 301);
         }
