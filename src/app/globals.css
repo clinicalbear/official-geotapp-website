@@ -1248,16 +1248,15 @@ footer button:focus-visible {
    ══════════════════════════════════════════════════════════════════════ */
 
 h1, h2, h3, h4, .l-display, .big {
-  overflow-wrap: anywhere;
+  /* Mai una parola spezzata a meta': `break-word` taglia solo se la parola da sola
+     non sta nella riga, e prima public/ibrida/titoli.js rimpicciolisce il titolo. */
+  overflow-wrap: break-word;
+  hyphens: manual;
   text-wrap: balance;
 }
 
-/* Sillabazione solo dove la lingua la sopporta e dove il testo e' lungo.
-   `lang` sta sull'<html>, lo mette [locale]/layout.tsx. */
-:lang(de) h1, :lang(de) h2, :lang(nl) h1, :lang(nl) h2,
-:lang(da) h1, :lang(da) h2, :lang(sv) h1, :lang(sv) h2, :lang(nb) h1, :lang(nb) h2 {
-  hyphens: auto;
-}
+/* Niente sillabazione automatica nei titoli (16/11/2026, Mike: "veramente brutto da vedere"):
+   in tedesco, olandese e lingue nordiche tagliava "Stempelung" in due righe. */
 
 /* Tedesco e olandese scendono di un gradino sull'apertura: "Arbeitszeiterfassung"
    in un titolone non ci sta, e si prevede in partenza invece di scoprirlo dopo. */
