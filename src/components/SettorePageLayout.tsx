@@ -642,7 +642,7 @@ export default function SettorePageLayout({ content, locale, settore, children }
         <section className="sec">
           <div className="wt" style={{ textAlign: 'center' }}>
             <ShieldCheck className="r" style={{ margin: '0 auto 22px', color: 'var(--seal-testo)' }} size={44} />
-            <h2 className="r d1">{content.trust.title}</h2>
+            <h2 className="r d1">{content.trust.title.split(/(?<=[.!?])\s+/).map((frase, i) => (i === 0 ? frase : <span key={i}><br />{frase}</span>))}</h2>
             <p className="r d2" style={{ margin: '20px auto 0', maxWidth: '64ch', color: '#475467' }}>{content.trust.body}</p>
             <div className="r d3" style={{ marginTop: 28 }}><GeoBadge>{content.trust.badge}</GeoBadge></div>
           </div>
