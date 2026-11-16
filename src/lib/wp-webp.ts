@@ -2,7 +2,8 @@
  * Immagini del blog servite in WebP al posto dei PNG/JPG pesanti.
  *
  * Il 13/11/2026 le immagini di wp-content/uploads sopra i 100 KB (1.428, 982 MB in
- * tutto) sono state convertite in WebP e caricate ACCANTO all'originale con il
+ * tutto) sono state convertite (il 16/11 anche le altre misure di WordPress e i
+ * vecchi WebP rimasti pesanti) in WebP e caricate ACCANTO all'originale con il
  * suffisso `-w.webp` (`foto-1024x585.png` -> `foto-1024x585-w.webp`). Gli originali
  * restano sul server e gli articoli in WordPress non sono stati toccati: lo scambio
  * avviene qui, al momento del render, solo per i percorsi elencati in
@@ -17,11 +18,11 @@ const CONVERTITE: ReadonlySet<string> = new Set(elenco as string[]);
 
 // geotapp.com/blog/... e il vecchio blog.geotapp.com/... (che fa 301 al primo).
 const UPLOAD_RE =
-  /https?:\/\/(?:www\.)?(?:geotapp\.com\/blog|blog\.geotapp\.com)\/wp-content\/uploads\/([^\s"'<>(),]+?\.(?:png|jpe?g))/gi;
+  /https?:\/\/(?:www\.)?(?:geotapp\.com\/blog|blog\.geotapp\.com)\/wp-content\/uploads\/([^\s"'<>(),]+?\.(?:png|jpe?g|webp))/gi;
 
 function scambia(percorso: string): string | null {
   if (!CONVERTITE.has(percorso)) return null;
-  return `https://geotapp.com/blog/wp-content/uploads/${percorso.replace(/\.(?:png|jpe?g)$/i, '-w.webp')}`;
+  return `https://geotapp.com/blog/wp-content/uploads/${percorso.replace(/\.(?:png|jpe?g|webp)$/i, '-w.webp')}`;
 }
 
 /** URL di un'immagine del blog: la versione WebP se esiste, altrimenti quella di prima. */

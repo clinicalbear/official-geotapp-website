@@ -12,6 +12,11 @@ describe('immagini del blog in WebP', () => {
     expect(wpImmagine(FUORI)).toBe(FUORI);
     expect(wpImmagine(null)).toBeNull();
   });
+  it('scambia anche i vecchi WebP pesanti, ma mai una copia -w.webp', () => {
+    const vecchio = 'https://geotapp.com/blog/wp-content/uploads/2026/03/Gemini_Generated_Image_z0mbxnz0mbxnz0mb.webp';
+    expect(wpImmagine(vecchio)).toBe(WEBP);
+    expect(wpImmagine(WEBP)).toBe(WEBP);
+  });
   it('vale anche per il vecchio dominio blog.geotapp.com', () => {
     expect(wpImmagine(PNG.replace('geotapp.com/blog', 'blog.geotapp.com'))).toBe(WEBP);
   });
