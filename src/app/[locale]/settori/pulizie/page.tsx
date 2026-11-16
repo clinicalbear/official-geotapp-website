@@ -5,6 +5,7 @@ import { DEFAULT_LOCALE, type AppLocale } from '@/lib/i18n/config';
 import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
 import { getPulizieContent } from '@/content/settori/pulizie';
 import SettorePageLayout from '@/components/SettorePageLayout';
+import NovitaStrumenti from '@/components/NovitaStrumenti';
 import BlogHighlights from '@/components/BlogHighlights';
 import { getCurrencyForLocale } from '@/lib/pricing';
 
@@ -77,7 +78,7 @@ export default async function PulizieLocalePage({
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApp) }} />
-      <SettorePageLayout content={content} locale={resolvedLocale} settore="pulizie">
+      <SettorePageLayout content={content} locale={resolvedLocale} settore="pulizie" novita={<NovitaStrumenti settore="pulizie" locale={resolvedLocale} />}>
         <BlogHighlights locale={resolvedLocale} categoryId={9} />
       </SettorePageLayout>
     </>

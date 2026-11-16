@@ -34,6 +34,8 @@ interface Props {
   content: SettoreContent;
   locale: AppLocale;
   settore: SettoreSlug;
+  /** Sezione "nuovi strumenti di settore" (server component, gia' resa dalla pagina). */
+  novita?: React.ReactNode;
   children?: React.ReactNode;
 }
 
@@ -120,7 +122,7 @@ const mockupFallback = (locale: string, key: 'operator' | 'opening' | 'closing',
     : locale === 'ru' ? MOCKUP_FALLBACK_RU[key]
     : it;
 
-export default function SettorePageLayout({ content, locale, settore, children }: Props) {
+export default function SettorePageLayout({ content, locale, settore, novita, children }: Props) {
   const trialLink = localizePath('/trial', locale);
   const pricingLink = localizePath('/pricing', locale);
   const dict = getDictionary(locale) as any;
@@ -587,6 +589,9 @@ export default function SettorePageLayout({ content, locale, settore, children }
           </div>
         </section>
       )}
+
+      {/* ── NUOVI STRUMENTI DI SETTORE (novembre 2026) ── */}
+      {novita}
 
       {/* ── TESTIMONIAL: solo se ha una fonte verificabile ── */}
       {content.testimonial.fonte && (

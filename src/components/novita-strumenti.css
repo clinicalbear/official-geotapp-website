@@ -1,0 +1,36 @@
+/* Sezione "nuovi strumenti di settore" (16/11/2026). Colori dal tema del sito: niente navy sulla barra,
+   fondo chiaro, ombre neutre "da Mac" (--mac-sm da ibrida.css). */
+.nv-novita .nv-intro { max-width: 68ch; color: #475467; margin-top: 18px; }
+.nv-novita .nv-tool { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 52px; align-items: start; padding: 56px 0; border-top: 1px solid rgba(11, 23, 54, .14); }
+.nv-novita .nv-tool:first-of-type { margin-top: 44px; }
+.nv-novita .nv-tool h3 { font-family: var(--font-display); font-weight: 800; font-size: clamp(22px, 2.2vw, 30px); letter-spacing: -.01em; margin-bottom: 14px; overflow-wrap: break-word; hyphens: auto; }
+.nv-novita .nv-tool p { color: #344054; line-height: 1.65; max-width: 56ch; }
+.nv-novita .nv-tool p + p { margin-top: 12px; }
+.nv-novita .nv-note { font-size: 14px; color: #475467; border-left: 2px solid var(--seal-testo); padding-left: 12px; }
+.nv-novita .nv-flowonly { font-size: 13.5px; color: #667085; }
+.nv-novita .nv-shots { display: flex; gap: 22px; align-items: flex-start; min-width: 0; }
+.nv-novita .nv-flowcol { flex: 1 1 0; min-width: 0; display: grid; gap: 14px; }
+.nv-novita .nv-phonecol { flex: 0 0 min(210px, 30%); display: grid; gap: 14px; }
+.nv-novita .nv-fig { margin: 0; }
+.nv-novita .nv-fig img { display: block; width: 100%; height: auto; border-radius: 12px; box-shadow: var(--mac-sm); background: #fff; }
+.nv-novita .nv-fig figcaption { margin-top: 8px; font-size: 12.5px; color: #667085; }
+.nv-novita .nv-fig[hidden] { display: none; }
+.nv-novita .nv-more { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+/* Emergenze: galleria piu' larga, sotto il testo */
+.nv-novita .nv-tool.nv-wide { grid-template-columns: 1fr; }
+.nv-novita .nv-tool.nv-wide p { max-width: 78ch; }
+.nv-novita .nv-gal-flow { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.nv-novita .nv-gal-flow .nv-fig:first-child { grid-column: 1 / -1; }
+.nv-novita .nv-gal-phone { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin-top: 28px; }
+.nv-novita .nv-links { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: baseline; color: #475467; }
+.nv-novita .nv-links a { font-weight: 700; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 1000px) {
+  .nv-novita .nv-tool { grid-template-columns: 1fr; gap: 28px; padding: 40px 0; }
+  .nv-novita .nv-gal-phone { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .nv-novita .nv-shots { flex-direction: column; }
+  .nv-novita .nv-phonecol { flex-basis: auto; width: min(240px, 70%); grid-template-columns: 1fr; }
+  .nv-novita .nv-gal-flow { grid-template-columns: 1fr; }
+  .nv-novita .nv-gal-phone { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
