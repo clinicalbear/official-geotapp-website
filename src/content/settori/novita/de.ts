@@ -14,6 +14,7 @@ const copy: NovitaCopy = {
     close: 'Schließen',
     prev: 'Zurück',
     next: 'Weiter',
+    allSectors: 'Für alle Branchen',
   },
   sections: {
     sicurezza: {

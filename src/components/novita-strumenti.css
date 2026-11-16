@@ -39,6 +39,7 @@
 .nv-novita .nv-tool + .nv-tool { margin-top: 0; }
 .nv-novita .nv-rev { grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); }
 .nv-novita .nv-rev .nv-text { order: 2; }
+.nv-novita .nv-tag { font-family: var(--font-mono, 'IBM Plex Mono', monospace); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--seal-testo); margin-bottom: 10px; }
 .nv-novita .nv-text h3 { font-size: clamp(22px, 2.1vw, 30px); letter-spacing: -.01em; margin-bottom: 14px; overflow-wrap: normal; hyphens: manual; }
 .nv-novita .nv-text p { color: #344054; line-height: 1.65; max-width: 52ch; }
 .nv-novita .nv-text p + p { margin-top: 12px; }

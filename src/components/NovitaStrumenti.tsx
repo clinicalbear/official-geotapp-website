@@ -5,7 +5,7 @@ import { localizePath } from '@/lib/i18n/locale-routing';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { SettoreSlug } from '@/content/settori/types';
 import { getNovitaCopy } from '@/content/settori/novita';
-import { HERO_TOOL, IMPIANTI_RIMANDI, SETTORE_TOOLS, TOOL_SHOTS, shotSrc } from '@/content/settori/novita/registry';
+import { COMMON_TOOLS, HERO_TOOL, IMPIANTI_RIMANDI, SETTORE_TOOLS, TOOL_SHOTS, shotSrc } from '@/content/settori/novita/registry';
 import type { NovitaCopy, ToolKey } from '@/content/settori/novita/types';
 import { HeroShots, ToolMedia, type Shot } from './NovitaMedia';
 
@@ -42,13 +42,14 @@ export async function NovitaHero({ settore, locale }: { settore: SettoreSlug; lo
   return <HeroShots flow={flow[0]} phone={phone[0]} />;
 }
 
-function Tool({ k, copy, locale, rev }: { k: ToolKey; copy: NovitaCopy; locale: AppLocale; rev: boolean }) {
+function Tool({ k, copy, locale, rev, common }: { k: ToolKey; copy: NovitaCopy; locale: AppLocale; rev: boolean; common?: boolean }) {
   const t = copy.tools[k];
   const { flow, phone } = shotsOf(k, copy, locale);
   const ui = copy.ui;
   return (
     <article className={`nv-tool${rev ? ' nv-rev' : ''}`} id={`strumento-${k}`}>
       <div className="nv-text">
+        {common ? <p className="nv-tag">{ui.allSectors}</p> : null}
         <h3>{t.title}</h3>
         <p>{t.body}</p>
         {t.note ? <p className="nv-note">{t.note}</p> : null}
@@ -81,6 +82,7 @@ export default async function NovitaStrumenti({ settore, locale }: { settore: Se
   if (!def) return null;
   const copy = await getNovitaCopy(locale);
   const sec = copy.sections[def.section];
+  const tools = [...def.tools, ...COMMON_TOOLS.filter((k) => !def.tools.includes(k))];
   const dict = getDictionary(locale) as any;
   return (
     <section className="sec nv-novita st-alt" id="nuovi-strumenti">
@@ -92,8 +94,8 @@ export default async function NovitaStrumenti({ settore, locale }: { settore: Se
           </div>
           <p className="nv-intro">{sec.intro}</p>
         </div>
-        {def.tools.map((k, i) => (
-          <Tool key={k} k={k} copy={copy} locale={locale} rev={i % 2 === 1} />
+        {tools.map((k, i) => (
+          <Tool key={k} k={k} copy={copy} locale={locale} rev={i % 2 === 1} common={!def.tools.includes(k)} />
         ))}
         {sec.outro ? <p className="nv-intro nv-outro">{sec.outro}</p> : null}
         {def.section === 'impianti' ? (

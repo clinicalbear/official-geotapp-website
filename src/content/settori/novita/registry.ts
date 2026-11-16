@@ -49,6 +49,8 @@ export const TOOL_SHOTS: Record<ToolKey, ToolShots> = {
 export const SETTORE_TOOLS: Partial<Record<SettoreSlug, { section: NovitaSectionKey; tools: ToolKey[] }>> = {
   sicurezza: { section: 'sicurezza', tools: ['giro_ronda', 'lavoratore_isolato', 'consegne_turno', 'emergenze'] },
   pulizie: { section: 'pulizie', tools: ['qualita_pulizie', 'schede_consumi'] },
+  // impresa-di-pulizie oggi risponde con un 301 a pulizie: la voce c'e' perche' la pagina, se tornasse, abbia gli stessi strumenti.
+  'impresa-di-pulizie': { section: 'pulizie', tools: ['qualita_pulizie', 'schede_consumi'] },
   elettricisti: { section: 'elettricisti', tools: ['verifiche_misure', 'impianti_terra'] },
   edilizia: { section: 'edilizia', tools: ['documenti_imprese', 'congruita'] },
   idraulici: { section: 'idraulici', tools: ['caldaie', 'fgas'] },
@@ -71,6 +73,7 @@ export const SETTORE_TOOLS: Partial<Record<SettoreSlug, { section: NovitaSection
 export const HERO_TOOL: Partial<Record<SettoreSlug, ToolKey>> = {
   sicurezza: 'giro_ronda',
   pulizie: 'qualita_pulizie',
+  'impresa-di-pulizie': 'qualita_pulizie',
   elettricisti: 'verifiche_misure',
   edilizia: 'documenti_imprese',
   idraulici: 'caldaie',
@@ -79,6 +82,9 @@ export const HERO_TOOL: Partial<Record<SettoreSlug, ToolKey>> = {
   impianti: 'consegna_firma',
   manutenzione: 'sla',
 };
+
+/** Strumenti validi per tutte le aziende: stanno in fondo alla sezione di ogni pagina di settore (sicurezza li ha gia' tra i suoi). */
+export const COMMON_TOOLS: ToolKey[] = ['emergenze'];
 
 /** Pagine di settore verso cui la sezione "impianti" rimanda. */
 export const IMPIANTI_RIMANDI: SettoreSlug[] = ['elettricisti', 'idraulici'];

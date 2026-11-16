@@ -14,6 +14,7 @@ const copy: NovitaCopy = {
     close: 'Luk',
     prev: 'Forrige',
     next: 'Næste',
+    allSectors: 'Til alle brancher',
   },
   sections: {
     sicurezza: {

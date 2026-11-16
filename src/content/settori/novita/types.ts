@@ -69,6 +69,8 @@ export interface NovitaCopy {
     close: string;
     prev: string;
     next: string;
+    /** Etichetta degli strumenti comuni a tutte le pagine di settore (Emergenze). */
+    allSectors: string;
   };
   sections: Record<NovitaSectionKey, { title: string; intro: string; outro?: string }>;
   tools: Record<ToolKey, NovitaToolText>;

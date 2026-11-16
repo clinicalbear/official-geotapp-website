@@ -14,6 +14,7 @@ const copy: NovitaCopy = {
     close: 'Lukk',
     prev: 'Forrige',
     next: 'Neste',
+    allSectors: 'For alle bransjer',
   },
   sections: {
     sicurezza: {
