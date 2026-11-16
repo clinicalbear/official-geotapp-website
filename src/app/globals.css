@@ -1248,22 +1248,33 @@ footer button:focus-visible {
    ══════════════════════════════════════════════════════════════════════ */
 
 h1, h2, h3, h4, .l-display, .big {
-  overflow-wrap: anywhere;
+  /* Mike, 16/11/2026: nei titoli nessuna parola va a capo spezzata, in nessuna lingua.
+     Se una parola non ci sta si riduce il titolo (vedi sotto e scripts/controlla-titoli.mjs). */
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: manual;
   text-wrap: balance;
 }
 
 /* Sillabazione solo dove la lingua la sopporta e dove il testo e' lungo.
    `lang` sta sull'<html>, lo mette [locale]/layout.tsx. */
-:lang(de) h1, :lang(de) h2, :lang(nl) h1, :lang(nl) h2,
-:lang(da) h1, :lang(da) h2, :lang(sv) h1, :lang(sv) h2, :lang(nb) h1, :lang(nb) h2 {
-  hyphens: auto;
-}
+/* Sillabazione dei titoli tolta il 16/11/2026: le parole composte non si spezzano piu'. */
 
 /* Tedesco e olandese scendono di un gradino sull'apertura: "Arbeitszeiterfassung"
    in un titolone non ci sta, e si prevede in partenza invece di scoprirlo dopo. */
 :lang(de) .l-hero-h1, :lang(nl) .l-hero-h1,
 :lang(de) .big, :lang(nl) .big {
   font-size: clamp(28px, 4vw, 48px);
+}
+
+/* Sul telefono le lingue con parole composte lunghe (danese "vedligeholdelseshold",
+   olandese "schoonmaakbedrijven") scendono ancora: la parola intera deve stare nella riga,
+   senza spezzarla (regola di Mike, 16/11/2026). Misurato con scripts/controlla-titoli.mjs. */
+@media (max-width: 480px) {
+  :root:lang(de) h1, :root:lang(nl) h1, :root:lang(da) h1, :root:lang(sv) h1,
+  :root:lang(nb) h1, :root:lang(el) h1, :root:lang(fi) h1 {
+    font-size: clamp(24px, 7.2vw, 36px);
+  }
 }
 
 /* Le cifre si incolonnano: tabelle, prezzi, metriche. */
