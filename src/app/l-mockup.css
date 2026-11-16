@@ -1316,7 +1316,7 @@ a[class*="bg-emerald-500"]{background-color:#10b981 !important;color:#fff !impor
    contenuto piu' largo, e allargava trial, demo, contatti, pagine legali, settori
    e confronti oltre lo schermo. La pagina non scorreva: il testo veniva tagliato. */
 .lp-l article,.lp-l .tr>*,.lp-l .gl>*,.lp-l .two>*,.lp-l .grid3>*,.lp-l .tbl .rw>*,.lp-l .cmp .rw>*{min-width:0;overflow-wrap:anywhere}
-.lp-l h2,.lp-l h3,.lp-l .cardn b{overflow-wrap:break-word;hyphens:manual}
+.lp-l h2,.lp-l h3,.lp-l .cardn b{overflow-wrap:normal;hyphens:manual}
 .lp-l .side a,.lp-l .side p{overflow-wrap:anywhere}
 .lp-l .gl>.side,.lp-l .gl>.body{max-width:100%}
 .lp-l p,.lp-l li,.lp-l dd{text-wrap:pretty}
@@ -1333,7 +1333,7 @@ a[class*="bg-emerald-500"]{background-color:#10b981 !important;color:#fff !impor
 input::placeholder,textarea::placeholder{color:#667085}
 .ft input::placeholder,.ink input::placeholder,.news input::placeholder{color:#B8C2D6}
 @media (max-width:480px){
-  .lp-l h1,.lp-l h2,.lp-l h3{overflow-wrap:break-word}
+  .lp-l h1,.lp-l h2,.lp-l h3{overflow-wrap:normal}
   .lp-l .w>*,.lp-l .wt>*,.lp-l .wn>*{min-width:0;max-width:100%}
   .form{padding:28px 18px}
   .lp-l .tbl .hd2{font-size:.9375rem}

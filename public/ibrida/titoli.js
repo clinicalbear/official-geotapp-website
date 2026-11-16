@@ -2,7 +2,7 @@
    1) Il trattino dentro una parola composta ("e-mail", "quatre-vingts", "GPS-Zeiterfassung")
       e' un punto in cui il browser va a capo: si blocca con il WORD JOINER (U+2060, largo zero).
    2) Se una parola da sola non sta nella riga, si rimpicciolisce il titolo (fino al 62%)
-      invece di spezzarla. Il CSS (overflow-wrap: break-word) resta come ultima risorsa. */
+      invece di spezzarla. Solo se nemmeno al 62% la parola sta, si ricorre a break-word. */
 (function () {
   var SEL = 'h1,h2,h3,h4,.l-display,.big,.cardn b';
   var HY = /(\p{L})-(?=\p{L})/gu;
@@ -22,14 +22,15 @@
   function fit(el) {
     if (el.clientWidth < 8) return; // titoli solo per lettori di schermo
     el.style.fontSize = '';
-    el.style.overflowWrap = 'normal';
+    el.style.setProperty('overflow-wrap', 'normal', 'important');
     var base = parseFloat(getComputedStyle(el).fontSize);
     var min = base * 0.62, fs = base, g = 0;
-    while (el.scrollWidth > el.clientWidth + 1 && fs > min && g++ < 40) {
+    while (el.scrollWidth > el.clientWidth && fs > min && g++ < 40) {
       fs -= 1;
       el.style.fontSize = fs + 'px';
     }
-    el.style.overflowWrap = '';
+    if (el.scrollWidth > el.clientWidth) el.style.setProperty('overflow-wrap', 'break-word', 'important');
+    else el.style.removeProperty('overflow-wrap');
     if (fs === base) el.style.fontSize = '';
   }
 
