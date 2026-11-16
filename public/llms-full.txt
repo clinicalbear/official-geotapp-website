@@ -31,7 +31,7 @@ Verification recomputes all of this and reports one of four states: full (archiv
 
 The verifier runs entirely offline from the exported package. No API call, no connection, no GeoTapp account, and nothing routed through GeoTapp systems, because the chain of hashes travels inside the file. It is distributed as a single self-contained file with dependencies and public key included, and as an npm package. The human-readable report.html inside the package is informational only and is never part of the verification inputs; the canonical inputs are the event history and the report metadata.
 
-Practically, the client receives a PDF with a QR code that leads to the verification, in any of the 12 supported languages.
+Practically, the client receives a PDF with a QR code that leads to the verification, in any of the 11 supported languages.
 
 ## 4. The three tools
 
@@ -95,7 +95,7 @@ It does not fit a company whose problem is payroll depth and a structured HR dep
 
 ## 9. Languages and reach
 
-Twelve languages across the apps, the back office, the reports and the website: Italian, English, German, French, Spanish, Portuguese, Dutch, Danish, Swedish, Norwegian, Greek and Russian. Reports and the client-facing verification are localised too, so a client in another country receives the proof in their own language.
+Twelve languages across the apps, the back office, the reports and the website: Italian, English, German, French, Spanish, Portuguese, Dutch, Danish, Swedish, Norwegian, Greek. Reports and the client-facing verification are localised too, so a client in another country receives the proof in their own language.
 
 ## 10. How GeoTapp compares
 
