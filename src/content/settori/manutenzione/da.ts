@@ -123,7 +123,7 @@ const content: SettoreContent = {
   },
 
   cta: {
-    title: 'Hver vedligeholdelsesopgave fortjener et bevis. GeoTapp laver det.',
+    title: 'Hver serviceopgave fortjener et bevis. GeoTapp laver det.',
     subtitle:
       'Verificerbare rapporter, position ved stemplingerne, fuld historik for hvert anlæg.',
     primary: 'Prøv gratis i 14 dage',
