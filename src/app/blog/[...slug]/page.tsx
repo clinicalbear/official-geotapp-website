@@ -21,7 +21,7 @@ import { canonicalBlogPath, requestedBlogPath } from '@/lib/blog-canonical';
 import { sanitizeWpHtml } from '@/lib/sanitize-wp';
 import { tagliaAParola } from '@/lib/taglia-testo';
 import { blogFaqJsonLd, extractBlogFaq } from '@/lib/blog-faq';
-import { wpImmagine } from '@/lib/wp-webp';
+import { aggiornaElencoWebp, wpImmagine } from '@/lib/wp-webp';
 
 export const dynamic = 'force-dynamic';
 
@@ -357,6 +357,7 @@ const ARTICLE_LEAD_MAGNETS: Record<string, string> = {
 };
 
 export default async function BlogArticlePage({ params }: Props) {
+  await aggiornaElencoWebp();
   const { slug } = await params;
   const { locale: urlLocale, articleSlug } = parseSlug(slug);
   const post = await fetchPost(articleSlug, urlLocale);

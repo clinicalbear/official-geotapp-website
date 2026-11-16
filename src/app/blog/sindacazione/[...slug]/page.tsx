@@ -15,6 +15,7 @@ import { notFound } from 'next/navigation';
 import { detectPostLocale } from '@/lib/blog-locale';
 import { canonicalBlogPath } from '@/lib/blog-canonical';
 import { sanitizeWpHtml } from '@/lib/sanitize-wp';
+import { aggiornaElencoWebp } from '@/lib/wp-webp';
 
 export const dynamic = 'force-dynamic';
 
@@ -107,6 +108,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function SyndicationPage({ params }: Props) {
+  await aggiornaElencoWebp();
   const { slug } = await params;
   const { locale: urlLocale, articleSlug } = parseSlug(slug);
   const post = await fetchPost(articleSlug, urlLocale);

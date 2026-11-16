@@ -20,7 +20,7 @@ import type { Metadata } from 'next';
 import LinksClient, { type Article } from './LinksClient';
 import { detectPostLocale } from '@/lib/blog-locale';
 import { blogPostPath, getPostIndex } from '@/lib/wp-post-index';
-import { wpImmagine } from '@/lib/wp-webp';
+import { aggiornaElencoWebp, wpImmagine } from '@/lib/wp-webp';
 
 // Render on demand (stesso pattern dell'hub blog): con ISR la pagina veniva
 // pre-renderizzata in build, dove le fetch WP falliscono → cache vuota per 1h
@@ -176,6 +176,7 @@ export const metadata: Metadata = {
 // ─── Page ────────────────────────────────────────────────────────────────────
 
 export default async function LinksPage() {
+  await aggiornaElencoWebp();
   const articles = await getLatestArticles();
   return <LinksClient articles={articles} />;
 }
