@@ -21,7 +21,7 @@ import { canonicalBlogPath, requestedBlogPath } from '@/lib/blog-canonical';
 import { sanitizeWpHtml } from '@/lib/sanitize-wp';
 import { tagliaAParola } from '@/lib/taglia-testo';
 import { blogFaqJsonLd, extractBlogFaq } from '@/lib/blog-faq';
-import { wpImmagine } from '@/lib/wp-webp';
+import { aggiornaElencoWebp, wpImmagine } from '@/lib/wp-webp';
 
 export const dynamic = 'force-dynamic';
 
@@ -203,6 +203,11 @@ interface RelatedPost {
   image: string | null;
 }
 
+function relatedImage(m: any): string | null {
+  const s = m?.media_details?.sizes ?? {};
+  return s.medium_large?.source_url ?? s.large?.source_url ?? s.medium?.source_url ?? m?.source_url ?? null;
+}
+
 function mapRelatedPost(p: any): RelatedPost {
   return {
     id: p.id,
@@ -211,7 +216,9 @@ function mapRelatedPost(p: any): RelatedPost {
     excerpt: tagliaAParola(stripHtml(p.excerpt?.rendered ?? ''), 140),
     date: p.date,
     url: normalizeUrl(p.link, p.slug),
-    image: wpImmagine(p._embedded?.['wp:featuredmedia']?.[0]?.source_url ?? null),
+    // La scheda del correlato e' piccola: misura 768 come nell'elenco del blog, non
+    // l'originale da 2560 px (che restava sopra i 100 KB anche in WebP, crawl 12/11).
+    image: wpImmagine(relatedImage(p._embedded?.['wp:featuredmedia']?.[0])),
   };
 }
 
@@ -350,6 +357,7 @@ const ARTICLE_LEAD_MAGNETS: Record<string, string> = {
 };
 
 export default async function BlogArticlePage({ params }: Props) {
+  await aggiornaElencoWebp();
   const { slug } = await params;
   const { locale: urlLocale, articleSlug } = parseSlug(slug);
   const post = await fetchPost(articleSlug, urlLocale);

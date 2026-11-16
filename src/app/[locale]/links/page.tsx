@@ -3,7 +3,7 @@ import './l-page.css';
 import LinksClient, { type Article, type Sector } from '../../links/LinksClient';
 import { detectPostLocale, toBlogLocale } from '@/lib/blog-locale';
 import { getPostIndex, type WpIndexPost } from '@/lib/wp-post-index';
-import { wpImmagine } from '@/lib/wp-webp';
+import { aggiornaElencoWebp, wpImmagine } from '@/lib/wp-webp';
 export { generateLocaleStaticParams as generateStaticParams } from '@/lib/i18n/static-params';
 
 // Render on demand (stesso pattern dell'hub blog): con ISR la pagina veniva
@@ -334,6 +334,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 export default async function LocaleLinksPage({ params }: { params: Promise<{ locale: string }> }) {
+  await aggiornaElencoWebp();
   const { locale } = await params;
   const articles = await getArticles(toBlogLocale(locale));
   return (

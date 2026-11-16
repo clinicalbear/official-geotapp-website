@@ -1248,17 +1248,17 @@ footer button:focus-visible {
    ══════════════════════════════════════════════════════════════════════ */
 
 h1, h2, h3, h4, .l-display, .big {
-  /* Mike, 16/11/2026: nei titoli nessuna parola va a capo spezzata, in nessuna lingua.
-     Se una parola non ci sta si riduce il titolo (vedi sotto e scripts/controlla-titoli.mjs). */
+  /* Mai una parola spezzata a meta'. Con `text-wrap: balance` anche `break-word` spezza
+     parole che stavano (il browser restringe la riga per bilanciare), quindi qui `normal`:
+     se una parola non sta, public/ibrida/titoli.js rimpicciolisce il titolo. */
   overflow-wrap: normal;
   word-break: normal;
   hyphens: manual;
   text-wrap: balance;
 }
 
-/* Sillabazione solo dove la lingua la sopporta e dove il testo e' lungo.
-   `lang` sta sull'<html>, lo mette [locale]/layout.tsx. */
-/* Sillabazione dei titoli tolta il 16/11/2026: le parole composte non si spezzano piu'. */
+/* Niente sillabazione automatica nei titoli (16/11/2026, Mike: "veramente brutto da vedere"):
+   in tedesco, olandese e lingue nordiche tagliava "Stempelung" in due righe. */
 
 /* Tedesco e olandese scendono di un gradino sull'apertura: "Arbeitszeiterfassung"
    in un titolone non ci sta, e si prevede in partenza invece di scoprirlo dopo. */

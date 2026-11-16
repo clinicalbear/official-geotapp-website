@@ -463,7 +463,7 @@ export default function SettorePageLayout({ content, locale, settore, novita, he
         <section className="sec st-alt st-proof">
           <div className="w">
             <div className="st-head">
-              <h2>{proofTitle}</h2>
+              <h2>{proofTitle.split(/(?<=[.!?])\s+/).map((frase, i) => (i === 0 ? frase : <span key={i}><br />{frase}</span>))}</h2>
               {content.trust ? (
                 <div>
                   <p>{content.trust.body}</p>
