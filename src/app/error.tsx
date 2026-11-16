@@ -13,6 +13,7 @@ const T: Record<string, { title: string; desc: string; retry: string }> = {
   da: { title: 'Noget gik galt!', desc: 'Vi beklager, der opstod en uventet fejl.', retry: 'Prøv igen' },
   sv: { title: 'Något gick fel!', desc: 'Vi ber om ursäkt, ett oväntat fel uppstod.', retry: 'Försök igen' },
   nb: { title: 'Noe gikk galt!', desc: 'Vi beklager, det oppstod en uventet feil.', retry: 'Prøv igjen' },
+  el: { title: 'Κάτι πήγε στραβά!', desc: 'Λυπούμαστε, παρουσιάστηκε ένα απρόβλεπτο σφάλμα.', retry: 'Δοκίμασε ξανά' },
   ru: { title: 'Что-то пошло не так!', desc: 'Приносим извинения, произошла непредвиденная ошибка.', retry: 'Повторить' },
 };
 

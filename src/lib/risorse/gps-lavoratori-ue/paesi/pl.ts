@@ -71,6 +71,7 @@ export const polonia: SchedaPaese = {
     sv: 'Polen',
     nb: 'Polen',
     ru: 'Польша',
+    el: 'Πολωνία',
   },
   bandiera: '🇵🇱',
   federale: false,
@@ -93,6 +94,7 @@ export const polonia: SchedaPaese = {
       nb: 'Polen har én nasjonal myndighet, UODO; ingen regional inndeling.',
       nl: 'Polen heeft een enkele nationale autoriteit, de UODO; geen regionale onderverdeling.',
       ru: "В Польше действует единый национальный орган, UODO; региональное разделение отсутствует.",
+      el: 'Η Πολωνία έχει μία μόνο εθνική αρχή, την UODO· δεν υπάρχει περιφερειακός διαχωρισμός.',
     },
   },
 
@@ -110,6 +112,7 @@ export const polonia: SchedaPaese = {
         nb: 'Formål, omfang og metoder for overvåkingen fastsatt i en tariffavtale, arbeidsreglement eller en melding (Kodeks pracy art. 22(2)/22(3))',
         nl: 'Doel, omvang en wijze van monitoring vastgelegd in een collectieve overeenkomst, een arbeidsreglement of een kennisgeving (Kodeks pracy art. 22(2)/22(3))',
         ru: "Цели, объём и порядок мониторинга закреплены в коллективном договоре, правилах внутреннего трудового распорядка или уведомлении (Kodeks pracy ст. 22(2)/22(3))",
+        el: 'Σκοπός, έκταση και τρόποι της παρακολούθησης καθορισμένοι σε συλλογική σύμβαση, κανονισμό εργασίας ή ανακοίνωση (Kodeks pracy άρθρο 22(2)/22(3))',
       },
       risposta: 'si',
       dettaglio: {
@@ -124,6 +127,7 @@ export const polonia: SchedaPaese = {
         nb: 'Den polske arbeidsloven regulerer uttrykkelig overvåking: formål, omfang og metoder skal fastsettes i tariffavtalen, arbeidsreglementet eller en melding, og de samme reglene gjelder også for andre former for overvåking (inkludert GPS) når det er nødvendig for tilretteleggingen av arbeidet og riktig bruk av arbeidsredskaper.',
         nl: 'het Poolse arbeidswetboek regelt monitoring uitdrukkelijk: doel, omvang en wijze moeten worden vastgelegd in de collectieve overeenkomst, het arbeidsreglement of een kennisgeving, en diezelfde regels gelden ook voor andere vormen van monitoring (GPS inbegrepen) wanneer die nodig zijn voor de organisatie van het werk en het juiste gebruik van de werkmiddelen.',
         ru: "Трудовой кодекс Польши прямо регулирует мониторинг: цели, объём и порядок должны быть установлены в коллективном договоре, в правилах внутреннего трудового распорядка или в уведомлении, и те же правила действуют для других форм мониторинга (включая GPS), когда они необходимы для организации труда и надлежащего использования рабочих инструментов.",
+        el: 'Ο πολωνικός Κώδικας Εργασίας ρυθμίζει ρητά την παρακολούθηση: σκοπός, έκταση και τρόποι πρέπει να καθορίζονται στη συλλογική σύμβαση, στον κανονισμό εργασίας ή σε ανακοίνωση, και οι ίδιοι κανόνες ισχύουν και για τις άλλες μορφές παρακολούθησης (συμπεριλαμβανομένου του GPS) όταν είναι αναγκαίες για την οργάνωση της εργασίας και την ορθή χρήση των εργαλείων εργασίας.',
       },
       fonte: FONTE_KP_22_3,
     },
@@ -140,6 +144,7 @@ export const polonia: SchedaPaese = {
         nb: 'Forhåndsinformasjon til de ansatte minst 2 uker i forveien, og på papir eller elektronisk til den nyansatte (art. 22(2) punkt 7-8)',
         nl: 'Voorafgaande informatie aan werknemers ten minste 2 weken van tevoren, en op papier of elektronisch aan de nieuwe medewerker (art. 22(2) lid 7-8)',
         ru: "Предварительное информирование работников не менее чем за 2 недели, а нового сотрудника на бумажном носителе или в электронной форме (ст. 22(2) п. 7-8)",
+        el: 'Προηγούμενη ενημέρωση των εργαζομένων τουλάχιστον 2 εβδομάδες πριν και, στον νεοπροσληφθέντα, σε χαρτί ή σε ηλεκτρονική μορφή (άρθρο 22(2) παρ. 7-8)',
       },
       risposta: 'si',
       dettaglio: {
@@ -154,6 +159,7 @@ export const polonia: SchedaPaese = {
         nb: 'Arbeidsgiveren informerer de ansatte om innføringen av overvåking minst to uker før den starter, og gir den nyansatte informasjonen på papir eller elektronisk før vedkommende settes i arbeid.',
         nl: 'de werkgever informeert de werknemers over de invoering van monitoring ten minste twee weken voor de start, en overhandigt de informatie op papier of elektronisch aan de nieuwe medewerker voordat deze aan het werk wordt gezet.',
         ru: "Работодатель информирует работников о введении мониторинга не менее чем за две недели до начала и вручает информацию на бумажном носителе или в электронной форме новому сотруднику до допуска его к работе.",
+        el: 'Ο εργοδότης ενημερώνει τους εργαζομένους για την εισαγωγή της παρακολούθησης τουλάχιστον δύο εβδομάδες πριν από την έναρξη και παραδίδει την ενημέρωση σε χαρτί ή σε ηλεκτρονική μορφή στον νεοπροσληφθέντα πριν τον αναθέσει στην εργασία.',
       },
       fonte: FONTE_DU_2026_25,
     },
@@ -170,6 +176,7 @@ export const polonia: SchedaPaese = {
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit voor de installatie',
         ru: "Предварительное разрешение органа перед установкой",
+        el: 'Προηγούμενη άδεια αρχής πριν από την εγκατάσταση',
       },
       risposta: 'no',
       dettaglio: {
@@ -184,6 +191,7 @@ export const polonia: SchedaPaese = {
         nb: 'Det kreves ingen forhåndstillatelse fra UODO; prosedyren er intern (regler i reglementet/meldingen, informasjon, merking av områder) samt overholdelse av GDPR.',
         nl: 'er is geen voorafgaande toestemming van de UODO nodig; de procedure is intern (regels in het reglement/de kennisgeving, informatie, markering van de zones) plus naleving van de AVG.',
         ru: "Предварительное разрешение UODO не требуется; процедура внутренняя (правила в положении или уведомлении, информирование, обозначение зон) плюс соблюдение GDPR.",
+        el: 'Δεν απαιτείται προηγούμενη άδεια της UODO· η διαδικασία είναι εσωτερική (κανόνες στον κανονισμό/ανακοίνωση, ενημέρωση, σήμανση των χώρων) και σεβασμός του ΓΚΠΔ.',
       },
       fonte: FONTE_UODO_GUIDA,
     },
@@ -200,6 +208,7 @@ export const polonia: SchedaPaese = {
         nb: 'Ingen sporing av private bevegelser eller utenfor arbeidstid; forholdsmessighet (UODO)',
         nl: 'Geen volgen van prive-verplaatsingen of buiten werktijd; evenredigheid (UODO)',
         ru: "Отслеживание личных перемещений и перемещений вне рабочего времени не допускается; пропорциональность (UODO)",
+        el: 'Καμία παρακολούθηση των ιδιωτικών μετακινήσεων ή εκτός ωραρίου· αναλογικότητα (UODO)',
       },
       risposta: 'si',
       dettaglio: {
@@ -214,6 +223,7 @@ export const polonia: SchedaPaese = {
         nb: 'Ifølge UODO har arbeidsgiveren ikke rett til å samle inn opplysninger om den ansattes private bevegelser (unntatt i ekstraordinære tilfeller som tyveri av kjøretøyet); hvis kjøretøyet også brukes privat, sier veiledningen at man enten bør fastsette at det kun er til tjenestebruk eller tilpasse reglene for bruk av kjøretøyet, innhente den ansattes samtykke til disse opplysningene og gi personvernerklæring. Risikoen for rettighetene skal stå i forhold til formålet.',
         nl: 'voor de UODO is de werkgever niet gerechtigd gegevens te verzamelen over de prive-verplaatsingen van de werknemer (behoudens uitzonderlijke gevallen zoals diefstal van het voertuig); wordt het voertuig ook prive gebruikt, dan schrijft de gids voor het uitsluitend voor het werk te bestemmen of het gebruiksreglement aan te passen, de toestemming van de werknemer voor die gegevens te verkrijgen en hem te informeren. Het risico voor de rechten moet evenredig zijn aan het doel.',
         ru: "По позиции UODO работодатель не вправе собирать данные о личных перемещениях работника (кроме исключительных случаев, например кражи автомобиля); если автомобиль используется и в личных целях, руководство предлагает либо установить, что он только служебный, либо привести в соответствие правила пользования, получить согласие работника на эти данные и вручить ему уведомление об обработке. Риск для прав должен быть соразмерен цели.",
+        el: 'Για την UODO ο εργοδότης δεν νομιμοποιείται να συλλέγει δεδομένα για τις ιδιωτικές μετακινήσεις του εργαζομένου (εκτός από εξαιρετικές περιπτώσεις όπως η κλοπή του οχήματος)· αν το όχημα χρησιμοποιείται και ιδιωτικά, ο οδηγός υποδεικνύει είτε να οριστεί ότι είναι μόνο υπηρεσιακό είτε να προσαρμοστεί ο κανονισμός χρήσης, να ληφθεί η συγκατάθεση του εργαζομένου για αυτά τα δεδομένα και να του δοθεί η ενημέρωση. Ο κίνδυνος για τα δικαιώματα πρέπει να είναι αναλογικός προς τον σκοπό.',
       },
       fonte: FONTE_UODO_GUIDA,
     },
@@ -230,6 +240,7 @@ export const polonia: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (DPIA) for de ansattes posisjonsdata (UODOs liste)',
         nl: 'Effectbeoordeling (DPIA) voor de locatiegegevens van werknemers (UODO-lijst)',
         ru: "Оценка воздействия (DPIA) для данных о местоположении работников (перечень UODO)",
+        el: 'Εκτίμηση αντικτύπου (DPIA) για τα δεδομένα θέσης των εργαζομένων (κατάλογος UODO)',
       },
       risposta: 'si',
       dettaglio: {
@@ -244,6 +255,7 @@ export const polonia: SchedaPaese = {
         nb: "UODOs liste bygger på kriterier: som hovedregel kreves en DPIA når minst to av dem er oppfylt. Kriterium 12 (lokaliseringsdata) nevner som eksempel behandling av de ansattes lokaliseringsdata; kriterium 3 nevner systemer for overvåking av ansatte (systematisk overvåking og sårbare registrerte). GPS på ansatte oppfyller normalt mer enn ett av dem.",
         nl: "De UODO-lijst werkt met criteria: in de regel is een effectbeoordeling nodig wanneer er minstens twee gelden. Criterium 12 (locatiegegevens) noemt als voorbeeld de verwerking van locatiegegevens van werknemers; criterium 3 noemt systemen voor het monitoren van werknemers (systematische monitoring en kwetsbare betrokkenen). GPS bij werknemers voldoet doorgaans aan meer dan een criterium.",
         ru: "Перечень UODO построен на критериях: как правило, DPIA нужна, когда выполняются как минимум два из них. Критерий 12 (данные о местоположении) приводит в качестве примера обработку данных о местоположении работников; критерий 3 относится к системам мониторинга работников (систематический мониторинг и уязвимые субъекты данных). GPS-слежение за работниками, как правило, подпадает более чем под один критерий.",
+        el: 'Ο κατάλογος της UODO λειτουργεί με κριτήρια: κατά κανόνα η DPIA απαιτείται όταν συντρέχουν τουλάχιστον δύο. Το κριτήριο 12 (δεδομένα θέσης) αναφέρει ως παράδειγμα την επεξεργασία δεδομένων θέσης των εργαζομένων· το κριτήριο 3 αναφέρει τα συστήματα παρακολούθησης των εργαζομένων (συστηματική παρακολούθηση και ευάλωτα υποκείμενα). Το GPS στους εργαζομένους κατά κανόνα πληροί περισσότερα από ένα.',
       },
       fonte: FONTE_UODO_DPIA,
     },
@@ -264,6 +276,7 @@ export const polonia: SchedaPaese = {
         nb: 'Fastsett overvåkingens formål, omfang og metoder i tariffavtalen, arbeidsreglementet eller en melding.',
         nl: 'Leg het doel, de omvang en de wijze van monitoring vast in de collectieve overeenkomst, het arbeidsreglement of een kennisgeving.',
         ru: "Закрепите цели, объём и порядок мониторинга в коллективном договоре, правилах внутреннего трудового распорядка или уведомлении.",
+        el: 'Όρισε σκοπό, έκταση και τρόπους της παρακολούθησης στη συλλογική σύμβαση, στον κανονισμό εργασίας ή σε ανακοίνωση.',
       },
     },
     {
@@ -280,6 +293,7 @@ export const polonia: SchedaPaese = {
         nb: 'Informer de ansatte minst to uker før oppstart; gi den nyansatte informasjonen på papir eller elektronisk før arbeidet begynner.',
         nl: 'Informeer de werknemers ten minste twee weken voor de start; overhandig de informatie op papier of elektronisch aan de nieuwe medewerker voor het werk.',
         ru: "Проинформируйте работников не менее чем за две недели до начала; новому сотруднику вручите информацию на бумажном носителе или в электронной форме до начала работы.",
+        el: 'Ενημέρωσε τους εργαζομένους τουλάχιστον δύο εβδομάδες πριν από την έναρξη· παράδωσε την ενημέρωση σε χαρτί ή σε ηλεκτρονική μορφή στον νεοπροσληφθέντα πριν από την εργασία.',
       },
     },
     {
@@ -296,6 +310,7 @@ export const polonia: SchedaPaese = {
         nb: 'Finn et gyldig behandlingsgrunnlag etter GDPR (som hovedregel berettiget interesse, ikke samtykke).',
         nl: 'Bepaal een geldige rechtsgrondslag op grond van de AVG (in de regel gerechtvaardigd belang, niet toestemming).',
         ru: "Определите надлежащее правовое основание по GDPR (как правило, законный интерес, а не согласие).",
+        el: 'Βρες μια έγκυρη νομική βάση κατά τον ΓΚΠΔ (κατά κανόνα έννομο συμφέρον, όχι συγκατάθεση).',
       },
     },
     {
@@ -312,6 +327,7 @@ export const polonia: SchedaPaese = {
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) for de ansattes posisjonsdata.',
         nl: 'Voer de effectbeoordeling (DPIA) uit voor de locatiegegevens van werknemers.',
         ru: "Проведите оценку воздействия (DPIA) для данных о местоположении работников.",
+        el: 'Κάνε την εκτίμηση αντικτύπου (DPIA) για τα δεδομένα θέσης των εργαζομένων.',
       },
     },
     {
@@ -328,6 +344,7 @@ export const polonia: SchedaPaese = {
         nb: 'Konfigurer systemet: ingen privat sporing eller sporing utenfor arbeidstid, formålet skal samsvare med den faktiske bruken.',
         nl: 'Configureer het systeem: geen prive-/buiten-werktijd-tracking, doel dat overeenkomt met het werkelijke gebruik.',
         ru: "Настройте систему: без отслеживания личных перемещений и перемещений вне рабочего времени, заявленная цель должна совпадать с реальным использованием.",
+        el: 'Ρύθμισε το σύστημα: καμία ιδιωτική παρακολούθηση ή εκτός ωραρίου, σκοπός που ταυτίζεται με την πραγματική χρήση.',
       },
     },
     {
@@ -344,6 +361,7 @@ export const polonia: SchedaPaese = {
         nb: 'Hvis du bytter overvåkingssystem eller programvare, må du oppdatere og dele ut personvernerklæringen på nytt, og undersøke om du igjen må informere eller rådføre deg med de ansattes representanter, der loven krever det. Ofte endres leverandøren (databehandleren), de innsamlede opplysningene og metodene: informasjonen som ble gitt tidligere er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "Если вы меняете систему или программу мониторинга, обновите и повторно вручите уведомление об обработке данных и проверьте, нужно ли снова информировать представителей работников или проводить с ними консультацию, там, где этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее вручённого уведомления недостаточно.",
+        el: 'Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση, και έλεγξε αν πρέπει να ενημερώσεις ή να συμβουλευτείς ξανά τους εκπροσώπους των εργαζομένων, όπου το προβλέπει ο νόμος. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και ο τρόπος λειτουργίας: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.',
       },
     },
   ],
@@ -372,6 +390,7 @@ export const polonia: SchedaPaese = {
       nb: 'ca. 266 000 euro (1 145 891 PLN)',
       nl: 'ongeveer 266.000 € (1.145.891 PLN)',
       ru: "около 266 000 € (1 145 891 PLN)",
+      el: 'περίπου 266.000 € (1.145.891 PLN)',
     },
     casoCitato: {
       it: 'UODO contro Centrum Medyczne Ujastek (Cracovia, decisione DKN.5131.4.2024): videosorveglianza installata in due stanze di neonatologia senza che ne fossero informati pazienti ne dipendenti, più sicurezza inadeguata delle registrazioni. Multa complessiva 1.145.891 PLN (circa 266.000 euro). Non è un caso di GPS, ma riguarda il monitoraggio dei dipendenti non comunicato.',
@@ -385,6 +404,7 @@ export const polonia: SchedaPaese = {
       nb: 'UODO mot Centrum Medyczne Ujastek (Kraków, vedtak DKN.5131.4.2024): videoovervåking installert i to neonatalrom uten at hverken pasienter eller ansatte var informert, samt utilstrekkelig sikring av opptakene. Samlet bot 1 145 891 PLN (ca. 266 000 euro). Det er ikke en GPS-sak, men den gjelder skjult overvåking av ansatte.',
       nl: 'UODO tegen Centrum Medyczne Ujastek (Krakau, besluit DKN.5131.4.2024): cameratoezicht geinstalleerd in twee neonatologieruimtes zonder dat patienten noch werknemers daarvan op de hoogte werden gebracht, plus onvoldoende beveiliging van de opnamen. Totale boete van 1.145.891 PLN (ongeveer 266.000 euro). Het is geen GPS-zaak, maar het betreft niet-meegedeelde monitoring van werknemers.',
       ru: "UODO против Centrum Medyczne Ujastek (Краков, решение DKN.5131.4.2024): видеонаблюдение в двух палатах неонатологии без информирования ни пациентов, ни сотрудников, а также недостаточная защита записей. Общий штраф 1 145 891 PLN (около 266 000 евро). Это не случай GPS, но он касается неуведомлённого мониторинга сотрудников.",
+      el: 'UODO κατά Centrum Medyczne Ujastek (Κρακοβία, απόφαση DKN.5131.4.2024): βιντεοεπιτήρηση εγκατεστημένη σε δύο δωμάτια νεογνολογίας χωρίς να ενημερωθούν ούτε οι ασθενείς ούτε οι εργαζόμενοι, και ανεπαρκής ασφάλεια των εγγραφών. Συνολικό πρόστιμο 1.145.891 PLN (περίπου 266.000 ευρώ). Δεν είναι υπόθεση GPS, αλλά αφορά παρακολούθηση των εργαζομένων που δεν γνωστοποιήθηκε.',
     },
     urlFonte: FONTE_UODO_UJASTEK.url,
     tipoImporto: 'caso-affine',

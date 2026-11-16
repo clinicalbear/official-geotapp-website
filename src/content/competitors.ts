@@ -10,7 +10,7 @@
  */
 
 export type LocalizedString = Partial<Record<
-  'it' | 'en' | 'de' | 'fr' | 'es' | 'nl' | 'pt' | 'da' | 'sv' | 'nb' | 'ru',
+  'it' | 'en' | 'de' | 'fr' | 'es' | 'nl' | 'pt' | 'da' | 'sv' | 'nb' | 'ru' | 'el',
   string
 >>;
 
@@ -45,6 +45,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     sv: 'Position kontrollerad vid varje instämpling',
     nb: 'Posisjon kontrollert ved hver stempling',
     ru: 'GPS-проверка на месте работ',
+    el: 'Έλεγχος τοποθεσίας σε κάθε χτύπημα κάρτας',
   },
   sealed_report: {
     it: 'Report sigillato crittograficamente',
@@ -58,6 +59,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     sv: 'Kryptografiskt förseglad rapport',
     nb: 'Kryptografisk forseglet rapport',
     ru: 'Криптографически защищённый отчёт',
+    el: 'Κρυπτογραφικά σφραγισμένη αναφορά',
   },
   geo_timestamped_photos: {
     it: 'Foto di prova con posizione e ora',
@@ -71,6 +73,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     sv: 'Bevisfoton med plats och tid',
     nb: 'Bevisbilder med posisjon og tid',
     ru: 'Фото с GPS и меткой времени',
+    el: 'Φωτογραφίες απόδειξης με τοποθεσία και ώρα',
   },
   client_verification: {
     it: 'Verifica indipendente del cliente',
@@ -84,6 +87,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     sv: 'Oberoende verifiering av kunden',
     nb: 'Uavhengig verifisering fra kunden',
     ru: 'Независимая проверка клиентом',
+    el: 'Ανεξάρτητη επαλήθευση από τον πελάτη',
   },
   time_tracking: {
     it: 'Registrazione delle ore',
@@ -97,6 +101,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     sv: 'Tidrapportering',
     nb: 'Registrering av timer',
     ru: 'Учёт рабочего времени',
+    el: 'Καταγραφή ωρών',
   },
   mobile_app: {
     it: 'App mobile Android/iOS',
@@ -110,6 +115,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     sv: 'Mobilapp Android/iOS',
     nb: 'Mobilapp Android/iOS',
     ru: 'Мобильное приложение Android/iOS',
+    el: 'Εφαρμογή για κινητά Android/iOS',
   },
   builtin_messaging: {
     it: 'Messaggistica interna',
@@ -123,6 +129,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     sv: 'Inbyggd meddelandefunktion',
     nb: 'Intern meldingsfunksjon',
     ru: 'Встроенный чат',
+    el: 'Εσωτερική ανταλλαγή μηνυμάτων',
   },
   payroll_export: {
     it: 'Export presenze/paghe',
@@ -136,6 +143,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     sv: 'Export av närvaro/lön',
     nb: 'Eksport av oppmøte/lønn',
     ru: 'Экспорт посещаемости/зарплат',
+    el: 'Εξαγωγή παρουσιών/μισθοδοσίας',
   },
   free_plan: {
     it: 'Piano gratuito',
@@ -149,6 +157,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     sv: 'Gratisplan',
     nb: 'Gratis plan',
     ru: 'Бесплатный тариф',
+    el: 'Δωρεάν πακέτο',
   },
   multi_site_jobs: {
     it: 'Gestione commesse multi-sito',
@@ -162,6 +171,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     sv: 'Hantering av uppdrag på flera platser',
     nb: 'Styring av oppdrag på flere steder',
     ru: 'Управление заказами на нескольких объектах',
+    el: 'Διαχείριση έργων σε πολλές τοποθεσίες',
   },
   gdpr_geo_compliance: {
     it: 'Posizione solo alla timbratura, mai in continuo',
@@ -175,6 +185,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     sv: 'Position bara vid instämpling, aldrig löpande',
     nb: 'Posisjon bare ved stempling, aldri løpende',
     ru: 'Позиция фиксируется только при отметке, никогда непрерывно',
+    el: 'Τοποθεσία μόνο στο χτύπημα κάρτας, ποτέ συνεχώς',
   },
   auto_gps_notice_signed: {
     it: 'Informativa GPS firmata nell\'app prima di timbrare',
@@ -188,6 +199,7 @@ export const FEATURE_LABELS: Record<FeatureKey, LocalizedString> = {
     sv: 'GPS-information signerad i appen innan man stämplar in',
     nb: 'GPS-informasjon signert i appen før man stempler',
     ru: 'Уведомление о GPS, подписанное в приложении перед отметкой',
+    el: 'Ενημέρωση GPS υπογεγραμμένη στην εφαρμογή πριν το χτύπημα κάρτας',
   },
 };
 
@@ -241,6 +253,7 @@ export const COMPETITORS: Competitor[] = [
       sv: 'Kommunikation, personalhantering och instämpling i en app för dem som arbetar utanför kontoret. Mycket utbredd i USA.',
       nb: 'Kommunikasjon, personaladministrasjon og stempling i én app for dem som jobber utenfor kontoret. Svært utbredt i USA.',
       ru: 'Коммуникация, управление персоналом и учёт времени в одном приложении для тех, кто работает не за столом в офисе. Широко распространено в США.',
+      el: 'Επικοινωνία, διαχείριση προσωπικού και χτυπήματα κάρτας σε μία εφαρμογή για όσους δουλεύουν εκτός γραφείου. Πολύ διαδεδομένη στις Ηνωμένες Πολιτείες.',
     },
     features: {
       gps_verified_at_site: false,
@@ -274,6 +287,7 @@ export const COMPETITORS: Competitor[] = [
       sv: 'Tidrapportering med skärmdumpar och aktivitetsövervakning. Byggt för distansteam vid en dator, inte för fältarbete.',
       nb: 'Tidsregistrering med skjermbilder og aktivitetsovervåking. Laget for fjernteam ved en datamaskin, ikke for arbeid ute i felt.',
       ru: 'Учёт времени со скриншотами и мониторингом активности. Создано для удалённых команд за компьютером, а не для работы в поле.',
+      el: 'Καταγραφή χρόνου με στιγμιότυπα οθόνης και παρακολούθηση δραστηριότητας. Φτιαγμένο για απομακρυσμένες ομάδες στον υπολογιστή, όχι για όσους δουλεύουν στο πεδίο.',
     },
     features: {
       gps_verified_at_site: false,
@@ -307,6 +321,7 @@ export const COMPETITORS: Competitor[] = [
       sv: 'Gratis, obegränsad tidrapportering. Utmärkt för frilansare och kontor, mindre lämplig för fältarbete.',
       nb: 'Gratis og ubegrenset tidsregistrering. Utmerket for frilansere og kontorer, mindre egnet for arbeid ute i felt.',
       ru: 'Бесплатный и неограниченный учёт времени. Отлично подходит фрилансерам и офисам, плохо — для выездной работы.',
+      el: 'Δωρεάν και απεριόριστη καταγραφή χρόνου. Εξαιρετικό για ελεύθερους επαγγελματίες και γραφεία, λιγότερο κατάλληλο για δουλειά στο πεδίο.',
     },
     features: {
       gps_verified_at_site: false,
@@ -340,6 +355,7 @@ export const COMPETITORS: Competitor[] = [
       sv: 'Närvaro med ansiktsigenkänning och enkel GPS. Generös gratisplan, men inget bevis på utfört arbete.',
       nb: 'Oppmøte med ansiktsgjenkjenning og enkel GPS. Raus gratisplan, men ingen dokumentasjon på utført arbeid.',
       ru: 'Учёт присутствия с распознаванием лица и базовым GPS. Щедрый бесплатный тариф, но без подтверждения выполненной работы.',
+      el: 'Παρουσίες με αναγνώριση προσώπου και βασικό GPS. Γενναιόδωρο δωρεάν πακέτο, αλλά καμία απόδειξη της εργασίας που έγινε.',
     },
     features: {
       gps_verified_at_site: false,
@@ -373,6 +389,7 @@ export const COMPETITORS: Competitor[] = [
       sv: 'Komplett HR-svit: personalregister, frånvaro, introduktion och lön. Inte byggd för arbetsbevis i fält.',
       nb: 'Komplett HR-løsning: personalregister, fravær, onboarding og lønn. Ikke laget for å dokumentere arbeid ute i felt.',
       ru: 'Полноценная HR-платформа: личные дела, отсутствия, адаптация и зарплата. Не создана для подтверждения выездной работы.',
+      el: 'Ολοκληρωμένη πλατφόρμα HR: μητρώο προσωπικού, απουσίες, onboarding και μισθοδοσία. Δεν έχει σχεδιαστεί για την απόδειξη της εργασίας στο πεδίο.',
     },
     features: {
       gps_verified_at_site: false,
@@ -406,6 +423,7 @@ export const COMPETITORS: Competitor[] = [
       sv: 'Affärssvit: bokföring, fakturering, lön och HR (Sage HR). Inte byggd för arbetsbevis i fält.',
       nb: 'Forretningssystem: regnskap, fakturering, lønn og HR (Sage HR). Ikke laget for å dokumentere arbeid ute i felt.',
       ru: 'Бизнес-платформа: бухгалтерия, счета, зарплата и HR (Sage HR). Не создана для подтверждения выездной работы.',
+      el: 'Λογισμικό διαχείρισης: λογιστική, τιμολόγηση, μισθοδοσία και HR (Sage HR). Δεν έχει σχεδιαστεί για την απόδειξη της εργασίας στο πεδίο.',
     },
     features: {
       gps_verified_at_site: false,
@@ -439,6 +457,7 @@ export const COMPETITORS: Competitor[] = [
       sv: 'Mycket utbredd italiensk närvaroapp: GPS, QR, NFC och geofence. Ingen förseglad rapport till kunden.',
       nb: 'Svært utbredt italiensk app for oppmøteregistrering: GPS, QR, NFC og geofence. Ingen forseglet rapport til kunden.',
       ru: 'Широко распространённое в Италии приложение учёта присутствия: GPS, QR, NFC и геозоны. Без запечатанного отчёта для заказчика.',
+      el: 'Πολύ διαδεδομένη ιταλική εφαρμογή καταγραφής παρουσιών: GPS, QR, NFC και geofence. Καμία σφραγισμένη αναφορά για τον πελάτη.',
     },
     features: {
       gps_verified_at_site: true, // ha GPS ma non sealed/timestamped come GeoTapp
@@ -472,6 +491,7 @@ export const COMPETITORS: Competitor[] = [
       sv: 'Tysk programvara för städföretag: instämpling, uppgifter och teamkommunikation. Ingen förseglad rapport till kunden.',
       nb: 'Tysk programvare for renholdsbedrifter: stempling, oppgaver og teamkommunikasjon. Ingen forseglet rapport til kunden.',
       ru: 'Немецкое ПО для клининговых компаний: отметка времени, задачи и переписка команды. Без запечатанного отчёта для заказчика.',
+      el: 'Γερμανικό λογισμικό για εταιρείες καθαρισμού: χτύπημα κάρτας, εργασίες και επικοινωνία της ομάδας. Καμία σφραγισμένη αναφορά για τον πελάτη.',
     },
     features: {
       gps_verified_at_site: false,
@@ -505,6 +525,7 @@ export const COMPETITORS: Competitor[] = [
       sv: 'Italiensk digital instämpling med GPS och QR-kod. Enkel och lättviktig, men utan bevisfoton och sigill.',
       nb: 'Italiensk digital stempling med GPS og QR-kode. Enkel og lett, men uten bevisbilder og uten segl.',
       ru: 'Итальянская цифровая система отметки времени с GPS и QR-кодом. Простая и лёгкая, но без фото подтверждения и без запечатывания.',
+      el: 'Ιταλικά ψηφιακά χτυπήματα κάρτας με GPS και QR code. Απλό και ελαφρύ, αλλά χωρίς φωτογραφίες απόδειξης και χωρίς σφραγίδα.',
     },
     features: {
       gps_verified_at_site: true,
@@ -538,6 +559,7 @@ export const COMPETITORS: Competitor[] = [
       sv: 'En mycket utbredd italiensk HR-svit, från närvaro till lönespecifikation. Instämpling med geofence och NFC-kort, inget bevis till kunden.',
       nb: 'Den italienske HR-løsningen par excellence, fra oppmøte til lønnsslipp. Stempling med geofence og NFC-kort, ingen dokumentasjon til kunden.',
       ru: 'Широко распространённая в Италии HR-платформа — от учёта присутствия до расчётного листка. Отметка по геозоне и NFC-пропуска, без подтверждения для заказчика.',
+      el: 'Η ιταλική πλατφόρμα HR par excellence, από τις παρουσίες ως τη μισθοδοτική κατάσταση. Χτύπημα κάρτας με geofence και κάρτα NFC, καμία απόδειξη για τον πελάτη.',
     },
     features: {
       gps_verified_at_site: true,
@@ -571,6 +593,7 @@ export const COMPETITORS: Competitor[] = [
       sv: 'Spansk HR-plattform för små och medelstora företag, som håller ordning på ledighet och frånvaro. Valfri geolokalisering vid instämpling, utan kontroll av falska positioner.',
       nb: 'Spansk HR-plattform for små og mellomstore bedrifter, med orden på ferie og fravær. Valgfri geolokalisering ved stempling, uten kontroll av simulerte posisjoner.',
       ru: 'Испанская HR-платформа для малого и среднего бизнеса, наводящая порядок в отпусках и отсутствиях. Необязательная геолокация при отметке, без проверки на поддельные координаты.',
+      el: 'Ισπανική πλατφόρμα HR για μικρομεσαίες επιχειρήσεις, με τις άδειες και τις απουσίες σε τάξη. Προαιρετικός εντοπισμός τοποθεσίας στο χτύπημα κάρτας, χωρίς έλεγχο για προσομοιωμένες θέσεις.',
     },
     features: {
       gps_verified_at_site: true,

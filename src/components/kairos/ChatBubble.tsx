@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { getLocaleFromPathname } from '@/lib/i18n/locale-routing';
 
-const ARIA_OPEN: Record<string, string> = { de: 'Chat mit Kairos', it: 'Chat con Kairos', nl: 'Chat met Kairos', fr: 'Discuter avec Kairos', es: 'Chatear con Kairos', pt: 'Conversar com o Kairos', da: 'Chat med Kairos', sv: 'Chatta med Kairos', nb: 'Chat med Kairos', ru: 'Открыть чат с Кайросом' };
+const ARIA_OPEN: Record<string, string> = { de: 'Chat mit Kairos', it: 'Chat con Kairos', nl: 'Chat met Kairos', fr: 'Discuter avec Kairos', es: 'Chatear con Kairos', pt: 'Conversar com o Kairos', da: 'Chat med Kairos', sv: 'Chatta med Kairos', nb: 'Chat med Kairos', el: 'Συνομιλία με τον Kairos', ru: 'Открыть чат с Кайросом' };
 
 interface ChatBubbleProps {
   onClick: () => void;

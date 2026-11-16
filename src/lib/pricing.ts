@@ -75,6 +75,7 @@ export const LOCALE_CURRENCY: Record<AppLocale, CurrencyCode> = {
   da: 'DKK',
   sv: 'SEK',
   nb: 'NOK',
+  el: 'EUR',
 };
 
 const LOCALE_TO_BCP47: Record<AppLocale, string> = {
@@ -93,6 +94,7 @@ const LOCALE_TO_BCP47: Record<AppLocale, string> = {
   da: 'da-DK',
   sv: 'sv-SE',
   nb: 'nb-NO',
+  el: 'el-GR',
   ru: 'ru-RU',
 };
 

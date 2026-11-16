@@ -20,6 +20,7 @@ const map: Partial<Record<AppLocale, () => Promise<{ default: SettoreContent }>>
   sv: () => import('./sv'),
   nb: () => import('./nb'),
   ru: () => import('./ru'),
+  el: () => import('./el'),
 };
 
 export async function getElettricistiContent(locale: AppLocale): Promise<SettoreContent> {

@@ -10,8 +10,8 @@ import { HOME_META, HOME_TITLE_KEYWORD, HOME_TITLE_MAX } from './home-metadata';
 const LOCALES = Object.keys(HOME_META);
 
 describe('title dell’homepage', () => {
-  it('copre le stesse 11 lingue in title, description e parola chiave', () => {
-    expect(LOCALES).toHaveLength(11);
+  it('copre le stesse 12 lingue in title, description e parola chiave', () => {
+    expect(LOCALES).toHaveLength(12);
     expect(Object.keys(HOME_TITLE_KEYWORD).sort()).toEqual([...LOCALES].sort());
   });
 

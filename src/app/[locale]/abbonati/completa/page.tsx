@@ -13,6 +13,7 @@ const COMPLETA_META: Record<string, { title: string; description: string }> = {
   pt: { title: 'Ative a sua subscrição - GeoTapp', description: 'Ative a sua subscrição GeoTapp: plano recomendado, postos, NIF e pagamento.' },
   da: { title: 'Aktivér dit abonnement - GeoTapp', description: 'Aktivér dit GeoTapp-abonnement: anbefalet plan, pladser, CVR-nummer og betaling.' },
   nb: { title: 'Aktiver abonnementet ditt - GeoTapp', description: 'Aktiver GeoTapp-abonnementet: anbefalt plan, plasser, organisasjonsnummer og betaling.' },
+  el: { title: 'Ενεργοποίησε τη συνδρομή σου - GeoTapp', description: 'Ενεργοποίησε τη συνδρομή GeoTapp: προτεινόμενο πακέτο, θέσεις, στοιχεία εταιρείας και πληρωμή.' },
   sv: { title: 'Aktivera din prenumeration - GeoTapp', description: 'Aktivera din GeoTapp-prenumeration: rekommenderad plan, platser, momsnummer och betalning.' },
   ru: { title: 'Активируйте подписку - GeoTapp', description: 'Активируйте подписку GeoTapp: рекомендованный тариф, места, ИНН и оплата.' },
 };

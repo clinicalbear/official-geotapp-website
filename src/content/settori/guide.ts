@@ -298,19 +298,22 @@ export const GUIDE_TITOLO: Record<string, string> = {
   da: 'Guides til din branche',
   sv: 'Guider för din bransch',
   nb: 'Guider for din bransje',
+  el: 'Οδηγοί για τον κλάδο σου',
 };
 
 /** Le guide della pagina, senza quelle gia' nel blocco normativo (stesso href). */
 export function guidePerSettore(settore: SettoreSlug, locale: string, gia: string[] = []): GuidaSettore[] {
   const base = locale.split('-')[0];
   const ok = (g: GuidaSettore) => !gia.includes(g.href) && (!g.solo || g.solo.includes(locale));
-  const proprie = (GUIDE_SETTORE[base]?.[settore] ?? []).filter(ok);
+  // Greco (16/11/2026): sul blog non ci sono ancora articoli greci, si usano quelli inglesi (nessun URL /blog/el/ inventato).
+  const fonte = GUIDE_SETTORE[base] ?? (base === 'el' ? GUIDE_SETTORE.en : undefined);
+  const proprie = (fonte?.[settore] ?? []).filter(ok);
   if (proprie.length >= 2) return proprie;
   // Pochi o nessun articolo sul mestiere: si completa con i mestieri vicini, senza doppioni.
   const viste = new Set(proprie.map((g) => g.href));
   const altre: GuidaSettore[] = [];
   for (const v of VICINI[settore] ?? []) {
-    for (const g of (GUIDE_SETTORE[base]?.[v] ?? []).filter(ok)) {
+    for (const g of (fonte?.[v] ?? []).filter(ok)) {
       if (!viste.has(g.href)) { viste.add(g.href); altre.push(g); }
     }
   }

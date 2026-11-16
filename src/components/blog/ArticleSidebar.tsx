@@ -26,6 +26,7 @@ const SIDEBAR_LABELS: Record<string, {
   da: { toc: 'I denne artikel', share: 'Del', copied: 'Kopieret!', product_desc: 'Se hvordan GeoTapp løser dette', product_btn: 'Læs mere' },
   sv: { toc: 'I den här artikeln', share: 'Dela', copied: 'Kopierat!', product_desc: 'Se hur GeoTapp löser det här', product_btn: 'Läs mer' },
   nb: { toc: 'I denne artikkelen', share: 'Del', copied: 'Kopiert!', product_desc: 'Se hvordan GeoTapp løser dette', product_btn: 'Les mer' },
+  el: { toc: 'Σε αυτό το άρθρο', share: 'Κοινοποίηση', copied: 'Αντιγράφηκε!', product_desc: 'Δες πώς το GeoTapp λύνει αυτό το πρόβλημα', product_btn: 'Μάθε περισσότερα' },
   ru: { toc: 'В этой статье', share: 'Поделиться', copied: 'Скопировано!', product_desc: 'Узнайте, как GeoTapp решает это', product_btn: 'Подробнее' },
 };
 
@@ -41,6 +42,7 @@ const EU_BADGE: Record<string, { title: string; desc: string }> = {
   da: { title: 'Dine data bliver i Europa', desc: 'Stemplinger, fotos og persondata på EU-servere.' },
   sv: { title: 'Dina data stannar i Europa', desc: 'Stämplingar, foton och personuppgifter på EU-servrar.' },
   nb: { title: 'Dataene dine blir i Europa', desc: 'Stemplinger, bilder og personopplysninger på EU-servere.' },
+  el: { title: 'Τα δεδομένα σου μένουν στην Ευρώπη', desc: 'Χτυπήματα κάρτας, φωτογραφίες και προσωπικά δεδομένα σε διακομιστές της ΕΕ.' },
   ru: { title: 'Ваши данные остаются в Европе', desc: 'Отметки, фото и данные на серверах в ЕС.' },
 };
 
@@ -112,7 +114,7 @@ function ShareButtons({ title, copiedLabel, locale }: { title: string; copiedLab
       ))}
       <button
         onClick={handleCopy}
-        aria-label={locale === 'nl' ? 'Link kopiëren' : locale === 'fr' ? 'Copier le lien' : locale === 'es' ? 'Copiar enlace' : locale === 'pt' ? 'Copiar ligação' : locale === 'da' ? 'Kopiér link' : locale === 'nb' ? 'Kopier lenke' : locale === 'sv' ? 'Kopiera länk' : locale === 'ru' ? 'Скопировать ссылку' : 'Copy link'}
+        aria-label={locale === 'nl' ? 'Link kopiëren' : locale === 'fr' ? 'Copier le lien' : locale === 'es' ? 'Copiar enlace' : locale === 'pt' ? 'Copiar ligação' : locale === 'da' ? 'Kopiér link' : locale === 'nb' ? 'Kopier lenke' : locale === 'el' ? 'Αντιγραφή συνδέσμου' : locale === 'sv' ? 'Kopiera länk' : locale === 'ru' ? 'Скопировать ссылку' : 'Copy link'}
         className={`inline-flex h-11 w-11 items-center justify-center rounded-lg transition-all duration-200 ${copied ? 'text-green-700 bg-green-50' : 'text-slate-500 hover:bg-slate-50'}`}
         onMouseEnter={(e) => { if (!copied) e.currentTarget.style.color = '#22B573'; }}
         onMouseLeave={(e) => { if (!copied) e.currentTarget.style.color = ''; }}

@@ -75,6 +75,7 @@ export const austria: SchedaPaese = {
     sv: 'Österrike',
     nb: 'Østerrike',
     ru: 'Австрия',
+    el: "Αυστρία",
   },
   bandiera: '🇦🇹',
   federale: false,
@@ -97,6 +98,7 @@ export const austria: SchedaPaese = {
       nb: 'Østerrike er en forbundsstat, men har bare én nasjonal tilsynsmyndighet, DSB med sete i Wien: det finnes ingen inndeling etter Land (i motsetning til Tyskland).',
       nl: 'Oostenrijk is een federale staat, maar heeft één nationale toezichthoudende autoriteit, de DSB met zetel in Wenen: er is geen verdeling per Land (anders dan in Duitsland).',
       ru: "Австрия является федеративным государством, но имеет один национальный надзорный орган, DSB, расположенный в Вене: деления по землям (Land) нет, в отличие от Германии.",
+      el: "Η Αυστρία είναι ομοσπονδιακό κράτος, αλλά έχει μία ενιαία εθνική αρχή προστασίας δεδομένων, τη DSB με έδρα τη Βιέννη: δεν υπάρχει διαχωρισμός ανά ομόσπονδο κρατίδιο (Land), σε αντίθεση με τη Γερμανία.",
     },
   },
 
@@ -114,6 +116,7 @@ export const austria: SchedaPaese = {
         nb: 'Samtykke fra bedriftsutvalget (Betriebsrat) til kontrolltiltak som berører menneskeverdet (ArbVG § 96 Abs. 1 Z 3)',
         nl: 'Instemming van de ondernemingsraad (Betriebsrat) voor controlemaatregelen die de menselijke waardigheid raken (ArbVG § 96 Abs. 1 Z 3)',
         ru: "Согласие производственного совета (Betriebsrat) на меры контроля, затрагивающие человеческое достоинство (ArbVG § 96 Abs. 1 Z 3)",
+        el: "Συναίνεση του συμβουλίου εργαζομένων (Betriebsrat) για μέτρα ελέγχου που θίγουν την ανθρώπινη αξιοπρέπεια (ArbVG § 96 Abs. 1 Z 3)",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -128,6 +131,7 @@ export const austria: SchedaPaese = {
         nb: 'Kontrolltiltak og tekniske systemer som kan kontrollere arbeidstakerne og som berører menneskeverdet, krever bedriftsutvalgets samtykke (en Betriebsvereinbarung er obligatorisk): uten det er de ulovlige. Dette gjelder der det finnes et Betriebsrat; der det ikke finnes noe, kreves den ansattes individuelle samtykke etter § 10 AVRAG.',
         nl: 'Controlemaatregelen en technische systemen die geschikt zijn om werknemers te controleren en die de menselijke waardigheid raken, vereisen de instemming van de ondernemingsraad (een Betriebsvereinbarung is verplicht): zonder deze zijn ze ontoelaatbaar. Dit geldt waar een Betriebsrat bestaat; bij afwezigheid daarvan is de individuele instemming van de werknemer krachtens § 10 AVRAG vereist.',
         ru: "Меры контроля и технические системы, способные контролировать работников и затрагивающие человеческое достоинство, требуют согласия производственного совета (Betriebsvereinbarung обязательно): без него они недопустимы. Применяется там, где есть Betriebsrat; при его отсутствии требуется индивидуальное согласие работника по § 10 AVRAG.",
+        el: "Τα μέτρα ελέγχου και τα τεχνικά συστήματα που είναι πρόσφορα για τον έλεγχο των εργαζομένων και θίγουν την ανθρώπινη αξιοπρέπεια απαιτούν τη συναίνεση του συμβουλίου εργαζομένων (υποχρεωτική Betriebsvereinbarung): χωρίς αυτήν είναι απαράδεκτα. Ισχύει όπου υπάρχει Betriebsrat· σε περίπτωση απουσίας του απαιτείται η ατομική συναίνεση του εργαζομένου κατά το § 10 AVRAG.",
       },
       fonte: FONTE_ARBVG_96,
       fonteAggiuntiva: FONTE_AVRAG_10,
@@ -145,6 +149,7 @@ export const austria: SchedaPaese = {
         nb: 'Betriebsvereinbarung for systemer som behandler arbeidstakernes personopplysninger utover grunnleggende identifikasjonsopplysninger (ArbVG § 96a)',
         nl: 'Betriebsvereinbarung voor systemen die persoonsgegevens van werknemers verwerken die verder gaan dan de basisidentificatiegegevens (ArbVG § 96a)',
         ru: "Betriebsvereinbarung для систем, обрабатывающих персональные данные работников сверх анкетных данных (ArbVG § 96a)",
+        el: "Betriebsvereinbarung για συστήματα που επεξεργάζονται προσωπικά δεδομένα των εργαζομένων πέραν των στοιχείων ταυτότητας (ArbVG § 96a)",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -159,6 +164,7 @@ export const austria: SchedaPaese = {
         nb: 'Systemer som automatisk samler inn og behandler arbeidstakernes personopplysninger utover grunnleggende identifikasjon og stillingsklassifisering, krever bedriftsutvalgets samtykke (som voldgiftsnemnda Schlichtungsstelle kan erstatte); samtykke er ikke nødvendig når bruken av opplysningene ikke går utover forpliktelser som følger av lov, tariffavtale eller arbeidsavtalen. § 96a forutsetter et Betriebsrat: der det ikke finnes noe, gir den ikke noe individuelt samtykke som erstatning (GDPR gjelder fortsatt og, for kontroller som berører menneskeverdet, § 10 AVRAG).',
         nl: 'Systemen die automatisch persoonsgegevens van werknemers verzamelen en verwerken die verder gaan dan de basisidentificatiegegevens en de functie, vereisen de instemming van de ondernemingsraad (die de Schlichtungsstelle kan vervangen); instemming is niet nodig als het gebruik van de gegevens niet verder gaat dan verplichtingen uit wet, collectieve regeling of arbeidsovereenkomst. § 96a veronderstelt een Betriebsrat: waar er geen is, voorziet de bepaling niet in vervangende individuele instemming (de AVG blijft gelden en, voor controles die de menselijke waardigheid raken, § 10 AVRAG).',
         ru: "Системы, автоматически собирающие и обрабатывающие персональные данные работников сверх анкетных данных и квалификации, требуют согласия производственного совета (которое может заменить Schlichtungsstelle, согласительная комиссия); согласие не требуется, если использование данных не выходит за рамки обязанностей, предусмотренных законом, коллективным договором или индивидуальным трудовым договором. § 96a предполагает наличие Betriebsrat: там, где его нет, замещающего индивидуального согласия он не предусматривает (остаются GDPR и, для контроля, затрагивающего достоинство, § 10 AVRAG).",
+        el: "Τα συστήματα που συλλέγουν και επεξεργάζονται αυτόματα προσωπικά δεδομένα των εργαζομένων πέραν των στοιχείων ταυτότητας και της ειδικότητας απαιτούν τη συναίνεση του συμβουλίου εργαζομένων (την οποία μπορεί να αντικαταστήσει η Schlichtungsstelle)· η συναίνεση δεν χρειάζεται αν η χρήση των δεδομένων δεν υπερβαίνει τις υποχρεώσεις που προβλέπονται από τον νόμο, τη συλλογική σύμβαση ή την ατομική σύμβαση εργασίας. Το § 96a προϋποθέτει την ύπαρξη Betriebsrat: όπου δεν υπάρχει, δεν προβλέπει υποκατάστατη ατομική συναίνεση (ισχύουν ο ΓΚΠΔ και, για τους ελέγχους που θίγουν την αξιοπρέπεια, το § 10 AVRAG).",
       },
       fonte: FONTE_ARBVG_96A,
     },
@@ -175,6 +181,7 @@ export const austria: SchedaPaese = {
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit vóór installatie',
         ru: "Предварительное разрешение органа власти перед установкой",
+        el: "Προηγούμενη άδεια από κάποια αρχή πριν από την εγκατάσταση",
       },
       risposta: 'no',
       dettaglio: {
@@ -189,6 +196,7 @@ export const austria: SchedaPaese = {
         nb: 'Det kreves ingen forhåndstillatelse: det gamle DVR-registeret ble avskaffet med GDPR; ansvarlighetsprinsippet gjelder (protokoll over behandlingsaktiviteter og personvernkonsekvensvurdering der det kreves).',
         nl: 'Een voorafgaande toestemming is niet nodig: het oude DVR-register is met de AVG afgeschaft; het verantwoordingsbeginsel geldt (register van verwerkingsactiviteiten en gegevensbeschermingseffectbeoordeling indien vereist).',
         ru: "Предварительное разрешение не требуется: прежний реестр DVR отменён с введением GDPR; действует принцип подотчётности (реестр операций обработки и оценка воздействия, когда она требуется).",
+        el: "Δεν απαιτείται προηγούμενη άδεια: το παλιό μητρώο DVR καταργήθηκε με τον ΓΚΠΔ· ισχύει η λογοδοσία (αρχείο δραστηριοτήτων επεξεργασίας και εκτίμηση αντικτύπου όταν απαιτείται).",
       },
       fonte: FONTE_DSB_BERICHT_2018,
     },
@@ -205,6 +213,7 @@ export const austria: SchedaPaese = {
         nb: 'GPS på ansatte er bare tillatt hvis det er nødvendig: forbudt der formålet kan nås med mindre inngripende midler',
         nl: 'GPS bij werknemers alleen toegestaan als het noodzakelijk is: verboden als het doel met minder ingrijpende middelen kan worden bereikt',
         ru: "GPS на работниках допускается только при необходимости: запрещено, если цели можно достичь менее инвазивными средствами",
+        el: "Το GPS στους εργαζομένους επιτρέπεται μόνο αν είναι αναγκαίο: απαγορεύεται αν ο σκοπός επιτυγχάνεται με λιγότερο παρεμβατικά μέσα",
       },
       risposta: 'si',
       dettaglio: {
@@ -219,6 +228,7 @@ export const austria: SchedaPaese = {
         nb: 'I den østerrikske referansesaken fant DSB at GPS installert i 15 firmabiler (også brukt privat) var ulovlig fordi de oppgitte formålene (oppgavefordeling, kjørebok, kontroll av arbeidstid) kunne nås med midler som innebærer færre opplysninger, og påla at den umiddelbart skulle opphøre.',
         nl: 'In de Oostenrijkse referentiezaak achtte de DSB de GPS in 15 bedrijfsvoertuigen (ook privé te gebruiken) onrechtmatig omdat de opgegeven doelen (opdrachttoewijzing, ritregistratie, controle van de arbeidstijd) met minder gegevens konden worden bereikt, en verbood de verwerking met onmiddellijke ingang.',
         ru: "В основном австрийском деле DSB признал незаконным GPS, установленный на 15 служебных автомобилях (в том числе используемых в личных целях), поскольку заявленные цели (распределение заданий, путевой журнал, проверка рабочего времени) достижимы средствами, требующими меньше данных, и обязал немедленно прекратить его использование.",
+        el: "Στην κύρια αυστριακή υπόθεση αναφοράς η DSB έκρινε παράνομο το GPS που είχε εγκατασταθεί σε 15 εταιρικά οχήματα (και με ιδιωτική χρήση), επειδή ο δηλωμένος σκοπός (ανάθεση εργασιών, ημερολόγιο διαδρομών, έλεγχος ωραρίου) μπορούσε να επιτευχθεί με μέσα που συνεπάγονται λιγότερα δεδομένα, και διέταξε την παύση του με άμεση ισχύ.",
       },
       fonte: FONTE_DSB_DECISIONE,
     },
@@ -235,6 +245,7 @@ export const austria: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (DSFA) for geolokalisering av ansatte',
         nl: 'Gegevensbeschermingseffectbeoordeling (DSFA) voor de geolokalisatie van werknemers',
         ru: "Оценка воздействия (DSFA) для геолокации работников",
+        el: "Εκτίμηση αντικτύπου (DSFA) για τον γεωεντοπισμό των εργαζομένων",
       },
       risposta: 'si',
       dettaglio: {
@@ -249,6 +260,7 @@ export const austria: SchedaPaese = {
         nb: 'Den østerrikske DSFA-V-forskriften nevner ikke geolokalisering av ansatte. Den krever en personvernkonsekvensvurdering når ett av kriteriene i § 2 nr. 2 er oppfylt (herunder en rent automatisert vurdering av posisjon eller bevegelser med negative virkninger) eller to eller flere kriterier i § 2 nr. 3 (herunder opplysninger om ansatte, som regnes som sårbare personer, og posisjonsdata i TKGs forstand). Systematisk sporing av ansatte oppfyller vanligvis disse kravene, så en vurdering bør gjennomføres; artikkel 35 i GDPR har siste ord.',
         nl: 'De Oostenrijkse DSFA-V noemt de geolokalisatie van werknemers niet uitdrukkelijk. Zij vereist een effectbeoordeling als een van de criteria van § 2, lid 2 is vervuld (o.a. uitsluitend geautomatiseerde beoordeling van locatie of verplaatsingen met nadelige gevolgen) of twee of meer criteria van § 2, lid 3 (o.a. gegevens van werknemers als kwetsbare personen en locatiegegevens in de zin van de TKG). Systematische tracking van werknemers voldoet daar meestal aan, dus het is verstandig een beoordeling uit te voeren; artikel 35 AVG blijft doorslaggevend.',
         ru: "Австрийский регламент DSFA-V не называет геолокацию сотрудников. Он предусматривает оценку воздействия при наличии одного из критериев § 2 Abs. 2 (в том числе исключительно автоматизированная оценка местонахождения или перемещений с неблагоприятными последствиями) либо двух и более критериев § 2 Abs. 3 (в том числе данные работников, которые считаются уязвимыми лицами, и данные о местонахождении по смыслу TKG). Систематическое отслеживание сотрудников, как правило, отвечает этим требованиям, поэтому её целесообразно провести; последнее слово остаётся за ст. 35 GDPR.",
+        el: "Ο αυστριακός κανονισμός DSFA-V δεν αναφέρει τον γεωεντοπισμό των εργαζομένων. Προβλέπει εκτίμηση αντικτύπου όταν συντρέχει ένα από τα κριτήρια του § 2 παρ. 2 (μεταξύ άλλων η αξιολόγηση, μόνο αυτοματοποιημένη, τοποθεσίας ή μετακινήσεων με αρνητικά αποτελέσματα) ή δύο ή περισσότερα κριτήρια του § 2 παρ. 3 (μεταξύ άλλων τα δεδομένα εργαζομένων, που θεωρούνται ευάλωτα πρόσωπα, και τα δεδομένα θέσης κατά τον TKG). Η συστηματική παρακολούθηση των εργαζομένων συνήθως πληροί τις προϋποθέσεις, οπότε συμφέρει να γίνει· την τελευταία λέξη έχει το άρθρο 35 ΓΚΠΔ.",
       },
       fonte: FONTE_DSFA_V,
     },
@@ -269,6 +281,7 @@ export const austria: SchedaPaese = {
         nb: 'Hvis det finnes et bedriftsutvalg, må du innhente dets samtykke gjennom en Betriebsvereinbarung før systemet tas i bruk (ArbVG § 96 / § 96a); der det ikke finnes noe, for kontroller som berører menneskeverdet, individuelt samtykke etter § 10 AVRAG.',
         nl: 'Als er een ondernemingsraad bestaat, verkrijg dan vóór activering diens instemming via een Betriebsvereinbarung (ArbVG § 96 / § 96a); bij afwezigheid daarvan, voor controles die de menselijke waardigheid raken, individuele instemming krachtens § 10 AVRAG.',
         ru: "Если есть производственный совет, получите его согласие в форме Betriebsvereinbarung (производственного соглашения) до включения системы (ArbVG § 96 / § 96a); при его отсутствии, для мер контроля, затрагивающих человеческое достоинство, нужно индивидуальное согласие по § 10 AVRAG.",
+        el: "Αν υπάρχει συμβούλιο εργαζομένων, εξασφάλισε τη συναίνεσή του με Betriebsvereinbarung πριν από την ενεργοποίηση (ArbVG § 96 / § 96a)· αν δεν υπάρχει, για τους ελέγχους που θίγουν την αξιοπρέπεια, την ατομική συναίνεση κατά το § 10 AVRAG.",
       },
     },
     {
@@ -285,6 +298,7 @@ export const austria: SchedaPaese = {
         nb: 'Kontroller at formålet ikke kan nås med midler som er mindre inngripende enn GPS-sporing.',
         nl: 'Controleer of het doel niet kan worden bereikt met middelen die minder ingrijpend zijn dan GPS-tracking.',
         ru: "Убедитесь, что цель недостижима менее инвазивными средствами, чем GPS-слежение.",
+        el: "Έλεγξε ότι ο σκοπός δεν μπορεί να επιτευχθεί με μέσα λιγότερο παρεμβατικά από την παρακολούθηση GPS.",
       },
     },
     {
@@ -301,6 +315,7 @@ export const austria: SchedaPaese = {
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DSFA) for geolokalisering av ansatte.',
         nl: 'Voer de gegevensbeschermingseffectbeoordeling (DSFA) uit voor de geolokalisatie van de werknemers.',
         ru: "Проведите оценку воздействия (DSFA) для геолокации работников.",
+        el: "Πραγματοποίησε την εκτίμηση αντικτύπου (DSFA) για τον γεωεντοπισμό των εργαζομένων.",
       },
     },
     {
@@ -317,6 +332,7 @@ export const austria: SchedaPaese = {
         nb: 'Informer de ansatte, og finn et gyldig behandlingsgrunnlag (art. 6 i GDPR).',
         nl: 'Informeer de werknemers en bepaal een geldige rechtsgrondslag (art. 6 AVG).',
         ru: "Проинформируйте работников и определите действительное правовое основание (ст. 6 GDPR).",
+        el: "Ενημέρωσε τους εργαζομένους και βρες μια έγκυρη νομική βάση (άρθρο 6 ΓΚΠΔ).",
       },
     },
     {
@@ -333,6 +349,7 @@ export const austria: SchedaPaese = {
         nb: 'Konfigurer systemet minimalt: samle bare inn de opplysningene som er nødvendige for det oppgitte formålet (art. 5 nr. 1 bokstav c i GDPR).',
         nl: 'Configureer het systeem minimaal: verzamel alleen de gegevens die nodig zijn voor het opgegeven doel (art. 5, lid 1, onder c, AVG).',
         ru: "Настройте систему по минимуму: собирайте только данные, необходимые для заявленной цели (ст. 5 п. 1 лит. c GDPR).",
+        el: "Ρύθμισε το σύστημα στο ελάχιστο: συλλέγε μόνο τα δεδομένα που είναι αναγκαία για τον δηλωμένο σκοπό (άρθρο 5 παρ. 1 στοιχ. γ ΓΚΠΔ).",
       },
     },
     {
@@ -349,6 +366,7 @@ export const austria: SchedaPaese = {
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og dele ut personvernerklæringen på nytt, og, hvis det finnes et bedriftsutvalg, oppdatere eller reforhandle Betriebsvereinbarung før det nye systemet tas i bruk. Ofte endrer leverandøren (databehandleren), de innsamlede opplysningene og metodene seg: informasjonen som ble gitt tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en werkt u, als er een ondernemingsraad bestaat, de Betriebsvereinbarung bij of onderhandelt u er opnieuw over voordat u het nieuwe systeem activeert. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "При смене системы или программы мониторинга обновите и повторно вручите уведомление о защите данных и, если есть производственный совет, обновите или заново согласуйте Betriebsvereinbarung до запуска новой системы. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее вручённого уведомления недостаточно.",
+        el: "Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση απορρήτου και, αν υπάρχει συμβούλιο εργαζομένων, ενημέρωσε ή επαναδιαπραγματεύσου τη Betriebsvereinbarung πριν ενεργοποιήσεις το νέο σύστημα. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και οι τρόποι: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.",
       },
     },
   ],
@@ -377,6 +395,7 @@ export const austria: SchedaPaese = {
       nb: 'pålegg om opphør (ingen bot); GDPR-risiko på inntil 20 millioner euro eller 4 % av omsetningen (art. 83)',
       nl: 'bevel tot beëindiging (geen geldboete); AVG-risico tot 20 miljoen euro of 4% van de omzet (art. 83)',
       ru: "предписание о прекращении (без денежного штрафа); риск по GDPR: до 20 млн евро или 4% оборота (ст. 83)",
+      el: "εντολή παύσης (χωρίς χρηματικό πρόστιμο)· κίνδυνος βάσει ΓΚΠΔ έως 20 εκατ. ευρώ ή 4% του κύκλου εργασιών (άρθρο 83)",
     },
     casoCitato: {
       it: "Datenschutzbehörde, decisione del 1° marzo 2022 (2022-0.021.739): un'azienda aveva installato tracker GPS fissi su 15 veicoli aziendali a uso misto; la DSB ha ritenuto il trattamento illecito perché lo scopo era raggiungibile con mezzi più miti e ne ha ordinato la cessazione immediata, senza multa in denaro.",
@@ -390,6 +409,7 @@ export const austria: SchedaPaese = {
       nb: 'Datenschutzbehörde, vedtak av 1. mars 2022 (2022-0.021.739): et selskap hadde installert faste GPS-sendere i 15 firmabiler med blandet bruk; DSB fant behandlingen ulovlig fordi formålet kunne nås med mindre inngripende midler, og påla at den umiddelbart skulle opphøre, uten bot.',
       nl: 'Datenschutzbehörde, beslissing van 1 maart 2022 (2022-0.021.739): een onderneming had vast ingebouwde GPS-trackers geïnstalleerd op 15 bedrijfsvoertuigen voor gemengd gebruik; de DSB achtte de verwerking onrechtmatig omdat het doel met minder ingrijpende middelen kon worden bereikt en gelastte de onmiddellijke beëindiging ervan, zonder geldboete.',
       ru: "Datenschutzbehörde, решение от 1 марта 2022 г. (2022-0.021.739): компания установила стационарные GPS-трекеры на 15 служебных автомобилях смешанного использования; DSB признал обработку незаконной, поскольку цель была достижима менее инвазивными средствами, и предписал немедленно её прекратить, без денежного штрафа.",
+      el: "Datenschutzbehörde, απόφαση της 1ης Μαρτίου 2022 (2022-0.021.739): μια εταιρεία είχε εγκαταστήσει σταθερούς εντοπιστές GPS σε 15 εταιρικά οχήματα μικτής χρήσης· η DSB έκρινε την επεξεργασία παράνομη επειδή ο σκοπός μπορούσε να επιτευχθεί με ηπιότερα μέσα και διέταξε την άμεση παύση της, χωρίς χρηματικό πρόστιμο.",
     },
     urlFonte: FONTE_DSB_DECISIONE.url,
     tipoImporto: 'caso-gps',

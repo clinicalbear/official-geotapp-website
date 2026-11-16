@@ -82,6 +82,7 @@ export const serbia: SchedaPaese = {
     sv: 'Serbien',
     nb: 'Serbia',
     ru: 'Сербия',
+    el: 'Σερβία',
   },
   bandiera: '🇷🇸',
   federale: false,
@@ -100,6 +101,7 @@ export const serbia: SchedaPaese = {
       sv: 'Poverenik (serbiska kommissionären för information och dataskydd)',
       nb: 'Poverenik (serbisk kommissær for informasjon og personvern)',
       ru: 'Poverenik (сербский уполномоченный по вопросам информации и защиты данных)',
+      el: 'Poverenik (Επίτροπος της Σερβίας για την Πληροφόρηση και την Προστασία Δεδομένων)',
     },
     portale: FONTE_POVERENIK.url,
     urlFonte: FONTE_POVERENIK.url,
@@ -116,6 +118,7 @@ export const serbia: SchedaPaese = {
       nb: 'Serbia er et kandidatland utenfor EU, med en lov (LPDP) som speiler GDPR. Den eneste nasjonale myndigheten er Poverenik; ingen regional inndeling.',
       nl: 'Servië is een kandidaat-land, buiten de EU, met een wet (LPDP) die de AVG weerspiegelt. De enige nationale autoriteit is de Poverenik; er is geen regionale onderverdeling.',
       ru: "Сербия является страной-кандидатом, не входит в ЕС и имеет закон (LPDP), воспроизводящий GDPR. Единый национальный орган, Poverenik (Уполномоченный); регионального разделения нет.",
+      el: 'Η Σερβία είναι υπό ένταξη χώρα, εκτός ΕΕ, με νόμο (LPDP) που αντικατοπτρίζει τον ΓΚΠΔ. Μία μόνο εθνική αρχή, ο Poverenik· δεν υπάρχει περιφερειακός διαχωρισμός.',
     },
   },
 
@@ -133,6 +136,7 @@ export const serbia: SchedaPaese = {
         nb: 'Detaljert forhåndsinformasjon til de ansatte (LPDP art. 23)',
         nl: 'Gedetailleerde en voorafgaande informatie aan werknemers (LPDP art. 23)',
         ru: "Подробное предварительное информирование работников (LPDP, ст. 23)",
+        el: 'Λεπτομερής και προηγούμενη ενημέρωση των εργαζομένων (LPDP άρθρο 23)',
       },
       risposta: 'si',
       dettaglio: {
@@ -147,6 +151,7 @@ export const serbia: SchedaPaese = {
         nb: 'De ansatte som skal bruke kjøretøyene, skal informeres i detalj om behandlingen: behandlingsansvarlig, formål, behandlingsgrunnlag, mottakere, lagring og rettigheter.',
         nl: 'Werknemers die de voertuigen gaan gebruiken, moeten in detail over de verwerking worden geïnformeerd: verwerkingsverantwoordelijke, doeleinden, rechtsgrondslag, ontvangers, bewaring en rechten.',
         ru: "Работников, которые будут пользоваться транспортными средствами, необходимо подробно информировать об обработке: оператор, цели, правовое основание, получатели, хранение и права.",
+        el: 'Οι εργαζόμενοι που θα χρησιμοποιούν τα οχήματα πρέπει να ενημερωθούν αναλυτικά για την επεξεργασία: υπεύθυνος επεξεργασίας, σκοποί, νομική βάση, αποδέκτες, διατήρηση και δικαιώματα.',
       },
       fonte: FONTE_LPDP,
     },
@@ -163,6 +168,7 @@ export const serbia: SchedaPaese = {
         nb: 'Tillatelse eller forhåndsregistrering hos en myndighet før installasjon',
         nl: 'Toestemming of voorafgaande registratie bij een autoriteit vóór installatie',
         ru: "Предварительное разрешение или регистрация в органе до установки",
+        el: 'Προηγούμενη άδεια ή καταχώριση σε αρχή πριν από την εγκατάσταση',
       },
       risposta: 'no',
       dettaglio: {
@@ -177,6 +183,7 @@ export const serbia: SchedaPaese = {
         nb: 'LPDP speiler GDPRs modell med ansvarlighet: det gamle sentrale registeret over datasamlinger ble ikke lenger ført da loven trådte i kraft (art. 98).',
         nl: 'De LPDP weerspiegelt het verantwoordingsmodel van de AVG: het oude Centraal register van gegevensverzamelingen wordt sinds de inwerkingtreding van de wet niet meer bijgehouden (art. 98).',
         ru: "LPDP воспроизводит модель подотчётности GDPR: прежний Центральный реестр собраний данных перестал вестись с вступлением закона в силу (ст. 98).",
+        el: 'Ο LPDP αντικατοπτρίζει το μοντέλο λογοδοσίας του ΓΚΠΔ: το παλιό Κεντρικό Μητρώο αρχείων δεδομένων έπαψε να τηρείται με την έναρξη ισχύος του νόμου (άρθρο 98).',
       },
       fonte: FONTE_LPDP,
     },
@@ -193,6 +200,7 @@ export const serbia: SchedaPaese = {
         nb: 'Grunnlaget er berettiget interesse, avveid mot arbeidstakerens rettigheter; samtykke er et svakt grunnlag',
         nl: 'Grondslag = gerechtvaardigd belang, afgewogen tegen de rechten van de werknemer; toestemming is een zwakke grondslag',
         ru: "Основание = законный интерес, взвешенный с правами работника; согласие является слабым основанием",
+        el: 'Βάση = έννομο συμφέρον σταθμισμένο με τα δικαιώματα του εργαζομένου· η συγκατάθεση είναι αδύναμη βάση',
       },
       risposta: 'si',
       dettaglio: {
@@ -207,6 +215,7 @@ export const serbia: SchedaPaese = {
         nb: 'Grunnlaget er normalt arbeidsgiverens berettigede interesse (art. 12(1)(6) LPDP), avveid mot den ansattes interesser og grunnleggende rettigheter (samme bestemmelse); i konsekvensvurderingen skal det beskrives, og dets nødvendighet og forholdsmessighet i forhold til formålene skal vurderes (art. 54(6)(1)-(2) LPDP), og den ansatte skal informeres om det (art. 23(1)(4)). I arbeidsforholdet er samtykke generelt et svakt grunnlag på grunn av ubalansen mellom partene (EDPBs retningslinjer 05/2020 om samtykke).',
         nl: 'De grondslag is doorgaans het gerechtvaardigd belang van de werkgever (art. 12(1)(6) LPDP), afgewogen tegen de belangen en de grondrechten van de werknemer (dezelfde bepaling); in de effectbeoordeling moet het worden omschreven en moeten de noodzaak en evenredigheid ervan ten opzichte van de doeleinden worden beoordeeld (art. 54(6)(1)-(2) LPDP), en de werknemer moet erover worden geïnformeerd (art. 23(1)(4)). In de arbeidsrelatie is toestemming in het algemeen een zwakke grondslag wegens de ongelijkheid tussen de partijen (EDPB-richtsnoeren 05/2020 over toestemming).',
         ru: "Основание, как правило, законный интерес работодателя (ст. 12(1)(6) LPDP), взвешенный с интересами и основными правами работника (то же положение); в оценке воздействия его нужно описать и оценить его необходимость и соразмерность целям (ст. 54(6)(1)-(2) LPDP), а работник должен быть о нём проинформирован (ст. 23(1)(4)). В трудовых отношениях согласие, как правило, слабое основание из-за неравенства сторон (руководство EDPB 05/2020 о согласии).",
+        el: 'Η βάση είναι κατά κανόνα το έννομο συμφέρον του εργοδότη (άρθρο 12(1)(6) LPDP), σταθμισμένο με τα συμφέροντα και τα θεμελιώδη δικαιώματα του εργαζομένου (ίδια διάταξη)· στην εκτίμηση αντικτύπου πρέπει να περιγράφεται και να αξιολογείται η αναγκαιότητα και η αναλογικότητά του ως προς τους σκοπούς (άρθρο 54(6)(1)-(2) LPDP), και ο εργαζόμενος πρέπει να ενημερώνεται σχετικά (άρθρο 23(1)(4)). Στην εργασιακή σχέση η συγκατάθεση είναι γενικά αδύναμη βάση, λόγω της ανισορροπίας μεταξύ των μερών (κατευθυντήριες γραμμές EDPB 05/2020 για τη συγκατάθεση).',
       },
       fonte: FONTE_LPDP,
       fonteAggiuntiva: FONTE_EDPB_CONSENSO,
@@ -224,6 +233,7 @@ export const serbia: SchedaPaese = {
         nb: 'Ingen kontinuerlig sporing; bare arbeidstid og formål',
         nl: 'Geen continue tracking; alleen werktijd en doel',
         ru: "Без непрерывного отслеживания; только рабочее время и цель",
+        el: 'Καμία συνεχής παρακολούθηση θέσης· μόνο ωράριο και σκοπός',
       },
       risposta: 'si',
       dettaglio: {
@@ -238,6 +248,7 @@ export const serbia: SchedaPaese = {
         nb: 'Opplysninger skal samles inn for bestemte formål og være begrenset til det som er nødvendig for disse formålene (art. 5(1), punkt 2 og 3, LPDP): GPS skal begrenses til arbeidstiden og det oppgitte formålet, og en kontinuerlig sporing, som også registrerer bevegelser uten sammenheng med formålet, oppfyller ikke dataminimeringen. En generell begrunnelse om vern av verdier er ikke nok til å definere formålet.',
         nl: 'Gegevens moeten voor bepaalde doeleinden worden verzameld en beperkt blijven tot wat daarvoor nodig is (art. 5(1), punten 2 en 3, LPDP): gps moet beperkt blijven tot werktijd en het vermelde doel, en continue tracking, die ook bewegingen buiten het doel registreert, respecteert de dataminimalisatie niet. Een algemene verwijzing naar bescherming van bezittingen volstaat niet om het doel te bepalen.',
         ru: "Данные должны собираться для определённых целей и ограничиваться необходимым для этих целей (ст. 5(1), пункты 2 и 3, LPDP): GPS нужно ограничить рабочим временем и заявленной целью, а непрерывное отслеживание, фиксирующее также перемещения, не связанные с целью, не соответствует принципу минимизации. Общего обоснования в виде защиты имущества недостаточно для определения цели.",
+        el: 'Τα δεδομένα πρέπει να συλλέγονται για καθορισμένους σκοπούς και να περιορίζονται σε όσα είναι αναγκαία για αυτούς τους σκοπούς (άρθρο 5(1), σημεία 2 και 3, LPDP): το GPS περιορίζεται στο ωράριο εργασίας και στον δηλωμένο σκοπό, και μια συνεχής παρακολούθηση θέσης, που καταγράφει και μετακινήσεις άσχετες με τον σκοπό, δεν σέβεται την ελαχιστοποίηση. Μια γενική δικαιολόγηση προστασίας της περιουσίας δεν αρκεί για να προσδιοριστεί ο σκοπός.',
       },
       fonte: FONTE_LPDP,
     },
@@ -254,6 +265,7 @@ export const serbia: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (DPIA) og eventuell uttalelse fra Poverenik ved overvåking av ansatte via apper eller sporingssystemer (liste, LPDP art. 54)',
         nl: 'Effectbeoordeling (DPIA) en zo nodig advies van de Poverenik voor het monitoren van werknemers via apps of trackingsystemen (lijst, LPDP art. 54)',
         ru: "Оценка воздействия (DPIA) и, при необходимости, заключение Poverenik при мониторинге сотрудников через приложения или системы отслеживания (перечень, LPDP, ст. 54)",
+        el: 'Εκτίμηση αντικτύπου (DPIA) και ενδεχόμενη γνώμη του Poverenik για την παρακολούθηση των εργαζομένων μέσω εφαρμογών ή συστημάτων παρακολούθησης (κατάλογος, LPDP άρθρο 54)',
       },
       risposta: 'si',
       dettaglio: {
@@ -268,6 +280,7 @@ export const serbia: SchedaPaese = {
         nb: 'Behandling av de ansattes opplysninger via apper eller systemer som sporer arbeidet, bevegelsene og kommunikasjonen deres står på listen over behandlinger som krever en personvernkonsekvensvurdering; før oppstart må den behandlingsansvarlige gjennomføre en DPIA (art. 54 LPDP). Uttalelse fra Poverenik skal bare innhentes før oppstart hvis DPIA-en viser en høy risiko som de planlagte tiltakene ikke reduserer (art. 55(1)); å unnlate DPIA-en eller den påkrevde uttalelsen er straffbart (art. 95).',
         nl: 'De verwerking van werknemersgegevens via apps of systemen die hun werk, bewegingen en communicatie volgen, staat op de lijst die een effectbeoordeling vereist; vóór aanvang moet de verwerkingsverantwoordelijke de DPIA uitvoeren (art. 54 LPDP). Het advies van de Poverenik moet vóór aanvang alleen worden gevraagd als de DPIA een hoog risico aantoont dat de geplande maatregelen niet verminderen (art. 55(1)); het achterwege laten van de DPIA of het vereiste advies wordt bestraft (art. 95).',
         ru: "Обработка данных сотрудников через приложения или системы, отслеживающие их работу, перемещения и коммуникацию, входит в перечень, требующий оценки воздействия; до начала оператор должен провести DPIA (ст. 54 LPDP). Заключение Poverenik нужно запрашивать до начала только в том случае, если DPIA указывает на высокий риск, который предусмотренные меры не снижают (ст. 55(1)); непроведение DPIA или незапрос обязательного заключения наказуемо (ст. 95).",
+        el: 'Η επεξεργασία δεδομένων των εργαζομένων μέσω εφαρμογών ή συστημάτων που παρακολουθούν την εργασία, τις μετακινήσεις και την επικοινωνία τους περιλαμβάνεται στον κατάλογο που απαιτεί εκτίμηση αντικτύπου· πριν ξεκινήσει, ο υπεύθυνος επεξεργασίας πρέπει να κάνει τη DPIA (άρθρο 54 LPDP). Η γνώμη του Poverenik ζητείται πριν ξεκινήσει μόνο αν η DPIA δείχνει υψηλό κίνδυνο που τα προβλεπόμενα μέτρα δεν μειώνουν (άρθρο 55(1))· η παράλειψη της DPIA ή της οφειλόμενης γνώμης τιμωρείται (άρθρο 95).',
       },
       fonte: FONTE_DPIA_LPDP,
       fonteAggiuntiva: FONTE_LISTA_DPIA,
@@ -289,6 +302,7 @@ export const serbia: SchedaPaese = {
         nb: 'Definer og dokumenter den berettigede interessen med en test i tre ledd.',
         nl: 'Definieer en documenteer het gerechtvaardigd belang met een drieledige toets.',
         ru: "Определите и задокументируйте законный интерес с помощью трёхчастного теста.",
+        el: 'Όρισε και τεκμηρίωσε το έννομο συμφέρον με έλεγχο τριών σκελών.',
       },
     },
     {
@@ -305,6 +319,7 @@ export const serbia: SchedaPaese = {
         nb: 'Informer i detalj de ansatte som skal bruke kjøretøyene (art. 23).',
         nl: 'Informeer de werknemers die de voertuigen gaan gebruiken in detail (art. 23).',
         ru: "Подробно проинформируйте работников, которые будут пользоваться транспортными средствами (ст. 23).",
+        el: 'Ενημέρωσε αναλυτικά τους εργαζομένους που θα χρησιμοποιούν τα οχήματα (άρθρο 23).',
       },
     },
     {
@@ -321,6 +336,7 @@ export const serbia: SchedaPaese = {
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) før oppstart, og hvis den viser en høy risiko som tiltakene ikke reduserer, be om uttalelse fra Poverenik.',
         nl: 'Voer vóór aanvang de effectbeoordeling (DPIA) uit en vraag, als die een door de maatregelen niet verminderd hoog risico aantoont, het advies van de Poverenik.',
         ru: "Проведите оценку воздействия (DPIA) до начала и, если она указывает на высокий риск, не снижаемый мерами, запросите заключение Poverenik.",
+        el: 'Κάνε την εκτίμηση αντικτύπου (DPIA) πριν ξεκινήσεις και, αν δείχνει υψηλό κίνδυνο που δεν μειώνεται από τα μέτρα, ζήτα τη γνώμη του Poverenik.',
       },
     },
     {
@@ -337,6 +353,7 @@ export const serbia: SchedaPaese = {
         nb: 'Begrens GPS til arbeidstiden og formålet: ingen kontinuerlig sporing.',
         nl: 'Beperk de GPS tot de werktijd en het doel: geen continue tracking.',
         ru: "Ограничьте GPS рабочим временем и целью: без непрерывного отслеживания.",
+        el: 'Περιόρισε το GPS στο ωράριο και στον σκοπό: καμία συνεχής παρακολούθηση θέσης.',
       },
     },
     {
@@ -353,6 +370,7 @@ export const serbia: SchedaPaese = {
         nb: 'Konfigurer systemet forholdsmessig, og respekter de ansattes rett til å protestere.',
         nl: 'Configureer het systeem op een evenredige manier en respecteer het recht van werknemers om bezwaar te maken.',
         ru: "Настройте систему соразмерно и соблюдайте право работников на возражение.",
+        el: 'Ρύθμισε το σύστημα με αναλογικό τρόπο και σεβάσου το δικαίωμα εναντίωσης των εργαζομένων.',
       },
     },
     {
@@ -369,6 +387,7 @@ export const serbia: SchedaPaese = {
         nb: 'Hvis du bytter overvåkingssystem eller programvare, må du oppdatere og dele ut personvernerklæringen på nytt, og undersøke om du igjen må informere eller rådføre deg med de ansattes representanter, der loven krever det. Ofte endres leverandøren (databehandleren), de innsamlede opplysningene og metodene: informasjonen som ble gitt tidligere er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "Если вы меняете систему или программу мониторинга, обновите и повторно вручите информационное уведомление и проверьте, нужно ли вновь информировать представителей работников или проводить с ними консультации, там, где этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее вручённого уведомления недостаточно.",
+        el: 'Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση, και έλεγξε αν πρέπει να ενημερώσεις ή να συμβουλευτείς ξανά τους εκπροσώπους των εργαζομένων, όπου το προβλέπει ο νόμος. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και ο τρόπος λειτουργίας: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.',
       },
     },
   ],
@@ -397,6 +416,7 @@ export const serbia: SchedaPaese = {
       nb: 'fra 50 000 til 2 000 000 RSD for den juridiske personen (ca. 425-17 000 euro)',
       nl: 'van 50.000 tot 2.000.000 RSD voor de rechtspersoon (ongeveer 425 - 17.000 euro)',
       ru: "от 50.000 до 2.000.000 RSD для юридического лица (около 425 - 17.000 евро)",
+      el: 'από 50.000 έως 2.000.000 RSD για το νομικό πρόσωπο (περίπου 425 - 17.000 ευρώ)',
     },
     casoCitato: {
       it: 'Non risulta una multa del Poverenik specifica pubblicata per il GPS sui dipendenti. Nel 2026 il Poverenik ha svolto un\'ispezione straordinaria sul JKP Mediana di Niš, che aveva installato 80 dispositivi GPS sui cassonetti, contestati dai lavoratori dell\'igiene perché ne avrebbero tracciato indirettamente i movimenti; dall\'ispezione risulta che i cassonetti non erano stati messi in funzione. La mancata DPIA o richiesta di parere è punita con una sanzione da 50.000 a 2.000.000 RSD per la persona giuridica.',
@@ -410,6 +430,7 @@ export const serbia: SchedaPaese = {
       nb: 'Det finnes ingen spesifikk, offentliggjort bot fra Poverenik for GPS på ansatte. I 2026 gjennomførte Poverenik en ekstraordinær inspeksjon hos JKP Mediana i Niš, som hadde installert 80 GPS-enheter på avfallscontainere, noe renovasjonsarbeiderne protesterte mot fordi de indirekte ville spore bevegelsene deres; inspeksjonen fastslo at containerne ikke var tatt i bruk. Unnlatt DPIA eller unnlatt anmodning om uttalelse straffes med en bot på 50 000 til 2 000 000 RSD for den juridiske personen.',
       nl: 'Er is geen specifieke, gepubliceerde boete van de Poverenik voor GPS op werknemers bekend. In 2026 voerde de Poverenik een buitengewone inspectie uit bij JKP Mediana in Nis, dat 80 GPS-apparaten op de afvalcontainers had geïnstalleerd, aangevochten door de schoonmaakmedewerkers omdat die indirect hun bewegingen zouden volgen; de inspectie stelde vast dat de containers niet in gebruik waren genomen. Het niet uitvoeren van de DPIA of het niet inwinnen van het advies wordt bestraft met een boete van 50.000 tot 2.000.000 RSD voor de rechtspersoon.',
       ru: "Опубликованного штрафа Poverenik именно за GPS в отношении сотрудников не обнаружено. В 2026 году Poverenik провёл внеплановую проверку JKP Mediana из Ниша, установившего 80 GPS-устройств на мусорных контейнерах; работники санитарной службы оспаривали это, поскольку так косвенно отслеживались бы их перемещения; по итогам проверки контейнеры в эксплуатацию введены не были. Непроведение DPIA или незапрос заключения наказуемо штрафом от 50.000 до 2.000.000 RSD для юридического лица.",
+      el: 'Δεν προκύπτει δημοσιευμένο πρόστιμο του Poverenik ειδικά για το GPS στους εργαζομένους. Το 2026 ο Poverenik πραγματοποίησε έκτακτη επιθεώρηση στην JKP Mediana του Niš, που είχε εγκαταστήσει 80 συσκευές GPS στους κάδους απορριμμάτων, τις οποίες αμφισβήτησαν οι εργαζόμενοι καθαριότητας επειδή θα παρακολουθούσαν έμμεσα τις μετακινήσεις τους· από την επιθεώρηση προέκυψε ότι οι κάδοι δεν είχαν τεθεί σε λειτουργία. Η παράλειψη DPIA ή αιτήματος γνώμης τιμωρείται με κύρωση από 50.000 έως 2.000.000 RSD για το νομικό πρόσωπο.',
     },
     urlFonte: FONTE_DANAS_MEDIANA.url,
     tipoImporto: 'massimale',

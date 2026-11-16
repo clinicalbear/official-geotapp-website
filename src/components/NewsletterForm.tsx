@@ -269,6 +269,29 @@ const T: Record<string, {
     error: 'Noe gikk galt. Prøv igjen.',
     privacy: 'Ingen spam. Avslutt når som helst.',
   },
+  el: {
+    title: 'Μείνε ενημερωμένος',
+    subtitle: 'Πάρε το καλύτερο περιεχόμενό μας για την οργάνωση της εργασίας, τη διαχείριση προσωπικού και τα ψηφιακά εργαλεία για μικρές επιχειρήσεις.',
+    email_placeholder: 'Το email σου',
+    sector_label: 'Ο κλάδος σου',
+    sector_placeholder: 'Διάλεξε τον κλάδο σου',
+    sectors: [
+      { value: 'installatori',    label: 'Εγκαταστάτες' },
+      { value: 'elettricisti',    label: 'Ηλεκτρολόγοι' },
+      { value: 'idraulici',       label: 'Υδραυλικοί' },
+      { value: 'termoidraulici',  label: 'Υδραυλικά και θέρμανση' },
+      { value: 'pulizie',         label: 'Καθαρισμός και διαχείριση χώρων' },
+      { value: 'sicurezza',       label: 'Ασφάλεια και φύλαξη' },
+      { value: 'edilizia',        label: 'Κατασκευές' },
+      { value: 'impianti',        label: 'Ηλεκτρομηχανολογικά' },
+      { value: 'manutenzione',    label: 'Συντήρηση' },
+      { value: 'altro',           label: 'Άλλος κλάδος' },
+    ],
+    submit: 'Εγγραφή',
+    success: 'Η εγγραφή επιβεβαιώθηκε! Έλεγξε το email σου.',
+    error: 'Κάτι πήγε στραβά. Δοκίμασε ξανά.',
+    privacy: 'Χωρίς spam. Διαγράφεσαι όποτε θέλεις.',
+  },
 };
 
 export default function NewsletterForm({

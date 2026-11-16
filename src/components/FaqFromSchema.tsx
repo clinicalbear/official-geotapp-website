@@ -22,6 +22,7 @@ const FAQ_TITLE: Record<string, string> = {
   da: 'Ofte stillede spørgsmål',
   sv: 'Vanliga frågor',
   nb: 'Vanlige spørsmål',
+  el: 'Συχνές ερωτήσεις',
   ru: 'Частые вопросы',
 };
 

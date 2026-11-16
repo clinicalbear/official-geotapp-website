@@ -70,6 +70,7 @@ export const spagna: SchedaPaese = {
     sv: 'Spanien',
     nb: 'Spania',
     ru: 'Испания',
+    el: "Ισπανία",
   },
   bandiera: '🇪🇸',
   federale: false,
@@ -92,6 +93,7 @@ export const spagna: SchedaPaese = {
       nb: 'For private virksomheter er den kompetente myndigheten alltid den nasjonale AEPD. Enkelte autonome regioner (Catalonia APDCAT, Baskerland AVPD) har sin egen myndighet, men den gjelder hovedsakelig regionens offentlige sektor.',
       nl: "Voor particuliere bedrijven is de bevoegde autoriteit altijd de nationale AEPD. Sommige autonome gemeenschappen (Catalonie APDCAT, Baskenland AVPD) hebben een eigen autoriteit, maar dit betreft vooral de publieke sector van de regio.",
       ru: "Для частных компаний компетентным органом всегда является национальный AEPD. Некоторые автономные сообщества (Каталония APDCAT, Страна Басков AVPD) имеют собственный орган, но он касается преимущественно государственного сектора региона.",
+      el: "Για τις ιδιωτικές εταιρείες αρμόδια αρχή είναι πάντα η εθνική AEPD. Ορισμένες αυτόνομες κοινότητες (Καταλονία APDCAT, Χώρα των Βάσκων AVPD) έχουν δική τους αρχή, αλλά αφορά κυρίως τον δημόσιο τομέα της περιφέρειας.",
     },
   },
 
@@ -109,6 +111,7 @@ export const spagna: SchedaPaese = {
         nb: 'Uttrykkelig, klar og utvetydig informasjon til de ansatte før aktivering (LOPDGDD art. 90)',
         nl: 'Uitdrukkelijke, duidelijke en ondubbelzinnige informatie aan werknemers voor activering (LOPDGDD art. 90)',
         ru: "Прямое, ясное и недвусмысленное информирование работников до включения системы (LOPDGDD, ст. 90)",
+        el: "Ρητή, σαφής και κατηγορηματική ενημέρωση των εργαζομένων πριν από την ενεργοποίηση (LOPDGDD άρθρο 90)",
       },
       risposta: 'si',
       dettaglio: {
@@ -123,6 +126,7 @@ export const spagna: SchedaPaese = {
         nb: 'Art. 90 LOPDGDD tillater behandling av geolokaliseringsdata til de kontrolloppgavene som følger av art. 20.3 i arbeidstakerloven (Estatuto de los Trabajadores), men bare etter at de ansatte (og, hvis de finnes, deres representanter) uttrykkelig, klart og utvetydig er informert om utstyrets eksistens og egenskaper og om sine rettigheter.',
         nl: "Art. 90 LOPDGDD staat de verwerking van geolocatiegegevens toe voor de controlebevoegdheden van art. 20.3 van het Werknemersstatuut, maar alleen nadat de werknemers (en, indien aanwezig, hun vertegenwoordigers) uitdrukkelijk, duidelijk en ondubbelzinnig zijn geinformeerd over het bestaan en de kenmerken van de apparaten en over hun rechten.",
         ru: "Ст. 90 LOPDGDD разрешает обрабатывать геолокационные данные для контрольных функций по ст. 20.3 Статута трудящихся (Estatuto de los Trabajadores), но только после прямого, ясного и недвусмысленного информирования работников (и их представителей, если они есть) о наличии и характеристиках устройств и об их правах.",
+        el: "Το άρθρο 90 LOPDGDD επιτρέπει την επεξεργασία δεδομένων γεωεντοπισμού για τις λειτουργίες ελέγχου του άρθρου 20.3 του Estatuto de los Trabajadores, αλλά μόνο αφού ενημερωθούν ρητά, σαφώς και κατηγορηματικά οι εργαζόμενοι (και, αν υπάρχουν, οι εκπρόσωποί τους) για την ύπαρξη και τα χαρακτηριστικά των συσκευών και για τα δικαιώματά τους.",
       },
       fonte: FONTE_LOPDGDD_90,
     },
@@ -139,6 +143,7 @@ export const spagna: SchedaPaese = {
         nb: 'Informasjon til de ansattes representanter (Estatuto art. 64)',
         nl: 'Informatie aan de werknemersvertegenwoordigers (Estatuto art. 64)',
         ru: "Информирование представителей работников (Estatuto, ст. 64)",
+        el: "Ενημέρωση των εκπροσώπων των εργαζομένων (Estatuto άρθρο 64)",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -153,6 +158,7 @@ export const spagna: SchedaPaese = {
         nb: 'Art. 64 i Estatuto gir bedriftsrådet rett til å bli informert og til å avgi en forutgående uttalelse om innføringen av systemer for organisering og kontroll av arbeidet. Det gjelder bare der det finnes ansattrepresentanter.',
         nl: "Art. 64 van het Statuut geeft de ondernemingsraad het recht om geinformeerd te worden en een voorafgaand advies uit te brengen over de invoering van systemen voor de organisatie en controle van het werk. Dit geldt alleen waar werknemersvertegenwoordigers bestaan.",
         ru: "Ст. 64 Статута даёт производственному совету право быть информированным и дать предварительное заключение о внедрении систем организации и контроля труда. Действует только там, где есть представители работников.",
+        el: "Το άρθρο 64 του Estatuto δίνει στην επιτροπή της επιχείρησης το δικαίωμα να ενημερώνεται και να εκδίδει προηγούμενη έκθεση για την εισαγωγή συστημάτων οργάνωσης και ελέγχου της εργασίας. Ισχύει μόνο όπου υπάρχουν εκπρόσωποι των εργαζομένων.",
       },
       fonte: FONTE_ESTATUTO,
     },
@@ -169,6 +175,7 @@ export const spagna: SchedaPaese = {
         nb: 'Tillatelse fra en arbeidsmyndighet før installasjon',
         nl: 'Toestemming van een arbeidsautoriteit voor installatie',
         ru: "Разрешение органа по труду до установки",
+        el: "Άδεια από αρχή εργασίας πριν από την εγκατάσταση",
       },
       risposta: 'no',
       dettaglio: {
@@ -183,6 +190,7 @@ export const spagna: SchedaPaese = {
         nb: 'Spania krever ikke en administrativ tillatelse eller en tillatelse fra en arbeidsmyndighet for å installere et geolokaliseringssystem. Garantiene er informasjonen etter art. 90 LOPDGDD, informasjonen til representantene (art. 64) og GDPR.',
         nl: "Spanje vereist geen administratieve toestemming of toestemming van een arbeidsautoriteit om een geolocatiesysteem te installeren. De waarborgen zijn de informatie op grond van art. 90 LOPDGDD, de informatie aan de vertegenwoordigers (art. 64) en de AVG.",
         ru: "Испания не требует административного разрешения или разрешения органа по труду для установки системы геолокации. Гарантиями служат информирование по ст. 90 LOPDGDD, информирование представителей (ст. 64) и GDPR.",
+        el: "Η Ισπανία δεν προβλέπει διοικητική άδεια ή άδεια αρχής εργασίας για την εγκατάσταση συστήματος γεωεντοπισμού. Οι εγγυήσεις είναι η ενημέρωση κατά το άρθρο 90 LOPDGDD, η ενημέρωση των εκπροσώπων (άρθρο 64) και ο ΓΚΠΔ.",
       },
       fonte: FONTE_LOPDGDD_90,
     },
@@ -199,6 +207,7 @@ export const spagna: SchedaPaese = {
         nb: 'Forbud mot kontinuerlig overvåking: dataminimering og proporsjonalitet',
         nl: 'Verbod op voortdurende bewaking: minimalisering en evenredigheid',
         ru: "Запрет непрерывного наблюдения: минимизация и соразмерность",
+        el: "Απαγόρευση συνεχούς επιτήρησης: ελαχιστοποίηση και αναλογικότητα",
       },
       risposta: 'si',
       dettaglio: {
@@ -213,6 +222,7 @@ export const spagna: SchedaPaese = {
         nb: 'AEPD krever at geolokalisering er proporsjonal og ikke brukes til permanent overvåking; hvis formålet er tidsregistrering, kan opplysningene bare angi aktivitetens start og slutt, ikke posisjonen til enhver tid, og systemet skal ikke være i drift når arbeidsdagen er over.',
         nl: "De AEPD verlangt dat geolocatie evenredig is en niet wordt gebruikt voor permanente bewaking; als het doel tijdregistratie is, mogen de gegevens alleen het begin en het einde van de activiteit aangeven, niet de positie op elk moment, en mag het systeem na afloop van de werkdag niet in werking zijn.",
         ru: "AEPD требует, чтобы геолокация была соразмерной и не использовалась для постоянного наблюдения. Если цель состоит в учёте рабочего времени, данные могут показывать только начало и конец деятельности, а не местоположение в каждый момент, и по окончании рабочего дня система не должна работать.",
+        el: "Η AEPD απαιτεί ο γεωεντοπισμός να είναι αναλογικός και να μη χρησιμοποιείται για μόνιμη επιτήρηση· αν ο σκοπός είναι η καταγραφή του ωραρίου, τα δεδομένα μπορούν να δείχνουν μόνο την έναρξη και τη λήξη της δραστηριότητας, όχι τη θέση κάθε στιγμή, και το σύστημα δεν πρέπει να λειτουργεί μετά το τέλος της εργάσιμης ημέρας.",
       },
       fonte: FONTE_AEPD_GUIDA,
     },
@@ -229,6 +239,7 @@ export const spagna: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (DPIA) for systematisk og uttømmende geolokalisering',
         nl: 'Gegevensbeschermingseffectbeoordeling (DPIA) voor systematische en uitputtende geolocatie',
         ru: "Оценка воздействия (EIPD) при систематической и исчерпывающей геолокации",
+        el: "Εκτίμηση αντικτύπου (EIPD) για συστηματικό και εξαντλητικό γεωεντοπισμό",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -243,6 +254,7 @@ export const spagna: SchedaPaese = {
         nb: 'AEPDs liste omfatter, blant de behandlingene som krever en personvernkonsekvensvurdering, dem som innebærer observasjon, overvåking, geolokalisering eller kontroll av den registrerte på en systematisk og uttømmende måte. Det er et kriterium, ikke en automatisk plikt: ifølge AEPD er en konsekvensvurdering nødvendig i de fleste tilfeller der behandlingen oppfyller to eller flere kriterier på listen.',
         nl: "De AEPD-lijst rekent tot de verwerkingen die een effectbeoordeling vereisen, die welke de waarneming, monitoring, geolocatie of controle van de betrokkene op systematische en uitputtende wijze met zich meebrengen. Dit is een criterium, geen automatische verplichting: volgens de AEPD is een effectbeoordeling in de meeste gevallen nodig waarin de verwerking aan twee of meer criteria van de lijst voldoet.",
         ru: "Перечень AEPD включает среди операций обработки, требующих оценки воздействия, те, которые предполагают систематическое и исчерпывающее наблюдение, мониторинг, геолокацию или контроль субъекта данных. Это критерий, а не автоматическая обязанность: по мнению AEPD, EIPD нужна в большинстве случаев, когда обработка отвечает двум или более критериям перечня.",
+        el: "Ο κατάλογος της AEPD περιλαμβάνει, μεταξύ των επεξεργασιών που απαιτούν εκτίμηση αντικτύπου, εκείνες που συνεπάγονται παρατήρηση, παρακολούθηση, γεωεντοπισμό ή έλεγχο του υποκειμένου με συστηματικό και εξαντλητικό τρόπο. Είναι κριτήριο, όχι αυτόματη υποχρέωση: σύμφωνα με την AEPD η EIPD χρειάζεται στις περισσότερες περιπτώσεις όπου η επεξεργασία πληροί δύο ή περισσότερα κριτήρια του καταλόγου.",
       },
       fonte: FONTE_AEPD_DPIA,
     },
@@ -259,6 +271,7 @@ export const spagna: SchedaPaese = {
         nb: 'Gyldig rettslig grunnlag (art. 20.3 Estatuto / oppfyllelse av avtalen, GDPR art. 6)',
         nl: 'Geldige rechtsgrondslag (art. 20.3 Statuut / uitvoering van het contract, AVG art. 6)',
         ru: "Действительное правовое основание (ст. 20.3 Статута / исполнение договора, GDPR ст. 6)",
+        el: "Έγκυρη νομική βάση (άρθρο 20.3 Estatuto / εκτέλεση σύμβασης, άρθρο 6 ΓΚΠΔ)",
       },
       risposta: 'si',
       dettaglio: {
@@ -273,6 +286,7 @@ export const spagna: SchedaPaese = {
         nb: 'Behandlingen bygger på arbeidsgiverens kontrollmyndighet (art. 20.3 Estatuto) og på oppfyllelsen av arbeidsforholdet, innenfor rammene av GDPR; et videre formål som ville tillate kontinuerlig observasjon av de ansatte, er ikke tillatt.',
         nl: "De verwerking berust op de controlebevoegdheid van de werkgever (art. 20.3 Statuut) en op de uitvoering van de arbeidsrelatie, binnen de grenzen van de AVG; een ruimer doel dat de voortdurende observatie van werknemers mogelijk zou maken, is niet toegestaan.",
         ru: "Обработка основана на контрольных полномочиях работодателя (ст. 20.3 Статута) и на исполнении трудовых отношений в пределах GDPR. Более широкая цель, допускающая непрерывное наблюдение за работниками, не разрешена.",
+        el: "Η επεξεργασία στηρίζεται στην εξουσία ελέγχου του εργοδότη (άρθρο 20.3 Estatuto) και στην εκτέλεση της εργασιακής σχέσης, εντός των ορίων του ΓΚΠΔ· δεν επιτρέπεται ευρύτερος σκοπός που να επιτρέπει τη συνεχή παρατήρηση των εργαζομένων.",
       },
       fonte: FONTE_AEPD_FAQ_GPS,
     },
@@ -293,6 +307,7 @@ export const spagna: SchedaPaese = {
         nb: 'Informer de ansatte uttrykkelig, klart og utvetydig før aktiveringen (art. 90 LOPDGDD).',
         nl: 'Informeer de werknemers uitdrukkelijk, duidelijk en ondubbelzinnig voor activering (art. 90 LOPDGDD).',
         ru: "Прямо, ясно и недвусмысленно проинформируйте работников до включения системы (ст. 90 LOPDGDD).",
+        el: "Ενημέρωσε τους εργαζομένους ρητά, σαφώς και κατηγορηματικά πριν από την ενεργοποίηση (άρθρο 90 LOPDGDD).",
       },
     },
     {
@@ -309,6 +324,7 @@ export const spagna: SchedaPaese = {
         nb: 'Hvis det finnes ansattrepresentanter, informer dem og innhent deres forutgående uttalelse (art. 64 Estatuto).',
         nl: 'Als er werknemersvertegenwoordigers zijn, informeer hen en verkrijg hun voorafgaand advies (art. 64 Statuut).',
         ru: "Если есть представители работников, проинформируйте их и получите их предварительное заключение (ст. 64 Статута).",
+        el: "Αν υπάρχουν εκπρόσωποι των εργαζομένων, ενημέρωσέ τους και συγκέντρωσε την προηγούμενη έκθεσή τους (άρθρο 64 Estatuto).",
       },
     },
     {
@@ -325,6 +341,7 @@ export const spagna: SchedaPaese = {
         nb: 'Fastsett et gyldig rettslig grunnlag (kontrollmyndighet art. 20.3 Estatuto / oppfyllelse av avtalen).',
         nl: 'Bepaal een geldige rechtsgrondslag (controlebevoegdheid art. 20.3 Statuut / uitvoering van het contract).',
         ru: "Определите действительное правовое основание (контрольные полномочия по ст. 20.3 Статута / исполнение договора).",
+        el: "Όρισε μια έγκυρη νομική βάση (εξουσία ελέγχου άρθρο 20.3 Estatuto / εκτέλεση σύμβασης).",
       },
     },
     {
@@ -341,6 +358,7 @@ export const spagna: SchedaPaese = {
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) hvis geolokaliseringen er systematisk og uttømmende.',
         nl: 'Voer de effectbeoordeling (DPIA) uit als de geolocatie systematisch en uitputtend is.',
         ru: "Проведите оценку воздействия (EIPD), если геолокация систематическая и исчерпывающая.",
+        el: "Πραγματοποίησε την εκτίμηση αντικτύπου (EIPD) αν ο γεωεντοπισμός είναι συστηματικός και εξαντλητικός.",
       },
     },
     {
@@ -357,6 +375,7 @@ export const spagna: SchedaPaese = {
         nb: 'Konfigurer systemet med dataminimering: ingen kontinuerlig overvåking, avstenging utenfor arbeidstid; hvis tidsregistrering er nødvendig, bare start og slutt.',
         nl: 'Configureer het systeem met minimalisering: geen voortdurende bewaking, deactivering buiten werktijd; als tijdregistratie nodig is, alleen begin en einde.',
         ru: "Настройте систему с учётом минимизации: без непрерывного наблюдения, с отключением вне рабочего времени. Если нужен учёт рабочего времени, фиксируйте только начало и конец.",
+        el: "Ρύθμισε το σύστημα με ελαχιστοποίηση: καμία συνεχής επιτήρηση, απενεργοποίηση εκτός ωραρίου· αν χρειάζεται η καταγραφή του ωραρίου, μόνο έναρξη και λήξη.",
       },
     },
     {
@@ -373,6 +392,7 @@ export const spagna: SchedaPaese = {
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, oppdater og utlever personvernerklæringen på nytt, og kontroller om du på nytt må informere eller konsultere de ansattes representanter, der loven krever det. Leverandøren (databehandleren), de innsamlede opplysningene og fremgangsmåtene endrer seg ofte: den informasjonen som ble gitt tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "При смене системы или программы мониторинга обновите и повторно вручите уведомление о защите данных (informativa) и проверьте, нужно ли снова информировать представителей работников или консультироваться с ними, если это предусмотрено законом. Часто меняются поставщик (обработчик данных), собираемые данные и способы работы: ранее вручённого уведомления недостаточно.",
+        el: "Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση απορρήτου και έλεγξε αν πρέπει να ενημερώσεις ή να συμβουλευτείς ξανά τους εκπροσώπους των εργαζομένων, εκεί όπου το προβλέπει ο νόμος. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και οι τρόποι: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.",
       },
     },
   ],
@@ -401,6 +421,7 @@ export const spagna: SchedaPaese = {
       nb: '200 000 €',
       nl: '200.000 €',
       ru: "200 000 €",
+      el: "200.000 €",
     },
     casoCitato: {
       it: "AEPD contro Ares Capital S.A. (PS/00454/2024), risoluzione firmata il 4 marzo 2026 e pubblicata dall'AEPD il 14 aprile 2026: la società obbligava gli autisti a installare sul telefono personale app che raccoglievano in continuo la geolocalizzazione (oltre a foto e audio/video). Violazione della minimizzazione (art. 5.1.c), della base giuridica (art. 6.1, consenso non libero) e dell'informazione (art. 13 GDPR).",
@@ -414,6 +435,7 @@ export const spagna: SchedaPaese = {
       nb: 'AEPD mot Ares Capital S.A. (PS/00454/2024), vedtak undertegnet 4. mars 2026 og offentliggjort av AEPD 14. april 2026: selskapet forpliktet sjåførene til å installere apper på sin private telefon som kontinuerlig samlet inn geolokalisering (i tillegg til bilder og lyd/video). Brudd på dataminimering (art. 5.1.c), på det rettslige grunnlaget (art. 6.1, samtykket var ikke frivillig) og på informasjonsplikten (art. 13 GDPR).',
       nl: "AEPD tegen Ares Capital S.A. (PS/00454/2024), op 4 maart 2026 ondertekend en door de AEPD op 14 april 2026 gepubliceerd besluit: het bedrijf verplichtte de chauffeurs om op hun persoonlijke telefoon apps te installeren die voortdurend de geolocatie verzamelden (naast foto's en audio/video). Schending van de minimalisering (art. 5.1.c), van de rechtsgrondslag (art. 6.1, toestemming niet vrij gegeven) en van de informatieplicht (art. 13 AVG).",
       ru: "AEPD против Ares Capital S.A. (PS/00454/2024), решение подписано 4 марта 2026 г. и опубликовано AEPD 14 апреля 2026 г.: компания обязывала водителей устанавливать на личный телефон приложения, непрерывно собиравшие геолокацию (а также фото и аудио/видео). Нарушены принцип минимизации (ст. 5.1.c), правовое основание (ст. 6.1, согласие не было свободным) и обязанность информировать (ст. 13 GDPR).",
+      el: "AEPD κατά της Ares Capital S.A. (PS/00454/2024), απόφαση που υπογράφηκε στις 4 Μαρτίου 2026 και δημοσιεύτηκε από την AEPD στις 14 Απριλίου 2026: η εταιρεία υποχρέωνε τους οδηγούς να εγκαθιστούν στο προσωπικό τους κινητό εφαρμογές που συνέλεγαν συνεχώς τον γεωεντοπισμό (καθώς και φωτογραφίες και ήχο/βίντεο). Παράβαση της ελαχιστοποίησης (άρθρο 5 παρ. 1 στοιχ. γ), της νομικής βάσης (άρθρο 6 παρ. 1, μη ελεύθερη συγκατάθεση) και της ενημέρωσης (άρθρο 13 ΓΚΠΔ).",
     },
     urlFonte: FONTE_AEPD_ARES.url,
     tipoImporto: 'caso-gps',

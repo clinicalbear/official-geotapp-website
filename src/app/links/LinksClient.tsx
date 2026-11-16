@@ -277,6 +277,29 @@ const UI: Record<string, UIStrings> = {
     pricing: 'Priser og planer', contact: 'Kontakt oss', mainSite: 'Til hovedsiden',
     followUs: 'Følg oss', privacy: 'Personvern', terms: 'Vilkår',
   },
+  el: {
+    badge: 'Επαλήθευση εργασίας στο πεδίο',
+    h1a: 'Τοποθεσίες GPS, φωτογραφίες και αναφορές', h1b: 'επαληθεύσιμες. Στο πεδίο.',
+    sub: 'Κάθε εργασία γίνεται μια σφραγισμένη αναφορά που ο πελάτης επαληθεύει μόνος του. Χωρίς χαρτιά, χωρίς αμφιβολίες.',
+    ctaPrimary: 'Δοκίμασε το GeoTapp δωρεάν',
+    ctaPrimaryNote: 'Μόνο email · Χωρίς κάρτα · Έτοιμο σε 2 λεπτά',
+    ctaSecondary: 'Γράψε μας',
+    trust1: 'Τοποθεσία στο χτύπημα κάρτας', trust2: 'Φωτογραφίες με ώρα', trust3: 'Σφραγισμένες αναφορές',
+    sectorEyebrow: 'Για τον κλάδο σου', sectorTitle: 'Λύσεις για τον κλάδο σου',
+    sectorPulizie: 'Εταιρείες καθαρισμού', sectorPulizieDesc: 'Εργασίες και βάρδιες τεκμηριωμένες',
+    sectorInstallatori: 'Εγκαταστάτες και τεχνικοί', sectorInstallatoriDesc: 'Επαληθεύσιμες αναφορές για κάθε εργασία',
+    sectorSicurezza: 'Ασφάλεια και φύλαξη', sectorSicurezzaDesc: 'Περιπολίες, θέσεις και τεκμηρίωση της υπηρεσίας',
+    sectorFallback: 'Άλλος κλάδος; Δοκίμασέ το δωρεάν →',
+    sectorBadgePulizie: 'Καθαρισμός', sectorBadgeInstallatori: 'Εργασία πεδίου', sectorBadgeSicurezza: 'Ασφάλεια',
+    blogLabel: 'Από το blog', blogTitle: 'Πόροι και άρθρα', blogAll: 'Όλα →', blogEmpty: 'Σύντομα θα υπάρξουν άρθρα.',
+    bottomEyebrow: 'Έτοιμος να ξεκινήσεις;',
+    bottomTitle: 'Δοκίμασέ το στο πεδίο από σήμερα',
+    bottomSub: 'Δημιούργησε λογαριασμό σε 2 λεπτά · Χωρίς πιστωτική κάρτα',
+    bottomCta: 'Ξεκίνα τη δωρεάν δοκιμή',
+    quickLabel: 'Χρήσιμοι σύνδεσμοι',
+    pricing: 'Τιμές και πακέτα', contact: 'Επικοινωνία', mainSite: 'Στην κεντρική σελίδα',
+    followUs: 'Ακολούθησέ μας', privacy: 'Απόρρητο', terms: 'Όροι',
+  },
   ru: {
     badge: 'Верификация работ на объекте',
     h1a: 'GPS-доказательства, фото и отчёты', h1b: 'проверяемые. На месте.',
@@ -317,6 +340,7 @@ const COMPUTERWORLD_NOTE: Record<string, string> = {
   da: 'Vores klumme i Computerworld',
   sv: 'Vår kolumn i Computerworld',
   nb: 'Vår kolumne i Computerworld',
+  el: 'Η στήλη μας στο Computerworld',
   ru: 'Наша колонка в Computerworld',
 };
 
@@ -333,6 +357,7 @@ const BYGTEK_NOTE: Record<string, string> = {
   da: 'Vores debatindlæg i BygTek',
   sv: 'Vår debattartikel i BygTek',
   nb: 'Vårt debattinnlegg i BygTek',
+  el: 'Το άρθρο γνώμης μας στο BygTek',
   ru: 'Наша авторская статья в BygTek',
 };
 
@@ -349,6 +374,7 @@ const HR_PORTUGAL_NOTE: Record<string, string> = {
   da: 'Vores artikel i Human Resources Portugal',
   sv: 'Vår artikel i Human Resources Portugal',
   nb: 'Vår artikkel i Human Resources Portugal',
+  el: 'Το άρθρο μας στο Human Resources Portugal',
   ru: 'Наша статья в Human Resources Portugal',
 };
 
@@ -364,6 +390,7 @@ const SURVEY: Record<string, { label: string; note: string }> = {
   da: { label: 'Tillid eller bevis? På 2 minutter', note: 'Anonym undersøgelse, intet at sælge' },
   sv: { label: 'Förtroende eller bevis? På 2 minuter', note: 'Anonym enkät, inget att sälja' },
   nb: { label: 'Tillit eller bevis? På 2 minutter', note: 'Anonym undersøkelse, ingenting å selge' },
+  el: { label: 'Εμπιστοσύνη ή απόδειξη; Πες το σε 2 λεπτά', note: 'Ανώνυμη έρευνα, δεν πουλάμε τίποτα' },
   ru: { label: 'Доверие или доказательство? За 2 минуты', note: 'Анонимный опрос, ничего не продаём' },
 };
 
@@ -503,6 +530,7 @@ const FEATURED: Record<string, { label: string; sub: string }> = {
   da: { label: 'Omtalt i AZ Big Media', sub: 'Michele Angelo Petraroli om workflow-automatisering: bevis frem for overvågning' },
   sv: { label: 'Omnämnda i AZ Big Media', sub: 'Michele Angelo Petraroli om automatisering av arbetsflöden: bevis före övervakning' },
   nb: { label: 'Omtalt i AZ Big Media', sub: 'Michele Angelo Petraroli om automatisering av arbeidsflyt: bevis fremfor overvåking' },
+  el: { label: 'Μας φιλοξένησε το AZ Big Media', sub: 'Ο Michele Angelo Petraroli για την αυτοματοποίηση και την απόδειξη της εργασίας' },
   ru: { label: 'О нас пишет AZ Big Media', sub: 'Микеле Анджело Петрароли об автоматизации процессов: подтверждение вместо слежки' },
 };
 

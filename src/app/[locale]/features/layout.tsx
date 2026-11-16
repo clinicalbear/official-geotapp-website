@@ -61,6 +61,11 @@ const META: Record<string, { title: string; description: string }> = {
     description:
       'Posisjon bare ved stempling, falske posisjoner avvises, stemplinger lagres også uten dekning, forseglede rapporter som kunden selv kontrollerer, data i Europa.',
   },
+  el: {
+    title: 'GeoTapp: χτύπημα κάρτας με τοποθεσία και σφραγισμένες αναφορές',
+    description:
+      'Τοποθεσία μόνο στο χτύπημα κάρτας, οι ψεύτικες τοποθεσίες απορρίπτονται, τα χτυπήματα κάρτας αποθηκεύονται και χωρίς δίκτυο, σφραγισμένες αναφορές που ο πελάτης ελέγχει μόνος του, δεδομένα στην Ευρώπη.',
+  },
   ru: {
     title: 'Функции GeoTapp: GPS-отметка и запечатанные отчёты',
     description:

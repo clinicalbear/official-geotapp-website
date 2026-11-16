@@ -15,6 +15,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   da: 'Regler og dokumentation i Danmark',
   nb: 'Regler og dokumentasjon i Norge',
   sv: 'Regler och dokumentation i Sverige',
+  el: 'Κανονιστικό πλαίσιο και τεκμηρίωση στην Ελλάδα',
   ru: 'Что фиксирует GeoTapp, а что остаётся за вами',
   'en-us': 'Regional rules and records',
   'en-gb': 'Regional rules and records',
@@ -134,6 +135,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Hvordan håndteres bytte av renholdsleverandør?',
       a: 'GeoTapp håndterer verken virksomhetsoverdragelse eller overføring av ansatte ved bytte av leverandør. Det lagrer historikken over timer og oppmøte for hver ansatt, som kan eksporteres til Excel eller CSV: anvendelsen av tariffavtalen forblir hos regnskapsføreren.',
+    },
+  ],
+  el: [
+    {
+      q: "Τι χρειάζεται για να αποδείξεις ώρες και παρουσίες στις υπηρεσίες καθαρισμού;",
+      a: "Το GeoTapp καταγράφει ώρες, διαλείμματα και λήξεις ανά εργαζόμενο και ανά χώρο εργασίας, με τοποθεσία και ώρα, και τα εξάγει σε Excel ή CSV για τον λογιστή. Προσαυξήσεις για αργίες και νυχτερινή εργασία, αποδοχές και έλεγχοι της Επιθεώρησης Εργασίας παραμένουν στον λογιστή και στην εταιρεία, που έτσι έχουν ένα μητρώο ωραρίου ως αφετηρία. Το GeoTapp δεν συνδέεται με το ΕΡΓΑΝΗ ΙΙ και δεν αντικαθιστά την ψηφιακή κάρτα εργασίας (ν. 4808/2021, άρθρο 74) όπου αυτή είναι υποχρεωτική.",
+    },
+    {
+      q: "Πώς τηρείται ο ΓΚΠΔ στον γεωεντοπισμό των εργαζομένων;",
+      a: "GPS ενεργό μόνο κατά τη βάρδια, με ενημέρωση των εργαζομένων, τεκμηρίωση της νόμιμης βάσης (έννομο συμφέρον) και τήρηση του ΓΚΠΔ και του ν. 4624/2019 (άρθρο 27 για την επεξεργασία δεδομένων στις εργασιακές σχέσεις). Η εκτίμηση της νομιμότητας ανήκει στην εταιρεία και στον νομικό ή τον υπεύθυνο προστασίας δεδομένων της.",
+    },
+    {
+      q: "Πώς διαχειρίζεται η αλλαγή αναδόχου σε έναν χώρο;",
+      a: "Το GeoTapp δεν διαχειρίζεται τη μεταφορά προσωπικού στην αλλαγή αναδόχου. Διατηρεί το ιστορικό ωρών και παρουσιών κάθε εργαζομένου, που εξάγεται σε Excel ή CSV: η εφαρμογή της συλλογικής σύμβασης και των εργατικών υποχρεώσεων παραμένει στον λογιστή.",
     },
   ],
   ru: [

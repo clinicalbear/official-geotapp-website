@@ -24,7 +24,7 @@ import LNastro from '@/components/LNastro';
 /** Etichetta breve per il fil di briciole: stessa traduzione gia' usata in Footer.tsx (voce "about"). */
 const CRUMB_LABEL: Record<string, string> = {
   it: 'Chi siamo', en: 'About us', de: 'Über uns', fr: 'À propos', es: 'Sobre nosotros',
-  pt: 'Sobre nós', nl: 'Over ons', da: 'Om os', sv: 'Om oss', nb: 'Om oss', ru: 'О нас',
+  pt: 'Sobre nós', nl: 'Over ons', da: 'Om os', sv: 'Om oss', nb: 'Om oss', el: 'Ποιοι είμαστε', ru: 'О нас',
 };
 
 /** "Presenti su": stessa etichetta gia' pubblicata in HomeClient.tsx. */

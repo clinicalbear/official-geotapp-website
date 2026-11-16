@@ -61,6 +61,7 @@ export const bosnia: SchedaPaese = {
     sv: 'Bosnien och Hercegovina',
     nb: 'Bosnia-Hercegovina',
     ru: 'Босния и Герцеговина',
+    el: "Βοσνία και Ερζεγοβίνη",
   },
   bandiera: '🇧🇦',
   federale: false,
@@ -79,6 +80,7 @@ export const bosnia: SchedaPaese = {
       sv: 'AZLP (Myndigheten för skydd av personuppgifter i Bosnien och Hercegovina)',
       nb: 'AZLP (Byrå for beskyttelse av personopplysninger i Bosnia-Hercegovina)',
       ru: 'AZLP (Агентство по защите персональных данных Боснии и Герцеговины)',
+      el: "AZLP (Υπηρεσία Προστασίας Προσωπικών Δεδομένων της Βοσνίας και Ερζεγοβίνης)",
     },
     portale: 'https://azlp.ba/',
     urlFonte: 'https://azlp.ba/',
@@ -95,6 +97,7 @@ export const bosnia: SchedaPaese = {
       nb: 'Bosnia-Hercegovina er et kandidatland utenfor EU; siden 2025 har landet en ny lov som er tilpasset GDPR. Én nasjonal myndighet, AZLP; ingen inndeling etter enhet.',
       nl: 'Bosnie en Herzegovina is een kandidaat-lidstaat buiten de EU; sinds 2025 geldt er een nieuwe wet die is afgestemd op de AVG. Een enkele nationale autoriteit, de AZLP; geen verdeling per entiteit.',
       ru: "Босния и Герцеговина является страной-кандидатом, не входит в ЕС; с 2025 года у неё действует новый закон, приведённый в соответствие с GDPR. Единый национальный орган, AZLP; разделения по образованиям нет.",
+      el: "Η Βοσνία και Ερζεγοβίνη είναι υποψήφια χώρα, εκτός ΕΕ· από το 2025 έχει νέο νόμο εναρμονισμένο με τον ΓΚΠΔ. Μία ενιαία εθνική αρχή, η AZLP· δεν υπάρχει διαχωρισμός ανά οντότητα.",
     },
   },
 
@@ -112,6 +115,7 @@ export const bosnia: SchedaPaese = {
         nb: 'Informasjon til de ansatte og gyldig behandlingsgrunnlag (ny lov 12/25)',
         nl: 'Informatie aan werknemers en een geldige rechtsgrondslag (nieuwe wet 12/25)',
         ru: "Информирование работников и действительное правовое основание (новый закон 12/25)",
+        el: "Ενημέρωση των εργαζομένων και έγκυρη νομική βάση (νέος νόμος 12/25)",
       },
       risposta: 'si',
       dettaglio: {
@@ -126,6 +130,7 @@ export const bosnia: SchedaPaese = {
         nb: 'Den nye loven, som er tilpasset GDPR, krever ett av de seks behandlingsgrunnlagene som er fastsatt, og at de ansatte informeres om behandlingen av opplysningene sine, herunder GPS.',
         nl: 'De nieuwe wet, afgestemd op de AVG, vereist een van de zes voorziene rechtsgrondslagen en dat werknemers worden geinformeerd over de verwerking van hun gegevens, inclusief GPS.',
         ru: "Новый закон, согласованный с GDPR, требует наличия одного из шести предусмотренных правовых оснований и информирования работников об обработке их данных, включая GPS.",
+        el: "Ο νέος νόμος, εναρμονισμένος με τον ΓΚΠΔ, απαιτεί μία νομική βάση από τις έξι που προβλέπονται και την ενημέρωση των εργαζομένων για την επεξεργασία των δεδομένων τους, συμπεριλαμβανομένου του GPS.",
       },
       fonte: FONTE_LEGGE_12_25,
     },
@@ -142,6 +147,7 @@ export const bosnia: SchedaPaese = {
         nb: 'Forhåndstillatelse eller registrering hos en myndighet før installasjon',
         nl: 'Voorafgaande toestemming of registratie bij een autoriteit voor installatie',
         ru: "Предварительное разрешение или регистрация в органе перед установкой",
+        el: "Προηγούμενη άδεια ή καταχώριση από κάποια αρχή πριν από την εγκατάσταση",
       },
       risposta: 'no',
       dettaglio: {
@@ -156,6 +162,7 @@ export const bosnia: SchedaPaese = {
         nb: 'Den nye loven erstatter den generelle plikten til å registrere seg hos byrået med et internt register over behandlingene.',
         nl: 'De nieuwe wet vervangt de algemene verplichting tot registratie bij het Agentschap door het bijhouden van een intern register van verwerkingsactiviteiten.',
         ru: "Новый закон заменяет общую обязанность регистрации в Агентстве ведением внутреннего реестра операций обработки.",
+        el: "Ο νέος νόμος αντικαθιστά τη γενική υποχρέωση καταχώρισης στην Υπηρεσία με την τήρηση εσωτερικού αρχείου δραστηριοτήτων επεξεργασίας.",
       },
       fonte: FONTE_DLA_PIPER,
     },
@@ -172,6 +179,7 @@ export const bosnia: SchedaPaese = {
         nb: 'Grunnlag = berettiget interesse, ikke samtykke',
         nl: 'Grondslag = gerechtvaardigd belang, niet toestemming',
         ru: "Основание = законный интерес, а не согласие",
+        el: "Βάση = έννομο συμφέρον, όχι η συγκατάθεση",
       },
       risposta: 'si',
       dettaglio: {
@@ -186,6 +194,7 @@ export const bosnia: SchedaPaese = {
         nb: 'Det vanlige grunnlaget er berettiget interesse; i et arbeidsforhold er samtykke et svakt grunnlag på grunn av den skjeve maktbalansen.',
         nl: 'De gebruikelijke grondslag is het gerechtvaardigd belang; in de arbeidsverhouding is toestemming een zwakke grondslag vanwege de machtsongelijkheid.',
         ru: "Обычное основание: законный интерес; в трудовых отношениях согласие является слабым основанием из-за неравенства сторон.",
+        el: "Η συνήθης βάση είναι το έννομο συμφέρον· στην εργασιακή σχέση η συγκατάθεση είναι αδύναμη βάση λόγω της ανισορροπίας ισχύος.",
       },
       fonte: FONTE_LEGGE_12_25,
     },
@@ -202,6 +211,7 @@ export const bosnia: SchedaPaese = {
         nb: 'Spesifikt formål, dataminimering og begrenset lagring (art. 7)',
         nl: "Bepaald doel, minimale gegevensverwerking en beperkte bewaring (art. 7)",
         ru: "Определённая цель, минимизация данных и ограниченный срок хранения (ст. 7)",
+        el: "Καθορισμένος σκοπός, ελαχιστοποίηση και περιορισμένη τήρηση (άρθρο 7)",
       },
       risposta: 'si',
       dettaglio: {
@@ -216,6 +226,7 @@ export const bosnia: SchedaPaese = {
         nb: 'Art. 7 krever at opplysninger samles inn for spesifikke, uttrykkelige og legitime formål, begrenses til det som er nødvendig og ikke lagres lenger enn nødvendig; den behandlingsansvarlige må kunne påvise at reglene følges.',
         nl: "Art. 7 eist gegevens die voor bepaalde, uitdrukkelijke en legitieme doeleinden zijn verzameld, beperkt zijn tot wat nodig is en niet langer worden bewaard dan nodig; de verwerkingsverantwoordelijke moet de naleving kunnen aantonen.",
         ru: "Ст. 7 требует, чтобы данные собирались для определённых, явных и законных целей, ограничивались необходимым и хранились не дольше необходимого срока; оператор должен быть в состоянии доказать соблюдение требований.",
+        el: "Το άρθρο 7 απαιτεί τα δεδομένα να συλλέγονται για καθορισμένους, ρητούς και νόμιμους σκοπούς, να περιορίζονται σε όσα είναι αναγκαία και να τηρούνται όχι πέραν του αναγκαίου χρόνου· ο υπεύθυνος επεξεργασίας πρέπει να μπορεί να αποδείξει τη συμμόρφωση.",
       },
       fonte: FONTE_LEGGE_12_25,
     },
@@ -232,6 +243,7 @@ export const bosnia: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (DPIA) for overvåking av ansatte med apper eller sporingssystemer (AZLPs vedtak av 10.11.2025)',
         nl: "Effectbeoordeling (DPIA) voor het monitoren van werknemers met apps of trackingsystemen (AZLP-besluit van 10.11.2025)",
         ru: "Оценка воздействия (DPIA) при мониторинге работников с помощью приложений или систем отслеживания (решение AZLP от 10.11.2025)",
+        el: "Εκτίμηση αντικτύπου (DPIA) για την παρακολούθηση εργαζομένων με εφαρμογές ή συστήματα εντοπισμού (απόφαση AZLP της 10.11.2025)",
       },
       risposta: 'si',
       dettaglio: {
@@ -246,6 +258,7 @@ export const bosnia: SchedaPaese = {
         nb: 'AZLPs vedtak av 10. november 2025 (nr. 03-02-2-1676-1/25, punkt 8) gjør en personvernkonsekvensvurdering obligatorisk når en arbeidsgiver behandler ansattes opplysninger med applikasjoner eller systemer som følger arbeidet, bevegelsene eller kommunikasjonen deres. GPS er ikke nevnt, men sporing av bevegelser faller i praksis inn under det. Vurderingen skal gjøres før behandlingen; forhåndsdrøfting med AZLP er bare nødvendig hvis det fortsatt er en høy risiko.',
         nl: "Het AZLP-besluit van 10 november 2025 (nr. 03-02-2-1676-1/25, punt 8) maakt een effectbeoordeling verplicht wanneer een werkgever werknemersgegevens verwerkt met toepassingen of systemen om hun werk, verplaatsingen of communicatie te volgen. GPS wordt niet genoemd, maar het volgen van verplaatsingen valt in de praktijk eronder. De beoordeling moet vóór de verwerking plaatsvinden; voorafgaande raadpleging van de AZLP is alleen nodig als een hoog risico overblijft.",
         ru: "Решение AZLP от 10 ноября 2025 г. (№ 03-02-2-1676-1/25, пункт 8) делает оценку воздействия обязательной, когда работодатель обрабатывает данные работников с помощью приложений или систем для наблюдения за их работой, перемещениями или коммуникациями. GPS прямо не назван, но отслеживание перемещений на практике сюда относится. Оценку проводят до начала обработки; предварительная консультация с AZLP нужна только при сохранении высокого риска.",
+        el: "Η απόφαση της AZLP της 10ης Νοεμβρίου 2025 (αρ. 03-02-2-1676-1/25, σημείο 8) καθιστά υποχρεωτική την εκτίμηση αντικτύπου όταν ο εργοδότης επεξεργάζεται δεδομένα εργαζομένων με εφαρμογές ή συστήματα για την παρακολούθηση της εργασίας, των μετακινήσεων ή των επικοινωνιών τους. Το GPS δεν αναφέρεται, αλλά η παρακολούθηση των μετακινήσεων στην πράξη εμπίπτει σε αυτήν. Η εκτίμηση γίνεται πριν από την επεξεργασία· η προηγούμενη διαβούλευση με την AZLP χρειάζεται μόνο αν παραμένει υψηλός κίνδυνος.",
       },
       fonte: FONTE_AZLP_DPIA,
     },
@@ -266,6 +279,7 @@ export const bosnia: SchedaPaese = {
         nb: 'Finn et gyldig behandlingsgrunnlag (berettiget interesse), og før det interne registeret over behandlingene.',
         nl: 'Bepaal een geldige rechtsgrondslag (gerechtvaardigd belang) en houd het interne register van verwerkingsactiviteiten bij.',
         ru: "Определите действительное правовое основание (законный интерес) и ведите внутренний реестр операций обработки.",
+        el: "Βρες μια έγκυρη νομική βάση (έννομο συμφέρον) και τήρησε το εσωτερικό αρχείο δραστηριοτήτων επεξεργασίας.",
       },
     },
     {
@@ -282,6 +296,7 @@ export const bosnia: SchedaPaese = {
         nb: 'Informer de ansatte om behandlingen (herunder GPS).',
         nl: 'Informeer de werknemers over de verwerking (inclusief GPS).',
         ru: "Информируйте работников об обработке (включая GPS).",
+        el: "Ενημέρωσε τους εργαζομένους για την επεξεργασία (συμπεριλαμβανομένου του GPS).",
       },
     },
     {
@@ -298,6 +313,7 @@ export const bosnia: SchedaPaese = {
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) for overvåking av ansatte.',
         nl: 'Voer de effectbeoordeling (DPIA) uit voor het monitoren van werknemers.',
         ru: "Проведите оценку воздействия (DPIA) для мониторинга работников.",
+        el: "Πραγματοποίησε την εκτίμηση αντικτύπου (DPIA) για την παρακολούθηση των εργαζομένων.",
       },
     },
     {
@@ -314,6 +330,7 @@ export const bosnia: SchedaPaese = {
         nb: 'Bruk dataminimering og proporsjonalitet.',
         nl: 'Pas minimalisatie en evenredigheid toe.',
         ru: "Применяйте минимизацию и соразмерность.",
+        el: "Εφάρμοσε ελαχιστοποίηση και αναλογικότητα.",
       },
     },
     {
@@ -330,6 +347,7 @@ export const bosnia: SchedaPaese = {
         nb: 'Konfigurer systemet proporsjonalt med det oppgitte formålet.',
         nl: 'Configureer het systeem op een manier die in verhouding staat tot het verklaarde doel.',
         ru: "Настройте систему соразмерно заявленной цели.",
+        el: "Ρύθμισε το σύστημα αναλογικά προς τον δηλωμένο σκοπό.",
       },
     },
     {
@@ -346,6 +364,7 @@ export const bosnia: SchedaPaese = {
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og dele ut personvernerklæringen på nytt, og undersøke om du igjen må informere eller rådføre deg med de ansattes representanter, der loven krever det. Ofte endrer leverandøren (databehandleren), de innsamlede opplysningene og metodene seg: informasjonen som ble gitt tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "При смене системы или программного обеспечения для мониторинга обновите и повторно вручите уведомление и проверьте, нужно ли снова информировать представителей работников или консультироваться с ними, если это предусмотрено законом. Часто меняются поставщик (обработчик), собираемые данные и способы: ранее вручённого уведомления недостаточно.",
+        el: "Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση απορρήτου και έλεγξε αν πρέπει να ενημερώσεις ή να συμβουλευτείς ξανά τους εκπροσώπους των εργαζομένων, εκεί όπου το προβλέπει ο νόμος. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και οι τρόποι: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.",
       },
     },
   ],
@@ -374,6 +393,7 @@ export const bosnia: SchedaPaese = {
       nb: 'inntil 40 millioner BAM eller 4 % av omsetningen (ny lov i GDPR-stil)',
       nl: 'tot 40 miljoen BAM of 4% van de omzet (nieuwe wet in AVG-stijl)',
       ru: "до 40 млн BAM или 4% оборота (новый закон в стиле GDPR)",
+      el: "έως 40 εκατ. BAM ή 4% του κύκλου εργασιών (νέος νόμος τύπου ΓΚΠΔ)",
     },
     casoCitato: {
       it: "Non risulta una multa dell'AZLP specifica pubblicata per il GPS sui dipendenti. Con la nuova legge, in vigore da marzo 2025 è applicabile dal 4 ottobre 2025, le sanzioni sono in stile GDPR: fino a 40 milioni di BAM o il 4% del fatturato annuo mondiale. Con la decisione del 10 novembre 2025 l'AZLP ha reso obbligatoria la valutazione d'impatto per il monitoraggio dei dipendenti con sistemi di controllo di lavoro e spostamenti (art. 113, c. 5 della legge per l'importo).",
@@ -387,6 +407,7 @@ export const bosnia: SchedaPaese = {
       nb: 'Det er ikke offentliggjort noen konkret AZLP-bot for GPS-sporing av ansatte. Etter den nye loven, som trådte i kraft i mars 2025 og er gjeldende fra 4. oktober 2025, er sanksjonene i GDPR-stil: inntil 40 millioner BAM eller 4 % av den samlede globale årsomsetningen. Med sitt vedtak av 10. november 2025 gjorde AZLP en personvernkonsekvensvurdering obligatorisk for overvåking av ansatte med systemer som følger arbeidet og bevegelsene deres (art. 113 nr. 5 i loven for beløpet).',
       nl: "Er is geen specifieke, gepubliceerde boete van de AZLP voor GPS-tracking van werknemers bekend. Met de nieuwe wet van 2025 zijn de sancties in AVG-stijl: tot 40 miljoen BAM of 4% van de wereldwijde jaaromzet. Met haar besluit van 10 november 2025 heeft de AZLP een effectbeoordeling verplicht gesteld voor het monitoren van werknemers met systemen die hun werk en verplaatsingen volgen (art. 113, lid 5 van de wet voor het bedrag).",
       ru: "Опубликованного штрафа AZLP конкретно за GPS на работниках не обнаружено. По новому закону, действующему с марта 2025 г. и применяемому с 4 октября 2025 г., санкции построены по образцу GDPR: до 40 млн BAM или 4% общемирового годового оборота. Решением от 10 ноября 2025 г. AZLP сделал оценку воздействия обязательной для мониторинга работников системами контроля работы и перемещений (ст. 113 ч. 5 закона для размера санкции).",
+      el: "Δεν προκύπτει δημοσιευμένο πρόστιμο της AZLP ειδικά για το GPS στους εργαζομένους. Με τον νέο νόμο, που ισχύει από τον Μάρτιο του 2025 και εφαρμόζεται από τις 4 Οκτωβρίου 2025, οι κυρώσεις είναι τύπου ΓΚΠΔ: έως 40 εκατ. BAM ή 4% του παγκόσμιου ετήσιου κύκλου εργασιών. Με την απόφαση της 10ης Νοεμβρίου 2025 η AZLP κατέστησε υποχρεωτική την εκτίμηση αντικτύπου για την παρακολούθηση των εργαζομένων με συστήματα ελέγχου της εργασίας και των μετακινήσεων (άρθρο 113 παρ. 5 του νόμου για το ποσό).",
     },
     urlFonte: 'https://www.sluzbenilist.ba/page/akt/aCRNh0ohz4nh78h77P7BE=',
     tipoImporto: 'massimale',

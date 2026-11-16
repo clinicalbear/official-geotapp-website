@@ -18,6 +18,7 @@ import { TESTI_PT } from './traduzioni-pt';
 import { TESTI_DA } from './traduzioni-da';
 import { TESTI_SV } from './traduzioni-sv';
 import { TESTI_NB } from './traduzioni-nb';
+import { TESTI_EL } from './traduzioni-el';
 import { TESTI_RU } from './traduzioni-ru';
 import { britishToVariant } from '@/lib/i18n/en-spelling';
 
@@ -28,8 +29,8 @@ export function loc(testo: TestoLoc, locale: AppLocale): string {
 
 function locFallback(testo: TestoLoc, locale: AppLocale): string {
   if (typeof testo === 'string') {
-    // Stringa semplice = italiano. Per le lingue inglesi, per il tedesco, per l'olandese, per il francese, per lo spagnolo, per il portoghese, per il danese, per lo svedese, per il norvegese e per il russo i titoli
-    // delle fonti e i nomi dei contatti hanno la resa in ./traduzioni-en.ts, ./traduzioni-de.ts, ./traduzioni-nl.ts, ./traduzioni-fr.ts, ./traduzioni-es.ts, ./traduzioni-pt.ts, ./traduzioni-da.ts, ./traduzioni-sv.ts, ./traduzioni-nb.ts e ./traduzioni-ru.ts.
+    // Stringa semplice = italiano. Per le lingue inglesi, per il tedesco, per l'olandese, per il francese, per lo spagnolo, per il portoghese, per il danese, per lo svedese, per il norvegese, per il greco e per il russo i titoli
+    // delle fonti e i nomi dei contatti hanno la resa in ./traduzioni-en.ts, ./traduzioni-de.ts, ./traduzioni-nl.ts, ./traduzioni-fr.ts, ./traduzioni-es.ts, ./traduzioni-pt.ts, ./traduzioni-da.ts, ./traduzioni-sv.ts, ./traduzioni-nb.ts, ./traduzioni-el.ts e ./traduzioni-ru.ts.
     if (locale === 'de') return TESTI_DE[testo] ?? testo;
     if (locale === 'nl') return TESTI_NL[testo] ?? testo;
     if (locale === 'fr') return TESTI_FR[testo] ?? testo;
@@ -38,6 +39,7 @@ function locFallback(testo: TestoLoc, locale: AppLocale): string {
     if (locale === 'da') return TESTI_DA[testo] ?? testo;
     if (locale === 'sv') return TESTI_SV[testo] ?? testo;
     if (locale === 'nb') return TESTI_NB[testo] ?? testo;
+    if (locale === 'el') return TESTI_EL[testo] ?? testo;
     if (locale === 'ru') return TESTI_RU[testo] ?? testo;
     return locale === 'en' || locale.startsWith('en-') ? (TESTI_EN[testo] ?? testo) : testo;
   }

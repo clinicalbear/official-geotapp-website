@@ -68,6 +68,7 @@ export const svezia: SchedaPaese = {
     sv: 'Sverige',
     nb: 'Sverige',
     ru: 'Швеция',
+    el: 'Σουηδία',
   },
   bandiera: '🇸🇪',
   federale: false,
@@ -86,6 +87,7 @@ export const svezia: SchedaPaese = {
       sv: 'IMY (Integritetsskyddsmyndigheten)',
       nb: 'IMY (Integritetsskyddsmyndigheten, svensk datatilsyn)',
       ru: 'IMY (Integritetsskyddsmyndigheten, шведский орган по защите данных)',
+      el: 'IMY (Integritetsskyddsmyndigheten, σουηδική αρχή προστασίας δεδομένων)',
     },
     portale: FONTE_IMY_RECLAMO.url,
     urlFonte: FONTE_IMY_RECLAMO.url,
@@ -102,6 +104,7 @@ export const svezia: SchedaPaese = {
       nb: 'Sverige har én nasjonal myndighet, IMY (tidligere Datainspektionen); det finnes ingen regional inndeling.',
       nl: 'Zweden heeft een enkele nationale autoriteit, de IMY (voorheen Datainspektionen); er is geen regionale opdeling.',
       ru: "В Швеции действует один национальный орган, IMY (ранее Datainspektionen); региональное деление отсутствует.",
+      el: 'Η Σουηδία έχει μία μόνο εθνική αρχή, την IMY (πρώην Datainspektionen)· δεν υπάρχει περιφερειακός διαχωρισμός.',
     },
   },
 
@@ -119,6 +122,7 @@ export const svezia: SchedaPaese = {
         nb: 'Forutgående forhandling med fagforeningen (MBL § 11) før systemet innføres',
         nl: 'Voorafgaand overleg met de vakbond (MBL art. 11) voordat het systeem wordt ingevoerd',
         ru: "Предварительные переговоры с профсоюзом (MBL § 11) перед внедрением системы",
+        el: 'Προηγούμενη διαπραγμάτευση με το συνδικάτο (MBL § 11) πριν από την εισαγωγή του συστήματος',
       },
       risposta: 'dipende',
       dettaglio: {
@@ -133,6 +137,7 @@ export const svezia: SchedaPaese = {
         nb: 'En arbeidsgiver som er bundet av en tariffavtale, må på eget initiativ forhandle med fagforeningen før en større endring (for eksempel innføring av et overvåkings- eller GPS-system). Dette gjelder der arbeidsgiveren er bundet av en tariffavtale.',
         nl: 'Een werkgever die gebonden is aan een collectieve arbeidsovereenkomst moet op eigen initiatief met de vakbond overleggen voordat een belangrijke wijziging wordt doorgevoerd (zoals het invoeren van een monitoring- of GPS-systeem). Dit geldt wanneer de werkgever gebonden is aan een collectieve arbeidsovereenkomst.',
         ru: "Работодатель, связанный коллективным договором, обязан по собственной инициативе провести переговоры с профсоюзом перед существенным изменением (например, внедрением системы мониторинга или GPS). Применяется там, где работодатель связан коллективным договором.",
+        el: 'Ο εργοδότης που δεσμεύεται από συλλογική σύμβαση πρέπει, με δική του πρωτοβουλία, να διαπραγματευτεί με το συνδικάτο πριν από μια σημαντική αλλαγή (όπως η εισαγωγή συστήματος παρακολούθησης ή GPS). Ισχύει όπου ο εργοδότης δεσμεύεται από συλλογική σύμβαση.',
       },
       fonte: FONTE_MBL_11,
     },
@@ -149,6 +154,7 @@ export const svezia: SchedaPaese = {
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit voordat wordt geinstalleerd',
         ru: "Предварительное разрешение органа перед установкой",
+        el: 'Προηγούμενη άδεια αρχής πριν από την εγκατάσταση',
       },
       risposta: 'no',
       dettaglio: {
@@ -163,6 +169,7 @@ export const svezia: SchedaPaese = {
         nb: 'Det finnes ingen ordning med forhåndstillatelse fra IMY for GPS på ansatte; ansvarlighetsprinsippet gjelder (arbeidsgiveren dokumenterer selv rettslig grunnlag og interesseavveiningen).',
         nl: 'Er bestaat geen voorafgaand goedkeuringsregime van de IMY voor GPS bij werknemers; het verantwoordingsbeginsel geldt (de werkgever documenteert zelf de rechtsgrond en de belangenafweging).',
         ru: "Режима предварительного разрешения IMY для GPS в отношении работников не существует; действует принцип подотчётности (работодатель самостоятельно документирует правовое основание и баланс интересов).",
+        el: 'Δεν υπάρχει καθεστώς προηγούμενης άδειας της IMY για το GPS στους εργαζομένους· ισχύει η λογοδοσία (ο εργοδότης τεκμηριώνει μόνος του νομική βάση και στάθμιση).',
       },
       fonte: FONTE_IMY_CONTROLLO,
     },
@@ -179,6 +186,7 @@ export const svezia: SchedaPaese = {
         nb: 'Grunnlaget er interesseavveiing (ikke samtykke) og tydelig informasjon til de ansatte',
         nl: 'Grondslag = belangenafweging (niet toestemming) + duidelijke informatie aan werknemers',
         ru: "Основание: баланс интересов (не согласие) и ясное информирование работников",
+        el: 'Βάση = στάθμιση συμφερόντων (όχι συγκατάθεση) + σαφής ενημέρωση των εργαζομένων',
       },
       risposta: 'si',
       dettaglio: {
@@ -193,6 +201,7 @@ export const svezia: SchedaPaese = {
         nb: 'Det rettslige grunnlaget er normalt interesseavveiing og ikke den ansattes samtykke (avhengighetsforhold); de ansatte skal informeres tydelig, senest når opplysningene samles inn.',
         nl: 'De rechtsgrond is doorgaans de belangenafweging, niet de toestemming van de werknemer (gezagsverhouding); werknemers moeten duidelijk worden geinformeerd, uiterlijk wanneer de gegevens worden verzameld.',
         ru: "Правовым основанием, как правило, служит баланс интересов, а не согласие работника (отношение зависимости); работников необходимо информировать ясно, не позднее момента сбора данных.",
+        el: 'Η νομική βάση είναι κατά κανόνα η στάθμιση συμφερόντων, όχι η συγκατάθεση του εργαζομένου (σχέση εξάρτησης)· οι εργαζόμενοι ενημερώνονται με σαφήνεια, το αργότερο τη στιγμή της συλλογής των δεδομένων.',
       },
       fonte: FONTE_IMY_CONTROLLO,
     },
@@ -209,6 +218,7 @@ export const svezia: SchedaPaese = {
         nb: 'GPS bare ved et konkret driftsbehov; ingen uberettiget løpende overvåking, ingen gjenbruk for å vurdere prestasjon',
         nl: 'GPS alleen voor een concrete operationele behoefte; geen ongerechtvaardigd toezicht in real time, geen hergebruik om prestaties te beoordelen',
         ru: "GPS только при конкретной производственной необходимости; без неоправданного наблюдения в реальном времени и без повторного использования для оценки результатов работы",
+        el: 'GPS μόνο για συγκεκριμένη επιχειρησιακή ανάγκη· καμία αδικαιολόγητη επιτήρηση σε πραγματικό χρόνο, καμία επαναχρησιμοποίηση για αξιολόγηση της απόδοσης',
       },
       risposta: 'si',
       dettaglio: {
@@ -223,6 +233,7 @@ export const svezia: SchedaPaese = {
         nb: 'Posisjonering er tillatt hvis den er begrunnet i et konkret driftsbehov; ikke for å overvåke løpende uten grunn, og opplysninger som er samlet inn til et annet formål (for eksempel en kjørebok) kan ikke gjenbrukes til å analysere prestasjon.',
         nl: 'Locatiebepaling is toegestaan als zij gerechtvaardigd is door een concrete bedrijfsbehoefte; niet om zonder reden in real time toezicht te houden, en gegevens die voor een ander doel zijn verzameld (bijv. een rittenregistratie) mogen niet worden hergebruikt om prestaties te analyseren.',
         ru: "Определение местоположения допускается, если оно обосновано конкретной потребностью предприятия; не для наблюдения в реальном времени без причины, а данные, собранные для другой цели (например, путевой журнал), нельзя повторно использовать для анализа результатов работы.",
+        el: 'Ο εντοπισμός θέσης επιτρέπεται αν δικαιολογείται από συγκεκριμένη επιχειρησιακή ανάγκη· όχι για επιτήρηση σε πραγματικό χρόνο χωρίς λόγο, και τα δεδομένα που συλλέχθηκαν για άλλο σκοπό (π.χ. ημερολόγιο οδήγησης) δεν μπορούν να επαναχρησιμοποιηθούν για ανάλυση της απόδοσης.',
       },
       fonte: FONTE_IMY_GPS,
     },
@@ -239,6 +250,7 @@ export const svezia: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (DPIA) ved systematisk overvåking av ansatte',
         nl: 'Effectbeoordeling bij systematische monitoring van werknemers',
         ru: "Оценка воздействия при систематическом мониторинге работников",
+        el: 'Εκτίμηση αντικτύπου για τη συστηματική παρακολούθηση των εργαζομένων',
       },
       risposta: 'si',
       dettaglio: {
@@ -253,6 +265,7 @@ export const svezia: SchedaPaese = {
         nb: 'En personvernkonsekvensvurdering (DPIA) kreves når behandlingen innebærer systematisk overvåking av ansatte og det er sannsynlig at den medfører høy risiko for deres rettigheter.',
         nl: 'Een effectbeoordeling is nodig wanneer de verwerking een systematische monitoring van werknemers inhoudt en een hoog risico voor hun rechten waarschijnlijk is.',
         ru: "Оценка воздействия требуется, когда обработка предполагает систематическое наблюдение за работниками и вероятен высокий риск для их прав.",
+        el: 'Απαιτείται εκτίμηση αντικτύπου όταν η επεξεργασία συνεπάγεται συστηματική επιτήρηση των εργαζομένων και είναι πιθανός υψηλός κίνδυνος για τα δικαιώματά τους.',
       },
       fonte: FONTE_IMY_DPIA,
     },
@@ -273,6 +286,7 @@ export const svezia: SchedaPaese = {
         nb: 'Hvis du er bundet av en tariffavtale, forhandle med fagforeningen før du innfører systemet (MBL § 11).',
         nl: 'Als u gebonden bent aan een collectieve arbeidsovereenkomst, overleg dan met de vakbond voordat u het systeem invoert (MBL art. 11).',
         ru: "Если вы связаны коллективным договором, проведите переговоры с профсоюзом до внедрения системы (MBL § 11).",
+        el: 'Αν δεσμεύεσαι από συλλογική σύμβαση, διαπραγματεύσου με το συνδικάτο πριν εισαγάγεις το σύστημα (MBL § 11).',
       },
     },
     {
@@ -289,6 +303,7 @@ export const svezia: SchedaPaese = {
         nb: 'Dokumenter det rettslige grunnlaget (interesseavveiing) og selve avveiingen.',
         nl: 'Documenteer de rechtsgrond (belangenafweging) en de bijbehorende toets.',
         ru: "Задокументируйте правовое основание (баланс интересов) и соответствующий тест.",
+        el: 'Τεκμηρίωσε τη νομική βάση (στάθμιση συμφερόντων) και τον σχετικό έλεγχο.',
       },
     },
     {
@@ -305,6 +320,7 @@ export const svezia: SchedaPaese = {
         nb: 'Informer de ansatte tydelig, senest når opplysningene samles inn.',
         nl: 'Informeer werknemers duidelijk, uiterlijk bij het verzamelen van de gegevens.',
         ru: "Ясно проинформируйте работников не позднее момента сбора данных.",
+        el: 'Ενημέρωσε τους εργαζομένους με σαφήνεια, το αργότερο κατά τη συλλογή των δεδομένων.',
       },
     },
     {
@@ -321,6 +337,7 @@ export const svezia: SchedaPaese = {
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) hvis overvåkingen er systematisk.',
         nl: 'Voer de effectbeoordeling uit als de monitoring systematisch is.',
         ru: "Проведите оценку воздействия, если мониторинг систематический.",
+        el: 'Κάνε την εκτίμηση αντικτύπου αν η παρακολούθηση είναι συστηματική.',
       },
     },
     {
@@ -337,6 +354,7 @@ export const svezia: SchedaPaese = {
         nb: 'Konfigurer systemet: bare ved et konkret driftsbehov, ingen gjenbruk for å vurdere prestasjon.',
         nl: 'Configureer het systeem: alleen een concrete operationele behoefte, geen hergebruik om prestaties te beoordelen.',
         ru: "Настройте систему: только конкретная производственная необходимость, без повторного использования для оценки результатов работы.",
+        el: 'Ρύθμισε το σύστημα: μόνο συγκεκριμένη επιχειρησιακή ανάγκη, καμία επαναχρησιμοποίηση για αξιολόγηση της απόδοσης.',
       },
     },
     {
@@ -353,6 +371,7 @@ export const svezia: SchedaPaese = {
         nb: 'Hvis du bytter overvåkingssystem eller programvare: oppdater og utlever informasjonen om behandling av personopplysninger på nytt, og kontroller om du på nytt må informere eller rådføre deg med de ansattes representanter, der loven krever det. Leverandøren (databehandleren), de innsamlede opplysningene og arbeidsmåtene endrer seg ofte: informasjonen som ble utlevert tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "Если вы меняете систему или программное обеспечение мониторинга, обновите и повторно вручите уведомление о защите данных и проверьте, нужно ли снова информировать представителей работников или проводить с ними консультации, если этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее вручённого уведомления недостаточно.",
+        el: 'Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση, και έλεγξε αν πρέπει να ενημερώσεις ή να συμβουλευτείς ξανά τους εκπροσώπους των εργαζομένων, όπου το προβλέπει ο νόμος. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και ο τρόπος λειτουργίας: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.',
       },
     },
   ],
@@ -381,6 +400,7 @@ export const svezia: SchedaPaese = {
       nb: '200 000 SEK (cirka 17 500 euro)',
       nl: '200.000 SEK (ongeveer 17.500 euro)',
       ru: "200 000 SEK (около 17 500 евро)",
+      el: '200.000 SEK (περίπου 17.500 ευρώ)',
     },
     casoCitato: {
       it: "Datainspektionen (oggi IMY) contro il Comune di Skellefteå (decisione del 20 agosto 2019, confermata dai tribunali): una scuola usava il riconoscimento facciale tramite telecamera per registrare le presenze degli studenti, trattamento biometrico illecito (il consenso non è valido nel rapporto di dipendenza). Non è un caso di GPS, ma è il caso svedese più importante sul monitoraggio biometrico delle presenze.",
@@ -394,6 +414,7 @@ export const svezia: SchedaPaese = {
       nb: 'Datainspektionen (i dag IMY) mot Skellefteå kommune (avgjørelse av 20. august 2019, stadfestet av domstolene): en skole brukte kamerabasert ansiktsgjenkjenning for å registrere elevenes tilstedeværelse, en ulovlig biometrisk behandling (samtykke er ikke gyldig i et avhengighetsforhold). Det er ikke en GPS-sak, men det er den viktigste svenske saken om biometrisk overvåking av tilstedeværelse.',
       nl: 'Datainspektionen (nu IMY) tegen de gemeente Skelleftea (besluit van 20 augustus 2019, door de rechters bevestigd): een school gebruikte cameragebaseerde gezichtsherkenning om de aanwezigheid van leerlingen te registreren, een onrechtmatige biometrische verwerking (toestemming is niet geldig in een gezagsverhouding). Het is geen GPS-zaak, maar het is de toonaangevende Zweedse zaak over biometrische aanwezigheidscontrole.',
       ru: "Datainspektionen (ныне IMY) против муниципалитета Skellefteå (решение от 20 августа 2019 г., подтверждено судами): школа использовала распознавание лиц с помощью камеры для учёта посещаемости учащихся, что стало незаконной обработкой биометрических данных (согласие недействительно в отношении зависимости). Это не дело о GPS, но это самое значимое шведское дело о биометрическом учёте посещаемости.",
+      el: 'Datainspektionen (σήμερα IMY) κατά του Δήμου Skellefteå (απόφαση της 20ής Αυγούστου 2019, επιβεβαιώθηκε από τα δικαστήρια): ένα σχολείο χρησιμοποιούσε αναγνώριση προσώπου μέσω κάμερας για την καταγραφή των παρουσιών των μαθητών, παράνομη βιομετρική επεξεργασία (η συγκατάθεση δεν είναι έγκυρη στη σχέση εξάρτησης). Δεν είναι υπόθεση GPS, αλλά είναι η σημαντικότερη σουηδική υπόθεση για τη βιομετρική παρακολούθηση παρουσιών.',
     },
     urlFonte: FONTE_IMY_SKELLEFTEA.url,
     tipoImporto: 'caso-affine',

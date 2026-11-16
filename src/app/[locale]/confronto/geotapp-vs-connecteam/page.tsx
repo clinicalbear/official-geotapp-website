@@ -24,6 +24,7 @@ const META: Record<string, { title: string; description: string }> = {
   da: { title: 'GeoTapp vs Connecteam - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: hvilken skal du vælge til medarbejdere i marken? Sammenligning af dokumentation, position ved stempling og forseglede rapporter.' },
   sv: { title: 'GeoTapp vs Connecteam - Jämförelse 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: vilket ska du välja för fältserviceföretag? Jämförelse av arbetsbevis, position vid instämpling, förseglade rapporter och kundens verifiering.' },
   nb: { title: 'GeoTapp vs Connecteam - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: hvilken bør du velge for ansatte ute i felt? Sammenligning av dokumentasjon, posisjon ved stempling og forseglede rapporter.' },
+  el: { title: 'GeoTapp vs Connecteam - Σύγκριση 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: ποιο να διαλέξεις για εταιρείες με εργαζόμενους στο πεδίο; Σύγκριση σε απόδειξη εργασίας, τοποθεσία στο χτύπημα κάρτας, σφραγισμένες αναφορές και επαλήθευση από τον πελάτη.' },
   ru: { title: 'GeoTapp vs Connecteam - Сравнение 2026 | GeoTapp', description: 'GeoTapp vs Connecteam: что выбрать для компаний с выездными сотрудниками? Сравнение по доказательству работы, местоположению при отметке, запечатанным отчётам и проверке со стороны заказчика.' },
 };
 
@@ -91,6 +92,12 @@ const FAQ: Record<string, FaqItem[]> = {
     { q: 'GeoTapp eller Connecteam for renholdsbedrifter og facility management?', a: 'GeoTapp er laget spesielt for bransjer der dokumentasjon av utført arbeid er avgjørende (renhold, vedlikehold, facility). Når en innsigelse kommer, gir GeoTapp deg en forseglet rapport som kunden selv kontrollerer: en funksjon Connecteam ikke tilbyr.' },
     { q: 'Kan jeg bruke GeoTapp sammen med Connecteam?', a: 'Ja. GeoTapp konsentrerer seg om dokumentasjon av oppdragene; Connecteam kan fortsette å styre intern kommunikasjon og planlegging. De to verktøyene løser ulike problemer.' },
   ],
+  el: [
+    { q: 'Ποια είναι η βασική διαφορά ανάμεσα στο GeoTapp και στο Connecteam;', a: 'Το Connecteam είναι εργαλείο επικοινωνίας και διαχείρισης προσωπικού. Το GeoTapp είναι σύστημα επαληθεύσιμης απόδειξης της εργασίας: παράγει σφραγισμένες αναφορές με τοποθεσία, ώρα και φωτογραφίες απόδειξης που ο πελάτης μπορεί να επαληθεύσει μόνος του, χωρίς πρόσβαση στον λογαριασμό σου.' },
+    { q: 'Σφραγίζει το Connecteam την τοποθεσία;', a: 'Το Connecteam καταγράφει την τοποθεσία GPS, αλλά τα δεδομένα δεν καταλήγουν σε σφραγισμένη αναφορά επαληθεύσιμη από τρίτους. Το GeoTapp παράγει αναφορές με κρυπτογραφικό αποτύπωμα: ο πελάτης μπορεί να επαληθεύσει ότι τα δεδομένα δεν τροποποιήθηκαν μετά το κλείσιμο της εργασίας.' },
+    { q: 'GeoTapp ή Connecteam για εταιρείες καθαρισμού και διαχείρισης χώρων;', a: 'Το GeoTapp έχει σχεδιαστεί ειδικά για κλάδους όπου η απόδειξη της εργασίας που έγινε είναι κρίσιμη (καθαρισμός, συντήρηση, διαχείριση χώρων). Όταν έρχεται μια αμφισβήτηση, το GeoTapp σου δίνει μια σφραγισμένη αναφορά που ο πελάτης ελέγχει μόνος του: λειτουργία που το Connecteam δεν προσφέρει.' },
+    { q: 'Μπορώ να χρησιμοποιώ το GeoTapp μαζί με το Connecteam;', a: 'Ναι. Το GeoTapp επικεντρώνεται στην απόδειξη των εργασιών· το Connecteam μπορεί να συνεχίσει να διαχειρίζεται την εσωτερική επικοινωνία και τον προγραμματισμό. Τα δύο εργαλεία λύνουν διαφορετικά προβλήματα.' },
+  ],
   ru: [
     { q: 'В чём главная разница между GeoTapp и Connecteam?', a: 'Connecteam — это инструмент для коммуникации и управления персоналом. GeoTapp — это система проверяемого доказательства работы: она создаёт запечатанные отчёты с местоположением, временем и фотодоказательствами, которые заказчик может проверить сам, без доступа к вашему аккаунту.' },
     { q: 'Запечатывает ли Connecteam местоположение?', a: 'Connecteam записывает GPS-позицию, но данные не попадают в запечатанный отчёт, проверяемый третьими сторонами. GeoTapp создаёт отчёты с криптографическим хешем: заказчик может убедиться, что данные не изменялись после закрытия выезда.' },
@@ -111,6 +118,7 @@ const ROWS_LABELS: Record<string, string[]> = {
   da: ['Position ved stempling, forseglet i rapporten','Rapport med kryptografisk hash, enhver ændring kan opdages','Uafhængig verificering af kunden','Bevisfotos knyttet til GPS og tidsstempel','Basal fremmøderegistrering','Mobilapp Android/iOS','Dashboard til teamstyring','Egen intern beskedfunktion','Position registreres kun ved stempling, aldrig løbende','GPS-information underskrevet i appen, før man stempler*'],
   sv: ['Position vid instämpling, förseglad i rapporten','Rapport med kryptografisk hash, varje ändring går att upptäcka','Oberoende verifiering av kunden','Bevisfoton kopplade till GPS och tidsstämpel','Enkel närvaroregistrering','Mobilapp för Android/iOS','Instrumentpanel för teamhantering','Inbyggd meddelandefunktion','Positionen registreras bara vid instämpling, aldrig löpande','GPS-information signerad i appen innan man stämplar in*'],
   nb: ['Posisjon ved stempling, forseglet i rapporten','Rapport med kryptografisk hash, enhver endring kan oppdages','Uavhengig verifisering fra kunden','Bevisbilder knyttet til GPS og tidsstempel','Enkel oppmøteregistrering','Mobilapp Android/iOS','Dashbord for teamstyring','Egen intern meldingsfunksjon','Posisjon registreres bare ved stempling, aldri løpende','GPS-informasjon signert i appen før man stempler*'],
+  el: ['Τοποθεσία στο χτύπημα κάρτας, σφραγισμένη στην αναφορά','Αναφορά με κρυπτογραφικό αποτύπωμα, κάθε αλλαγή γίνεται ορατή','Ανεξάρτητη επαλήθευση από τον πελάτη','Φωτογραφικές αποδείξεις συνδεδεμένες με GPS και χρονοσφραγίδα','Βασική καταγραφή παρουσιών','Εφαρμογή για κινητά Android/iOS','Πίνακας ελέγχου διαχείρισης ομάδας','Ιδιόκτητα εσωτερικά μηνύματα','Η τοποθεσία λαμβάνεται μόνο στο χτύπημα κάρτας, ποτέ συνεχώς','Ενημέρωση GPS υπογεγραμμένη στην εφαρμογή πριν το χτύπημα κάρτας*'],
   ru: ['Местоположение при отметке, запечатанное в отчёте','Отчёты с криптографическим хешем, любое изменение заметно','Независимая проверка заказчиком','Фотодоказательства, привязанные к GPS и метке времени','Базовый учёт присутствия','Мобильное приложение Android/iOS','Панель управления командой','Встроенный обмен сообщениями','Местоположение фиксируется только при отметке, никогда не отслеживается непрерывно','Уведомление о GPS, подписанное в приложении перед отметкой*'],
 };
 
@@ -281,6 +289,21 @@ const T: Record<string, Copy> = {
     cta: 'Vil du se GeoTapp i aksjon?',
     ctaDesc: 'Prøv det på et ekte oppdrag: 14 dager gratis, uten kredittkort.',
     ctaBtn: 'Start gratis prøveperiode',
+  },
+  el: {
+    badge: 'Σύγκριση εφαρμογών', h1sub: 'ποιο να διαλέξεις για τον κλάδο σου;',
+    desc: 'Το Connecteam διαχειρίζεται την επικοινωνία της ομάδας. Το GeoTapp σφραγίζει την εργασία που έγινε: κλείνει κάθε εργασία σε μια αναφορά με ψηφιακό αποτύπωμα που αλλάζει αν κάποιος την πειράξει μετά. Είναι διαφορετικά εργαλεία, και να γιατί.',
+    summary: 'Με δυο λόγια:',
+    summaryText: 'Αν πρέπει να δείξεις στον πελάτη τις αποδείξεις της εργασίας, με τοποθεσία και ώρα κάθε χτυπήματος κάρτας, φωτογραφίες απόδειξης και μια αναφορά όπου κάθε μεταγενέστερη αλλαγή γίνεται ορατή, το GeoTapp είναι το σωστό εργαλείο. Το Connecteam έχει σχεδιαστεί για επικοινωνία και βάρδιες, όχι για να παράγει επαληθεύσιμες αποδείξεις.',
+    features: 'Σύγκριση βασικών λειτουργιών', feat: 'Λειτουργία', diff: 'Η διαφορά που μετράει: επαληθεύσιμες αποδείξεις ή επικοινωνία',
+    geo: ['Κάθε εργασία παράγει μια σφραγισμένη αναφορά με τοποθεσία και φωτογραφίες','Ο πελάτης επαληθεύει μόνος του ότι η αναφορά δεν τροποποιήθηκε','Η αναφορά είναι κρυπτογραφικά σφραγισμένη: κάθε μεταγενέστερη αλλαγή γίνεται ορατή','Σχεδιασμένο ώστε να έχεις μια απόδειξη να δείξεις όταν κάποιος αμφισβητεί','Η τοποθεσία λαμβάνεται μόνο στο χτύπημα κάρτας, ποτέ συνεχώς'],
+    comp: ['Εξαιρετικό για εσωτερική επικοινωνία και μηνύματα της ομάδας','Καταγράφει τις παρουσίες, χωρίς κρυπτογραφική σφραγίδα','Τα δεδομένα δεν επαληθεύονται ανεξάρτητα από τρίτους','Προσανατολισμένο στις βάρδιες και στη διαχείριση προσωπικού','Καμία σφραγισμένη αναφορά να δείξεις στον πελάτη'],
+    footnote: '* Σύμφωνα με τον νόμο (άρθρο 13 ΓΚΠΔ και, στην Ιταλία, άρθρο 4 του Statuto dei Lavoratori) κάθε εργαζόμενος πρέπει να ενημερωθεί πριν γεωεντοπιστεί. Αν το λογισμικό αφήνει αυτό το βήμα στον ιδιοκτήτη, ο κίνδυνος μένει σε εκείνον. Το GeoTapp ετοιμάζει την εξατομικευμένη ενημέρωση, την υπογράφει ο εργαζόμενος στην εφαρμογή για επιβεβαίωση ότι την είδε και δεν επιτρέπει χτύπημα κάρτας μέχρι να υπογραφεί.',
+    whenTitle: 'Πότε να διαλέξεις το GeoTapp',
+    when: ['Διευθύνεις εταιρεία καθαρισμού, διαχείρισης χώρων ή πολλαπλών υπηρεσιών','Οι πελάτες σου αμφισβητούν την εκτέλεση των εργασιών','Χρειάζεσαι φωτογραφικές αποδείξεις με γεωεντοπισμό για κάθε εργασία','Υπόκεισαι σε επιθεωρήσεις εργασίας ή συμβατικούς ελέγχους','Θέλεις αναφορές που ο πελάτης μπορεί να επαληθεύσει μόνος του'],
+    cta: 'Θέλεις να δεις το GeoTapp σε δράση;',
+    ctaDesc: 'Δοκίμασέ το σε μια πραγματική εργασία: 14 ημέρες δωρεάν, χωρίς πιστωτική κάρτα.',
+    ctaBtn: 'Ξεκίνα τη δωρεάν δοκιμή',
   },
   ru: {
     badge: 'Сравнение приложений', h1sub: 'что выбрать для вашей отрасли?',

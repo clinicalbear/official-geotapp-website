@@ -100,8 +100,8 @@ describe('confronto "valore pieno" / "con promo e codice"', () => {
 });
 
 describe('parole del codice e del confronto, in tutte le lingue', () => {
-  it('le tredici voci nuove ci sono in tutte e 11 le lingue', () => {
-    expect(UI_LOCALES).toHaveLength(11);
+  it('le tredici voci nuove ci sono in tutte e 12 le lingue', () => {
+    expect(UI_LOCALES).toHaveLength(12);
     for (const l of UI_LOCALES) {
       const t = UI[l];
       for (const k of ['codeTitle', 'codePlaceholder', 'codeApply', 'codeRemove', 'codeInvalid', 'codeUnavailable', 'compareFullTitle', 'comparePromoTitle', 'lineSeatsToPay'] as const) {

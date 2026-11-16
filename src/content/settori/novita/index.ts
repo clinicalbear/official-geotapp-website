@@ -13,6 +13,7 @@ const map: Partial<Record<string, () => Promise<{ default: NovitaCopy }>>> = {
   sv: () => import('./sv'),
   da: () => import('./da'),
   nb: () => import('./nb'),
+  el: () => import('./el'),
   // ru: sospeso dall'11/11/2026 (SUSPENDED_LOCALES), la pagina russa non si pubblica:
   // se verra' riattivato, serve ru.ts. Fino ad allora ricade sull'inglese.
 };

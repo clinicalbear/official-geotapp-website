@@ -75,6 +75,7 @@ export const cipro: SchedaPaese = {
     sv: 'Cypern',
     nb: 'Kypros',
     ru: 'Кипр',
+    el: "Κύπρος",
   },
   bandiera: '🇨🇾',
   federale: false,
@@ -93,6 +94,7 @@ export const cipro: SchedaPaese = {
       sv: 'Cypriotiska kommissionären för skydd av personuppgifter',
       nb: 'Kypriotisk kommissær for beskyttelse av personopplysninger',
       ru: 'Кипрский уполномоченный по защите персональных данных',
+      el: "Επίτροπος Προστασίας Δεδομένων Προσωπικού Χαρακτήρα της Κύπρου",
     },
     portale: FONTE_GARANTE_CY.url,
     urlFonte: FONTE_GARANTE_CY.url,
@@ -109,6 +111,7 @@ export const cipro: SchedaPaese = {
       nb: 'Kypros har én nasjonal myndighet, kommissæren for vern av personopplysninger (Commissioner for Personal Data Protection); det finnes ingen regional inndeling.',
       nl: 'Cyprus heeft een enkele nationale autoriteit, de Commissioner for Personal Data Protection; er is geen regionale verdeling.',
       ru: "На Кипре действует единый национальный орган, Commissioner for Personal Data Protection (Уполномоченный по защите персональных данных); регионального разделения нет.",
+      el: "Η Κύπρος έχει μία ενιαία εθνική αρχή, τον Επίτροπο Προστασίας Δεδομένων Προσωπικού Χαρακτήρα (Commissioner for Personal Data Protection)· δεν υπάρχει περιφερειακός διαχωρισμός.",
     },
   },
 
@@ -126,6 +129,7 @@ export const cipro: SchedaPaese = {
         nb: 'Forhåndsinformasjon til de ansatte (art. 13) og et rettslig grunnlag',
         nl: 'Voorafgaande informatie aan werknemers (art. 13) en het bestaan van een rechtsgrond',
         ru: "Предварительное информирование работников (ст. 13) и наличие правового основания",
+        el: "Προηγούμενη ενημέρωση των εργαζομένων (άρθρο 13) και ύπαρξη νομικής βάσης",
       },
       risposta: 'si',
       dettaglio: {
@@ -140,6 +144,7 @@ export const cipro: SchedaPaese = {
         nb: 'Den ansatte må, før overvåkingen begynner, informeres om den behandlingsansvarlige, formålene og det rettslige grunnlaget; det finnes ingen spesifikk kypriotisk lov om GPS; GDPR-rammeverket og lov 125(I)/2018 gjelder.',
         nl: 'de werknemer moet voor de aanvang van de monitoring worden geinformeerd over de verwerkingsverantwoordelijke, de doeleinden en de rechtsgrond; er is geen specifieke Cypriotische GPS-wet, het AVG-kader en Wet 125(I)/2018 zijn van toepassing.',
         ru: "Работника необходимо проинформировать до начала мониторинга об операторе, целях и правовом основании; специального кипрского закона о GPS нет, действует рамка GDPR и Закон 125(I)/2018.",
+        el: "Ο εργαζόμενος πρέπει να ενημερωθεί πριν από την έναρξη της παρακολούθησης για τον υπεύθυνο επεξεργασίας, τους σκοπούς και τη νομική βάση· δεν υπάρχει ειδικός κυπριακός νόμος για το GPS, ισχύει το πλαίσιο του ΓΚΠΔ και ο Νόμος 125(I)/2018.",
       },
       fonte: FONTE_GDPR_13,
     },
@@ -156,6 +161,7 @@ export const cipro: SchedaPaese = {
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit voor de installatie',
         ru: "Предварительное разрешение органа до установки",
+        el: "Προηγούμενη άδεια από κάποια αρχή πριν από την εγκατάσταση",
       },
       risposta: 'no',
       dettaglio: {
@@ -170,6 +176,7 @@ export const cipro: SchedaPaese = {
         nb: 'Det kreves ingen forhåndstillatelse fra kommissæren; med GDPR er den gamle meldeordningen avskaffet.',
         nl: 'er is geen voorafgaande toestemming van de Commissioner nodig; met de AVG is het oude meldingsregime afgeschaft.',
         ru: "Предварительное разрешение Уполномоченного не требуется; с введением GDPR прежний уведомительный режим отменён.",
+        el: "Δεν χρειάζεται προηγούμενη άδεια από τον Επίτροπο· με τον ΓΚΠΔ το παλιό καθεστώς γνωστοποίησης καταργήθηκε.",
       },
       fonte: FONTE_CY_ARCHIVIO,
     },
@@ -186,6 +193,7 @@ export const cipro: SchedaPaese = {
         nb: 'Grunnlag = berettiget interesse med avveining, ikke samtykke',
         nl: 'Grondslag = gerechtvaardigd belang met belangenafweging, niet de toestemming',
         ru: "Основание = законный интерес с взвешиванием, а не согласие",
+        el: "Βάση = έννομο συμφέρον με στάθμιση, όχι η συγκατάθεση",
       },
       risposta: 'si',
       dettaglio: {
@@ -200,6 +208,7 @@ export const cipro: SchedaPaese = {
         nb: 'I arbeidsforholdet er samtykke ikke frivillig; det vanlige grunnlaget er berettiget interesse, med en dokumentert avveining som ikke overstyrer de ansattes rettigheter.',
         nl: 'in de arbeidsverhouding wordt toestemming niet vrijelijk gegeven; de gebruikelijke grondslag is het gerechtvaardigd belang, met een gedocumenteerde belangenafweging die niet zwaarder weegt dan de rechten van de werknemers.',
         ru: "В трудовых отношениях согласие не даётся свободно; обычное основание: законный интерес, с задокументированным тестом взвешивания, в котором он не перевешивает права работников.",
+        el: "Στην εργασιακή σχέση η συγκατάθεση δεν παρέχεται ελεύθερα· η συνήθης βάση είναι το έννομο συμφέρον, με τεκμηριωμένη στάθμιση που δεν υπερισχύει των δικαιωμάτων των εργαζομένων.",
       },
       fonte: FONTE_GDPR_6,
     },
@@ -216,6 +225,7 @@ export const cipro: SchedaPaese = {
         nb: 'Ingen kontinuerlig sporing døgnet rundt; dataminimering (art. 5.1.c)',
         nl: 'Geen continue tracking de klok rond; minimalisering (art. 5.1.c)',
         ru: "Никакого непрерывного круглосуточного отслеживания; минимизация данных (ст. 5.1.c)",
+        el: "Καμία συνεχής παρακολούθηση όλο το 24ωρο· ελαχιστοποίηση (άρθρο 5 παρ. 1 στοιχ. γ)",
       },
       risposta: 'si',
       dettaglio: {
@@ -230,6 +240,7 @@ export const cipro: SchedaPaese = {
         nb: 'Kontinuerlig GPS-sporing som alltid er slått på, er i strid med dataminimering; den må begrenses til det nødvendige (arbeidstiden, den faktiske risikoen).',
         nl: 'continue, altijd actieve GPS-tracking schendt de minimalisering; deze moet worden beperkt tot wat noodzakelijk is (werktijd, daadwerkelijk risico).',
         ru: "Непрерывное, постоянно включённое GPS-отслеживание нарушает принцип минимизации; его нужно ограничить необходимым (рабочее время, реальный риск).",
+        el: "Η συνεχής παρακολούθηση GPS που είναι πάντα ενεργή παραβιάζει την ελαχιστοποίηση· πρέπει να περιορίζεται σε όσα είναι αναγκαία (ώρες εργασίας, πραγματικός κίνδυνος).",
       },
       fonte: FONTE_GDPR,
     },
@@ -246,6 +257,7 @@ export const cipro: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (DPIA) for systematisk overvåking av ansatte (art. 35)',
         nl: 'Effectbeoordeling (DPIA) voor systematische monitoring van werknemers (art. 35)',
         ru: "Оценка воздействия (DPIA) при систематическом мониторинге сотрудников (ст. 35)",
+        el: "Εκτίμηση αντικτύπου (DPIA) για τη συστηματική παρακολούθηση των εργαζομένων (άρθρο 35)",
       },
       risposta: 'si',
       dettaglio: {
@@ -260,6 +272,7 @@ export const cipro: SchedaPaese = {
         nb: 'En DPIA er påkrevd når overvåkingen av ansatte er systematisk; kommissæren vurderer forholdsmessigheten fra sak til sak.',
         nl: 'een DPIA is vereist wanneer de monitoring van werknemers systematisch is; de Commissioner beoordeelt de evenredigheid per geval.',
         ru: "DPIA необходима, когда мониторинг сотрудников носит систематический характер; Уполномоченный оценивает соразмерность в каждом отдельном случае.",
+        el: "Η DPIA είναι αναγκαία όταν η παρακολούθηση των εργαζομένων είναι συστηματική· ο Επίτροπος εξετάζει την αναλογικότητα κατά περίπτωση.",
       },
       fonte: FONTE_CY_DPIA,
     },
@@ -280,6 +293,7 @@ export const cipro: SchedaPaese = {
         nb: 'Finn et gyldig rettslig grunnlag (berettiget interesse), og dokumenter avveiningen.',
         nl: 'Bepaal een geldige rechtsgrond (gerechtvaardigd belang) en documenteer de belangenafweging.',
         ru: "Определите действительное правовое основание (законный интерес) и задокументируйте взвешивание.",
+        el: "Βρες μια έγκυρη νομική βάση (έννομο συμφέρον) και τεκμηρίωσε τη στάθμιση.",
       },
     },
     {
@@ -296,6 +310,7 @@ export const cipro: SchedaPaese = {
         nb: 'Informer de ansatte før overvåkingen begynner (art. 13).',
         nl: 'Informeer de werknemers voordat de monitoring begint (art. 13).',
         ru: "Проинформируйте работников до начала мониторинга (ст. 13).",
+        el: "Ενημέρωσε τους εργαζομένους πριν από την έναρξη της παρακολούθησης (άρθρο 13).",
       },
     },
     {
@@ -312,6 +327,7 @@ export const cipro: SchedaPaese = {
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) for systematisk overvåking.',
         nl: 'Voer de effectbeoordeling (DPIA) uit voor de systematische monitoring.',
         ru: "Проведите оценку воздействия (DPIA) для систематического мониторинга.",
+        el: "Πραγματοποίησε την εκτίμηση αντικτύπου (DPIA) για τη συστηματική παρακολούθηση.",
       },
     },
     {
@@ -328,6 +344,7 @@ export const cipro: SchedaPaese = {
         nb: 'Begrens GPS til det nødvendige: ingen kontinuerlig sporing døgnet rundt.',
         nl: 'Beperk GPS tot wat noodzakelijk is: geen continue tracking de klok rond.',
         ru: "Ограничьте GPS необходимым: без непрерывного круглосуточного отслеживания.",
+        el: "Περιόρισε το GPS σε όσα είναι αναγκαία: καμία συνεχής παρακολούθηση όλο το 24ωρο.",
       },
     },
     {
@@ -344,6 +361,7 @@ export const cipro: SchedaPaese = {
         nb: 'Konfigurer systemet forholdsmessig, og kontroller at interessen ikke overstyrer de ansattes rettigheter.',
         nl: 'Configureer het systeem proportioneel en controleer dat het belang niet zwaarder weegt dan de rechten van de werknemers.',
         ru: "Настройте систему соразмерно и проверьте, что интерес не перевешивает права работников.",
+        el: "Ρύθμισε το σύστημα με αναλογικότητα και έλεγξε ότι το συμφέρον υπερισχύει των δικαιωμάτων των εργαζομένων.",
       },
     },
     {
@@ -360,6 +378,7 @@ export const cipro: SchedaPaese = {
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og utlevere personvernopplysningene på nytt, og undersøke om du på ny må informere eller konsultere de ansattes representanter, der loven krever det. Ofte endrer leverandøren (databehandleren), de innsamlede opplysningene og metodene seg: opplysningene som ble utlevert tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "Если вы меняете систему или программу мониторинга, обновите и повторно вручите информационное уведомление и проверьте, нужно ли вновь информировать представителей работников или проводить с ними консультации, там, где этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее вручённого уведомления недостаточно.",
+        el: "Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση απορρήτου και έλεγξε αν πρέπει να ενημερώσεις ή να συμβουλευτείς ξανά τους εκπροσώπους των εργαζομένων, εκεί όπου το προβλέπει ο νόμος. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και οι τρόποι: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.",
       },
     },
   ],
@@ -388,6 +407,7 @@ export const cipro: SchedaPaese = {
       nb: '82.000 €',
       nl: '82.000 EUR',
       ru: "82.000 €",
+      el: "82.000 €",
     },
     casoCitato: {
       it: "Garante cipriota contro il Gruppo Louis (decisione del 25 ottobre 2019): uso di uno strumento automatico (Bradford Factor) per profilare le assenze per malattia di 818 dipendenti, senza base giuridica valida e su dati sanitari (artt. 6 e 9 GDPR); il bilanciamento dell'interesse legittimo è fallito. Multa complessiva 82.000 euro (70.000 + 10.000 + 2.000 a tre società del gruppo). Non è un caso di GPS, ma è la sanzione cipriota più importante sul monitoraggio dei dipendenti.",
@@ -401,6 +421,7 @@ export const cipro: SchedaPaese = {
       nb: 'Den kypriotiske kommissæren mot Louis Group (avgjørelse av 25. oktober 2019): bruk av et automatisk verktøy (Bradford Factor) for å profilere sykefraværet til 818 ansatte, uten gyldig rettslig grunnlag og på helseopplysninger (art. 6 og 9 i GDPR); avveiningen av den berettigede interessen sviktet. Samlet bot 82.000 euro (70.000 + 10.000 + 2.000 til tre selskaper i konsernet). Det er ikke en GPS-sak, men det er den viktigste kypriotiske sanksjonen om overvåking av ansatte.',
       nl: "Cypriotische Commissioner tegen de Louis-groep (besluit van 25 oktober 2019): gebruik van een geautomatiseerd instrument (Bradford Factor) om de ziekteverzuim-afwezigheden van 818 werknemers te profileren, zonder geldige rechtsgrond en over gezondheidsgegevens (art. 6 en 9 AVG); de afweging van het gerechtvaardigd belang is mislukt. Totale boete 82.000 euro (70.000 + 10.000 + 2.000 tegen drie vennootschappen van de groep). Het is geen GPS-zaak, maar het is de toonaangevende Cypriotische sanctie inzake de monitoring van werknemers.",
       ru: "Уполномоченный Кипра против Louis Group (решение от 25 октября 2019 г.): использование автоматизированного инструмента (Bradford Factor) для профилирования отсутствий по болезни 818 сотрудников, без действительного правового основания и на данных о состоянии здоровья (ст. 6 и 9 GDPR); взвешивание законного интереса не состоялось. Общий штраф 82.000 евро (70.000 + 10.000 + 2.000 трём компаниям группы). Это не случай GPS, но самая значительная санкция на Кипре за мониторинг сотрудников.",
+      el: "Επίτροπος της Κύπρου κατά του Ομίλου Louis (απόφαση της 25ης Οκτωβρίου 2019): χρήση αυτοματοποιημένου εργαλείου (Bradford Factor) για τη δημιουργία προφίλ των απουσιών λόγω ασθενείας 818 εργαζομένων, χωρίς έγκυρη νομική βάση και με δεδομένα υγείας (άρθρα 6 και 9 ΓΚΠΔ)· η στάθμιση του έννομου συμφέροντος απέτυχε. Συνολικό πρόστιμο 82.000 ευρώ (70.000 + 10.000 + 2.000 σε τρεις εταιρείες του ομίλου). Δεν πρόκειται για υπόθεση GPS, αλλά είναι η σημαντικότερη κυπριακή κύρωση για την παρακολούθηση των εργαζομένων.",
     },
     urlFonte: FONTE_LOUIS.url,
     tipoImporto: 'caso-affine',

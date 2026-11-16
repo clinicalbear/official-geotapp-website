@@ -24,6 +24,7 @@ const map: Partial<Record<AppLocale, () => Promise<{ default: ContestazioniCopy 
   sv: () => import('./sv'),
   nb: () => import('./nb'),
   ru: () => import('./ru'),
+  el: () => import('./el'),
 };
 
 export const LOCALES_CONTESTAZIONI = SUPPORTED_LOCALES.filter((l) => map[l as AppLocale]) as AppLocale[];

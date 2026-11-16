@@ -28,6 +28,7 @@ const appMeta: Record<string, { title: string; description: string }> = {
   sv: { title: 'GeoTapp TimeTracker: stämpelapp för team på fältet', description: 'Positionen sparas vid start, rast och slut, och inget automatiskt där emellan. Foton hör till uppdraget. 14 dagar gratis.' },
   da: { title: 'GeoTapp TimeTracker: stempel-app med GPS til hold i marken', description: 'Positionen registreres ved start, pause og slut, og intet automatisk imellem. Fotos hænger på opgaven. 14 dage gratis.' },
   nb: { title: 'GeoTapp TimeTracker: stemple-app med GPS for team i felt', description: 'Posisjonen registreres ved start, pause og slutt, og ingenting automatisk imellom. Bildene knyttes til oppdraget. 14 dager gratis.' },
+  el: { title: 'GeoTapp TimeTracker: εφαρμογή χτυπήματος κάρτας με GPS για ομάδες πεδίου', description: 'Η τοποθεσία καταγράφεται στην έναρξη, στο διάλειμμα και στη λήξη, και τίποτα αυτόματα ανάμεσά τους. Οι φωτογραφίες συνδέονται με το έργο. 14 ημέρες δωρεάν.' },
   ru: { title: 'GeoTapp TimeTracker: GPS-учёт времени для выездных техников', description: 'Геопозиция фиксируется при начале смены, перерыве и завершении — и ничего автоматически между ними. Фото привязаны к заказу. 14 дней бесплатно.' },
 };
 
@@ -155,6 +156,17 @@ const APP_FAQ: Record<string, object> = {
       { '@type': 'Question', name: 'Hva med personvernet (GDPR) i GeoTapp TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'Appen er bygget for å holde seg innenfor rammene: den registrerer posisjonen bare når medarbeideren stempler (start, pauser, slutt) eller tar et bevisbilde, aldri løpende, og ber ikke engang om tillatelse til å lese posisjonen i bakgrunnen. Medarbeideren kan se stemplingene og rapportene sine i appen. Informasjon og, der det er nødvendig, drøfting med de tillitsvalgte er fortsatt arbeidsgiverens ansvar.' } },
     ],
   },
+  el: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Τι είναι το GeoTapp TimeTracker;', acceptedAnswer: { '@type': 'Answer', text: 'Το GeoTapp TimeTracker είναι η εφαρμογή για κινητά των τεχνικών, που καταγράφει την παρουσία, τις εργασίες και τις φωτογραφίες απόδειξης απευθείας στο πεδίο. Όλα καταλήγουν στη σφραγισμένη αναφορά, που ο πελάτης ελέγχει μόνος του με το GeoTapp Verifier.' } },
+      { '@type': 'Question', name: 'Τι γίνεται αν δεν υπάρχει δίκτυο;', acceptedAnswer: { '@type': 'Answer', text: 'Το χτύπημα κάρτας αποθηκεύεται στο κινητό και στέλνεται μόνο του μόλις επανέλθει το σήμα, με την ώρα που έγινε. Μέχρι να φτάσει, δεν φαίνεται στο Flow.' } },
+      { '@type': 'Question', name: 'Σε τι διαφέρει το GeoTapp TimeTracker από μια συνηθισμένη εφαρμογή χτυπήματος κάρτας;', acceptedAnswer: { '@type': 'Answer', text: 'Το GeoTapp TimeTracker δεν είναι απλώς ένα χτύπημα κάρτας: κάθε βάρδια, με τοποθεσίες, φωτογραφίες απόδειξης και σημειώσεις, καταλήγει σε μια σφραγισμένη αναφορά με κρυπτογραφικά αποτυπώματα. Ο πελάτης την ελέγχει μόνος του: κάθε μεταγενέστερη αλλαγή, ακόμη και από τον διαχειριστή, μπορεί να εντοπιστεί.' } },
+      { '@type': 'Question', name: 'Λειτουργεί το GeoTapp TimeTracker σε Android και iOS;', acceptedAnswer: { '@type': 'Answer', text: 'Ναι. Η εφαρμογή διατίθεται στο Google Play και στο App Store. Απαιτεί Android 8.0 ή νεότερο, ή iOS 26.2 ή νεότερο.' } },
+      { '@type': 'Question', name: 'Τι ισχύει για το απόρρητο (ΓΚΠΔ) στο GeoTapp TimeTracker;', acceptedAnswer: { '@type': 'Answer', text: 'Η εφαρμογή είναι φτιαγμένη για να μένει εντός των ορίων: καταγράφει την τοποθεσία μόνο όταν ο εργαζόμενος χτυπά κάρτα (έναρξη, διαλείμματα, λήξη) ή τραβά φωτογραφία απόδειξης, ποτέ συνεχώς, και δεν ζητά καν άδεια για ανάγνωση της τοποθεσίας στο παρασκήνιο. Ο εργαζόμενος βλέπει στην εφαρμογή τα χτυπήματα κάρτας και τις αναφορές του. Η ενημέρωση και, όπου χρειάζεται, η διαβούλευση με τους εκπροσώπους των εργαζομένων παραμένουν ευθύνη του εργοδότη.' } },
+    ],
+  },
   sv: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -190,6 +202,7 @@ const APP_DESCRIPTION: Record<string, string> = {
   sv: 'GeoTapp TimeTracker är den inbyggda Android- och iOS-appen för tekniker på fältet: stämpling med position, bevisfoton, anteckningar och veckorapporter, kopplad till GeoTapp Flow. Om det saknas täckning sparas stämplingarna på telefonen och skickas när signalen kommer tillbaka.',
   da: 'GeoTapp TimeTracker er den native Android- og iOS-app til teknikere i marken: stempling med position, bevisfotos, noter og ugentlige rapporter, forbundet med GeoTapp Flow. Hvis der ikke er net, gemmes stemplingerne på telefonen og sendes, så snart signalet vender tilbage.',
   nb: 'GeoTapp TimeTracker er den native Android- og iOS-appen for teknikere i felt: stempling med posisjon, bevisbilder, notater og ukentlige rapporter, koblet til GeoTapp Flow. Hvis det ikke er nett, lagres stemplingene på telefonen og sendes så snart signalet er tilbake.',
+  el: 'Το GeoTapp TimeTracker είναι η εγγενής εφαρμογή Android και iOS για τεχνικούς πεδίου: χτύπημα κάρτας με τοποθεσία, φωτογραφίες απόδειξης, σημειώσεις και εβδομαδιαίες αναφορές, συνδεδεμένη με το GeoTapp Flow. Αν δεν υπάρχει δίκτυο, τα χτυπήματα κάρτας αποθηκεύονται στο κινητό και στέλνονται μόλις επανέλθει το σήμα.',
   ru: 'GeoTapp TimeTracker — мобильное приложение для выездных техников: отметки с контролируемой геопозицией, фотодоказательства, еженедельные отчёты и передача данных в GeoTapp Flow. Работает офлайн.',
 };
 
@@ -284,6 +297,16 @@ const APP_FEATURES: Record<string, string[]> = {
     'Finnes på Google Play og i App Store',
     'Posisjon bare når medarbeideren stempler eller tar et bevisbilde, aldri løpende',
   ],
+  el: [
+    'Χτύπημα κάρτας με τοποθεσία στην έναρξη, στα διαλείμματα και στη λήξη· οι προσομοιωμένες τοποθεσίες απορρίπτονται',
+    'Φωτογραφίες απόδειξης με ώρα και τοποθεσία',
+    'Χωρίς δίκτυο τα χτυπήματα κάρτας μένουν στο κινητό και στέλνονται μόλις επανέλθει το σήμα',
+    'Κρυπτογραφικά σφραγισμένες αναφορές',
+    'Ενημέρωση GPS που επιβεβαιώνεται ως διαβασμένη στην εφαρμογή πριν από το πρώτο χτύπημα κάρτας',
+    'Ενσωμάτωση με το GeoTapp Flow',
+    'Διαθέσιμο στο Google Play και στο App Store',
+    'Τοποθεσία μόνο όταν ο εργαζόμενος χτυπά κάρτα ή τραβά φωτογραφία απόδειξης, ποτέ συνεχώς',
+  ],
   sv: [
     'Stämpling med position vid start, raster och slut; simulerade positioner avvisas',
     'Bevisfoton med tid och position',
@@ -342,6 +365,8 @@ function buildAppSoftware(locale: AppLocale) {
         ? `14 dages gratis prøveperiode. Betalte planer fra ${rate.formatted} pr. plads om måneden, ekskl. moms.`
         : locale === 'nb'
         ? `14 dagers gratis prøveperiode. Betalte planer fra ${rate.formatted} per plass og måned, eksklusive mva.`
+        : locale === 'el'
+        ? `Δωρεάν δοκιμή 14 ημερών. Πακέτα επί πληρωμή από ${rate.formatted} ανά θέση τον μήνα, χωρίς ΦΠΑ.`
         : locale === 'sv'
         ? `14 dagars gratis provperiod. Betalplaner från ${rate.formatted} per plats och månad, exkl. moms.`
         : `14-day free trial. Paid plans from ${rate.formatted} per seat per month.`,

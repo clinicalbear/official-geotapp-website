@@ -14,6 +14,7 @@ const CHI_SIAMO_META: Record<string, { title: string; description: string }> = {
   da: { title: 'Om os - GeoTapp-teamet | GeoTapp', description: 'GeoTapp er en italiensk software til at dokumentere arbejdet i marken. Lær vores mission at kende: at gøre hver opgave verificerbar og mindske tvister.' },
   sv: { title: 'Om oss - GeoTapp-teamet | GeoTapp', description: 'GeoTapp är en italiensk mjukvara för att visa upp arbetet i fält. Läs om vårt uppdrag: att göra varje uppdrag verifierbart och minska tvisterna för företag med personal i rörelse.' },
   nb: { title: 'Om oss - GeoTapp-teamet | GeoTapp', description: 'GeoTapp er en italiensk programvare for å dokumentere arbeidet ute i felt. Les om oppdraget vårt: å gjøre hvert oppdrag verifiserbart og redusere tvister.' },
+  el: { title: 'Ποιοι είμαστε - Η ομάδα του GeoTapp | GeoTapp', description: 'Το GeoTapp είναι ιταλικό λογισμικό για την τεκμηρίωση της εργασίας στο πεδίο. Διάβασε την αποστολή μας: να κάνουμε κάθε εργασία επαληθεύσιμη και να μειώσουμε τις διαφωνίες.' },
   ru: { title: 'О нас - Команда GeoTapp | GeoTapp', description: 'GeoTapp — итальянское программное обеспечение для подтверждения выездных работ. Наша миссия: сделать каждый выезд проверяемым и сократить споры в компаниях с выездными сотрудниками.' },
 };
 

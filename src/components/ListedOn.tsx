@@ -81,6 +81,7 @@ const LABEL: Record<string, string> = {
   da: 'Opført på',
   sv: 'Listad på',
   nb: 'Oppført på',
+  el: 'Παρόντες στο',
 };
 
 /* ── Kompass logo ── */

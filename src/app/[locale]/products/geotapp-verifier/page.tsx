@@ -22,6 +22,7 @@ const verifierMeta: Record<string, { title: string; description: string }> = {
   sv: { title: "GeoTapp Verifier: oberoende kontroll av rapporter", description: "Verifier kontrollerar att en GeoTapp-rapport inte har ändrats efter förseglingen och att den kommer från GeoTapp. Gratis, utan konto, även offline." },
   da: { title: "GeoTapp Verifier: uafhængig kontrol af rapporter", description: "Verifier kontrollerer, at en GeoTapp-rapport ikke er ændret efter forseglingen, og at den kommer fra GeoTapp. Gratis, uden konto, også offline." },
   nb: { title: "GeoTapp Verifier: uavhengig kontroll av rapporter", description: "Verifier kontrollerer at en GeoTapp-rapport ikke er endret etter forseglingen, og at den kommer fra GeoTapp. Gratis, uten konto, også offline." },
+  el: { title: "GeoTapp Verifier: ανεξάρτητος έλεγχος αναφορών", description: "Το Verifier ελέγχει ότι μια αναφορά GeoTapp δεν έχει τροποποιηθεί μετά τη σφράγιση και ότι προέρχεται από το GeoTapp. Δωρεάν, χωρίς λογαριασμό, και εκτός σύνδεσης." },
   ru: { title: "GeoTapp Verifier: независимая проверка отчётов о работе", description: "Verifier проверяет, что отчёт GeoTapp не был изменён после запечатывания и действительно создан GeoTapp. Бесплатно, без аккаунта, работает и офлайн." },
 };
 
@@ -148,6 +149,17 @@ const VERIFIER_FAQ: Record<string, object> = {
       { '@type': 'Question', name: 'Fungerer GeoTapp Verifier sammen med Flow og TimeTracker?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Dataene oppstår i GeoTapp TimeTracker, i felt, og rapporten opprettes i GeoTapp Flow, på kontoret. Verifier er det gratis verktøyet som alle kan bruke til å kontrollere rapporten.' } },
     ],
   },
+  el: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Πώς λειτουργεί ο έλεγχος μιας αναφοράς GeoTapp;', acceptedAnswer: { '@type': 'Answer', text: 'Κάθε αναφορά GeoTapp σφραγίζεται όταν δημιουργείται: μια αλυσίδα αποτυπωμάτων SHA-256 δένει μεταξύ τους συμβάντα και φωτογραφίες, και η ρίζα υπογράφεται με το κλειδί του GeoTapp. Ο πελάτης λαμβάνει την αναφορά σε PDF και έναν μόνιμο σύνδεσμο προς το σφραγισμένο πακέτο· την ελέγχει online ή με το εργαλείο επαλήθευσης εκτός σύνδεσης, που υπολογίζει ξανά τα αποτυπώματα και ελέγχει την υπογραφή.' } },
+      { '@type': 'Question', name: 'Ποιος μπορεί να ελέγξει μια αναφορά GeoTapp;', acceptedAnswer: { '@type': 'Answer', text: 'Όποιος έχει το πακέτο, χωρίς πρόσβαση στον λογαριασμό της εταιρείας. Το εργαλείο επαλήθευσης εκτός σύνδεσης έχει ενσωματωμένο το δημόσιο κλειδί: λειτουργεί και χωρίς διαδίκτυο και χωρίς το GeoTapp.' } },
+      { '@type': 'Question', name: 'Τι γίνεται αν ένας πελάτης αμφισβητήσει την εργασία που έγινε;', acceptedAnswer: { '@type': 'Answer', text: 'Μπορείς να δείξεις στον πελάτη την αναφορά: περιέχει ώρες, τοποθεσίες που καταγράφηκαν στα χτυπήματα κάρτας και φωτογραφίες απόδειξης, και ο πελάτης μπορεί να ελέγξει μόνος του ότι κανείς δεν την έχει τροποποιήσει από τη σφράγιση. Ο έλεγχος δείχνει ότι το έγγραφο είναι αναλλοίωτο· από μόνος του δεν αποτελεί ούτε απόλυτη απόδειξη των πραγματικών περιστατικών ούτε νομική συμβουλή.' } },
+      { '@type': 'Question', name: 'Τι ισχύει για το απόρρητο (ΓΚΠΔ) στο GeoTapp Verifier;', acceptedAnswer: { '@type': 'Answer', text: 'Το εργαλείο επαλήθευσης εκτός σύνδεσης δεν στέλνει τίποτα σε κανέναν: τρέχει στον υπολογιστή σου. Στον έλεγχο online το αρχείο περνά από τον διακομιστή μας, που δεν το αποθηκεύει. Όσο για τα δεδομένα της αναφοράς, το GeoTapp καταγράφει την τοποθεσία μόνο όταν ο εργαζόμενος χτυπά κάρτα (έναρξη, διαλείμματα, λήξη) ή τραβά φωτογραφία απόδειξης, ποτέ συνεχώς.' } },
+      { '@type': 'Question', name: 'Λειτουργεί το GeoTapp Verifier μαζί με το Flow και το TimeTracker;', acceptedAnswer: { '@type': 'Answer', text: 'Ναι. Τα δεδομένα προκύπτουν στο GeoTapp TimeTracker, στο πεδίο, και η αναφορά δημιουργείται στο GeoTapp Flow, στο γραφείο. Το Verifier είναι το δωρεάν εργαλείο που μπορεί να χρησιμοποιήσει οποιοσδήποτε για να ελέγξει την αναφορά.' } },
+    ],
+  },
   sv: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -183,6 +195,7 @@ const VERIFIER_DESCRIPTION: Record<string, string> = {
   sv: 'GeoTapp Verifier kontrollerar att en GeoTapp-rapport inte har ändrats efter förseglingen och att den verkligen kommer från GeoTapp. Det är gratis, utan konto, även offline: för företag som behöver visa det utförda arbetet och för deras kunder.',
   da: 'GeoTapp Verifier kontrollerer, at en GeoTapp-rapport ikke er ændret efter forseglingen, og at den virkelig kommer fra GeoTapp. Det er gratis, uden konto, også offline: til virksomheder, der skal dokumentere det udførte arbejde, og til deres kunder.',
   nb: 'GeoTapp Verifier kontrollerer at en GeoTapp-rapport ikke er endret etter forseglingen, og at den virkelig kommer fra GeoTapp. Det er gratis, uten konto, også offline: for bedrifter som må dokumentere arbeidet som er utført, og for kundene deres.',
+  el: 'Το GeoTapp Verifier ελέγχει ότι μια αναφορά GeoTapp δεν έχει τροποποιηθεί μετά τη σφράγιση και ότι προέρχεται πράγματι από το GeoTapp. Είναι δωρεάν, χωρίς λογαριασμό, και εκτός σύνδεσης: για εταιρείες που πρέπει να τεκμηριώνουν την εργασία που έχουν κάνει και για τους πελάτες τους.',
   ru: 'GeoTapp Verifier проверяет, что отчёт GeoTapp не был изменён после запечатывания и действительно создан GeoTapp. Бесплатен, не требует аккаунта и работает даже офлайн: для компаний, которым нужно подтвердить выполненную работу, и для их клиентов.',
 };
 
@@ -259,6 +272,14 @@ const VERIFIER_FEATURES: Record<string, string[]> = {
     'Gratis frakoblet verifier, én enkelt fil med den offentlige nøkkelen innebygd',
     'Virker med rapportene som opprettes i Flow og TimeTracker',
   ],
+  el: [
+    'Η αναφορά σφραγίζεται όταν δημιουργείται: αλυσίδα SHA-256 υπογεγραμμένη με το κλειδί του GeoTapp',
+    'Ανεξάρτητος έλεγχος: οι πελάτες δεν αποκτούν πρόσβαση στον λογαριασμό σου',
+    'Αλυσίδα πάνω σε συμβάντα, φωτογραφίες και ώρες',
+    'Μόνιμος σύνδεσμος προς το σφραγισμένο πακέτο (geotapp.com/r/ ακολουθούμενο από έναν κωδικό)',
+    'Δωρεάν εργαλείο επαλήθευσης εκτός σύνδεσης, ένα μόνο αρχείο με ενσωματωμένο το δημόσιο κλειδί',
+    'Λειτουργεί με τις αναφορές που δημιουργούνται στο Flow και στο TimeTracker',
+  ],
   sv: [
     'Rapporten förseglas när den skapas: SHA-256-kedja signerad med GeoTapps nyckel',
     'Oberoende kontroll: kunderna får inte tillgång till ditt konto',
@@ -308,6 +329,8 @@ function buildVerifierSoftware(locale: AppLocale) {
         ? 'Gratis, uden konto, også for dem, der modtager rapporterne.'
         : locale === 'nb'
         ? 'Gratis, uten konto, også for dem som mottar rapportene.'
+        : locale === 'el'
+        ? 'Δωρεάν, χωρίς λογαριασμό, και για όσους λαμβάνουν τις αναφορές.'
         : locale === 'sv'
         ? 'Gratis, utan konto, även för dem som tar emot rapporterna.'
         : 'Included in GeoTapp plans. Free verification for report recipients.',

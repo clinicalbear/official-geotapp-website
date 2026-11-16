@@ -66,6 +66,7 @@ export const regnoUnito: SchedaPaese = {
     sv: 'Storbritannien',
     nb: 'Storbritannia',
     ru: 'Великобритания',
+    el: "Ηνωμένο Βασίλειο",
   },
   bandiera: '🇬🇧',
   federale: false,
@@ -88,6 +89,7 @@ export const regnoUnito: SchedaPaese = {
       nb: 'Storbritannia har én nasjonal myndighet, ICO, for England, Skottland, Wales og Nord-Irland: ingen regional inndeling. Fra 30. september 2026 erstattes Information Commissioner av Information Commission (Data (Use and Access) Act 2025, §§ 118-119); kontoret heter fortsatt ICO.',
       nl: 'Het Verenigd Koninkrijk heeft één nationale autoriteit, de ICO, voor Engeland, Schotland, Wales en Noord-Ierland: geen regionale verdeling. Vanaf 30 september 2026 wordt de Information Commissioner vervangen door de Information Commission (Data (Use and Access) Act 2025, ss. 118-119); het bureau blijft bekend als ICO.',
       ru: "В Соединённом Королевстве один национальный орган, ICO, для Англии, Шотландии, Уэльса и Северной Ирландии: региональное разделение отсутствует. С 30 сентября 2026 г. Information Commissioner заменяется на Information Commission (Data (Use and Access) Act 2025, ss. 118-119); ведомство по-прежнему называется ICO.",
+      el: "Το Ηνωμένο Βασίλειο έχει μία ενιαία εθνική αρχή, την ICO, για την Αγγλία, τη Σκωτία, την Ουαλία και τη Βόρεια Ιρλανδία: δεν υπάρχει περιφερειακός διαχωρισμός. Από τις 30 Σεπτεμβρίου 2026 ο Information Commissioner αντικαθίσταται από την Information Commission (Data (Use and Access) Act 2025, ss. 118-119)· η υπηρεσία συνεχίζει να ονομάζεται ICO.",
     },
   },
 
@@ -105,6 +107,7 @@ export const regnoUnito: SchedaPaese = {
         nb: 'Høring av de ansatte eller deres representanter før overvåking innføres',
         nl: 'Raadpleging van de werknemers of hun vertegenwoordigers voordat monitoring wordt ingevoerd',
         ru: "Консультация с работниками или их представителями до введения мониторинга",
+        el: "Διαβούλευση με τους εργαζομένους ή τους εκπροσώπους τους πριν από την εισαγωγή της παρακολούθησης",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -119,6 +122,7 @@ export const regnoUnito: SchedaPaese = {
         nb: 'ICO ber arbeidsgiverne om å innhente og dokumentere de ansattes eller deres representanters (f.eks. fagforeningers) synspunkter før overvåking innføres, med mindre det er gode grunner til ikke å gjøre det; det er ikke et bindende samtykke, men det må dokumenteres.',
         nl: 'De ICO vraagt om de mening van de werknemers of hun vertegenwoordigers (bijv. vakbonden) te verzamelen en te documenteren voordat monitoring wordt ingevoerd, tenzij er goede redenen zijn om dat niet te doen; het is geen bindende toestemming, maar het moet worden gedocumenteerd.',
         ru: "ICO требует собирать и документировать мнение работников или их представителей (например, профсоюзов) до введения мониторинга, если нет веских причин поступить иначе; это не обязательное согласие, но его нужно документировать.",
+        el: "Η ICO ζητά να συγκεντρώνεται και να τεκμηριώνεται η γνώμη των εργαζομένων ή των εκπροσώπων τους (π.χ. συνδικάτων) πριν από την εισαγωγή της παρακολούθησης, εκτός αν υπάρχουν σοβαροί λόγοι· δεν αποτελεί δεσμευτική συγκατάθεση, αλλά πρέπει να τεκμηριώνεται.",
       },
       fonte: FONTE_ICO_MONITORAGGIO,
     },
@@ -135,6 +139,7 @@ export const regnoUnito: SchedaPaese = {
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit vóór installatie',
         ru: "Предварительное разрешение органа власти перед установкой",
+        el: "Προηγούμενη άδεια από κάποια αρχή πριν από την εγκατάσταση",
       },
       risposta: 'no',
       dettaglio: {
@@ -149,6 +154,7 @@ export const regnoUnito: SchedaPaese = {
         nb: 'Det kreves ingen forhåndstillatelse fra ICO; ansvarlighet gjelder (egenvurdering + DPIA). ICO skal bare høres på forhånd hvis DPIA-en viser en høy risiko som ikke kan reduseres.',
         nl: 'Voorafgaande toestemming van de ICO is niet vereist; de verantwoordingsplicht geldt (zelfbeoordeling + DPIA). De ICO hoeft alleen vooraf te worden geraadpleegd als de DPIA een hoog risico aantoont dat niet kan worden beperkt.',
         ru: "Предварительное разрешение ICO не требуется; действует принцип подотчётности (самооценка + DPIA). ICO нужно консультировать заранее, только если DPIA выявляет высокий риск, который невозможно снизить.",
+        el: "Δεν απαιτείται προηγούμενη άδεια από την ICO· ισχύει η λογοδοσία (αυτοαξιολόγηση + DPIA). Η ICO ζητείται εκ των προτέρων μόνο αν η DPIA αναδείξει υψηλό κίνδυνο που δεν μπορεί να μετριαστεί.",
       },
       fonte: FONTE_ICO_MONITORAGGIO,
     },
@@ -165,6 +171,7 @@ export const regnoUnito: SchedaPaese = {
         nb: 'Gyldig rettslig grunnlag og informasjon til de ansatte (normalt berettiget interesse, ikke samtykke; ingen skjult overvåking)',
         nl: 'Geldige rechtsgrond en informatie aan de werknemers (doorgaans gerechtvaardigd belang, niet toestemming; geen heimelijke surveillance)',
         ru: "Действительное правовое основание и информирование работников (как правило, законный интерес, а не согласие; скрытое наблюдение недопустимо)",
+        el: "Έγκυρη νομική βάση και ενημέρωση των εργαζομένων (κατά κανόνα έννομο συμφέρον, όχι η συγκατάθεση· καμία κρυφή επιτήρηση)",
       },
       risposta: 'si',
       dettaglio: {
@@ -179,6 +186,7 @@ export const regnoUnito: SchedaPaese = {
         nb: 'Samtykke er normalt ikke gyldig på grunn av den skjeve maktbalansen; det vanlige grunnlaget er berettiget interesse med en dokumentert vurdering (LIA). De ansatte må informeres klart; skjult overvåking er bare tillatt i ekstraordinære tilfeller.',
         nl: 'Toestemming is doorgaans niet geldig vanwege de machtsongelijkheid; de gebruikelijke grondslag is het gerechtvaardigd belang met een gedocumenteerde beoordeling (LIA). Werknemers moeten duidelijk worden geïnformeerd; heimelijke surveillance alleen in uitzonderlijke gevallen.',
         ru: "Согласие, как правило, недействительно из-за неравенства сторон; обычное основание: законный интерес с документированной оценкой (LIA). Работников нужно информировать ясно; скрытое наблюдение допускается только в исключительных случаях.",
+        el: "Η συγκατάθεση κατά κανόνα δεν είναι έγκυρη λόγω της ανισορροπίας ισχύος· η συνήθης βάση είναι το έννομο συμφέρον με τεκμηριωμένη αξιολόγηση (LIA). Οι εργαζόμενοι πρέπει να ενημερώνονται με σαφήνεια· η κρυφή επιτήρηση μόνο σε εξαιρετικές περιπτώσεις.",
       },
       fonte: FONTE_ICO_MONITORAGGIO,
     },
@@ -195,6 +203,7 @@ export const regnoUnito: SchedaPaese = {
         nb: 'Ingen uberettiget kontinuerlig sporing; avstenging utenfor arbeidstid ved privat bruk',
         nl: 'Verbod op ongerechtvaardigde continue tracking; uitschakeling buiten werktijd voor privégebruik',
         ru: "Запрет необоснованного непрерывного отслеживания; отключение вне рабочего времени при личном использовании",
+        el: "Απαγόρευση αδικαιολόγητης συνεχούς παρακολούθησης· απενεργοποίηση εκτός ωραρίου για ιδιωτική χρήση",
       },
       risposta: 'si',
       dettaglio: {
@@ -209,6 +218,7 @@ export const regnoUnito: SchedaPaese = {
         nb: 'ICO har ingen særskilt regel om GPS. I sin veiledning om overvåking i kjøretøyer (videoopptak) anser den kontinuerlig opptak mens kjøretøyet brukes privat utenfor arbeidstid for sannsynligvis å være overdrevent, og sier at sjåførene bør ha mulighet til å slå det av; i eksempelet om DPIA (firmabiler med lokalisering som også brukes privat) krever overvåking av bevegelser til enhver tid en DPIA. Resonnementet brukes på GPS ved analogi.',
         nl: 'De ICO heeft geen specifieke gps-regel. In zijn gids over bewaking in voertuigen (videoregistratie) acht hij continue registratie terwijl het voertuig buiten werktijd privé wordt gebruikt waarschijnlijk buitensporig en zegt hij dat de bestuurder de registratie moet kunnen uitschakelen; in zijn DPIA-voorbeeld (bedrijfsauto\'s met locatietracking, ook privé gebruikt) vereist het te allen tijde volgen van bewegingen een DPIA. De redenering geldt naar analogie voor gps.',
         ru: "У ICO нет специального правила о GPS. В своём руководстве по наблюдению в транспортных средствах (видеозапись) он считает непрерывную запись, пока автомобиль используется в личных целях вне рабочего времени, скорее всего чрезмерной и указывает, что водитель должен иметь возможность её отключить; в примере по DPIA (служебные автомобили с отслеживанием местонахождения, используемые и в личных целях) мониторинг перемещений в любой момент требует DPIA. Это рассуждение следует применять к GPS по аналогии.",
+        el: "Η ICO δεν έχει ειδικό κανόνα για το GPS. Στον οδηγό της για την επιτήρηση εντός οχημάτων (καταγραφή βίντεο) κρίνει πιθανώς υπερβολική τη συνεχή καταγραφή ενώ το όχημα χρησιμοποιείται για ιδιωτικούς σκοπούς εκτός ωραρίου, και λέει ότι ο οδηγός πρέπει να μπορεί να την απενεργοποιεί· στο παράδειγμα για τη DPIA (εταιρικά αυτοκίνητα με εντοπισμό θέσης, που χρησιμοποιούνται και ιδιωτικά) η παρακολούθηση των μετακινήσεων ανά πάσα στιγμή απαιτεί DPIA. Το σκεπτικό εφαρμόζεται αναλογικά στο GPS.",
       },
       fonte: FONTE_ICO_VEICOLI,
     },
@@ -225,6 +235,7 @@ export const regnoUnito: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (DPIA) ved sporing av de ansattes geolokalisering',
         nl: 'Gegevensbeschermingseffectbeoordeling (DPIA) voor het volgen van de geolocatie van werknemers',
         ru: "Оценка воздействия (DPIA) для отслеживания геолокации работников",
+        el: "Εκτίμηση αντικτύπου (DPIA) για την παρακολούθηση του γεωεντοπισμού των εργαζομένων",
       },
       risposta: 'si',
       dettaglio: {
@@ -239,6 +250,7 @@ export const regnoUnito: SchedaPaese = {
         nb: 'ICOs liste omfatter sporing av en persons geolokalisering eller atferd og krever en DPIA når den kombineres med et annet kriterium fra de europeiske retningslinjene. Ansatte kan være sårbare registrerte på grunn av den skjeve maktbalansen, og ICO nevner eksempelet med firmabiler med lokalisering: en DPIA er påkrevd.',
         nl: 'De lijst van de ICO omvat het volgen van de geolocatie of het gedrag van een persoon en vereist een DPIA wanneer dit samenvalt met een ander criterium uit de Europese richtsnoeren. Werknemers kunnen kwetsbaar zijn door de machtsongelijkheid, en de ICO geeft het voorbeeld van bedrijfsauto\'s met locatietracking: een DPIA is vereist.',
         ru: "Перечень ICO включает отслеживание геолокации или поведения лица и требует DPIA, когда оно сочетается с другим критерием европейских руководящих указаний. Работники могут быть уязвимыми субъектами из-за неравенства сторон, а ICO приводит пример служебных автомобилей с отслеживанием местонахождения: DPIA требуется.",
+        el: "Ο κατάλογος της ICO περιλαμβάνει την παρακολούθηση της γεωγραφικής θέσης ή της συμπεριφοράς ενός προσώπου, και απαιτεί DPIA όταν συνδυάζεται με άλλο κριτήριο των ευρωπαϊκών κατευθυντήριων γραμμών. Οι εργαζόμενοι μπορεί να είναι ευάλωτα υποκείμενα λόγω της ανισορροπίας ισχύος, και η ICO φέρνει ως παράδειγμα τα εταιρικά αυτοκίνητα με εντοπισμό θέσης: η DPIA απαιτείται.",
       },
       fonte: FONTE_ICO_DPIA,
     },
@@ -259,6 +271,7 @@ export const regnoUnito: SchedaPaese = {
         nb: 'Innhent og dokumenter de ansattes eller deres representanters synspunkter.',
         nl: 'Verzamel en documenteer de mening van de werknemers of hun vertegenwoordigers.',
         ru: "Соберите и задокументируйте мнение работников или их представителей.",
+        el: "Συγκέντρωσε και τεκμηρίωσε τη γνώμη των εργαζομένων ή των εκπροσώπων τους.",
       },
     },
     {
@@ -275,6 +288,7 @@ export const regnoUnito: SchedaPaese = {
         nb: 'Finn et gyldig rettslig grunnlag (normalt berettiget interesse), og gjennomfør den dokumenterte vurderingen (LIA).',
         nl: 'Bepaal een geldige rechtsgrond (doorgaans gerechtvaardigd belang) en voer de gedocumenteerde beoordeling (LIA) uit.',
         ru: "Определите действительное правовое основание (как правило, законный интерес) и проведите документированную оценку (LIA).",
+        el: "Βρες μια έγκυρη νομική βάση (κατά κανόνα έννομο συμφέρον) και πραγματοποίησε την τεκμηριωμένη αξιολόγηση (LIA).",
       },
     },
     {
@@ -291,6 +305,7 @@ export const regnoUnito: SchedaPaese = {
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) før du aktiverer sporingen.',
         nl: 'Voer de gegevensbeschermingseffectbeoordeling (DPIA) uit voordat u de tracking activeert.',
         ru: "Проведите оценку воздействия (DPIA) до включения отслеживания.",
+        el: "Πραγματοποίησε την εκτίμηση αντικτύπου (DPIA) πριν από την ενεργοποίηση της παρακολούθησης.",
       },
     },
     {
@@ -307,6 +322,7 @@ export const regnoUnito: SchedaPaese = {
         nb: 'Informer de ansatte klart og tilgjengelig (ingen skjult overvåking unntatt i ekstraordinære tilfeller).',
         nl: 'Informeer de werknemers op een duidelijke en toegankelijke manier (geen heimelijke surveillance behalve in uitzonderlijke gevallen).',
         ru: "Проинформируйте работников ясно и доступно (скрытое наблюдение недопустимо, кроме исключительных случаев).",
+        el: "Ενημέρωσε τους εργαζομένους με σαφή και προσβάσιμο τρόπο (καμία κρυφή επιτήρηση, εκτός από εξαιρετικές περιπτώσεις).",
       },
     },
     {
@@ -323,6 +339,7 @@ export const regnoUnito: SchedaPaese = {
         nb: 'Konfigurer systemet: ingen kontinuerlig opptak utenfor arbeidstid, avstenging ved privat bruk.',
         nl: 'Configureer het systeem: geen continue registratie buiten werktijd, uitschakeling voor privégebruik.',
         ru: "Настройте систему: без непрерывной записи вне рабочего времени, с отключением при личном использовании.",
+        el: "Ρύθμισε το σύστημα: καμία συνεχής καταγραφή εκτός ωραρίου, απενεργοποίηση για ιδιωτική χρήση.",
       },
     },
     {
@@ -339,6 +356,7 @@ export const regnoUnito: SchedaPaese = {
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, oppdater og utlever personvernerklæringen på nytt, og kontroller om du på nytt må informere eller konsultere de ansattes representanter, der loven krever det. Leverandøren (databehandleren), de innsamlede opplysningene og fremgangsmåtene endrer seg ofte: den informasjonen som ble gitt tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "При смене системы или программы мониторинга обновите и повторно вручите уведомление о защите данных и проверьте, нужно ли снова информировать представителей работников или консультироваться с ними, там, где этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее вручённого уведомления недостаточно.",
+        el: "Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση απορρήτου και έλεγξε αν πρέπει να ενημερώσεις ή να συμβουλευτείς ξανά τους εκπροσώπους των εργαζομένων, εκεί όπου το προβλέπει ο νόμος. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και οι τρόποι: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.",
       },
     },
   ],
@@ -367,6 +385,7 @@ export const regnoUnito: SchedaPaese = {
       nb: 'håndhevingsvedtak + advarsel (ingen bot); risiko etter UK GDPR for opptil 17,5 millioner pund eller 4 % av omsetningen, hvis det er høyere',
       nl: 'handhavingsbevel + waarschuwing (geen boete); UK GDPR-risico tot 17,5 miljoen pond of 4% van de omzet, het hoogste bedrag',
       ru: "предписание об устранении нарушения (enforcement notice) + предупреждение (без штрафа); риск по UK GDPR: до 17,5 млн фунтов стерлингов или 4% оборота, в зависимости от того, что больше",
+      el: "εντολή εφαρμογής (enforcement notice) + επίπληξη (καμία χρηματική ποινή)· κίνδυνος UK GDPR έως 17,5 εκατ. λίρες ή 4% του κύκλου εργασιών, όποιο είναι μεγαλύτερο",
     },
     casoCitato: {
       it: "ICO contro l'Home Office (1° marzo 2024): provvedimento di enforcement e diffida per non aver valutato a sufficienza l'intrusività del tracciamento GPS continuo (cavigliera su persone in regime di immigrazione), DPIA inadeguata, niente prova di necessità e proporzionalità. Non è un caso di dipendenti, ma il ragionamento dell'ICO sul tracciamento GPS continuo e direttamente trasferibile.",
@@ -380,6 +399,7 @@ export const regnoUnito: SchedaPaese = {
       nb: 'ICO mot Home Office (1. mars 2024): håndhevingsvedtak og advarsel for ikke å ha vurdert tilstrekkelig hvor inngripende kontinuerlig GPS-sporing er (elektronisk fotlenke på personer underlagt innvandringskontroll), utilstrekkelig DPIA, ingen dokumentasjon for nødvendighet og proporsjonalitet. Det er ikke en sak om ansatte, men ICOs resonnement om kontinuerlig GPS-sporing kan overføres direkte.',
       nl: "ICO tegen het Home Office (1 maart 2024): handhavingsbevel en waarschuwing wegens het onvoldoende beoordelen van de indringendheid van continue GPS-tracking (enkelband bij personen onder het immigratieregime), ontoereikende DPIA, geen bewijs van noodzaak en evenredigheid. Het is geen werknemerszaak, maar de redenering van de ICO over continue GPS-tracking is direct overdraagbaar.",
       ru: "ICO против Home Office (1 марта 2024 г.): предписание об устранении нарушения (enforcement notice) и предупреждение за недостаточную оценку инвазивности непрерывного GPS-отслеживания (электронный браслет на лодыжке у лиц в иммиграционном режиме), неадекватную DPIA, отсутствие доказательств необходимости и соразмерности. Это не дело о сотрудниках, но рассуждение ICO о непрерывном GPS-отслеживании напрямую применимо.",
+      el: "ICO κατά του Home Office (1η Μαρτίου 2024): εντολή εφαρμογής και επίπληξη επειδή δεν αξιολογήθηκε επαρκώς η παρεμβατικότητα της συνεχούς παρακολούθησης GPS (ηλεκτρονικό βραχιόλι αστραγάλου σε πρόσωπα υπό καθεστώς μετανάστευσης), ανεπαρκής DPIA, καμία απόδειξη αναγκαιότητας και αναλογικότητας. Δεν είναι υπόθεση εργαζομένων, αλλά το σκεπτικό της ICO για τη συνεχή παρακολούθηση GPS μεταφέρεται άμεσα.",
     },
     urlFonte: FONTE_ICO_HOME_OFFICE.url,
     tipoImporto: 'caso-affine',

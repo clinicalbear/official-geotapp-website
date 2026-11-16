@@ -7,7 +7,7 @@ const canonicalOf = (locale: string, path: string) =>
 
 const LOCALES = [
   'it', 'en', 'en-us', 'en-gb', 'en-au', 'en-ie', 'en-ca',
-  'de', 'nl', 'fr', 'es', 'pt', 'da', 'nb', 'sv', 'ru',
+  'de', 'nl', 'fr', 'es', 'pt', 'da', 'nb', 'sv', 'el', 'ru',
 ];
 
 describe('buildLocaleAlternates — canonical sempre self', () => {

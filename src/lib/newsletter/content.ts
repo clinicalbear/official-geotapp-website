@@ -9,7 +9,7 @@
  */
 
 export type NewsletterLocale =
-  | 'it' | 'en' | 'de' | 'nl' | 'fr' | 'es' | 'pt' | 'da' | 'sv' | 'nb' | 'ru';
+  | 'it' | 'en' | 'de' | 'nl' | 'fr' | 'es' | 'pt' | 'da' | 'sv' | 'nb' | 'el' | 'ru';
 
 export interface NewsletterContent {
   title: string;
@@ -133,6 +133,17 @@ export const NEWSLETTER: Record<NewsletterLocale, NewsletterContent> = {
     success: 'Ferdig. Den neste havner her.',
     error: 'Det gikk ikke. Prøv igjen om litt.',
     privacy: 'Adressen holder. Du melder deg av fra hvilken som helst e-post med ett klikk, og da er den borte.',
+  },
+  el: {
+    title: 'Το ενημερωτικό δελτίο της GeoTapp',
+    intro: 'Μία φορά την εβδομάδα, πώς αποδεικνύεται μια εργασία που έγινε χωρίς να παρακολουθείς κανέναν, και τι λένε οι νόμοι και τα δικαστήρια όταν το θέμα καταλήγει άσχημα.',
+    promise: 'Καμία διαφήμιση μεταμφιεσμένη σε συμβουλή. Τις εβδομάδες που δεν υπάρχει τίποτα να πούμε, δεν έρχεται τίποτα.',
+    placeholder: 'Το email σου',
+    submit: 'Εγγραφή',
+    sending: 'Μια στιγμή…',
+    success: 'Έγινε. Το επόμενο θα έρθει εδώ.',
+    error: 'Δεν λειτούργησε. Δοκίμασε ξανά σε λίγο.',
+    privacy: 'Χρειάζεται μόνο η διεύθυνση. Διαγράφεσαι από οποιοδήποτε email με ένα κλικ και η διεύθυνση σβήνεται.',
   },
   ru: {
     title: 'Рассылка GeoTapp',

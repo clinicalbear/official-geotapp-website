@@ -36,6 +36,7 @@ export const CTA_LABELS: Record<string, { title: string; desc: string; btn: stri
   da: { title: 'Prøv GeoTapp gratis i 14 dage', desc: 'Intet kreditkort. Kom i gang på 2 minutter.', btn: 'Start gratis prøveperiode' },
   sv: { title: 'Prova GeoTapp gratis i 14 dagar', desc: 'Inget kreditkort. Kom igång på 2 minuter.', btn: 'Starta gratis provperiod' },
   nb: { title: 'Prøv GeoTapp gratis i 14 dager', desc: 'Ingen kredittkort. Kom i gang på 2 minutter.', btn: 'Start gratis prøveperiode' },
+  el: { title: 'Δοκίμασε το GeoTapp δωρεάν για 14 ημέρες', desc: 'Χωρίς πιστωτική κάρτα. Ξεκίνα σε 2 λεπτά.', btn: 'Ξεκίνα τη δωρεάν δοκιμή' },
   ru: { title: 'Попробуйте GeoTapp бесплатно 14 дней', desc: 'Без банковской карты. Запуск за 2 минуты.', btn: 'Начать бесплатно' },
 };
 

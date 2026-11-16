@@ -190,6 +190,7 @@ const ERROR_MSGS: Record<string, { required: string; network: string }> = {
   da: { required: 'Udfyld navn og e-mail', network: 'Netværksfejl. Prøv igen.' },
   sv: { required: 'Fyll i namn och e-post', network: 'Nätverksfel. Försök igen.' },
   nb: { required: 'Fyll inn navn og e-post', network: 'Nettverksfeil. Prøv igjen.' },
+  el: { required: 'Συμπλήρωσε όνομα και email', network: 'Σφάλμα δικτύου. Δοκίμασε ξανά.' },
   ru: { required: 'Укажите имя и email', network: 'Ошибка сети. Попробуйте снова.' },
 };
 

@@ -70,6 +70,7 @@ export const bielorussia: SchedaPaese = {
     sv: 'Vitryssland',
     nb: 'Hviterussland',
     ru: 'Беларусь',
+    el: "Λευκορωσία",
   },
   bandiera: '🇧🇾',
   federale: false,
@@ -88,6 +89,7 @@ export const bielorussia: SchedaPaese = {
       sv: 'NPDPC (Nationella centret för skydd av personuppgifter)',
       nb: 'NPDPC (Nasjonalt senter for beskyttelse av personopplysninger)',
       ru: 'NPDPC (Национальный центр защиты персональных данных)',
+      el: "NPDPC (Εθνικό Κέντρο Προστασίας Προσωπικών Δεδομένων)",
     },
     portale: FONTE_NPDPC.url,
     urlFonte: FONTE_NPDPC.url,
@@ -104,6 +106,7 @@ export const bielorussia: SchedaPaese = {
       nb: 'Belarus ligger utenfor EU og anvender ikke GDPR. Lov 99-Z fra 2021 gjelder, og den bygger på samtykke. Konteksten er autoritær, og åpenheten om håndhevingen er begrenset. Den eneste nasjonale myndigheten er NPDPC.',
       nl: "Belarus ligt buiten de EU en past de AVG niet toe. Van toepassing is de Wet 99-Z van 2021, gebaseerd op toestemming. De context is autoritair en de transparantie over de handhaving is beperkt. De enige nationale autoriteit is het NPDPC.",
       ru: "Беларусь не входит в ЕС и не применяет GDPR. Действует закон 99-З 2021 года, основанный на согласии. Контекст авторитарный, прозрачность правоприменения ограничена. Единственный национальный орган: NPDPC.",
+      el: "Η Λευκορωσία είναι εκτός ΕΕ και δεν εφαρμόζει τον ΓΚΠΔ. Ισχύει ο Νόμος 99-Z του 2021, που βασίζεται στη συγκατάθεση. Αυταρχικό πλαίσιο και περιορισμένη διαφάνεια ως προς την εφαρμογή. Μία ενιαία εθνική αρχή, το NPDPC.",
     },
   },
 
@@ -121,6 +124,7 @@ export const bielorussia: SchedaPaese = {
         nb: 'Særskilt og spesifikt samtykke fra den ansatte til geolokalisering + detaljert informasjon (lov 99-Z)',
         nl: 'Afzonderlijke en specifieke toestemming van de werknemer voor geolocatie + gedetailleerde informatie (Wet 99-Z)',
         ru: "Отдельное и конкретное согласие работника на геолокацию + подробное информирование (закон 99-З)",
+        el: "Χωριστή και ειδική συγκατάθεση του εργαζομένου για τον γεωεντοπισμό + αναλυτική ενημέρωση (Νόμος 99-Z)",
       },
       risposta: 'si',
       dettaglio: {
@@ -135,6 +139,7 @@ export const bielorussia: SchedaPaese = {
         nb: 'Den belarusiske modellen bygger på samtykke; for GPS er det lurt å innhente den ansattes særskilte og spesifikke samtykke med detaljert informasjon (behandlingsansvarlig, formål, liste over opplysninger, varighet, parter som behandler opplysningene, rettigheter). Unntaket for arbeidsforhold dekker den ordinære forvaltningen av forholdet, ikke en kontinuerlig GPS-overvåking.',
         nl: "Het Belarussische model is gebaseerd op toestemming; voor GPS is afzonderlijke en specifieke toestemming van de werknemer aan te raden, met gedetailleerde informatie (verwerkingsverantwoordelijke, doeleinden, lijst van gegevens, duur, partijen die de gegevens verwerken, rechten). De uitzondering voor arbeidsverhoudingen dekt het gewone beheer van de verhouding, niet een doorlopende GPS-bewaking.",
         ru: "Белорусская модель основана на согласии; для GPS целесообразно получить отдельное и конкретное согласие работника с подробным информированием (оператор, цели, перечень данных, срок, лица, обрабатывающие данные, права). Исключение для трудовых отношений охватывает обычное управление трудовыми отношениями, но не непрерывное GPS-наблюдение.",
+        el: "Το λευκορωσικό μοντέλο βασίζεται στη συγκατάθεση· για το GPS συμφέρει η χωριστή και ειδική συγκατάθεση του εργαζομένου, με αναλυτική ενημέρωση (υπεύθυνος επεξεργασίας, σκοπός, κατάλογος δεδομένων, διάρκεια, πρόσωπα που επεξεργάζονται, δικαιώματα). Η εξαίρεση για τις εργασιακές σχέσεις καλύπτει την τακτική διαχείριση της σχέσης, όχι τη συνεχή παρακολούθηση GPS.",
       },
       fonte: FONTE_LEGGE_99Z,
     },
@@ -151,6 +156,7 @@ export const bielorussia: SchedaPaese = {
         nb: 'Forhåndstillatelse eller registrering hos en myndighet før installasjon',
         nl: 'Voorafgaande toestemming of registratie bij een autoriteit voor de installatie',
         ru: "Предварительное разрешение или регистрация в органе перед установкой",
+        el: "Προηγούμενη άδεια ή καταχώριση από κάποια αρχή πριν από την εγκατάσταση",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -165,6 +171,7 @@ export const bielorussia: SchedaPaese = {
         nb: 'Det kreves ingen generell forhåndstillatelse; innføring i operatørregisteret kreves bare for høyrisikokategorier (biometriske/genetiske opplysninger, særlige overføringer, 100.000+ registrerte). En arbeidsgiver som bruker GPS på sitt eget personale, holder seg normalt under terskelen.',
         nl: "Een algemene voorafgaande toestemming is niet nodig; inschrijving in het register van verwerkers is alleen vereist voor risicocategorieen (biometrische/genetische gegevens, bijzondere doorgiften, 100.000+ betrokkenen). Een werkgever die GPS bij eigen personeel gebruikt, blijft doorgaans onder de drempel.",
         ru: "Общего предварительного разрешения не требуется; включение в реестр операторов требуется только для категорий повышенного риска (биометрические и генетические данные, особые трансграничные передачи, более 100 000 субъектов данных). Работодатель, использующий GPS в отношении собственного персонала, как правило, остаётся ниже порога.",
+        el: "Δεν απαιτείται γενική προηγούμενη άδεια· η εγγραφή στο μητρώο των φορέων επεξεργασίας απαιτείται μόνο για κατηγορίες υψηλού κινδύνου (βιομετρικά/γενετικά δεδομένα, ειδικές διαβιβάσεις, 100.000+ υποκείμενα). Ένας εργοδότης που εφαρμόζει GPS στο προσωπικό του κατά κανόνα παραμένει κάτω από το όριο.",
       },
       fonte: FONTE_PRIKAZ_94,
     },
@@ -181,6 +188,7 @@ export const bielorussia: SchedaPaese = {
         nb: 'Grunnlag = som hovedregel samtykke (samtykkebasert modell, annerledes enn GDPR)',
         nl: 'Grondslag = in de regel toestemming (op toestemming gericht model, anders dan de AVG)',
         ru: "Основание: как правило, согласие (модель, ориентированная на согласие, в отличие от GDPR)",
+        el: "Βάση = κατά κανόνα η συγκατάθεση (μοντέλο με επίκεντρο τη συγκατάθεση, διαφορετικό από τον ΓΚΠΔ)",
       },
       risposta: 'si',
       dettaglio: {
@@ -195,6 +203,7 @@ export const bielorussia: SchedaPaese = {
         nb: 'I motsetning til GDPR er hovedgrunnlaget den ansattes samtykke, og en endring av formålet krever et nytt samtykke, med mindre loven eller en annen lovgivningsakt gir et annet grunnlag (art. 4 nr. 4).',
         nl: "Anders dan bij de AVG is de belangrijkste grondslag de toestemming van de werknemer, en een wijziging van het doel vereist een nieuwe toestemming, tenzij de wet of een andere wetgevingshandeling een andere grondslag biedt (art. 4, lid 4).",
         ru: "В отличие от GDPR, основным правовым основанием является согласие работника, а изменение цели требует нового согласия, если закон или другой законодательный акт не предусматривает иного основания (ст. 4, часть 4).",
+        el: "Σε αντίθεση με τον ΓΚΠΔ, η βασική βάση είναι η συγκατάθεση του εργαζομένου, και η αλλαγή σκοπού απαιτεί νέα συγκατάθεση, εκτός αν ο νόμος ή άλλη νομοθετική πράξη προβλέπει άλλο έρεισμα (άρθρο 4 παρ. 4).",
       },
       fonte: FONTE_LEGGE_99Z,
     },
@@ -211,6 +220,7 @@ export const bielorussia: SchedaPaese = {
         nb: 'Ingen behandling utover formålet; nytt samtykke hvis formålet endres, med mindre loven gir et annet grunnlag',
         nl: 'Geen verwerking buiten het doel; nieuwe toestemming als het doel wijzigt, tenzij de wet een andere grondslag biedt',
         ru: "Никакой обработки за пределами цели; новое согласие при изменении цели, если закон не предусматривает иного основания",
+        el: "Καμία επεξεργασία πέραν του σκοπού· νέα συγκατάθεση αν αλλάξει ο σκοπός, εκτός αν ο νόμος προβλέπει άλλο έρεισμα",
       },
       risposta: 'si',
       dettaglio: {
@@ -225,6 +235,7 @@ export const bielorussia: SchedaPaese = {
         nb: 'Behandlingen må begrenses til de angitte formålene, og det kreves et nytt samtykke hvis formålet endres, med mindre loven eller en annen lovgivningsakt gir et annet grunnlag (art. 4 nr. 4); den behandlingsansvarlige må informere de ansatte og avslutte behandlingen når grunnlaget bortfaller.',
         nl: "De verwerking moet beperkt blijven tot de aangegeven doeleinden, en een nieuwe toestemming is nodig als het doel wijzigt, tenzij de wet of een andere wetgevingshandeling een andere grondslag biedt (art. 4, lid 4); de verwerkingsverantwoordelijke moet de werknemers informeren en de verwerking staken wanneer de grondslag wegvalt.",
         ru: "Обработка должна ограничиваться заявленными целями, а при изменении цели требуется новое согласие, если закон или другой законодательный акт не предусматривает иного основания (ст. 4, часть 4); оператор обязан информировать работников и прекратить обработку, когда основание отпадает.",
+        el: "Η επεξεργασία πρέπει να περιορίζεται στους δηλωμένους σκοπούς, και απαιτείται νέα συγκατάθεση αν αλλάξει ο σκοπός, εκτός αν ο νόμος ή άλλη νομοθετική πράξη προβλέπει άλλο έρεισμα (άρθρο 4 παρ. 4)· ο υπεύθυνος επεξεργασίας πρέπει να ενημερώνει τους εργαζομένους και να παύει την επεξεργασία όταν εκλείψει η βάση.",
       },
       fonte: FONTE_LEGGE_99Z,
     },
@@ -241,6 +252,7 @@ export const bielorussia: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (DPIA)',
         nl: 'Effectbeoordeling (DPIA)',
         ru: "Оценка воздействия (DPIA)",
+        el: "Εκτίμηση αντικτύπου (DPIA)",
       },
       risposta: 'no',
       dettaglio: {
@@ -255,6 +267,7 @@ export const bielorussia: SchedaPaese = {
         nb: 'Belarusisk lov foreskriver ikke en personvernkonsekvensvurdering i GDPR-stil; den krever imidlertid et personvernombud og melding om brudd innen 3 virkedager.',
         nl: "De Belarussische wet voorziet niet in een effectbeoordeling in AVG-stijl; zij vereist echter wel een functionaris voor gegevensbescherming en de melding van inbreuken binnen 3 werkdagen.",
         ru: "Белорусский закон не предусматривает оценку воздействия в стиле GDPR; однако он требует назначения ответственного за защиту данных и уведомления о нарушениях в течение 3 рабочих дней.",
+        el: "Ο λευκορωσικός νόμος δεν προβλέπει εκτίμηση αντικτύπου τύπου ΓΚΠΔ· προβλέπει όμως την υποχρέωση ύπαρξης υπευθύνου προστασίας δεδομένων και τη γνωστοποίηση των παραβιάσεων εντός 3 εργάσιμων ημερών.",
       },
       fonte: FONTE_LEGGE_99Z,
     },
@@ -275,6 +288,7 @@ export const bielorussia: SchedaPaese = {
         nb: 'Innhent den ansattes særskilte og spesifikke samtykke til geolokalisering.',
         nl: 'Verzamel de afzonderlijke en specifieke toestemming van de werknemer voor geolocatie.',
         ru: "Получите отдельное и конкретное согласие работника на геолокацию.",
+        el: "Συγκέντρωσε τη χωριστή και ειδική συγκατάθεση του εργαζομένου για τον γεωεντοπισμό.",
       },
     },
     {
@@ -291,6 +305,7 @@ export const bielorussia: SchedaPaese = {
         nb: 'Gi detaljert informasjon (behandlingsansvarlig, formål, liste over opplysninger, varighet, parter som behandler opplysningene, rettigheter).',
         nl: "Informeer in detail (verwerkingsverantwoordelijke, doeleinden, lijst van gegevens, duur, partijen die de gegevens verwerken, rechten).",
         ru: "Информируйте подробно (оператор, цели, перечень данных, срок, лица, обрабатывающие данные, права).",
+        el: "Ενημέρωσε αναλυτικά (υπεύθυνος επεξεργασίας, σκοπός, κατάλογος δεδομένων, διάρκεια, πρόσωπα που επεξεργάζονται, δικαιώματα).",
       },
     },
     {
@@ -307,6 +322,7 @@ export const bielorussia: SchedaPaese = {
         nb: 'Undersøk om du faller inn under terskelene for innføring i operatørregisteret (høyrisikoopplysninger).',
         nl: "Ga na of u onder de drempels voor inschrijving in het register van verwerkers valt (risicogegevens).",
         ru: "Проверьте, подпадаете ли вы под пороги включения в реестр операторов (данные повышенного риска).",
+        el: "Έλεγξε αν εμπίπτεις στα όρια εγγραφής στο μητρώο των φορέων επεξεργασίας (δεδομένα υψηλού κινδύνου).",
       },
     },
     {
@@ -323,6 +339,7 @@ export const bielorussia: SchedaPaese = {
         nb: 'Utpek et personvernombud, og gjør klar meldingen om brudd innen 3 dager.',
         nl: 'Benoem een functionaris voor gegevensbescherming en richt de melding van inbreuken binnen 3 dagen in.',
         ru: "Назначьте ответственного за защиту данных и подготовьте уведомление о нарушениях в течение 3 дней.",
+        el: "Όρισε υπεύθυνο προστασίας δεδομένων και προετοίμασε τη γνωστοποίηση των παραβιάσεων εντός 3 ημερών.",
       },
     },
     {
@@ -339,6 +356,7 @@ export const bielorussia: SchedaPaese = {
         nb: 'Begrens behandlingen til de angitte formålene, og avslutt når grunnlaget bortfaller.',
         nl: "Beperk de verwerking tot de aangegeven doeleinden en staak deze wanneer de grondslag wegvalt.",
         ru: "Ограничьте обработку заявленными целями и прекратите её, когда основание отпадает.",
+        el: "Περιόρισε την επεξεργασία στους δηλωμένους σκοπούς και παύσε την όταν εκλείψει η βάση.",
       },
     },
     {
@@ -355,6 +373,7 @@ export const bielorussia: SchedaPaese = {
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og utlevere personvernopplysningene på nytt, og undersøke om du på ny må informere eller konsultere de ansattes representanter, der loven krever det. Ofte endrer leverandøren (databehandleren), de innsamlede opplysningene og metodene seg: opplysningene som ble utlevert tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "Если вы меняете систему или программу мониторинга, обновите и повторно вручите уведомление об обработке данных и проверьте, нужно ли снова информировать представителей работников или консультироваться с ними, где этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее врученного уведомления недостаточно.",
+        el: "Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση απορρήτου και έλεγξε αν πρέπει να ενημερώσεις ή να συμβουλευτείς ξανά τους εκπροσώπους των εργαζομένων, εκεί όπου το προβλέπει ο νόμος. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και οι τρόποι: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.",
       },
     },
   ],
@@ -383,6 +402,7 @@ export const bielorussia: SchedaPaese = {
       nb: 'opptil ca. 200 grunnenheter (ca. 2.600 euro)',
       nl: 'tot ongeveer 200 basiseenheden (ongeveer 2.600 euro)',
       ru: "до примерно 200 базовых величин (около 2 600 евро)",
+      el: "έως περίπου 200 βασικές μονάδες (περίπου 2.600 ευρώ)",
     },
     casoCitato: {
       it: "Non risulta una decisione bielorussa specifica pubblicata sul GPS sui dipendenti, e la trasparenza sull'applicazione è limitata. Le sanzioni amministrative massime per violazioni sui dati arrivano a circa 200 unità base (circa 2.600 euro), ma questo tetto vale per la diffusione illecita; per la raccolta o conservazione illecita si arriva a 50 unità base (da 4 a 100 se commessa da chi conosce i dati per lavoro).",
@@ -396,6 +416,7 @@ export const bielorussia: SchedaPaese = {
       nb: 'Det er ikke offentliggjort noen konkret belarusisk avgjørelse om GPS på ansatte, og åpenheten om håndhevingen er begrenset. De høyeste administrative sanksjonene for brudd på personvernet når opp i ca. 200 grunnenheter (ca. 2.600 euro), men dette taket gjelder for ulovlig utbredelse; for ulovlig innsamling eller lagring er sanksjonen opptil 50 grunnenheter (fra 4 til 100, hvis den begås av en person som kjenner opplysningene gjennom jobben sin).',
       nl: "Er is geen specifieke, gepubliceerde Belarussische beslissing over GPS bij werknemers bekend, en de transparantie over de handhaving is beperkt. De maximale bestuurlijke sancties voor gegevensinbreuken bedragen ongeveer 200 basiseenheden (ongeveer 2.600 euro), maar dat plafond geldt voor onrechtmatige verspreiding; onrechtmatig verzamelen of bewaren wordt bestraft met maximaal 50 basiseenheden (4 tot 100 als de dader de gegevens via zijn werk kent).",
       ru: "Конкретного опубликованного белорусского решения по GPS-слежению за работниками нет, а прозрачность правоприменения ограничена. Максимальные административные санкции за нарушения в сфере данных достигают примерно 200 базовых величин (около 2 600 евро), но этот предел относится к незаконному распространению; за незаконный сбор или хранение предусмотрено до 50 базовых величин (от 4 до 100, если нарушение совершено лицом, которому данные известны по работе).",
+      el: "Δεν προκύπτει δημοσιευμένη ειδική απόφαση της Λευκορωσίας για το GPS στους εργαζομένους, και η διαφάνεια ως προς την εφαρμογή είναι περιορισμένη. Οι μέγιστες διοικητικές κυρώσεις για παραβάσεις σχετικά με τα δεδομένα φτάνουν περίπου τις 200 βασικές μονάδες (περίπου 2.600 ευρώ), αλλά το όριο αυτό ισχύει για την παράνομη διάδοση· για την παράνομη συλλογή ή τήρηση φτάνει τις 50 βασικές μονάδες (από 4 έως 100 αν τη διαπράττει όποιος γνωρίζει τα δεδομένα λόγω εργασίας).",
     },
     urlFonte: FONTE_SHVED.url,
     tipoImporto: 'massimale',

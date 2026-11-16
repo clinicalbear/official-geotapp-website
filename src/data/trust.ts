@@ -68,4 +68,9 @@ export const TRUST_COPY: Record<string, TrustCopy> = {
     { title: 'Stempling med GPS-posisjon', sub: 'Sted og tidspunkt registrert på stedet' },
     { title: 'Uavhengig verifisering', sub: 'Kunden sjekker, uten konto' },
   ], sectors: 'Rengjøring · Bygg · Sikkerhet · Installatører · Vedlikehold · Tekniske anlegg' },
+  el: { headline: 'Η απόδειξη της εργασίας στο πεδίο, επαληθεύσιμη από οποιονδήποτε', claims: [
+    { title: 'Κάθε μεταγενέστερη αλλαγή φαίνεται', sub: 'Κρυπτογραφική σφραγίδα σε κάθε αναφορά' },
+    { title: 'Πραγματικό χτύπημα κάρτας με GPS', sub: 'Θέση και ώρα καταγράφονται επιτόπου' },
+    { title: 'Ανεξάρτητη επαλήθευση', sub: 'Ο πελάτης ελέγχει, χωρίς λογαριασμό' },
+  ], sectors: 'Καθαρισμός · Κατασκευές · Ασφάλεια · Εγκαταστάτες · Συντήρηση · Εγκαταστάσεις' },
 };

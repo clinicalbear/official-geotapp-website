@@ -16,6 +16,7 @@ import ptDict from '@/dictionaries/pt.json';
 import daDict from '@/dictionaries/da.json';
 import svDict from '@/dictionaries/sv.json';
 import nbDict from '@/dictionaries/nb.json';
+import elDict from '@/dictionaries/el.json';
 import ruDict from '@/dictionaries/ru.json';
 import { DEFAULT_LOCALE, type AppLocale } from './config';
 
@@ -83,6 +84,7 @@ const DICTIONARIES: Record<AppLocale, SiteDictionary> = {
   da: withOverrides(daDict),
   sv: withOverrides(svDict),
   nb: withOverrides(nbDict),
+  el: withOverrides(elDict),
   ru: withOverrides(ruDict),
 };
 

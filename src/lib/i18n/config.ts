@@ -15,6 +15,7 @@ export const SUPPORTED_LOCALES = [
   'da',
   'sv',
   'nb',
+  'el',
   'ru',
 ] as const;
 
@@ -40,6 +41,21 @@ export const PUBLISHED_LOCALES: ReadonlyArray<AppLocale> = SUPPORTED_LOCALES.fil
   (l) => !isSuspendedLocale(l),
 );
 
+/**
+ * Lingue del sito che NON hanno articoli sul blog WordPress (nessun post, nessuna
+ * categoria, nessun cluster Polylang). Il sito in quella lingua esiste, il blog no:
+ * /{lingua}/blog/ mostra gli articoli inglesi (fallback di loadPosts) e per i motori
+ * di ricerca e' un doppione di /en/blog/, quindi canonical su /en/blog/ e nessun
+ * hreflang di quella lingua sulle pagine blog (ne' nella sitemap).
+ * Quando il blog avra' articoli in greco: togliere 'el' da qui e aggiungerlo a
+ * NON_DEFAULT_LOCALES in lib/blog-locale.ts.
+ */
+export const LOCALES_WITHOUT_BLOG: ReadonlyArray<AppLocale> = ['el'];
+
+export function hasBlogArticles(locale: string): boolean {
+  return !(LOCALES_WITHOUT_BLOG as readonly string[]).includes(locale);
+}
+
 export const DEFAULT_LOCALE: AppLocale = 'it';
 
 export const LOCALE_COOKIE_NAME = 'geotapp_locale';
@@ -60,6 +76,7 @@ export const LOCALE_LABELS: Record<AppLocale, string> = {
   da: '🇩🇰 Dansk',
   sv: '🇸🇪 Svenska',
   nb: '🇳🇴 Norsk',
+  el: '🇬🇷 Ελληνικά',
   ru: '🇷🇺 Русский',
 };
 
@@ -93,6 +110,8 @@ export const COUNTRY_TO_LOCALE: Partial<Record<string, AppLocale>> = {
   DK: 'da',
   SE: 'sv',
   NO: 'nb',
+  GR: 'el',
+  CY: 'el',
   // RU: 'ru' sospeso dall'11/11/2026 (vedi SUSPENDED_LOCALES): i visitatori dalla Russia ricadono sull'inglese.
 };
 

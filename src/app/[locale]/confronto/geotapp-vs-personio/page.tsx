@@ -24,6 +24,7 @@ const META: Record<string, { title: string; description: string }> = {
   da: { title: 'GeoTapp vs Personio - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Personio: to forskellige verdener. Personio styrer HR og løn; GeoTapp dokumenterer arbejdet i marken. Ofte komplementære.' },
   sv: { title: 'GeoTapp vs Personio - Jämförelse 2026 | GeoTapp', description: 'GeoTapp vs Personio: två olika världar. Personio sköter HR, frånvaro och lön; GeoTapp bevisar fältarbete med plats, tid, foton och förseglade rapporter. Ofta kompletterande.' },
   nb: { title: 'GeoTapp vs Personio - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Personio: to ulike verdener. Personio styrer HR og lønn; GeoTapp dokumenterer arbeidet ute i felt. Ofte utfyllende.' },
+  el: { title: 'GeoTapp vs Personio - Σύγκριση 2026 | GeoTapp', description: 'GeoTapp vs Personio: δύο διαφορετικοί κόσμοι. Το Personio διαχειρίζεται HR, απουσίες και μισθοδοσία του προσωπικού· το GeoTapp αποδεικνύει την εργασία στο πεδίο με τοποθεσία, ώρα, φωτογραφίες και σφραγισμένες αναφορές. Συχνά συμπληρωματικά.' },
   ru: { title: 'GeoTapp vs Personio - Сравнение 2026 | GeoTapp', description: 'GeoTapp vs Personio: два разных мира. Personio ведёт HR, отсутствия и зарплату; GeoTapp доказывает выездную работу местоположением, временем, фото и запечатанными отчётами. Часто дополняют друг друга.' },
 };
 
@@ -90,6 +91,12 @@ const FAQ: Record<string, FaqItem[]> = {
     { q: 'Erstatter GeoTapp Personio?', a: 'Nei, de utfyller ofte hverandre. Personio forblir HR-systemet for de ansatte; GeoTapp legger til det verifiserbare beviset for arbeidet ute i felt, med eksport av timene klar for lønn. Mange bedrifter bruker en personalsuite til kontoret og GeoTapp til de ansatte ute i felt.' },
     { q: 'Har Personio en gratisplan?', a: 'Personio selges bare etter tilbud og har ingen offentlig gratisplan. GeoTapp har en gratis prøveperiode og åpne planer, og det er modulbasert: du slår bare på funksjonene du trenger ute i felt.' },
   ],
+  el: [
+    { q: 'Ποια είναι η κύρια διαφορά ανάμεσα στο GeoTapp και στο Personio;', a: 'Το Personio είναι μια σουίτα HR: μητρώο εργαζομένων, απουσίες και άδειες, onboarding, μισθοδοσία. Το GeoTapp είναι σύστημα απόδειξης της εργασίας στο πεδίο: παράγει σφραγισμένες αναφορές με τοποθεσία, ώρα και φωτογραφίες, αποδείξεις που ο πελάτης μπορεί να ελέγξει. Το Personio διαχειρίζεται τους ανθρώπους του οργανισμού· το GeoTapp αποδεικνύει τι κάνει ο εργαζόμενος εκτός έδρας.' },
+    { q: 'Έχει το Personio καταγραφή παρουσιών;', a: 'Ναι, το Personio διαχειρίζεται παρουσίες και ώρες, σχεδιασμένες για το γραφείο και το HR. Δεν παράγει όμως την απόδειξη της παρέμβασης στο πεδίο: καμία τοποθεσία καταγεγραμμένη στο εργοτάξιο, σφραγισμένες αναφορές ή επαλήθευση από τον πελάτη. Για όποιον έχει ομάδες εκτός έδρας, αυτό το κομμάτι το καλύπτει το GeoTapp.' },
+    { q: 'Αντικαθιστά το GeoTapp το Personio;', a: 'Όχι, συχνά είναι συμπληρωματικά. Το Personio μένει το σύστημα HR του προσωπικού· το GeoTapp προσθέτει την επαληθεύσιμη απόδειξη της εργασίας που έγινε στο πεδίο, με εξαγωγή των ωρών έτοιμη για τη μισθοδοσία. Πολλές εταιρείες χρησιμοποιούν μια σουίτα προσωπικού για το γραφείο και το GeoTapp για τους εργαζομένους.' },
+    { q: 'Έχει το Personio δωρεάν πακέτο;', a: 'Το Personio είναι με προσφορά, χωρίς δημόσιο δωρεάν πακέτο. Το GeoTapp έχει δωρεάν δοκιμή και διαφανή πακέτα, και είναι αρθρωτό: ενεργοποιείς μόνο τις λειτουργίες που χρειάζεσαι για το πεδίο.' },
+  ],
   ru: [
     { q: 'В чём главное различие между GeoTapp и Personio?', a: 'Personio — это HR-система: карточки сотрудников, отсутствия и отпуска, онбординг, зарплата. GeoTapp — это система доказательства выездной работы: она формирует запечатанные отчёты с местоположением, временем и фото, доказательства, которые заказчик может проверить. Personio управляет людьми организации; GeoTapp доказывает, что сотрудник делает вне офиса.' },
     { q: 'Есть ли у Personio учёт присутствия?', a: 'Да, Personio ведёт присутствие и часы, для офиса и HR. Но она не даёт доказательства выездного задания: нет местоположения, проверенного при отметке, запечатанных отчётов или проверки заказчиком. Для компаний с выездными бригадами эту часть закрывает GeoTapp.' },
@@ -109,6 +116,7 @@ const ROWS_LABELS: Record<string, string[]> = {
   da: ['Position registreret og kontrolleret ved hver stempling','Kryptografisk forseglet rapport','Bevisfotos knyttet til GPS og tidsstempel','Uafhængig verificering af kunden','Timeregistrering','Mobilapp Android/iOS','Egen intern beskedfunktion','Eksport af fremmøde/løn','Gratis plan','Styring af opgaver på flere lokationer','Position registreres kun ved stempling, aldrig løbende','GPS-information underskrevet i appen, før man stempler*'],
   sv: ['Positionen registreras och kontrolleras vid varje instämpling','Kryptografiskt förseglad rapport','Bevisfoton kopplade till GPS och tidsstämpel','Oberoende verifiering av kunden','Tidrapportering','Mobilapp för Android/iOS','Inbyggd meddelandefunktion','Export av lön/närvaro','Gratisplan','Hantering av uppdrag på flera platser','Positionen registreras bara vid instämpling, aldrig löpande','GPS-information signerad i appen innan man stämplar in*'],
   nb: ['Posisjon registrert og kontrollert ved hver stempling','Kryptografisk forseglet rapport','Bevisbilder knyttet til GPS og tidsstempel','Uavhengig verifisering fra kunden','Timeregistrering','Mobilapp Android/iOS','Egen intern meldingsfunksjon','Eksport av oppmøte/lønn','Gratis plan','Styring av oppdrag på flere steder','Posisjon registreres bare ved stempling, aldri løpende','GPS-informasjon signert i appen før man stempler*'],
+  el: ['Τοποθεσία που καταγράφεται και ελέγχεται σε κάθε χτύπημα κάρτας','Κρυπτογραφικά σφραγισμένη αναφορά','Φωτογραφικές αποδείξεις συνδεδεμένες με GPS και timestamp','Ανεξάρτητη επαλήθευση από τον πελάτη','Παρακολούθηση ωρών','Εφαρμογή για κινητά Android/iOS','Ιδιόκτητη εσωτερική ανταλλαγή μηνυμάτων','Εξαγωγή παρουσιών/μισθοδοσίας','Δωρεάν πακέτο','Διαχείριση έργων σε πολλές τοποθεσίες','Τοποθεσία που καταγράφεται μόνο όταν χτυπάς κάρτα, ποτέ συνεχώς','Ενημέρωση GPS υπογεγραμμένη στην εφαρμογή πριν το χτύπημα κάρτας*'],
   ru: ['Местоположение фиксируется и проверяется при каждой отметке','Криптографически запечатанный отчёт','Фотодоказательства, привязанные к GPS и метке времени','Независимая проверка заказчиком','Учёт часов','Мобильное приложение Android/iOS','Встроенный обмен сообщениями','Экспорт присутствия/зарплат','Бесплатный тариф','Управление заданиями на нескольких объектах','Местоположение фиксируется только при отметке, никогда не отслеживается непрерывно','Уведомление о GPS, подписанное в приложении перед отметкой*'],
 };
 
@@ -128,6 +136,7 @@ const TABLE_TAKEAWAY: Record<string, string> = {
   da: 'Kort sagt: Personio styrer HR, fravær og løn; GeoTapp dokumenterer arbejdet i marken med position ved stempling, forseglet rapport og kundens egen verificering. De supplerer ofte hinanden.',
   sv: 'Kort sagt: Personio hanterar HR, frånvaro och lön; GeoTapp bevisar fältarbete med positionen vid instämpling, en förseglad rapport och kundens verifiering. De fungerar ofta sida vid sida.',
   nb: 'Kort sagt: Personio styrer HR, fravær og lønn; GeoTapp dokumenterer arbeidet ute i felt med posisjon ved stempling, forseglet rapport og kundens egen verifisering. De utfyller ofte hverandre.',
+  el: 'Με λίγα λόγια: το Personio διαχειρίζεται HR, απουσίες και μισθοδοσία του προσωπικού· το GeoTapp αποδεικνύει την εργασία που έγινε στο πεδίο με τοποθεσία στο χτύπημα κάρτας, σφραγισμένη αναφορά και επαλήθευση από τον πελάτη. Συχνά συνδυάζονται.',
   ru: 'Коротко: Personio ведёт HR, отсутствия и зарплату; GeoTapp доказывает выездную работу местоположением при отметке, запечатанными отчётами и проверкой заказчиком. Часто дополняют друг друга.',
 };
 
@@ -151,6 +160,7 @@ const FOOTNOTE: Record<string, string> = {
   da: '* Ifølge loven (GDPR art. 13 og, i Italien, art. 4 i arbejdstagerloven, Statuto dei Lavoratori) skal hver medarbejder informeres, før vedkommende geolokaliseres. Overlader softwaren dette trin til arbejdsgiveren, er risikoen stadig arbejdsgiverens. GeoTapp forbereder den personlige information, får den underskrevet i appen som bekræftelse på, at den er læst, og lader ikke medarbejderen stemple, før den er underskrevet.',
   sv: '* Enligt lag (artikel 13 i GDPR) måste varje anställd informeras innan hen geolokaliseras. Om programvaran överlåter det steget åt arbetsgivaren ligger risken kvar hos arbetsgivaren. GeoTapp tar fram den personliga informationen, låter den anställde signera den som läst i appen och släpper inte till instämpling förrän den är signerad.',
   nb: '* Ifølge loven (GDPR art. 13 og, i Italia, art. 4 i arbeidstakerloven, Statuto dei Lavoratori) må hver ansatt informeres før vedkommende geolokaliseres. Overlater programvaren dette trinnet til arbeidsgiveren, blir risikoen hos arbeidsgiveren. GeoTapp forbereder den personlige informasjonen, får den signert i appen som bekreftelse på at den er lest, og lar ikke den ansatte stemple før den er signert.',
+  el: '* Κατά τον νόμο (άρθρο 13 ΓΚΠΔ και, στην Ιταλία, άρθρο 4 του Statuto dei Lavoratori) κάθε εργαζόμενος πρέπει να ενημερωθεί πριν γεωεντοπιστεί. Αν το λογισμικό αφήνει αυτό το βήμα στον ιδιοκτήτη, ο κίνδυνος μένει σε εκείνον. Το GeoTapp ετοιμάζει την εξατομικευμένη ενημέρωση, την κάνει να υπογραφεί για λήψη γνώσης στην εφαρμογή και δεν αφήνει να χτυπήσει κάρτα μέχρι να υπογραφεί.',
   ru: '* По закону (ст. 13 GDPR и, в Италии, ст. 4 Статута трудящихся) каждый сотрудник должен быть проинформирован, прежде чем за ним начнут следить по GPS. Если программа оставляет этот шаг на усмотрение работодателя, риск остаётся на нём. GeoTapp готовит персональное уведомление, даёт сотруднику подписать его в приложении для подтверждения ознакомления и не позволяет отмечаться, пока оно не подписано.',
 };
 
@@ -318,6 +328,22 @@ const T: Record<string, Copy> = {
     cta: 'Vil du se forskjellen i praksis?',
     ctaDesc: 'Prøv det på et ekte oppdrag: 14 dager gratis, uten kredittkort.',
     ctaBtn: 'Start gratis prøveperiode',
+  },
+  el: {
+    badge: 'Σύγκριση λογισμικού', h1sub: 'διαχείριση προσωπικού ή απόδειξη της εργασίας στο πεδίο;',
+    desc: 'Το Personio διαχειρίζεται HR, άδειες και μισθοδοσία του προσωπικού. Το GeoTapp αποδεικνύει τι κάνει ο εργαζόμενος εκτός έδρας, με τοποθεσία, ώρα και φωτογραφίες. Δύο διαφορετικοί κόσμοι, συχνά συμπληρωματικοί.',
+    summary: 'Με λίγα λόγια:',
+    summaryText: 'Το Personio είναι μια εξαιρετική σουίτα HR για μητρώο, απουσίες και μισθοδοσία. Δεν είναι φτιαγμένο για να αποδεικνύει την παρέμβαση στο πεδίο: καμία τοποθεσία στο χτύπημα κάρτας, σφραγισμένες αναφορές ή επαλήθευση από τον πελάτη. Για όποιον έχει εργαζομένους εκτός έδρας, το GeoTapp καλύπτει ακριβώς αυτό το κομμάτι, και οι ώρες βγαίνουν έτοιμες για τη μισθοδοσία.',
+    footnote: FOOTNOTE.el,
+    features: 'Σύγκριση βασικών λειτουργιών', feat: 'Λειτουργία',
+    diff: 'Διαχείριση προσωπικού ή απόδειξη της εργασίας στο πεδίο',
+    geo: ['Τοποθεσία που διαβάζεται από το τηλέφωνο σε κάθε χτύπημα κάρτας, όχι εισαγωγή με το χέρι','Αναφορές σφραγισμένες με κρυπτογραφικό hash στο κλείσιμο της παρέμβασης','Φωτογραφικές αποδείξεις ενσωματωμένες με GPS και timestamp','Ο εντολέας επαληθεύει μόνος του ότι η αναφορά δεν έχει τροποποιηθεί','Σχεδιασμένο για εργαζομένους στο πεδίο, όχι για το τμήμα HR'],
+    comp: ['Πλήρης σουίτα HR: μητρώο, απουσίες, onboarding','Διαχείριση μισθοδοσίας και παρουσιών γραφείου','Εφαρμογή για κινητά self-service για τους εργαζομένους','Καμία σφραγισμένη απόδειξη της παρέμβασης στο πεδίο','Καμία τοποθεσία στο χτύπημα κάρτας, φωτογραφία απόδειξης ή επαλήθευση από τον πελάτη'],
+    useCasesTitle: 'Ποιοι θα έπρεπε να συνδυάσουν το GeoTapp με ένα HR όπως το Personio',
+    useCases: ['Εταιρείες καθαρισμού και facility management με απαιτητικούς πελάτες','Συντηρητές και εγκαταστάτες που πρέπει να τεκμηριώνουν τις τιμολογούμενες ώρες','Εταιρείες με HR στο γραφείο αλλά με επιχειρησιακές ομάδες στο πεδίο','Όσοι έχουν ήδη δεχτεί αμφισβητήσεις για παρεμβάσεις που δεν αναγνωρίστηκαν','Εταιρείες με περισσότερες ομάδες κατανεμημένες σε διαφορετικά εργοτάξια'],
+    cta: 'Θέλεις να δεις τη διαφορά στην πράξη;',
+    ctaDesc: 'Δοκίμασέ το σε μια πραγματική παρέμβαση: 14 ημέρες δωρεάν, χωρίς πιστωτική κάρτα.',
+    ctaBtn: 'Ξεκίνα τη δωρεάν δοκιμή',
   },
   ru: {
     badge: 'Сравнение ПО', h1sub: 'управлять персоналом или доказывать работу в поле?',

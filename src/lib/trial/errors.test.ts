@@ -40,7 +40,7 @@ describe('trialErrorForAnalytics (in GA4 va il codice, non il testo tradotto)', 
 
 describe('ogni codice tradotto ha la sua frase in TUTTE le lingue del sito', () => {
   const locales = ['it', 'en', 'en-gb', 'en-us', 'en-au', 'en-ca', 'en-ie',
-    'de', 'nl', 'fr', 'es', 'pt', 'da', 'sv', 'nb', 'ru'];
+    'de', 'nl', 'fr', 'es', 'pt', 'da', 'sv', 'nb', 'el', 'ru'];
   for (const locale of locales) {
     it(`${locale}: nessuna chiave mancante`, () => {
       const trial = (getDictionary(locale as any) as any).trial as Record<string, string>;

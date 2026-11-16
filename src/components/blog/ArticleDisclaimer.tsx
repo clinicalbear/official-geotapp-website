@@ -16,6 +16,7 @@ const DISCLAIMERS: Record<string, { label: string; text: string }> = {
   da: { label: 'Bemærk', text: "Denne artikel er kun til information og bygger på vores praktiske erfaring med SMV'er i marken. Den udgør ikke juridisk rådgivning: tjek altid din konkrete situation med en kvalificeret fagperson eller den relevante myndighed." },
   sv: { label: 'Obs', text: 'Den här artikeln är endast informativ och bygger på vår praktiska erfarenhet av små och medelstora företag i fält. Den utgör inte juridisk rådgivning: kontrollera alltid din specifika situation med en kvalificerad expert eller behörig myndighet.' },
   nb: { label: 'Merk', text: 'Denne artikkelen er kun til informasjon og bygger på vår praktiske erfaring med små og mellomstore bedrifter i felt. Den utgjør ikke juridisk rådgivning: sjekk alltid din konkrete situasjon med en kvalifisert fagperson eller relevant myndighet.' },
+  el: { label: 'Σημείωση', text: 'Αυτό το άρθρο έχει μόνο ενημερωτικό χαρακτήρα και βασίζεται στην πρακτική μας εμπειρία με μικρές και μεσαίες επιχειρήσεις στο πεδίο. Δεν αποτελεί νομική συμβουλή: έλεγξε πάντα τη δική σου περίπτωση με έναν ειδικό ή με την αρμόδια αρχή.' },
 };
 
 export default function ArticleDisclaimer({ locale = 'it' }: { locale?: string }) {

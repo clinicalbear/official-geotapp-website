@@ -30,6 +30,7 @@ export const PAROLE: Record<string, Record<StatoProva, string>> = {
   da: { registrato: 'Registreret', sigillato: 'Forseglet', 'verifica-fallita': 'Verifikation mislykkedes' },
   sv: { registrato: 'Registrerad', sigillato: 'Plomberad', 'verifica-fallita': 'Verifieringen misslyckades' },
   nb: { registrato: 'Registrert', sigillato: 'Forseglet', 'verifica-fallita': 'Verifiseringen mislyktes' },
+  el: { registrato: 'Καταγράφηκε', sigillato: 'Σφραγισμένο', 'verifica-fallita': 'Η επαλήθευση απέτυχε' },
   // 'опечатано' e non 'заверено': заверить in russo e' autenticare davanti al
   // notaio, e la scheda claim vieta la certificazione.
   ru: { registrato: 'Записано', sigillato: 'Опечатано', 'verifica-fallita': 'Проверка не пройдена' },

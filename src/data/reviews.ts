@@ -82,6 +82,7 @@ export const REVIEWS: Review[] = [
       da: { meta: 'Medicinsk salgsrepræsentant · Medicinsk udstyr · Selvstændig' },
       sv: { meta: 'Medicinteknisk säljare · Medicinteknik · Egenföretagare' },
       nb: { meta: 'Medisinsk salgsrepresentant · Medisinsk utstyr · Selvstendig næringsdrivende' },
+      el: { meta: 'Ιατρική επισκέπτρια · Ιατροτεχνολογικά προϊόντα · Αυτοαπασχολούμενη' },
       ru: { meta: 'Медицинский представитель · Медицинские изделия · Самозанятая' },
     },
     original: {
@@ -140,6 +141,11 @@ export const REVIEWS: Review[] = [
         quote:
           'En intuitiv og brukervennlig app. Alt legges inn ryddig og organisert. En verdifull støtte i organiseringen av det daglige arbeidet. Jeg anbefaler virkelig å prøve den, nyttig for å holde kontroll på alt.',
       },
+      el: {
+        title: 'Το GeoTapp Flow είναι κορυφαίο',
+        quote:
+          'Εφαρμογή διαισθητική και εύκολη στη χρήση. Όλα καταχωρούνται με τάξη και οργάνωση. Πολύτιμη βοήθεια στην οργάνωση της καθημερινής δουλειάς. Τη συνιστώ ανεπιφύλακτα, είναι χρήσιμη για να έχεις τα πάντα υπό έλεγχο.',
+      },
     },
   },
   {
@@ -165,6 +171,7 @@ export const REVIEWS: Review[] = [
       da: { name: 'Anmelder verificeret af Capterra', meta: 'Eventtjenester · 51-200 medarbejdere' },
       sv: { name: 'Recensent verifierad av Capterra', meta: 'Eventtjänster · 51–200 anställda' },
       nb: { name: 'Anmelder verifisert av Capterra', meta: 'Arrangementstjenester · 51–200 ansatte' },
+      el: { name: 'Αξιολόγηση επαληθευμένη από το Capterra', meta: 'Υπηρεσίες εκδηλώσεων · 51–200 εργαζόμενοι' },
       ru: { name: 'Рецензент, проверенный Capterra', meta: 'Организация мероприятий · 51–200 сотрудников' },
     },
     original: {
@@ -223,6 +230,11 @@ export const REVIEWS: Review[] = [
         quote:
           'Svært intuitiv, enkel og rask å bruke. Min favorittfunksjon er muligheten til å samle geografiske tidsstempler og utgiftsrapporter i ett miljø, noe som fjerner tidstap og misforståelser om data. Min erfaring med GeoTapp Flow er positiv for organisasjoner som ønsker å fjerne administrative flaskehalser og vil ha et transparent bilde av driften. Merverdien ligger ikke bare i kontrollen, men også i tilgjengeligheten av data, som muliggjør strategisk planlegging basert på tall i stedet for anslag.',
       },
+      el: {
+        title: 'Μια καλή εφαρμογή για καλή δουλειά',
+        quote:
+          'Πολύ διαισθητική, εύκολη και γρήγορη στη χρήση. Η αγαπημένη μου λειτουργία είναι η δυνατότητα να συγκεντρώνω σε ένα ενιαίο περιβάλλον τα χτυπήματα κάρτας με γεωγραφική θέση και τις αναφορές εξόδων, χωρίς χαμένο χρόνο και παρεξηγήσεις στα δεδομένα. Η εμπειρία μου με το GeoTapp Flow είναι θετική για οργανισμούς που θέλουν να εξαλείψουν τα διοικητικά σημεία συμφόρησης και θέλουν μια διαφανή εικόνα της λειτουργίας τους. Η προστιθέμενη αξία δεν βρίσκεται μόνο στον «έλεγχο» αλλά και στη διαθεσιμότητα των δεδομένων, που επιτρέπει στρατηγικό σχεδιασμό με βάση αριθμητικά στοιχεία αντί για εκτιμήσεις.',
+      },
     },
   },
   {
@@ -279,6 +291,10 @@ export const REVIEWS: Review[] = [
       nb: {
         title: 'En god app og lett å bruke',
         quote: 'En god app og lett å bruke.',
+      },
+      el: {
+        title: 'Είναι μια καλή εφαρμογή και εύκολη στη χρήση',
+        quote: 'Είναι μια καλή εφαρμογή και εύκολη στη χρήση.',
       },
     },
   },
@@ -347,6 +363,11 @@ export const REVIEWS: Review[] = [
         title: 'Geotapp er en praktisk app',
         quote:
           'Geotapp er en praktisk app, enkel å bruke og intuitiv. Den har alt jeg trenger. Sterkt anbefalt.',
+      },
+      el: {
+        title: 'Το Geotapp είναι μια πρακτική εφαρμογή',
+        quote:
+          'Το Geotapp είναι μια πρακτική εφαρμογή, απλή στη χρήση και διαισθητική. Έχει ό,τι χρειάζομαι. Τη συνιστώ ανεπιφύλακτα.',
       },
     },
   },

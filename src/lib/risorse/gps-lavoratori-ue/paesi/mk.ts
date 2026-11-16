@@ -55,6 +55,7 @@ export const macedoniaDelNord: SchedaPaese = {
     sv: 'Nordmakedonien',
     nb: 'Nord-Makedonia',
     ru: 'Северная Македония',
+    el: 'Βόρεια Μακεδονία',
   },
   bandiera: '🇲🇰',
   federale: false,
@@ -73,6 +74,7 @@ export const macedoniaDelNord: SchedaPaese = {
       sv: 'AZLP (Myndigheten för skydd av personuppgifter)',
       nb: 'AZLP (Byrå for beskyttelse av personopplysninger)',
       ru: 'AZLP (Агентство по защите персональных данных)',
+      el: 'AZLP (Υπηρεσία Προστασίας Δεδομένων Προσωπικού Χαρακτήρα)',
     },
     portale: FONTE_AZLP.url,
     urlFonte: FONTE_AZLP.url,
@@ -89,6 +91,7 @@ export const macedoniaDelNord: SchedaPaese = {
       nb: 'Nord-Makedonia er et kandidatland utenfor EU med en lov fra 2020 som er tilpasset GDPR. Det er én nasjonal myndighet, AZLP, uten regional oppdeling.',
       nl: 'Noord-Macedonie is een kandidaat-land buiten de EU, met een wet uit 2020 die is afgestemd op de AVG. Er is een enkele nationale autoriteit, de AZLP, zonder regionale onderverdeling.',
       ru: "Северная Македония является страной-кандидатом, не входит в ЕС, и её закон 2020 года согласован с GDPR. Единственный национальный орган: AZLP; регионального разделения нет.",
+      el: 'Η Βόρεια Μακεδονία είναι υπό ένταξη χώρα, εκτός ΕΕ, με νόμο του 2020 εναρμονισμένο με τον ΓΚΠΔ. Μία μόνο εθνική αρχή, η AZLP· δεν υπάρχει περιφερειακός διαχωρισμός.',
     },
   },
 
@@ -106,6 +109,7 @@ export const macedoniaDelNord: SchedaPaese = {
         nb: 'Obligatorisk informasjon til de ansatte og et rettslig grunnlag (LPDP 2020)',
         nl: 'Verplichte informatie aan werknemers en een rechtsgrond (LPDP 2020)',
         ru: "Обязательное информирование работников и правовое основание (LPDP 2020)",
+        el: 'Υποχρεωτική ενημέρωση των εργαζομένων και νομική βάση (LPDP 2020)',
       },
       risposta: 'si',
       dettaglio: {
@@ -120,6 +124,7 @@ export const macedoniaDelNord: SchedaPaese = {
         nb: 'Arbeidsgiveren må informere de ansatte om overvåkingen og støtte seg på et av de rettslige grunnlagene i art. 10; for videoovervåking krever loven uttrykkelig at de ansatte får beskjed.',
         nl: 'De werkgever moet de werknemers informeren over de monitoring en zich baseren op een van de rechtsgronden van art. 10; voor cameratoezicht verplicht de wet uitdrukkelijk om de werknemers op de hoogte te stellen.',
         ru: "Работодатель должен информировать работников о мониторинге и располагать правовым основанием из числа предусмотренных ст. 10; для видеонаблюдения закон прямо устанавливает обязанность уведомлять работников.",
+        el: 'Ο εργοδότης πρέπει να ενημερώσει τους εργαζομένους για την παρακολούθηση και να διαθέτει νομική βάση μεταξύ εκείνων του άρθρου 10· για τη βιντεοεπιτήρηση ο νόμος επιβάλλει ρητά την υποχρέωση ενημέρωσης των εργαζομένων.',
       },
       fonte: FONTE_LPDP,
     },
@@ -136,6 +141,7 @@ export const macedoniaDelNord: SchedaPaese = {
         nb: 'Forhåndstillatelse: ingen; underretning til AZLP bare ved høyrisikobehandling (art. 71)',
         nl: "Voorafgaande machtiging: geen; melding aan de AZLP alleen voor verwerkingen met een hoog risico (art. 71)",
         ru: "Предварительное разрешение: не требуется; уведомление AZLP только для обработки с высоким риском (ст. 71)",
+        el: 'Προηγούμενη άδεια: καμία· γνωστοποίηση στην AZLP μόνο για επεξεργασίες υψηλού κινδύνου (άρθρο 71)',
       },
       risposta: 'dipende',
       dettaglio: {
@@ -150,6 +156,7 @@ export const macedoniaDelNord: SchedaPaese = {
         nb: 'Det kreves ingen forhåndstillatelse. Det består likevel en plikt til å underrette AZLP (art. 71) hvis behandlingen med nye teknologier kan innebære en høy risiko for personers rettigheter; myndigheten fører et elektronisk register over slike registre. Sporing av ansattes posisjon står på AZLPs liste over høyrisikobehandlinger, så underretningen må vurderes fra sak til sak. Forhåndsdrøfting med myndigheten (art. 40) utløses bare hvis vurderingen av personvernkonsekvenser (DPIA) viser en høy restrisiko.',
         nl: "Een voorafgaande machtiging is niet nodig. Er blijft echter een meldingsplicht aan de AZLP (art. 71) wanneer een verwerking met nieuwe technologieën een hoog risico voor de rechten van personen kan inhouden; het Agentschap houdt een elektronisch register van zulke bestanden bij. Het volgen van de locatie van werknemers staat op de AZLP-lijst van verwerkingen met een hoog risico, dus de melding moet per geval worden beoordeeld. Voorafgaande raadpleging van het Agentschap (art. 40) is alleen aan de orde als de DPIA een hoog restrisico aantoont.",
         ru: "Предварительное разрешение не требуется. Однако сохраняется обязанность уведомить AZLP (ст. 71), когда обработка с использованием новых технологий может создавать высокий риск для прав лиц; Агентство ведёт электронный реестр таких баз. Отслеживание местоположения работников значится в перечне AZLP обработок с высоким риском, поэтому необходимость уведомления нужно оценивать в каждом случае. Предварительная консультация с Агентством (ст. 40) требуется только если DPIA выявляет высокий остаточный риск.",
+        el: 'Δεν απαιτείται καμία προηγούμενη άδεια. Παραμένει όμως υποχρέωση γνωστοποίησης στην AZLP (άρθρο 71) όταν, με χρήση νέων τεχνολογιών, μια επεξεργασία μπορεί να συνεπάγεται υψηλό κίνδυνο για τα δικαιώματα των προσώπων· η Υπηρεσία τηρεί ηλεκτρονικό μητρώο αυτών των αρχείων. Η παρακολούθηση θέσης των εργαζομένων περιλαμβάνεται στον κατάλογο της AZLP με τις επεξεργασίες υψηλού κινδύνου, επομένως η γνωστοποίηση πρέπει να αξιολογείται κατά περίπτωση. Η προηγούμενη διαβούλευση με την Υπηρεσία (άρθρο 40) ενεργοποιείται μόνο αν η DPIA αναδείξει υψηλό υπολειπόμενο κίνδυνο.',
       },
       fonte: FONTE_LPDP,
     },
@@ -166,6 +173,7 @@ export const macedoniaDelNord: SchedaPaese = {
         nb: 'Grunnlaget er berettiget interesse (art. 10), ikke samtykke',
         nl: 'Grondslag = gerechtvaardigd belang (art. 10), niet toestemming',
         ru: "Основание = законный интерес (ст. 10), а не согласие",
+        el: 'Βάση = έννομο συμφέρον (άρθρο 10), όχι συγκατάθεση',
       },
       risposta: 'si',
       dettaglio: {
@@ -180,6 +188,7 @@ export const macedoniaDelNord: SchedaPaese = {
         nb: 'Det vanlige grunnlaget er berettiget interesse med en avveining; samtykke i et arbeidsforhold er normalt ikke gyldig på grunn av ubalansen i maktforholdet.',
         nl: 'De gebruikelijke grondslag is het gerechtvaardigd belang, met een belangenafweging; toestemming in de arbeidsrelatie is doorgaans niet geldig vanwege de machtsongelijkheid.',
         ru: "Обычное основание: законный интерес с тестом баланса; согласие в трудовых отношениях, как правило, недействительно из-за неравенства сторон.",
+        el: 'Η συνήθης βάση είναι το έννομο συμφέρον, με έλεγχο στάθμισης· η συγκατάθεση στην εργασιακή σχέση κατά κανόνα δεν είναι έγκυρη λόγω της ανισορροπίας ισχύος.',
       },
       fonte: FONTE_LPDP,
     },
@@ -196,6 +205,7 @@ export const macedoniaDelNord: SchedaPaese = {
         nb: 'Bestemt formål, dataminimering og begrenset lagring; løpende sporing må begrunnes (art. 9)',
         nl: "Bepaald doel, minimale gegevensverwerking en beperkte bewaring; continue tracking moet worden gerechtvaardigd (art. 9)",
         ru: "Определённая цель, минимизация и ограниченный срок хранения; непрерывное отслеживание должно быть обосновано (ст. 9)",
+        el: 'Καθορισμένος σκοπός, ελαχιστοποίηση και περιορισμένη διατήρηση· η συνεχής παρακολούθηση θέσης πρέπει να δικαιολογείται (άρθρο 9)',
       },
       risposta: 'si',
       dettaglio: {
@@ -210,6 +220,7 @@ export const macedoniaDelNord: SchedaPaese = {
         nb: 'Art. 9 krever at opplysninger samles inn for uttrykkelige, bestemte og berettigede formål, er tilstrekkelige og begrenset til det som er nødvendig, og ikke lagres lenger enn nødvendig. Loven nevner ikke GPS: løpende posisjonssporing må derfor kunne begrunnes som nødvendig for det erklærte formålet, og vurderingen hører hjemme i vurderingen av personvernkonsekvenser (DPIA, art. 39).',
         nl: "Art. 9 eist gegevens die voor bepaalde, uitdrukkelijke en legitieme doeleinden zijn verzameld, passend en beperkt tot wat nodig is, en niet langer bewaard dan nodig. De wet vermeldt GPS niet: continue locatietracking moet dus als noodzakelijk voor het opgegeven doel te rechtvaardigen zijn, en de beoordeling ervan hoort in de DPIA (art. 39).",
         ru: "Ст. 9 требует, чтобы данные собирались для определённых, явных и законных целей, были адекватными и ограничивались необходимым, хранились не дольше необходимого срока. Закон о GPS не упоминает: поэтому непрерывное отслеживание местоположения должно быть обосновано как необходимое для заявленной цели, а его оценка входит в DPIA (ст. 39).",
+        el: 'Το άρθρο 9 απαιτεί δεδομένα που συλλέγονται για καθορισμένους, ρητούς και νόμιμους σκοπούς, επαρκή και περιορισμένα σε όσα είναι αναγκαία, που διατηρούνται όχι πέρα από τον απαραίτητο χρόνο. Ο νόμος δεν μιλά για GPS: η συνεχής παρακολούθηση θέσης πρέπει επομένως να μπορεί να δικαιολογηθεί ως αναγκαία για τον δηλωμένο σκοπό, και η αξιολόγησή της εντάσσεται στη DPIA (άρθρο 39).',
       },
       fonte: FONTE_LPDP,
     },
@@ -226,6 +237,7 @@ export const macedoniaDelNord: SchedaPaese = {
         nb: 'Vurdering av personvernkonsekvenser (DPIA) for sporing av ansattes posisjon og overvåking av arbeidet deres (AZLPs liste, art. 39)',
         nl: "Effectbeoordeling (DPIA) voor het volgen van de locatie en het controleren van werknemers (AZLP-lijst, art. 39)",
         ru: "Оценка воздействия (DPIA) при отслеживании местоположения и контроле работников (перечень AZLP, ст. 39)",
+        el: 'Εκτίμηση αντικτύπου (DPIA) για την παρακολούθηση θέσης και τον έλεγχο των εργαζομένων (κατάλογος AZLP, άρθρο 39)',
       },
       risposta: 'si',
       dettaglio: {
@@ -240,6 +252,7 @@ export const macedoniaDelNord: SchedaPaese = {
         nb: "AZLPs liste over behandlinger som krever en vurdering av personvernkonsekvenser, omfatter overvåking av en persons posisjon eller atferd ved systematisk behandling av kommunikasjonsmetadata (GSM, GPS, Wi-Fi og lignende) (punkt 10) og arbeidsgiverens behandling av de ansattes opplysninger med applikasjoner eller systemer som følger arbeidet, forflytningene og kommunikasjonen deres (punkt 12). Vurderingen må gjennomføres før behandlingen starter.",
         nl: "De AZLP-lijst van verwerkingen die een effectbeoordeling vereisen omvat het monitoren van de locatie of het gedrag van een persoon bij systematische verwerking van communicatiemetadata (GSM, GPS, wifi en dergelijke) (punt 10) en de verwerking van werknemersgegevens door de werkgever met toepassingen of systemen die hun werk, verplaatsingen en communicatie volgen (punt 12). De DPIA moet vóór de start van de verwerking worden uitgevoerd.",
         ru: "Перечень AZLP обработок, требующих оценки воздействия, включает мониторинг местоположения или поведения лица при систематической обработке метаданных коммуникаций (GSM, GPS, Wi-Fi и подобные) (пункт 10) и обработку данных работников работодателем с помощью приложений или систем, отслеживающих их работу, перемещения и коммуникации (пункт 12). DPIA проводят до начала обработки.",
+        el: 'Ο κατάλογος της AZLP με τις επεξεργασίες που απαιτούν εκτίμηση αντικτύπου περιλαμβάνει την παρακολούθηση της θέσης ή της συμπεριφοράς ενός προσώπου στην περίπτωση συστηματικής επεξεργασίας μεταδεδομένων επικοινωνίας (GSM, GPS, Wi-Fi και παρόμοια) (σημείο 10) και την επεξεργασία δεδομένων των εργαζομένων από τον εργοδότη με εφαρμογές ή συστήματα που παρακολουθούν την εργασία, τις μετακινήσεις και τις επικοινωνίες τους (σημείο 12). Η DPIA γίνεται πριν ξεκινήσει η επεξεργασία.',
       },
       fonte: FONTE_AZLP_DPIA,
     },
@@ -260,6 +273,7 @@ export const macedoniaDelNord: SchedaPaese = {
         nb: 'Finn et gyldig rettslig grunnlag (berettiget interesse, art. 10) med en avveining.',
         nl: 'Bepaal een geldige rechtsgrond (gerechtvaardigd belang, art. 10) met een belangenafweging.',
         ru: "Определите действительное правовое основание (законный интерес, ст. 10) с тестом баланса.",
+        el: 'Βρες μια έγκυρη νομική βάση (έννομο συμφέρον, άρθρο 10) με έλεγχο στάθμισης.',
       },
     },
     {
@@ -276,6 +290,7 @@ export const macedoniaDelNord: SchedaPaese = {
         nb: 'Informer de ansatte om overvåkingen.',
         nl: 'Informeer de werknemers over de monitoring.',
         ru: "Информируйте работников о мониторинге.",
+        el: 'Ενημέρωσε τους εργαζομένους για την παρακολούθηση.',
       },
     },
     {
@@ -292,6 +307,7 @@ export const macedoniaDelNord: SchedaPaese = {
         nb: 'Gjennomfør vurderingen av personvernkonsekvenser (DPIA) for GPS-sporing av ansatte.',
         nl: 'Voer de effectbeoordeling (DPIA) uit voor de GPS-tracking van werknemers.',
         ru: "Проведите оценку воздействия (DPIA) для GPS-отслеживания работников.",
+        el: 'Κάνε την εκτίμηση αντικτύπου (DPIA) για την παρακολούθηση GPS των εργαζομένων.',
       },
     },
     {
@@ -308,6 +324,7 @@ export const macedoniaDelNord: SchedaPaese = {
         nb: 'Begrens behandlingen til det som er nødvendig: ingen løpende sporing.',
         nl: 'Beperk de verwerking tot wat noodzakelijk is: geen continue tracking.',
         ru: "Ограничьте обработку необходимым: никакого непрерывного отслеживания.",
+        el: 'Περιόρισε την επεξεργασία στο αναγκαίο: καμία συνεχής παρακολούθηση θέσης.',
       },
     },
     {
@@ -324,6 +341,7 @@ export const macedoniaDelNord: SchedaPaese = {
         nb: 'Sett opp systemet i samsvar med dataminimering og formålsbegrensning.',
         nl: 'Configureer het systeem met inachtneming van gegevensminimalisatie en doelbinding.',
         ru: "Настройте систему с соблюдением минимизации и ограничения цели.",
+        el: 'Ρύθμισε το σύστημα με σεβασμό στην ελαχιστοποίηση και στον περιορισμό του σκοπού.',
       },
     },
     {
@@ -340,6 +358,7 @@ export const macedoniaDelNord: SchedaPaese = {
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og dele ut personverninformasjonen på nytt og vurdere om du på nytt må informere eller høre de ansattes representanter, der loven krever det. Ofte endrer leverandøren (databehandleren), de innsamlede opplysningene og metodene seg: informasjonen som ble delt ut tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "При смене системы или программного обеспечения для мониторинга обновите и повторно вручите уведомление и проверьте, нужно ли снова информировать представителей работников или консультироваться с ними, если это предусмотрено законом. Часто меняются поставщик (обработчик), собираемые данные и способы: ранее вручённого уведомления недостаточно.",
+        el: 'Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση, και έλεγξε αν πρέπει να ενημερώσεις ή να συμβουλευτείς ξανά τους εκπροσώπους των εργαζομένων, όπου το προβλέπει ο νόμος. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και ο τρόπος λειτουργίας: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.',
       },
     },
   ],
@@ -368,6 +387,7 @@ export const macedoniaDelNord: SchedaPaese = {
       nb: 'opptil 4 % av den årlige omsetningen',
       nl: 'tot 4% van de jaaromzet',
       ru: "до 4% годового оборота",
+      el: 'έως 4% του ετήσιου κύκλου εργασιών',
     },
     casoCitato: {
       it: "Non risulta una multa dell'AZLP specifica pubblicata per il GPS sui dipendenti. Il massimale è quello dell'art. 111 (violazione dei principi, della liceità, dell'informazione): fino al 4% del fatturato annuo complessivo della persona giuridica; per le violazioni sulla videosorveglianza l'art. 112 prevede da 1.000 a 10.000 euro. La lista AZLP classifica il tracciamento della posizione dei lavoratori come trattamento che richiede una valutazione d'impatto.",
@@ -381,6 +401,7 @@ export const macedoniaDelNord: SchedaPaese = {
       nb: 'Det finnes ingen spesifikk, offentliggjort bot fra AZLP for GPS på ansatte. Taket er det som står i art. 111 (brudd på prinsippene, på lovligheten og på opplysningsplikten): opptil 4 % av den juridiske enhetens samlede årlige omsetning; ved brudd på reglene om videoovervåking fastsetter art. 112 1 000 til 10 000 euro. AZLPs liste klassifiserer posisjonssporing av ansatte som behandling som krever en vurdering av personvernkonsekvenser.',
       nl: 'Er is geen specifieke, gepubliceerde boete van de AZLP bekend voor GPS op werknemers. Het maximum is dat van art. 111 (schending van de beginselen, de rechtmatigheid, de informatie): tot 4 % van de totale jaaromzet van de rechtspersoon; voor schendingen bij camerabewaking voorziet art. 112 in 1.000 tot 10.000 euro. De AZLP-lijst classificeert het volgen van de locatie van werknemers als verwerking die een effectbeoordeling vereist.',
       ru: "Опубликованного штрафа AZLP конкретно за GPS на работниках не обнаружено. Максимум определяется ст. 111 (нарушение принципов, законности, информирования): до 4% совокупного годового оборота юридического лица; за нарушения в области видеонаблюдения ст. 112 предусматривает от 1.000 до 10.000 евро. Перечень AZLP относит отслеживание местоположения работников к обработке, требующей оценки воздействия.",
+      el: 'Δεν προκύπτει δημοσιευμένο πρόστιμο της AZLP ειδικά για το GPS στους εργαζομένους. Το ανώτατο όριο είναι εκείνο του άρθρου 111 (παραβίαση των αρχών, της νομιμότητας, της ενημέρωσης): έως 4% του συνολικού ετήσιου κύκλου εργασιών του νομικού προσώπου· για τις παραβάσεις σχετικά με τη βιντεοεπιτήρηση το άρθρο 112 προβλέπει από 1.000 έως 10.000 ευρώ. Ο κατάλογος της AZLP κατατάσσει την παρακολούθηση θέσης των εργαζομένων στις επεξεργασίες που απαιτούν εκτίμηση αντικτύπου.',
     },
     urlFonte: FONTE_LPDP.url,
     tipoImporto: 'massimale',

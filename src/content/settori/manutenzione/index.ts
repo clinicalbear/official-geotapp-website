@@ -20,6 +20,7 @@ const map: Partial<Record<AppLocale, () => Promise<{ default: SettoreContent }>>
   da: () => import('./da'),
   sv: () => import('./sv'),
   nb: () => import('./nb'),
+  el: () => import('./el'),
   ru: () => import('./ru'),
 };
 

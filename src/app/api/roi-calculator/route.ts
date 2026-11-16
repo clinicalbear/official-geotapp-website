@@ -51,7 +51,7 @@ const LANG_GROUPS: Record<string, string> = {
 // il suffix. Per 'en' generico ritorniamo '' (multiplo, no default).
 const LANG_TO_DEFAULT_COUNTRY: Record<string, string> = {
   it: 'IT', de: 'DE', fr: 'FR', es: 'ES', pt: 'PT', nl: 'NL',
-  da: 'DK', sv: 'SE', nb: 'NO', ru: 'RU',
+  da: 'DK', sv: 'SE', nb: 'NO', el: 'GR', ru: 'RU',
 };
 
 function deriveCountry(locale: string): string {

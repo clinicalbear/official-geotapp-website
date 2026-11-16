@@ -81,6 +81,7 @@ export const portogallo: SchedaPaese = {
     sv: 'Portugal',
     nb: 'Portugal',
     ru: 'Португалия',
+    el: 'Πορτογαλία',
   },
   bandiera: '🇵🇹',
   federale: false,
@@ -103,6 +104,7 @@ export const portogallo: SchedaPaese = {
       nb: 'Portugal har én nasjonal myndighet, CNPD; ingen regional inndeling.',
       nl: 'Portugal heeft een enkele nationale autoriteit, de CNPD; er is geen regionale onderverdeling.',
       ru: "В Португалии действует единый национальный орган, CNPD; региональное деление отсутствует.",
+      el: 'Η Πορτογαλία έχει μία μόνο εθνική αρχή, την CNPD· δεν υπάρχει περιφερειακός διαχωρισμός.',
     },
   },
 
@@ -120,6 +122,7 @@ export const portogallo: SchedaPaese = {
         nb: 'Informasjon til de ansatte om at overvåking finnes og formålet med den (art. 20 Código do Trabalho)',
         nl: 'Informatie aan werknemers over het bestaan en het doel van het toezicht (art. 20 Código do Trabalho)',
         ru: "Информирование работников о существовании и целях наблюдения (ст. 20 Código do Trabalho)",
+        el: 'Ενημέρωση των εργαζομένων για την ύπαρξη και τον σκοπό της επιτήρησης (άρθρο 20 Código do Trabalho)',
       },
       risposta: 'si',
       dettaglio: {
@@ -134,6 +137,7 @@ export const portogallo: SchedaPaese = {
         nb: 'Arbeidsgiveren skal informere de ansatte om at overvåkingsmidler brukes og om formålet med dem.',
         nl: 'De werkgever moet werknemers informeren over het bestaan en het doel van de gebruikte toezichtmiddelen.',
         ru: "Работодатель обязан информировать работников о существовании и цели используемых средств наблюдения.",
+        el: 'Ο εργοδότης πρέπει να ενημερώνει τους εργαζομένους για την ύπαρξη και τον σκοπό των μέσων επιτήρησης που χρησιμοποιεί.',
       },
       fonte: FONTE_CT_20,
     },
@@ -150,6 +154,7 @@ export const portogallo: SchedaPaese = {
         nb: 'Forbud mot å bruke fjernovervåking til å kontrollere den ansattes prestasjoner (art. 20 CT)',
         nl: 'Verbod om toezicht op afstand te gebruiken om de prestaties van de werknemer te controleren (art. 20 CT)',
         ru: "Запрет использовать дистанционное наблюдение для контроля результативности работника (ст. 20 CT)",
+        el: 'Απαγόρευση χρήσης της εξ αποστάσεως επιτήρησης για τον έλεγχο της απόδοσης του εργαζομένου (άρθρο 20 CT)',
       },
       risposta: 'si',
       dettaglio: {
@@ -164,6 +169,7 @@ export const portogallo: SchedaPaese = {
         nb: 'Fjernovervåking kan ikke brukes til å kontrollere den faglige prestasjonen; den er bare tillatt for vern og sikkerhet for personer og eiendom eller for virksomhetens særskilte behov. Opplysninger registrert med teknologiske midler for fjernovervåking (art. 20 CT) kan bare brukes i straffesaker og, for disiplinæransvar, bare i den grad de kan brukes i straffesaker (Lei 58/2019, art. 28, nr. 4 og 5). CNPD har ikke satt til side disse to leddene: av bestemmelsen har den bare satt til side nr. 3, bokstav a (Deliberação 2019/494).',
         nl: 'Toezicht op afstand mag niet dienen om de professionele prestaties te controleren; het is alleen toegestaan voor de bescherming en veiligheid van personen en goederen of voor bijzondere behoeften van de activiteit. Gegevens die met technologische middelen voor toezicht op afstand zijn vastgelegd (art. 20 CT) mogen alleen in de strafprocedure worden gebruikt en, voor tuchtrechtelijke aansprakelijkheid, alleen voor zover ze in de strafprocedure worden gebruikt (wet 58/2019, art. 28, nrs. 4 en 5). De CNPD heeft deze twee leden niet buiten toepassing gelaten: van dat artikel liet zij alleen nr. 3, onder a, buiten toepassing (besluit 2019/494).',
         ru: "Дистанционное наблюдение не может служить контролю профессиональной деятельности: оно допускается только для защиты и безопасности людей и имущества или по особым потребностям деятельности. Данные, записанные с помощью технологических средств дистанционного наблюдения (ст. 20 CT), могут использоваться только в уголовном процессе, а для дисциплинарной ответственности только в той мере, в какой они используются в уголовном процессе (Lei 58/2019, ст. 28, п. 4 и 5). CNPD не отказалась применять эти два пункта: из этой статьи она не применяет только п. 3, подп. a (Deliberação 2019/494).",
+        el: 'Η εξ αποστάσεως επιτήρηση δεν μπορεί να χρησιμεύει στον έλεγχο της επαγγελματικής απόδοσης· επιτρέπεται μόνο για την προστασία και ασφάλεια προσώπων και αγαθών ή για ιδιαίτερες ανάγκες της δραστηριότητας. Τα δεδομένα που καταγράφονται με τεχνολογικά μέσα εξ αποστάσεως επιτήρησης (άρθρο 20 CT) μπορούν να χρησιμοποιηθούν μόνο στην ποινική διαδικασία και, για την πειθαρχική ευθύνη, μόνο στον βαθμό που χρησιμοποιούνται στην ποινική διαδικασία (Lei 58/2019, άρθρο 28, αρ. 4 και 5). Η CNPD δεν έθεσε εκτός εφαρμογής αυτές τις δύο παραγράφους: της διάταξης έθεσε εκτός εφαρμογής μόνο την αρ. 3, στοιχ. α (Deliberação 2019/494).',
       },
       fonte: FONTE_CT_20,
       fonteAggiuntiva: [FONTE_LEI_58_28, FONTE_CNPD_494],
@@ -181,6 +187,7 @@ export const portogallo: SchedaPaese = {
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit voor de installatie',
         ru: "Предварительное разрешение органа до установки",
+        el: 'Προηγούμενη άδεια αρχής πριν από την εγκατάσταση',
       },
       risposta: 'no',
       dettaglio: {
@@ -195,6 +202,7 @@ export const portogallo: SchedaPaese = {
         nb: 'Med GDPR har den gamle forhåndstillatelsen fra CNPD falt bort: ifølge CNPD gjelder i arbeidslivet fortsatt vilkårene i arbeidsloven (Código do Trabalho), unntatt kravet om å søke CNPD om tillatelse, som er uforenlig med GDPR. En etterfølgende kontroll består. Merk: art. 21 CT er ikke uttrykkelig opphevet og juridisk teori er delt, men i praksis kreves det ikke lenger forhåndstillatelse.',
         nl: 'Met de AVG is de oude voorafgaande toestemming van de CNPD vervallen: volgens de CNPD blijven in de arbeidscontext de voorwaarden van het Arbeidswetboek gelden, behalve de verplichting om de CNPD om toestemming te vragen, die onverenigbaar is met de AVG. Een controle achteraf blijft bestaan. Opmerking: art. 21 CT is niet uitdrukkelijk ingetrokken en de rechtsleer is verdeeld, maar in de praktijk wordt voorafgaande toestemming niet langer vereist.',
         ru: "С введением GDPR прежнее предварительное разрешение CNPD утратило силу: по позиции CNPD, в трудовой сфере остаются в силе условия Трудового кодекса, кроме требования обращаться за разрешением в CNPD, которое несовместимо с GDPR. Остаётся последующий контроль. Примечание: ст. 21 CT прямо не отменена, и в доктрине нет единого мнения, но на практике предварительного разрешения больше не требуют.",
+        el: 'Με τον ΓΚΠΔ έπαψε να ισχύει η παλιά προηγούμενη άδεια της CNPD: για την CNPD, στο εργασιακό πλαίσιο παραμένουν σε ισχύ οι προϋποθέσεις του Κώδικα Εργασίας, εκτός από το αίτημα άδειας προς την CNPD, που είναι ασυμβίβαστο με τον ΓΚΠΔ. Παραμένει έλεγχος εκ των υστέρων. Σημείωση: το άρθρο 21 CT δεν καταργήθηκε ρητά και η θεωρία διίσταται, αλλά στην πράξη η προηγούμενη άδεια δεν ζητείται πλέον.',
       },
       fonte: FONTE_CNPD_VIDEOVIGILANCIA,
     },
@@ -211,6 +219,7 @@ export const portogallo: SchedaPaese = {
         nb: 'Forholdsmessig geolokalisering, begrenset til arbeidstiden, med privat modus utenfor arbeidstid',
         nl: 'Evenredige geolocatie, beperkt tot de werktijd, met een prive-modus buiten de werktijd',
         ru: "Соразмерная геолокация, ограниченная рабочим временем, с частным режимом вне рабочего времени",
+        el: 'Αναλογικός γεωγραφικός εντοπισμός, περιορισμένος στο ωράριο εργασίας, με ιδιωτική λειτουργία εκτός ωραρίου',
       },
       risposta: 'si',
       dettaglio: {
@@ -225,6 +234,7 @@ export const portogallo: SchedaPaese = {
         nb: 'Ifølge CNPD (Deliberação 7680/2014, som er eldre enn GDPR og fortsatt publisert på nettstedet deres) kan geolokalisering ikke brukes til å spore den ansatte eller kontrollere vedkommendes prestasjoner (art. 20 CT), kan ikke omfatte pauser og hvile, og i kjøretøy som også kan brukes privat må den ansatte kunne skifte til «privat modus» utenfor arbeidstid. Den ansattes samtykke er ikke et gyldig grunnlag. For mobiltelefoner og bærbare enheter er vedtaket enda tydeligere: det tillater ikke at arbeidsgiveren overvåker geolokaliseringen deres eller installerer apper som aktiverer GPS (punkt 85). I punkt 152 krever vedtaket fortsatt forhåndstillatelse fra CNPD, som etter GDPR ikke lenger kreves.',
         nl: 'Volgens de CNPD (Deliberatie 7680/2014, van vóór de AVG en nog steeds op haar website gepubliceerd) mag geolocatie niet dienen om de werknemer op te sporen of zijn prestaties te controleren (art. 20 CT), mag zij zich niet uitstrekken tot pauzes en rusttijden, en moet de werknemer bij voertuigen die ook privé mogen worden gebruikt buiten werktijd kunnen overschakelen naar een «privémodus». De toestemming van de werknemer is geen geldige rechtsgrond. Voor mobiele telefoons en laptops is de deliberatie nog strenger: zij staat niet toe dat de werkgever hun geolocatie volgt of apps installeert die de GPS-sensoren activeren (punt 85). In punt 152 vraagt de deliberatie nog om voorafgaande toestemming van de CNPD, die sinds de AVG niet meer wordt gevraagd.',
         ru: "По позиции CNPD (Deliberação 7680/2014, принято до GDPR и по-прежнему опубликовано на её сайте), геолокация не может служить определению местонахождения работника или контролю его результативности (ст. 20 CT), не может распространяться на перерывы и отдых, а на автомобилях, которые могут использоваться и в личных целях, работник должен иметь возможность переключиться на «частный режим» вне рабочего времени. Согласие работника не является действительным основанием. Для мобильных телефонов и ноутбуков решение ещё категоричнее: оно не допускает, чтобы работодатель отслеживал их геолокацию или устанавливал приложения, включающие GPS (п. 85). В п. 152 решение всё ещё требует предварительного разрешения CNPD, которое после GDPR больше не запрашивается.",
+        el: 'Για την CNPD (Απόφαση 7680/2014, προγενέστερη του ΓΚΠΔ και ακόμη δημοσιευμένη στον ιστότοπό της) ο γεωγραφικός εντοπισμός δεν μπορεί να χρησιμεύει για τον εντοπισμό του εργαζομένου ούτε για τον έλεγχο της απόδοσής του (άρθρο 20 CT), δεν μπορεί να επεκτείνεται σε διαλείμματα και ανάπαυση, και στα οχήματα που μπορούν να χρησιμοποιηθούν και για ιδιωτικούς σκοπούς ο εργαζόμενος πρέπει να μπορεί να περνά σε «ιδιωτική λειτουργία» εκτός ωραρίου. Η συγκατάθεση του εργαζομένου δεν είναι έγκυρη βάση. Για τα κινητά τηλέφωνα και τους φορητούς υπολογιστές η απόφαση είναι ακόμη πιο κατηγορηματική: δεν επιτρέπει στον εργοδότη να παρακολουθεί τον γεωγραφικό εντοπισμό τους ούτε να εγκαθιστά εφαρμογές που ενεργοποιούν το GPS (σημείο 85). Στο σημείο 152 η απόφαση ζητά ακόμη προηγούμενη άδεια από την CNPD, η οποία μετά τον ΓΚΠΔ δεν ζητείται πλέον.',
       },
       fonte: FONTE_CNPD_7680,
     },
@@ -241,6 +251,7 @@ export const portogallo: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (AIPD) ved sporing av de ansattes posisjon',
         nl: 'Effectbeoordeling (DPIA) voor het volgen van de locatie van werknemers',
         ru: "Оценка воздействия (AIPD) при отслеживании местоположения работников",
+        el: 'Εκτίμηση αντικτύπου (AIPD) για την παρακολούθηση της θέσης των εργαζομένων',
       },
       risposta: 'dipende',
       dettaglio: {
@@ -255,6 +266,7 @@ export const portogallo: SchedaPaese = {
         nb: 'CNPDs liste krever en personvernkonsekvensvurdering for behandlinger som gjør det mulig å spore de ansattes posisjon eller atferd med virkning av vurdering eller klassifisering (CNPD-forskrift nr. 798/2018, punkt 5), med mindre behandlingen er nødvendig for en tjeneste som den registrerte spesifikt har bedt om. Et system som ikke har noen virkning av vurdering eller klassifisering, kan falle utenfor: i så fall må risikoen vurderes fra sak til sak (art. 35 GDPR).',
         nl: 'De CNPD-lijst vereist een effectbeoordeling voor verwerkingen die het mogelijk maken de locatie of het gedrag van werknemers te volgen met een evaluatie- of classificatie-effect (CNPD-reglement nr. 798/2018, punt 5), tenzij de verwerking onmisbaar is voor een door de betrokkene specifiek gevraagde dienst. Een systeem zonder evaluatie- of classificatie-effect kan daarbuiten vallen: dan moet het risico per geval worden beoordeeld (artikel 35 AVG).',
         ru: "Перечень CNPD требует оценки воздействия для операций обработки, позволяющих отслеживать местоположение или поведение работников с эффектом оценки или классификации (Регламент CNPD № 798/2018, п. 5), если только обработка не необходима для услуги, специально запрошенной самим субъектом данных. Система, не производящая никакого эффекта оценки или классификации, может под это не подпадать: в таком случае риск оценивается в каждом конкретном случае (ст. 35 GDPR).",
+        el: 'Ο κατάλογος της CNPD απαιτεί εκτίμηση αντικτύπου για τις επεξεργασίες που επιτρέπουν την παρακολούθηση της θέσης ή της συμπεριφοράς των εργαζομένων με αποτέλεσμα αξιολόγησης ή κατάταξης (Κανονισμός CNPD αρ. 798/2018, σημείο 5), εκτός αν η επεξεργασία είναι απαραίτητη για υπηρεσία που ζητήθηκε ειδικά από το υποκείμενο. Ένα σύστημα που δεν παράγει κανένα αποτέλεσμα αξιολόγησης ή κατάταξης μπορεί να μην εμπίπτει: σε αυτή την περίπτωση ο κίνδυνος αξιολογείται κατά περίπτωση (άρθρο 35 ΓΚΠΔ).',
       },
       fonte: FONTE_CNPD_REG_798,
     },
@@ -271,6 +283,7 @@ export const portogallo: SchedaPaese = {
         nb: 'Uttalelse fra de ansattes utvalg, hvis et slikt finnes',
         nl: 'Advies van de ondernemingsraad, indien aanwezig',
         ru: "Заключение комиссии работников, если она существует",
+        el: 'Γνώμη της επιτροπής εργαζομένων, αν υπάρχει',
       },
       risposta: 'dipende',
       dettaglio: {
@@ -285,6 +298,7 @@ export const portogallo: SchedaPaese = {
         nb: 'Art. 21 nr. 4 i arbeidsloven (Código do Trabalho) bestemmer at søknaden om tillatelse hos CNPD skal ledsages av uttalelse fra de ansattes utvalg (eller av bevis for at den er bedt om, hvis den ikke kommer inn innen 10 dager). Siden tillatelse ifølge CNPD ikke lenger skal søkes, er uttalelsen ikke lenger et sikkert formelt trinn; der det finnes et utvalg for de ansatte, er det likevel lurt å rådføre seg med det.',
         nl: 'Art. 21, lid 4, van het Arbeidswetboek bepaalt dat de aanvraag voor toestemming van de CNPD vergezeld moet gaan van het advies van de ondernemingsraad (of het bewijs dat het is gevraagd, als het niet binnen 10 dagen aankomt). Omdat volgens de CNPD geen toestemming meer wordt gevraagd, is het advies geen zekere formele stap meer; waar een ondernemingsraad bestaat, is raadpleging niettemin raadzaam.',
         ru: "Ст. 21, п. 4, Трудового кодекса предусматривает, что к заявлению о разрешении в CNPD прилагается заключение комиссии работников (или доказательство того, что оно запрошено, если не поступило в течение 10 дней). Поскольку по позиции CNPD разрешение больше не запрашивается, заключение перестало быть определённым формальным этапом; там, где комиссия работников существует, консультироваться с ней всё же целесообразно.",
+        el: 'Το άρθρο 21 αρ. 4 του Κώδικα Εργασίας προβλέπει ότι το αίτημα άδειας προς την CNPD συνοδεύεται από τη γνώμη της επιτροπής εργαζομένων (ή από απόδειξη ότι ζητήθηκε, αν δεν φτάσει εντός 10 ημερών). Επειδή για την CNPD η άδεια δεν ζητείται πλέον, η γνώμη δεν είναι πια βέβαιο τυπικό βήμα· όπου υπάρχει επιτροπή εργαζομένων, συμφέρει πάντως να τη συμβουλευτείς.',
       },
       fonte: FONTE_CT_20,
     },
@@ -305,6 +319,7 @@ export const portogallo: SchedaPaese = {
         nb: 'Informer de ansatte om at overvåking finnes og om formålet med den (art. 20 CT).',
         nl: 'Informeer de werknemers over het bestaan en het doel van het toezicht (art. 20 CT).',
         ru: "Проинформируйте работников о существовании и цели наблюдения (ст. 20 CT).",
+        el: 'Ενημέρωσε τους εργαζομένους για την ύπαρξη και τον σκοπό της επιτήρησης (άρθρο 20 CT).',
       },
     },
     {
@@ -321,6 +336,7 @@ export const portogallo: SchedaPaese = {
         nb: 'Kontroller formålet: bare tillatt for sikkerhet for personer/eiendom eller virksomhetens særskilte behov, aldri for å kontrollere prestasjoner.',
         nl: 'Controleer het doel: alleen toegestaan voor de veiligheid van personen/goederen of bijzondere behoeften van de activiteit, nooit om de prestaties te controleren.',
         ru: "Проверьте цель: наблюдение допускается только для безопасности людей и имущества или по особым потребностям деятельности, но никогда для контроля результативности.",
+        el: 'Έλεγξε τον σκοπό: επιτρέπεται μόνο για την ασφάλεια προσώπων/αγαθών ή για ιδιαίτερες ανάγκες της δραστηριότητας, ποτέ για τον έλεγχο της απόδοσης.',
       },
     },
     {
@@ -337,6 +353,7 @@ export const portogallo: SchedaPaese = {
         nb: 'Hvis det finnes et utvalg for de ansatte, rådfør deg med det og be om uttalelsen (art. 21 nr. 4 CT).',
         nl: 'Als er een ondernemingsraad bestaat, raadpleeg die en vraag zijn advies (art. 21, lid 4, CT).',
         ru: "Если есть комиссия работников, проконсультируйтесь с ней и запросите её заключение (ст. 21, п. 4, CT).",
+        el: 'Αν υπάρχει επιτροπή εργαζομένων, συμβουλεύσου την και ζήτα τη γνώμη της (άρθρο 21, αρ. 4, CT).',
       },
     },
     {
@@ -353,6 +370,7 @@ export const portogallo: SchedaPaese = {
         nb: 'Gjennomfør personvernkonsekvensvurderingen (AIPD) for posisjonssporing.',
         nl: 'Voer de effectbeoordeling (DPIA) uit voor het volgen van de locatie.',
         ru: "Проведите оценку воздействия (AIPD) для отслеживания местоположения.",
+        el: 'Κάνε την εκτίμηση αντικτύπου (AIPD) για την παρακολούθηση της θέσης.',
       },
     },
     {
@@ -369,6 +387,7 @@ export const portogallo: SchedaPaese = {
         nb: 'Konfigurer systemet med dataminimering: ingen sporing av hvor den ansatte befinner seg, privat modus utenfor arbeidstid, begrenset lagring.',
         nl: 'Configureer het systeem met gegevensminimalisatie: geen tracking van de verblijfplaats, prive-modus buiten werktijd, beperkte bewaartermijn.',
         ru: "Настройте систему с учётом минимизации: без отслеживания местонахождения, с частным режимом вне рабочего времени и ограниченным сроком хранения.",
+        el: 'Ρύθμισε το σύστημα με ελαχιστοποίηση: καμία παρακολούθηση του πού βρίσκεται το άτομο, ιδιωτική λειτουργία εκτός ωραρίου, περιορισμένη διατήρηση.',
       },
     },
     {
@@ -385,6 +404,7 @@ export const portogallo: SchedaPaese = {
         nb: 'Hvis du bytter overvåkingssystem eller programvare, må du oppdatere og dele ut personvernerklæringen på nytt, og undersøke om du igjen må informere eller rådføre deg med de ansattes representanter, der loven krever det. Ofte endres leverandøren (databehandleren), de innsamlede opplysningene og metodene: informasjonen som ble gitt tidligere er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "При смене системы или программы мониторинга обновите и повторно вручите уведомление о защите данных (informativa) и проверьте, нужно ли снова информировать представителей работников или консультироваться с ними, если это предусмотрено законом. Часто меняются поставщик (обработчик данных), собираемые данные и способы работы: ранее вручённого уведомления недостаточно.",
+        el: 'Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση, και έλεγξε αν πρέπει να ενημερώσεις ή να συμβουλευτείς ξανά τους εκπροσώπους των εργαζομένων, όπου το προβλέπει ο νόμος. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και ο τρόπος λειτουργίας: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.',
       },
     },
   ],
@@ -413,6 +433,7 @@ export const portogallo: SchedaPaese = {
       nb: 'opptil 20 millioner euro eller 4 % av global årlig omsetning',
       nl: 'tot 20 miljoen euro of 4% van de wereldwijde jaaromzet',
       ru: "до 20 млн евро или 4% общего годового оборота в мире",
+      el: 'έως 20 εκατ. ευρώ ή 4% του παγκόσμιου ετήσιου κύκλου εργασιών',
     },
     casoCitato: {
       it: "Caso reale confermato in giudizio: il Tribunal da Relação de Lisboa, con sentenza del 17 giugno 2026 (proc. 2266/25.4T8TVD.L1-4), ha confermato la condanna di un'azienda vinicola a una multa di 14.790 euro (art. 20, nn. 1 e 4, CT) per aver consultato lo storico del GPS dell'auto di una venditrice per confrontare i tragitti con i rapporti giornalieri delle visite ai clienti; il consenso o la conoscenza della lavoratrice non rendono lecito l'atto. Non abbiamo individuato una sanzione della CNPD specifica sul GPS dei lavoratori, quindi il tetto resta quello generale del GDPR (art. 83).",
@@ -426,6 +447,7 @@ export const portogallo: SchedaPaese = {
       nb: 'Reell sak bekreftet i retten: Tribunal da Relação de Lisboa (Lisboas lagmannsrett) bekreftet ved dom av 17. juni 2026 (sak 2266/25.4T8TVD.L1-4) en bot på 14 790 euro (art. 20, nr. 1 og 4, CT) mot en vinprodusent som hadde sett gjennom GPS-historikken til en selgers bil for å sammenligne rutene med de daglige rapportene om kundebesøk; den ansattes samtykke eller kjennskap gjør ikke handlingen lovlig. Vi har ikke funnet noen CNPD-sanksjon som er spesifikk for GPS på ansatte, så taket er fortsatt det generelle etter GDPR (art. 83).',
       nl: 'Een echte, door de rechter bevestigde zaak: het hof van beroep van Lissabon (Tribunal da Relação de Lisboa) bevestigde bij arrest van 17 juni 2026 (zaak 2266/25.4T8TVD.L1-4) de boete van 14.790 EUR (art. 20, lid 1 en 4, CT) aan een wijnbedrijf dat de gps-geschiedenis van de auto van een verkoopster had geraadpleegd om haar routes te vergelijken met de dagrapporten van klantbezoeken; de kennis of toestemming van de werkneemster maakt de handeling niet rechtmatig. We hebben geen CNPD-sanctie specifiek voor gps bij werknemers gevonden, dus het plafond blijft dat van de AVG (art. 83).',
       ru: "Реальное дело, подтверждённое судом: Tribunal da Relação de Lisboa решением от 17 июня 2026 г. (дело 2266/25.4T8TVD.L1-4) подтвердил штраф в 14 790 евро (ст. 20, п. 1 и 4, CT), наложенный на винодельческую компанию за то, что она просмотрела историю GPS автомобиля сотрудницы по продажам, чтобы сопоставить маршруты с ежедневными отчётами о визитах к клиентам. Согласие или осведомлённость работницы не делают действие правомерным. Специальной санкции CNPD за GPS на работниках мы не обнаружили, поэтому предел остаётся общим по GDPR (ст. 83).",
+      el: 'Πραγματική υπόθεση που επιβεβαιώθηκε δικαστικά: το Tribunal da Relação de Lisboa, με απόφαση της 17ης Ιουνίου 2026 (υπόθ. 2266/25.4T8TVD.L1-4), επιβεβαίωσε την καταδίκη οινοποιητικής εταιρείας σε πρόστιμο 14.790 ευρώ (άρθρο 20, αρ. 1 και 4, CT) επειδή συμβουλεύτηκε το ιστορικό GPS του αυτοκινήτου μιας πωλήτριας για να συγκρίνει τις διαδρομές με τις ημερήσιες αναφορές των επισκέψεων σε πελάτες· η συγκατάθεση ή η γνώση της εργαζομένης δεν καθιστούν νόμιμη την πράξη. Δεν εντοπίσαμε κύρωση της CNPD ειδικά για το GPS των εργαζομένων, επομένως το ανώτατο όριο παραμένει το γενικό του ΓΚΠΔ (άρθρο 83).',
     },
     urlFonte: FONTE_GDPR.url,
     tipoImporto: 'massimale',

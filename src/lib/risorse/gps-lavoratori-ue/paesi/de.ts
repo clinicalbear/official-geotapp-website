@@ -82,6 +82,7 @@ export const germania: SchedaPaese = {
     sv: 'Tyskland',
     nb: 'Tyskland',
     ru: 'Германия',
+    el: "Γερμανία",
   },
   bandiera: '🇩🇪',
   federale: true,
@@ -100,6 +101,7 @@ export const germania: SchedaPaese = {
       sv: 'Dataskyddsmyndigheten i den delstat där företaget har sitt säte',
       nb: 'Datatilsynet i delstaten der virksomheten har sitt sete',
       ru: 'Орган по защите данных той федеральной земли, где находится компания',
+      el: "Αρχή προστασίας δεδομένων του ομόσπονδου κρατιδίου (Land) στο οποίο εδρεύει η εταιρεία",
     },
     urlFonte: FONTE_BFDI_LISTA_LAND.url,
     verificatoIl: '2026-06-15',
@@ -115,6 +117,7 @@ export const germania: SchedaPaese = {
       nb: 'Tyskland er en forbundsstat: for private virksomheter er det datatilsynet i den delstaten (Land) der virksomheten har sitt sete, som fører tilsyn (16 myndigheter), ikke den føderale kommissæren. Eksempler: Bayern BayLDA, Berlin BlnBDI. Den offisielle listen finnes på BfDIs nettsted.',
       nl: 'Duitsland is federaal: voor particuliere bedrijven houdt de gegevensbeschermingsautoriteit van de deelstaat (Land) waar het bedrijf is gevestigd toezicht (16 autoriteiten), niet de federale commissaris. Voorbeelden: Beieren BayLDA, Berlijn BlnBDI. De officiële lijst staat op de website van de BfDI.',
       ru: "Германия является федеративным государством: за частными компаниями надзирает орган по защите данных земли, где находится компания (16 органов), а не федеральный орган. Примеры: Бавария BayLDA, Берлин BlnBDI. Официальный список размещён на сайте BfDI.",
+      el: "Η Γερμανία είναι ομοσπονδιακό κράτος: για τις ιδιωτικές εταιρείες εποπτεύει η αρχή του κρατιδίου της έδρας (16 αρχές), όχι η ομοσπονδιακή. Παραδείγματα: Βαυαρία BayLDA, Βερολίνο BlnBDI. Ο επίσημος κατάλογος βρίσκεται στον ιστότοπο του BfDI.",
     },
   },
 
@@ -132,6 +135,7 @@ export const germania: SchedaPaese = {
         nb: 'Avtale med bedriftsrådet (Betriebsvereinbarung) før installasjon, etter § 87 BetrVG',
         nl: 'Overeenkomst met de ondernemingsraad (Betriebsvereinbarung) vóór installatie, op grond van artikel 87 BetrVG',
         ru: "Соглашение с производственным советом (Betriebsvereinbarung) до установки, согласно § 87 BetrVG",
+        el: "Συμφωνία με το συμβούλιο εργαζομένων (Betriebsvereinbarung) πριν από την εγκατάσταση, κατά το § 87 BetrVG",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -146,6 +150,7 @@ export const germania: SchedaPaese = {
         nb: 'I Tyskland er Betriebsrats medbestemmelsesrett obligatorisk for tekniske systemer som kan overvåke de ansattes atferd eller ytelse (§ 87 ledd 1 nr. 6 BetrVG): uten en avtale med bedriftsrådet kan systemet ikke aktiveres. Men dette gjelder KUN der det finnes et Betriebsrat; mange små og mellomstore virksomheter har ikke noe, og da gjelder ikke dette trinnet (hele GDPR gjelder fortsatt). Det som teller, er den objektive muligheten til å overvåke, ikke arbeidsgiverens hensikt.',
         nl: "In Duitsland is de medezeggenschap van de Betriebsrat verplicht voor technische systemen die geschikt zijn om het gedrag of de prestaties van werknemers te controleren (artikel 87, lid 1, nr. 6 BetrVG): zonder overeenkomst met de ondernemingsraad mag het systeem niet worden geactiveerd. Maar dit geldt ALLEEN waar een Betriebsrat bestaat; veel mkb-bedrijven hebben er geen, en dan vervalt deze stap (de volledige AVG blijft van toepassing). Wat telt is de objectieve geschiktheid om te controleren, niet de bedoeling van de werkgever.",
         ru: "В Германии соучастие Betriebsrat (производственного совета) в управлении обязательно для технических систем, пригодных для наблюдения за поведением или результативностью работников (§ 87 Abs. 1 Z 6 BetrVG): без соглашения с производственным советом систему нельзя включать. Но это действует ТОЛЬКО там, где Betriebsrat существует; во многих малых и средних предприятиях его нет, и тогда этого шага нет (весь GDPR при этом сохраняется). Значение имеет объективная пригодность для наблюдения, а не намерение работодателя.",
+        el: "Στη Γερμανία η συναπόφαση του Betriebsrat είναι υποχρεωτική για τα τεχνικά συστήματα που είναι πρόσφορα για την επιτήρηση της συμπεριφοράς ή της απόδοσης των εργαζομένων (§ 87 παρ. 1 αρ. 6 BetrVG): χωρίς συμφωνία με το συμβούλιο εργαζομένων δεν μπορεί να ενεργοποιηθεί. Ισχύει ΜΟΝΟ όπου υπάρχει Betriebsrat· πολλές μικρομεσαίες επιχειρήσεις δεν έχουν, και τότε αυτό το βήμα δεν υπάρχει (ισχύει πάντως ολόκληρος ο ΓΚΠΔ). Μετράει η αντικειμενική καταλληλότητα για επιτήρηση, όχι η πρόθεση του εργοδότη.",
       },
       fonte: FONTE_BETRVG_87,
     },
@@ -162,6 +167,7 @@ export const germania: SchedaPaese = {
         nb: 'Tillatelse fra en arbeidsmyndighet før installasjon',
         nl: 'Toestemming van een arbeidsautoriteit vóór installatie',
         ru: "Разрешение органа по труду до установки",
+        el: "Άδεια από αρχή εργασίας πριν από την εγκατάσταση",
       },
       risposta: 'no',
       dettaglio: {
@@ -176,6 +182,7 @@ export const germania: SchedaPaese = {
         nb: 'Tyskland krever ikke forhåndstillatelse fra en arbeidsmyndighet (det finnes ingen motsvarighet til det italienske arbeidstilsynet). Filteret er avtalen med bedriftsrådet; datatilsynet opptrer bare som tilsynsorgan og høres på forhånd bare i tilfellet som omfattes av artikkel 36 i GDPR (høy gjenværende risiko som ikke kan reduseres, påvist gjennom DPIA).',
         nl: "Duitsland kent geen voorafgaande toestemming van een arbeidsautoriteit (er is geen equivalent van de Italiaanse Arbeidsinspectie). De filter is de overeenkomst met de ondernemingsraad; de gegevensbeschermingsautoriteit treedt alleen op als toezichthouder en wordt vooraf alleen geraadpleegd in het geval van artikel 36 AVG (hoog, niet te beperken risico dat uit de DPIA blijkt).",
         ru: "Германия не предусматривает предварительного разрешения органа по труду (аналога итальянской Инспекции нет). Фильтром служит соглашение с производственным советом; орган по защите данных вмешивается только в порядке надзора, и предварительно с ним консультируются лишь в случае ст. 36 GDPR (высокий риск, который не удаётся снизить, выявленный по итогам DPIA).",
+        el: "Η Γερμανία δεν προβλέπει προηγούμενη άδεια από αρχή εργασίας (δεν υπάρχει αντίστοιχο της ιταλικής Επιθεώρησης). Το φίλτρο είναι η συμφωνία με το συμβούλιο εργαζομένων· η αρχή προστασίας δεδομένων παρεμβαίνει μόνο ως εποπτεία, και ζητείται εκ των προτέρων μόνο στην περίπτωση του άρθρου 36 ΓΚΠΔ (υψηλός κίνδυνος που δεν μπορεί να μετριαστεί, ο οποίος προέκυψε από την DPIA).",
       },
       fonte: FONTE_BETRVG_87,
     },
@@ -192,6 +199,7 @@ export const germania: SchedaPaese = {
         nb: 'Gyldig behandlingsgrunnlag for behandlingen (artikkel 6 i GDPR)',
         nl: 'Geldige rechtsgrond voor de verwerking (artikel 6 AVG)',
         ru: "Действительное правовое основание обработки (ст. 6 GDPR)",
+        el: "Έγκυρη νομική βάση για την επεξεργασία (άρθρο 6 ΓΚΠΔ)",
       },
       risposta: 'si',
       dettaglio: {
@@ -206,6 +214,7 @@ export const germania: SchedaPaese = {
         nb: 'Det kreves et behandlingsgrunnlag. Merk: etter EU-domstolens dom C-34/21 av 30. mars 2023 kan § 26 ledd 1 BDSG for private arbeidsgivere sannsynligvis ikke alene fungere som grunnlag (rettspraksis har ennå ikke avgjort saken; tilsynsmyndigheten i Baden-Württemberg mener at den er «wohl unanwendbar», det vil si sannsynligvis ikke anvendelig); for sikkerhets skyld bør behandlingen bygge direkte på artikkel 6 i GDPR (f.eks. oppfyllelse av avtale, rettslig forpliktelse, berettiget interesse med en interesseavveining). En mulig egen lov (Beschäftigtendatengesetz) er til diskusjon, men det ser IKKE ut til at den er trådt i kraft.',
         nl: "Er is een rechtsgrond nodig. Let op: na het HvJEU-arrest C-34/21 van 30 maart 2023 volstaat artikel 26, lid 1, BDSG voor particuliere werkgevers waarschijnlijk niet meer als zelfstandige grondslag (rechters hebben nog niet beslist; de toezichthouder van Baden-Württemberg acht het „wohl unanwendbar”, dus waarschijnlijk niet toepasbaar); uit voorzorg moet de verwerking rechtstreeks worden gebaseerd op artikel 6 AVG (bijv. uitvoering van de overeenkomst, wettelijke verplichting, gerechtvaardigd belang met belangenafweging). Een eventuele specifieke wet (Beschäftigtendatengesetz) is in bespreking maar is NIET in werking.",
         ru: "Необходимо правовое основание. Внимание: после решения Суда ЕС C-34/21 от 30 марта 2023 г. для частных работодателей § 26 Abs. 1 BDSG, вероятно, сам по себе не является достаточным основанием (судебная практика ещё не определилась; орган по защите данных земли Баден-Вюртемберг считает его «wohl unanwendbar», то есть, вероятно, неприменимым); во избежание рисков обработку следует основывать непосредственно на ст. 6 GDPR (например, исполнение договора, правовая обязанность, законный интерес с взвешиванием интересов). Специальный закон (Beschäftigtendatengesetz) обсуждается, но в силе НЕ значится.",
+        el: "Απαιτείται νομική βάση. Προσοχή: μετά την απόφαση του ΔΕΕ C-34/21 της 30ής Μαρτίου 2023, για τους ιδιώτες εργοδότες το § 26 παρ. 1 BDSG πιθανώς δεν αρκεί από μόνο του ως βάση (η νομολογία δεν έχει αποφανθεί ακόμη· η αρχή του Baden-Württemberg το θεωρεί «wohl unanwendbar», δηλαδή πιθανώς ανεφάρμοστο)· για λόγους σύνεσης η επεξεργασία πρέπει να θεμελιώνεται απευθείας στο άρθρο 6 ΓΚΠΔ (π.χ. εκτέλεση σύμβασης, νομική υποχρέωση, έννομο συμφέρον με στάθμιση). Ένας ειδικός νόμος (Beschäftigtendatengesetz) βρίσκεται υπό συζήτηση αλλά ΔΕΝ προκύπτει ότι ισχύει.",
       },
       fonte: FONTE_GARANTE_BW_C3421,
     },
@@ -222,6 +231,7 @@ export const germania: SchedaPaese = {
         nb: 'Personvernopplysninger til de ansatte (artikkel 13 i GDPR)',
         nl: 'Informatie aan werknemers (artikel 13 AVG)',
         ru: "Уведомление работников (ст. 13 GDPR)",
+        el: "Ενημέρωση των εργαζομένων (άρθρο 13 ΓΚΠΔ)",
       },
       risposta: 'si',
       dettaglio: {
@@ -236,6 +246,7 @@ export const germania: SchedaPaese = {
         nb: 'De ansatte må få tydelig informasjon om hvilke posisjonsdata som samles inn, hvordan, når og hvorfor.',
         nl: 'Werknemers moeten duidelijk worden geïnformeerd over welke locatiegegevens worden verzameld, hoe, wanneer en waarom.',
         ru: "Работников необходимо ясно информировать о том, какие данные о местоположении собираются, как, когда и зачем.",
+        el: "Οι εργαζόμενοι πρέπει να ενημερώνονται με σαφήνεια για το ποια δεδομένα θέσης συλλέγονται, πώς, πότε και γιατί.",
       },
       fonte: FONTE_GDPR,
     },
@@ -252,6 +263,7 @@ export const germania: SchedaPaese = {
         nb: 'Forbud mot kontinuerlig sporing (dataminimering, artikkel 5 i GDPR)',
         nl: 'Verbod op continue tracking (dataminimalisatie, artikel 5 AVG)',
         ru: "Запрет непрерывного отслеживания (минимизация данных, ст. 5 GDPR)",
+        el: "Απαγόρευση συνεχούς παρακολούθησης (ελαχιστοποίηση, άρθρο 5 ΓΚΠΔ)",
       },
       risposta: 'si',
       dettaglio: {
@@ -266,6 +278,7 @@ export const germania: SchedaPaese = {
         nb: 'Tilsynsmyndigheten i Rheinland-Pfalz er tydelig: systemer som muliggjør permanent overvåking av ansatte, er i prinsippet ulovlige, og de ansatte må ikke utsettes for et konstant overvåkingspress. Posisjonen samles bare inn når det tjener et legitimt formål (f.eks. sikkerheten til en alenearbeidende, beskyttelse av lasten), ikke kontinuerlig.',
         nl: 'De toezichthouder van Rijnland-Palts is duidelijk: systemen die permanente controle van werknemers mogelijk maken zijn in beginsel onrechtmatig, en werknemers mogen niet worden blootgesteld aan constante controledruk. De locatie wordt alleen verzameld wanneer dat een gerechtvaardigd doel dient (bijv. veiligheid van een alleenwerkende werknemer, bescherming van de lading), niet continu.',
         ru: "Орган по защите данных земли Рейнланд-Пфальц высказывается однозначно: системы, позволяющие постоянно контролировать сотрудников, в принципе незаконны, а работников нельзя подвергать постоянному давлению контроля. Местоположение собирается только тогда, когда это нужно для законной цели (например, безопасность одиноко работающего сотрудника, защита груза), а не непрерывно.",
+        el: "Η αρχή της Ρηνανίας-Παλατινάτου είναι κατηγορηματική: τα συστήματα που επιτρέπουν μόνιμο έλεγχο των εργαζομένων είναι καταρχήν παράνομα, και οι εργαζόμενοι δεν πρέπει να εκτίθενται σε συνεχή πίεση ελέγχου. Η θέση συλλέγεται μόνο όταν εξυπηρετεί θεμιτό σκοπό (π.χ. ασφάλεια του μοναχικού εργαζομένου, προστασία του φορτίου), όχι συνεχώς.",
       },
       fonte: FONTE_GARANTE_RLP_GPS,
     },
@@ -282,6 +295,7 @@ export const germania: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (DPIA) for geolokalisering av ansatte',
         nl: 'Gegevensbeschermingseffectbeoordeling (DPIA) voor de geolocatie van werknemers',
         ru: "Оценка воздействия (DPIA) для геолокализации сотрудников",
+        el: "Εκτίμηση αντικτύπου (DPIA) για τον γεωεντοπισμό των εργαζομένων",
       },
       risposta: 'si',
       dettaglio: {
@@ -296,6 +310,7 @@ export const germania: SchedaPaese = {
         nb: 'Geolokalisering av ansatte står uttrykkelig på DSKs liste over behandlinger som krever en personvernkonsekvensvurdering (artikkel 35 i GDPR). Den må gjennomføres før systemet aktiveres.',
         nl: 'De geolocatie van werknemers staat uitdrukkelijk op de DSK-lijst van verwerkingen die een gegevensbeschermingseffectbeoordeling vereisen (artikel 35 AVG). Deze moet worden uitgevoerd voordat het systeem wordt geactiveerd.',
         ru: "Геолокализация сотрудников прямо включена в перечень DSK операций обработки, требующих оценки воздействия на защиту данных (ст. 35 GDPR). Её необходимо провести до включения системы.",
+        el: "Ο γεωεντοπισμός των εργαζομένων περιλαμβάνεται ρητά στον κατάλογο της DSK με τις επεξεργασίες που απαιτούν εκτίμηση αντικτύπου για την προστασία δεδομένων (άρθρο 35 ΓΚΠΔ). Πρέπει να γίνεται πριν από την ενεργοποίηση του συστήματος.",
       },
       fonte: FONTE_LISTA_DSK_DPIA,
     },
@@ -316,6 +331,7 @@ export const germania: SchedaPaese = {
         nb: 'Hvis det finnes et Betriebsrat, forhandle og undertegn Betriebsvereinbarung før du aktiverer systemet (§ 87 BetrVG).',
         nl: 'Als er een Betriebsrat bestaat, onderhandel over en onderteken de Betriebsvereinbarung vóór activering (artikel 87 BetrVG).',
         ru: "Если Betriebsrat существует, согласуйте и подпишите Betriebsvereinbarung до включения системы (§ 87 BetrVG).",
+        el: "Αν υπάρχει Betriebsrat, διαπραγματεύσου και υπόγραψε τη Betriebsvereinbarung πριν από την ενεργοποίηση (§ 87 BetrVG).",
       },
     },
     {
@@ -332,6 +348,7 @@ export const germania: SchedaPaese = {
         nb: 'Finn et gyldig behandlingsgrunnlag etter artikkel 6 i GDPR (§ 26 BDSG alene er ikke lenger et sikkert grunnlag etter dommen C-34/21).',
         nl: 'Bepaal een geldige rechtsgrond op grond van artikel 6 AVG (artikel 26 BDSG alleen is na het arrest C-34/21 geen veilige grondslag meer).',
         ru: "Определите действительное правовое основание по ст. 6 GDPR (одного § 26 BDSG после решения C-34/21 уже недостаточно как надёжного основания).",
+        el: "Βρες μια έγκυρη νομική βάση κατά το άρθρο 6 ΓΚΠΔ (το § 26 BDSG μόνο του δεν είναι πλέον ασφαλής βάση μετά την απόφαση C-34/21).",
       },
     },
     {
@@ -348,6 +365,7 @@ export const germania: SchedaPaese = {
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA): den er påkrevd for geolokalisering av ansatte.',
         nl: 'Voer de gegevensbeschermingseffectbeoordeling (DPIA) uit: deze is vereist voor de geolocatie van werknemers.',
         ru: "Проведите оценку воздействия (DPIA): для геолокализации сотрудников она обязательна.",
+        el: "Πραγματοποίησε την εκτίμηση αντικτύπου (DPIA): για τον γεωεντοπισμό των εργαζομένων απαιτείται.",
       },
     },
     {
@@ -364,6 +382,7 @@ export const germania: SchedaPaese = {
         nb: 'Gi de ansatte personvernopplysningene (artikkel 13 i GDPR).',
         nl: 'Verstrek de informatie aan de werknemers (artikel 13 AVG).',
         ru: "Вручите работникам уведомление (ст. 13 GDPR).",
+        el: "Παράδωσε την ενημέρωση στους εργαζομένους (άρθρο 13 ΓΚΠΔ).",
       },
     },
     {
@@ -380,6 +399,7 @@ export const germania: SchedaPaese = {
         nb: 'Konfigurer systemet med dataminimering: ingen kontinuerlig sporing, posisjon bare når det er behov for den.',
         nl: 'Configureer het systeem met dataminimalisatie: geen continue tracking, locatie alleen wanneer nodig.',
         ru: "Настройте систему с минимизацией данных: без непрерывного отслеживания, местоположение только при необходимости.",
+        el: "Ρύθμισε το σύστημα με ελαχιστοποίηση: καμία συνεχής παρακολούθηση, θέση μόνο όταν χρειάζεται.",
       },
     },
     {
@@ -396,6 +416,7 @@ export const germania: SchedaPaese = {
         nb: 'Hvis DPIA avdekker en høy gjenværende risiko som ikke kan reduseres, skal du på forhånd rådføre deg med datatilsynet i din delstat (Land) (artikkel 36 i GDPR).',
         nl: 'Als de DPIA een hoog, niet te beperken risico aan het licht brengt, raadpleeg dan vooraf de gegevensbeschermingsautoriteit van uw deelstaat (Land) (artikel 36 AVG).',
         ru: "Если DPIA выявляет высокий риск, который не удаётся снизить, предварительно проконсультируйтесь с органом по защите данных вашей земли (ст. 36 GDPR).",
+        el: "Αν η DPIA αναδείξει υψηλό κίνδυνο που δεν μπορεί να μετριαστεί, ζήτησε εκ των προτέρων τη γνώμη της αρχής προστασίας δεδομένων του κρατιδίου σου (άρθρο 36 ΓΚΠΔ).",
       },
     },
     {
@@ -412,6 +433,7 @@ export const germania: SchedaPaese = {
         nb: 'Hvis du bytter system: når du bytter overvåkingssystem eller programvare, skal du oppdatere og dele ut personvernopplysningene på nytt, og, hvis det finnes et bedriftsutvalg, oppdatere eller reforhandle Betriebsvereinbarung før det nye systemet tas i bruk. Leverandøren (databehandleren), de innsamlede opplysningene og metodene endrer seg ofte: opplysningene som ble gitt tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en werkt u, als er een ondernemingsraad bestaat, de Betriebsvereinbarung bij of onderhandelt u er opnieuw over voordat u het nieuwe systeem activeert. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "Если вы меняете систему или программу мониторинга, обновите и повторно вручите уведомление и, если существует производственный совет, обновите или заново согласуйте Betriebsvereinbarung до включения новой системы. Часто меняются поставщик (обработчик данных), собираемые данные и способы: ранее врученного уведомления недостаточно.",
+        el: "Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση απορρήτου και, αν υπάρχει συμβούλιο εργαζομένων, ενημέρωσε ή επαναδιαπραγματεύσου τη Betriebsvereinbarung πριν ενεργοποιήσεις το νέο σύστημα. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και οι τρόποι: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.",
       },
     },
   ],
@@ -446,6 +468,7 @@ export const germania: SchedaPaese = {
       nb: '35,3 mill. €',
       nl: '35,3 miljoen €',
       ru: "35,3 млн €",
+      el: "35,3 εκατ. €",
     },
     casoCitato: {
       it: "H&M, sanzione del Garante di Amburgo del 1° ottobre 2020: sorveglianza sistematica di centinaia di dipendenti del centro servizi di Norimberga (annotazioni su vita privata, malattie, famiglia). Non è un caso specifico di GPS, ma è la sanzione più nota in Germania sul controllo illecito dei lavoratori.",
@@ -459,6 +482,7 @@ export const germania: SchedaPaese = {
       nb: 'H&M, bot fra datatilsynet i Hamburg av 1. oktober 2020: systematisk overvåking av hundrevis av ansatte ved servicesenteret i Nürnberg (notater om privatliv, sykdommer, familie). Det er ikke en spesifikk GPS-sak, men det er den best kjente boten i Tyskland for ulovlig overvåking av ansatte.',
       nl: 'H&M, boete van de gegevensbeschermingsautoriteit van Hamburg van 1 oktober 2020: systematische bewaking van honderden werknemers van het servicecentrum in Neurenberg (aantekeningen over privéleven, ziekten, familie). Het is geen specifiek GPS-geval, maar het is de bekendste boete in Duitsland wegens onrechtmatige controle van werknemers.',
       ru: "H&M, штраф органа по защите данных Гамбурга от 1 октября 2020 г.: систематическое наблюдение за сотнями сотрудников сервисного центра в Нюрнберге (записи о частной жизни, болезнях, семье). Это не специальный случай GPS, но самый известный в Германии штраф за незаконный контроль работников.",
+      el: "H&M, πρόστιμο της αρχής του Αμβούργου της 1ης Οκτωβρίου 2020: συστηματική επιτήρηση εκατοντάδων εργαζομένων του κέντρου εξυπηρέτησης της Νυρεμβέργης (σημειώσεις για την ιδιωτική ζωή, ασθένειες, οικογένεια). Δεν είναι ειδική υπόθεση GPS, αλλά είναι το πιο γνωστό πρόστιμο στη Γερμανία για παράνομο έλεγχο των εργαζομένων.",
     },
     urlFonte: FONTE_HM_AMBURGO.url,
     tipoImporto: 'caso-affine',

@@ -50,7 +50,7 @@ export default function TrialPage() {
   // Localize the trial to the user, not just to the page default ('it').
   // An explicit non-it URL locale (e.g. /fr/trial) wins; otherwise fall back
   // to the browser language when it is one we support.
-  const SUPPORTED_LANGS = ['it', 'en', 'de', 'nl', 'fr', 'es', 'pt', 'da', 'sv', 'nb', 'ru'];
+  const SUPPORTED_LANGS = ['it', 'en', 'de', 'nl', 'fr', 'es', 'pt', 'da', 'sv', 'nb', 'el', 'ru'];
   const detectLanguage = (): string => {
     if (locale && locale !== 'it') return locale;
     if (typeof navigator !== 'undefined') {

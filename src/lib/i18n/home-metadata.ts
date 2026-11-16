@@ -41,6 +41,7 @@ export const HOME_TITLE_KEYWORD: Record<string, string> = {
   da: 'GPS-software feltservice',
   sv: 'GPS-programvara för fältteam',
   nb: 'GPS-programvare for feltteam',
+  el: 'Λογισμικό GPS πεδίου',
 };
 
 export const HOME_META: Record<string, { title: string; description: string }> = {
@@ -87,5 +88,9 @@ export const HOME_META: Record<string, { title: string; description: string }> =
   nb: {
     title: 'GPS-programvare for feltteam: bevis hvert oppdrag | GeoTapp',
     description: 'Programvare for team i felt: GeoTapp registrerer posisjon, tid og bilder ved hver stempling og forsegler dem i en rapport som kunden selv kan kontrollere.',
+  },
+  el: {
+    title: 'Λογισμικό GPS πεδίου: απόδειξε κάθε εργασία | GeoTapp',
+    description: 'Λογισμικό για ομάδες πεδίου: σε κάθε χτύπημα κάρτας το GeoTapp καταγράφει θέση, ώρα και φωτογραφίες και τα σφραγίζει σε αναφορά που ο πελάτης ελέγχει μόνος του.',
   },
 };

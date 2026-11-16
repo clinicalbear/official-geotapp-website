@@ -27,7 +27,7 @@ import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
 // Kicker "La prova", stessa parola gia' approvata su HomeClient (L_COPY.la_prova).
 const LA_PROVA: Record<string, string> = {
   it: 'La prova', en: 'The proof', de: 'Der Beweis', fr: 'La preuve', es: 'La prueba',
-  pt: 'A prova', nl: 'Het bewijs', da: 'Beviset', sv: 'Beviset', nb: 'Beviset', ru: 'Доказательство',
+  pt: 'A prova', nl: 'Het bewijs', da: 'Beviset', sv: 'Beviset', nb: 'Beviset', el: 'Η απόδειξη', ru: 'Доказательство',
 };
 
 /**
@@ -272,6 +272,29 @@ const TT_COPY: Record<string, TtCopy> = {
     complianceFootnote: '* Etter GDPR må hver ansatt informeres før posisjonen hans eller hennes registreres. GeoTapp forbereder informasjonen, får den bekreftet som lest i appen og lar ikke den ansatte stemple før den er bekreftet.',
     trial: 'Start den gratis prøveperioden på 14 dager',
     availableOn: 'Finnes på',
+  },
+  el: {
+    statusLabel: 'Πού χρησιμοποιείται',
+    releaseNote: 'Το TimeTracker είναι εγγενής εφαρμογή στο Google Play και στο App Store: απαιτεί Android 8.0 ή νεότερο, ή iOS 26.2 ή νεότερο. Ό,τι καταγράφει ο εργαζόμενος φτάνει στο Flow μόλις υπάρξει δίκτυο.',
+    mobileKicker: 'Η εφαρμογή για το κινητό',
+    downloadTitle: 'Κατέβασε το GeoTapp TimeTracker',
+    downloadSub: 'Διαθέσιμο στο Google Play και στο App Store.',
+    doesTitle: 'Τι κάνει το GeoTapp TimeTracker',
+    doesSub: 'Όχι μόνο παρουσία: συγκεντρώνει την τεκμηρίωση της δουλειάς στο πεδίο, που το γραφείο χρησιμοποιεί για την αναφορά και που ο πελάτης μπορεί να ελέγξει.',
+    highlights: [
+      { title: 'Χτυπήματα κάρτας με τοποθεσία και ώρα', description: 'Η έναρξη, τα διαλείμματα και η λήξη καταγράφουν τοποθεσία, διεύθυνση και ώρα τη στιγμή που ο εργαζόμενος χτυπά κάρτα. Ανάμεσα σε δύο χτυπήματα δεν καταγράφεται τίποτα αυτόματα.' },
+      { title: 'Τεκμηρίωση που ο πελάτης μπορεί να ελέγξει', description: 'Οι εργαζόμενοι τραβούν φωτογραφίες, προσθέτουν σημειώσεις και στέλνουν τεκμηρίωση της δουλειάς, συνδεδεμένη με το έργο. Καταλήγει στη σφραγισμένη αναφορά, που ο πελάτης επαληθεύει μόνος του.' },
+      { title: 'Ένα ιστορικό που το γραφείο μπορεί να χρησιμοποιήσει', description: 'Ό,τι συγκεντρώνεται στο πεδίο φτάνει στο Flow και χρησιμοποιείται αμέσως για την αναφορά προς τον πελάτη, την πορεία του έργου και τον τελικό απολογισμό.' },
+      { title: 'Χρήση οχήματος, αποδείξεις και έξοδα', description: 'Ο εργαζόμενος δηλώνει τη χρήση οχήματος κατά τη βάρδια, καταγράφει τον ανεφοδιασμό και τα έξοδα με φωτογραφία της απόδειξης, και το γραφείο τα εγκρίνει.' },
+    ],
+    workflow: [
+      { title: 'Πολύ περισσότερα από ένα απλό χτύπημα κάρτας', description: 'Το TimeTracker περιλαμβάνει τις λεπτομέρειες του έργου, αναφορές, μηνύματα, αιτήσεις για άδεια και καταγραφές εργασίας: όχι μόνο παρουσία.' },
+      { title: 'Πεδίο, γραφείο και πελάτης πάνω στα ίδια δεδομένα', description: 'Η δουλειά στο πεδίο δεν μένει μόνη της: το γραφείο παρακολουθεί την πρόοδο, βλέπει την τεκμηρίωση και απαντά στον πελάτη με γεγονότα.' },
+    ],
+    complianceTagline: 'Πρώτα επιβεβαιώνεται η ενημέρωση, μετά χτυπάς κάρτα.*',
+    complianceFootnote: '* Σύμφωνα με τον ΓΚΠΔ κάθε εργαζόμενος πρέπει να ενημερώνεται πριν καταγραφεί η τοποθεσία του. Το GeoTapp ετοιμάζει την ενημέρωση, την κάνει να επιβεβαιωθεί ως διαβασμένη στην εφαρμογή και δεν αφήνει τον εργαζόμενο να χτυπήσει κάρτα πριν από την επιβεβαίωση.',
+    trial: 'Ξεκίνα τη δωρεάν δοκιμή 14 ημερών',
+    availableOn: 'Διαθέσιμο σε',
   },
   ru: {
     statusLabel: 'Где используется',

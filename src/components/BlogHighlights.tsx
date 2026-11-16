@@ -65,7 +65,7 @@ const SECTION_LABELS: Record<AppLocale, string> = {
  'en-us': 'From the blog', 'en-gb': 'From the blog', 'en-au': 'From the blog', 'en-ie': 'From the blog', 'en-ca': 'From the blog',
   de: 'Aus dem Blog', nl: 'Van de blog',
   fr: 'Du blog', es: 'Del blog', pt: 'Do blog',
-  da: 'Fra bloggen', sv: 'Från bloggen', nb: 'Fra bloggen', ru: 'Из блога',
+  da: 'Fra bloggen', sv: 'Från bloggen', nb: 'Fra bloggen', el: 'Από το blog', ru: 'Из блога',
 };
 
 const HIGHLIGHTS_TITLE_LABELS: Record<AppLocale, string> = {
@@ -80,19 +80,20 @@ const HIGHLIGHTS_TITLE_LABELS: Record<AppLocale, string> = {
   da: 'Nyttige ressourcer til din branche',
   sv: 'Användbara resurser för din bransch',
   nb: 'Nyttige ressurser for din bransje',
+  el: 'Χρήσιμοι πόροι για τον κλάδο σου',
   ru: 'Полезные ресурсы для вашей отрасли',
 };
 
 const SEE_ALL_LABELS: Record<AppLocale, string> = {
   it: 'Vedi tutti →', en: 'See all →', 'en-us': 'See all →', 'en-gb': 'See all →', 'en-au': 'See all →', 'en-ie': 'See all →', 'en-ca': 'See all →', de: 'Alle ansehen →', nl: 'Alles bekijken →',
   fr: 'Voir tout →', es: 'Ver todo →', pt: 'Ver tudo →',
-  da: 'Se alle →', sv: 'Se alla →', nb: 'Se alle →', ru: 'Все →',
+  da: 'Se alle →', sv: 'Se alla →', nb: 'Se alle →', el: 'Δες όλα →', ru: 'Все →',
 };
 
 const READ_MORE_LABELS: Record<AppLocale, string> = {
   it: 'Leggi →', en: 'Read →', 'en-us': 'Read →', 'en-gb': 'Read →', 'en-au': 'Read →', 'en-ie': 'Read →', 'en-ca': 'Read →', de: 'Lesen →', nl: 'Lezen →',
   fr: 'Lire →', es: 'Leer →', pt: 'Ler →',
-  da: 'Læs →', sv: 'Läs →', nb: 'Les →', ru: 'Читать →',
+  da: 'Læs →', sv: 'Läs →', nb: 'Les →', el: 'Διάβασε →', ru: 'Читать →',
 };
 
 interface Props {

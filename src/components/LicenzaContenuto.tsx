@@ -20,6 +20,7 @@ const LICENSE: Record<string, string> = {
   da: '© 2026 GeoTapp — originalt indhold. Du må citere det og genbruge dele med et link til denne side. Fuld genudgivelse eller kommerciel brug kun med vores tilladelse.',
   sv: '© 2026 GeoTapp — originalinnehåll. Du får citera det och återanvända delar med en länk till den här sidan. Fullständig återpublicering eller kommersiell användning endast med vårt tillstånd.',
   nb: '© 2026 GeoTapp — originalt innhold. Du kan sitere det og gjenbruke deler med en lenke til denne siden. Full republisering eller kommersiell bruk bare med vår tillatelse.',
+  el: '© 2026 GeoTapp — πρωτότυπο περιεχόμενο. Μπορείς να το παραθέσεις και να χρησιμοποιήσεις τμήματά του με σύνδεσμο προς αυτή τη σελίδα. Ολική αναδημοσίευση ή εμπορική χρήση μόνο με την άδειά μας.',
   ru: '© 2026 GeoTapp — оригинальный материал. Вы можете цитировать его и использовать фрагменты со ссылкой на эту страницу. Полная перепубликация или коммерческое использование — только с нашего разрешения.',
 };
 

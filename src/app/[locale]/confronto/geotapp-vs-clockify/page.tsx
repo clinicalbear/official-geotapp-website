@@ -24,6 +24,7 @@ const META: Record<string, { title: string; description: string }> = {
   da: { title: 'GeoTapp vs Clockify - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Clockify: Clockify registrerer timer. GeoTapp forsegler hver opgave med position, tid, fotos og en rapport, hvor enhver ændring kan opdages.' },
   sv: { title: 'GeoTapp vs Clockify - Jämförelse 2026 | GeoTapp', description: 'GeoTapp vs Clockify: de viktigaste skillnaderna för fältserviceföretag. Clockify registrerar timmar; GeoTapp förseglar varje uppdrag med plats, tid, foton och en rapport där varje senare ändring går att upptäcka.' },
   nb: { title: 'GeoTapp vs Clockify - Sammenligning 2026 | GeoTapp', description: 'GeoTapp vs Clockify: Clockify registrerer timer. GeoTapp forsegler hvert oppdrag med posisjon, tid, bilder og en rapport der enhver endring kan oppdages.' },
+  el: { title: 'GeoTapp vs Clockify - Σύγκριση 2026 | GeoTapp', description: 'GeoTapp vs Clockify: βασικές διαφορές για εταιρείες με εργαζόμενους στο πεδίο. Το Clockify καταγράφει τις ώρες· το GeoTapp σφραγίζει κάθε εργασία με τοποθεσία, ώρα, φωτογραφίες και αναφορά όπου κάθε μεταγενέστερη αλλαγή γίνεται ορατή.' },
   ru: { title: 'GeoTapp vs Clockify - Сравнение 2026 | GeoTapp', description: 'GeoTapp vs Clockify: ключевые различия для компаний с выездными работниками. Clockify учитывает часы; GeoTapp запечатывает каждое задание с местоположением, временем, фото и отчётом, в котором любое изменение заметно.' },
 };
 
@@ -90,6 +91,12 @@ const FAQ: Record<string, FaqItem[]> = {
     { q: 'GeoTapp eller Clockify, hvis du utfører oppdrag hos kunder?', a: 'Clockify passer for fjernteam som fakturerer per time. GeoTapp er laget for dem som må dokumentere hvor og når de har jobbet: renholdsbedrifter, servicefolk, installatører. Hvis du har kunder som bestrider arbeidet, gir GeoTapp deg en forseglet rapport å vise fram.' },
     { q: 'Clockify er gratis. Er det verdt å betale for GeoTapp?', a: 'Clockifys gratisplan gir mening for frilansere og kontorteam. For bedrifter med ansatte ute i felt ligger verdien til GeoTapp i dokumentasjonen: når en kunde bestrider arbeidet, har du en forseglet rapport å vise fram i stedet for ord mot ord.' },
   ],
+  el: [
+    { q: 'Ποια είναι η βασική διαφορά ανάμεσα στο GeoTapp και στο Clockify;', a: 'Το Clockify είναι εργαλείο καταγραφής χρόνου: καταγράφει τις ώρες εργασίας χειροκίνητα ή με χρονόμετρο. Το GeoTapp είναι σύστημα επαληθεύσιμης απόδειξης των εργασιών: παράγει αυτόματα σφραγισμένες αναφορές με τοποθεσία, ώρα και φωτογραφίες, αποδείξεις που ο πελάτης μπορεί να ελέγξει μόνος του.' },
+    { q: 'Έχει το Clockify παρακολούθηση GPS για τους εργαζομένους στο πεδίο;', a: 'Το Clockify δημιουργήθηκε για να καταγράφει τον χρόνο, και η τοποθεσία δεν μπαίνει σε σφραγισμένη αναφορά. Το GeoTapp καταγράφει την τοποθεσία όταν ο εργαζόμενος χτυπά κάρτα (είσοδος, διαλείμματα, έξοδος) και την κλείνει στην αναφορά της εργασίας, όπου κάθε μεταγενέστερη αλλαγή γίνεται ορατή.' },
+    { q: 'GeoTapp ή Clockify για όσους κάνουν εργασίες ανά έργο;', a: 'Το Clockify ταιριάζει σε απομακρυσμένες ομάδες που τιμολογούν ανά ώρα. Το GeoTapp έχει σχεδιαστεί για όσους πρέπει να αποδείξουν πού και πότε δούλεψαν: εταιρείες καθαρισμού, τεχνικούς συντήρησης, εγκαταστάτες. Αν έχεις πελάτες που αμφισβητούν, το GeoTapp σου δίνει μια σφραγισμένη αναφορά να δείξεις.' },
+    { q: 'Το Clockify είναι δωρεάν. Αξίζει να πληρώσω για το GeoTapp;', a: 'Το δωρεάν πακέτο του Clockify έχει νόημα για ελεύθερους επαγγελματίες και ομάδες γραφείου. Για εταιρείες με εργαζόμενους στο πεδίο, η αξία του GeoTapp βρίσκεται στην απόδειξη: όταν ένας πελάτης αμφισβητεί, έχεις μια σφραγισμένη αναφορά να δείξεις αντί για λόγο εναντίον λόγου.' },
+  ],
   ru: [
     { q: 'В чём главное различие между GeoTapp и Clockify?', a: 'Clockify — это трекер времени: фиксирует отработанные часы вручную или таймером. GeoTapp — это система проверяемого доказательства выполненной работы: автоматически создаёт запечатанные отчёты с местоположением, временем и фото, доказательства, которые клиент может проверить самостоятельно.' },
     { q: 'Есть ли в Clockify GPS-отслеживание для выездных работников?', a: 'Clockify создан для учёта времени, и местоположение не входит в запечатанный отчёт. GeoTapp фиксирует местоположение при отметке сотрудника (приход, перерывы, уход) и включает его в отчёт о задании, где любое последующее изменение заметно.' },
@@ -110,6 +117,7 @@ const ROWS_LABELS: Record<string, string[]> = {
   da: ['Position registreret og kontrolleret ved hver stempling','Kryptografisk forseglet rapport','Bevisfotos knyttet til GPS og tidsstempel','Uafhængig verificering af kunden','Timeregistrering','Mobilapp Android/iOS','Egen intern beskedfunktion','Eksport af fremmøde/løn','Gratis plan','Styring af opgaver på flere lokationer','Position registreres kun ved stempling, aldrig løbende','GPS-information underskrevet i appen, før man stempler*'],
   sv: ['Positionen registreras och kontrolleras vid varje instämpling','Kryptografiskt förseglad rapport','Bevisfoton kopplade till GPS och tidsstämpel','Oberoende verifiering av kunden','Tidrapportering','Mobilapp för Android/iOS','Inbyggd meddelandefunktion','Export av närvaro/lön','Gratisplan','Hantering av uppdrag på flera platser','Positionen registreras bara vid instämpling, aldrig löpande','GPS-information signerad i appen innan man stämplar in*'],
   nb: ['Posisjon registrert og kontrollert ved hver stempling','Kryptografisk forseglet rapport','Bevisbilder knyttet til GPS og tidsstempel','Uavhengig verifisering fra kunden','Timeregistrering','Mobilapp Android/iOS','Egen intern meldingsfunksjon','Eksport av oppmøte/lønn','Gratis plan','Styring av oppdrag på flere steder','Posisjon registreres bare ved stempling, aldri løpende','GPS-informasjon signert i appen før man stempler*'],
+  el: ['Η τοποθεσία καταγράφεται και ελέγχεται σε κάθε χτύπημα κάρτας','Κρυπτογραφικά σφραγισμένη αναφορά','Φωτογραφικές αποδείξεις συνδεδεμένες με GPS και χρονοσφραγίδα','Ανεξάρτητη επαλήθευση από τον πελάτη','Καταγραφή ωρών','Εφαρμογή για κινητά Android/iOS','Ιδιόκτητα εσωτερικά μηνύματα','Εξαγωγή παρουσιών/μισθοδοσίας','Δωρεάν πακέτο','Διαχείριση έργων σε πολλές τοποθεσίες','Η τοποθεσία λαμβάνεται μόνο στο χτύπημα κάρτας, ποτέ συνεχώς','Ενημέρωση GPS υπογεγραμμένη στην εφαρμογή πριν το χτύπημα κάρτας*'],
   ru: ['Местоположение фиксируется и проверяется при каждой отметке','Криптографически запечатанный отчёт','Фотодоказательства, привязанные к GPS и метке времени','Независимая проверка заказчиком','Учёт часов','Мобильное приложение Android/iOS','Встроенный обмен сообщениями','Экспорт присутствия/зарплат','Бесплатный тариф','Управление заданиями на нескольких объектах','Местоположение фиксируется только при отметке, никогда не отслеживается непрерывно','Уведомление о GPS, подписанное в приложении перед отметкой*'],
 };
 
@@ -288,6 +296,22 @@ const T: Record<string, Copy> = {
     cta: 'Vil du se forskjellen i praksis?',
     ctaDesc: 'Prøv det på et ekte oppdrag: 14 dager gratis, uten kredittkort.',
     ctaBtn: 'Start gratis prøveperiode',
+  },
+  el: {
+    badge: 'Σύγκριση εφαρμογών', h1sub: 'καταγραφή ωρών ή σφράγιση εργασιών;',
+    desc: 'Το Clockify καταγράφει τον χρόνο. Το GeoTapp παράγει επαληθεύσιμες αποδείξεις της εργασίας που έγινε. Για όσους δουλεύουν στο πεδίο, η διαφορά αλλάζει τα πάντα.',
+    summary: 'Με δυο λόγια:',
+    summaryText: 'Το Clockify είναι εξαιρετικό για ελεύθερους επαγγελματίες και ομάδες γραφείου που καταγράφουν ώρες για τιμολόγηση. Για εργαζομένους στο πεδίο που πρέπει να αποδείξουν στον πελάτη την εργασία που έκαναν, το GeoTapp παράγει σφραγισμένες αναφορές με τοποθεσία, ώρα και φωτογραφίες: λειτουργίες που το Clockify δεν έχει.',
+    footnote: '* Σύμφωνα με τον νόμο (άρθρο 13 ΓΚΠΔ και, στην Ιταλία, άρθρο 4 του Statuto dei Lavoratori) κάθε εργαζόμενος πρέπει να ενημερωθεί πριν γεωεντοπιστεί. Αν το λογισμικό αφήνει αυτό το βήμα στον ιδιοκτήτη, ο κίνδυνος μένει σε εκείνον. Το GeoTapp ετοιμάζει την εξατομικευμένη ενημέρωση, την υπογράφει ο εργαζόμενος στην εφαρμογή για επιβεβαίωση ότι την είδε και δεν επιτρέπει χτύπημα κάρτας μέχρι να υπογραφεί.',
+    features: 'Σύγκριση βασικών λειτουργιών', feat: 'Λειτουργία',
+    diff: 'Καταγραφή του χρόνου ή απόδειξη της εργασίας',
+    geo: ['Η τοποθεσία λαμβάνεται από το κινητό σε κάθε χτύπημα κάρτας, δεν εισάγεται χειροκίνητα','Αναφορές σφραγισμένες με κρυπτογραφικό αποτύπωμα τη στιγμή του κλεισίματος','Φωτογραφικές αποδείξεις ενσωματωμένες με GPS και χρονοσφραγίδα','Ο πελάτης επαληθεύει μόνος του ότι η αναφορά δεν έχει τροποποιηθεί','Σχεδιασμένο για εργαζομένους στο πεδίο, όχι για το γραφείο'],
+    comp: ['Εξαιρετικό για καταγραφή χρόνου και τιμολόγηση ανά ώρα','Καμία σφραγισμένη τοποθεσία στην αναφορά','Καμία φωτογραφική απόδειξη συνδεδεμένη με την εργασία','Τα δεδομένα δεν επαληθεύονται από τρίτους','Διαθέσιμο δωρεάν πακέτο (ιδανικό για ελεύθερους επαγγελματίες)'],
+    useCasesTitle: 'Ποιος πρέπει να διαλέξει το GeoTapp αντί για το Clockify',
+    useCases: ['Εταιρείες καθαρισμού και διαχείρισης χώρων με απαιτητικούς πελάτες','Τεχνικοί συντήρησης και εγκαταστάτες που πρέπει να τεκμηριώνουν τις τιμολογημένες ώρες','Εταιρείες που υπόκεινται σε επιθεωρήσεις εργασίας ή σε ελέγχους του πελάτη','Όσοι έχουν ήδη δεχτεί αμφισβητήσεις για εργασίες που δεν αναγνωρίστηκαν','Εταιρείες με περισσότερες ομάδες σε διαφορετικά εργοτάξια'],
+    cta: 'Θέλεις να δεις τη διαφορά στην πράξη;',
+    ctaDesc: 'Δοκίμασέ το σε μια πραγματική εργασία: 14 ημέρες δωρεάν, χωρίς πιστωτική κάρτα.',
+    ctaBtn: 'Ξεκίνα τη δωρεάν δοκιμή',
   },
   ru: {
     badge: 'Сравнение приложений', h1sub: 'учитывать часы или запечатывать задания?',

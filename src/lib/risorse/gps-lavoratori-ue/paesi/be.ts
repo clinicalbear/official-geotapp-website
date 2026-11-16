@@ -69,6 +69,7 @@ export const belgio: SchedaPaese = {
     sv: 'Belgien',
     nb: 'Belgia',
     ru: 'Бельгия',
+    el: "Βέλγιο",
   },
   bandiera: '🇧🇪',
   federale: false,
@@ -87,6 +88,7 @@ export const belgio: SchedaPaese = {
       sv: 'Dataskyddsmyndigheten (APD/GBA)',
       nb: 'Datatilsynet (APD/GBA)',
       ru: 'Орган по защите данных (APD/GBA)',
+      el: "Αρχή Προστασίας Δεδομένων (APD/GBA)",
     },
     portale: FONTE_APD_RECLAMO.url,
     urlFonte: FONTE_APD_RECLAMO.url,
@@ -103,6 +105,7 @@ export const belgio: SchedaPaese = {
       nb: 'Belgia er en forbundsstat, men har bare én nasjonal datatilsynsmyndighet, APD/GBA: det finnes ingen regional inndeling.',
       nl: 'België is federaal, maar heeft één enkele nationale gegevensbeschermingsautoriteit, de APD/GBA: er is geen regionale opdeling.',
       ru: "Бельгия является федеративным государством, но имеет единый национальный орган по защите данных, APD/GBA: региональное разделение отсутствует.",
+      el: "Το Βέλγιο είναι ομοσπονδιακό κράτος, αλλά έχει μία ενιαία εθνική αρχή προστασίας δεδομένων, την APD/GBA: δεν υπάρχει περιφερειακός διαχωρισμός.",
     },
   },
 
@@ -120,6 +123,7 @@ export const belgio: SchedaPaese = {
         nb: 'En spesifikk policy for geolokalisering, vedtatt i samråd med de ansatte (APD/GBA)',
         nl: 'Een specifiek geolocatiereglement, vastgesteld in overleg met de werknemers (APD/GBA)',
         ru: "Специальное положение о геолокации, принятое по согласованию с работниками (APD/GBA)",
+        el: "Ειδικός κανονισμός για τον γεωεντοπισμό, που θεσπίζεται σε διαβούλευση με τους εργαζομένους (APD/GBA)",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -134,6 +138,7 @@ export const belgio: SchedaPaese = {
         nb: 'Ingen belgisk regel regulerer geolokalisering av ansatte spesifikt. Ifølge APD skal prinsippene og rammene for overvåkingen fastsettes i en spesifikk, klar og tilgjengelig policy, vedtatt i samråd med de ansatte og, alt etter omstendighetene, etter uttalelse fra samrådsorganet; formålene med og hyppigheten av overvåkingen må være presise (det er vanligvis ikke nok å bare nevne «GPS-sporing» i arbeidsreglementet). CCT/CAO nr. 81 gjelder overvåking av elektronisk kommunikasjon på nettverket (e-post, internett), ikke geolokalisering.',
         nl: 'In België regelt geen enkele regel specifiek de geolocatie van werknemers. Volgens de APD moeten de beginselen en modaliteiten van de controle worden vastgelegd in een specifiek, duidelijk en toegankelijk reglement, opgesteld in overleg met de werknemers en, naargelang het geval, na advies van het overlegorgaan; doeleinden en frequentie van de controle moeten nauwkeurig zijn (een loutere vermelding van „GPS-opvolging” in het arbeidsreglement volstaat doorgaans niet). CAO nr. 81 gaat over de controle van elektronische on-line communicatiegegevens (e-mail, internet), niet over geolocatie.',
         ru: "В Бельгии нет нормы, которая специально регулировала бы геолокацию работников. По мнению APD, принципы и порядок контроля должны быть закреплены в специальном, ясном и доступном положении, принятом по согласованию с работниками и, в зависимости от случая, после заключения органа согласования; цели и периодичность контроля должны быть точными (простого упоминания «GPS» в правилах внутреннего трудового распорядка, как правило, недостаточно). CCT № 81 касается контроля электронных коммуникаций в сети (электронная почта, интернет), а не геолокации.",
+        el: "Στο Βέλγιο καμία νομοθετική διάταξη δεν ρυθμίζει ειδικά τον γεωεντοπισμό των εργαζομένων. Σύμφωνα με την APD, οι αρχές και ο τρόπος του ελέγχου πρέπει να καθορίζονται σε ειδικό, σαφή και προσβάσιμο κανονισμό, που θεσπίζεται σε διαβούλευση με τους εργαζομένους και, ανάλογα με την περίπτωση, μετά από γνώμη του οργάνου διαβούλευσης· ο σκοπός και η συχνότητα του ελέγχου πρέπει να είναι συγκεκριμένοι (η απλή αναφορά «GPS» στον εσωτερικό κανονισμό εργασίας συνήθως δεν αρκεί). Η CCT αρ. 81 αφορά τον έλεγχο των ηλεκτρονικών επικοινωνιών στο δίκτυο (e-mail, διαδίκτυο), όχι τον γεωεντοπισμό.",
       },
       fonte: FONTE_APD_GEOLOCALIZZAZIONE,
     },
@@ -150,6 +155,7 @@ export const belgio: SchedaPaese = {
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit vóór installatie',
         ru: "Предварительное разрешение органа власти перед установкой",
+        el: "Προηγούμενη άδεια από κάποια αρχή πριν από την εγκατάσταση",
       },
       risposta: 'no',
       dettaglio: {
@@ -164,6 +170,7 @@ export const belgio: SchedaPaese = {
         nb: 'Det kreves ingen forhåndstillatelse fra APD/GBA; ansvarlighetsprinsippet gjelder, med en personvernkonsekvensvurdering når risikoen er høy og forhåndsdrøfting med myndigheten bare hvis det gjenstår en høy restrisiko.',
         nl: "Een voorafgaande toestemming van de APD/GBA is niet nodig; het verantwoordingsbeginsel geldt, met een effectbeoordeling wanneer het risico hoog is en raadpleging van de autoriteit alleen als er een hoog restrisico blijft bestaan.",
         ru: "Предварительное разрешение APD/GBA не требуется; действует принцип подотчётности: оценка воздействия при высоком риске и консультация с органом только если остаётся высокий остаточный риск.",
+        el: "Δεν απαιτείται προηγούμενη άδεια από την APD/GBA· ισχύει η λογοδοσία, με εκτίμηση αντικτύπου όταν ο κίνδυνος είναι υψηλός και διαβούλευση με την αρχή μόνο αν παραμένει υψηλός υπολειπόμενος κίνδυνος.",
       },
       fonte: FONTE_APD_DPIA,
     },
@@ -180,6 +187,7 @@ export const belgio: SchedaPaese = {
         nb: 'Forhåndsinformasjon til de ansatte (behandlingsgrunnlag, rettigheter; art. 13 i GDPR)',
         nl: 'Voorafgaande informatie aan werknemers (rechtsgrond, rechten; art. 13 AVG)',
         ru: "Предварительное информирование работников (правовое основание, права; ст. 13 GDPR)",
+        el: "Προηγούμενη ενημέρωση των εργαζομένων (νομική βάση, δικαιώματα· άρθρο 13 ΓΚΠΔ)",
       },
       risposta: 'si',
       dettaglio: {
@@ -194,6 +202,7 @@ export const belgio: SchedaPaese = {
         nb: 'Arbeidsgiveren skal på forhånd opplyse om behandlingsgrunnlaget, formålene og de ansattes rettigheter; grunnlaget er normalt berettiget interesse eller nødvendighet av hensyn til en avtale eller en rettslig forpliktelse; samtykke må behandles med stor forsiktighet i arbeidsforhold fordi det sjelden er frivillig (vedtak 114/2024 fra tvistekammeret (Chambre Contentieuse); APDs side om geolokalisering nevner det fortsatt for omreisende arbeidstakere).',
         nl: "De werkgever moet vooraf de rechtsgrond van de verwerking, de doeleinden en de rechten van de werknemers meedelen; de grondslag is doorgaans het gerechtvaardigd belang of de contractuele/wettelijke noodzaak; toestemming moet in een arbeidsverhouding met grote voorzichtigheid worden benaderd omdat ze zelden vrij is (beslissing 114/2024 van de Geschillenkamer; de APD-pagina over geolocatie noemt ze nog voor rondtrekkende werknemers).",
         ru: "Работодатель должен заранее сообщить правовое основание обработки, цели и права работников; основанием, как правило, служит законный интерес либо договорная или правовая необходимость; к согласию в трудовых отношениях следует относиться с большой осторожностью, поскольку оно редко бывает свободным (решение 114/2024 Камеры по спорам; страница APD о геолокации по-прежнему упоминает его для разъездных работников).",
+        el: "Ο εργοδότης πρέπει να γνωστοποιεί εκ των προτέρων τη νομική βάση της επεξεργασίας, τους σκοπούς και τα δικαιώματα των εργαζομένων· η βάση είναι κατά κανόνα το έννομο συμφέρον ή η συμβατική/νομική αναγκαιότητα· η συγκατάθεση πρέπει να αντιμετωπίζεται με μεγάλη προσοχή στην εργασιακή σχέση, επειδή σπάνια είναι ελεύθερη (απόφαση 114/2024 της Camera contenziosa· η σελίδα της APD για τον γεωεντοπισμό την αναφέρει ακόμη για τους περιοδεύοντες εργαζομένους).",
       },
       fonte: FONTE_APD_GEOLOCALIZZAZIONE,
       fonteAggiuntiva: FONTE_DECISIONE_114_2024,
@@ -211,6 +220,7 @@ export const belgio: SchedaPaese = {
         nb: 'Forbud mot permanent og systematisk overvåking (uforholdsmessig); kan slås av utenfor arbeidstiden',
         nl: 'Verbod op permanente en systematische controle (onevenredig); buiten werktijd uitschakelbaar',
         ru: "Запрет постоянного и систематического контроля (несоразмерен); возможность отключения вне рабочего времени",
+        el: "Απαγόρευση μόνιμου και συστηματικού ελέγχου (δυσανάλογο)· δυνατότητα απενεργοποίησης εκτός ωραρίου",
       },
       risposta: 'si',
       dettaglio: {
@@ -225,6 +235,7 @@ export const belgio: SchedaPaese = {
         nb: 'Ifølge APD er permanent overvåking med systematisk avlesing av posisjonsdata i prinsippet uforholdsmessig; systemet må kunne slås av når kjøretøyet brukes utenfor arbeidstiden.',
         nl: "Volgens de APD is een permanente controle met systematische uitlezing van de locatiegegevens in beginsel onevenredig; het systeem moet kunnen worden uitgeschakeld wanneer het voertuig buiten werktijd wordt gebruikt.",
         ru: "По мнению APD, постоянный контроль с систематическим считыванием данных о местонахождении в принципе несоразмерен; систему должно быть возможно отключить, когда автомобиль используется вне рабочего времени.",
+        el: "Για την APD ένας μόνιμος έλεγχος με συστηματική ανάγνωση των δεδομένων θέσης είναι καταρχήν δυσανάλογος· το σύστημα πρέπει να μπορεί να απενεργοποιείται όταν το όχημα χρησιμοποιείται εκτός ωραρίου εργασίας.",
       },
       fonte: FONTE_APD_GEOLOCALIZZAZIONE,
     },
@@ -241,6 +252,7 @@ export const belgio: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (DPIA) hvis behandlingen medfører høy risiko',
         nl: 'Effectbeoordeling (DPIA) als de verwerking een hoog risico inhoudt',
         ru: "Оценка воздействия (AIPD) в случае высокого риска обработки",
+        el: "Εκτίμηση αντικτύπου (DPIA) αν η επεξεργασία παρουσιάζει υψηλό κίνδυνο",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -255,6 +267,7 @@ export const belgio: SchedaPaese = {
         nb: 'En personvernkonsekvensvurdering er påkrevd når behandlingen sannsynligvis medfører høy risiko (art. 35 i GDPR). Et av lovens eksempler er systematisk overvåking i stor skala av et område som er tilgjengelig for allmennheten, og APDs liste (vedtak 01/2019) nevner ikke ansatte, men punkt 7 omfatter behandling i stor skala og/eller systematisk behandling av lokaliseringsopplysninger som ikke er strengt nødvendig for en tjeneste den registrerte har bedt om, noe systematisk GPS-sporing av ansatte kan oppfylle; ellers må det vurderes fra sak til sak, også ut fra kriteriene fra artikkel 29-gruppen.',
         nl: 'Een effectbeoordeling is vereist wanneer de verwerking waarschijnlijk een hoog risico met zich meebrengt (art. 35 AVG). Een van de wettelijke voorbeelden is de grootschalige systematische monitoring van een openbaar toegankelijke ruimte, en de lijst van de APD (beslissing 01/2019) noemt werknemers niet, maar punt 7 bestrijkt de grootschalige en/of systematische verwerking van locatiegegevens die niet strikt noodzakelijk is voor een door de betrokkene gevraagde dienst, wat systematische GPS-tracking van werknemers kan vervullen; anders moet dit per geval worden beoordeeld, ook aan de hand van de criteria van de Groep Gegevensbescherming artikel 29.',
         ru: "Оценка воздействия требуется, когда обработка может повлечь высокий риск (ст. 35 GDPR). Один из примеров в законе: систематическое наблюдение за общедоступной зоной в больших масштабах; перечень APD (решение 01/2019) не называет сотрудников, но в п. 7 охватывает крупномасштабную и/или систематическую обработку данных о местонахождении, не являющуюся строго необходимой для услуги, запрошенной самим лицом, под что может подпадать систематическое GPS-слежение за работниками; в остальных случаях это нужно оценивать в каждом конкретном случае, в том числе по критериям Рабочей группы по ст. 29.",
+        el: "Απαιτείται εκτίμηση αντικτύπου όταν η επεξεργασία ενδέχεται να συνεπάγεται υψηλό κίνδυνο (άρθρο 35 ΓΚΠΔ). Ένα από τα παραδείγματα του νόμου είναι η συστηματική παρακολούθηση σε μεγάλη κλίμακα δημόσια προσβάσιμου χώρου, και ο κατάλογος της APD (απόφαση 01/2019) δεν αναφέρει τους εργαζομένους, αλλά στο σημείο 7 περιλαμβάνει την επεξεργασία μεγάλης κλίμακας ή/και συστηματική δεδομένων θέσης που δεν είναι απολύτως αναγκαία για υπηρεσία που ζήτησε το πρόσωπο, στην οποία μπορεί να εμπίπτει η συστηματική παρακολούθηση GPS των εργαζομένων· διαφορετικά πρέπει να αξιολογείται κατά περίπτωση, και με τα κριτήρια της ομάδας εργασίας του άρθρου 29.",
       },
       fonte: FONTE_APD_DPIA,
       fonteAggiuntiva: FONTE_APD_LISTA_DPIA,
@@ -276,6 +289,7 @@ export const belgio: SchedaPaese = {
         nb: 'Før installasjonen skal du fastsette prinsippene, formålene og hyppigheten av overvåkingen i en spesifikk policy, i samråd med de ansatte og, alt etter omstendighetene, etter uttalelse fra samrådsorganet.',
         nl: 'Leg vóór installatie de beginselen, doeleinden en frequentie van de controle vast in een specifiek reglement, in overleg met de werknemers en, naargelang het geval, na advies van het overlegorgaan.',
         ru: "Перед установкой закрепите в специальном положении принципы, цели и периодичность контроля по согласованию с работниками и, в зависимости от случая, после заключения органа согласования.",
+        el: "Πριν από την εγκατάσταση, καθόρισε σε ειδικό κανονισμό τις αρχές, τον σκοπό και τη συχνότητα του ελέγχου, σε διαβούλευση με τους εργαζομένους και, ανάλογα με την περίπτωση, μετά από γνώμη του οργάνου διαβούλευσης.",
       },
     },
     {
@@ -292,6 +306,7 @@ export const belgio: SchedaPaese = {
         nb: 'Finn et gyldig behandlingsgrunnlag (berettiget interesse eller nødvendighet av hensyn til en avtale eller en rettslig forpliktelse), ikke samtykke.',
         nl: 'Bepaal een geldige rechtsgrond (gerechtvaardigd belang of contractuele/wettelijke noodzaak), niet de toestemming.',
         ru: "Определите действительное правовое основание (законный интерес либо договорная или правовая необходимость), а не согласие.",
+        el: "Βρες μια έγκυρη νομική βάση (έννομο συμφέρον ή συμβατική/νομική αναγκαιότητα), όχι τη συγκατάθεση.",
       },
     },
     {
@@ -308,6 +323,7 @@ export const belgio: SchedaPaese = {
         nb: 'Informer de ansatte på forhånd om behandlingsgrunnlaget, formålene og rettighetene deres.',
         nl: 'Informeer de werknemers vooraf over de rechtsgrond, de doeleinden en de rechten.',
         ru: "Заранее проинформируйте работников о правовом основании, целях и правах.",
+        el: "Ενημέρωσε εκ των προτέρων τους εργαζομένους για τη νομική βάση, τους σκοπούς και τα δικαιώματα.",
       },
     },
     {
@@ -324,6 +340,7 @@ export const belgio: SchedaPaese = {
         nb: 'Gjennomfør personvernkonsekvensvurderingen for systematisk overvåking i stor skala.',
         nl: 'Voer de effectbeoordeling uit voor grootschalige systematische monitoring.',
         ru: "Проведите оценку воздействия для систематического наблюдения в больших масштабах.",
+        el: "Πραγματοποίησε την εκτίμηση αντικτύπου για τη συστηματική παρακολούθηση μεγάλης κλίμακας.",
       },
     },
     {
@@ -340,6 +357,7 @@ export const belgio: SchedaPaese = {
         nb: 'Konfigurer systemet: ingen permanent overvåking, og mulighet for å slå det av utenfor arbeidstiden.',
         nl: 'Configureer het systeem: geen permanente controle, uitschakeling buiten werktijd.',
         ru: "Настройте систему: без постоянного контроля, с отключением вне рабочего времени.",
+        el: "Ρύθμισε το σύστημα: κανένας μόνιμος έλεγχος, απενεργοποίηση εκτός ωραρίου.",
       },
     },
     {
@@ -356,6 +374,7 @@ export const belgio: SchedaPaese = {
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og dele ut personvernerklæringen på nytt, og undersøke om du igjen må informere eller rådføre deg med de ansattes representanter, der loven krever det. Ofte endrer leverandøren (databehandleren), de innsamlede opplysningene og metodene seg: informasjonen som ble gitt tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "При смене системы или программы мониторинга обновите и повторно вручите уведомление о защите данных и проверьте, нужно ли снова информировать представителей работников или консультироваться с ними, там, где этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее вручённого уведомления недостаточно.",
+        el: "Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση απορρήτου και έλεγξε αν πρέπει να ενημερώσεις ή να συμβουλευτείς ξανά τους εκπροσώπους των εργαζομένων, εκεί όπου το προβλέπει ο νόμος. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και οι τρόποι: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.",
       },
     },
   ],
@@ -384,6 +403,7 @@ export const belgio: SchedaPaese = {
       nb: '45 000 euro',
       nl: '45.000 euro',
       ru: "45 000 евро",
+      el: "45.000 ευρώ",
     },
     casoCitato: {
       it: "Chambre Contentieuse dell'APD/GBA, decisione 114/2024 del 6 settembre 2024: un datore usava le impronte digitali dei dipendenti per la rilevazione delle presenze, su una base (il consenso) non valida nel rapporto di lavoro e in violazione della minimizzazione (esistevano mezzi meno intrusivi). Non è un caso di GPS, ma è il caso belga di riferimento sul controllo delle presenze dei dipendenti.",
@@ -397,6 +417,7 @@ export const belgio: SchedaPaese = {
       nb: 'Chambre Contentieuse hos APD/GBA, vedtak 114/2024 av 6. september 2024: en arbeidsgiver brukte de ansattes fingeravtrykk til registrering av oppmøte, på et grunnlag (samtykke) som ikke er gyldig i arbeidsforhold, og i strid med dataminimering (det fantes mindre inngripende midler). Det er ikke en GPS-sak, men det er den belgiske referansesaken om overvåking av ansattes oppmøte.',
       nl: "Chambre Contentieuse van de APD/GBA, beslissing 114/2024 van 6 september 2024: een werkgever gebruikte de vingerafdrukken van werknemers voor de aanwezigheidsregistratie, op een in de arbeidsverhouding ongeldige grondslag (de toestemming) en in strijd met de minimalisatie (er waren minder ingrijpende middelen). Het is geen GPS-zaak, maar het is de Belgische referentiezaak over de controle van de aanwezigheid van werknemers.",
       ru: "Chambre Contentieuse (Камера по спорам) APD/GBA, решение 114/2024 от 6 сентября 2024 г.: работодатель использовал отпечатки пальцев сотрудников для учёта посещаемости на основании (согласие), недействительном в трудовых отношениях, и с нарушением минимизации данных (существовали менее инвазивные средства). Это не дело о GPS, но это основное бельгийское дело о контроле посещаемости сотрудников.",
+      el: "Chambre Contentieuse της APD/GBA, απόφαση 114/2024 της 6ης Σεπτεμβρίου 2024: ένας εργοδότης χρησιμοποιούσε τα δακτυλικά αποτυπώματα των εργαζομένων για την καταγραφή της παρουσίας, με βάση (τη συγκατάθεση) που δεν είναι έγκυρη στην εργασιακή σχέση και κατά παράβαση της ελαχιστοποίησης (υπήρχαν λιγότερο παρεμβατικά μέσα). Δεν είναι υπόθεση GPS, αλλά είναι η βελγική υπόθεση αναφοράς για τον έλεγχο της παρουσίας των εργαζομένων.",
     },
     urlFonte: FONTE_DECISIONE_114_2024.url,
     tipoImporto: 'caso-affine',

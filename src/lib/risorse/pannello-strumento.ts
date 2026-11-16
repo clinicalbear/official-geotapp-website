@@ -72,6 +72,11 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
       p1: 'Registrerer du posisjonen til de ansatte, om så bare ved innstempling, krever GDPR art. 13 at du forteller dem det skriftlig før du starter: hvem som behandler opplysningene, med hvilket formål, når posisjonen registreres og hvor lenge den lagres. Uten det dokumentet starter selv det ryddigste systemet allerede med en mangel.',
       p2: 'Generatoren tar opplysningene dine, logoen din og svarene dine og setter opp et utkast som pdf, klart til at rådgiveren din kan finpusse det og teamene dine kan få det utlevert. Alt skjer i nettleseren din, og utgangspunktet står klart på et minutt.',
     },
+    el: {
+      title: 'Γιατί χρειάζεσαι μια ενημέρωση απορρήτου',
+      p1: 'Αν καταγράφεις τη θέση των εργαζομένων σου, ακόμη και μόνο κατά την έναρξη εργασίας, το άρθρο 13 του ΓΚΠΔ απαιτεί να τους το πεις γραπτώς πριν ξεκινήσεις: ποιος επεξεργάζεται τα δεδομένα, για ποιον σκοπό, πότε γίνεται η καταγραφή και για πόσο διάστημα τα διατηρείς. Χωρίς αυτό το έγγραφο, ακόμη και το πιο σεβαστικό σύστημα ξεκινά ήδη με ελάττωμα.',
+      p2: 'Η γεννήτρια παίρνει τα στοιχεία σου, το λογότυπό σου και τις απαντήσεις σου και σελιδοποιεί ένα προσχέδιο ενημέρωσης σε PDF, έτοιμο για να το βελτιώσει ο σύμβουλός σου και να το παραδώσεις στις ομάδες. Όλα γίνονται στον browser σου και το σημείο εκκίνησης το έχεις σε ένα λεπτό.',
+    },
     ru: {
       title: 'Зачем вам уведомление о геолокации',
       p1: 'Если вы фиксируете местоположение работников, пусть даже только при отметке прихода, ст. 13 GDPR требует сообщить им об этом письменно до запуска: кто обрабатывает данные, с какой целью, когда фиксируется позиция и как долго она хранится. Без этого документа даже самая аккуратная система стартует уже с нарушением.',
@@ -128,6 +133,11 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
       title: 'Dette forteller kalkulatoren deg',
       p1: 'Hvert land straffer GPS som ikke følger reglene, på sin måte: noen regner prosent av omsetningen, andre gir faste beløp, og det reelle tallet avhenger også av hvor mye du allerede har på plass. Maksbeløpene kommer fra lovene og faktiske vedtak i 39 land, kontrollert ved kilden.',
       p2: 'Velg landet, huk av det du allerede har i orden, og se den høyeste boten som faktisk er gitt der og risikoen du sitter igjen med. Bedre å få vite det på denne siden enn i en tilsynsrapport.',
+    },
+    el: {
+      title: 'Τι σου λέει αυτός ο υπολογιστής',
+      p1: 'Κάθε χώρα τιμωρεί με τον δικό της τρόπο ένα GPS εκτός κανόνων: κάποιες υπολογίζουν ποσοστά επί του τζίρου, άλλες επιβάλλουν σταθερά ποσά, και ο πραγματικός αριθμός εξαρτάται και από το πόσα έχεις ήδη τακτοποιήσει. Τα ανώτατα όρια που διαβάζεις εδώ προέρχονται από τους νόμους και από πραγματικές αποφάσεις 39 χωρών, επαληθευμένα στην πηγή.',
+      p2: 'Διάλεξε τη χώρα, τσέκαρε ό,τι έχεις ήδη σε τάξη και δες το ανώτατο πρόστιμο που επιβλήθηκε πραγματικά εκεί και τον κίνδυνο που σου απομένει. Καλύτερα να το μάθεις από αυτή τη σελίδα παρά από το πρακτικό μιας επιθεώρησης.',
     },
     ru: {
       title: 'Что показывает этот калькулятор',
@@ -186,6 +196,11 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
       p1: 'Oppmøte, posisjon, bilder fra plassen: alt er personopplysninger om de ansatte, og etterlevelse er ikke et merke man kjøper én gang, men en rekke vaner man har eller ikke har. De ni spørsmålene treffer punktene der bedrifter med team i felt oftest snubler.',
       p2: 'Svar ærlig: til slutt får du en poengsum, områdene å ta tak i og de tilknyttede ressursene for å rette opp. Ingen svar forlater nettleseren din, testen jobber for deg, ikke for oss.',
     },
+    el: {
+      title: 'Γιατί να κάνεις στον εαυτό σου αυτές τις ερωτήσεις',
+      p1: 'Παρουσίες, θέση, φωτογραφίες από το εργοτάξιο: είναι προσωπικά δεδομένα των εργαζομένων σου, και η συμμόρφωση δεν είναι ένα σήμα που αγοράζεις μία φορά, είναι μια σειρά συνηθειών που είτε τις έχεις είτε όχι. Οι εννέα ερωτήσεις ελέγχουν τα σημεία όπου σκοντάφτουν συχνότερα οι εταιρείες με ομάδες στο πεδίο.',
+      p2: 'Απάντησε με ειλικρίνεια: στο τέλος έχεις μια βαθμολογία, τους τομείς όπου πρέπει να παρέμβεις και τους σχετικούς πόρους για να τους διορθώσεις. Καμία απάντηση δεν φεύγει από τον browser σου, το τεστ εξυπηρετεί εσένα, όχι εμάς.',
+    },
     ru: {
       title: 'Зачем задавать себе эти вопросы',
       p1: 'Посещаемость, позиция, фото с объекта: всё это персональные данные ваших работников, а соответствие требованиям не значок, который покупают один раз, это набор привычек, которые либо есть, либо нет. Девять вопросов бьют в точки, где компании с полевыми бригадами спотыкаются чаще всего.',
@@ -242,6 +257,11 @@ const PANNELLI: Record<PannelloToolKey, Record<string, PannelloCopy>> = {
       title: 'Dette bruker du en lagringspolicy til',
       p1: 'GDPR sier ikke hvor lenge lønnsslipper, stemplingstider eller legeattester skal oppbevares: den krever at du bestemmer det, skriver det ned og holder deg til det. Det heter lagringsbegrensning, og det er noe av det første et tilsyn ser på.',
       p2: 'Velg land og typene personalopplysninger du håndterer: verktøyet setter opp tabellen med anbefalte frister, notatet som begrunner dem og pdf-en til protokollen din over behandlinger. For regnskapsbilag gjelder lovfristene i landet du velger.',
+    },
+    el: {
+      title: 'Σε τι χρησιμεύει μια πολιτική διατήρησης',
+      p1: 'Ο ΓΚΠΔ δεν σου λέει για πόσο να κρατάς μισθοδοσίες, καταγραφές παρουσίας ή ιατρικά πιστοποιητικά: σου ζητά να το αποφασίσεις, να το γράψεις και να το τηρήσεις. Λέγεται περιορισμός της περιόδου αποθήκευσης και είναι από τα πρώτα πράγματα που ελέγχει μια επιθεώρηση.',
+      p2: 'Διάλεξε τη χώρα και τα είδη δεδομένων που διαχειρίζεσαι για το προσωπικό: το εργαλείο συνθέτει τον πίνακα με τις συνιστώμενες διάρκειες, τη σημείωση που τις αιτιολογεί και το PDF που προσαρτάς στο αρχείο δραστηριοτήτων επεξεργασίας. Για τα λογιστικά έγγραφα ισχύουν οι νόμιμες διάρκειες της χώρας που θα υποδείξεις.',
     },
     ru: {
       title: 'Зачем нужна политика хранения данных',

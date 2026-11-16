@@ -42,6 +42,7 @@ const YES_NO: Record<string, [string, string]> = {
   da: ['Ja', 'Nej'],
   sv: ['Ja', 'Nej'],
   nb: ['Ja', 'Nei'],
+  el: ['Ναι', 'Όχι'],
   ru: ['Да', 'Нет'],
 };
 

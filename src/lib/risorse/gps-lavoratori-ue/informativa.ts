@@ -7,7 +7,7 @@
  * Disclaimer obbligatorio in pagina: è una bozza, non consulenza legale.
  */
 
-export type InfLocale = 'it' | 'en' | 'de' | 'fr' | 'es' | 'nl' | 'pt' | 'da' | 'sv' | 'nb' | 'ru';
+export type InfLocale = 'it' | 'en' | 'de' | 'fr' | 'es' | 'nl' | 'pt' | 'da' | 'sv' | 'nb' | 'el' | 'ru';
 
 export interface InfInputs {
   azienda: string;
@@ -202,6 +202,22 @@ const T: Record<InfLocale, Template> = {
     dpoLine: "Personvernombud (DPO): {dpo}.",
     chiusura: "Denne personvernerklæringen er et automatisk generert utkast og utgjør ikke juridisk rådgivning. Få innholdet kontrollert av en fagperson før bruk.",
   },
+  el: {
+    titolo: "Ενημέρωση για την επεξεργασία δεδομένων γεωεντοπισμού των εργαζομένων",
+    intro: "Σύμφωνα με τα άρθρα 13 και 14 του Κανονισμού (ΕΕ) 2016/679 (ΓΚΠΔ), η εταιρεία {azienda} παρέχει τις ακόλουθες πληροφορίες για την επεξεργασία των δεδομένων γεωεντοπισμού του προσωπικού.",
+    sezioni: [
+      { titolo: "1. Υπεύθυνος επεξεργασίας", testo: "Υπεύθυνος επεξεργασίας είναι η εταιρεία {azienda}." },
+      { titolo: "2. Σκοπός και νομική βάση", testo: "Τα δεδομένα υποβάλλονται σε επεξεργασία για τον ακόλουθο σκοπό: {finalita}. {baseGiuridica}" },
+      { titolo: "3. Κατηγορίες δεδομένων", testo: "Υποβάλλονται σε επεξεργασία δεδομένα γεωεντοπισμού (θέση της συσκευής ή του οχήματος) που συνδέονται με τον εργαζόμενο.{integritaDispositivo}" },
+      { titolo: "4. Πότε και πώς", testo: "Η θέση καταγράφεται {quando}. Η επεξεργασία είναι ανάλογη προς τον σκοπό και δεν συνεπάγεται συνεχή εξ αποστάσεως έλεγχο των εργαζομένων." },
+      { titolo: "5. Αποδέκτες", testo: "Τα δεδομένα είναι προσβάσιμα στο εξουσιοδοτημένο προσωπικό και στους εκτελούντες την επεξεργασία (π.χ. τον πάροχο του λογισμικού), οι οποίοι τα επεξεργάζονται για λογαριασμό του υπευθύνου επεξεργασίας." },
+      { titolo: "6. Διατήρηση", testo: "Τα δεδομένα διατηρούνται για {conservazione} και στη συνέχεια διαγράφονται ή ανωνυμοποιούνται.{conservazioneLegale}" },
+      { titolo: "7. Δικαιώματα του υποκειμένου των δεδομένων", testo: "Ο εργαζόμενος μπορεί να ασκήσει τα δικαιώματα πρόσβασης, διόρθωσης, διαγραφής, περιορισμού, εναντίωσης και φορητότητας, καθώς και να υποβάλει καταγγελία στην εποπτική αρχή." },
+      { titolo: "8. Εποπτική αρχή", testo: "Αρμόδια εποπτική αρχή για καταγγελίες: {autorita} ({paese})." },
+    ],
+    dpoLine: "Υπεύθυνος Προστασίας Δεδομένων (DPO): {dpo}.",
+    chiusura: "Η παρούσα ενημέρωση είναι ένα αυτόματα παραγόμενο προσχέδιο και δεν αποτελεί νομική συμβουλή. Έλεγξε το περιεχόμενό της με έναν επαγγελματία πριν τη χρησιμοποιήσεις.",
+  },
   ru: {
     titolo: "Уведомление об обработке данных о геолокации работников",
     intro: "В соответствии со статьями 13 и 14 Регламента (ЕС) 2016/679 (GDPR) компания {azienda} предоставляет следующую информацию об обработке данных о геолокации персонала.",
@@ -253,6 +269,7 @@ const CODETERM_SECTION: Record<InfLocale, { titolo: string; testo: string }> = {
   da: { titolo: '10. Medbestemmelse og medarbejderrepræsentation', testo: 'Indførelsen og brugen af dette system kan være underlagt medbestemmelses- eller høringsrettigheder for medarbejderrepræsentationen (f.eks. samarbejdsudvalget) i henhold til {ref}, da systemet objektivt er egnet til at kontrollere adfærd og præstation, uanset det erklærede formål. Hvor en sådan repræsentation findes, skal den inddrages, og der skal, hvor det er relevant, indgås en aftale (f.eks. en virksomhedsaftale), før systemet aktiveres i {paese}.' },
   sv: { titolo: '10. Medbestämmande och arbetstagarrepresentation', testo: 'Införandet och användningen av detta system kan omfattas av arbetstagarrepresentationens (t.ex. företagsrådets) rätt till medbestämmande eller samråd enligt {ref}, eftersom systemet objektivt är ägnat att kontrollera beteende och prestation, oavsett det uppgivna syftet. Där sådan representation finns ska den involveras, och i förekommande fall ska ett avtal (t.ex. ett lokalt kollektivavtal) ingås innan systemet aktiveras i {paese}.' },
   nb: { titolo: '10. Medbestemmelse og arbeidstakerrepresentasjon', testo: 'Innføringen og bruken av dette systemet kan være underlagt arbeidstakerrepresentasjonens (f.eks. arbeidsmiljøutvalgets) rett til medbestemmelse eller drøfting i henhold til {ref}, fordi systemet objektivt er egnet til å kontrollere atferd og ytelse, uavhengig av det oppgitte formålet. Der slik representasjon finnes, skal den involveres, og det skal om nødvendig inngås en avtale (f.eks. en virksomhetsavtale) før systemet aktiveres i {paese}.' },
+  el: { titolo: '10. Συναπόφαση και εκπροσώπηση των εργαζομένων', testo: 'Η εισαγωγή και η χρήση αυτού του συστήματος μπορεί να υπόκεινται στα δικαιώματα συναπόφασης ή διαβούλευσης της εκπροσώπησης των εργαζομένων (π.χ. του εργοστασιακού συμβουλίου) σύμφωνα με {ref}, επειδή το σύστημα είναι αντικειμενικά πρόσφορο για τον έλεγχο της συμπεριφοράς και της απόδοσης, ανεξάρτητα από τον δηλωμένο σκοπό. Όπου υπάρχει τέτοια εκπροσώπηση, πρέπει να συμμετέχει και, όπου προβλέπεται, πρέπει να συναφθεί συμφωνία (π.χ. επιχειρησιακή συμφωνία) πριν από την ενεργοποίηση του συστήματος στη χώρα: {paese}.' },
   ru: { titolo: '10. Соучастие и представительство работников', testo: 'Внедрение и использование этой системы могут подпадать под права работников на соучастие или консультации через их представительство (например, производственный совет) согласно {ref}, поскольку система объективно пригодна для контроля поведения и результативности независимо от заявленной цели. При наличии такого представительства его необходимо привлечь и, при необходимости, заключить соглашение (например, производственное соглашение) до активации системы в {paese}.' },
 };
 
@@ -273,6 +290,7 @@ const CODETERM_OVERRIDE: Record<string, Partial<Record<InfLocale, string>>> = {
     da: 'Indførelsen og brugen af dette system er underlagt Betriebsrats medbestemmelse i henhold til § 87 Abs. 1 Nr. 6 BetrVG. Afgørende er alene systemets objektive egnethed til at kontrollere adfærd og præstation, ikke det forfulgte formål: også den punktvise registrering ved ind- og udstempling er omfattet. Findes der et Betriebsrat, skal der indgås en virksomhedsaftale (Betriebsvereinbarung), før systemet aktiveres; uden den må systemet ikke anvendes. Findes der intet Betriebsrat, bortfalder medbestemmelsen, men ikke de øvrige databeskyttelsesretlige forpligtelser.',
     sv: 'Införandet och användningen av detta system omfattas av företagsrådets (Betriebsrat) medbestämmande enligt § 87 Abs. 1 Nr. 6 BetrVG. Avgörande är enbart systemets objektiva lämplighet att kontrollera beteende och prestation, inte det eftersträvade syftet: även den punktvisa registreringen vid in- och utstämpling omfattas. Finns ett företagsråd ska ett företagsavtal (Betriebsvereinbarung) ingås innan systemet aktiveras; utan ett sådant får systemet inte användas. Finns inget företagsråd bortfaller medbestämmandet, men inte övriga skyldigheter enligt dataskyddslagstiftningen.',
     nb: 'Innføringen og bruken av dette systemet er underlagt medbestemmelsen til Betriebsrat etter § 87 Abs. 1 Nr. 6 BetrVG. Avgjørende er utelukkende systemets objektive egnethet til å kontrollere atferd og ytelse, ikke det formålet som forfølges: også den punktvise registreringen ved inn- og utstempling omfattes. Finnes det et Betriebsrat, skal det inngås en virksomhetsavtale (Betriebsvereinbarung) før systemet aktiveres; uten en slik avtale kan systemet ikke tas i bruk. Finnes det ikke noe Betriebsrat, faller medbestemmelsen bort, men ikke de øvrige pliktene etter personvernlovgivningen.',
+    el: 'Η εισαγωγή και η χρήση αυτού του συστήματος υπόκεινται στη συναπόφαση του εργοστασιακού συμβουλίου (Betriebsrat) κατά το § 87 Abs. 1 Nr. 6 BetrVG. Κρίσιμη είναι μόνο η αντικειμενική καταλληλότητα του συστήματος για τον έλεγχο της συμπεριφοράς και της απόδοσης, όχι ο σκοπός που επιδιώκεται: περιλαμβάνεται και η μεμονωμένη καταγραφή κατά την έναρξη και τη λήξη της εργασίας. Όπου υπάρχει Betriebsrat, πριν από την ενεργοποίηση του συστήματος πρέπει να συναφθεί Betriebsvereinbarung (επιχειρησιακή συμφωνία): χωρίς αυτήν το σύστημα δεν μπορεί να χρησιμοποιηθεί. Όπου δεν υπάρχει Betriebsrat, η συναπόφαση δεν ισχύει, αλλά δεν παύουν οι λοιπές υποχρεώσεις περί προστασίας δεδομένων.',
     ru: 'Внедрение и использование этой системы подлежат соучастию производственного совета (Betriebsrat) согласно § 87 Abs. 1 Nr. 6 BetrVG. Решающей является исключительно объективная пригодность системы для контроля поведения и результативности, а не преследуемая цель: сюда относится и разовая фиксация при отметке прихода и ухода. При наличии производственного совета до активации системы должно быть заключено производственное соглашение (Betriebsvereinbarung); без него система не может применяться. При отсутствии производственного совета соучастие отпадает, но остальные обязанности по защите данных сохраняются.',
   },
 };
@@ -297,6 +315,7 @@ const BASEGIURIDICA_DEFAULT: Record<InfLocale, string> = {
   da: 'Retsgrundlaget er arbejdsgiverens legitime interesse og/eller opfyldelsen af ansættelsesforholdet (artikel 6 i Databeskyttelsesforordningen) under overholdelse af den nationale lovgivning om fjernovervågning.',
   sv: 'Den rättsliga grunden är arbetsgivarens berättigade intresse och/eller fullgörandet av anställningsförhållandet (artikel 6 i GDPR), med iakttagande av nationell lagstiftning om kontroll på distans.',
   nb: 'Det rettslige grunnlaget er arbeidsgiverens berettigede interesse og/eller oppfyllelse av arbeidsforholdet (artikkel 6 i personvernforordningen), i samsvar med nasjonal lovgivning om fjernkontroll av arbeidstakere.',
+  el: 'Η νομική βάση είναι το έννομο συμφέρον του εργοδότη και/ή η εκτέλεση της εργασιακής σχέσης (άρθρο 6 ΓΚΠΔ), με τήρηση της εθνικής νομοθεσίας για τον εξ αποστάσεως έλεγχο.',
   ru: 'Правовым основанием является законный интерес работодателя и/или исполнение трудовых отношений (ст. 6 GDPR) при соблюдении национального законодательства о дистанционном контроле.',
 };
 
@@ -312,6 +331,7 @@ const LEGALBASIS_OVERRIDE: Record<string, Partial<Record<InfLocale, string>>> = 
     da: 'Retsgrundlaget er, hvor der findes et samarbejdsudvalg (Betriebsrat), virksomhedsaftalen (Betriebsvereinbarung) som kollektiv aftale i henhold til artikel 88, stk. 1, i databeskyttelsesforordningen sammenholdt med § 26, stk. 4, BDSG. Findes der intet samarbejdsudvalg, sker behandlingen med henblik på opfyldelse af ansættelsesforholdet i henhold til artikel 6, stk. 1, litra b, og § 26, stk. 1, BDSG, supplerende for at varetage den legitime interesse i dokumentation for korrekt udført arbejde (artikel 6, stk. 1, litra f). Der støttes ikke på samtykke, da det i et ansættelsesforhold som regel ikke kan gives frivilligt.',
     sv: 'Den rättsliga grunden är, där ett företagsråd (Betriebsrat) finns, företagsavtalet (Betriebsvereinbarung) som kollektivavtal i den mening som avses i artikel 88.1 i dataskyddsförordningen jämförd med § 26.4 BDSG. Om det inte finns något företagsråd sker behandlingen för att fullgöra anställningsförhållandet enligt artikel 6.1 b och § 26.1 BDSG, kompletterande för att tillvarata det berättigade intresset av bevis på korrekt utfört arbete (artikel 6.1 f). Samtycke åberopas inte, eftersom det i ett anställningsförhållande i regel inte kan lämnas frivilligt.',
     nb: 'Det rettslige grunnlaget er, der det finnes et arbeidsmiljøutvalg (Betriebsrat), virksomhetsavtalen (Betriebsvereinbarung) som tariffavtale i henhold til artikkel 88 nr. 1 i personvernforordningen sammenholdt med § 26 nr. 4 BDSG. Finnes det ikke noe slikt utvalg, skjer behandlingen for å oppfylle arbeidsforholdet etter artikkel 6 nr. 1 bokstav b og § 26 nr. 1 BDSG, supplerende for å ivareta den berettigede interessen i dokumentasjon av korrekt utført arbeid (artikkel 6 nr. 1 bokstav f). Det bygges ikke på samtykke, ettersom det i et arbeidsforhold som regel ikke kan gis frivillig.',
+    el: 'Η νομική βάση, όπου υπάρχει Betriebsrat (εργοστασιακό συμβούλιο), είναι η Betriebsvereinbarung ως συλλογική συμφωνία κατά το άρθρο 88 παρ. 1 ΓΚΠΔ σε συνδυασμό με το § 26 παρ. 4 BDSG. Όπου δεν υπάρχει Betriebsrat, η επεξεργασία γίνεται για την εκτέλεση της εργασιακής σχέσης κατά το άρθρο 6 παρ. 1 στοιχ. β ΓΚΠΔ και το § 26 παρ. 1 BDSG, συμπληρωματικά για την προστασία του έννομου συμφέροντος στην απόδειξη της ορθής εκτέλεσης της εργασίας (άρθρο 6 παρ. 1 στοιχ. στ ΓΚΠΔ). Δεν στηριζόμαστε στη συγκατάθεση, επειδή στην εργασιακή σχέση, κατά κανόνα, δεν μπορεί να δοθεί ελεύθερα.',
     ru: 'Правовым основанием, при наличии производственного совета (Betriebsrat), является производственное соглашение (Betriebsvereinbarung) как коллективное соглашение по смыслу ст. 88(1) GDPR во взаимосвязи с § 26(4) BDSG. При отсутствии производственного совета обработка осуществляется для исполнения трудовых отношений на основании ст. 6(1)(b) GDPR и § 26(1) BDSG, дополнительно для защиты законного интереса в подтверждении надлежащего выполнения работы (ст. 6(1)(f) GDPR). Согласие не используется в качестве основания, поскольку в трудовых отношениях оно, как правило, не может быть дано свободно.',
   },
 };
@@ -339,6 +359,7 @@ const ART22_SECTION: Record<InfLocale, { titolo: string; testo: string }> = {
   da: { titolo: '9. Ingen automatiske afgørelser', testo: 'Der træffes ingen afgørelse, der alene er baseret på automatisk behandling, herunder profilering, som har retsvirkning eller på tilsvarende vis betydeligt påvirker medarbejderen, jf. artikel 22 i databeskyttelsesforordningen.' },
   sv: { titolo: '9. Inget automatiserat beslutsfattande', testo: 'Inga beslut fattas som enbart grundas på automatiserad behandling, inbegripet profilering, och som har rättsliga följder eller på liknande sätt i betydande grad påverkar arbetstagaren, i den mening som avses i artikel 22 i GDPR.' },
   nb: { titolo: '9. Ingen automatiserte avgjørelser', testo: 'Det treffes ingen avgjørelse som utelukkende er basert på automatisert behandling, herunder profilering, og som har rettsvirkning eller på tilsvarende måte i betydelig grad påvirker arbeidstakeren, i henhold til artikkel 22 i personvernforordningen.' },
+  el: { titolo: '9. Καμία αυτοματοποιημένη λήψη αποφάσεων', testo: 'Δεν λαμβάνονται αποφάσεις που βασίζονται αποκλειστικά σε αυτοματοποιημένη επεξεργασία, συμπεριλαμβανομένης της κατάρτισης προφίλ, και που παράγουν έννομα αποτελέσματα ή επηρεάζουν με παρόμοιο τρόπο σημαντικά τον εργαζόμενο, κατά το άρθρο 22 ΓΚΠΔ.' },
   ru: { titolo: '9. Отсутствие автоматизированного принятия решений', testo: 'Решения, основанные исключительно на автоматизированной обработке, включая профилирование, которые порождают юридические последствия или аналогичным образом существенно затрагивают работника по смыслу ст. 22 GDPR, не принимаются.' },
 };
 
@@ -360,6 +381,7 @@ const RETENTION_LEGAL_OVERRIDE: Record<string, Partial<Record<InfLocale, string>
     da: ' Den blotte arbejdstidsangivelse uden stedreference opbevares i de lovbestemte perioder, der gælder i Tyskland (§ 257 HGB, § 147 AO).',
     sv: ' Enbart arbetstidsuppgiften, utan positionsreferens, lagras under de lagstadgade tider som gäller i Tyskland (§ 257 HGB, § 147 AO).',
     nb: ' Selve arbeidstidsangivelsen, uten stedsreferanse, oppbevares i de lovbestemte fristene som gjelder i Tyskland (§ 257 HGB, § 147 AO).',
+    el: ' Μόνο το στοιχείο του ωραρίου εργασίας, χωρίς αναφορά θέσης, διατηρείται για τις νόμιμες προθεσμίες που ισχύουν στη Γερμανία (§ 257 HGB, § 147 AO).',
     ru: ' Сами сведения о рабочем времени, без привязки к местоположению, хранятся в течение установленных законом сроков, применимых в Германии (§ 257 HGB, § 147 AO).',
   },
 };
@@ -385,6 +407,7 @@ const INTEGRITA_DISPOSITIVO: Record<InfLocale, string> = {
   da: ' Der behandles desuden tekniske data om enhedens integritet (for eksempel angivelse af, at enheden er ændret, eller at positionen er simuleret), alene med det formål at kontrollere registreringens pålidelighed og ikke for at vurdere medarbejderen.',
   sv: ' Dessutom behandlas tekniska uppgifter om enhetens integritet (till exempel uppgift om att enheten har ändrats eller att positionen simuleras), uteslutande för att kontrollera registreringens tillförlitlighet och inte för att bedöma arbetstagaren.',
   nb: ' I tillegg behandles tekniske data om enhetens integritet (for eksempel angivelse av at enheten er endret, eller at posisjonen er simulert), utelukkende for å kontrollere påliteligheten av registreringen og ikke for å vurdere arbeidstakeren.',
+  el: ' Επεξεργάζονται επίσης τεχνικά δεδομένα για την ακεραιότητα της συσκευής (για παράδειγμα η ένδειξη ότι η συσκευή έχει τροποποιηθεί ή ότι η θέση προσομοιώνεται), αποκλειστικά για τον έλεγχο της αξιοπιστίας της καταγραφής και όχι για την αξιολόγηση του εργαζομένου.',
   ru: ' Кроме того, обрабатываются технические данные о целостности устройства (например, признак того, что устройство изменено или местоположение имитируется), исключительно для проверки достоверности записи, а не для оценки работника.',
 };
 
@@ -445,7 +468,7 @@ export function buildInformativa(locale: InfLocale, i: InfInputs, codiceISO?: st
 }
 
 export function infLocale(locale: string): InfLocale {
-  return (['it', 'en', 'de', 'fr', 'es', 'nl', 'pt', 'da', 'sv', 'nb', 'ru'] as const).includes(locale as InfLocale)
+  return (['it', 'en', 'de', 'fr', 'es', 'nl', 'pt', 'da', 'sv', 'nb', 'el', 'ru'] as const).includes(locale as InfLocale)
     ? (locale as InfLocale)
     : 'en';
 }

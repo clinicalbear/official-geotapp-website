@@ -76,6 +76,12 @@ const COPY: Record<string, Copy> = {
     body: 'Vi samler inn hva som faktisk skjer i felt, i hele Europa. To minutter, anonymt, ingenting er obligatorisk.',
     cta: 'Si din mening',
   },
+  el: {
+    kicker: 'Παρατηρητήριο απόδειξης εργασίας',
+    title: 'Σου έχουν αμφισβητήσει ποτέ μια δουλειά που είχες ήδη κάνει;',
+    body: 'Συγκεντρώνουμε ό,τι συμβαίνει πραγματικά στο πεδίο, σε όλη την Ευρώπη. Δύο λεπτά, ανώνυμα, τίποτα δεν είναι υποχρεωτικό.',
+    cta: 'Πες τη γνώμη σου',
+  },
   ru: {
     kicker: 'Обсерватория доказательства работы',
     title: 'Вам когда-нибудь оспаривали уже выполненную работу?',

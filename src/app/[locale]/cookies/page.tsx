@@ -15,6 +15,7 @@ const META: Record<string, { title: string; description: string; pageTitle: stri
   da: { title: 'Cookiepolitik | GeoTapp', description: 'Hvilke cookies geotapp.com bruger, hvad de bruges til, hvor længe de varer, og hvordan du til enhver tid kan ændre dit valg.', pageTitle: 'Cookiepolitik', subtitle: 'Version 1.1 - 30. september 2026' },
   sv: { title: 'Cookiepolicy | GeoTapp', description: 'Vilka cookies geotapp.com använder, vad de används till, hur länge de varar och hur du när som helst ändrar ditt val.', pageTitle: 'Cookiepolicy', subtitle: 'Version 1.1 - 30 september 2026' },
   nb: { title: 'Informasjonskapsler | GeoTapp', description: 'Hvilke informasjonskapsler geotapp.com bruker, hva de brukes til, hvor lenge de varer, og hvordan du når som helst kan endre valget ditt.', pageTitle: 'Informasjon om bruk av informasjonskapsler', subtitle: 'Versjon 1.1 - 30. september 2026' },
+  el: { title: 'Ενημέρωση για τα cookies | GeoTapp', description: 'Ποια cookies χρησιμοποιεί το geotapp.com, σε τι χρησιμεύουν, πόσο διαρκούν και πώς μπορείς να αλλάξεις την επιλογή σου οποιαδήποτε στιγμή.', pageTitle: 'Ενημέρωση για τη χρήση των cookies', subtitle: 'Έκδοση 1.1 - 30 Σεπτεμβρίου 2026' },
   ru: { title: 'Политика cookie | GeoTapp', description: 'Какие cookie использует geotapp.com, для чего они нужны, как долго хранятся и как изменить свой выбор в любой момент.', pageTitle: 'Информация об использовании cookie', subtitle: 'Версия 1.1 - 30 сентября 2026' },
 };
 

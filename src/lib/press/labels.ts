@@ -20,6 +20,7 @@ export const FEATURED_LABEL: Record<string, string> = {
   da: 'Omtalt i',
   sv: 'Omtalade i',
   nb: 'Omtalt i',
+  el: 'Αναφορές σε',
 };
 
 /** Etichetta per una lingua qualsiasi, con ripiego sull'inglese. */

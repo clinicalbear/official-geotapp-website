@@ -44,6 +44,7 @@ export const LEAD_MAGNETS: Record<string, LeadMagnetAsset> = {
       da: '/downloads/fac-simile-informativa-gps-da.pdf',
       sv: '/downloads/fac-simile-informativa-gps-sv.pdf',
       nb: '/downloads/fac-simile-informativa-gps-nb.pdf',
+      el: '/downloads/fac-simile-informativa-gps-el.pdf',
       ru: '/downloads/fac-simile-informativa-gps-ru.pdf',
     },
     fileFallback: '/downloads/fac-simile-informativa-gps-en.pdf',
@@ -158,6 +159,17 @@ export const LEAD_MAGNETS: Record<string, LeadMagnetAsset> = {
         success: 'Ferdig, du er påmeldt. De neste guidene kommer fra info@geotapp.com.',
         error: 'Noe gikk galt. Prøv igjen.',
       },
+      el: {
+        title: 'Κατέβασε το δωρεάν υπόδειγμα ενημέρωσης απορρήτου για το GPS στην Ελλάδα',
+        desc: 'Υπόδειγμα ενημέρωσης απορρήτου για τον γεωεντοπισμό των εργαζομένων, βασισμένο στο περιεχόμενο που απαιτεί το άρθρο 13 του ΓΚΠΔ, με τη νομική βάση και την αρχή ελέγχου της χώρας. Συμπλήρωσε τα κενά πεδία και δώσε το να το ελέγξει ο σύμβουλός σου.',
+        download: 'Κατέβασε το υπόδειγμα (PDF)',
+        newsletterPrompt: 'Θέλεις και τους επόμενους πρακτικούς οδηγούς για το GPS και τη διαχείριση ομάδων πεδίου; Άφησε το email σου (προαιρετικό).',
+        placeholder: 'Το email σου',
+        btn: 'Εγγραφή',
+        consent: 'Χωρίς spam, διαγραφή με ένα κλικ.',
+        success: 'Έτοιμο, γράφτηκες. Οι επόμενοι οδηγοί θα έρθουν από το info@geotapp.com.',
+        error: 'Κάτι πήγε στραβά. Δοκίμασε ξανά.',
+      },
       ru: {
         title: 'Скачайте бесплатный шаблон уведомления о конфиденциальности GPS (GDPR) для ЕС',
         desc: 'Шаблон уведомления о конфиденциальности для геолокации сотрудников, соответствующий ст. 13 GDPR, с правовым основанием и надзорным органом страны. Заполните пустые поля и проверьте у вашего консультанта.',
@@ -192,6 +204,7 @@ const ASK: Record<string, Ask> = {
   da: { prima: 'Inden du går, et hurtigt spørgsmål.', dopo: 'Så er skabelonen din. Nu et spørgsmål til dig, der udfører arbejdet: to minutter, anonymt.', cta: 'Besvar undersøgelsen' },
   sv: { prima: 'Innan du går, en snabb fråga.', dopo: 'Klart, mallen är din. Nu en fråga till dig som utför jobbet: två minuter, anonymt.', cta: 'Svara på undersökningen' },
   nb: { prima: 'Før du går, et raskt spørsmål.', dopo: 'Ferdig, malen er din. Nå et spørsmål til deg som gjør jobben: to minutter, anonymt.', cta: 'Svar på undersøkelsen' },
+  el: { prima: 'Πριν φύγεις, μια γρήγορη ερώτηση.', dopo: 'Έτοιμο, το υπόδειγμα είναι δικό σου. Τώρα μια ερώτηση σε σένα, που κάνεις αυτή τη δουλειά: δύο λεπτά, ανώνυμα.', cta: 'Συμμετοχή στην έρευνα' },
   ru: { prima: 'Перед уходом один быстрый вопрос.', dopo: 'Готово, шаблон ваш. Теперь вопрос к вам, кто эту работу делает: две минуты, анонимно.', cta: 'Пройти опрос' },
 };
 

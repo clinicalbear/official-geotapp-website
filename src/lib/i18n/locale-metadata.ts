@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PUBLISHED_LOCALES } from './config';
+import { PUBLISHED_LOCALES, hasBlogArticles } from './config';
 import { translatePath } from './slug-map';
 import type { AppLocale } from './config';
 
@@ -29,6 +29,7 @@ export const HREFLANG: Record<string, string> = {
   pt: 'pt-PT',
   da: 'da-DK',
   nb: 'nb-NO',
+  el: 'el',
   sv: 'sv-SE',
   ru: 'ru-RU',
 };
@@ -95,15 +96,20 @@ export const HREFLANG: Record<string, string> = {
  * Regola: og:url non si scrive a mano, si chiede a questa funzione.
  */
 export function buildCanonicalUrl(locale: string, path: string): string {
-  return `${BASE}/${locale}${translatePath(path, locale as AppLocale)}`;
+  // Hub del blog in una lingua senza articoli (LOCALES_WITHOUT_BLOG): e' la copia
+  // inglese, il canonical e' /en/blog/. Solo l'hub: gli articoli vivono su /blog/....
+  const hubSenzaArticoli = /^\/blog\/?$/.test(path) && !hasBlogArticles(locale);
+  const l = hubSenzaArticoli ? 'en' : locale;
+  return `${BASE}/${l}${translatePath(path, l as AppLocale)}`;
 }
 
 export function buildLocaleAlternates(
   locale: string,
   path: string,
 ): Metadata['alternates'] {
+  const isBlogHub = /^\/blog\/?$/.test(path);
   const languages = Object.fromEntries(
-    PUBLISHED_LOCALES.map((l) => {
+    PUBLISHED_LOCALES.filter((l) => !(isBlogHub && !hasBlogArticles(l))).map((l) => {
       const localizedPath = translatePath(path, l as AppLocale);
       return [HREFLANG[l] ?? l, `${BASE}/${l}${localizedPath}`];
     }),

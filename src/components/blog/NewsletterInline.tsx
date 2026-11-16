@@ -15,6 +15,7 @@ const LABELS: Record<string, { title: string; desc: string; placeholder: string;
   da: { title: 'Få artikler som denne i din indbakke', desc: 'Praktiske indsigter om GPS-sporing, feltstyring og GDPR. Ingen spam, kun nyttigt indhold.', placeholder: 'Din e-mail', btn: 'Tilmeld', success: 'Tilmeldt! Tjek din e-mail.', error: 'Noget gik galt. Prøv igen.' },
   sv: { title: 'Få artiklar som denna i din inkorg', desc: 'Praktiska insikter om GPS i arbetet, fältarbete och GDPR. Ingen spam, bara matnyttigt innehåll.', placeholder: 'Din e-post', btn: 'Prenumerera', success: 'Anmäld! Kolla din e-post.', error: 'Något gick fel. Försök igen.' },
   nb: { title: 'Få artikler som denne i innboksen', desc: 'Praktiske innsikter om GPS-sporing, feltarbeid og GDPR. Ingen spam, bare nyttig innhold.', placeholder: 'Din e-post', btn: 'Abonner', success: 'Påmeldt! Sjekk e-posten din.', error: 'Noe gikk galt. Prøv igjen.' },
+  el: { title: 'Πάρε άρθρα σαν αυτό στο email σου', desc: 'Πρακτικές πληροφορίες για το GPS, την εργασία πεδίου και τον ΓΚΠΔ. Χωρίς spam, μόνο χρήσιμο περιεχόμενο.', placeholder: 'Το email σου', btn: 'Εγγραφή', success: 'Η εγγραφή έγινε! Έλεγξε το email σου.', error: 'Κάτι πήγε στραβά. Δοκίμασε ξανά.' },
   ru: { title: 'Получайте такие статьи на почту', desc: 'Практические материалы о GPS-трекинге, выездных работах и GDPR. Без спама, только польза.', placeholder: 'Ваш email', btn: 'Подписаться', success: 'Готово! Проверьте почту.', error: 'Что-то пошло не так. Попробуйте снова.' },
 };
 

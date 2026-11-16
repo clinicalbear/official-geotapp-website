@@ -9,7 +9,7 @@ import {
   type AvRisposta,
 } from './index';
 
-const LOCALES = ['it', 'en', 'de', 'fr', 'es', 'nl', 'pt', 'da', 'sv', 'nb', 'ru'] as const;
+const LOCALES = ['it', 'en', 'de', 'fr', 'es', 'nl', 'pt', 'da', 'sv', 'nb', 'el', 'ru'] as const;
 
 describe('autovalutazione scoring', () => {
   const it_ = getAutovalutazione('it');

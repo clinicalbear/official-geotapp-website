@@ -19,6 +19,7 @@ const map: Partial<Record<AppLocale, () => Promise<{ default: PresenzeCopy }>>> 
   sv: () => import('./sv'),
   nb: () => import('./nb'),
   ru: () => import('./ru'),
+  el: () => import('./el'),
 };
 
 export async function getPresenzeCopy(locale: AppLocale): Promise<PresenzeCopy> {

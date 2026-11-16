@@ -35,6 +35,7 @@ const LINGUE = [
   { locale: 'da', iso: 'DK' },
   { locale: 'sv', iso: 'SE' },
   { locale: 'nb', iso: 'NO' },
+  { locale: 'el', iso: 'GR' },
   { locale: 'ru', iso: null },
 ];
 const FOOTER = {
@@ -48,6 +49,7 @@ const FOOTER = {
   da: 'Skabelon stillet gratis til rådighed af GeoTapp, tilpasses med din egen rådgiver',
   sv: 'Mall som GeoTapp tillhandahåller kostnadsfritt, anpassas med din egen rådgivare',
   nb: 'Mal levert gratis av GeoTapp, tilpasses med din egen rådgiver',
+  el: 'Υπόδειγμα που προσφέρεται δωρεάν από το GeoTapp, να προσαρμοστεί με τον δικό σου σύμβουλο',
   ru: 'Образец бесплатно предоставлен GeoTapp, адаптируйте его со своим консультантом',
 };
 // Nome del Paese nella lingua del documento, da Intl (nessun elenco a mano).
@@ -55,7 +57,7 @@ const nomePaese = (iso, locale) =>
   iso ? new Intl.DisplayNames([locale], { type: 'region' }).of(iso)
       : { it: 'Unione europea', en: 'European Union', de: 'Europäische Union', fr: 'Union européenne',
           es: 'Unión Europea', nl: 'Europese Unie', pt: 'União Europeia', da: 'Den Europæiske Union',
-          sv: 'Europeiska unionen', nb: 'Den europeiske union', ru: 'Европейский союз' }[locale];
+          sv: 'Europeiska unionen', nb: 'Den europeiske union', el: 'Ευρωπαϊκή Ένωση', ru: 'Европейский союз' }[locale];
 // Autorita': quella nazionale dalla scheda-paese verificata; per RU il testo generico del template.
 const AUT_RU = 'надзорный орган по защите данных страны, где выполняется работа';
 

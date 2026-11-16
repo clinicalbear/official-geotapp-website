@@ -75,6 +75,7 @@ export const italia: SchedaPaese = {
     sv: 'Italien',
     nb: 'Italia',
     ru: 'Италия',
+    el: 'Ιταλία',
   },
   bandiera: '🇮🇹',
   federale: false,
@@ -93,6 +94,7 @@ export const italia: SchedaPaese = {
       sv: 'Garante per la protezione dei dati personali (italienska dataskyddsmyndigheten)',
       nb: 'Garante per la protezione dei dati personali (italiensk datatilsyn)',
       ru: 'Garante per la protezione dei dati personali (итальянский орган по защите данных)',
+      el: 'Garante per la protezione dei dati personali (Αρχή Προστασίας Δεδομένων της Ιταλίας)',
     },
     urlFonte: 'https://www.garanteprivacy.it',
     verificatoIl: '2026-10-16',
@@ -112,6 +114,7 @@ export const italia: SchedaPaese = {
         nb: 'Fagforeningsavtale (RSA/RSU) eller tillatelse fra arbeidstilsynet (Ispettorato del Lavoro), før systemet installeres',
         nl: 'Vakbondsovereenkomst (RSA/RSU) of toestemming van de Arbeidsinspectie, voordat het systeem wordt geïnstalleerd',
         ru: "Профсоюзное соглашение (RSA/RSU) или разрешение Инспекции труда до установки системы",
+        el: 'Συμφωνία με τα συνδικάτα (RSA/RSU) ή άδεια της Επιθεώρησης Εργασίας (Ispettorato del Lavoro), πριν από την εγκατάσταση του συστήματος',
       },
       risposta: 'dipende',
       dettaglio: {
@@ -126,6 +129,7 @@ export const italia: SchedaPaese = {
         nb: 'GPS er normalt et verktøy som også kan føre til fjernovervåking av arbeidstakere. Art. 4 nr. 1 i arbeidstakerstatutten (Statuto dei Lavoratori) tillater det bare av organisatoriske og produksjonsmessige behov, av hensyn til arbeidssikkerhet og for å beskytte virksomhetens eiendeler, og bare etter en kollektiv avtale med RSU eller RSA (for virksomheter i flere provinser eller regioner, med de relativt mest representative fagforeningene på nasjonalt nivå) eller, hvis det ikke er inngått noen avtale, etter tillatelse fra det territoriale kontoret i det nasjonale arbeidstilsynet (Ispettorato nazionale del lavoro) (eller dets sentrale kontor). Nr. 2 utelukker imidlertid verktøy som arbeidstakeren bruker for å utføre arbeidet, og verktøy for registrering av adgang og oppmøte: hvis systemet virkelig hører hjemme der, kreves verken avtale eller tillatelse. Hvilken kategori systemet hører til, må vurderes før installasjonen. Å bruke det på en annen måte enn det som er godkjent, er den raskeste veien til en sanksjon.',
         nl: 'GPS is in de regel een instrument waaruit ook toezicht op afstand van werknemers kan voortvloeien. Artikel 4, lid 1, van het Werknemersstatuut staat dit alleen toe voor organisatorische en productiebehoeften, veiligheid op het werk en bescherming van het bedrijfsvermogen, en alleen na een collectieve overeenkomst met de RSU of RSA (bij bedrijven verspreid over meerdere provincies of regio\'s: met de landelijk meest representatieve vakbonden) of, bij gebrek aan overeenkomst, na toestemming van het territoriale kantoor van de nationale Arbeidsinspectie (of het hoofdkantoor). Lid 2 sluit echter middelen uit die de werknemer gebruikt om zijn werk te verrichten en middelen voor registratie van toegang en aanwezigheid: valt het systeem daar echt onder, dan is geen overeenkomst of toestemming nodig. De kwalificatie moet vóór de installatie worden beoordeeld. Het op een andere manier gebruiken dan toegestaan is de snelste weg naar een sanctie.',
         ru: "GPS, как правило, является инструментом, который может приводить и к дистанционному контролю работников. Ст. 4 ч. 1 Статута трудящихся (Statuto dei Lavoratori) допускает его использование только для организационных и производственных нужд, для безопасности труда и для защиты имущества предприятия, и только после коллективного соглашения с RSU или RSA (для предприятий, действующих в нескольких провинциях или регионах: с наиболее представительными на национальном уровне профсоюзными объединениями) либо, при отсутствии соглашения, после разрешения территориального отделения Национальной инспекции труда (или её центрального отделения). Часть 2, однако, исключает инструменты, которые работник использует для выполнения трудовой функции, а также инструменты учёта доступа и посещаемости: если система действительно подпадает под эту часть, ни соглашение, ни разрешение не требуются. Квалификацию необходимо оценить до установки. Использование в нарушение полученного разрешения является самым коротким путём к санкции.",
+        el: 'Το GPS είναι κατά κανόνα εργαλείο από το οποίο μπορεί να προκύψει και εξ αποστάσεως έλεγχος των εργαζομένων. Το άρθρο 4 παρ. 1 του Statuto dei Lavoratori (Καταστατικού των Εργαζομένων, ν. 300/1970) επιτρέπει τη χρήση του μόνο για οργανωτικές και παραγωγικές ανάγκες, για την ασφάλεια της εργασίας και για την προστασία της περιουσίας της επιχείρησης, και μόνο έπειτα από συλλογική συμφωνία με RSU ή RSA (για επιχειρήσεις σε περισσότερες επαρχίες ή περιφέρειες, με τις συνδικαλιστικές οργανώσεις που είναι συγκριτικά πιο αντιπροσωπευτικές σε εθνικό επίπεδο) ή, ελλείψει συμφωνίας, έπειτα από άδεια της εδαφικής υπηρεσίας της Εθνικής Επιθεώρησης Εργασίας (ή της κεντρικής υπηρεσίας). Η παράγραφος 2 όμως εξαιρεί τα εργαλεία που χρησιμοποιεί ο εργαζόμενος για να παράσχει την εργασία του και τα εργαλεία καταγραφής εισόδων και παρουσιών: αν το σύστημα εμπίπτει πράγματι εκεί, δεν απαιτείται συμφωνία ή άδεια. Ο χαρακτηρισμός πρέπει να αξιολογηθεί πριν από την εγκατάσταση. Η χρήση που αποκλίνει από την εγκεκριμένη είναι ο ταχύτερος δρόμος προς την κύρωση.',
       },
       fonte: FONTE_STATUTO_ART4,
     },
@@ -142,6 +146,7 @@ export const italia: SchedaPaese = {
         nb: 'Posisjonen registreres bare ved stempling, uten kontinuerlig overvåking',
         nl: 'Locatie alleen bij het in- en uitklokken vastgelegd, zonder doorlopende monitoring',
         ru: "Фиксация местоположения только в момент отметки, без непрерывного мониторинга",
+        el: 'Εντοπισμός θέσης μόνο κατά το χτύπημα κάρτας, χωρίς συνεχή παρακολούθηση',
       },
       risposta: 'si',
       dettaglio: {
@@ -156,6 +161,7 @@ export const italia: SchedaPaese = {
         nb: 'Det er grensen mellom registrering av oppmøte og fjernovervåking. Tribunale di Cosenza (tingretten i Cosenza) tok i dom nr. 972 av 1. juli 2026 til følge innsigelsen mot Garantes vedtak nr. 135 av 13. mars 2025, som hadde ilagt en offentlig forvaltning en bot på 50 000 euro for en stemplingsapp ved hjemmearbeid: Garante har midlertidig fjernet vedtaket fra nettstedet sitt. Ifølge gjengivelsene av avgjørelsen er det avgjørende for dommeren at posisjonen bare hentes inn i selve stemplingsøyeblikket, uten å gi mulighet for kontinuerlig overvåking av forflytninger: slik utformet hører systemet til blant verktøyene for registrering av adgang og oppmøte i art. 4 nr. 2. Merk: dette er en dom i første instans og ikke en avgjørelse fra kassasjonsdomstolen, og den fjerner ikke de øvrige forpliktelsene. I avsnittene som gjengis i en kommentar fra et advokatfirma, beskriver dommen et system som registrerer koordinater, dag og klokkeslett «bare i selve stemplingsøyeblikket», og setter det på linje med verktøyene i art. 4 nr. 2; i saken hadde organet uansett også innført garantiene i nr. 1 (fagforeningsavtale). I motsatt ende kostet det et helseforetak en sanksjon i mai 2026 å registrere posisjonen hvert sekstiende sekund med umiddelbar visning på skjerm.',
         nl: 'Dit is de grens tussen aanwezigheidsregistratie en toezicht op afstand. De rechtbank van Cosenza heeft met vonnis nr. 972 van 1 juli 2026 het verzet tegen besluit nr. 135 van 13 maart 2025 van de Garante toegewezen, waarmee een overheidsinstantie 50.000 euro boete kreeg voor een klok-app bij thuiswerken: de Garante heeft dat besluit tijdelijk van haar website gehaald. Volgens de berichtgeving over de uitspraak is voor de rechter beslissend dat de positie alleen op het moment van klokken wordt vastgelegd, zonder doorlopende volging van verplaatsingen: zo ingericht valt het systeem onder de toegangs- en aanwezigheidsregistratie van artikel 4, lid 2. Let op: het is een uitspraak in eerste aanleg, geen arrest van het hooggerechtshof, en de overige verplichtingen blijven gelden. In de passages die een commentaar van een advocatenkantoor weergeeft, beschrijft het vonnis een systeem dat coördinaten, dag en tijdstip “alleen op het moment van klokken” vastlegt en het gelijkstelt met de middelen van artikel 4, lid 2; in die zaak had de instantie hoe dan ook ook de waarborgen van lid 1 (vakbondsakkoord) genomen. Aan de andere kant kostte het vastleggen van de positie elke zestig seconden met realtime weergave een zorginstelling in mei 2026 een boete.',
         ru: "Это граница, отделяющая учёт посещаемости от дистанционного контроля. Суд Козенцы решением № 972 от 1 июля 2026 г. удовлетворил возражение против решения Garante № 135 от 13 марта 2025 г., которым публичная администрация была оштрафована на 50 000 евро за приложение для отметки при гибкой удалённой работе (lavoro agile): Garante временно удалил это решение со своего сайта. Согласно сообщениям о решении, для судьи определяющим является то, что местоположение фиксируется только в момент отметки и не позволяет непрерывно отслеживать перемещения: при такой конфигурации система относится к инструментам учёта доступа и посещаемости по ст. 4 ч. 2. Внимание: это решение суда первой инстанции, а не постановление Кассационного суда, и оно не отменяет остальных обязанностей. В фрагментах, приведённых в комментарии юридической фирмы, решение описывает систему, фиксирующую координаты, день и время «только в момент отметки», и сближает её с инструментами по ст. 4 ч. 2; в том деле учреждение, тем не менее, приняло и гарантии по ч. 1 (профсоюзное соглашение). Напротив, фиксация местоположения каждые шестьдесят секунд с отображением в реальном времени обошлась одному медицинскому учреждению (azienda sanitaria) в штраф в мае 2026 г.",
+        el: 'Αυτό είναι το όριο που χωρίζει την καταγραφή παρουσιών από τον εξ αποστάσεως έλεγχο. Το Πρωτοδικείο της Cosenza, με την απόφαση αρ. 972 της 1ης Ιουλίου 2026, έκανε δεκτή την ανακοπή κατά της απόφασης της Garante αρ. 135 της 13ης Μαρτίου 2025, η οποία είχε επιβάλει πρόστιμο 50.000 ευρώ σε δημόσια διοίκηση για εφαρμογή χτυπήματος κάρτας στην τηλεργασία: η Garante αφαίρεσε προσωρινά την απόφαση από τον ιστότοπό της. Σύμφωνα με τις αναφορές για την απόφαση, για τον δικαστή καθοριστικό είναι ότι η θέση λαμβάνεται μόνο τη στιγμή του χτυπήματος κάρτας, χωρίς να επιτρέπεται συνεχής παρακολούθηση των μετακινήσεων: έτσι διαμορφωμένο, το σύστημα εμπίπτει στα εργαλεία καταγραφής εισόδων και παρουσιών του άρθρου 4 παρ. 2. Προσοχή: πρόκειται για απόφαση πρώτου βαθμού και όχι για κρίση του Αρείου Πάγου (Cassazione), και δεν καταργεί τις υπόλοιπες υποχρεώσεις. Στα αποσπάσματα που παρατίθενται σε σχόλιο δικηγορικού γραφείου, η απόφαση περιγράφει σύστημα που καταγράφει συντεταγμένες, ημέρα και ώρα «μόνο τη στιγμή του χτυπήματος κάρτας» και το εξομοιώνει με τα εργαλεία του άρθρου 4 παρ. 2· στην υπόθεση ο φορέας είχε πάντως υιοθετήσει και τις εγγυήσεις της παραγράφου 1 (συμφωνία με τα συνδικάτα). Στον αντίποδα, η καταγραφή της θέσης κάθε εξήντα δευτερόλεπτα με προβολή σε πραγματικό χρόνο κόστισε πρόστιμο σε μια υγειονομική επιχείρηση τον Μάιο του 2026.',
       },
       fonte: FONTE_PROVV_ARSAC,
     },
@@ -172,6 +178,7 @@ export const italia: SchedaPaese = {
         nb: 'Skriftlig personvernerklæring til de ansatte, fullstendig og sannferdig (art. 13 i GDPR)',
         nl: 'Schriftelijke privacyverklaring aan werknemers, volledig en waarheidsgetrouw (artikel 13 AVG)',
         ru: "Письменное уведомление работников, полное и достоверное (ст. 13 GDPR)",
+        el: 'Γραπτή ενημέρωση των εργαζομένων, πλήρης και αληθής (άρθρο 13 ΓΚΠΔ)',
       },
       risposta: 'si',
       dettaglio: {
@@ -186,6 +193,7 @@ export const italia: SchedaPaese = {
         nb: 'Arbeidstakeren må tydelig og sannferdig få vite at vedkommende geolokaliseres, hvordan, når og hvorfor (art. 13 i GDPR). I saken om godstransport fantes erklæringen, men den var full av uoverensstemmelser og skrivefeil: for Garante er det det samme som å ikke ha noen.',
         nl: 'De werknemer moet duidelijk en waarheidsgetrouw weten dat hij wordt gelokaliseerd, hoe, wanneer en waarom (artikel 13 AVG). In de zaak van het wegtransport bestond de verklaring wel, maar zat ze vol tegenstrijdigheden en typefouten: voor de Garante staat dat gelijk aan er geen hebben.',
         ru: "Работник должен ясно и достоверно знать, что его геолокализуют, как, когда и зачем (ст. 13 GDPR). В деле об автотранспортной компании уведомление существовало, но было полно несоответствий и опечаток: для Garante это равносильно его отсутствию.",
+        el: 'Ο εργαζόμενος πρέπει να γνωρίζει με σαφή και αληθή τρόπο ότι εντοπίζεται γεωγραφικά, πώς, πότε και γιατί (άρθρο 13 ΓΚΠΔ). Στην υπόθεση των οδικών μεταφορών η ενημέρωση υπήρχε, αλλά γεμάτη ασυνέπειες και λάθη: για την Garante είναι σαν να μην υπήρχε.',
       },
       fonte: FONTE_PROVV_AUTOTRASPORTI,
     },
@@ -202,6 +210,7 @@ export const italia: SchedaPaese = {
         nb: 'Forbud mot kontinuerlig sporing: posisjonen samles inn bare når det er behov for det (dataminimering)',
         nl: 'Verbod op continue tracking: locatie alleen verzameld wanneer nodig (minimalisatie)',
         ru: "Запрет непрерывного отслеживания: местоположение собирается только при необходимости (минимизация данных)",
+        el: 'Απαγόρευση συνεχούς παρακολούθησης: η θέση συλλέγεται μόνο όταν χρειάζεται (ελαχιστοποίηση)',
       },
       risposta: 'si',
       dettaglio: {
@@ -216,6 +225,7 @@ export const italia: SchedaPaese = {
         nb: 'Å følge kjøretøyet kontinuerlig, pauser inkludert, bryter med prinsippet om dataminimering (art. 5 i GDPR). Posisjonen samles inn når den tjener et legitimt formål, ikke for å alltid vite hvor personen er. Den kontinuerlige sporingen er en av grunnene til sanksjonen på 50 000 € mot transportselskapet.',
         nl: 'Het voertuig continu volgen, pauzes inbegrepen, schendt het minimalisatiebeginsel (artikel 5 AVG). De locatie wordt verzameld wanneer ze een legitiem doel dient, niet om altijd te weten waar de persoon is. Continue tracking is een van de redenen voor de boete van 50.000 EUR aan het wegtransportbedrijf.',
         ru: "Непрерывное отслеживание транспортного средства, включая перерывы, нарушает принцип минимизации данных (ст. 5 GDPR). Местоположение собирается тогда, когда это нужно для законной цели, а не для того, чтобы всегда знать, где находится человек. Непрерывное отслеживание стало одной из причин штрафа в 50 000 € для автотранспортной компании.",
+        el: 'Η συνεχής παρακολούθηση του οχήματος, διαλείμματα συμπεριλαμβανομένων, παραβιάζει την αρχή της ελαχιστοποίησης (άρθρο 5 ΓΚΠΔ). Η θέση συλλέγεται όταν εξυπηρετεί έναν νόμιμο σκοπό, όχι για να γνωρίζεις πάντα πού βρίσκεται το πρόσωπο. Η συνεχής παρακολούθηση είναι ένας από τους λόγους του προστίμου των 50.000 € στην εταιρεία οδικών μεταφορών.',
       },
       fonte: FONTE_PROVV_AUTOTRASPORTI,
     },
@@ -232,6 +242,7 @@ export const italia: SchedaPaese = {
         nb: 'Bruk av dataene bare til det oppgitte formålet; data som er samlet inn ulovlig, gjenbrukes ikke, heller ikke i en disiplinærsak',
         nl: 'Gebruik van de gegevens uitsluitend voor het verklaarde doel; onrechtmatig verzamelde gegevens worden niet hergebruikt, ook niet in een disciplinaire procedure',
         ru: "Использование данных только для заявленной цели; данные, собранные незаконно, повторно не используются, в том числе в дисциплинарном производстве",
+        el: 'Χρήση των δεδομένων μόνο για τον δηλωμένο σκοπό· τα δεδομένα που συλλέχθηκαν παράνομα δεν επαναχρησιμοποιούνται, ούτε σε πειθαρχική διαδικασία',
       },
       risposta: 'si',
       dettaglio: {
@@ -246,6 +257,7 @@ export const italia: SchedaPaese = {
         nb: 'Posisjonsdata skal bare brukes til formålet de ble samlet inn for (art. 5 i GDPR, formålsbegrensning). Art. 4 nr. 3 i arbeidstakerstatutten tillater at de innsamlede opplysningene brukes «til alle formål som henger sammen med arbeidsforholdet», også disiplinære, bare hvis arbeidstakeren har fått tilstrekkelig informasjon om hvordan verktøyene brukes og om kontrollene, og hvis behandlingen overholder personvernreglene. Hvis innsamlingen var ulovlig eller uforholdsmessig, er det i seg selv ulovlig å bruke disse dataene i en disiplinærsak: det har Garante fastslått i saken om helseforetaket i Liguria (vedtak nr. 382/2026). Det gjelder også omfanget av innsamlingen: i Pioneer-saken (vedtak nr. 755/2025, telematikk om kjørestil, uten geolokalisering) ble kjørestilpoengene også beregnet på private turer og turer utenfor arbeidstid, og dataene var tilgjengelige for ansatte i andre selskaper i konsernet uten at disse var utpekt som databehandlere etter art. 28.',
         nl: 'Locatiegegevens mogen alleen worden gebruikt voor het doel waarvoor ze zijn verzameld (artikel 5 AVG, doelbinding). Artikel 4, lid 3, van het Werknemersstatuut staat toe de verzamelde informatie te gebruiken «voor alle doeleinden die met de arbeidsverhouding verband houden», ook disciplinaire, maar alleen als de werknemer adequaat is geïnformeerd over het gebruik van de middelen en de uitvoering van controles en de verwerking voldoet aan de privacywetgeving. Was de verzameling onrechtmatig of disproportioneel, dan is het gebruik van die gegevens in een disciplinaire procedure zelf onrechtmatig: dat besliste de Garante in de zaak van de Ligurische zorginstelling (besluit nr. 382/2026). Hetzelfde geldt voor de reikwijdte van de verzameling: in de zaak Pioneer (besluit nr. 755/2025, rijstijltelematica, zonder geolocatie) werd de rijstijlscore ook op privéritten en buiten werktijd berekend, en medewerkers van andere groepsvennootschappen hadden toegang tot de gegevens zonder als verwerker op grond van artikel 28 te zijn aangewezen.',
         ru: "Данные о местоположении используются только для той цели, для которой они были собраны (ст. 5 GDPR, ограничение цели). Ст. 4 ч. 3 Статута разрешает использовать собранную информацию «для всех целей, связанных с трудовыми отношениями», в том числе дисциплинарных, только если работнику была дана надлежащая информация о способах использования и о проверках и если обработка соответствует законодательству о защите персональных данных. Если сбор был незаконным или несоразмерным, использование этих данных в дисциплинарном производстве также незаконно: так постановил Garante по делу лигурийского медицинского учреждения (решение № 382/2026). Это относится и к объёму сбора: по делу Pioneer (решение № 755/2025, телематика стиля вождения, без геолокализации) оценка стиля вождения рассчитывалась и по частным поездкам и вне рабочего времени, а данные были доступны сотрудникам других компаний группы, не назначенных обработчиками по ст. 28.",
+        el: 'Τα δεδομένα θέσης χρησιμοποιούνται μόνο για τον σκοπό για τον οποίο συλλέχθηκαν (άρθρο 5 ΓΚΠΔ, περιορισμός του σκοπού). Το άρθρο 4 παρ. 3 του Statuto επιτρέπει τη χρήση των πληροφοριών που συλλέχθηκαν «για κάθε σκοπό που συνδέεται με την εργασιακή σχέση», και για πειθαρχικούς σκοπούς, μόνο αν ο εργαζόμενος έχει ενημερωθεί επαρκώς για τους τρόπους χρήσης και για τους ελέγχους και αν η επεξεργασία τηρεί τη νομοθεσία περί απορρήτου. Αν η συλλογή ήταν παράνομη ή δυσανάλογη, η χρήση των δεδομένων αυτών σε πειθαρχική διαδικασία είναι με τη σειρά της παράνομη: το έκρινε η Garante στην υπόθεση της υγειονομικής επιχείρησης της Λιγουρίας (απόφ. αρ. 382/2026). Ισχύει και για την έκταση της συλλογής: στην υπόθεση Pioneer (απόφ. αρ. 755/2025, τηλεματική για το στυλ οδήγησης, χωρίς γεωγραφικό εντοπισμό) η βαθμολογία οδήγησης υπολογιζόταν και στα ιδιωτικά ταξίδια και εκτός ωραρίου, και τα δεδομένα ήταν προσβάσιμα σε προσωπικό άλλων εταιρειών του ομίλου χωρίς να έχουν οριστεί εκτελούντες επεξεργασία κατά το άρθρο 28.',
       },
       fonte: FONTE_PROVV_ATS_LIGURIA,
     },
@@ -262,6 +274,7 @@ export const italia: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (DPIA)',
         nl: 'Gegevensbeschermingseffectbeoordeling (DPIA)',
         ru: "Оценка воздействия на защиту данных (DPIA)",
+        el: 'Εκτίμηση αντικτύπου σχετικά με την προστασία δεδομένων (DPIA)',
       },
       risposta: 'dipende',
       dettaglio: {
@@ -276,6 +289,7 @@ export const italia: SchedaPaese = {
         nb: 'For en behandling av denne typen kreves en DPIA (art. 35 i GDPR), som uttrykkelig er oppført i listen i vedlegget til Garantes vedtak nr. 467 av 11. oktober 2018 om teknologiske systemer i arbeidsforholdet, geolokalisering inkludert. Den må gjennomføres før systemet slås på: i saken om helseforetaket i Liguria var den manglende vurderingen blant anmerkningene.',
         nl: 'Voor een verwerking van dit type is een DPIA (artikel 35 AVG) vereist, uitdrukkelijk opgenomen in de bijlage bij besluit nr. 467 van 11 oktober 2018 van de Garante voor technologische systemen in de arbeidsverhouding, geolocatie inbegrepen. Zij moet vóór ingebruikname worden uitgevoerd: in de zaak van de Ligurische zorginstelling behoorde de ontbrekende beoordeling tot de verwijten.',
         ru: "Для обработки такого рода требуется DPIA (ст. 35 GDPR), прямо предусмотренная перечнем, приложенным к решению Garante № 467 от 11 октября 2018 г., для технологических систем в трудовых отношениях, включая геолокализацию. Её необходимо провести до запуска системы: в деле лигурийского медицинского учреждения отсутствие оценки вошло в число предъявленных нарушений.",
+        el: 'Για επεξεργασία αυτού του είδους απαιτείται DPIA (άρθρο 35 ΓΚΠΔ), την οποία προβλέπει ρητά ο κατάλογος που επισυνάπτεται στην Απόφαση της Garante αρ. 467 της 11ης Οκτωβρίου 2018 για τα τεχνολογικά συστήματα στην εργασιακή σχέση, συμπεριλαμβανομένου του γεωγραφικού εντοπισμού. Γίνεται πριν ενεργοποιηθεί το σύστημα: στην υπόθεση της υγειονομικής επιχείρησης της Λιγουρίας η έλλειψη της εκτίμησης συγκαταλέχθηκε στις παραβάσεις.',
       },
       fonte: FONTE_PROVV_ATS_LIGURIA,
     },
@@ -292,6 +306,7 @@ export const italia: SchedaPaese = {
         nb: 'Lagring av data begrenset til den tiden som er strengt nødvendig',
         nl: 'Bewaring van de gegevens beperkt tot de strikt noodzakelijke termijn',
         ru: "Хранение данных в течение строго необходимого срока",
+        el: 'Διατήρηση δεδομένων περιορισμένη στον απολύτως αναγκαίο χρόνο',
       },
       risposta: 'si',
       dettaglio: {
@@ -306,6 +321,7 @@ export const italia: SchedaPaese = {
         nb: 'Dataene lagres så lenge formålet krever, ikke «for sikkerhets skyld» på ubestemt tid. I saken om godstransport bidro lagringen i 180 dager til sanksjonen.',
         nl: 'De gegevens worden bewaard voor de tijd die nodig is voor het doel, niet "voor de zekerheid" voor onbepaalde tijd. In de zaak van het wegtransport droeg de bewaring gedurende 180 dagen bij aan de sanctie.',
         ru: "Данные хранятся столько, сколько нужно для цели, а не «на всякий случай» бессрочно. В деле об автотранспортной компании хранение в течение 180 дней способствовало назначению штрафа.",
+        el: 'Τα δεδομένα διατηρούνται για τον χρόνο που απαιτεί ο σκοπός, όχι «για ασφάλεια» επ\' αόριστον. Στην υπόθεση των οδικών μεταφορών η διατήρηση για 180 ημέρες συνέβαλε στην κύρωση.',
       },
       fonte: FONTE_PROVV_AUTOTRASPORTI,
     },
@@ -322,6 +338,7 @@ export const italia: SchedaPaese = {
         nb: 'Legitimt og oppgitt formål (organisatorisk, sikkerhet, beskyttelse av virksomhetens eiendeler)',
         nl: 'Legitiem en verklaard doel (organisatorisch, veiligheid, bescherming van het bedrijfsvermogen)',
         ru: "Законная и заявленная цель (организационная, безопасность, защита имущества)",
+        el: 'Νόμιμος και δηλωμένος σκοπός (οργανωτικός, ασφάλειας, προστασίας της περιουσίας)',
       },
       risposta: 'si',
       dettaglio: {
@@ -336,6 +353,7 @@ export const italia: SchedaPaese = {
         nb: 'Organisatoriske behov, sikkerhet eller beskyttelse av virksomhetens eiendeler er legitime formål. Aldri «å kontrollere hva den ansatte gjør»: det er nettopp det art. 4 forbyr.',
         nl: 'Organisatorische behoeften, veiligheid of bescherming van het bedrijfsvermogen zijn legitieme doelen. Nooit "controleren wat de werknemer doet": dat is precies wat artikel 4 verbiedt.',
         ru: "Организационные нужды, безопасность или защита имущества предприятия являются законными целями. Никогда не «контролировать, что делает сотрудник»: именно это ст. 4 запрещает.",
+        el: 'Οργανωτικές ανάγκες, ανάγκες ασφάλειας ή προστασίας της περιουσίας της επιχείρησης είναι νόμιμοι σκοποί. Ποτέ «να ελέγχεις τι κάνει ο εργαζόμενος»: είναι ακριβώς αυτό που απαγορεύει το άρθρο 4.',
       },
       fonte: FONTE_STATUTO_ART4,
     },
@@ -356,6 +374,7 @@ export const italia: SchedaPaese = {
         nb: 'Hvis verktøyet hører under nr. 1 i art. 4 (det er ikke bare registrering av oppmøte og heller ikke et arbeidsverktøy, nr. 2), må du gjennomføre prosedyren først, ikke etterpå: avtale med fagforeningsrepresentantene (RSA eller RSU) eller tillatelse fra det nasjonale arbeidstilsynet (Ispettorato nazionale del lavoro). Uten den bryter du reglene fra første minutt.',
         nl: 'Valt het middel onder artikel 4, lid 1 (het is niet enkel een aanwezigheidsregistratie of werkmiddel, lid 2), voltooi de procedure dan eerst, niet later: een overeenkomst met de vakbondsvertegenwoordigingen (RSA of RSU) of toestemming van de nationale Arbeidsinspectie. Zonder die bent u vanaf de eerste minuut buitenspel.',
         ru: "Если инструмент подпадает под ч. 1 ст. 4 (это не только учёт посещаемости и не рабочий инструмент по ч. 2), завершите процедуру раньше, а не после: соглашение с профсоюзными представительствами (RSA или RSU) либо разрешение Национальной инспекции труда. Без этого вы вне закона с первой минуты.",
+        el: 'Αν το εργαλείο εμπίπτει στην παράγραφο 1 του άρθρου 4 (δεν είναι μόνο καταγραφή παρουσιών ούτε εργαλείο εργασίας, παράγραφος 2), ολοκλήρωσε τη διαδικασία πριν, όχι μετά: συμφωνία με τους συνδικαλιστικούς εκπροσώπους (RSA ή RSU) ή άδεια της Εθνικής Επιθεώρησης Εργασίας. Χωρίς αυτά, είσαι εκτός νόμου από το πρώτο λεπτό.',
       },
     },
     {
@@ -372,6 +391,7 @@ export const italia: SchedaPaese = {
         nb: 'Fastsett et legitimt og oppgitt formål: organisatoriske behov, sikkerhet, beskyttelse av virksomhetens eiendeler. Aldri «å kontrollere hva den ansatte gjør».',
         nl: 'Bepaal een legitiem en verklaard doel: organisatorische behoeften, veiligheid, bescherming van het bedrijfsvermogen. Nooit "controleren wat de werknemer doet".',
         ru: "Определите законную и заявленную цель: организационные нужды, безопасность, защита имущества предприятия. Никогда не «контролировать, что делает сотрудник».",
+        el: 'Όρισε έναν νόμιμο και δηλωμένο σκοπό: οργανωτικές ανάγκες, ασφάλεια, προστασία της περιουσίας της επιχείρησης. Ποτέ «να ελέγχεις τι κάνει ο εργαζόμενος».',
       },
     },
     {
@@ -388,6 +408,7 @@ export const italia: SchedaPaese = {
         nb: 'Utarbeid en fullstendig og sannferdig personvernerklæring etter art. 13 i GDPR: uten skrivefeil, uten gråsoner.',
         nl: 'Stel een volledige en waarheidsgetrouwe privacyverklaring op conform artikel 13 AVG: zonder typefouten, zonder grijze gebieden.',
         ru: "Подготовьте полное и достоверное уведомление по ст. 13 GDPR: без опечаток, без серых зон.",
+        el: 'Ετοίμασε πλήρη και αληθή ενημέρωση κατά το άρθρο 13 ΓΚΠΔ: χωρίς λάθη, χωρίς γκρίζες ζώνες.',
       },
     },
     {
@@ -404,6 +425,7 @@ export const italia: SchedaPaese = {
         nb: 'Bruk dataminimering: samle bare inn de dataene du trenger, og bare når du trenger dem. Ingen sporing under pauser, sørg for mulighet til å slå den av.',
         nl: 'Pas minimalisatie toe: verzamel alleen de gegevens die u nodig hebt, alleen wanneer u ze nodig hebt. Geen tracking tijdens pauzes, voorzie de mogelijkheid om het uit te schakelen.',
         ru: "Применяйте минимизацию: собирайте только нужные данные и только тогда, когда они нужны. Никакого отслеживания во время перерывов, предусмотрите возможность отключения.",
+        el: 'Εφάρμοσε την ελαχιστοποίηση: συλλέγεις μόνο τα δεδομένα που χρειάζονται, μόνο όταν χρειάζονται. Καμία παρακολούθηση στα διαλείμματα, πρόβλεψε δυνατότητα απενεργοποίησης.',
       },
     },
     {
@@ -420,6 +442,7 @@ export const italia: SchedaPaese = {
         nb: 'Begrens lagringen: dataene lagres så lenge formålet krever, ikke på ubestemt tid.',
         nl: 'Beperk de bewaring: de gegevens worden bewaard voor de tijd die nodig is voor het doel, niet voor onbepaalde tijd.',
         ru: "Ограничьте хранение: данные хранятся столько, сколько нужно для цели, а не бессрочно.",
+        el: 'Περιόρισε τη διατήρηση: τα δεδομένα κρατιούνται για τον χρόνο που απαιτεί ο σκοπός, όχι επ\' αόριστον.',
       },
     },
     {
@@ -436,6 +459,7 @@ export const italia: SchedaPaese = {
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) når risikoen er høy (art. 35 i GDPR).',
         nl: 'Voer de effectbeoordeling (DPIA) uit wanneer het risico hoog is (artikel 35 AVG).',
         ru: "Проведите оценку воздействия (DPIA), когда риск высок (ст. 35 GDPR).",
+        el: 'Κάνε την εκτίμηση αντικτύπου (DPIA) όταν ο κίνδυνος είναι υψηλός (άρθρο 35 ΓΚΠΔ).',
       },
     },
     {
@@ -452,6 +476,7 @@ export const italia: SchedaPaese = {
         nb: 'Hold deg til det oppgitte formålet: data som er samlet inn for ett formål, gjenbrukes, for eksempel i en disiplinærsak, bare hvis innsamlingen var lovlig og arbeidstakeren var blitt informert (art. 4 nr. 3 i arbeidstakerstatutten).',
         nl: 'Houd je aan het verklaarde doel: gegevens die voor één doel zijn verzameld, worden, bijvoorbeeld in een disciplinaire procedure, alleen hergebruikt als de verzameling rechtmatig was en de werknemer was geïnformeerd (artikel 4, lid 3, van het Werknemersstatuut).',
         ru: "Сохраняйте заявленную цель: данные, собранные для одной цели, повторно используются, например в дисциплинарном производстве, только если сбор был законным, а работник был проинформирован (ст. 4 ч. 3 Статута).",
+        el: 'Τήρησε τον δηλωμένο σκοπό: τα δεδομένα που συλλέχθηκαν για έναν σκοπό επαναχρησιμοποιούνται, για παράδειγμα σε πειθαρχική διαδικασία, μόνο αν η συλλογή ήταν νόμιμη και ο εργαζόμενος είχε ενημερωθεί (άρθρο 4 παρ. 3 Statuto).',
       },
     },
     {
@@ -468,6 +493,7 @@ export const italia: SchedaPaese = {
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og utlevere personvernerklæringen på nytt, og hvis det nye verktøyet hører under nr. 1 i art. 4, må du sjekke om fagforeningsavtalen eller tillatelsen fra arbeidstilsynet må fornyes. Ofte endres leverandøren (databehandleren), dataene som samles inn og metodene: informasjonen som ble utlevert tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werk de privacyverklaring bij en verstrek deze opnieuw, en controleer, als het nieuwe instrument onder lid 1 van art. 4 valt, of de vakbondsovereenkomst of de toestemming van de Arbeidsinspectie moet worden vernieuwd. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "Если вы меняете систему или программу мониторинга, обновите и повторно вручите уведомление и, если новый инструмент подпадает под ч. 1 ст. 4, проверьте, нужно ли возобновить профсоюзное соглашение или разрешение Инспекции. Часто меняются поставщик (обработчик данных), собираемые данные и способы: ранее врученного уведомления недостаточно.",
+        el: 'Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση και, αν το νέο εργαλείο εμπίπτει στην παράγραφο 1 του άρθρου 4, έλεγξε αν πρέπει να ανανεωθεί η συμφωνία με τα συνδικάτα ή η άδεια της Επιθεώρησης. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και ο τρόπος λειτουργίας: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.',
       },
     },
   ],
@@ -501,6 +527,7 @@ export const italia: SchedaPaese = {
       nb: '120 000 €',
       nl: '120.000 EUR',
       ru: "120 000 €",
+      el: '120.000 €',
     },
     casoCitato: {
       it: 'Garante Privacy, Provvedimento n. 755 del 18 dicembre 2025 (Pioneer Hi-Bred Italia Sementi, doc-web 10213711), reso noto con la newsletter del 29 gennaio 2026: 5 dipendenti, dispositivi telematici sui veicoli con punteggio sullo stile di guida calcolato anche sui viaggi privati. Il Garante ha accertato che non erano trattati dati di geolocalizzazione, perché il contratto con il fornitore non prevede quel servizio: è un caso affine, non di GPS (telematica sullo stile di guida, cioè un controllo dei lavoratori a distanza). Sanzione di 120.000 euro per gli artt. 5, 6, 13, 28 e 88 GDPR e 2-quaterdecies, 113 e 114 del Codice, per l’assenza delle garanzie dell’art. 4 dello Statuto.',
@@ -514,6 +541,7 @@ export const italia: SchedaPaese = {
       nb: 'Garante Privacy, vedtak nr. 755 av 18. desember 2025 (Pioneer Hi-Bred Italia Sementi, doc-web 10213711), offentliggjort med nyhetsbrevet av 29. januar 2026: 5 ansatte, telematikkenheter i kjøretøy med en poengsum for kjørestil som også ble beregnet på private turer. Garante fastslo at det ikke ble behandlet geolokaliseringsdata, fordi kontrakten med leverandøren ikke omfatter den tjenesten: det er en beslektet sak, ikke en GPS-sak (telematikk om kjørestil, altså en fjernkontroll av arbeidstakere). Sanksjon på 120 000 euro for art. 5, 6, 13, 28 og 88 i GDPR og art. 2-quaterdecies, 113 og 114 i personvernkodeksen (Codice), fordi garantiene i art. 4 i arbeidstakerstatutten manglet.',
       nl: 'Garante Privacy, besluit nr. 755 van 18 december 2025 (Pioneer Hi-Bred Italia Sementi, doc-web 10213711), bekendgemaakt met de nieuwsbrief van 29 januari 2026: 5 werknemers, telematica-apparatuur in de voertuigen met een rijstijlscore die ook privéritten meetelde. De Garante stelde vast dat er geen geolocatiegegevens werden verwerkt, omdat het contract met de leverancier die dienst niet omvat: het is een verwant geval, geen GPS-zaak (rijstijltelematica, dus toezicht op afstand op werknemers). Boete van 120.000 euro op grond van artikelen 5, 6, 13, 28 en 88 AVG en 2-quaterdecies, 113 en 114 van het Wetboek, wegens het ontbreken van de waarborgen van artikel 4 van het Werknemersstatuut.',
       ru: "Garante Privacy, решение № 755 от 18 декабря 2025 г. (Pioneer Hi-Bred Italia Sementi, doc-web 10213711), обнародовано в рассылке от 29 января 2026 г.: 5 работников, телематические устройства на транспортных средствах с оценкой стиля вождения, рассчитываемой в том числе по частным поездкам. Garante установил, что данные геолокализации не обрабатывались, так как договор с поставщиком такой услуги не предусматривает: это смежный случай, а не случай GPS (телематика стиля вождения, то есть дистанционный контроль работников). Штраф 120 000 евро за нарушение ст. 5, 6, 13, 28 и 88 GDPR и ст. 2-quaterdecies, 113 и 114 Кодекса, из-за отсутствия гарантий по ст. 4 Статута.",
+      el: 'Garante Privacy, Απόφαση αρ. 755 της 18ης Δεκεμβρίου 2025 (Pioneer Hi-Bred Italia Sementi, doc-web 10213711), που έγινε γνωστή με το ενημερωτικό δελτίο της 29ης Ιανουαρίου 2026: 5 εργαζόμενοι, τηλεματικές συσκευές σε οχήματα με βαθμολογία στυλ οδήγησης που υπολογιζόταν και στα ιδιωτικά ταξίδια. Η Garante διαπίστωσε ότι δεν γίνονταν επεξεργασία δεδομένων γεωγραφικού εντοπισμού, επειδή η σύμβαση με τον πάροχο δεν προβλέπει την υπηρεσία αυτή: πρόκειται για συγγενή υπόθεση, όχι GPS (τηλεματική στυλ οδήγησης, δηλαδή εξ αποστάσεως έλεγχος των εργαζομένων). Κύρωση 120.000 ευρώ για τα άρθρα 5, 6, 13, 28 και 88 ΓΚΠΔ και 2-quaterdecies, 113 και 114 του Κώδικα, λόγω έλλειψης των εγγυήσεων του άρθρου 4 του Statuto.',
     },
     urlFonte:
       'https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10213711',

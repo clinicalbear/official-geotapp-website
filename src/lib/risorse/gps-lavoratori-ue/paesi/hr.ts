@@ -67,6 +67,7 @@ export const croazia: SchedaPaese = {
     sv: 'Kroatien',
     nb: 'Kroatia',
     ru: 'Хорватия',
+    el: "Κροατία",
   },
   bandiera: '🇭🇷',
   federale: false,
@@ -88,6 +89,7 @@ export const croazia: SchedaPaese = {
       nb: 'Kroatia har én nasjonal myndighet, AZOP; det finnes ingen regional inndeling.',
       nl: 'Kroatie heeft een enkele nationale autoriteit, de AZOP; er is geen regionale verdeling.',
       ru: "В Хорватии один национальный орган, AZOP; регионального разделения нет.",
+      el: "Η Κροατία έχει μία ενιαία εθνική αρχή, την AZOP· δεν υπάρχει περιφερειακός διαχωρισμός.",
     },
   },
 
@@ -105,6 +107,7 @@ export const croazia: SchedaPaese = {
         nb: 'Forhåndssamtykke fra arbeidstakerrådet hvis overvåkingen følger alle bevegelser i hele arbeidstiden (Zakon o zaštiti na radu, art. 43)',
         nl: 'Voorafgaande toestemming van de ondernemingsraad als het toezicht alle bewegingen gedurende de hele werktijd volgt (Zakon o zaštiti na radu, art. 43)',
         ru: "Предварительное согласие совета работников, если наблюдение отслеживает все перемещения в течение всего рабочего времени (Zakon o zaštiti na radu, ст. 43)",
+        el: "Προηγούμενη συναίνεση του συμβουλίου εργαζομένων αν η επιτήρηση παρακολουθεί όλες τις κινήσεις καθ' όλο το ωράριο (Zakon o zaštiti na radu, άρθρο 43)",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -119,6 +122,7 @@ export const croazia: SchedaPaese = {
         nb: 'Art. 43 i loven om arbeidsmiljø sier at «overvåkingsinnretninger» som følger alle arbeidstakerens bevegelser i hele arbeidstiden bare kan brukes med forhåndssamtykke fra arbeidstakerrådet (eller fra tillitsvalgt med tilsvarende fullmakter). Teksten gjelder overvåkingsinnretninger som verktøy for sikkerhet på arbeidsplassen (nr. 6 nevner lyd og video): verken loven eller AZOP sier uttrykkelig at den også gjelder GPS, så av forsiktighet er det lurt å innhente samtykket. Der det finnes et arbeidstakerråd, pålegger arbeidslovgivningen (Zakon o radu, art. 150) i alle tilfeller å rådføre seg med det før det besluttes å innføre ny teknologi.',
         nl: 'Art. 43 van de arbeidsveiligheidswet bepaalt dat "toezichtapparaten" die alle bewegingen van de werknemer gedurende de hele werktijd volgen, alleen mogen worden gebruikt met voorafgaande toestemming van de ondernemingsraad (of van de vakbondsvertegenwoordiger met de betreffende bevoegdheden). De tekst betreft toezichtapparaten als instrument voor veiligheid op het werk (lid 6 noemt audio en video): noch de wet noch de AZOP zegt uitdrukkelijk dat dit ook voor GPS geldt, dus het is verstandig toestemming te verkrijgen. In elk geval verplicht de arbeidswet (Zakon o radu, art. 150) ertoe een bestaande ondernemingsraad te raadplegen voordat wordt besloten een nieuwe technologie in te voeren.',
         ru: "Статья 43 закона об охране труда гласит, что «устройства наблюдения», отслеживающие все перемещения работника в течение всего рабочего времени, можно использовать только с предварительного согласия совета работников (или профсоюзного представителя с соответствующими полномочиями). Текст касается устройств наблюдения как средства обеспечения безопасности труда (часть 6 упоминает аудио и видео): ни закон, ни AZOP прямо не говорят, что это относится и к GPS, поэтому из осторожности целесообразно получить согласие. В любом случае, где существует совет работников, закон о труде (Zakon o radu, ст. 150) обязывает консультироваться с ним до принятия решения о внедрении новой технологии.",
+        el: "Το άρθρο 43 του νόμου για την ασφάλεια στην εργασία ορίζει ότι οι «συσκευές επιτήρησης» που παρακολουθούν όλες τις κινήσεις του εργαζομένου καθ' όλο το ωράριο μπορούν να χρησιμοποιηθούν μόνο με την προηγούμενη συναίνεση του συμβουλίου εργαζομένων (ή του συνδικαλιστικού εκπροσώπου με τις σχετικές εξουσίες). Το κείμενο αφορά τις συσκευές επιτήρησης ως μέσο ασφάλειας στην εργασία (η παράγραφος 6 αναφέρει ήχο και βίντεο): ούτε ο νόμος ούτε η AZOP λένε ρητά ότι ισχύει και για το GPS, γι' αυτό για λόγους σύνεσης συμφέρει να εξασφαλιστεί η συναίνεση. Σε κάθε περίπτωση, όπου υπάρχει συμβούλιο εργαζομένων, ο νόμος για την εργασία (Zakon o radu, άρθρο 150) επιβάλλει να συμβουλευτείς το συμβούλιο πριν αποφασίσεις την εισαγωγή νέας τεχνολογίας.",
       },
       fonte: FONTE_ZZR_43,
       fonteAggiuntiva: FONTE_ZOR,
@@ -136,6 +140,7 @@ export const croazia: SchedaPaese = {
         nb: 'Skriftlige interne regler og informasjon til arbeidstakerne (AZOP; Zakon o radu, art. 29)',
         nl: 'Schriftelijke interne regels en informatie aan de werknemers (AZOP; Zakon o radu, art. 29)',
         ru: "Письменные внутренние правила и информирование работников (AZOP; Zakon o radu, ст. 29)",
+        el: "Γραπτοί εσωτερικοί κανόνες και ενημέρωση των εργαζομένων (AZOP· Zakon o radu, άρθρο 29)",
       },
       risposta: 'si',
       dettaglio: {
@@ -150,6 +155,7 @@ export const croazia: SchedaPaese = {
         nb: 'AZOP presiserer at det ikke er nok å informere arbeidstakerne muntlig om at GPS finnes: den må reguleres av skriftlige interne regler som er tilgjengelige for alle, og arbeidsgiveren må informere dem om at systemet finnes og om vilkårene for bruken. Også arbeidslovgivningen (Zakon o radu, art. 29 nr. 2) pålegger at det på forhånd, i bedriftens reglement, fastsettes hvilke data om arbeidstakeren som samles inn og behandles. (Plikten til å informere skriftlig «ved ansettelsen» i art. 43 nr. 6 i loven om arbeidsmiljø gjelder lyd- og videoinnretninger.)',
         nl: 'De AZOP stelt dat het niet volstaat werknemers mondeling over de GPS te informeren: die moet worden geregeld in schriftelijke interne regels die voor iedereen toegankelijk zijn, en de werkgever moet de werknemers informeren over het bestaan van het systeem en de gebruiksvoorwaarden. Ook de arbeidswet (Zakon o radu, art. 29 lid 2) verplicht ertoe vooraf in het arbeidsreglement vast te leggen welke gegevens van de werknemer worden verzameld en verwerkt. (De plicht om "bij indiensttreding" schriftelijk te informeren in art. 43 lid 6 van de arbeidsveiligheidswet betreft audio- en videoapparatuur.)',
         ru: "AZOP уточняет, что недостаточно устно сообщить работникам о наличии GPS: его необходимо урегулировать письменными внутренними правилами, доступными всем, а работодатель должен информировать их о существовании системы и условиях использования. Закон о труде (Zakon o radu, ст. 29 ч. 2) также требует заранее установить в правилах внутреннего распорядка, какие данные работника собираются и обрабатываются. (Обязанность письменно информировать «при приёме на работу» по ст. 43 ч. 6 закона об охране труда относится к аудио- и видеоустройствам.)",
+        el: "Η AZOP διευκρινίζει ότι δεν αρκεί να ενημερώνεις προφορικά τους εργαζομένους για την ύπαρξη του GPS: πρέπει να ρυθμίζεται με γραπτούς εσωτερικούς κανόνες, προσβάσιμους σε όλους, και ο εργοδότης πρέπει να τους ενημερώνει για την ύπαρξη του συστήματος και τους όρους χρήσης. Και ο νόμος για την εργασία (Zakon o radu, άρθρο 29 παρ. 2) επιβάλλει να καθορίζεται εκ των προτέρων, στον κανονισμό της επιχείρησης, ποια δεδομένα του εργαζομένου συλλέγονται και επεξεργάζονται. (Η υποχρέωση γραπτής ενημέρωσης «κατά την πρόσληψη» του άρθρου 43 παρ. 6 του νόμου για την ασφάλεια στην εργασία αφορά τις συσκευές ήχου και βίντεο.)",
       },
       fonte: FONTE_AZOP_GPS,
     },
@@ -166,6 +172,7 @@ export const croazia: SchedaPaese = {
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit voor de installatie',
         ru: "Предварительное разрешение органа до установки",
+        el: "Προηγούμενη άδεια από κάποια αρχή πριν από την εγκατάσταση",
       },
       risposta: 'no',
       dettaglio: {
@@ -180,6 +187,7 @@ export const croazia: SchedaPaese = {
         nb: 'Det kreves ingen forhåndstillatelse fra AZOP; den behandlingsansvarlige vurderer selv rettslig grunnlag og DPIA.',
         nl: 'Er is geen voorafgaande toestemming van de AZOP nodig; de verwerkingsverantwoordelijke beoordeelt zelf de rechtsgrond en de DPIA.',
         ru: "Предварительное разрешение AZOP не требуется; контролёр самостоятельно оценивает правовое основание и DPIA.",
+        el: "Δεν απαιτείται προηγούμενη άδεια από την AZOP· ο υπεύθυνος επεξεργασίας αξιολογεί μόνος του τη νομική βάση και τη DPIA.",
       },
       fonte: FONTE_AZOP_GPS,
     },
@@ -196,6 +204,7 @@ export const croazia: SchedaPaese = {
         nb: 'Bare hvis det er nødvendig på grunn av arbeidets art; data brukes bare til formålene i de interne reglene; begrenset lagring (AZOP)',
         nl: 'Alleen als de aard van het werk dit vereist; gegevens alleen gebruikt voor de doeleinden uit de interne regels; beperkte bewaring (AZOP)',
         ru: "Только если это необходимо по характеру работы; данные используются лишь для целей, указанных во внутренних правилах; срок хранения ограничен (AZOP)",
+        el: "Μόνο αν είναι αναγκαίο λόγω της φύσης της εργασίας· δεδομένα που χρησιμοποιούνται μόνο για τους σκοπούς των εσωτερικών κανόνων· περιορισμένη τήρηση (AZOP)",
       },
       risposta: 'si',
       dettaglio: {
@@ -210,6 +219,7 @@ export const croazia: SchedaPaese = {
         nb: 'Ifølge AZOP kan arbeidsgiveren installere kontrollsystemer på firmakjøretøy uten den ansattes samtykke bare når det er nødvendig på grunn av arbeidets yrkesmessige art eller som en forholdsregel (for eksempel transport av gods og personer, posttjenester). Data kan bare behandles til formålet som er fastsatt i de interne reglene, særlig hvis den ansatte også kan bruke bilen privat, og lagres bare så lenge det er nødvendig (lagringsbegrensning, art. 5 GDPR).',
         nl: 'Volgens de AZOP mag de werkgever controlesystemen in bedrijfsvoertuigen alleen zonder toestemming van de werknemer installeren wanneer dit nodig is vanwege de professionele aard van het werk of als voorzorgsmaatregel (bijvoorbeeld vervoer van goederen en personen, postdiensten). De gegevens mogen alleen worden verwerkt voor het doel dat in de interne regels is vastgelegd, in het bijzonder als de werknemer de auto ook privé mag gebruiken, en slechts zo lang worden bewaard als nodig is (opslagbeperking, art. 5 AVG).',
         ru: "По позиции AZOP работодатель может устанавливать системы контроля служебных автомобилей без согласия работника только тогда, когда это необходимо по профессиональному характеру работы или в целях предосторожности (например, перевозка грузов и людей, почтовые услуги). Данные можно обрабатывать только для цели, закреплённой во внутренних правилах, в особенности если работник может пользоваться автомобилем и в личных целях, и хранить только необходимое время (ограничение хранения, ст. 5 GDPR).",
+        el: "Για την AZOP ο εργοδότης μπορεί να εγκαταστήσει συστήματα ελέγχου των εταιρικών οχημάτων χωρίς τη συγκατάθεση του εργαζομένου μόνο όταν είναι αναγκαίο λόγω του επαγγελματικού χαρακτήρα της εργασίας ή για προληπτικά μέτρα (για παράδειγμα μεταφορά εμπορευμάτων και προσώπων, ταχυδρομικές υπηρεσίες). Τα δεδομένα μπορούν να υποβάλλονται σε επεξεργασία μόνο για τον σκοπό που καθορίζεται στους εσωτερικούς κανόνες, ιδίως αν ο εργαζόμενος μπορεί να χρησιμοποιεί το αυτοκίνητο και για ιδιωτικούς σκοπούς, και να τηρούνται μόνο για τον αναγκαίο χρόνο (περιορισμός της τήρησης, άρθρο 5 ΓΚΠΔ).",
       },
       fonte: FONTE_AZOP_GPS,
     },
@@ -226,6 +236,7 @@ export const croazia: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (DPIA) for systemer som sporer ansatte (AZOPs liste)',
         nl: 'Effectbeoordeling (DPIA) voor systemen voor het volgen van werknemers (AZOP-lijst)',
         ru: "Оценка воздействия (DPIA) для систем отслеживания работников (перечень AZOP)",
+        el: "Εκτίμηση αντικτύπου (DPIA) για τα συστήματα παρακολούθησης των εργαζομένων (κατάλογος AZOP)",
       },
       risposta: 'si',
       dettaglio: {
@@ -240,6 +251,7 @@ export const croazia: SchedaPaese = {
         nb: 'AZOPs liste tar med behandling av ansattes data via apper eller sporingssystemer (av arbeid, bevegelser, kommunikasjon) blant behandlingene som krever en personvernkonsekvensvurdering.',
         nl: 'De AZOP-lijst rekent de verwerking van werknemersgegevens via apps of volgsystemen (van het werk, van de bewegingen, van de communicatie) tot de verwerkingen die een effectbeoordeling vereisen.',
         ru: "Перечень AZOP относит обработку данных работников с помощью приложений или систем отслеживания (работы, перемещений, коммуникаций) к тем операциям, для которых требуется оценка воздействия.",
+        el: "Ο κατάλογος της AZOP περιλαμβάνει την επεξεργασία δεδομένων των εργαζομένων μέσω εφαρμογών ή συστημάτων παρακολούθησης (της εργασίας, των μετακινήσεων, της επικοινωνίας) μεταξύ εκείνων που απαιτούν εκτίμηση αντικτύπου.",
       },
       fonte: FONTE_AZOP_DPIA,
     },
@@ -260,6 +272,7 @@ export const croazia: SchedaPaese = {
         nb: 'Hvis det finnes et arbeidstakerråd, rådfør deg med det før systemet innføres (Zakon o radu art. 150); hvis systemet følger alle bevegelser i hele arbeidstiden, innhent av forsiktighet dets samtykke (ZZR art. 43).',
         nl: 'Als er een ondernemingsraad is, raadpleeg deze voordat u het systeem invoert (Zakon o radu art. 150); als het systeem alle bewegingen gedurende de hele werktijd volgt, verkrijg voor de zekerheid diens toestemming (ZZR art. 43).',
         ru: "Если существует совет работников, проконсультируйтесь с ним до внедрения системы (Zakon o radu, ст. 150); если система отслеживает все перемещения в течение всего рабочего времени, из осторожности получите его согласие (ZZR, ст. 43).",
+        el: "Αν υπάρχει συμβούλιο εργαζομένων, συμβουλεύσου το πριν εισαγάγεις το σύστημα (Zakon o radu άρθρο 150)· αν το σύστημα παρακολουθεί όλες τις κινήσεις καθ' όλο το ωράριο, για λόγους σύνεσης εξασφάλισε τη συναίνεσή του (ZZR άρθρο 43).",
       },
     },
     {
@@ -276,6 +289,7 @@ export const croazia: SchedaPaese = {
         nb: 'Regulér GPS med skriftlige interne regler og informer arbeidstakerne skriftlig.',
         nl: 'Regel de GPS met schriftelijke interne regels en informeer de werknemers schriftelijk.',
         ru: "Урегулируйте использование GPS письменными внутренними правилами и письменно проинформируйте работников.",
+        el: "Ρύθμισε το GPS με γραπτούς εσωτερικούς κανόνες και ενημέρωσε γραπτώς τους εργαζομένους.",
       },
     },
     {
@@ -292,6 +306,7 @@ export const croazia: SchedaPaese = {
         nb: 'Finn et gyldig rettslig grunnlag (art. 6 GDPR) og dokumenter hvorfor systemet er nødvendig på grunn av arbeidets art.',
         nl: 'Bepaal een geldige rechtsgrond (art. 6 AVG) en documenteer waarom het systeem nodig is voor de aard van het werk.',
         ru: "Определите действительное правовое основание (ст. 6 GDPR) и задокументируйте, почему система необходима по характеру работы.",
+        el: "Βρες μια έγκυρη νομική βάση (άρθρο 6 ΓΚΠΔ) και τεκμηρίωσε γιατί το σύστημα είναι αναγκαίο λόγω της φύσης της εργασίας.",
       },
     },
     {
@@ -308,6 +323,7 @@ export const croazia: SchedaPaese = {
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) for sporingssystemet.',
         nl: 'Voer de effectbeoordeling (DPIA) uit voor het volgsysteem.',
         ru: "Проведите оценку воздействия (DPIA) для системы отслеживания.",
+        el: "Πραγματοποίησε την εκτίμηση αντικτύπου (DPIA) για το σύστημα παρακολούθησης.",
       },
     },
     {
@@ -324,6 +340,7 @@ export const croazia: SchedaPaese = {
         nb: 'Konfigurer systemet forholdsmessig: data brukes bare til formålene i de interne reglene, lagringen begrenses til det som er nødvendig.',
         nl: 'Configureer het systeem op evenredige wijze: gegevens alleen gebruiken voor de doeleinden uit de interne regels, bewaring beperkt tot wat nodig is.',
         ru: "Настройте систему соразмерно: данные используются только для целей, указанных во внутренних правилах, срок хранения ограничен необходимым.",
+        el: "Ρύθμισε το σύστημα αναλογικά: δεδομένα που χρησιμοποιούνται μόνο για τους σκοπούς των εσωτερικών κανόνων, τήρηση περιορισμένη στο αναγκαίο.",
       },
     },
     {
@@ -340,6 +357,7 @@ export const croazia: SchedaPaese = {
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og dele ut personverninformasjonen på nytt, og kontrollere om du på nytt må informere eller rådføre deg med arbeidstakernes representanter, der loven krever det. Ofte endres leverandøren (databehandleren), de innsamlede dataene og fremgangsmåtene: informasjonen som ble delt ut tidligere er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "При смене системы или программы мониторинга обновите и повторно вручите уведомление об обработке данных, а также проверьте, нужно ли снова информировать представителей работников или консультироваться с ними, если этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее врученного уведомления недостаточно.",
+        el: "Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση απορρήτου και έλεγξε αν πρέπει να ενημερώσεις ή να συμβουλευτείς ξανά τους εκπροσώπους των εργαζομένων, εκεί όπου το προβλέπει ο νόμος. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και οι τρόποι: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.",
       },
     },
   ],
@@ -368,6 +386,7 @@ export const croazia: SchedaPaese = {
       nb: 'inntil 20 millioner euro eller 4 % av omsetningen (GDPR)',
       nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
       ru: "до 20 млн евро или 4% оборота (GDPR)",
+      el: "έως 20 εκατ. ευρώ ή 4% του κύκλου εργασιών (ΓΚΠΔ)",
     },
     casoCitato: {
       it: "Non risulta una multa dell'AZOP specifica pubblicata per il GPS sui dipendenti. L'art. 43 della legge sulla sicurezza sul lavoro (consenso del consiglio dei lavoratori per i dispositivi di sorveglianza che seguono tutti i movimenti per l'intero orario) non è detto espressamente applicabile al GPS; la legge sul lavoro (art. 150) impone comunque di consultare il consiglio dei lavoratori, se esiste, sull'introduzione di nuove tecnologie. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).",
@@ -381,6 +400,7 @@ export const croazia: SchedaPaese = {
       nb: 'Det foreligger ingen publisert bot fra AZOP som gjelder GPS på ansatte. Art. 43 i loven om arbeidsmiljø (samtykke fra arbeidstakerrådet for overvåkingsinnretninger som følger alle bevegelser i hele arbeidstiden) er ikke uttrykkelig sagt å gjelde GPS; arbeidslovgivningen (art. 150) pålegger likevel å rådføre seg med arbeidstakerrådet, hvis det finnes, om innføring av ny teknologi. Sanksjonsrisikoen er fortsatt den generelle etter GDPR (art. 83).',
       nl: 'Er is geen specifieke en gepubliceerde boete van de AZOP voor GPS bij werknemers bekend. Art. 43 van de arbeidsveiligheidswet (toestemming van de ondernemingsraad voor toezichtapparaten die alle bewegingen gedurende de hele werktijd volgen) is niet uitdrukkelijk op GPS van toepassing verklaard; de arbeidswet (art. 150) verplicht wel de ondernemingsraad, indien aanwezig, te raadplegen over de invoering van nieuwe technologie. Het sanctierisico blijft het algemene van de AVG (art. 83).',
       ru: "Опубликованного штрафа AZOP именно за GPS-слежение за работниками не обнаружено. Не установлено прямо, что ст. 43 закона об охране труда (согласие совета работников на устройства наблюдения, отслеживающие все перемещения в течение всего рабочего времени) применяется к GPS; закон о труде (ст. 150) при этом требует консультироваться с советом работников, если он существует, при внедрении новых технологий. Риск санкций остаётся общим, по GDPR (ст. 83).",
+      el: "Δεν προκύπτει δημοσιευμένο πρόστιμο της AZOP ειδικά για το GPS στους εργαζομένους. Το άρθρο 43 του νόμου για την ασφάλεια στην εργασία (συναίνεση του συμβουλίου εργαζομένων για τις συσκευές επιτήρησης που παρακολουθούν όλες τις κινήσεις καθ' όλο το ωράριο) δεν είναι βέβαιο ότι εφαρμόζεται ρητά στο GPS· ο νόμος για την εργασία (άρθρο 150) επιβάλλει πάντως τη διαβούλευση με το συμβούλιο εργαζομένων, αν υπάρχει, για την εισαγωγή νέων τεχνολογιών. Ο κίνδυνος κυρώσεων παραμένει ο γενικός του ΓΚΠΔ (άρθρο 83).",
     },
     urlFonte: FONTE_AZOP_GPS.url,
     tipoImporto: 'massimale',

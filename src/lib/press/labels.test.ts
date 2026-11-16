@@ -18,7 +18,7 @@ describe('featuredLabel', () => {
   it('traduce le 11 lingue del blog', () => {
     expect(featuredLabel('it')).toBe('Citati su');
     expect(featuredLabel('de')).toBe('Bekannt aus');
-    expect(Object.keys(FEATURED_LABEL)).toHaveLength(11);
+    expect(Object.keys(FEATURED_LABEL)).toHaveLength(12);
   });
 
   it('le varianti regionali leggono la lingua base', () => {

@@ -17,7 +17,7 @@ const PRICING_SCHEMA_NAME: Record<string, string> = {
   it: 'Prezzi GeoTapp', en: 'GeoTapp Pricing', de: 'GeoTapp Preise',
   nl: 'GeoTapp-prijzen', fr: 'Tarifs GeoTapp', es: 'Precios GeoTapp',
   pt: 'Preços GeoTapp', da: 'GeoTapp Priser', sv: 'GeoTapp Priser',
-  nb: 'GeoTapp Priser', ru: 'Цены GeoTapp',
+  nb: 'GeoTapp Priser', el: 'Τιμές GeoTapp', ru: 'Цены GeoTapp',
 };
 
 function buildPricingSchema(locale: AppLocale) {
@@ -248,6 +248,16 @@ function buildPricingFAQ(locale: AppLocale): Record<string, object> {
         { '@type': 'Question', name: 'Finnes det skjulte kostnader?', acceptedAnswer: { '@type': 'Answer', text: 'Nei. Support og oppdateringer er inkludert, og GeoTapp Verifier, som kundene dine bruker til å kontrollere rapportene, er gratis.' } },
       ],
     },
+    el: {
+      '@context': 'https://schema.org', '@type': 'FAQPage',
+      mainEntity: [
+        { '@type': 'Question', name: 'Έχει το GeoTapp δωρεάν δοκιμή;', acceptedAnswer: { '@type': 'Answer', text: 'Ναι. Η δοκιμή διαρκεί 14 ημέρες και δεν απαιτεί πιστωτική κάρτα.' } },
+        { '@type': 'Question', name: 'Πόσο κοστίζει το GeoTapp;', acceptedAnswer: { '@type': 'Answer', text: `Το GeoTapp Flow, ο πίνακας ελέγχου στον ιστό, κοστίζει ${fx(EUR_PRICES.flow.solo.monthly)} τον μήνα με το πακέτο Solo, ${fx(EUR_PRICES.flow.team.monthly)} με το Team και ${fx(EUR_PRICES.flow.business.monthly)} με το Business (${fx(EUR_PRICES.flow.solo.annual)}, ${fx(EUR_PRICES.flow.team.annual)} και ${fx(EUR_PRICES.flow.business.annual)} αν πληρώσεις όλο το έτος εφάπαξ). Οι θέσεις της εφαρμογής TimeTracker προστίθενται ξεχωριστά: ${monthlyRate} ανά εργαζόμενο τον μήνα μέχρι και τη θέση 25, ${tier2Rate} από τη θέση 26. Οι τιμές δεν περιλαμβάνουν ΦΠΑ.` } },
+        { '@type': 'Question', name: 'Πόσο κοστίζει για μια ομάδα 5 εργαζομένων;', acceptedAnswer: { '@type': 'Answer', text: `Στο πακέτο Flow που θα διαλέξεις προστίθενται 5 θέσεις TimeTracker: ${fiveOpsMonthly} τον μήνα, ${fiveOpsAnnual} τον χρόνο αν πληρώσεις όλο το έτος. Δεν υπάρχουν χρεώσεις ενεργοποίησης.` } },
+        { '@type': 'Question', name: 'Υπάρχει ελάχιστη διάρκεια;', acceptedAnswer: { '@type': 'Answer', text: 'Ναι. Η συνδρομή διαρκεί τουλάχιστον 12 μήνες, που μπορούν να πληρωθούν εφάπαξ ή με μηνιαίες δόσεις. Μπορείς να περάσεις σε ανώτερο πακέτο όποτε θέλεις, από τον πίνακα ελέγχου.' } },
+        { '@type': 'Question', name: 'Υπάρχουν κρυφές χρεώσεις;', acceptedAnswer: { '@type': 'Answer', text: 'Όχι. Η υποστήριξη και οι ενημερώσεις περιλαμβάνονται, και το GeoTapp Verifier, που οι πελάτες σου χρησιμοποιούν για να ελέγχουν τις αναφορές, είναι δωρεάν.' } },
+      ],
+    },
     ru: {
       '@context': 'https://schema.org', '@type': 'FAQPage',
       mainEntity: [
@@ -272,6 +282,7 @@ const PRICING_BREADCRUMB: Record<string, object> = {
   da: { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' }, { '@type': 'ListItem', position: 2, name: 'Priser', item: 'https://geotapp.com/da/priser/' }] },
   sv: { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' }, { '@type': 'ListItem', position: 2, name: 'Priser', item: 'https://geotapp.com/sv/priser/' }] },
   nb: { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' }, { '@type': 'ListItem', position: 2, name: 'Priser', item: 'https://geotapp.com/nb/priser/' }] },
+  el: { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' }, { '@type': 'ListItem', position: 2, name: 'Τιμές', item: 'https://geotapp.com/el/pricing/' }] },
   ru: { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'GeoTapp', item: 'https://geotapp.com' }, { '@type': 'ListItem', position: 2, name: 'Цены', item: 'https://geotapp.com/ru/tseny/' }] },
 };
 
@@ -287,6 +298,7 @@ const PRICING_META: Record<string, { title: string; description: string }> = {
   da: { title: 'GeoTapp priser: planer til hold i marken, 14 dages prøve', description: 'Kontorplaner til Flow, en plads pr. medarbejder i TimeTracker, 14 dage gratis uden kort. Se, hvad hver plan indeholder, før du starter.' },
   sv: { title: 'GeoTapp priser: planer för team på fältet, 14 dagar gratis', description: 'Kontorsplaner för Flow, en plats per medarbetare i TimeTracker, 14 dagar gratis utan kort. Se vad varje plan innehåller innan du startar.' },
   nb: { title: 'GeoTapp priser: planer for team i felt, 14 dagers prøve', description: 'Kontorplaner for Flow, én plass per medarbeider i TimeTracker, 14 dager gratis uten kort. Se hva hver plan inneholder før du starter.' },
+  el: { title: 'Τιμές GeoTapp: πακέτα για ομάδες πεδίου, δοκιμή 14 ημερών', description: 'Πακέτα γραφείου για το Flow, μία θέση ανά εργαζόμενο στο TimeTracker, 14 ημέρες δωρεάν χωρίς κάρτα. Δες τι περιλαμβάνει κάθε πακέτο πριν ξεκινήσεις.' },
 };
 
 async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

@@ -24,6 +24,7 @@ const CTA_LABELS: Record<string, { discover: string; cta: string }> = {
   sv: { discover: 'Upptäck', cta: 'Till produkt →' },
   nb: { discover: 'Oppdag', cta: 'Til produkt →' },
   ru: { discover: 'Узнать', cta: 'К продукту →' },
+  el: { discover: 'Ανακάλυψε', cta: 'Πήγαινε στο προϊόν →' },
 };
 
 const SETTORE_CONFIG: Record<string, {
@@ -51,6 +52,7 @@ const SETTORE_CONFIG: Record<string, {
       sv: { title: 'Närvaro i städföretag: guide - GeoTapp', description: 'Så hanterar du närvaro, skift och uppdrag i städföretag med stämpling med GPS. Praktiska guider för driftchefer.', heading: 'Hantering av närvaro i städföretag' },
       nb: { title: 'Styring av oppmøte i renholdsbedrifter: veiledning - GeoTapp', description: 'Slik styrer du oppmøte, vakter og oppdrag i renholdsbedrifter med stempling med GPS. Praktiske veiledninger for driftsledere.', heading: 'Styring av oppmøte i renholdsbedrifter' },
       ru: { title: 'Ресурсы для клининговых компаний - GeoTapp', description: 'Статьи и руководства по управлению присутствием и заявками в клининговых компаниях.', heading: 'Ресурсы для клининговых компаний' },
+      el: { title: 'Διαχείριση παρουσιών σε εταιρείες καθαρισμού: οδηγός - GeoTapp', description: 'Πώς να διαχειρίζεσαι παρουσίες, βάρδιες και εργασίες σε εταιρείες καθαρισμού με χτύπημα κάρτας μέσω GPS. Πρακτικοί οδηγοί για υπευθύνους λειτουργίας.', heading: 'Διαχείριση παρουσιών σε εταιρείες καθαρισμού' },
     },
     intro: {
       it: 'Gestire le presenze in un\'impresa di pulizie non è come timbrare in ufficio. I collaboratori sono distribuiti su cantieri diversi, gli orari variano ogni giorno e il cliente finale vuole sempre sapere chi era presente, quando e per quanto tempo. Queste guide raccolgono le soluzioni operative usate dalle imprese di pulizie per risolvere questo problema.',
@@ -64,6 +66,7 @@ const SETTORE_CONFIG: Record<string, {
       sv: 'Att hantera närvaro i ett städföretag är något helt annat än att stämpla in på ett kontor. Medarbetarna är fördelade på flera platser, arbetstiderna ändras från dag till dag och slutkunden vill alltid veta vem som var där, när och hur länge. De här guiderna samlar de lösningar som städföretag använder för att lösa problemet.',
       nb: 'Oppmøte i en renholdsbedrift er noe helt annet enn å stemple inn på et kontor. De ansatte er fordelt på flere steder, arbeidstidene endrer seg fra dag til dag, og sluttkunden vil alltid vite hvem som var der, når og hvor lenge. Disse veiledningene samler løsningene renholdsbedrifter bruker for å løse det problemet.',
       ru: 'Учёт рабочего времени в клининговой компании существенно отличается от офисного. Сотрудники рассредоточены по нескольким объектам, расписание меняется каждый день, а клиенты всегда хотят знать, кто присутствовал, когда и сколько времени.',
+      el: 'Η διαχείριση των παρουσιών σε μια εταιρεία καθαρισμού δεν έχει καμία σχέση με το χτύπημα κάρτας στο γραφείο. Οι εργαζόμενοι είναι διασκορπισμένοι σε διαφορετικούς χώρους εργασίας, τα ωράρια αλλάζουν κάθε μέρα και ο τελικός πελάτης θέλει πάντα να ξέρει ποιος ήταν παρών, πότε και για πόση ώρα. Οι οδηγοί αυτοί συγκεντρώνουν τις λύσεις που χρησιμοποιούν οι εταιρείες καθαρισμού για να λύσουν αυτό το πρόβλημα.',
     },
     sections: {
       it: [
@@ -107,6 +110,28 @@ const SETTORE_CONFIG: Record<string, {
             'Возможность прикреплять фото к выполненным работам',
             'Отчёты, которые можно выгрузить для конечного клиента',
             'Встроенную переписку между сотрудниками и офисом',
+          ],
+        },
+      ],
+      el: [
+        {
+          h2: 'Το επιχειρησιακό πρόβλημα που επιβραδύνει τις εταιρείες καθαρισμού',
+          body: 'Όποιος διευθύνει μια εταιρεία καθαρισμού με περισσότερους από 5 εργαζομένους ξέρει αυτά τα προβλήματα: δεν ξέρεις αν ο εργαζόμενος έφτασε στις 7:00 ή στις 7:45, ο πελάτης σε παίρνει τηλέφωνο για να μάθει αν η ομάδα ήταν παρούσα χθες και τα φύλλα παρουσίας δεν ταιριάζουν ποτέ. Το πρόβλημα δεν είναι η θέληση των ανθρώπων, είναι ότι τα παραδοσιακά συστήματα δεν δουλεύουν όταν οι ομάδες αλλάζουν χώρο εργασίας κάθε μέρα.',
+        },
+        {
+          h2: 'Πώς λειτουργεί το χτύπημα κάρτας με GPS για τις εταιρείες καθαρισμού',
+          body: 'Το χτύπημα κάρτας με GPS επιτρέπει στους εργαζομένους να καταγράφουν την άφιξη και την αποχώρηση απευθείας από το smartphone, με την τοποθεσία να καταγράφεται εκείνη τη στιγμή, και μόνο τότε. Δεν χρειάζεται σταθερός εξοπλισμός και λειτουργεί σε οποιονδήποτε χώρο εργασίας. Ο υπεύθυνος βλέπει τις καταγραφές μόλις φτάνουν και μπορεί να εξάγει τις αναφορές για τον πελάτη στο τέλος του μήνα. Το GeoTapp TimeTracker προσθέτει τις φωτογραφίες απόδειξης των ολοκληρωμένων εργασιών και την επικοινωνία με τον συντονιστή από το ίδιο κινητό.',
+          productLink: true,
+        },
+        {
+          h2: 'Τι να ελέγξεις πριν διαλέξεις λογισμικό για εταιρείες καθαρισμού',
+          body: 'Δεν είναι όλα τα λογισμικά διαχείρισης παρουσιών κατάλληλα για εργασία σε διασκορπισμένους χώρους. Πριν διαλέξεις, έλεγξε ότι υποστηρίζει:',
+          listItems: [
+            'Χτύπημα κάρτας από smartphone, χωρίς πρόσθετο εξοπλισμό',
+            'Τοποθεσία που καταγράφεται και ελέγχεται τη στιγμή του χτυπήματος κάρτας, ποτέ σε συνεχή βάση',
+            'Δυνατότητα επισύναψης φωτογραφιών στις εργασίες',
+            'Αναφορές που εξάγονται για τον τελικό πελάτη',
+            'Ενσωματωμένη εσωτερική επικοινωνία ανάμεσα στους εργαζομένους και το γραφείο',
           ],
         },
       ],
@@ -329,6 +354,7 @@ const SETTORE_CONFIG: Record<string, {
       sv: { title: 'Uppdragshantering för installatörer och tekniker - GeoTapp', description: 'Så hanterar du arbetsorder, tekniker i fält och rapportering i installationsföretag. Praktiska guider.', heading: 'Uppdragshantering för installatörer och tekniker' },
       nb: { title: 'Styring av oppdrag for installatører og teknikere: veiledning - GeoTapp', description: 'Slik styrer du arbeidsordrer, teknikere i felten og rapportering i installasjonsbedrifter. Praktiske veiledninger.', heading: 'Styring av oppdrag for installatører og teknikere' },
       ru: { title: 'Ресурсы для монтажников - GeoTapp', description: 'Статьи и руководства для монтажников и выездных технических служб.', heading: 'Ресурсы для монтажников' },
+      el: { title: 'Διαχείριση εργασιών για εγκαταστάτες και τεχνικούς: οδηγός - GeoTapp', description: 'Πώς να διαχειρίζεσαι εντολές εργασίας, τεχνικούς πεδίου και αναφορές για εταιρείες εγκαταστάσεων. Επιχειρησιακοί οδηγοί.', heading: 'Διαχείριση εργασιών για εγκαταστάτες και τεχνικούς' },
     },
     intro: {
       it: 'Coordinare tecnici sul campo significa sapere quale intervento è stato appena chiuso e cosa è rimasto in sospeso, senza rincorrere nessuno al telefono. Con telefonate e messaggi WhatsApp il quadro è sempre incompleto: gli aggiornamenti arrivano in ritardo, le priorità cambiano senza che l\'ufficio lo sappia e la documentazione per il cliente è sempre un problema. Questi articoli raccolgono le pratiche operative più efficaci per aziende con tecnici sul campo.',
@@ -342,6 +368,7 @@ const SETTORE_CONFIG: Record<string, {
       sv: 'Att samordna tekniker i fält betyder att veta vilket uppdrag som just avslutats och vad som återstår, utan att ringa efter någon. Med telefonsamtal och WhatsApp-meddelanden blir bilden alltid ofullständig: uppdateringarna kommer för sent, prioriteringarna ändras utan att kontoret vet om det och dokumentationen till kunden är alltid ett problem. De här artiklarna samlar de mest effektiva arbetssätten för företag med tekniker i fält.',
       nb: 'Å koordinere teknikere i felten betyr å vite hvilket oppdrag som nettopp er avsluttet, og hva som fortsatt gjenstår, uten å ringe etter noen. Med telefonsamtaler og WhatsApp-meldinger er bildet alltid ufullstendig: oppdateringene kommer for sent, prioriteringene endrer seg uten at kontoret vet det, og dokumentasjonen til kunden er alltid et problem. Disse artiklene samler de mest effektive arbeidsmåtene for virksomheter med teknikere i felten.',
       ru: 'Координация выездных техников означает знать в каждый момент, кто где находится, какие заявки только что закрыты и что ещё в работе. Эти руководства охватывают эффективные операционные практики для компаний с выездным персоналом.',
+      el: 'Ο συντονισμός τεχνικών πεδίου σημαίνει να ξέρεις ποια εργασία μόλις έκλεισε και τι έμεινε σε εκκρεμότητα, χωρίς να κυνηγάς κανέναν στο τηλέφωνο. Με τηλεφωνήματα και μηνύματα WhatsApp η εικόνα είναι πάντα ελλιπής: οι ενημερώσεις φτάνουν αργά, οι προτεραιότητες αλλάζουν χωρίς να το ξέρει το γραφείο και η τεκμηρίωση για τον πελάτη είναι πάντα πρόβλημα. Τα άρθρα αυτά συγκεντρώνουν τις πιο αποτελεσματικές επιχειρησιακές πρακτικές για εταιρείες με τεχνικούς πεδίου.',
     },
     sections: {
       it: [
@@ -385,6 +412,28 @@ const SETTORE_CONFIG: Record<string, {
             'Фото подтверждения, привязанные к заявке',
             'Автоматический отчёт по каждой закрытой заявке',
             'Полную историю заявок по каждому клиенту',
+          ],
+        },
+      ],
+      el: [
+        {
+          h2: 'Το πρόβλημα συντονισμού στις εταιρείες με τεχνικούς πεδίου',
+          body: 'Όταν ένας τεχνικός κλείνει μια εργασία και το γραφείο το μαθαίνει μόνο στο τέλος της ημέρας, δεν ξέρει αν πρέπει να στείλει ενίσχυση ή να κλείσει την υπόθεση. Όταν η τεκμηρίωση είναι σε χαρτί ή σε μηνύματα, η ανασύνθεση του ιστορικού ενός πελάτη παίρνει ώρες και ο τηλεφωνικός συντονισμός τρώει ένα κομμάτι της ημέρας που θα μπορούσε να ανακτηθεί.',
+        },
+        {
+          h2: 'Πώς να διαχειρίζεσαι εντολές εργασίας και επεμβάσεις χωρίς τηλεφωνήματα',
+          body: 'Ένα ψηφιακό σύστημα διαχείρισης εργασιών σου επιτρέπει να αναθέτεις εντολές εργασίας απευθείας στο smartphone του τεχνικού, με προτεραιότητα, οδηγίες και ιστορικό του πελάτη ήδη συμπεριλαμβανόμενα. Ο τεχνικός δουλεύει με την εφαρμογή GeoTapp TimeTracker: καταγράφει την Έναρξη εργασίας, τραβάει τις φωτογραφίες απόδειξης και γράφει τις σημειώσεις, και η αναφορά συντάσσεται μόνη της. Από το γραφείο, το GeoTapp Flow αναθέτει τις εργασίες, λαμβάνει τις καταγραφές μόλις φτάνουν και στέλνει στον πελάτη τη σφραγισμένη αναφορά.',
+          productLink: true,
+        },
+        {
+          h2: 'Τι πρέπει να μπορεί να κάνει ένα λογισμικό για εγκαταστάτες και τεχνικούς πεδίου',
+          body: 'Πριν διαλέξεις ένα εργαλείο διαχείρισης για την ομάδα των τεχνικών σου, έλεγξε ότι υποστηρίζει:',
+          listItems: [
+            'Απομακρυσμένη ανάθεση και τροποποίηση των εργασιών',
+            'Τοποθεσία που καταγράφεται μόνο στα χτυπήματα κάρτας, ποτέ σε συνεχή βάση',
+            'Φωτογραφίες απόδειξης συνδεδεμένες με την εργασία',
+            'Αυτόματη αναφορά για κάθε εργασία που κλείνει',
+            'Πλήρες ιστορικό των εργασιών ανά πελάτη',
           ],
         },
       ],
@@ -607,6 +656,7 @@ const SETTORE_CONFIG: Record<string, {
       sv: { title: 'Närvaro och dokumentation i bevakning - GeoTapp', description: 'Så dokumenterar du närvaro, kontroller och avvikelser i bevakningstjänster, med positionen bara vid stämplingarna.', heading: 'Närvaro och dokumentation i bevakningstjänster' },
       nb: { title: 'Oppmøte og dokumentasjon for vektertjenester - GeoTapp', description: 'Slik dokumenterer du oppmøte, kontroller og avvik i vektertjenester, med posisjonen bare ved stemplingene.', heading: 'Oppmøte og dokumentasjon i vektertjenester' },
       ru: { title: 'Ресурсы для служб безопасности - GeoTapp', description: 'Статьи и руководства для охранных предприятий и служб наблюдения.', heading: 'Ресурсы для служб безопасности' },
+      el: { title: 'Διαχείριση παρουσιών και τεκμηρίωση για υπηρεσίες ασφαλείας - GeoTapp', description: 'Πώς να τεκμηριώνεις παρουσίες, ελέγχους και ανωμαλίες στις υπηρεσίες ασφαλείας, με την τοποθεσία μόνο στα χτυπήματα κάρτας.', heading: 'Διαχείριση παρουσιών και τεκμηρίωση στις υπηρεσίες ασφαλείας' },
     },
     intro: {
       it: 'Nelle aziende di sicurezza ogni turno e ogni controllo vanno documentati, e ogni anomalia va segnalata subito. Con telefonate e report cartacei, la centrale operativa ha sempre un quadro parziale e in ritardo. Questi articoli affrontano i temi operativi più rilevanti per responsabili di servizi di sicurezza.',
@@ -620,6 +670,7 @@ const SETTORE_CONFIG: Record<string, {
       sv: 'I bevakningsföretag måste varje pass och varje kontroll dokumenteras, och varje avvikelse måste rapporteras direkt. Med telefonsamtal och rapporter på papper har larmcentralen alltid en ofullständig och försenad bild. De här artiklarna tar upp de mest relevanta driftfrågorna för chefer inom bevakningstjänster.',
       nb: 'I vekterselskaper skal hver vakt og hver kontroll dokumenteres, og ethvert avvik skal meldes med en gang. Med telefonsamtaler og rapporter på papir har vaktsentralen alltid et ufullstendig og forsinket bilde. Disse artiklene tar opp de mest relevante driftstemaene for ledere av vektertjenester.',
       ru: 'В охранных предприятиях каждый обход должен быть задокументирован, каждый сотрудник должен быть отслеживаемым, а каждый инцидент должен быть зафиксирован немедленно. Эти руководства охватывают наиболее актуальные операционные темы для руководителей охранных служб.',
+      el: 'Στις εταιρείες ασφαλείας κάθε βάρδια και κάθε έλεγχος πρέπει να τεκμηριώνονται και κάθε ανωμαλία πρέπει να αναφέρεται αμέσως. Με τηλεφωνήματα και χάρτινες αναφορές, το κέντρο επιχειρήσεων έχει πάντα μια μερική εικόνα και με καθυστέρηση. Τα άρθρα αυτά καλύπτουν τα πιο σημαντικά επιχειρησιακά θέματα για υπευθύνους υπηρεσιών ασφαλείας.',
     },
     sections: {
       it: [
@@ -663,6 +714,28 @@ const SETTORE_CONFIG: Record<string, {
             'Сообщение о происшествиях с фото и позицией в этот момент',
             'Запечатанные отчёты, которые можно выгрузить для конечного клиента',
             'Уведомление, если смена остаётся незакрытой',
+          ],
+        },
+      ],
+      el: [
+        {
+          h2: 'Οι επιχειρησιακές προκλήσεις των υπηρεσιών ασφαλείας και φύλαξης',
+          body: 'Χωρίς ψηφιακό σύστημα, το κέντρο δεν ξέρει αν ένας φρουρός ανέλαβε υπηρεσία στο σωστό σημείο, αν έγινε ένας έλεγχος ή αν υπήρξε κάποια ανωμαλία, μέχρι να τηλεφωνήσει κάποιος. Ο τελικός πελάτης δεν έχει χειροπιαστές αποδείξεις της υπηρεσίας και σε περίπτωση αμφισβήτησης δεν υπάρχει τίποτα να δείξεις. Για μια εταιρεία ασφαλείας, η δυνατότητα να τεκμηριώνει την υπηρεσία είναι μέρος της ίδιας της υπηρεσίας.',
+        },
+        {
+          h2: 'Πώς τεκμηριώνεται η υπηρεσία χωρίς να παρακολουθείς τους φρουρούς',
+          body: 'Οι φρουροί καταγράφουν έναρξη και λήξη υπηρεσίας από το smartphone και, στα σημεία ελέγχου, τραβούν τη φωτογραφία απόδειξης: κάθε ενέργεια καταγράφει ώρα και τοποθεσία και ανάμεσα στη μία ενέργεια και την άλλη δεν καταγράφεται τίποτα αυτόματα. Το κέντρο βλέπει τις καταγραφές μόλις φτάνουν και λαμβάνει τις αναφορές με φωτογραφία. Το GeoTapp TimeTracker έχει σχεδιαστεί γι\' αυτό: παρουσίες με την τοποθεσία τη στιγμή του χτυπήματος κάρτας, φωτογραφίες των ελέγχων και μηνύματα με το κέντρο.',
+          productLink: true,
+        },
+        {
+          h2: 'Τι πρέπει να εξασφαλίζει το λογισμικό για υπηρεσίες ασφαλείας',
+          body: 'Όταν επιλέγεις ένα εργαλείο για τη λειτουργική διαχείριση των υπηρεσιών ασφαλείας, έλεγξε ότι υποστηρίζει:',
+          listItems: [
+            'Έναρξη και λήξη υπηρεσίας με καταγεγραμμένες τοποθεσία και ώρα',
+            'Φωτογραφίες απόδειξης με ώρα και τοποθεσία στα σημεία ελέγχου',
+            'Αναφορά ανωμαλιών με φωτογραφία και γεωεντοπισμό',
+            'Σφραγισμένες αναφορές που εξάγονται για τον τελικό πελάτη',
+            'Ειδοποίηση αν μια βάρδια παραμένει ανοιχτή',
           ],
         },
       ],
@@ -940,12 +1013,14 @@ const BACK_LABELS: Record<string, string> = {
   fr: '← Retour au secteur', es: '← Volver al sector', pt: '← Voltar ao setor',
   nl: '← Terug naar sector', da: '← Tilbage til sektor', sv: '← Tillbaka till sektor',
   nb: '← Tilbake til sektor', ru: '← Назад к разделу',
+  el: '← Πίσω στον κλάδο',
 };
 
 const READ_LABELS: Record<string, string> = {
   it: 'Leggi →', en: 'Read →', de: 'Lesen →', fr: 'Lire →',
   es: 'Leer →', pt: 'Ler →', nl: 'Lees →', da: 'Læs →',
   sv: 'Läs →', nb: 'Les →', ru: 'Читать →',
+  el: 'Διάβασε →',
 };
 
 const EMPTY_LABELS: Record<string, string> = {
@@ -960,6 +1035,7 @@ const EMPTY_LABELS: Record<string, string> = {
   sv: 'Inga artiklar tillgängliga för tillfället.',
   nb: 'Ingen artikler tilgjengelige for øyeblikket.',
   ru: 'Статьи временно отсутствуют.',
+  el: 'Προς το παρόν δεν υπάρχουν διαθέσιμα άρθρα.',
 };
 
 const PRODUCT_PAGE_LABELS: Record<string, string> = {
@@ -974,6 +1050,7 @@ const PRODUCT_PAGE_LABELS: Record<string, string> = {
   sv: 'Rekommenderat verktyg för denna sektor',
   nb: 'Anbefalt verktøy for denne sektoren',
   ru: 'Рекомендуемый инструмент для этого сектора',
+  el: 'Προτεινόμενο εργαλείο για αυτόν τον κλάδο',
 };
 
 // Box "strumento gratuito": collega le pagine settore-risorse alla risorsa
@@ -991,6 +1068,7 @@ const GPS_CALLOUT: Record<string, { text: string; cta: string }> = {
   sv: { text: 'Skickar du team utomlands? Det gratis verktyget GPS på anställda i EU visar vad som krävs, land för land.', cta: 'Öppna guiden →' },
   nb: { text: 'Sender du team til utlandet? Det gratis verktøyet GPS på ansatte i EU viser hva som kreves, land for land.', cta: 'Åpne veiledningen →' },
   ru: { text: 'Отправляете бригады за рубеж? Бесплатный инструмент «GPS сотрудников в ЕС» показывает, что нужно, страна за страной.', cta: 'Открыть гид →' },
+  el: { text: 'Στέλνεις ομάδες στο εξωτερικό; Το δωρεάν εργαλείο «GPS εργαζομένων στην ΕΕ» σου δείχνει τι χρειάζεται για να είσαι εντάξει, χώρα προς χώρα.', cta: 'Άνοιξε τον οδηγό →' },
 };
 
 // Chiusura fotografica finale: un'immagine per settore, stessa convenzione

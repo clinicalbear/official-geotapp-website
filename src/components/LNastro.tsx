@@ -19,6 +19,7 @@ const VOCI: Record<string, string[]> = {
   da: ['POSITION KUN VED STEMPLING', 'FORSEGLET RAPPORT', 'UAFHÆNGIG VERIFICERING', 'INGEN LØBENDE SPORING', 'DATA I EUROPA', 'VERIFICERING OGSÅ OFFLINE'],
   sv: ['POSITION ENDAST VID STÄMPLING', 'FÖRSEGLAD RAPPORT', 'OBEROENDE VERIFIERING', 'INGEN LÖPANDE SPÅRNING', 'DATA I EUROPA', 'VERIFIERING ÄVEN OFFLINE'],
   nb: ['POSISJON KUN VED STEMPLING', 'FORSEGLET RAPPORT', 'UAVHENGIG VERIFISERING', 'INGEN LØPENDE SPORING', 'DATA I EUROPA', 'VERIFISERING OGSÅ OFFLINE'],
+  el: ['ΤΟΠΟΘΕΣΙΑ ΜΟΝΟ ΣΤΟ ΧΤΥΠΗΜΑ ΚΑΡΤΑΣ', 'ΣΦΡΑΓΙΣΜΕΝΗ ΑΝΑΦΟΡΑ', 'ΑΝΕΞΑΡΤΗΤΗ ΕΠΑΛΗΘΕΥΣΗ', 'ΧΩΡΙΣ ΣΥΝΕΧΗ ΠΑΡΑΚΟΛΟΥΘΗΣΗ', 'ΔΕΔΟΜΕΝΑ ΣΤΗΝ ΕΥΡΩΠΗ', 'ΕΠΑΛΗΘΕΥΣΗ ΚΑΙ ΕΚΤΟΣ ΣΥΝΔΕΣΗΣ'],
   nl: ['LOCATIE ALLEEN BIJ DE REGISTRATIE', 'VERZEGELD RAPPORT', 'ONAFHANKELIJKE CONTROLE', 'GEEN DOORLOPENDE TRACKING', 'GEGEVENS IN EUROPA', 'CONTROLE OOK OFFLINE'],
   en: ['LOCATION ONLY AT CLOCK-IN', 'SEALED REPORT', 'INDEPENDENT VERIFICATION', 'NO CONTINUOUS TRACKING', 'DATA IN EUROPE', 'VERIFIES OFFLINE TOO'],
   ru: ['МЕСТОПОЛОЖЕНИЕ ТОЛЬКО ПРИ ОТМЕТКЕ', 'ЗАПЕЧАТАННЫЙ ОТЧЁТ', 'НЕЗАВИСИМАЯ ПРОВЕРКА', 'БЕЗ НЕПРЕРЫВНОГО ОТСЛЕЖИВАНИЯ', 'ДАННЫЕ В ЕВРОПЕ', 'ПРОВЕРКА ТАКЖЕ ОФЛАЙН'],

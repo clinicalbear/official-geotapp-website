@@ -58,6 +58,7 @@ test('supported locales stay aligned with geotapp-flow', async () => {
     'en',
     'it',
     'nb',
+    'el',
     'nl',
     'pt',
     'ru',

@@ -66,6 +66,7 @@ export const finlandia: SchedaPaese = {
     sv: 'Finland',
     nb: 'Finland',
     ru: 'Финляндия',
+    el: "Φινλανδία",
   },
   bandiera: '🇫🇮',
   federale: false,
@@ -84,6 +85,7 @@ export const finlandia: SchedaPaese = {
       sv: 'Dataombudsmannens byrå (Tietosuojavaltuutetun toimisto)',
       nb: 'Kontoret til datatilsynsombudsmannen (Tietosuojavaltuutetun toimisto)',
       ru: 'Аппарат уполномоченного по защите данных (Tietosuojavaltuutetun toimisto)',
+      el: "Γραφείο του Επιτρόπου Προστασίας Δεδομένων (Tietosuojavaltuutetun toimisto)",
     },
     portale: FONTE_GARANTE_SEGNALAZIONE.url,
     urlFonte: FONTE_GARANTE_SEGNALAZIONE.url,
@@ -100,6 +102,7 @@ export const finlandia: SchedaPaese = {
       nb: 'Finland har én nasjonal myndighet, datatilsynsombudsmannen (Tietosuojavaltuutettu); det finnes ingen regional inndeling.',
       nl: 'Finland heeft een enkele nationale autoriteit, de Ombudsman voor gegevensbescherming (Tietosuojavaltuutettu); er is geen regionale onderverdeling.',
       ru: "В Финляндии один национальный орган, Уполномоченный по защите данных (Tietosuojavaltuutettu); регионального разделения нет.",
+      el: "Η Φινλανδία έχει μία ενιαία εθνική αρχή, τον Επίτροπο (Tietosuojavaltuutettu)· δεν υπάρχει περιφερειακός διαχωρισμός.",
     },
   },
 
@@ -117,6 +120,7 @@ export const finlandia: SchedaPaese = {
         nb: 'Samarbeidsprosedyre med de ansattes representanter før teknisk overvåking innføres, inkludert lokalisering',
         nl: 'Overlegprocedure met de werknemersvertegenwoordigers voordat technische monitoring, waaronder locatiebepaling, wordt ingevoerd',
         ru: "Процедура сотрудничества с представителями до введения технического мониторинга, включая геолокацию",
+        el: "Διαδικασία συνεργασίας με τους εκπροσώπους πριν από την εισαγωγή της τεχνικής παρακολούθησης, συμπεριλαμβανομένου του εντοπισμού θέσης",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -131,6 +135,7 @@ export const finlandia: SchedaPaese = {
         nb: 'Fastsettelse av de ansattes posisjon er en form for teknisk overvåking som må behandles i samarbeidsprosedyren på arbeidsplassen før den tas i bruk. Forhandlingsplikten gjelder over en størrelsesgrense (50 ansatte fra 1. juli 2025); under den har de ansatte fortsatt rett til å bli hørt.',
         nl: 'Het bepalen van de locatie van werknemers is een vorm van technische monitoring die in de overlegprocedure op de werkplek moet worden behandeld voordat deze wordt ingevoerd. De onderhandeling geldt boven een omvangsdrempel (50 werknemers vanaf 1 juli 2025); daaronder behouden werknemers niettemin het recht om te worden gehoord.',
         ru: "Определение местоположения сотрудников является формой технического наблюдения, которую необходимо рассмотреть в процедуре сотрудничества на рабочем месте до внедрения. Обязанность вести переговоры действует при превышении порога численности (50 сотрудников с 1 июля 2025 г.); ниже порога за работниками в любом случае сохраняется право быть выслушанными.",
+        el: "Ο προσδιορισμός της θέσης των εργαζομένων είναι μορφή τεχνικής επιτήρησης που πρέπει να εξεταστεί στη διαδικασία συνεργασίας στον χώρο εργασίας πριν από την υιοθέτησή της. Η διαπραγμάτευση ισχύει πάνω από ένα όριο μεγέθους (50 εργαζόμενοι από την 1η Ιουλίου 2025)· κάτω από αυτό, παραμένει πάντως δικαίωμα των εργαζομένων να ακουστούν.",
       },
       fonte: FONTE_GARANTE_FAQ,
     },
@@ -147,6 +152,7 @@ export const finlandia: SchedaPaese = {
         nb: 'Bare data som er direkte nødvendige for arbeidsforholdet; nødvendighetskravet kan ikke fravikes med samtykke (lov 759/2004)',
         nl: 'Alleen gegevens die rechtstreeks noodzakelijk zijn voor de arbeidsrelatie; de noodzaakvereiste kan niet met toestemming worden omzeild (Wet 759/2004)',
         ru: "Только данные, непосредственно необходимые для трудовых отношений; требование необходимости не отменяется согласием (Закон 759/2004)",
+        el: "Μόνο δεδομένα άμεσα αναγκαία για την εργασιακή σχέση· η απαίτηση αναγκαιότητας δεν παρακάμπτεται με τη συγκατάθεση (Νόμος 759/2004)",
       },
       risposta: 'si',
       dettaglio: {
@@ -161,6 +167,7 @@ export const finlandia: SchedaPaese = {
         nb: 'Arbeidsgiveren kan bare behandle data som er direkte nødvendige for arbeidsforholdet; heller ikke den ansattes samtykke gir hjemmel til å behandle data som ikke oppfyller dette kravet.',
         nl: 'De werkgever mag alleen gegevens verwerken die rechtstreeks noodzakelijk zijn voor de arbeidsrelatie; zelfs de toestemming van de werknemer machtigt niet tot de verwerking van gegevens die niet aan deze vereiste voldoen.',
         ru: "Работодатель может обрабатывать только данные, непосредственно необходимые для трудовых отношений; даже согласие работника не делает допустимой обработку данных, не отвечающих этому требованию.",
+        el: "Ο εργοδότης μπορεί να επεξεργάζεται μόνο δεδομένα άμεσα αναγκαία για την εργασιακή σχέση· ούτε η συγκατάθεση του εργαζομένου επιτρέπει την επεξεργασία δεδομένων που δεν πληρούν αυτή την απαίτηση.",
       },
       fonte: FONTE_LEGGE_759,
     },
@@ -177,6 +184,7 @@ export const finlandia: SchedaPaese = {
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit voor de installatie',
         ru: "Предварительное разрешение органа до установки",
+        el: "Προηγούμενη άδεια από κάποια αρχή πριν από την εγκατάσταση",
       },
       risposta: 'no',
       dettaglio: {
@@ -191,6 +199,7 @@ export const finlandia: SchedaPaese = {
         nb: 'Det kreves ingen forhåndstillatelse fra ombudsmannen; tilsynet skjer i etterkant.',
         nl: 'Er is geen voorafgaande toestemming van de Ombudsman vereist; het toezicht vindt achteraf plaats.',
         ru: "Предварительное разрешение Уполномоченного не требуется; надзор осуществляется последующим порядком.",
+        el: "Δεν απαιτείται προηγούμενη άδεια από τον Επίτροπο· η εποπτεία είναι εκ των υστέρων.",
       },
       fonte: FONTE_GARANTE_FAQ,
     },
@@ -207,6 +216,7 @@ export const finlandia: SchedaPaese = {
         nb: 'Lokalisering skal ikke brukes til kontroll av arbeidstiden unntatt i begrensede tilfeller; proporsjonalitet',
         nl: 'Locatiebepaling mag, behoudens beperkte gevallen, niet worden gebruikt voor de controle van de arbeidstijd; evenredigheid',
         ru: "Геолокацию не следует использовать для контроля рабочего времени, кроме ограниченных случаев; соразмерность",
+        el: "Ο εντοπισμός θέσης δεν χρησιμοποιείται για τον έλεγχο του ωραρίου, εκτός από περιορισμένες περιπτώσεις· αναλογικότητα",
       },
       risposta: 'si',
       dettaglio: {
@@ -221,6 +231,7 @@ export const finlandia: SchedaPaese = {
         nb: 'Ifølge ombudsmannen bør posisjonsdata som hovedregel ikke brukes til å overvåke arbeidstiden, unntatt i begrensede tilfeller (f.eks. når den ansatte arbeider hjemmefra eller for det meste utenfor arbeidsgiverens lokaler, og det ikke finnes mindre inngripende kontrollmidler), og bare med et tilstrekkelig grunnlag og en tilstrekkelig nødvendighet; formålet må oppgis på forhånd og behandles i samarbeidsprosedyren, ellers kan dataene ikke brukes til å kontrollere om arbeidsforholdet overholdes.',
         nl: 'Volgens de Ombudsman mogen locatiegegevens in de regel niet worden gebruikt om de arbeidstijd te monitoren, behoudens beperkte gevallen (bijvoorbeeld wanneer de werknemer thuis of grotendeels buiten de bedrijfsruimten van de werkgever werkt en er geen minder ingrijpende controlemiddelen zijn), en alleen met een passende grondslag en noodzaak; het doel moet vooraf worden vastgelegd en in de overlegprocedure worden behandeld, anders mogen de gegevens niet worden gebruikt om de naleving van de arbeidsvoorwaarden te controleren.',
         ru: "По мнению Уполномоченного, данные о местоположении, как правило, не следует использовать для мониторинга рабочего времени, кроме ограниченных случаев (например, сотрудник работает из дома или преимущественно вне помещений работодателя и нет менее обременительных средств контроля), и только при наличии надлежащего основания и необходимости; цель необходимо указать заранее и рассмотреть в процедуре сотрудничества, иначе данные нельзя использовать для проверки соблюдения трудовых отношений.",
+        el: "Για τον Επίτροπο τα δεδομένα θέσης κατά κανόνα δεν πρέπει να χρησιμοποιούνται για την παρακολούθηση του ωραρίου εργασίας, εκτός από περιορισμένες περιπτώσεις (π.χ. ο εργαζόμενος εργάζεται από το σπίτι ή κυρίως εκτός των χώρων του εργοδότη και δεν υπάρχουν λιγότερο παρεμβατικά μέσα ελέγχου), και μόνο με κατάλληλη βάση και αναγκαιότητα· ο σκοπός πρέπει να δηλώνεται εκ των προτέρων και να εξετάζεται στη διαδικασία συνεργασίας, διαφορετικά τα δεδομένα δεν μπορούν να χρησιμοποιηθούν για τον έλεγχο της τήρησης της εργασιακής σχέσης.",
       },
       fonte: FONTE_GARANTE_FAQ,
     },
@@ -237,6 +248,7 @@ export const finlandia: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (DPIA) for lokaliseringsdata som brukes til systematisk overvåking',
         nl: 'Gegevensbeschermingseffectbeoordeling (DPIA) voor locatiegegevens die worden gebruikt voor systematische monitoring',
         ru: "Оценка воздействия (DPIA) для данных о местоположении, используемых для систематического мониторинга",
+        el: "Εκτίμηση αντικτύπου (DPIA) για δεδομένα θέσης που χρησιμοποιούνται για συστηματική παρακολούθηση",
       },
       risposta: 'si',
       dettaglio: {
@@ -251,6 +263,7 @@ export const finlandia: SchedaPaese = {
         nb: 'Ombudsmannens liste krever en personvernkonsekvensvurdering når lokaliseringsdata behandles sammen med minst ett annet kriterium, blant annet systematisk overvåking av personer eller behandling i stor skala.',
         nl: 'De lijst van de Ombudsman vereist een effectbeoordeling wanneer locatiegegevens samen met minstens één ander criterium worden verwerkt, waaronder systematische monitoring van personen of verwerking op grote schaal.',
         ru: "Перечень Уполномоченного требует оценки воздействия, когда данные о местоположении обрабатываются вместе как минимум с одним другим критерием, среди которых систематический мониторинг людей или обработка в больших масштабах.",
+        el: "Ο κατάλογος του Επιτρόπου απαιτεί εκτίμηση αντικτύπου όταν τα δεδομένα θέσης υποβάλλονται σε επεξεργασία μαζί με τουλάχιστον ένα ακόμη κριτήριο, μεταξύ των οποίων η συστηματική παρακολούθηση προσώπων ή η επεξεργασία μεγάλης κλίμακας.",
       },
       fonte: FONTE_GARANTE_DPIA,
     },
@@ -271,6 +284,7 @@ export const finlandia: SchedaPaese = {
         nb: 'Behandle formål, innføring og metoder for overvåkingen i samarbeidsprosedyren med representantene (eller sørg for at de ansatte har rett til å bli hørt).',
         nl: 'Behandel het doel, de invoering en de methoden van de monitoring in de overlegprocedure met de werknemersvertegenwoordigers (of waarborg het recht van werknemers om te worden gehoord).',
         ru: "Рассмотрите цель, внедрение и методы мониторинга в процедуре сотрудничества с представителями (или обеспечьте работникам право быть выслушанными).",
+        el: "Εξέτασε τον σκοπό, την υιοθέτηση και τις μεθόδους της παρακολούθησης στη διαδικασία συνεργασίας με τους εκπροσώπους (ή εξασφάλισε στους εργαζομένους το δικαίωμα να ακουστούν).",
       },
     },
     {
@@ -287,6 +301,7 @@ export const finlandia: SchedaPaese = {
         nb: 'Begrens innsamlingen til data som er direkte nødvendige for arbeidsforholdet.',
         nl: 'Beperk de verzameling tot gegevens die rechtstreeks noodzakelijk zijn voor de arbeidsrelatie.',
         ru: "Ограничьте сбор данными, непосредственно необходимыми для трудовых отношений.",
+        el: "Περιόρισε τη συλλογή στα δεδομένα που είναι άμεσα αναγκαία για την εργασιακή σχέση.",
       },
     },
     {
@@ -303,6 +318,7 @@ export const finlandia: SchedaPaese = {
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) for lokaliseringsdata som brukes til systematisk overvåking.',
         nl: 'Voer de gegevensbeschermingseffectbeoordeling (DPIA) uit voor locatiegegevens die worden gebruikt voor systematische monitoring.',
         ru: "Проведите оценку воздействия (DPIA) для данных о местоположении, используемых для систематического мониторинга.",
+        el: "Πραγματοποίησε την εκτίμηση αντικτύπου (DPIA) για τα δεδομένα θέσης που χρησιμοποιούνται για συστηματική παρακολούθηση.",
       },
     },
     {
@@ -319,6 +335,7 @@ export const finlandia: SchedaPaese = {
         nb: 'Informer de ansatte om innholdet i avgjørelsen og om overvåkingsmetodene.',
         nl: 'Informeer de werknemers over de inhoud van het besluit en de monitoringmethoden.',
         ru: "Информируйте работников о содержании решения и способах наблюдения.",
+        el: "Ενημέρωσε τους εργαζομένους για το περιεχόμενο της απόφασης και για τους τρόπους επιτήρησης.",
       },
     },
     {
@@ -335,6 +352,7 @@ export const finlandia: SchedaPaese = {
         nb: 'Ikke bruk lokalisering til kontroll av arbeidstiden, unntatt i begrensede og begrunnede tilfeller.',
         nl: 'Gebruik locatiebepaling niet voor de controle van de arbeidstijd, behoudens beperkte en gerechtvaardigde gevallen.',
         ru: "Не используйте геолокацию для контроля рабочего времени, кроме ограниченных и обоснованных случаев.",
+        el: "Μη χρησιμοποιείς τον εντοπισμό θέσης για τον έλεγχο του ωραρίου, εκτός από περιορισμένες και δικαιολογημένες περιπτώσεις.",
       },
     },
     {
@@ -351,6 +369,7 @@ export const finlandia: SchedaPaese = {
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, oppdater og utlever personvernerklæringen på nytt, og kontroller om du på nytt må informere eller konsultere de ansattes representanter, der loven krever det. Leverandøren (databehandleren), de innsamlede opplysningene og fremgangsmåtene endrer seg ofte: den informasjonen som ble gitt tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "Если вы меняете систему или программное обеспечение для мониторинга, обновите и повторно вручите информирование, а также проверьте, нужно ли снова информировать или консультировать представителей работников, где это предусмотрено законом. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее вручённого информирования недостаточно.",
+        el: "Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση απορρήτου και έλεγξε αν πρέπει να ενημερώσεις ή να συμβουλευτείς ξανά τους εκπροσώπους των εργαζομένων, εκεί όπου το προβλέπει ο νόμος. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και οι τρόποι: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.",
       },
     },
   ],
@@ -379,6 +398,7 @@ export const finlandia: SchedaPaese = {
       nb: '25 000 €',
       nl: 'EUR 25.000',
       ru: "25.000 €",
+      el: "25.000 €",
     },
     casoCitato: {
       it: "Garante finlandese (collegio sanzioni), 2021: a un istituto di istruzione superiore è stata inflitta una multa di 25.000 euro per aver trattato i dati di localizzazione dei dipendenti senza necessità e senza base giuridica, tramite un'app destinata alla registrazione dell'orario di lavoro; ordinata anche la cessazione del trattamento.",
@@ -392,6 +412,7 @@ export const finlandia: SchedaPaese = {
       nb: 'Finlands datatilsynsombud (sanksjonsutvalget), 2021: en høyere utdanningsinstitusjon fikk en bot på 25 000 euro for å ha behandlet de ansattes lokaliseringsdata uten nødvendighet og uten rettslig grunnlag via en app for registrering av arbeidstid; behandlingen ble dessuten pålagt å opphøre.',
       nl: 'Finse Ombudsman voor gegevensbescherming (sanctiecollege), 2021: aan een instelling voor hoger onderwijs werd een boete van 25.000 euro opgelegd voor het verwerken van de locatiegegevens van werknemers zonder noodzaak en zonder rechtsgrondslag, via een app bedoeld voor de registratie van de arbeidstijd; tevens werd de beeindiging van de verwerking gelast.',
       ru: "Финский надзорный орган (коллегия по санкциям), 2021 год: высшему учебному заведению назначен штраф 25.000 евро за обработку данных о местоположении сотрудников без необходимости и без правового основания с помощью приложения, предназначенного для учёта рабочего времени; также предписано прекратить обработку.",
+      el: "Επίτροπος της Φινλανδίας (επιτροπή κυρώσεων), 2021: σε ίδρυμα τριτοβάθμιας εκπαίδευσης επιβλήθηκε πρόστιμο 25.000 ευρώ επειδή επεξεργάστηκε δεδομένα θέσης των εργαζομένων χωρίς αναγκαιότητα και χωρίς νομική βάση, μέσω εφαρμογής που προοριζόταν για την καταγραφή του ωραρίου εργασίας· διατάχθηκε επίσης η παύση της επεξεργασίας.",
     },
     urlFonte: FONTE_GARANTE_SANZIONE.url,
     tipoImporto: 'caso-gps',

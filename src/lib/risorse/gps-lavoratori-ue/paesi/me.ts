@@ -70,6 +70,7 @@ export const montenegro: SchedaPaese = {
     sv: 'Montenegro',
     nb: 'Montenegro',
     ru: 'Черногория',
+    el: 'Μαυροβούνιο',
   },
   bandiera: '🇲🇪',
   federale: false,
@@ -88,6 +89,7 @@ export const montenegro: SchedaPaese = {
       sv: 'AZLP (Myndigheten för skydd av personuppgifter och fri tillgång till information)',
       nb: 'AZLP (Byrå for beskyttelse av personopplysninger og fri tilgang til informasjon)',
       ru: 'AZLP (Агентство по защите персональных данных и свободному доступу к информации)',
+      el: 'AZLP (Υπηρεσία Προστασίας Δεδομένων Προσωπικού Χαρακτήρα και Ελεύθερης Πρόσβασης στην Πληροφόρηση)',
     },
     portale: FONTE_AZLP_MODULI.url,
     urlFonte: FONTE_AZLP_CONTATTI.url,
@@ -104,6 +106,7 @@ export const montenegro: SchedaPaese = {
       nb: 'Montenegro er et kandidatland utenfor EU med en lov som bare delvis er tilpasset GDPR. Det er én nasjonal myndighet, AZLP. Særtrekk: Før registeret opprettes, må AZLP underrettes (art. 27), og ved særlig risiko kreves dens samtykke (art. 28). En ny lov (Sl. list CG 133/2026) har vært i kraft siden 19.9.2026 og gjelder fra 19.3.2027.',
       nl: 'Montenegro is een kandidaat-lidstaat buiten de EU, met een wet die slechts gedeeltelijk is afgestemd op de AVG. Er is één nationale autoriteit, de AZLP. Bijzonderheid: voordat u het gegevensbestand aanlegt, is een melding aan de AZLP (art. 27) en in gevallen van bijzonder risico haar toestemming (art. 28) vereist. Een nieuwe wet (Sl. list CG 133/2026) is sinds 19.9.2026 van kracht en geldt vanaf 19.3.2027.',
       ru: "Черногория является страной-кандидатом, не входит в ЕС, и её закон лишь частично согласован с GDPR. Единственный национальный орган: AZLP. Особенность: до создания базы данных необходимо уведомить AZLP (ст. 27), а в случаях особого риска получить его согласие (ст. 28). Новый закон (Sl. list CG 133/2026) вступил в силу 19.9.2026 и применяется с 19.3.2027.",
+      el: 'Το Μαυροβούνιο είναι υπό ένταξη χώρα, εκτός ΕΕ, με νόμο μόνο εν μέρει εναρμονισμένο με τον ΓΚΠΔ. Μία μόνο εθνική αρχή, η AZLP. Ιδιαιτερότητα: πριν από τη δημιουργία του αρχείου δεδομένων απαιτείται γνωστοποίηση στην AZLP (άρθρο 27) και, στις περιπτώσεις ειδικού κινδύνου, η συγκατάθεσή της (άρθρο 28). Νέος νόμος (Sl. list CG 133/2026) ισχύει από τις 19.9.2026 και εφαρμόζεται από τις 19.3.2027.',
     },
   },
 
@@ -121,6 +124,7 @@ export const montenegro: SchedaPaese = {
         nb: 'Forhåndsinformasjon til de ansatte og interne regler om GPS (ZZPL art. 20; AZLPs holdning)',
         nl: 'Voorafgaande informatie aan werknemers en interne GPS-regels (ZZPL art. 20; standpunt AZLP)',
         ru: "Предварительное информирование работников и внутренние правила по GPS (ZZPL ст. 20; позиция AZLP)",
+        el: 'Προηγούμενη ενημέρωση των εργαζομένων και εσωτερικοί κανόνες για το GPS (ZZPL άρθρο 20· θέση της AZLP)',
       },
       risposta: 'si',
       dettaglio: {
@@ -135,6 +139,7 @@ export const montenegro: SchedaPaese = {
         nb: 'Arbeidsgiveren må informere de ansatte om formål, metoder, innsamlede opplysninger og rettigheter og fastsette interne regler for GPS-behandlingen sammen med en forhåndsvurdering av sikkerhetstiltakene.',
         nl: 'De werkgever moet werknemers informeren over de doeleinden, methoden, verzamelde gegevens en rechten, en interne regels over GPS-verwerking vaststellen met een voorafgaande beoordeling van de beveiligingsmaatregelen.',
         ru: "Работодатель должен информировать работников о целях, способах, собираемых данных и правах и принять внутренние правила обработки GPS с предварительной оценкой мер безопасности.",
+        el: 'Ο εργοδότης πρέπει να ενημερώσει τους εργαζομένους για σκοπούς, μεθόδους, δεδομένα που συλλέγονται και δικαιώματα, και να θεσπίσει εσωτερικούς κανόνες για την επεξεργασία GPS με προηγούμενη αξιολόγηση των μέτρων ασφάλειας.',
       },
       fonte: FONTE_AZLP_GPS,
     },
@@ -151,6 +156,7 @@ export const montenegro: SchedaPaese = {
         nb: 'Forhåndsunderretning til AZLP (ZZPL art. 27) og i visse tilfeller dens samtykke (art. 28)',
         nl: "Voorafgaande melding aan de AZLP (ZZPL art. 27) en in bepaalde gevallen haar toestemming (art. 28)",
         ru: "Предварительное уведомление AZLP (ZZPL ст. 27) и в ряде случаев его согласие (ст. 28)",
+        el: 'Προηγούμενη γνωστοποίηση στην AZLP (ZZPL άρθρο 27) και, σε ορισμένες περιπτώσεις, συγκατάθεσή της (άρθρο 28)',
       },
       risposta: 'si',
       dettaglio: {
@@ -165,6 +171,7 @@ export const montenegro: SchedaPaese = {
         nb: 'Før det opprettes en automatisert innsamling av personopplysninger (et GPS-system som registrerer posisjoner per person, er normalt én), må den behandlingsansvarlige sende en underretning til AZLP med opplysningene som er oppregnet i art. 26 nr. 2 (art. 27 nr. 1); manglende underretning sanksjoneres etter art. 74. AZLPs forhåndssamtykke (art. 28) kreves bare i tillegg hvis behandlingen innebærer en særlig risiko for rettighetene (særlige kategorier av opplysninger, vurdering av personlighet, evner eller atferd, videoovervåking av offentlige områder, biometri), og det gjelder ikke når behandlingen bygger på en lov, på personens samtykke eller på en kontrakt. Den engelske teksten som AZLP har offentliggjort (79/08 og 70/09), er foreldet: Den krevde fortsatt samtykke for ethvert register, med stilltiende godkjenning etter 30 dager.',
         nl: "Voordat een geautomatiseerd bestand met persoonsgegevens wordt aangelegd (een GPS-systeem dat posities per persoon vastlegt is dat in de regel), moet de verwerkingsverantwoordelijke de AZLP een melding sturen met de gegevens van art. 26, lid 2 (art. 27, lid 1); het niet melden wordt gesanctioneerd op grond van art. 74. De voorafgaande toestemming van de AZLP (art. 28) is alleen aanvullend nodig als de verwerking een bijzonder risico voor de rechten inhoudt (bijzondere categorieën gegevens, beoordeling van persoonlijkheid, bekwaamheid of gedrag, camerabewaking van openbare ruimten, biometrie), en geldt niet als de verwerking berust op een wet, op de toestemming van de persoon of op een overeenkomst. De door de AZLP gepubliceerde Engelse tekst (79/08 en 70/09) is achterhaald: die eiste nog toestemming voor elk bestand, met stilzwijgende goedkeuring na 30 dagen.",
         ru: "Перед созданием автоматизированной базы персональных данных (как правило, ею является система GPS, фиксирующая местоположение по каждому лицу) оператор должен направить в AZLP уведомление с данными по ст. 26 ч. 2 (ст. 27 ч. 1); непредставление уведомления наказывается по ст. 74. Предварительное согласие AZLP (ст. 28) дополнительно требуется только если обработка создаёт особый риск для прав (особые категории данных, оценка личности, способностей или поведения, видеонаблюдение за общественными местами, биометрия) и не требуется, если обработка основана на законе, согласии лица или договоре. Английский текст, опубликованный AZLP (79/08 и 70/09), устарел: он ещё предусматривал согласие для каждой базы с молчаливым согласием через 30 дней.",
+        el: 'Πριν από τη δημιουργία αυτόματης συλλογής δεδομένων προσωπικού χαρακτήρα (κατά κανόνα είναι τέτοιο ένα σύστημα GPS που καταγράφει θέσεις ανά πρόσωπο) ο υπεύθυνος επεξεργασίας πρέπει να στείλει γνωστοποίηση στην AZLP με τα στοιχεία του άρθρου 26 παρ. 2 (άρθρο 27 παρ. 1)· η παράλειψη γνωστοποίησης τιμωρείται με το άρθρο 74. Η προηγούμενη συγκατάθεση της AZLP (άρθρο 28) απαιτείται επιπλέον μόνο αν η επεξεργασία παρουσιάζει ειδικό κίνδυνο για τα δικαιώματα (ειδικές κατηγορίες δεδομένων, αξιολόγηση προσωπικότητας, ικανότητας ή συμπεριφοράς, βιντεοεπιτήρηση δημόσιων χώρων, βιομετρικά) και δεν εφαρμόζεται αν η επεξεργασία βασίζεται στον νόμο, στη συγκατάθεση του προσώπου ή σε σύμβαση. Το αγγλικό κείμενο που δημοσίευσε η AZLP (79/08 και 70/09) είναι παρωχημένο: προέβλεπε ακόμη συγκατάθεση για κάθε αρχείο, με σιωπηρή έγκριση στις 30 ημέρες.',
       },
       fonte: FONTE_ZZPL_2024,
     },
@@ -181,6 +188,7 @@ export const montenegro: SchedaPaese = {
         nb: 'Grunnlaget er berettiget interesse (art. 10), ikke samtykke; for private kjøretøy bare skriftlig samtykke og arbeidstid',
         nl: 'Grondslag = gerechtvaardigd belang (art. 10), niet toestemming; voor privévoertuigen schriftelijke toestemming en alleen tijdens werktijd',
         ru: "Основание = законный интерес (ст. 10), а не согласие; для личных транспортных средств письменное согласие и только в рабочее время",
+        el: 'Βάση = έννομο συμφέρον (άρθρο 10), όχι συγκατάθεση· για τα ιδιωτικά οχήματα γραπτή συγκατάθεση και μόνο εντός ωραρίου',
       },
       risposta: 'si',
       dettaglio: {
@@ -195,6 +203,7 @@ export const montenegro: SchedaPaese = {
         nb: 'Grunnlaget er berettiget interesse; for private kjøretøy som brukes i arbeidet, kreves den ansattes skriftlige samtykke, og GPS-en må begrenses til arbeidstiden.',
         nl: 'De grondslag is het gerechtvaardigd belang; voor privévoertuigen die voor werkdoeleinden worden gebruikt, is de schriftelijke toestemming van de werknemer vereist en moet de GPS tot de werktijd worden beperkt.',
         ru: "Основанием служит законный интерес; для личных транспортных средств, используемых в служебных целях, требуется письменное согласие работника, а GPS нужно ограничить рабочим временем.",
+        el: 'Η βάση είναι το έννομο συμφέρον· για τα ιδιωτικά οχήματα που χρησιμοποιούνται για υπηρεσιακούς σκοπούς απαιτείται η γραπτή συγκατάθεση του εργαζομένου και το GPS περιορίζεται στο ωράριο εργασίας.',
       },
       fonte: FONTE_AZLP_GPS,
     },
@@ -211,6 +220,7 @@ export const montenegro: SchedaPaese = {
         nb: 'Ingen avgjørelser om ansatte utelukkende på grunnlag av automatisert behandling (ZZPL art. 15a)',
         nl: 'Geen besluiten over werknemers die uitsluitend op geautomatiseerde verwerking zijn gebaseerd (ZZPL art. 15a)',
         ru: "Никаких решений в отношении работников, основанных только на автоматизированной обработке (ZZPL ст. 15a)",
+        el: 'Καμία απόφαση για τους εργαζομένους που να βασίζεται μόνο σε αυτοματοποιημένη επεξεργασία (ZZPL άρθρο 15α)',
       },
       risposta: 'si',
       dettaglio: {
@@ -225,6 +235,7 @@ export const montenegro: SchedaPaese = {
         nb: 'Avgjørelser om ansattes ytelse, pålitelighet eller atferd må ikke utelukkende bygge på automatisert behandling; unntaket (kontrakt eller lov) krever sikkerhetstiltak, for eksempel at personen har mulighet til å gi uttrykk for sitt syn.',
         nl: 'Besluiten over de prestaties, betrouwbaarheid of het gedrag van werknemers mogen niet uitsluitend op geautomatiseerde verwerking worden gebaseerd; de uitzondering (overeenkomst of wet) vereist waarborgen, zoals de mogelijkheid voor de persoon om zijn mening te geven.',
         ru: "Решения о результатах, надёжности или поведении работников не могут основываться исключительно на автоматизированной обработке; исключение (договор или закон) требует мер защиты, например возможности для лица выразить своё мнение.",
+        el: 'Οι αποφάσεις για τα αποτελέσματα, την αξιοπιστία ή τη συμπεριφορά των εργαζομένων δεν μπορούν να βασίζονται αποκλειστικά σε αυτοματοποιημένη επεξεργασία· η εξαίρεση (σύμβαση ή νόμος) απαιτεί μέτρα προστασίας, όπως τη δυνατότητα του προσώπου να εκφράσει τη γνώμη του.',
       },
       fonte: FONTE_AZLP_GPS,
     },
@@ -241,6 +252,7 @@ export const montenegro: SchedaPaese = {
         nb: 'Formell vurdering av personvernkonsekvenser (DPIA)',
         nl: "Formele gegevensbeschermingseffectbeoordeling (DPIA)",
         ru: "Формальная оценка воздействия (DPIA)",
+        el: 'Τυπική εκτίμηση αντικτύπου (DPIA)',
       },
       risposta: 'dipende',
       dettaglio: {
@@ -255,6 +267,7 @@ export const montenegro: SchedaPaese = {
         nb: 'Den gjeldende loven inneholder ikke en formell vurdering av personvernkonsekvenser (DPIA) som i GDPR; i stedet kommer forhåndsunderretningen etter art. 27 (og ved særlig risiko samtykket etter art. 28) samt sikkerhetstiltakene og de interne reglene med en forhåndsanalyse av egnethet (art. 24 og 26). En ny lov (Sl. list CG 133/2026) har vært i kraft siden 19. september 2026 og gjelder fra 19. mars 2027: Inntil da er det den gjeldende loven som gjelder.',
         nl: "De huidige wet voorziet niet in een formele DPIA naar AVG-model; in de plaats daarvan komen de voorafgaande melding op grond van art. 27 (en in gevallen van bijzonder risico de toestemming van art. 28) plus de beveiligingsmaatregelen en de interne regels met een voorafgaande toereikendheidsanalyse (art. 24 en 26). Een nieuwe wet (Sl. list CG 133/2026) is sinds 19 september 2026 van kracht en geldt vanaf 19 maart 2027: tot dan geldt de huidige wet.",
         ru: "Действующий закон не предусматривает формальной DPIA в стиле GDPR; её заменяют предварительное уведомление по ст. 27 (а в случаях особого риска согласие по ст. 28), а также меры безопасности и внутренние правила с предварительным анализом достаточности (ст. 24 и 26). Новый закон (Sl. list CG 133/2026) вступил в силу 19 сентября 2026 г. и применяется с 19 марта 2027 г.: до этого момента действует нынешний закон.",
+        el: 'Ο ισχύων νόμος δεν προβλέπει τυπική DPIA τύπου ΓΚΠΔ· το υποκατάστατο είναι η προηγούμενη γνωστοποίηση του άρθρου 27 (και, στις περιπτώσεις ειδικού κινδύνου, η συγκατάθεση του άρθρου 28) μαζί με τα μέτρα ασφάλειας και τους εσωτερικούς κανόνες με προηγούμενη ανάλυση καταλληλότητας (άρθρα 24 και 26). Νέος νόμος (Sl. list CG 133/2026) ισχύει από τις 19 Σεπτεμβρίου 2026 και εφαρμόζεται από τις 19 Μαρτίου 2027: μέχρι τότε ισχύει ο υφιστάμενος νόμος.',
       },
       fonte: FONTE_ZZPL_2024,
     },
@@ -275,6 +288,7 @@ export const montenegro: SchedaPaese = {
         nb: 'Fastlegg formålet med og metodene for GPS-en, og innfør interne regler med en forhåndsvurdering av sikkerhetstiltakene.',
         nl: 'Bepaal de doeleinden en methoden van de GPS en stel interne regels vast met een voorafgaande beoordeling van de beveiligingsmaatregelen.',
         ru: "Определите цели и способы использования GPS и примите внутренние правила с предварительной оценкой мер безопасности.",
+        el: 'Όρισε σκοπούς και μεθόδους του GPS και θέσπισε εσωτερικούς κανόνες με προηγούμενη αξιολόγηση των μέτρων ασφάλειας.',
       },
     },
     {
@@ -291,6 +305,7 @@ export const montenegro: SchedaPaese = {
         nb: 'Send underretningen til AZLP før registeret opprettes (art. 27); be bare om dens samtykke (art. 28) hvis behandlingen innebærer en særlig risiko.',
         nl: 'Stuur de melding naar de AZLP voordat u het gegevensbestand aanlegt (art. 27); vraag haar toestemming (art. 28) alleen als de verwerking een bijzonder risico inhoudt.',
         ru: "Направьте уведомление в AZLP до создания базы данных (ст. 27); запрашивайте его согласие (ст. 28) только если обработка создаёт особый риск.",
+        el: 'Στείλε τη γνωστοποίηση στην AZLP πριν από τη δημιουργία του αρχείου δεδομένων (άρθρο 27)· ζήτα τη συγκατάθεσή της (άρθρο 28) μόνο αν η επεξεργασία παρουσιάζει ειδικό κίνδυνο.',
       },
     },
     {
@@ -307,6 +322,7 @@ export const montenegro: SchedaPaese = {
         nb: 'Informer de ansatte skriftlig; innhent skriftlig samtykke for private kjøretøy, og begrens GPS-en til arbeidstiden.',
         nl: 'Informeer de werknemers schriftelijk; verzamel voor privévoertuigen de schriftelijke toestemming en beperk de GPS tot de werktijd.',
         ru: "Информируйте работников письменно; для личных транспортных средств получите письменное согласие и ограничьте GPS рабочим временем.",
+        el: 'Ενημέρωσε γραπτώς τους εργαζομένους· για τα ιδιωτικά οχήματα πάρε γραπτή συγκατάθεση και περιόρισε το GPS στο ωράριο.',
       },
     },
     {
@@ -323,6 +339,7 @@ export const montenegro: SchedaPaese = {
         nb: 'La ikke avgjørelser om ansatte utelukkende bygge på automatisert behandling (art. 15a).',
         nl: 'Baseer besluiten over werknemers niet uitsluitend op geautomatiseerde verwerking (art. 15a).',
         ru: "Не основывайте решения в отношении работников исключительно на автоматизированной обработке (ст. 15a).",
+        el: 'Μη βασίζεις αποφάσεις για τους εργαζομένους αποκλειστικά σε αυτοματοποιημένη επεξεργασία (άρθρο 15α).',
       },
     },
     {
@@ -339,6 +356,7 @@ export const montenegro: SchedaPaese = {
         nb: 'Begrens GPS-en til arbeidstiden og det oppgitte formålet.',
         nl: 'Beperk de GPS tot de werktijd en tot het verklaarde doel.',
         ru: "Ограничьте GPS рабочим временем и заявленной целью.",
+        el: 'Περιόρισε το GPS στο ωράριο και στον δηλωμένο σκοπό.',
       },
     },
     {
@@ -355,6 +373,7 @@ export const montenegro: SchedaPaese = {
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og dele ut personverninformasjonen på nytt og vurdere om du på nytt må informere eller høre de ansattes representanter, der loven krever det. I Montenegro må det sendes en ny underretning til AZLP hvis behandlingen endres vesentlig (art. 27 nr. 1). Ofte endrer leverandøren (databehandleren), de innsamlede opplysningene og metodene seg: informasjonen som ble delt ut tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. In Montenegro moet bij een wezenlijke wijziging van de verwerking een nieuwe melding aan de AZLP worden gedaan (art. 27, lid 1). Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "При смене системы или программного обеспечения для мониторинга обновите и повторно вручите уведомление и проверьте, нужно ли снова информировать представителей работников или консультироваться с ними, если это предусмотрено законом. В Черногории, если обработка существенно меняется, в AZLP нужно направить новое уведомление (ст. 27 ч. 1). Часто меняются поставщик (обработчик), собираемые данные и способы: ранее вручённого уведомления недостаточно.",
+        el: 'Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση, και έλεγξε αν πρέπει να ενημερώσεις ή να συμβουλευτείς ξανά τους εκπροσώπους των εργαζομένων, όπου το προβλέπει ο νόμος. Στο Μαυροβούνιο, αν η επεξεργασία αλλάξει ουσιαστικά, πρέπει να σταλεί νέα γνωστοποίηση στην AZLP (άρθρο 27 παρ. 1). Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και ο τρόπος λειτουργίας: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.',
       },
     },
   ],
@@ -383,6 +402,7 @@ export const montenegro: SchedaPaese = {
       nb: 'fra 500 til 20 000 euro for en juridisk person',
       nl: 'van 500 tot 20.000 euro voor een rechtspersoon',
       ru: "От 500 до 20.000 € для юридического лица",
+      el: 'Από 500 έως 20.000 € για το νομικό πρόσωπο',
     },
     casoCitato: {
       it: "Non risulta una multa dell'AZLP specifica e pubblicata per il GPS sui dipendenti. La posizione di riferimento è quella del Consiglio dell'AZLP del 2025: il GPS sui veicoli di servizio è un controllo legittimo, ma serve definirne finalità e metodi, informare i lavoratori e adottare regole interne (la notifica all'AZLP per l'archivio dati è un obbligo distinto, art. 27). Il massimale mostrato è quello della legge sulla protezione dei dati oggi in vigore (art. 74 del testo consolidato pubblicato dall'AZLP): da 500 a 20.000 euro per la persona giuridica, da 150 a 6.000 euro per l'imprenditore individuale. Non sono cifre in stile GDPR: il Montenegro non è nell'UE. Dal 19 marzo 2027 si applica una nuova legge (Sl. list CG 133/2026, in vigore dal 19 settembre 2026) con sanzioni fino a 1.000.000 di euro o al 2% del fatturato mondiale e, per la violazione di principi, consenso, diritti degli interessati e trasferimenti, fino a 2.000.000 di euro o al 4% (art. 88; l'art. 89 prevede da 150 a 2.000 euro per alcune contravvenzioni). La vecchia legge cessa il 19 marzo 2027, salvo le norme sulla videosorveglianza (artt. 35-40a), che cessano con una futura legge sulla videosorveglianza (art. 105).",
@@ -396,6 +416,7 @@ export const montenegro: SchedaPaese = {
       nb: 'Det finnes ingen spesifikk, offentliggjort bot fra AZLP for GPS-sporing av ansatte. Referansen er holdningen til AZLP-rådet fra 2025: GPS på firmabiler er lovlig overvåking, men formål og metoder må fastlegges, de ansatte må informeres, og det må innføres interne regler (underretningen til AZLP om registeret er en særskilt plikt, art. 27). Taket som vises, er det som står i personvernloven som gjelder i dag (art. 74 i den konsoliderte teksten som AZLP har offentliggjort): 500 til 20 000 euro for en juridisk person og 150 til 6 000 euro for et enkeltpersonforetak. Det er ikke tall som i GDPR: Montenegro er ikke med i EU. Fra 19. mars 2027 gjelder en ny lov (Sl. list CG 133/2026, i kraft siden 19. september 2026) med sanksjoner på opptil 1 000 000 euro eller 2 % av den globale omsetningen og, ved brudd på prinsippene, samtykke, de registrertes rettigheter og overføringer, opptil 2 000 000 euro eller 4 % (art. 88; art. 89 fastsetter 150 til 2 000 euro for visse mindre overtredelser). Den gamle loven opphører 19. mars 2027, med unntak av reglene om videoovervåking (art. 35-40a), som opphører med en framtidig lov om videoovervåking (art. 105).',
       nl: 'Er is geen specifieke, gepubliceerde boete van de AZLP voor GPS-tracking van werknemers. De maatgevende positie is die van de AZLP-Raad uit 2025: GPS in dienstvoertuigen is een legitieme controle, maar de doeleinden en methoden moeten worden vastgelegd, de werknemers moeten worden geïnformeerd en er moeten interne regels worden vastgesteld (de melding van het gegevensbestand aan de AZLP is een aparte plicht, art. 27). Het getoonde maximum is dat van de vandaag geldende wet op de gegevensbescherming (art. 74 van de door de AZLP gepubliceerde geconsolideerde tekst): 500 tot 20.000 euro voor een rechtspersoon, 150 tot 6.000 euro voor een eenmanszaak. Dit zijn geen AVG-bedragen: Montenegro is geen lid van de EU. Vanaf 19 maart 2027 geldt een nieuwe wet (Sl. list CG 133/2026, sinds 19 september 2026 van kracht) met sancties tot 1.000.000 euro of 2 % van de wereldwijde omzet en, bij schending van de beginselen, toestemming, rechten van betrokkenen en doorgiften, tot 2.000.000 euro of 4 % (art. 88; art. 89 voorziet 150 tot 2.000 euro voor sommige overtredingen). De oude wet vervalt op 19 maart 2027, behalve de regels over camerabewaking (art. 35-40a), die vervallen met een toekomstige wet op de camerabewaking (art. 105).',
       ru: "Опубликованного штрафа AZLP конкретно за GPS на работниках не обнаружено. Опорная позиция: позиция Совета AZLP 2025 года, согласно которой GPS на служебных транспортных средствах является допустимым контролем, но необходимо определить его цели и способы, информировать работников и принять внутренние правила (уведомление AZLP о базе данных является отдельной обязанностью, ст. 74). Приведённый максимум соответствует действующему закону о защите данных (ст. 74 консолидированного текста, опубликованного AZLP): от 500 до 20.000 евро для юридического лица, от 150 до 6.000 евро для индивидуального предпринимателя. Это не суммы в стиле GDPR: Черногория не входит в ЕС. С 19 марта 2027 г. применяется новый закон (Sl. list CG 133/2026, вступивший в силу 19 сентября 2026 г.) с санкциями до 1.000.000 евро или 2% общемирового оборота, а за нарушение принципов, согласия, прав субъектов данных и трансграничной передачи до 2.000.000 евро или 4% (ст. 88; ст. 89 предусматривает от 150 до 2.000 евро за некоторые правонарушения). Прежний закон прекращает действие 19 марта 2027 г., за исключением норм о видеонаблюдении (ст. 35-40a), которые утрачивают силу с принятием будущего закона о видеонаблюдении (ст. 105).",
+      el: 'Δεν προκύπτει συγκεκριμένο, δημοσιευμένο πρόστιμο της AZLP για το GPS στους εργαζομένους. Η θέση αναφοράς είναι εκείνη του Συμβουλίου της AZLP του 2025: το GPS στα υπηρεσιακά οχήματα είναι νόμιμος έλεγχος, αλλά πρέπει να ορίζονται σκοπός και μέθοδοι, να ενημερώνονται οι εργαζόμενοι και να θεσπίζονται εσωτερικοί κανόνες (η γνωστοποίηση στην AZLP για το αρχείο δεδομένων είναι χωριστή υποχρέωση, άρθρο 27). Το ανώτατο όριο που εμφανίζεται είναι εκείνο του νόμου για την προστασία δεδομένων που ισχύει σήμερα (άρθρο 74 του ενοποιημένου κειμένου που δημοσίευσε η AZLP): από 500 έως 20.000 ευρώ για το νομικό πρόσωπο, από 150 έως 6.000 ευρώ για τον ατομικό επιχειρηματία. Δεν είναι ποσά τύπου ΓΚΠΔ: το Μαυροβούνιο δεν ανήκει στην ΕΕ. Από τις 19 Μαρτίου 2027 εφαρμόζεται νέος νόμος (Sl. list CG 133/2026, σε ισχύ από τις 19 Σεπτεμβρίου 2026) με κυρώσεις έως 1.000.000 ευρώ ή 2% του παγκόσμιου κύκλου εργασιών και, για παράβαση αρχών, συγκατάθεσης, δικαιωμάτων των υποκειμένων και διαβιβάσεων, έως 2.000.000 ευρώ ή 4% (άρθρο 88· το άρθρο 89 προβλέπει από 150 έως 2.000 ευρώ για ορισμένα πταίσματα). Ο παλιός νόμος παύει να ισχύει στις 19 Μαρτίου 2027, εκτός από τους κανόνες για τη βιντεοεπιτήρηση (άρθρα 35-40α), που παύουν με τον μελλοντικό νόμο για τη βιντεοεπιτήρηση (άρθρο 105).',
     },
     urlFonte: FONTE_ZZPL_2024.url,
     tipoImporto: 'massimale',

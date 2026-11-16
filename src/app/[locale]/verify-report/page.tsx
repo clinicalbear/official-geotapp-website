@@ -52,6 +52,11 @@ const META: Record<string, { title: string; description: string }> = {
     description:
       'Last opp den signerte pakken og kontroller den elektroniske signaturen, hendelseskjeden og bildenes fingeravtrykk. Kontrollen kjører i nettleseren din: filen sendes ikke til oss.',
   },
+  el: {
+    title: 'Επαλήθευση αναφοράς GeoTapp | GeoTapp',
+    description:
+      'Ανέβασε το υπογεγραμμένο πακέτο και έλεγξε την ηλεκτρονική υπογραφή, την αλυσίδα των γεγονότων και τα αποτυπώματα των φωτογραφιών. Ο έλεγχος τρέχει στον browser σου: το αρχείο δεν μας αποστέλλεται.',
+  },
   ru: {
     title: 'Проверка отчёта GeoTapp | GeoTapp',
     description:

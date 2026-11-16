@@ -66,6 +66,7 @@ export const lettonia: SchedaPaese = {
     sv: 'Lettland',
     nb: 'Latvia',
     ru: 'Латвия',
+    el: 'Λετονία',
   },
   bandiera: '🇱🇻',
   federale: false,
@@ -84,6 +85,7 @@ export const lettonia: SchedaPaese = {
       sv: 'DVI (Datu valsts inspekcija, lettiska dataskyddsmyndigheten)',
       nb: 'DVI (Datu valsts inspekcija, latvisk datatilsyn)',
       ru: 'DVI (Datu valsts inspekcija, латвийский орган по защите данных)',
+      el: 'DVI (Datu valsts inspekcija, Αρχή προστασίας δεδομένων της Λετονίας)',
     },
     portale: FONTE_DVI_RECLAMO.url,
     urlFonte: FONTE_DVI_RECLAMO.url,
@@ -100,6 +102,7 @@ export const lettonia: SchedaPaese = {
       nb: 'Latvia har én nasjonal myndighet, DVI; det er ingen regional oppdeling.',
       nl: 'Letland heeft een enkele nationale autoriteit, de DVI; er is geen regionale verdeling.',
       ru: "В Латвии единственный национальный орган, DVI; региональных подразделений нет.",
+      el: 'Η Λετονία έχει μία μόνο εθνική αρχή, την DVI· δεν υπάρχει περιφερειακός διαχωρισμός.',
     },
   },
 
@@ -117,6 +120,7 @@ export const lettonia: SchedaPaese = {
         nb: 'Avveiningstest før behandlingen og forhåndsinformasjon til de ansatte (DVI)',
         nl: 'Afwegingstoets voor de verwerking en voorafgaande informatie aan werknemers (DVI)',
         ru: "Тест баланса интересов до начала обработки и предварительное информирование работников (DVI)",
+        el: 'Έλεγχος στάθμισης πριν από την επεξεργασία και προηγούμενη ενημέρωση των εργαζομένων (DVI)',
       },
       risposta: 'si',
       dettaglio: {
@@ -131,6 +135,7 @@ export const lettonia: SchedaPaese = {
         nb: 'Før behandlingen begynner, må arbeidsgiveren vurdere avveiningen mellom sin egen interesse og den ansattes og informere den ansatte, før vedkommende begynner å bruke kjøretøyet, på en åpen måte og i et enkelt språk.',
         nl: 'Voordat de verwerking begint, moet de werkgever de afweging maken tussen zijn eigen belang en dat van de werknemer, en de werknemer informeren voordat deze het voertuig gaat gebruiken, op transparante wijze en in eenvoudige taal.',
         ru: "Работодатель должен до начала обработки оценить баланс между собственным интересом и интересом работника и проинформировать работника до того, как он начнёт использовать автомобиль, прозрачно и простым языком.",
+        el: 'Ο εργοδότης πρέπει, πριν ξεκινήσει την επεξεργασία, να σταθμίσει το δικό του συμφέρον με εκείνο του εργαζομένου και να τον ενημερώσει πριν αρχίσει να χρησιμοποιεί το όχημα, με διαφάνεια και σε απλή γλώσσα.',
       },
       fonte: FONTE_DVI_GPS,
     },
@@ -147,6 +152,7 @@ export const lettonia: SchedaPaese = {
         nb: 'Grunnlag = berettiget interesse, ikke samtykke (DVI)',
         nl: 'Grondslag = gerechtvaardigd belang, niet de toestemming (DVI)',
         ru: "Основание: законный интерес, не согласие (DVI)",
+        el: 'Βάση = έννομο συμφέρον, όχι συγκατάθεση (DVI)',
       },
       risposta: 'si',
       dettaglio: {
@@ -161,6 +167,7 @@ export const lettonia: SchedaPaese = {
         nb: 'Som hovedregel er grunnlaget arbeidsgiverens berettigede interesse (i noen tilfeller en rettslig forpliktelse, som for fartsskrivere); den ansattes samtykke kan bare brukes i ekstraordinære tilfeller på grunn av den skjeve maktbalansen mellom arbeidsgiver og ansatt.',
         nl: 'In de regel is de grondslag het gerechtvaardigd belang van de werkgever (in sommige gevallen een wettelijke verplichting, zoals bij tachografen); de toestemming van de werknemer kan alleen in uitzonderlijke gevallen worden gebruikt, vanwege de machtsongelijkheid tussen werkgever en werknemer.',
         ru: "Как правило, основанием служит законный интерес работодателя (в некоторых случаях обязанность, установленная законом, как для тахографов); согласие работника можно использовать только в исключительных случаях из-за неравенства сторон между работодателем и работником.",
+        el: 'Κατά κανόνα η βάση είναι το έννομο συμφέρον του εργοδότη (σε ορισμένες περιπτώσεις νομική υποχρέωση, όπως για τους ταχογράφους)· η συγκατάθεση του εργαζομένου μπορεί να χρησιμοποιηθεί μόνο σε εξαιρετικές περιπτώσεις, λόγω της ανισορροπίας ισχύος μεταξύ εργοδότη και εργαζομένου.',
       },
       fonte: FONTE_DVI_GPS,
     },
@@ -177,6 +184,7 @@ export const lettonia: SchedaPaese = {
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit voor installatie',
         ru: "Предварительное разрешение органа до установки",
+        el: 'Προηγούμενη άδεια αρχής πριν από την εγκατάσταση',
       },
       risposta: 'no',
       dettaglio: {
@@ -191,6 +199,7 @@ export const lettonia: SchedaPaese = {
         nb: 'Den latviske lovgivningen om databehandling inneholder ikke en forhåndstillatelse fra DVI; den behandlingsansvarlige vurderer selv lovligheten.',
         nl: 'De Letse wet inzake gegevensverwerking voorziet niet in een voorafgaande toestemming van de DVI; de verwerkingsverantwoordelijke beoordeelt de rechtmatigheid zelf.',
         ru: "Латвийский закон об обработке данных не предусматривает предварительного разрешения DVI; оператор самостоятельно оценивает законность обработки.",
+        el: 'Ο λετονικός νόμος για την επεξεργασία δεδομένων δεν προβλέπει προηγούμενη άδεια της DVI· ο υπεύθυνος επεξεργασίας αξιολογεί μόνος του τη νομιμότητα.',
       },
       fonte: FONTE_LEGGE_LV,
     },
@@ -207,6 +216,7 @@ export const lettonia: SchedaPaese = {
         nb: 'Ingen behandling under privat bruk av kjøretøyet; begrenset formål og mindre inngripende midler',
         nl: 'Geen verwerking tijdens privégebruik van het voertuig; beperkt doel en minder ingrijpende middelen',
         ru: "Никакой обработки во время личного использования автомобиля; ограниченная цель и наименее инвазивные средства",
+        el: 'Καμία επεξεργασία κατά την ιδιωτική χρήση του οχήματος· περιορισμένος σκοπός και λιγότερο παρεμβατικά μέσα',
       },
       risposta: 'si',
       dettaglio: {
@@ -221,6 +231,7 @@ export const lettonia: SchedaPaese = {
         nb: 'Arbeidsgiveren har verken grunnlag eller rett til å behandle data i den perioden den ansatte bruker kjøretøyet til private formål. Arbeidsgiveren må dessuten vurdere om formålet kan nås med mindre inngripende midler (for å telle kilometer er det ikke nødvendig å registrere posisjonen), og må ikke bruke data som er samlet inn til ett formål, til et annet (for eksempel data fra et tyverialarmsystem til å kontrollere sjåførens effektivitet).',
         nl: 'De werkgever heeft noch een grondslag noch een recht om gegevens te verwerken gedurende de periode waarin de werknemer het voertuig voor privédoeleinden gebruikt. Hij moet zich ook afvragen of het doel met minder ingrijpende middelen kan worden bereikt (om kilometers te tellen hoeft de locatie niet te worden vastgelegd) en mag gegevens die voor het ene doel zijn verzameld niet voor een ander doel gebruiken (bijvoorbeeld diefstalbeveiligingsgegevens om de efficiëntie van de bestuurder te controleren).',
         ru: "У работодателя нет ни основания, ни права обрабатывать данные за период, когда работник использует автомобиль в личных целях. Кроме того, он должен задаться вопросом, нельзя ли достичь цели менее инвазивными средствами (чтобы подсчитать километры, записывать местоположение не нужно), и не может использовать для другой цели данные, собранные для одной (например, данные противоугонной системы для контроля эффективности водителя).",
+        el: 'Ο εργοδότης δεν έχει βάση ούτε δικαίωμα να επεξεργάζεται δεδομένα για το διάστημα που ο εργαζόμενος χρησιμοποιεί το όχημα για ιδιωτικούς σκοπούς. Πρέπει επίσης να αναρωτηθεί αν ο σκοπός επιτυγχάνεται με λιγότερο παρεμβατικά μέσα (για να μετρήσεις τα χιλιόμετρα δεν χρειάζεται να καταγράφεις τη θέση) και δεν μπορεί να χρησιμοποιεί για άλλον σκοπό δεδομένα που συλλέχθηκαν για έναν (για παράδειγμα, τα δεδομένα ενός συστήματος κατά της κλοπής για να ελέγξει την αποδοτικότητα του οδηγού).',
       },
       fonte: FONTE_DVI_GPS,
     },
@@ -237,6 +248,7 @@ export const lettonia: SchedaPaese = {
         nb: 'Vurdering av personvernkonsekvenser (DPIA) ved overvåking på arbeidsplassen og systematisk overvåking av ansatte (DVIs liste)',
         nl: 'Effectbeoordeling (DPIA) voor toezicht op de werkplek en systematische monitoring van werknemers (DVI-lijst)',
         ru: "Оценка воздействия (DPIA) при наблюдении на рабочем месте и систематическом мониторинге работников (перечень DVI)",
+        el: 'Εκτίμηση αντικτύπου (DPIA) για την επιτήρηση στον χώρο εργασίας και τη συστηματική παρακολούθηση των εργαζομένων (κατάλογος DVI)',
       },
       risposta: 'si',
       dettaglio: {
@@ -251,6 +263,7 @@ export const lettonia: SchedaPaese = {
         nb: 'DVIs liste gjør vurderingen av personvernkonsekvenser obligatorisk ved overvåking på arbeidsplassen, systematisk overvåking av de ansattes aktiviteter og sporing i stor skala.',
         nl: 'De DVI-lijst maakt de effectbeoordeling verplicht voor toezicht op de werkplek, systematische monitoring van de activiteiten van werknemers en grootschalige tracking.',
         ru: "Перечень DVI делает оценку воздействия обязательной для наблюдения на рабочем месте, систематического мониторинга деятельности работников и отслеживания в крупном масштабе.",
+        el: 'Ο κατάλογος της DVI καθιστά υποχρεωτική την εκτίμηση αντικτύπου για την επιτήρηση στον χώρο εργασίας, τη συστηματική παρακολούθηση των δραστηριοτήτων των εργαζομένων και την παρακολούθηση θέσης σε μεγάλη κλίμακα.',
       },
       fonte: FONTE_DVI_DPIA,
     },
@@ -271,6 +284,7 @@ export const lettonia: SchedaPaese = {
         nb: 'Gjennomfør avveiningstesten før behandlingen begynner.',
         nl: 'Voer de afwegingstoets uit voordat u met de verwerking begint.',
         ru: "Проведите тест баланса интересов до начала обработки.",
+        el: 'Κάνε τον έλεγχο στάθμισης πριν ξεκινήσεις την επεξεργασία.',
       },
     },
     {
@@ -287,6 +301,7 @@ export const lettonia: SchedaPaese = {
         nb: 'Finn et gyldig rettslig grunnlag (berettiget interesse, ikke samtykke).',
         nl: 'Bepaal een geldige rechtsgrondslag (gerechtvaardigd belang, niet de toestemming).',
         ru: "Определите действительное правовое основание (законный интерес, не согласие).",
+        el: 'Βρες μια έγκυρη νομική βάση (έννομο συμφέρον, όχι συγκατάθεση).',
       },
     },
     {
@@ -303,6 +318,7 @@ export const lettonia: SchedaPaese = {
         nb: 'Informer de ansatte før de begynner å bruke kjøretøyet, på en åpen og enkel måte.',
         nl: 'Informeer de werknemers voordat zij het voertuig gaan gebruiken, op transparante en eenvoudige wijze.',
         ru: "Проинформируйте работников до того, как они начнут использовать автомобиль, прозрачно и простым языком.",
+        el: 'Ενημέρωσε τους εργαζομένους πριν αρχίσουν να χρησιμοποιούν το όχημα, με διαφάνεια και απλότητα.',
       },
     },
     {
@@ -319,6 +335,7 @@ export const lettonia: SchedaPaese = {
         nb: 'Gjennomfør vurderingen av personvernkonsekvenser (DPIA) for overvåking på arbeidsplassen.',
         nl: 'Voer de effectbeoordeling (DPIA) uit voor toezicht op de werkplek.',
         ru: "Проведите оценку воздействия (DPIA) для наблюдения на рабочем месте.",
+        el: 'Κάνε την εκτίμηση αντικτύπου (DPIA) για την επιτήρηση στον χώρο εργασίας.',
       },
     },
     {
@@ -335,6 +352,7 @@ export const lettonia: SchedaPaese = {
         nb: 'Sett opp systemet: ingen behandling under privat bruk, begrenset formål og mindre inngripende midler.',
         nl: 'Configureer het systeem: geen verwerking tijdens privégebruik, beperkt doel en minder ingrijpende middelen.',
         ru: "Настройте систему: никакой обработки во время личного использования, ограниченная цель и наименее инвазивные средства.",
+        el: 'Ρύθμισε το σύστημα: καμία επεξεργασία κατά την ιδιωτική χρήση, περιορισμένος σκοπός και λιγότερο παρεμβατικά μέσα.',
       },
     },
     {
@@ -351,6 +369,7 @@ export const lettonia: SchedaPaese = {
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og dele ut personverninformasjonen på nytt og vurdere om du på nytt må informere eller høre de ansattes representanter, der loven krever det. Ofte endrer leverandøren (databehandleren), de innsamlede opplysningene og metodene seg: informasjonen som ble delt ut tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "Если вы меняете систему или программу мониторинга, обновите и повторно вручите уведомление о защите данных и проверьте, нужно ли снова информировать представителей работников или проводить с ними консультации, если это предусмотрено законом. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее врученного уведомления недостаточно.",
+        el: 'Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση, και έλεγξε αν πρέπει να ενημερώσεις ή να συμβουλευτείς ξανά τους εκπροσώπους των εργαζομένων, όπου το προβλέπει ο νόμος. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και ο τρόπος λειτουργίας: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.',
       },
     },
   ],
@@ -379,6 +398,7 @@ export const lettonia: SchedaPaese = {
       nb: 'opptil 20 millioner euro eller 4 % av omsetningen (GDPR)',
       nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
       ru: "до 20 млн евро или 4% оборота (GDPR)",
+      el: 'έως 20 εκατ. ευρώ ή 4% του κύκλου εργασιών (ΓΚΠΔ)',
     },
     casoCitato: {
       it: 'Non risulta una multa del DVI specifica pubblicata per il GPS sui dipendenti. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).',
@@ -392,6 +412,7 @@ export const lettonia: SchedaPaese = {
       nb: 'Det er ikke kjent noen spesifikk offentliggjort bot fra DVI for GPS på ansatte. Sanksjonsrisikoen er fortsatt den generelle etter GDPR (art. 83).',
       nl: 'Er is geen specifieke, gepubliceerde boete van de DVI voor GPS-tracking van werknemers. Het sanctierisico blijft het algemene risico van de AVG (art. 83).',
       ru: "Опубликованного штрафа DVI, специально связанного с GPS-слежением за работниками, не обнаружено. Санкционный риск остаётся общим для GDPR (ст. 83).",
+      el: 'Δεν προκύπτει δημοσιευμένο πρόστιμο της DVI ειδικά για το GPS στους εργαζομένους. Ο κίνδυνος κυρώσεων παραμένει ο γενικός του ΓΚΠΔ (άρθρο 83).',
     },
     urlFonte: FONTE_DVI_GPS.url,
     tipoImporto: 'massimale',

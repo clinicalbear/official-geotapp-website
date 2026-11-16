@@ -256,7 +256,7 @@ const nextConfig = {
   async redirects() {
     // 11 lingue base. Le 5 en-XX variants (en-us/gb/au/ie/ca) sono gestite a parte
     // dove serve, perche' molte rewrites/redirect non hanno equivalenti regionali.
-    const ACTIVE_LOCALES = ['it', 'en', 'de', 'nl', 'fr', 'es', 'pt', 'da', 'sv', 'nb', 'ru'];
+    const ACTIVE_LOCALES = ['it', 'en', 'de', 'nl', 'fr', 'es', 'pt', 'da', 'sv', 'nb', 'el', 'ru'];
     // Tutte le 16 lingue (per redirect che vanno applicati uniformemente, es. /demo/).
     const ALL_LOCALES = [...ACTIVE_LOCALES, 'en-us', 'en-gb', 'en-au', 'en-ie', 'en-ca'];
 

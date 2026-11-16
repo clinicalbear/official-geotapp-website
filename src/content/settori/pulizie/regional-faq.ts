@@ -14,6 +14,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   nl: 'Regels en documentatie in Nederland',
   da: 'Regler og dokumentation i Danmark',
   nb: 'Regler og dokumentasjon i Norge',
+  el: 'Κανονιστικό πλαίσιο και τεκμηρίωση στην Ελλάδα',
   ru: 'Нормативные требования и документация в России',
   sv: 'Regler och dokumentation i Sverige',
   'en-us': 'Regional rules and records',
@@ -134,6 +135,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Bytte av leverandør og minstelønnssatser?',
       a: 'GeoTapp håndterer verken overdragelse av ansatte ved bytte av leverandør eller minstelønnssatser. Det lagrer historikken over timer og tilstedeværelse for hver ansatt, som kan eksporteres til Excel eller CSV: anvendelsen av tariffavtalen forblir hos regnskapsføreren.',
+    },
+  ],
+  el: [
+    {
+      q: "Ποια καταγραφή ωραρίου απαιτείται στις υπηρεσίες καθαρισμού;",
+      a: "Το GeoTapp καταγράφει ώρες, διαλείμματα και λήξεις ανά εργαζόμενο και ανά χώρο εργασίας, με τοποθεσία και ώρα, και τα εξάγει σε Excel ή CSV για τον λογιστή. Προσαυξήσεις για αργίες και νυχτερινή εργασία, κατώτατες αποδοχές της συλλογικής σύμβασης και δηλώσεις προς το ΕΡΓΑΝΗ ΙΙ παραμένουν στον λογιστή και στην εταιρεία. Το GeoTapp δεν συνδέεται με το ΕΡΓΑΝΗ ΙΙ και δεν αντικαθιστά την ψηφιακή κάρτα εργασίας (ν. 4808/2021, άρθρο 74) όπου αυτή είναι υποχρεωτική.",
+    },
+    {
+      q: "ΓΚΠΔ και Αρχή Προστασίας Δεδομένων για τον γεωεντοπισμό του προσωπικού;",
+      a: "Ενημέρωση των εργαζομένων, νόμιμη βάση του έννομου συμφέροντος και τήρηση του ΓΚΠΔ και του ν. 4624/2019 (άρθρο 27 για την επεξεργασία στις εργασιακές σχέσεις). Η εκτίμηση της νομιμότητας ανήκει στην εταιρεία και στον νομικό ή τον υπεύθυνο προστασίας δεδομένων της, με αρμόδια εποπτική αρχή την Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα.",
+    },
+    {
+      q: "Ιχνηλασιμότητα της αλλαγής αναδόχου και των κατώτατων αποδοχών;",
+      a: "Το GeoTapp δεν διαχειρίζεται τη μεταφορά προσωπικού στην αλλαγή αναδόχου ούτε τις κατώτατες αποδοχές. Διατηρεί το ιστορικό ωρών και παρουσιών κάθε εργαζομένου, που εξάγεται σε Excel ή CSV: η εφαρμογή της συλλογικής σύμβασης παραμένει στον λογιστή.",
     },
   ],
   ru: [

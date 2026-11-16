@@ -6,7 +6,7 @@ type SettoreSlug = 'pulizie' | 'installatori' | 'sicurezza';
 const SECTION_TITLE: Record<string, string> = {
   it: 'Ideale per', en: 'Ideal for', de: 'Ideal für', fr: 'Idéal pour',
   es: 'Ideal para', pt: 'Ideal para', nl: 'Ideaal voor', da: 'Ideel til',
-  sv: 'Idealisk för', nb: 'Ideell for', ru: 'Идеально для',
+  sv: 'Idealisk för', nb: 'Ideell for', el: 'Ιδανικό για', ru: 'Идеально для',
 };
 
 const SETTORE_NAMES: Record<SettoreSlug, Record<string, string>> = {
@@ -14,19 +14,19 @@ const SETTORE_NAMES: Record<SettoreSlug, Record<string, string>> = {
     it: 'Imprese di pulizie', en: 'Cleaning companies', de: 'Reinigungsunternehmen',
     fr: 'Entreprises de nettoyage', es: 'Empresas de limpieza', pt: 'Empresas de limpeza',
     nl: 'Schoonmaakbedrijven', da: 'Rengøringsvirksomheder', sv: 'Städföretag',
-    nb: 'Rengjøringsbedrifter', ru: 'Клининговые компании',
+    nb: 'Rengjøringsbedrifter', el: 'Εταιρείες καθαρισμού', ru: 'Клининговые компании',
   },
   installatori: {
     it: 'Installatori e tecnici', en: 'Installers & field service', de: 'Installateure & Außendienst',
     fr: 'Installateurs et techniciens de terrain', es: 'Instaladores y técnicos de campo', pt: 'Instaladores e técnicos',
     nl: 'Installateurs en monteurs', da: 'Installatører & serviceteknikere', sv: 'Installatörer & fältservice',
-    nb: 'Installatører & felttjeneste', ru: 'Монтажники и выездные техники',
+    nb: 'Installatører & felttjeneste', el: 'Εγκαταστάτες και τεχνικοί πεδίου', ru: 'Монтажники и выездные техники',
   },
   sicurezza: {
     it: 'Servizi di sicurezza', en: 'Security services', de: 'Sicherheitsdienste',
     fr: 'Services de sécurité', es: 'Servicios de seguridad', pt: 'Serviços de segurança',
     nl: 'Beveiligingsdiensten', da: 'Sikkerhedstjenester', sv: 'Säkerhetstjänster',
-    nb: 'Sikkerhetstjenester', ru: 'Службы безопасности',
+    nb: 'Sikkerhetstjenester', el: 'Υπηρεσίες ασφάλειας', ru: 'Службы безопасности',
   },
 };
 

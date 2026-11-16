@@ -78,6 +78,7 @@ export const francia: SchedaPaese = {
     sv: 'Frankrike',
     nb: 'Frankrike',
     ru: 'Франция',
+    el: "Γαλλία",
   },
   bandiera: '🇫🇷',
   federale: false,
@@ -99,6 +100,7 @@ export const francia: SchedaPaese = {
       nb: 'Frankrike har én nasjonal myndighet, CNIL; det finnes ingen regional inndeling.',
       nl: 'Frankrijk heeft een enkele nationale autoriteit, de CNIL; er is geen regionale verdeling.',
       ru: "Во Франции единый национальный орган, CNIL; региональных подразделений нет.",
+      el: "Η Γαλλία έχει μία ενιαία εθνική αρχή, την CNIL· δεν υπάρχει περιφερειακός διαχωρισμός.",
     },
   },
 
@@ -116,6 +118,7 @@ export const francia: SchedaPaese = {
         nb: 'Høring av CSE før overvåkingssystemet installeres (art. L2312-38)',
         nl: 'Raadpleging van de CSE voor de installatie van het controlesysteem (art. L2312-38)',
         ru: "Консультация с CSE до установки системы контроля (ст. L2312-38)",
+        el: "Διαβούλευση με το CSE πριν από την εγκατάσταση του συστήματος ελέγχου (άρθρο L2312-38)",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -130,6 +133,7 @@ export const francia: SchedaPaese = {
         nb: 'Før arbeidsgiveren bestemmer seg for å installere et middel for kontroll av de ansattes aktivitet, må han informere og høre CSE (det sosiale og økonomiske utvalget). Høringen etter art. L2312-38 gjelder i virksomheter med minst 50 ansatte: arbeidsloven plasserer den blant CSEs oppgaver i disse virksomhetene. Under 50 ansatte gjelder fortsatt plikten til å informere hver enkelt ansatt individuelt før opplysningene hans samles inn (art. L1222-4).',
         nl: 'Voordat de werkgever besluit een middel voor de controle van de activiteit van de werknemers te installeren, moet hij de CSE (Sociaal en Economisch Comite) informeren en raadplegen. De raadpleging volgens art. L2312-38 geldt in ondernemingen met ten minste 50 werknemers: het Arbeidswetboek plaatst haar bij de bevoegdheden van de CSE in die ondernemingen. Onder de 50 werknemers blijft de verplichting om elke werknemer individueel te informeren voordat zijn gegevens worden verzameld (art. L1222-4).',
         ru: "Прежде чем принять решение об установке средства контроля за деятельностью сотрудников, работодатель должен проинформировать CSE (социально-экономический комитет) и провести с ним консультацию. Консультация, предусмотренная ст. L2312-38, действует на предприятиях с числом сотрудников не менее 50: трудовой кодекс относит её к полномочиям CSE на таких предприятиях. При числе сотрудников менее 50 сохраняется обязанность индивидуально информировать каждого сотрудника до сбора его данных (ст. L1222-4).",
+        el: "Πριν αποφασίσει να εγκαταστήσει μέσο ελέγχου της δραστηριότητας των εργαζομένων, ο εργοδότης πρέπει να ενημερώσει και να συμβουλευτεί το CSE (Κοινωνική και Οικονομική Επιτροπή). Η διαβούλευση που προβλέπει το άρθρο L2312-38 ισχύει στις επιχειρήσεις με τουλάχιστον 50 εργαζομένους: ο Κώδικας Εργασίας την τοποθετεί μεταξύ των αρμοδιοτήτων του CSE σε αυτές τις επιχειρήσεις. Κάτω από τους 50 εργαζομένους παραμένει πάντως η υποχρέωση ατομικής ενημέρωσης κάθε εργαζομένου πριν από τη συλλογή των δεδομένων του (άρθρο L1222-4).",
       },
       fonte: FONTE_L2312_38,
     },
@@ -146,6 +150,7 @@ export const francia: SchedaPaese = {
         nb: 'Tillatelse fra en arbeidsmyndighet før installasjon',
         nl: 'Toestemming van een arbeidsautoriteit voor de installatie',
         ru: "Разрешение органа по труду до установки",
+        el: "Άδεια από αρχή εργασίας πριν από την εγκατάσταση",
       },
       risposta: 'no',
       dettaglio: {
@@ -160,6 +165,7 @@ export const francia: SchedaPaese = {
         nb: 'Frankrike krever ingen forhåndstillatelse fra en arbeidsmyndighet og heller ingen ytterligere forhåndsmeldinger til CNIL (avskaffet 25. mai 2018 med GDPR). Modellen bygger på ansvarlighet: register over behandlingsaktiviteter og personvernkonsekvensvurdering (AIPD) når risikoen er høy.',
         nl: 'Frankrijk vereist geen voorafgaande toestemming van een arbeidsautoriteit, noch nog voorafgaande aangiften bij de CNIL (sinds 25 mei 2018 met de AVG afgeschaft). Het model berust op verantwoording: een register van verwerkingsactiviteiten en een DPIA wanneer het risico hoog is.',
         ru: "Франция не предусматривает предварительного разрешения органа по труду, а также предварительных деклараций в CNIL (отменены с 25 мая 2018 г. с введением GDPR). Модель основана на ответственности оператора: реестр операций обработки и AIPD (оценка воздействия), когда риск высок.",
+        el: "Η Γαλλία δεν προβλέπει προηγούμενη άδεια από αρχή εργασίας, ούτε πλέον προηγούμενες δηλώσεις στην CNIL (καταργήθηκαν από τις 25 Μαΐου 2018 με τον ΓΚΠΔ). Το μοντέλο βασίζεται στη λογοδοσία: αρχείο δραστηριοτήτων επεξεργασίας και AIPD όταν ο κίνδυνος είναι υψηλός.",
       },
       fonte: FONTE_CNIL_ABOLIZIONE_FORMALITA,
     },
@@ -176,6 +182,7 @@ export const francia: SchedaPaese = {
         nb: 'Individuell og forutgående informasjon til den ansatte (art. L1222-4 + art. 13 GDPR)',
         nl: 'Individuele en voorafgaande informatie aan de werknemer (art. L1222-4 + art. 13 AVG)',
         ru: "Индивидуальное и предварительное информирование работника (ст. L1222-4 + ст. 13 GDPR)",
+        el: "Ατομική και προηγούμενη ενημέρωση του εργαζομένου (άρθρο L1222-4 + άρθρο 13 ΓΚΠΔ)",
       },
       risposta: 'si',
       dettaglio: {
@@ -190,6 +197,7 @@ export const francia: SchedaPaese = {
         nb: 'Ingen data kan samles inn fra en enhet som den ansatte ikke på forhånd er gjort kjent med; hver ansatt må informeres om behandlingsansvarlig, formål, mottakere og sine rettigheter.',
         nl: 'Er mogen geen gegevens worden verzameld via een apparaat dat niet vooraf ter kennis van de werknemer is gebracht; iedereen moet worden geinformeerd over de verwerkingsverantwoordelijke, de doeleinden, de ontvangers en zijn rechten.',
         ru: "Никакие данные не могут собираться с устройства, о котором работник не был заранее уведомлён; каждого необходимо проинформировать об операторе, целях, получателях и правах.",
+        el: "Κανένα δεδομένο δεν μπορεί να συλλεγεί από συσκευή που δεν έχει γνωστοποιηθεί εκ των προτέρων στον εργαζόμενο· ο καθένας πρέπει να ενημερώνεται για τον υπεύθυνο επεξεργασίας, τους σκοπούς, τους αποδέκτες και τα δικαιώματα.",
       },
       fonte: FONTE_L1222_4,
     },
@@ -206,6 +214,7 @@ export const francia: SchedaPaese = {
         nb: 'Forbud mot permanent overvåking: geolokalisering må være subsidiær og kunne slås av utenfor arbeidstid',
         nl: 'Verbod op permanente surveillance: geolocatie moet subsidiair en buiten werktijd uitschakelbaar zijn',
         ru: "Запрет постоянного наблюдения: геолокализация субсидиарна и отключается вне рабочего времени",
+        el: "Απαγόρευση μόνιμης επιτήρησης: ο γεωεντοπισμός είναι επικουρικός και απενεργοποιείται εκτός ωραρίου",
       },
       risposta: 'si',
       dettaglio: {
@@ -220,6 +229,7 @@ export const francia: SchedaPaese = {
         nb: 'Ifølge CNIL kan ikke geolokalisering brukes til å overvåke den ansatte permanent; den er subsidiær (forbudt hvis det allerede finnes et mindre inngripende middel, f.eks. for å beregne arbeidstiden hvis det allerede finnes et annet stemplingssystem) og må kunne slås av utenfor arbeidstid.',
         nl: 'Voor de CNIL mag geolocatie niet dienen om de werknemer permanent te controleren; zij is subsidiair (verboden als er al een minder ingrijpend middel bestaat, bijv. om de werktijd te berekenen als er al een ander prikkloksysteem bestaat) en moet buiten werktijd uitgeschakeld kunnen worden.',
         ru: "По позиции CNIL геолокализация не может использоваться для постоянного контроля за сотрудником, она субсидиарна (запрещена, если уже есть менее интрузивное средство, например для расчёта рабочего времени, если уже существует другая система отметки) и должна отключаться вне рабочего времени.",
+        el: "Για την CNIL ο γεωεντοπισμός δεν μπορεί να χρησιμεύει στον μόνιμο έλεγχο του εργαζομένου, είναι επικουρικός (απαγορεύεται αν υπάρχει ήδη λιγότερο παρεμβατικό μέσο, π.χ. για τον υπολογισμό του ωραρίου αν υπάρχει ήδη άλλο σύστημα καταγραφής) και πρέπει να μπορεί να απενεργοποιείται εκτός ωραρίου εργασίας.",
       },
       fonte: FONTE_CNIL_GEOLOCALIZZAZIONE,
     },
@@ -236,6 +246,7 @@ export const francia: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (AIPD) ved konstant overvåking av de ansattes aktivitet',
         nl: 'Gegevensbeschermingseffectbeoordeling (DPIA) voor de voortdurende controle van de activiteit van werknemers',
         ru: "Оценка воздействия (AIPD) при постоянном наблюдении за деятельностью сотрудников",
+        el: "Εκτίμηση αντικτύπου (AIPD) για τη συνεχή επιτήρηση της δραστηριότητας των εργαζομένων",
       },
       risposta: 'dipende',
       dettaglio: {
@@ -250,6 +261,7 @@ export const francia: SchedaPaese = {
         nb: 'CNILs liste omfatter, blant de behandlingene som krever en AIPD, dem som konstant overvåker de ansattes aktivitet, og behandling av lokaliseringsdata i stor skala. Et system som bare registrerer posisjonen på bestemte tidspunkter (for eksempel ved innstempling), i en liten virksomhet, faller kanskje under ingen av de to kategoriene: i så fall må risikoen vurderes fra sak til sak (art. 35 GDPR).',
         nl: 'De CNIL-lijst rekent tot de verwerkingen die een DPIA vereisen die welke de activiteit van werknemers voortdurend bewaken en de grootschalige verwerking van locatiegegevens. Een systeem dat de positie alleen op bepaalde momenten vastlegt (bijvoorbeeld bij het klokken), in een klein bedrijf, valt mogelijk onder geen van beide categorieën: dan moet het risico per geval worden beoordeeld (artikel 35 AVG).',
         ru: "Перечень CNIL включает в число операций обработки, требующих AIPD, те, которые постоянно наблюдают за деятельностью сотрудников, и обработку данных о местоположении в крупном масштабе. Система, фиксирующая местоположение лишь в отдельные моменты (например, при отметке), в небольшой компании может не подпадать ни под одну из двух категорий: в таком случае риск оценивается в каждом конкретном случае (ст. 35 GDPR).",
+        el: "Ο κατάλογος της CNIL περιλαμβάνει, μεταξύ των επεξεργασιών που απαιτούν AIPD, εκείνες που επιτηρούν συνεχώς τη δραστηριότητα των εργαζομένων και τις επεξεργασίες δεδομένων θέσης μεγάλης κλίμακας. Ένα σύστημα που καταγράφει τη θέση μόνο σε συγκεκριμένες στιγμές (για παράδειγμα κατά την έναρξη εργασίας), σε μικρή εταιρεία, μπορεί να μην εμπίπτει σε καμία από τις δύο κατηγορίες: σε αυτή την περίπτωση ο κίνδυνος αξιολογείται κατά περίπτωση (άρθρο 35 ΓΚΠΔ).",
       },
       fonte: FONTE_CNIL_AIPD,
     },
@@ -266,6 +278,7 @@ export const francia: SchedaPaese = {
         nb: 'Begrenset lagring av lokaliseringsdata',
         nl: 'Beperkte bewaring van locatiegegevens',
         ru: "Ограниченное хранение данных о местоположении",
+        el: "Περιορισμένη τήρηση των δεδομένων θέσης",
       },
       risposta: 'si',
       dettaglio: {
@@ -280,6 +293,7 @@ export const francia: SchedaPaese = {
         nb: 'CNIL angir som hovedregel en lagring på høyst to måneder. Den kan være ett år hvis dataene brukes til å optimalisere ruter eller til å dokumentere utført arbeid, når dokumentasjonen ikke kan gis på annen måte, og fem år hvis de brukes til å kontrollere arbeidstiden.',
         nl: 'De CNIL noemt als regel een bewaartermijn van ten hoogste twee maanden. Een jaar is mogelijk als de gegevens dienen om routes te optimaliseren of verrichte interventies te bewijzen, wanneer dat bewijs niet anders te leveren is, en vijf jaar als ze dienen voor de controle van de arbeidstijd.',
         ru: "CNIL, как правило, указывает срок хранения не более двух месяцев. Он увеличивается до одного года, если данные нужны для оптимизации маршрутов или для подтверждения выполненных работ, когда подтвердить иным способом нельзя, и до пяти лет, если они нужны для контроля рабочего времени.",
+        el: "Η CNIL υποδεικνύει κατά κανόνα τήρηση όχι πέραν των δύο μηνών. Φτάνει στον ένα χρόνο αν τα δεδομένα χρησιμεύουν για τη βελτιστοποίηση των δρομολογίων ή για την απόδειξη των παρεμβάσεων που πραγματοποιήθηκαν, όταν η απόδειξη δεν μπορεί να δοθεί με άλλον τρόπο, και στα πέντε χρόνια αν χρησιμεύουν για τον έλεγχο του ωραρίου εργασίας.",
       },
       fonte: FONTE_CNIL_GEOLOCALIZZAZIONE,
     },
@@ -300,6 +314,7 @@ export const francia: SchedaPaese = {
         nb: 'Hvis virksomheten har minst 50 ansatte, informer og hør CSE før du bestemmer deg for installasjonen (art. L2312-38).',
         nl: 'Als de onderneming ten minste 50 werknemers heeft, informeer en raadpleeg de CSE voordat u over de installatie beslist (art. L2312-38).',
         ru: "Если в компании не менее 50 сотрудников, проинформируйте CSE и проведите с ним консультацию до принятия решения об установке (ст. L2312-38).",
+        el: "Αν η εταιρεία έχει τουλάχιστον 50 εργαζομένους, ενημέρωσε και συμβουλεύσου το CSE πριν αποφασίσεις την εγκατάσταση (άρθρο L2312-38).",
       },
     },
     {
@@ -316,6 +331,7 @@ export const francia: SchedaPaese = {
         nb: 'Informer hver ansatt individuelt og på forhånd (art. L1222-4, art. 13 GDPR).',
         nl: 'Informeer elke werknemer individueel en vooraf (art. L1222-4, art. 13 AVG).',
         ru: "Индивидуально и заранее проинформируйте каждого работника (ст. L1222-4, ст. 13 GDPR).",
+        el: "Ενημέρωσε ατομικά και εκ των προτέρων κάθε εργαζόμενο (άρθρο L1222-4, άρθρο 13 ΓΚΠΔ).",
       },
     },
     {
@@ -332,6 +348,7 @@ export const francia: SchedaPaese = {
         nb: 'Kontroller subsidiariteten: geolokalisering er ikke tillatt hvis det allerede finnes et mindre inngripende middel til samme formål.',
         nl: 'Controleer de subsidiariteit: geolocatie is niet toegestaan als er voor hetzelfde doel al een minder ingrijpend middel bestaat.',
         ru: "Проверьте субсидиарность: геолокализация не допускается, если для той же цели уже существует менее интрузивное средство.",
+        el: "Έλεγξε την επικουρικότητα: ο γεωεντοπισμός δεν επιτρέπεται αν υπάρχει ήδη λιγότερο παρεμβατικό μέσο για τον ίδιο σκοπό.",
       },
     },
     {
@@ -348,6 +365,7 @@ export const francia: SchedaPaese = {
         nb: 'Gjennomfør personvernkonsekvensvurderingen (AIPD) hvis behandlingen overvåker konstant eller behandler lokaliseringsdata i stor skala.',
         nl: 'Voer de effectbeoordeling (DPIA) uit als de verwerking voortdurend controleert of locatiegegevens op grote schaal verwerkt.',
         ru: "Проведите оценку воздействия (AIPD), если обработка постоянно наблюдает за работниками или затрагивает данные о местоположении в крупном масштабе.",
+        el: "Πραγματοποίησε την εκτίμηση αντικτύπου (AIPD) αν η επεξεργασία επιτηρεί συνεχώς ή επεξεργάζεται δεδομένα θέσης μεγάλης κλίμακας.",
       },
     },
     {
@@ -364,6 +382,7 @@ export const francia: SchedaPaese = {
         nb: 'Konfigurer systemet: ingen permanent sporing, avstenging utenfor arbeidstid, begrenset lagring.',
         nl: 'Configureer het systeem: geen permanente tracering, uitschakeling buiten werktijd, beperkte bewaring.',
         ru: "Настройте систему: без постоянного отслеживания, с отключением вне рабочего времени и ограниченным хранением.",
+        el: "Ρύθμισε το σύστημα: καμία μόνιμη παρακολούθηση, απενεργοποίηση εκτός ωραρίου, περιορισμένη τήρηση.",
       },
     },
     {
@@ -380,6 +399,7 @@ export const francia: SchedaPaese = {
         nb: 'Hold registeret over behandlingsaktiviteter oppdatert (ansvarlighet, ikke lenger en forhåndsmelding).',
         nl: 'Houd het register van verwerkingsactiviteiten actueel (verantwoording, geen voorafgaande aangifte meer).',
         ru: "Ведите и поддерживайте в актуальном состоянии реестр операций обработки (подотчётность, а не предварительное уведомление).",
+        el: "Τήρησε ενημερωμένο το αρχείο δραστηριοτήτων επεξεργασίας (λογοδοσία, όχι πλέον προηγούμενη δήλωση).",
       },
     },
     {
@@ -396,6 +416,7 @@ export const francia: SchedaPaese = {
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, oppdater og utlever personvernerklæringen på nytt, og kontroller om du på nytt må informere eller konsultere de ansattes representanter, der loven krever det. Leverandøren (databehandleren), de innsamlede opplysningene og fremgangsmåtene endrer seg ofte: den informasjonen som ble gitt tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "При смене системы или программы мониторинга обновите и повторно вручите уведомление о защите данных (informativa) и проверьте, нужно ли снова информировать представителей работников или консультироваться с ними, если это предусмотрено законом. Часто меняются поставщик (обработчик данных), собираемые данные и способы работы: ранее вручённого уведомления недостаточно.",
+        el: "Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση απορρήτου και έλεγξε αν πρέπει να ενημερώσεις ή να συμβουλευτείς ξανά τους εκπροσώπους των εργαζομένων, εκεί όπου το προβλέπει ο νόμος. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και οι τρόποι: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.",
       },
     },
   ],
@@ -424,6 +445,7 @@ export const francia: SchedaPaese = {
       nb: '175 000 €',
       nl: '175.000 EUR',
       ru: "175 000 €",
+      el: "175.000 €",
     },
     casoCitato: {
       it: "CNIL contro UBEEQO International, 7 luglio 2022: geolocalizzazione quasi permanente in violazione della minimizzazione, della durata di conservazione e dell'obbligo di informazione. Riguardava i veicoli a noleggio (clienti), non i dipendenti in senso stretto, ma è la sanzione francese più importante sulla geolocalizzazione continua eccessiva. In autunno 2023 (decisioni annunciate dalla CNIL il 7 novembre 2023) la CNIL ha inoltre sanzionato più datori per la geolocalizzazione continua dei veicoli dei dipendenti senza possibilità di sospensione durante le pause.",
@@ -437,6 +459,7 @@ export const francia: SchedaPaese = {
       nb: 'CNIL mot UBEEQO International, 7. juli 2022: nesten permanent geolokalisering i strid med dataminimering, lagringsperioden og informasjonsplikten. Saken gjaldt utleiekjøretøyer (kunder), ikke ansatte i streng forstand, men det er Frankrikes viktigste sanksjon for overdreven kontinuerlig geolokalisering. Høsten 2023 (vedtak som CNIL kunngjorde 7. november 2023) ila CNIL i tillegg flere arbeidsgivere sanksjoner for kontinuerlig geolokalisering av de ansattes kjøretøyer uten mulighet for å avbryte den under pauser.',
       nl: 'CNIL tegen UBEEQO International, 7 juli 2022: bijna permanente geolocatie in strijd met de minimalisering, de bewaartermijn en de informatieplicht. Het betrof huurvoertuigen (klanten), niet de werknemers in strikte zin, maar het is de Franse toonaangevende boete inzake buitensporige continue geolocatie. In het najaar van 2023 (besluiten die de CNIL op 7 november 2023 bekendmaakte) beboette de CNIL bovendien meerdere werkgevers voor de continue geolocatie van de voertuigen van werknemers zonder mogelijkheid tot opschorting tijdens de pauzes.',
       ru: "CNIL против UBEEQO International, 7 июля 2022 г.: почти постоянная геолокация в нарушение принципа минимизации данных, срока хранения и обязанности информировать. Дело касалось арендуемых автомобилей (клиентов), а не работников в строгом смысле, но это самая значимая французская санкция за чрезмерную непрерывную геолокацию. Осенью 2023 г. (решения объявлены CNIL 7 ноября 2023 г.) CNIL также оштрафовала нескольких работодателей за непрерывную геолокацию автомобилей работников без возможности приостановки на время перерывов.",
+      el: "CNIL κατά της UBEEQO International, 7 Ιουλίου 2022: σχεδόν μόνιμος γεωεντοπισμός κατά παράβαση της ελαχιστοποίησης, της διάρκειας τήρησης και της υποχρέωσης ενημέρωσης. Αφορούσε οχήματα προς ενοικίαση (πελάτες), όχι εργαζομένους με στενή έννοια, αλλά είναι η σημαντικότερη γαλλική κύρωση για υπερβολικό συνεχή γεωεντοπισμό. Το φθινόπωρο του 2023 (αποφάσεις που ανακοίνωσε η CNIL στις 7 Νοεμβρίου 2023) η CNIL επέβαλε επιπλέον κυρώσεις σε περισσότερους εργοδότες για τον συνεχή γεωεντοπισμό των οχημάτων των εργαζομένων χωρίς δυνατότητα αναστολής κατά τα διαλείμματα.",
     },
     urlFonte: FONTE_EDPB_UBEEQO.url,
     tipoImporto: 'caso-affine',

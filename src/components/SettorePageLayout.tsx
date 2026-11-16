@@ -59,7 +59,7 @@ const RISORSE_LABELS: Record<string, string> = {
   it: 'Guide e articoli →', en: 'Guides & articles →', de: 'Leitfäden & Artikel →',
   fr: 'Guides et articles →', es: 'Guías y artículos →', pt: 'Guias e artigos →',
   nl: 'Gidsen en artikelen →', da: 'Vejledninger og artikler →',
-  sv: 'Guider och artiklar →', nb: 'Guider & artikler →', ru: 'Руководства и статьи →',
+  sv: 'Guider och artiklar →', nb: 'Guider & artikler →', el: 'Οδηγοί και άρθρα →', ru: 'Руководства и статьи →',
 };
 
 /** Tabella comparativa a 3 colonne (etichetta, comparatore, GeoTapp),
@@ -103,6 +103,7 @@ const CLASSIC_CLOCKIN: Record<string, string> = {
   da: 'Klassisk stemplings-app',
   sv: 'Klassisk stämplingsapp',
   nb: 'Klassisk stemplingsapp',
+  el: 'Κλασική εφαρμογή χτυπήματος κάρτας',
   ru: 'Обычное приложение для отметки времени',
 };
 
@@ -115,10 +116,13 @@ const MOCKUP_FALLBACK_NB = { operator: 'Ansatt', opening: 'Start', closing: 'Slu
 // Idem per il russo: ru.json non ha ancora queste chiavi in settore_layout, e senza
 // questo fallback la pagina russa mostrava "Operatore/Apertura/Chiusura" in italiano.
 const MOCKUP_FALLBACK_RU = { operator: 'Оператор', opening: 'Начало', closing: 'Окончание' };
+// Idem per il greco.
+const MOCKUP_FALLBACK_EL = { operator: 'Εργαζόμενος', opening: 'Έναρξη', closing: 'Λήξη' };
 const mockupFallback = (locale: string, key: 'operator' | 'opening' | 'closing', it: string) =>
   locale === 'da' ? MOCKUP_FALLBACK_DA[key]
     : locale === 'sv' ? MOCKUP_FALLBACK_SV[key]
     : locale === 'nb' ? MOCKUP_FALLBACK_NB[key]
+    : locale === 'el' ? MOCKUP_FALLBACK_EL[key]
     : locale === 'ru' ? MOCKUP_FALLBACK_RU[key]
     : it;
 
@@ -219,13 +223,14 @@ export default function SettorePageLayout({ content, locale, settore, novita, ch
     da: { pulizie: 'Rengøringsvirksomheder', installatori: 'Installatører', sicurezza: 'Sikkerhedstjenester', elettricisti: 'Elektrikere', idraulici: 'VVS-installatører', termoidraulici: 'Varmeinstallatører', edilizia: 'Byggeri', impianti: 'Installationer', manutenzione: 'Vedligeholdelse', 'impresa-di-pulizie': 'Rengøringsfirma' },
     sv: { pulizie: 'Städföretag', installatori: 'Installatörer', sicurezza: 'Säkerhetstjänster', elettricisti: 'Elektriker', idraulici: 'Rörmokare', termoidraulici: 'VVS-tekniker', edilizia: 'Byggnation', impianti: 'Installationer', manutenzione: 'Underhåll', 'impresa-di-pulizie': 'Städföretag' },
     nb: { pulizie: 'Renholdsbedrifter', installatori: 'Installatører', sicurezza: 'Sikkerhetstjenester', elettricisti: 'Elektrikere', idraulici: 'Rørleggere', termoidraulici: 'VVS-teknikere', edilizia: 'Bygg', impianti: 'Installasjoner', manutenzione: 'Vedlikehold', 'impresa-di-pulizie': 'Rengjøringsfirma' },
+    el: { pulizie: 'Εταιρείες καθαρισμού', installatori: 'Εγκαταστάτες', sicurezza: 'Υπηρεσίες ασφάλειας', elettricisti: 'Ηλεκτρολόγοι', idraulici: 'Υδραυλικοί', termoidraulici: 'Τεχνικοί θέρμανσης', edilizia: 'Κατασκευές', impianti: 'Ηλεκτρομηχανολογικά', manutenzione: 'Συντήρηση', 'impresa-di-pulizie': 'Εταιρεία καθαρισμού' },
     ru: { pulizie: 'Клининговые компании', installatori: 'Монтажники', sicurezza: 'Охранные службы', elettricisti: 'Электрики', idraulici: 'Сантехники', termoidraulici: 'Теплотехники', edilizia: 'Строительство', impianti: 'Инженерные системы', manutenzione: 'Техобслуживание', 'impresa-di-pulizie': 'Клининговая компания' },
   };
   const CROSS_TITLE: Record<string, string> = {
     it: 'Altri settori', en: 'Other sectors', de: 'Weitere Branchen',
     fr: 'Autres secteurs', es: 'Otros sectores', pt: 'Outros setores',
     nl: 'Andere sectoren', da: 'Andre sektorer', sv: 'Andra sektorer',
-    nb: 'Andre sektorer', ru: 'Другие отрасли',
+    nb: 'Andre sektorer',    el: 'Άλλοι κλάδοι', ru: 'Другие отрасли',
   };
   const otherNames = OTHER_SETTORI[locale] ?? OTHER_SETTORI.en;
   const otherSettori = (['pulizie', 'installatori', 'sicurezza', 'elettricisti', 'idraulici', 'termoidraulici', 'edilizia', 'manutenzione'] as SettoreSlug[]).filter((s) => s !== settore);
@@ -242,6 +247,7 @@ export default function SettorePageLayout({ content, locale, settore, novita, ch
     da: 'Læs mere om reglerne',
     sv: 'Läs mer om reglerna',
     nb: 'Les mer om reglene',
+    el: 'Μάθε περισσότερα για τους κανόνες',
     ru: 'Углублённый анализ нормативов',
   };
   const NORM_LINKS: Record<string, { href: string; label: string }[]> = {
@@ -301,6 +307,10 @@ export default function SettorePageLayout({ content, locale, settore, novita, ch
       { href: 'https://www.datatilsynet.no/personvern-pa-ulike-omrader/personvern-pa-arbeidsplassen/overvaking-kjoretoy/',
         label: 'Datatilsynet: overvåking av kjøretøy og GPS' },
     ],
+    // Greco: nessun articolo del blog in greco e nessuna fonte normativa greca verificata qui.
+    // Lista vuota = il blocco non esce, invece di linkare l'articolo inglese sull'ICO
+    // (che per un lettore greco non ha rilevanza).
+    el: [],
     // Russo: nessuna fonte normativa russa specifica e verificabile in produzione.
     // Lista vuota = il blocco non esce, invece di linkare l'articolo inglese sull'ICO
     // (che non ha alcuna rilevanza per un lettore russo/bielorusso/kazako).

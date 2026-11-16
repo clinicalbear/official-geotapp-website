@@ -2,7 +2,7 @@
 
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { LOCALE_COOKIE_NAME, SUPPORTED_LOCALES, PUBLISHED_LOCALES, isSuspendedLocale } from '@/lib/i18n/config';
+import { LOCALE_COOKIE_NAME, SUPPORTED_LOCALES, PUBLISHED_LOCALES, isSuspendedLocale, hasBlogArticles } from '@/lib/i18n/config';
 import type { AppLocale } from '@/lib/i18n/config';
 import {
   getLocaleFromPathname,
@@ -322,6 +322,8 @@ const COUNTRY_TO_LOCALE: Record<string, string> = {
   dk: 'da', // Danimarca -> danese
   se: 'sv', // Svezia -> svedese
   at: 'de', // Austria -> tedesco
+  gr: 'el', // Grecia -> greco
+  cy: 'el', // Cipro -> greco (Cipro ha anche il turco, ma il sito non ce l'ha)
   uk: 'en-gb',
   us: 'en-us',
   au: 'en-au',
@@ -386,16 +388,19 @@ async function buildFullSitemap(): Promise<string> {
   // URLs use translated slugs per locale (e.g. /de/preise/ not /de/pricing/).
   const HREFLANG_MAP: Record<string, string> = {
     it: 'it-IT', en: 'en', de: 'de-DE', fr: 'fr-FR', es: 'es-ES',
-    pt: 'pt-PT', nl: 'nl-NL', da: 'da-DK', nb: 'nb-NO', sv: 'sv-SE', ru: 'ru-RU',
+    pt: 'pt-PT', nl: 'nl-NL', da: 'da-DK', nb: 'nb-NO', sv: 'sv-SE', el: 'el', ru: 'ru-RU',
   };
   const localeEntries: string[] = [];
   for (const locale of locales) {
     for (const { path, priority, changeFrequency } of SITEMAP_ROUTES) {
+      // Hub del blog: le lingue senza articoli (greco) non hanno la loro riga ne' l'hreflang.
+      const isBlogHub = path === '/blog/';
+      if (isBlogHub && !hasBlogArticles(locale)) continue;
       const localePath = translatePath(path, locale as AppLocale);
       const url = `${SITEMAP_BASE_URL}/${locale}${localePath}`;
       const p = Math.round(priority * 0.85 * 100) / 100;
       const hreflangLines = [
-        ...locales.map((l) => {
+        ...locales.filter((l) => !(isBlogHub && !hasBlogArticles(l))).map((l) => {
           const lPath = translatePath(path, l as AppLocale);
           return `    <xhtml:link rel="alternate" hreflang="${HREFLANG_MAP[l] ?? l}" href="${SITEMAP_BASE_URL}/${l}${lPath}"/>`;
         }),
@@ -990,7 +995,7 @@ export async function middleware(req: NextRequest) {
     } else {
       // 'it' incluso: /blog/it/ -> 301 -> /it/blog/ (coerenza con gli altri locale; senza
       // questo /blog/it/ cadeva nel proxy e dava 404, unico hub-locale non redirezionato).
-      const BLOG_LISTING_LOCALES = ['it','en','de','fr','es','pt','nl','da','sv','nb','ru'];
+      const BLOG_LISTING_LOCALES = ['it','en','de','fr','es','pt','nl','da','sv','nb','el','ru'];
 
       // /blog or /blog/ exactly → /{detected_lang}/blog/ via 302 (geo-aware).
       //

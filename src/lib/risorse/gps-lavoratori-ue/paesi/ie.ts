@@ -70,6 +70,7 @@ export const irlanda: SchedaPaese = {
     sv: 'Irland',
     nb: 'Irland',
     ru: 'Ирландия',
+    el: 'Ιρλανδία',
   },
   bandiera: '🇮🇪',
   federale: false,
@@ -92,6 +93,7 @@ export const irlanda: SchedaPaese = {
       nb: 'Irland har én nasjonal myndighet, DPC; det finnes ingen regional inndeling.',
       nl: 'Ierland heeft een enkele nationale autoriteit, de DPC; geen regionale onderverdeling.',
       ru: "В Ирландии один национальный орган, DPC; региональное деление отсутствует.",
+      el: 'Η Ιρλανδία έχει μία μόνο εθνική αρχή, την DPC· δεν υπάρχει περιφερειακός διαχωρισμός.',
     },
   },
 
@@ -109,6 +111,7 @@ export const irlanda: SchedaPaese = {
         nb: 'Forhåndsinformasjon til arbeidstakerne om at sporingen finnes, hvordan den fungerer og alle formål (art. 13 GDPR)',
         nl: 'Voorafgaande informatie aan werknemers over het bestaan, de werking en alle doeleinden van de tracking (art. 13 AVG)',
         ru: "Предварительное уведомление работников о существовании, работе и всех целях отслеживания (ст. 13 GDPR)",
+        el: 'Προηγούμενη ενημέρωση των εργαζομένων για την ύπαρξη, τη λειτουργία και όλους τους σκοπούς της παρακολούθησης θέσης (άρθρο 13 ΓΚΠΔ)',
       },
       risposta: 'si',
       dettaglio: {
@@ -123,6 +126,7 @@ export const irlanda: SchedaPaese = {
         nb: 'Arbeidstakeren skal før aktiveringen informeres om at sporingen finnes, hvordan den fungerer og alle dens formål.',
         nl: 'De werknemer moet voor de activering worden geinformeerd over het bestaan van de tracking, hoe deze werkt en alle doeleinden ervan.',
         ru: "Работника нужно проинформировать до включения о существовании отслеживания, о том, как оно работает, и обо всех его целях.",
+        el: 'Ο εργαζόμενος πρέπει να ενημερωθεί πριν από την ενεργοποίηση για την ύπαρξη της παρακολούθησης θέσης, για τον τρόπο λειτουργίας της και για όλους τους σκοπούς της.',
       },
       fonte: FONTE_DPC_VEICOLI,
     },
@@ -139,6 +143,7 @@ export const irlanda: SchedaPaese = {
         nb: 'Obligatorisk samtykke eller avtale med fagforeningen før installasjon',
         nl: 'Verplichte toestemming of vakbondsovereenkomst voor installatie',
         ru: "Обязательное согласие или соглашение с профсоюзом перед установкой",
+        el: 'Υποχρεωτική συγκατάθεση ή συμφωνία με τα συνδικάτα πριν από την εγκατάσταση',
       },
       risposta: 'no',
       dettaglio: {
@@ -153,6 +158,7 @@ export const irlanda: SchedaPaese = {
         nb: 'Irland har ingen mekanisme for samtykke fra fagforeningen som setter vilkår for overvåkingen; kontrollen skjer gjennom rettslig grunnlag, åpenhet, forholdsmessighet og DPIA. Arbeidstakerens samtykke er bare gyldig i unntakstilfeller.',
         nl: 'Ierland kent geen mechanisme van vakbondstoestemming dat de monitoring bepaalt; de controle verloopt via rechtsgrondslag, transparantie, evenredigheid en DPIA. De toestemming van de werknemer is alleen in uitzonderlijke gevallen geldig.',
         ru: "В Ирландии нет механизма профсоюзного согласия, обусловливающего мониторинг; контроль осуществляется через правовое основание, прозрачность, соразмерность и DPIA. Согласие работника действительно только в исключительных случаях.",
+        el: 'Η Ιρλανδία δεν έχει μηχανισμό συνδικαλιστικής συναίνεσης που να εξαρτά την παρακολούθηση· ο έλεγχος περνά από τη νομική βάση, τη διαφάνεια, την αναλογικότητα και την εκτίμηση αντικτύπου (DPIA). Η συγκατάθεση του εργαζομένου ισχύει μόνο σε εξαιρετικές περιπτώσεις.',
       },
       fonte: FONTE_DPC_VEICOLI,
     },
@@ -169,6 +175,7 @@ export const irlanda: SchedaPaese = {
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit voor installatie',
         ru: "Предварительное разрешение органа власти перед установкой",
+        el: 'Προηγούμενη άδεια αρχής πριν από την εγκατάσταση',
       },
       risposta: 'no',
       dettaglio: {
@@ -183,6 +190,7 @@ export const irlanda: SchedaPaese = {
         nb: 'Det kreves ingen forhåndstillatelse fra DPC; myndigheten skal bare rådspørres på forhånd hvis DPIA-en viser en høy risiko som ikke kan reduseres.',
         nl: 'Voorafgaande toestemming van de DPC is niet nodig; de autoriteit hoeft vooraf alleen te worden geraadpleegd als de DPIA een hoog risico aantoont dat niet kan worden beperkt.',
         ru: "Предварительное разрешение DPC не требуется; орган нужно консультировать заранее, только если DPIA выявляет высокий риск, который невозможно снизить.",
+        el: 'Δεν απαιτείται προηγούμενη άδεια της DPC· την αρχή τη συμβουλεύεσαι πριν από την ενεργοποίηση μόνο αν η DPIA αναδείξει υψηλό κίνδυνο που δεν μπορεί να μετριαστεί.',
       },
       fonte: FONTE_DPC_CONSULTAZIONE,
     },
@@ -199,6 +207,7 @@ export const irlanda: SchedaPaese = {
         nb: 'Gyldig rettslig grunnlag (som regel berettiget interesse, ikke samtykke) med interesseavveining og rett til å protestere',
         nl: 'Geldige rechtsgrondslag (gewoonlijk gerechtvaardigd belang, niet toestemming) met afweging en recht van bezwaar',
         ru: "Действительное правовое основание (как правило, законный интерес, а не согласие) с оценкой баланса интересов и правом на возражение",
+        el: 'Έγκυρη νομική βάση (κατά κανόνα έννομο συμφέρον, όχι συγκατάθεση) με στάθμιση και δικαίωμα εναντίωσης',
       },
       risposta: 'si',
       dettaglio: {
@@ -213,6 +222,7 @@ export const irlanda: SchedaPaese = {
         nb: 'Det vanlige grunnlaget er berettiget interesse (art. 6 nr. 1 bokstav f), som må være strengt nødvendig og forholdsmessig og avveies mot arbeidstakerens rettigheter, med forbehold for retten til å protestere (art. 21).',
         nl: 'De gebruikelijke grondslag is het gerechtvaardigd belang (art. 6, lid 1, onder f), dat strikt noodzakelijk en evenredig moet zijn en moet worden afgewogen tegen de rechten van de werknemer, onder voorbehoud van het recht van bezwaar (art. 21).',
         ru: "Обычное основание: законный интерес (ст. 6 п. 1 лит. f), который должен быть строго необходимым и соразмерным и сбалансированным с правами работника, при условии права на возражение (ст. 21).",
+        el: 'Η συνήθης βάση είναι το έννομο συμφέρον (άρθρο 6 παρ. 1 στοιχ. στ΄), το οποίο πρέπει να είναι απολύτως αναγκαίο και αναλογικό και να σταθμίζεται με τα δικαιώματα του εργαζομένου, με την επιφύλαξη του δικαιώματος εναντίωσης (άρθρο 21).',
       },
       fonte: FONTE_DPC_VEICOLI,
     },
@@ -229,6 +239,7 @@ export const irlanda: SchedaPaese = {
         nb: 'Forbud mot å bruke sporingen til generell overvåking av personalet; mulighet til å velge bort utenfor arbeidstid',
         nl: 'Verbod om de tracking te gebruiken voor algemene monitoring van het personeel; opt-out buiten werktijd',
         ru: "Запрет использовать отслеживание для общего мониторинга персонала; отказ от отслеживания вне рабочего времени",
+        el: 'Απαγόρευση χρήσης της παρακολούθησης θέσης για τη γενική παρακολούθηση του προσωπικού· δυνατότητα απενεργοποίησης εκτός ωραρίου',
       },
       risposta: 'si',
       dettaglio: {
@@ -243,6 +254,7 @@ export const irlanda: SchedaPaese = {
         nb: 'Sporingen kan ikke brukes til å overvåke personalet generelt; det er lite sannsynlig at den er lovlig utenfor arbeidstid, og en mulighet til å velge bort (en personvernbryter) trengs hvis kjøretøyet også brukes privat.',
         nl: 'De tracking mag niet dienen om het personeel in het algemeen te monitoren; buiten werktijd is dit waarschijnlijk niet rechtmatig, en er is een opt-out (privacyschakelaar) nodig als het voertuig ook prive wordt gebruikt.',
         ru: "Отслеживание не может служить общему мониторингу персонала; вне рабочего времени оно, вероятно, незаконно, и нужна возможность отказа (переключатель приватности), если автомобиль используется и в личных целях.",
+        el: 'Η παρακολούθηση θέσης δεν μπορεί να χρησιμεύει στη γενική παρακολούθηση του προσωπικού· είναι απίθανο να είναι νόμιμη εκτός ωραρίου, και χρειάζεται δυνατότητα απενεργοποίησης (διακόπτης απορρήτου) αν το όχημα χρησιμοποιείται και ιδιωτικά.',
       },
       fonte: FONTE_DPC_VEICOLI,
     },
@@ -259,6 +271,7 @@ export const irlanda: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (DPIA) obligatorisk for systematisk overvåking av lokalisering',
         nl: 'Gegevensbeschermingseffectbeoordeling (DPIA) verplicht bij systematische locatiemonitoring',
         ru: "Оценка воздействия (DPIA) обязательна для систематического мониторинга местонахождения",
+        el: 'Υποχρεωτική εκτίμηση αντικτύπου (DPIA) για τη συστηματική παρακολούθηση της θέσης',
       },
       risposta: 'si',
       dettaglio: {
@@ -273,6 +286,7 @@ export const irlanda: SchedaPaese = {
         nb: 'DPCs liste gjør DPIA obligatorisk for systematisk overvåking, sporing eller observasjon av personers posisjon eller atferd, når en dokumentert forhåndsvurdering viser en høy risiko. For kjøretøysporing sier DPCs veiledning at det er «svært sannsynlig» at en DPIA er nødvendig før den tas i bruk.',
         nl: 'De DPC-lijst maakt een DPIA verplicht voor de systematische monitoring, tracking of observatie van de locatie of het gedrag van personen, wanneer een gedocumenteerde screening een hoog risico aantoont. Voor voertuigtracking zegt de DPC-gids dat het „zeer waarschijnlijk“ is dat vóór de invoering een DPIA nodig is.',
         ru: "Перечень DPC делает DPIA обязательной для систематического мониторинга, отслеживания или наблюдения за местонахождением или поведением лиц, когда документированный предварительный анализ указывает на высокий риск. Для отслеживания транспортных средств руководство DPC указывает, что DPIA «весьма вероятно» потребуется до включения системы.",
+        el: 'Ο κατάλογος της DPC καθιστά υποχρεωτική τη DPIA για τη συστηματική παρακολούθηση, καταγραφή ή παρατήρηση της θέσης ή της συμπεριφοράς προσώπων, όταν μια τεκμηριωμένη προεκτίμηση δείχνει υψηλό κίνδυνο. Για την παρακολούθηση οχημάτων ο οδηγός της DPC λέει ότι είναι «πολύ πιθανό» να χρειάζεται DPIA πριν από την ενεργοποίηση.',
       },
       fonte: FONTE_DPC_DPIA,
       fonteAggiuntiva: FONTE_DPC_VEICOLI,
@@ -294,6 +308,7 @@ export const irlanda: SchedaPaese = {
         nb: 'Informer arbeidstakerne, før aktiveringen, om at sporingen finnes, hvordan den fungerer og dens formål.',
         nl: 'Informeer de werknemers voor de activering over het bestaan, de werking en de doeleinden van de tracking.',
         ru: "До включения проинформируйте работников о существовании, работе и целях отслеживания.",
+        el: 'Ενημέρωσε τους εργαζομένους, πριν από την ενεργοποίηση, για την ύπαρξη, τη λειτουργία και τους σκοπούς της παρακολούθησης θέσης.',
       },
     },
     {
@@ -310,6 +325,7 @@ export const irlanda: SchedaPaese = {
         nb: 'Finn et gyldig rettslig grunnlag (som regel berettiget interesse) og dokumenter interesseavveiningen.',
         nl: 'Bepaal een geldige rechtsgrondslag (gewoonlijk gerechtvaardigd belang) en documenteer de afweging.',
         ru: "Определите надлежащее правовое основание (как правило, законный интерес) и задокументируйте оценку баланса интересов.",
+        el: 'Βρες μια έγκυρη νομική βάση (κατά κανόνα έννομο συμφέρον) και τεκμηρίωσε τη στάθμιση.',
       },
     },
     {
@@ -326,6 +342,7 @@ export const irlanda: SchedaPaese = {
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA): obligatorisk for systematisk overvåking av lokalisering.',
         nl: 'Voer de gegevensbeschermingseffectbeoordeling (DPIA) uit: verplicht bij systematische locatiemonitoring.',
         ru: "Проведите оценку воздействия на защиту данных (DPIA): она обязательна при систематическом мониторинге местоположения.",
+        el: 'Κάνε την εκτίμηση αντικτύπου (DPIA): είναι υποχρεωτική για τη συστηματική παρακολούθηση της θέσης.',
       },
     },
     {
@@ -342,6 +359,7 @@ export const irlanda: SchedaPaese = {
         nb: 'Begrens sporingen til det som er strengt nødvendig og til arbeidstiden; gi mulighet til å velge bort ved privat bruk.',
         nl: 'Beperk de tracking tot het strikt noodzakelijke en tot de werktijd; voorzie in een opt-out voor prive-gebruik.',
         ru: "Ограничьте отслеживание строго необходимым и рабочим временем; предусмотрите возможность отключения (opt-out) при личном использовании.",
+        el: 'Περιόρισε την παρακολούθηση θέσης στο απολύτως αναγκαίο και στο ωράριο εργασίας· πρόβλεψε δυνατότητα απενεργοποίησης για την ιδιωτική χρήση.',
       },
     },
     {
@@ -358,6 +376,7 @@ export const irlanda: SchedaPaese = {
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og dele ut personverninformasjonen på nytt, og kontrollere om du på nytt må informere eller rådføre deg med arbeidstakernes representanter, der loven krever det. Ofte endres leverandøren (databehandleren), de innsamlede dataene og fremgangsmåtene: informasjonen som ble delt ut tidligere er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "Если вы меняете систему или программу мониторинга, обновите и повторно вручите уведомление об обработке данных и проверьте, нужно ли снова информировать представителей работников или проводить с ними консультацию, там, где этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее вручённого уведомления недостаточно.",
+        el: 'Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση, και έλεγξε αν πρέπει να ενημερώσεις ή να συμβουλευτείς ξανά τους εκπροσώπους των εργαζομένων, όπου το προβλέπει ο νόμος. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και ο τρόπος λειτουργίας: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.',
       },
     },
   ],
@@ -386,6 +405,7 @@ export const irlanda: SchedaPaese = {
       nb: 'inntil 20 millioner euro eller 4 % av omsetningen (GDPR)',
       nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
       ru: "до 20 млн евро или 4% оборота (GDPR)",
+      el: 'έως 20 εκατ. ευρώ ή 4% του κύκλου εργασιών (ΓΚΠΔ)',
     },
     casoCitato: {
       it: "Non risulta una multa del DPC specifica per il GPS sui dipendenti. Il caso più vicino: DPC contro Limerick City and County Council (dicembre 2021), 110.000 euro per trattamento senza base giuridica tramite telecamere e lettura targhe (l'inchiesta ha riguardato anche i droni). Riguardava un ente pubblico, non i dipendenti. Nella sentenza Doolin (High Court, febbraio 2020, sotto la legge previgente) l'uso, in un procedimento disciplinare, di immagini raccolte per finalità di sicurezza è stato ritenuto un ulteriore trattamento per una finalità diversa.",
@@ -399,6 +419,7 @@ export const irlanda: SchedaPaese = {
       nb: 'Det foreligger ingen bot fra DPC som gjelder GPS på ansatte spesielt. Den nærmeste saken: DPC mot Limerick City and County Council (desember 2021), 110 000 euro for behandling uten rettslig grunnlag via kameraer og avlesing av registreringsskilt (undersøkelsen omfattet også droner). Den gjaldt et offentlig organ, ikke ansatte. I Doolin-dommen (High Court, februar 2020, etter den tidligere loven) ble bruken av bilder samlet inn av sikkerhetshensyn i en disiplinærsak ansett som ytterligere behandling til et annet formål.',
       nl: 'Er is geen boete van de DPC bekend die specifiek betrekking heeft op gps bij werknemers. Relevante richtinggevende zaak: DPC tegen Limerick City and County Council (december 2021), 110.000 euro voor een verwerking zonder rechtsgrondslag via camera\'s en kentekenherkenning (het onderzoek betrof ook drones; een overheidsinstantie, geen werknemers). In Doolin (High Court, februari 2020, onder de vorige wet) werd het gebruik van voor beveiliging verzameld materiaal in een tuchtprocedure aangemerkt als verdere verwerking voor een ander doel.',
       ru: "Штрафа DPC именно за GPS-слежение за сотрудниками не зафиксировано. Ближайший случай: DPC против Limerick City and County Council (декабрь 2021 г.), 110 000 евро за обработку данных без правового основания с помощью камер и считывания номерных знаков (проверка затронула и дроны). Речь шла о публичном органе, а не о сотрудниках. В решении по делу Doolin (High Court, февраль 2020 г., по ранее действовавшему закону) использование в дисциплинарном производстве изображений, собранных в целях безопасности, было признано дальнейшей обработкой для другой цели.",
+      el: 'Δεν προκύπτει πρόστιμο της DPC ειδικά για το GPS στους εργαζομένους. Η πιο κοντινή υπόθεση: DPC κατά Limerick City and County Council (Δεκέμβριος 2021), 110.000 ευρώ για επεξεργασία χωρίς νομική βάση μέσω καμερών και ανάγνωσης πινακίδων (η έρευνα αφορούσε και drones). Αφορούσε δημόσιο φορέα, όχι εργαζομένους. Στην απόφαση Doolin (High Court, Φεβρουάριος 2020, υπό το προηγούμενο δίκαιο) η χρήση, σε πειθαρχική διαδικασία, εικόνων που συλλέχθηκαν για λόγους ασφάλειας κρίθηκε περαιτέρω επεξεργασία για διαφορετικό σκοπό.',
     },
     urlFonte: FONTE_DPC_LIMERICK.url,
     tipoImporto: 'massimale',

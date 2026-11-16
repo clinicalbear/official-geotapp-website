@@ -43,12 +43,18 @@ describe('guide legate a un Paese', () => {
 
 describe('nessuna pagina settore senza guide', () => {
   const SETTORI = ['pulizie', 'sicurezza', 'installatori', 'elettricisti', 'idraulici', 'termoidraulici', 'edilizia', 'manutenzione'] as const;
-  const LINGUE = ['it', 'en', 'en-gb', 'en-us', 'de', 'nl', 'fr', 'es', 'pt', 'da', 'sv', 'nb', 'ru'];
+  const LINGUE = ['it', 'en', 'en-gb', 'en-us', 'de', 'nl', 'fr', 'es', 'pt', 'da', 'sv', 'nb', 'ru', 'el'];
   it('ogni settore in ogni lingua ha almeno una guida', async () => {
     const { sezioneGuide } = await import('./guide');
     const vuote: string[] = [];
     for (const l of LINGUE) for (const s of SETTORI) if (sezioneGuide(s, l).guide.length === 0) vuote.push(`${l}/${s}`);
     expect(vuote).toEqual([]);
+  });
+  it('il greco usa le guide inglesi finche non ci sono articoli greci', async () => {
+    const { sezioneGuide } = await import('./guide');
+    const { titolo, guide } = sezioneGuide('pulizie', 'el');
+    expect(titolo).toBe('Οδηγοί για τον κλάδο σου');
+    for (const g of guide) expect(g.href).toMatch(/^\/blog\/en\//);
   });
   it('le guide generali russe hanno un titolo che non promette il mestiere', async () => {
     const { sezioneGuide } = await import('./guide');

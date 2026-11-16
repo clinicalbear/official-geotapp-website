@@ -29,6 +29,7 @@ const flowMeta: Record<string, { title: string; description: string }> = {
   sv: { title: 'GeoTapp Flow: styrning av uppdrag och team', description: 'Kontorets webbapp för företag med tekniker på fältet: kunder, uppdrag, team, arbetspass, fakturor och förseglade rapporter som kunden själv kan kontrollera.' },
   da: { title: 'GeoTapp Flow - Styring af opgaver og hold i marken', description: 'Kontorets webapp til virksomheder med teknikere i marken: kunder, opgaver, hold, vagter, fakturaer og forseglede rapporter, som kunden selv kan verificere.' },
   nb: { title: 'GeoTapp Flow: styring av oppdrag og team i felt', description: 'Kontorets nettapp for bedrifter med teknikere i felt: kunder, oppdrag, team, vakter, fakturaer og forseglede rapporter som kunden selv kan kontrollere.' },
+  el: { title: 'GeoTapp Flow: διαχείριση έργων και ομάδων πεδίου', description: 'Η διαδικτυακή εφαρμογή του γραφείου για εταιρείες με τεχνικούς πεδίου: πελάτες, έργα, ομάδες, βάρδιες, τιμολόγια και σφραγισμένες αναφορές που ο πελάτης ελέγχει μόνος του.' },
   ru: { title: 'GeoTapp Flow - управление заказами и бригадами на выезде', description: 'Веб-приложение для офиса компаний с выездными техниками: клиенты, заказы, бригады, смены, счета и запечатанные отчёты, которые клиент проверяет сам.' },
 };
 
@@ -183,6 +184,20 @@ const FLOW_FAQ: Record<string, object> = {
       { '@type': 'Question', name: 'Hvordan tildeler jeg oppdrag til team i GeoTapp Flow?', acceptedAnswer: { '@type': 'Answer', text: 'Du oppretter oppdraget fra kontoret, tildeler teknikeren eller teamet, og medarbeideren finner det i TimeTracker-appen. Når oppdraget er avsluttet, kommer rapporten tilbake i Flow, allerede mulig å kontrollere, uten at du må løpe etter noen for å høre hvordan det gikk.' } },
     ],
   },
+  el: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      { '@type': 'Question', name: 'Τι είναι το GeoTapp Flow;', acceptedAnswer: { '@type': 'Answer', text: 'Το GeoTapp Flow είναι η διαδικτυακή εφαρμογή του γραφείου για εταιρείες με τεχνικούς πεδίου. Σου επιτρέπει να δημιουργείς έργα, να αναθέτεις εργασίες, να παρακολουθείς την πρόοδο και να στέλνεις στον πελάτη σφραγισμένες αναφορές που μπορεί να ελέγξει μόνος του.' } },
+      { '@type': 'Question', name: 'Τι γίνεται αν δεν υπάρχει δίκτυο;', acceptedAnswer: { '@type': 'Answer', text: 'Το Flow, ο πίνακας ελέγχου του γραφείου, χρησιμοποιείται από το πρόγραμμα περιήγησης και απαιτεί σύνδεση. Στο TimeTracker, την εφαρμογή των τεχνικών, αν δεν υπάρχει δίκτυο το χτύπημα κάρτας αποθηκεύεται στο κινητό και στέλνεται μόνο του μόλις επανέλθει το σήμα, με την ώρα που έγινε.' } },
+      { '@type': 'Question', name: 'Μπορεί το GeoTapp Flow να συνδεθεί με άλλα λογισμικά διαχείρισης;', acceptedAnswer: { '@type': 'Answer', text: 'Ναι: το Flow εξάγει δεδομένα για τιμολόγηση και μισθοδοσία (Excel/CSV) και συνδέεται με το Fatture in Cloud. Για άλλα λογισμικά διαχείρισης εξετάζεται μια ενσωμάτωση κατόπιν συμφωνίας.' } },
+      { '@type': 'Question', name: 'Πόσους τεχνικούς μπορεί να διαχειριστεί το GeoTapp Flow;', acceptedAnswer: { '@type': 'Answer', text: 'Από το πακέτο Solo, με έναν χρήστη στο γραφείο, ως το πακέτο Business, με απεριόριστες ομάδες σε περισσότερες τοποθεσίες. Οι θέσεις TimeTracker για τους εργαζομένους προστίθενται ξεχωριστά, ανάλογα με το πακέτο.' } },
+      { '@type': 'Question', name: 'Μπορεί ο πελάτης να εμπιστευτεί τις αναφορές του Flow;', acceptedAnswer: { '@type': 'Answer', text: 'Δεν χρειάζεται να τις εμπιστευτεί: μπορεί να τις ελέγξει. Οι αναφορές του GeoTapp είναι κρυπτογραφικά σφραγισμένες και ο πελάτης ελέγχει μόνος του ότι είναι αναλλοίωτες με το GeoTapp Verifier, χωρίς πρόσβαση στον λογαριασμό σου. Ο έλεγχος δείχνει αν το έγγραφο έχει τροποποιηθεί· από μόνος του δεν αποτελεί ούτε απόλυτη απόδειξη των πραγματικών περιστατικών ούτε νομική συμβουλή.' } },
+      { '@type': 'Question', name: 'Δείχνει το GeoTapp Flow πού βρίσκονται οι τεχνικοί;', acceptedAnswer: { '@type': 'Answer', text: 'Όχι, και δεν είναι παράλειψη. Η τοποθεσία καταγράφεται μόνο όταν ο τεχνικός χτυπά κάρτα (έναρξη, διαλείμματα, λήξη) ή τραβά μια φωτογραφία απόδειξης, ποτέ συνεχώς: το Flow σου λέει ότι η εργασία ξεκίνησε στο σωστό μέρος και πότε, αλλά δεν σε αφήνει να ακολουθείς μια τελεία σε χάρτη όλη μέρα. Αυτή είναι η διαφορά ανάμεσα στην τεκμηρίωση της εργασίας και την παρακολούθηση.' } },
+      { '@type': 'Question', name: 'Για ποιες εταιρείες είναι φτιαγμένο το GeoTapp Flow;', acceptedAnswer: { '@type': 'Answer', text: 'Για εταιρείες με ομάδες που δουλεύουν εκτός έδρας: εταιρείες καθαρισμού, φύλαξης, συντήρησης, εγκαταστάτες, ηλεκτρολόγους, υδραυλικούς και εταιρείες πολλαπλών υπηρεσιών. Αν οι εργαζόμενοί σου περνούν τη μέρα στο πεδίο και όχι στο γραφείο, το Flow είναι φτιαγμένο για σένα.' } },
+      { '@type': 'Question', name: 'Πώς αναθέτω έργα στις ομάδες με το GeoTapp Flow;', acceptedAnswer: { '@type': 'Answer', text: 'Δημιουργείς το έργο από το γραφείο, αναθέτεις τον τεχνικό ή την ομάδα και ο εργαζόμενος το βρίσκει στην εφαρμογή TimeTracker. Όταν το έργο ολοκληρωθεί, η αναφορά επιστρέφει στο Flow, ήδη επαληθεύσιμη, χωρίς να τρέχεις πίσω από κάποιον για να μάθεις πώς πήγε.' } },
+    ],
+  },
   sv: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -224,6 +239,7 @@ const FLOW_DESCRIPTION: Record<string, string> = {
   da: 'GeoTapp Flow er kontorets webapp til virksomheder med teknikere i marken: opret opgaver, tildel arbejde, følg fremdriften og send kunden forseglede rapporter, som kunden selv kan verificere.',
   sv: 'GeoTapp Flow är kontorets webbapp för företag med tekniker på fältet: skapa uppdrag, tilldela arbete, följ framstegen och skicka kunden förseglade rapporter som kunden själv kan kontrollera.',
   nb: 'GeoTapp Flow er kontorets nettapp for bedrifter med teknikere i felt: opprett oppdrag, tildel arbeid, følg framdriften og send kunden forseglede rapporter som kunden selv kan kontrollere.',
+  el: 'Το GeoTapp Flow είναι η διαδικτυακή εφαρμογή του γραφείου για εταιρείες με τεχνικούς πεδίου: δημιούργησε έργα, ανάθεσε εργασίες, παρακολούθησε την πρόοδο και στείλε στον πελάτη σφραγισμένες αναφορές που μπορεί να ελέγξει μόνος του.',
   ru: 'GeoTapp Flow — операционная платформа для компаний с выездными техниками: создавайте заказы, назначайте задачи, отслеживайте прогресс и формируйте запечатанные отчёты, которые клиент может проверить сам.',
 };
 
@@ -318,6 +334,16 @@ const FLOW_FEATURES: Record<string, string[]> = {
     'Dataeksport til fakturering og lønnsbehandling',
     'GPS-informasjon som bekreftes som lest i appen før første stempling',
   ],
+  el: [
+    'Διαχείριση έργων και επεμβάσεων σε περισσότερες τοποθεσίες',
+    'Ανάθεση εργασιών σε τεχνικούς πεδίου',
+    'Η πρόοδος της εργασίας βήμα προς βήμα',
+    'Κρυπτογραφικά σφραγισμένες αναφορές, επαληθεύσιμες ανεξάρτητα',
+    'Φωτογραφίες απόδειξης με ώρα και τοποθεσία',
+    'Ενσωμάτωση με το GeoTapp TimeTracker και το Verifier',
+    'Εξαγωγή δεδομένων για τιμολόγηση και μισθοδοσία',
+    'Ενημέρωση GPS που επιβεβαιώνεται ως διαβασμένη στην εφαρμογή πριν από το πρώτο χτύπημα κάρτας',
+  ],
   sv: [
     'Styrning av uppdrag och insatser på flera arbetsplatser',
     'Uppgiftstilldelning till tekniker på fältet',
@@ -392,6 +418,8 @@ function buildFlowSoftware(locale: AppLocale) {
         ? `14 dages gratis prøveperiode. Betalte planer fra ${soloMonthly.formatted} om måneden (Flow Solo), ekskl. moms.`
         : locale === 'nb'
         ? `14 dagers gratis prøveperiode. Betalte planer fra ${soloMonthly.formatted} per måned (Flow Solo), eksklusive mva.`
+        : locale === 'el'
+        ? `Δωρεάν δοκιμή 14 ημερών. Πακέτα επί πληρωμή από ${soloMonthly.formatted} τον μήνα (Flow Solo), χωρίς ΦΠΑ.`
         : locale === 'sv'
         ? `14 dagars gratis provperiod. Betalplaner från ${soloMonthly.formatted} per månad (Flow Solo), exkl. moms.`
         : `14-day free trial. Paid plans from ${soloMonthly.formatted} per month (Flow Solo).`,

@@ -76,6 +76,7 @@ export const lituania: SchedaPaese = {
     sv: 'Litauen',
     nb: 'Litauen',
     ru: 'Литва',
+    el: 'Λιθουανία',
   },
   bandiera: '🇱🇹',
   federale: false,
@@ -94,6 +95,7 @@ export const lituania: SchedaPaese = {
       sv: 'VDAI (Valstybine duomenu apsaugos inspekcija, litauiska dataskyddsmyndigheten)',
       nb: 'VDAI (Valstybine duomenu apsaugos inspekcija, litauisk datatilsyn)',
       ru: 'VDAI (Valstybine duomenu apsaugos inspekcija, литовский орган по защите данных)',
+      el: 'VDAI (Valstybinė duomenų apsaugos inspekcija, Αρχή προστασίας δεδομένων της Λιθουανίας)',
     },
     portale: FONTE_VDAI_SERVIZI.url,
     urlFonte: FONTE_VDAI_SERVIZI.url,
@@ -110,6 +112,7 @@ export const lituania: SchedaPaese = {
       nb: 'Litauen har én nasjonal myndighet, VDAI; det er ingen regional oppdeling.',
       nl: 'Litouwen heeft een enkele nationale autoriteit, het VDAI; er is geen regionale verdeling.',
       ru: "В Литве единственный национальный орган, VDAI; региональных подразделений нет.",
+      el: 'Η Λιθουανία έχει μία μόνο εθνική αρχή, την VDAI· δεν υπάρχει περιφερειακός διαχωρισμός.',
     },
   },
 
@@ -127,6 +130,7 @@ export const lituania: SchedaPaese = {
         nb: 'Tydelig forhåndsinformasjon til de ansatte om sporingen (GDPR art. 13) og skriftlig informasjon med underskrift eller på annen måte som kan dokumenteres (ADTAĮ art. 5 nr. 4)',
         nl: 'Duidelijke voorafgaande informatie aan werknemers over het volgen (AVG art. 13) en schriftelijke informatie tegen handtekening of op een andere aantoonbare manier (ADTAĮ art. 5, lid 4)',
         ru: "Предварительное и чёткое информирование работников об отслеживании (GDPR ст. 13) и письменное информирование с подписью или иным доказуемым способом (ADTAĮ ст. 5 ч. 4)",
+        el: 'Προηγούμενη και σαφής ενημέρωση των εργαζομένων για την παρακολούθηση θέσης (ΓΚΠΔ άρθρο 13) και γραπτή ενημέρωση με υπογραφή ή πάντως αποδείξιμη (ADTAĮ άρθρο 5 παρ. 4)',
       },
       risposta: 'si',
       dettaglio: {
@@ -141,6 +145,7 @@ export const lituania: SchedaPaese = {
         nb: 'Arbeidsgiveren må før det begynner, tydelig opplyse de ansatte om at det er en lokaliseringsenhet i firmabilen, og at bevegelsene deres registreres (GDPR art. 13; uttalelse WP249 fra Artikkel 29-gruppen, videreført av EDPB). Art. 27 i den litauiske arbeidsloven beskytter de ansattes privatliv og data og fortroligheten i personlig korrespondanse, men inneholder ingen særskilt regel om sporing. Den litauiske loven om rettslig vern av personopplysninger (ADTAĮ, art. 5 nr. 4, nummerert som nr. 4 siden 1. juli 2024; selve plikten er eldre enn denne endringen) sier det uttrykkelig: når det behandles data om overvåking av de ansattes atferd, posisjon eller bevegelser, skal de ansatte informeres skriftlig mot underskrift eller på en annen måte som beviser at de er informert, med opplysningene som kreves etter art. 13 nr. 1 og 2 i GDPR.',
         nl: 'De werkgever moet de werknemers vóór de start duidelijk laten weten dat in het bedrijfsvoertuig een volgsysteem zit en dat hun bewegingen worden vastgelegd (AVG art. 13; advies WP249 van de Groep artikel 29, overgenomen door het EDPB). Artikel 27 van het Litouwse Arbeidswetboek beschermt het privéleven en de gegevens van werknemers en het geheim van hun persoonlijke correspondentie, maar bevat geen specifieke regel over het volgen. De Litouwse wet op de rechtsbescherming van persoonsgegevens (ADTAĮ, art. 5, lid 4, genummerd als lid 4 sinds 1 juli 2024; de verplichting zelf is ouder dan die wijziging) zegt het uitdrukkelijk: wanneer gegevens over het volgen van gedrag, locatie of verplaatsingen van werknemers worden verwerkt, moeten zij schriftelijk tegen handtekening of op een andere aantoonbare manier worden geïnformeerd, met de informatie van art. 13, lid 1 en 2, AVG.',
         ru: "Работодатель должен до начала чётко сообщить работникам, что на служебном автомобиле установлено устройство геолокации и что их перемещения записываются (GDPR ст. 13; заключение WP249 Рабочей группы по ст. 29, воспринятое EDPB). Статья 27 Трудового кодекса Литвы защищает частную жизнь и данные работников и тайну их личной переписки, но не содержит специального правила об отслеживании. Литовский закон о правовой защите персональных данных (ADTAĮ, ст. 5 ч. 4, нумерация как части 4 с 1 июля 2024 г.; обязанность существовала и до этого изменения) говорит об этом прямо: при обработке данных о мониторинге поведения, местоположения или перемещений работников их необходимо информировать письменно с подписью или иным способом, подтверждающим факт информирования, предоставляя сведения, предусмотренные ст. 13 п. 1 и 2 GDPR.",
+        el: 'Ο εργοδότης πρέπει να πει σαφώς στους εργαζομένους, πριν ξεκινήσει, ότι στο εταιρικό όχημα υπάρχει συσκευή εντοπισμού και ότι οι μετακινήσεις τους καταγράφονται (ΓΚΠΔ άρθρο 13· γνώμη WP249 της Ομάδας του άρθρου 29, που υιοθέτησε το EDPB). Το άρθρο 27 του λιθουανικού Εργατικού Κώδικα προστατεύει την ιδιωτική ζωή και τα δεδομένα των εργαζομένων και το απόρρητο της προσωπικής τους αλληλογραφίας, αλλά δεν περιέχει ειδικό κανόνα για την παρακολούθηση θέσης. Ο λιθουανικός νόμος για τη νομική προστασία των δεδομένων προσωπικού χαρακτήρα (ADTAĮ, άρθρο 5 παρ. 4, αριθμημένη ως παράγραφος 4 από την 1η Ιουλίου 2024· η υποχρέωση προϋπήρχε της τροποποίησης) το λέει ρητά: όταν γίνεται επεξεργασία δεδομένων για την παρακολούθηση της συμπεριφοράς, της θέσης ή των μετακινήσεων των εργαζομένων, αυτοί ενημερώνονται γραπτώς με υπογραφή ή με άλλον τρόπο που αποδεικνύει την ενημέρωση, παρέχοντας τις πληροφορίες του άρθρου 13 παρ. 1 και 2 ΓΚΠΔ.',
       },
       fonte: FONTE_ADTAI_5,
     },
@@ -157,6 +162,7 @@ export const lituania: SchedaPaese = {
         nb: 'Forhåndstillatelse fra en myndighet før installasjon',
         nl: 'Voorafgaande toestemming van een autoriteit voor de installatie',
         ru: "Предварительное разрешение органа до установки",
+        el: 'Προηγούμενη άδεια αρχής πριν από την εγκατάσταση',
       },
       risposta: 'no',
       dettaglio: {
@@ -171,6 +177,7 @@ export const lituania: SchedaPaese = {
         nb: 'Med GDPR kreves det ikke lenger noen forhåndsmelding eller forhåndstillatelse; den behandlingsansvarlige foretar selv vurderingen og tar vare på dokumentasjonen.',
         nl: 'Met de AVG is geen voorafgaande melding of toestemming meer nodig; de verwerkingsverantwoordelijke beoordeelt dit zelf en bewaart de documentatie.',
         ru: "С GDPR больше не требуется ни уведомление, ни предварительное разрешение: контролёр оценивает себя сам и хранит документацию.",
+        el: 'Με τον ΓΚΠΔ δεν χρειάζεται πλέον καμία προηγούμενη γνωστοποίηση ή άδεια· ο υπεύθυνος επεξεργασίας αυτοαξιολογείται και τηρεί την τεκμηρίωση.',
       },
       fonte: FONTE_GDPR,
     },
@@ -187,6 +194,7 @@ export const lituania: SchedaPaese = {
         nb: 'Grunnlag = berettiget interesse, ikke samtykke',
         nl: 'Grondslag = gerechtvaardigd belang, niet de toestemming',
         ru: "Основание: законный интерес, а не согласие",
+        el: 'Βάση = έννομο συμφέρον, όχι συγκατάθεση',
       },
       risposta: 'si',
       dettaglio: {
@@ -201,6 +209,7 @@ export const lituania: SchedaPaese = {
         nb: 'Overvåking er bare tillatt med et reelt og begrunnet formål; grunnlaget er berettiget interesse, ikke samtykke, som i et arbeidsforhold normalt ikke gis fritt (WP249: det er svært lite sannsynlig at samtykke er et gyldig grunnlag).',
         nl: 'Monitoring is alleen toegestaan voor een reeel en gerechtvaardigd doel; de grondslag is het gerechtvaardigd belang, niet de toestemming, die in de arbeidsverhouding doorgaans niet vrijelijk wordt gegeven (WP249: toestemming is hoogst onwaarschijnlijk een geldige grondslag).',
         ru: "Мониторинг допускается только при реальной и обоснованной цели; основанием служит законный интерес, а не согласие, которое в трудовых отношениях, как правило, не даётся свободно (WP249: крайне маловероятно, что согласие будет действительным основанием).",
+        el: 'Η παρακολούθηση επιτρέπεται μόνο με πραγματικό και δικαιολογημένο σκοπό· η βάση είναι το έννομο συμφέρον, όχι η συγκατάθεση, η οποία στην εργασιακή σχέση κατά κανόνα δεν παρέχεται ελεύθερα (WP249: είναι πολύ απίθανο η συγκατάθεση να αποτελεί έγκυρη βάση).',
       },
       fonte: FONTE_WP249,
     },
@@ -217,6 +226,7 @@ export const lituania: SchedaPaese = {
         nb: 'Forholdsmessig GPS-bruk, satt på pause utenfor arbeidstid eller mulig for den ansatte å slå av; ingen kontinuerlig sporing',
         nl: 'Evenredig GPS, buiten werktijd opgeschort of door de werknemer uit te schakelen; geen continue tracking',
         ru: "Соразмерный GPS, приостанавливаемый вне рабочего времени или отключаемый работником; никакого непрерывного отслеживания",
+        el: 'Αναλογικό GPS, αναστέλλεται εκτός ωραρίου ή απενεργοποιείται από τον εργαζόμενο· καμία συνεχής παρακολούθηση',
       },
       risposta: 'si',
       dettaglio: {
@@ -231,6 +241,7 @@ export const lituania: SchedaPaese = {
         nb: 'Sporingen av kjøretøyet må settes på pause utenfor arbeidstid, eller den ansatte må kunne slå den av; ifølge WP249 er det lite sannsynlig at det finnes et rettslig grunnlag for å lokalisere kjøretøyet utenfor arbeidstid, og behandlingen er uforholdsmessig når den bare tjener til å kontrollere arbeidet, som kunne vært kontrollert på andre måter.',
         nl: 'Het volgen van het voertuig moet buiten werktijd worden opgeschort of de werknemer moet het kunnen uitschakelen; volgens WP249 is een rechtsgrond om het voertuig buiten werktijd te lokaliseren onwaarschijnlijk, en de verwerking is bovenmatig wanneer ze alleen dient om het werk te controleren, wat ook met andere middelen kan.',
         ru: "Отслеживание транспортного средства должно приостанавливаться вне рабочего времени, либо работник должен иметь возможность его отключить; по WP249 правовое основание для определения местоположения транспортного средства вне рабочего времени маловероятно, а обработка избыточна, когда служит лишь контролю работы, которую можно проконтролировать иными средствами.",
+        el: 'Η παρακολούθηση του οχήματος πρέπει να αναστέλλεται εκτός ωραρίου εργασίας ή ο εργαζόμενος πρέπει να μπορεί να την απενεργοποιεί· κατά το WP249 είναι απίθανο να υπάρχει νομική βάση για τον εντοπισμό του οχήματος εκτός ωραρίου εργασίας, και η επεξεργασία είναι υπερβολική όταν εξυπηρετεί μόνο τον έλεγχο της εργασίας, που θα μπορούσε να ελεγχθεί με άλλα μέσα.',
       },
       fonte: FONTE_WP249,
     },
@@ -247,6 +258,7 @@ export const lituania: SchedaPaese = {
         nb: 'Vurdering av personvernkonsekvenser (DPIA) ved overvåking av ansatte, inkludert posisjon og bevegelser (VDAIs liste, punkt 10)',
         nl: 'Gegevensbeschermingseffectbeoordeling (DPIA) voor de monitoring van werknemers, inclusief locatie en beweging (VDAI-lijst, punt 10)',
         ru: "Оценка воздействия (DPIA) при мониторинге сотрудников, включая местоположение и перемещения (перечень VDAI, пункт 10)",
+        el: 'Εκτίμηση αντικτύπου (DPIA) για την παρακολούθηση των εργαζομένων, συμπεριλαμβανομένων της θέσης και της μετακίνησης (κατάλογος VDAI, σημείο 10)',
       },
       risposta: 'si',
       dettaglio: {
@@ -261,6 +273,7 @@ export const lituania: SchedaPaese = {
         nb: 'VDAIs liste over behandlinger som krever en vurdering av personvernkonsekvenser, omfatter uttrykkelig behandling av ansattes data til overvåking, inkludert atferd, posisjon eller bevegelser.',
         nl: 'De VDAI-lijst van verwerkingen waarvoor een gegevensbeschermingseffectbeoordeling vereist is, omvat uitdrukkelijk de verwerking van werknemersgegevens voor monitoring, inclusief gedrag, locatie of beweging.',
         ru: "Перечень VDAI операций обработки, требующих оценки воздействия, прямо включает обработку данных сотрудников для мониторинга, в том числе поведения, местоположения или перемещений.",
+        el: 'Ο κατάλογος της VDAI με τις επεξεργασίες που απαιτούν εκτίμηση αντικτύπου περιλαμβάνει ρητά την επεξεργασία δεδομένων των εργαζομένων για παρακολούθηση, συμπεριλαμβανομένων της συμπεριφοράς, της θέσης ή της μετακίνησης.',
       },
       fonte: FONTE_VDAI_DPIA,
     },
@@ -281,6 +294,7 @@ export const lituania: SchedaPaese = {
         nb: 'Skriv ned reglene om sporing, og informer de ansatte før du aktiverer den (art. 13 i GDPR).',
         nl: 'Leg de regels voor het volgen schriftelijk vast en informeer de werknemers voordat u het inschakelt (art. 13 AVG).',
         ru: "Пропишите правила отслеживания и проинформируйте работников до его включения (ст. 13 GDPR).",
+        el: 'Γράψε τους κανόνες για την παρακολούθηση θέσης και ενημέρωσε τους εργαζομένους πριν την ενεργοποιήσεις (άρθρο 13 ΓΚΠΔ).',
       },
     },
     {
@@ -297,6 +311,7 @@ export const lituania: SchedaPaese = {
         nb: 'Finn et gyldig rettslig grunnlag (berettiget interesse, ikke samtykke).',
         nl: 'Bepaal een geldige rechtsgrondslag (gerechtvaardigd belang, niet de toestemming).',
         ru: "Определите действительное правовое основание (законный интерес, а не согласие).",
+        el: 'Βρες μια έγκυρη νομική βάση (έννομο συμφέρον, όχι συγκατάθεση).',
       },
     },
     {
@@ -313,6 +328,7 @@ export const lituania: SchedaPaese = {
         nb: 'Gjennomfør vurderingen av personvernkonsekvenser (DPIA) for overvåking av ansatte, inkludert posisjon og bevegelser.',
         nl: 'Voer de gegevensbeschermingseffectbeoordeling (DPIA) uit voor de monitoring van werknemers, inclusief locatie en beweging.',
         ru: "Проведите оценку воздействия (DPIA) для мониторинга сотрудников, включая местоположение и перемещения.",
+        el: 'Κάνε την εκτίμηση αντικτύπου (DPIA) για την παρακολούθηση των εργαζομένων, συμπεριλαμβανομένων της θέσης και της μετακίνησης.',
       },
     },
     {
@@ -329,6 +345,7 @@ export const lituania: SchedaPaese = {
         nb: 'Sett opp systemet forholdsmessig: satt på pause utenfor arbeidstid eller mulig for den ansatte å slå av.',
         nl: 'Configureer het systeem op evenredige wijze: buiten werktijd opgeschort of door de werknemer uit te schakelen.',
         ru: "Настройте систему соразмерно: приостановка вне рабочего времени или возможность отключения работником.",
+        el: 'Ρύθμισε το σύστημα με αναλογικό τρόπο: αναστολή εκτός ωραρίου ή απενεργοποίηση από τον εργαζόμενο.',
       },
     },
     {
@@ -345,6 +362,7 @@ export const lituania: SchedaPaese = {
         nb: 'Ta vare på dokumentasjonen, og still den til rådighet for VDAI på forespørsel.',
         nl: 'Bewaar de documentatie en stel deze op verzoek ter beschikking van het VDAI.',
         ru: "Храните документацию и предоставляйте её VDAI по запросу.",
+        el: 'Φύλαξε την τεκμηρίωση και διέθεσέ την στη VDAI, εφόσον τη ζητήσει.',
       },
     },
     {
@@ -361,6 +379,7 @@ export const lituania: SchedaPaese = {
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og dele ut personverninformasjonen på nytt og vurdere om du på nytt må informere eller høre de ansattes representanter, der loven krever det. Ofte endrer leverandøren (databehandleren), de innsamlede opplysningene og metodene seg: informasjonen som ble delt ut tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "При смене системы или программы мониторинга обновите и повторно вручите информационное уведомление и проверьте, нужно ли снова информировать представителей работников или проводить с ними консультацию, если этого требует закон. Часто меняются поставщик (обработчик данных), собираемые данные и способы обработки: ранее врученного уведомления недостаточно.",
+        el: 'Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση, και έλεγξε αν πρέπει να ενημερώσεις ή να συμβουλευτείς ξανά τους εκπροσώπους των εργαζομένων, όπου το προβλέπει ο νόμος. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και ο τρόπος λειτουργίας: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.',
       },
     },
   ],
@@ -389,6 +408,7 @@ export const lituania: SchedaPaese = {
       nb: 'opptil 20 millioner euro eller 4 % av omsetningen (GDPR)',
       nl: 'tot 20 miljoen euro of 4% van de omzet (AVG)',
       ru: "до 20 млн евро или 4% оборота (GDPR)",
+      el: 'έως 20 εκατ. ευρώ ή 4% του κύκλου εργασιών (ΓΚΠΔ)',
     },
     casoCitato: {
       it: 'Non risulta una multa del VDAI specifica pubblicata per il GPS sui dipendenti. Il rischio sanzionatorio resta quello generale del GDPR (art. 83).',
@@ -402,6 +422,7 @@ export const lituania: SchedaPaese = {
       nb: 'Det er ikke kjent noen spesifikk offentliggjort bot fra VDAI for GPS på ansatte. Sanksjonsrisikoen er fortsatt den generelle etter GDPR (art. 83).',
       nl: 'Er is geen specifieke, gepubliceerde VDAI-boete voor gps bij werknemers. Het sanctierisico blijft het algemene van de AVG (art. 83).',
       ru: "Опубликованного штрафа VDAI именно за GPS в отношении сотрудников не обнаружено. Риск санкций остаётся общим риском по GDPR (ст. 83).",
+      el: 'Δεν προκύπτει δημοσιευμένο πρόστιμο της VDAI ειδικά για το GPS στους εργαζομένους. Ο κίνδυνος κυρώσεων παραμένει ο γενικός του ΓΚΠΔ (άρθρο 83).',
     },
     urlFonte: FONTE_VDAI_DECISIONI.url,
     tipoImporto: 'massimale',

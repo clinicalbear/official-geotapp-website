@@ -6,7 +6,7 @@ import {
   STATUTORY_DOCUMENTI,
 } from './index';
 
-const LOCALES = ['it', 'en', 'de', 'fr', 'es', 'nl', 'pt', 'da', 'sv', 'nb', 'ru'] as const;
+const LOCALES = ['it', 'en', 'de', 'fr', 'es', 'nl', 'pt', 'da', 'sv', 'nb', 'el', 'ru'] as const;
 
 describe('conservazione content', () => {
   it('exposes 6 data types with full content for every locale', () => {

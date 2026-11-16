@@ -18,6 +18,7 @@ const SETTORI_META: Record<string, { title: string; description: string }> = {
   da: { title: 'Brancher - Verificerbar dokumentation af arbejdet | GeoTapp', description: 'Fra rengøring til sikkerhed: hver opgave bliver verificerbar dokumentation med GPS og fotos. Forseglede rapporter, du kan vise, når nogen bestrider arbejdet.' },
   sv: { title: 'Branscher - Verifierbara bevis | GeoTapp', description: 'Från städning till säkerhet: varje fältuppdrag blir verifierbart bevis med GPS och foton. Förseglade rapporter, noll tvister.' },
   nb: { title: 'Bransjer - Verifiserbar dokumentasjon av arbeidet | GeoTapp', description: 'Fra renhold til sikkerhet: hvert oppdrag blir verifiserbar dokumentasjon med GPS og bilder. Forseglede rapporter du kan vise når noen bestrider arbeidet.' },
+  el: { title: 'Κλάδοι - Επαληθεύσιμη απόδειξη εργασίας | GeoTapp', description: 'Από τον καθαρισμό ως την ασφάλεια: κάθε εργασία στο πεδίο γίνεται επαληθεύσιμη απόδειξη με GPS και φωτογραφίες. Σφραγισμένες αναφορές εργασιών για να τις δείξεις όταν κάποιος αμφισβητεί τη δουλειά.' },
 };
 
 async function generateMetadataBase({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {

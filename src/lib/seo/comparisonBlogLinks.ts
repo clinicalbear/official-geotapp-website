@@ -118,6 +118,7 @@ const ANCHOR: Record<string, string> = {
   nl: 'Lees de uitgebreide vergelijking op de blog',
   sv: 'Läs den fördjupade jämförelsen på bloggen',
   nb: 'Les den grundige sammenligningen på bloggen',
+  el: 'Διάβασε τη σε βάθος σύγκριση στο blog',
   da: 'Læs den dybdegående sammenligning på bloggen',
   ru: 'Читать подробный разбор в блоге',
 };
@@ -131,7 +132,7 @@ export function comparisonBlogLink(
   if (!byLocale) return null;
   // articolo nella lingua della pagina; fallback all'italiano (dove sta Libemax
   // e dove il grosso delle citazioni AI e' comunque concentrato).
-  const href = byLocale[locale] ?? (locale.startsWith('en-') ? byLocale.en : undefined) ?? byLocale.it;
+  const href = byLocale[locale] ?? (locale.startsWith('en-') || locale === 'el' ? byLocale.en : undefined) ?? byLocale.it;
   if (!href) return null;
   const label = ANCHOR[locale] ?? ANCHOR.en;
   return { href, label };

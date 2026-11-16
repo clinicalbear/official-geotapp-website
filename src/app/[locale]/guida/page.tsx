@@ -14,6 +14,7 @@ const GUIDA_META: Record<string, { title: string; description: string }> = {
   da: { title: 'GeoTapp-brugervejledning - Kom i gang | GeoTapp', description: 'Sådan kommer du i gang med GeoTapp: aktivér virksomheden, inviter medarbejdere, stempl, indsaml arbejdsbeviser og send kunden en rapport, som vedkommende selv kan verificere.' },
   sv: { title: 'GeoTapps användarhandbok - Kom igång | GeoTapp', description: 'Så kommer du igång med GeoTapp: aktivera företaget, bjud in medarbetare, stämpla, samla in arbetsbevis och skicka kunden en rapport som kunden själv kan kontrollera.' },
   nb: { title: 'GeoTapp-veiledning - Kom i gang | GeoTapp', description: 'Slik kommer du i gang med GeoTapp: aktiver bedriften, inviter ansatte, stemple, samle arbeidsbevis og send kunden en rapport som vedkommende selv kan verifisere.' },
+  el: { title: 'Οδηγός GeoTapp - Ξεκίνα | GeoTapp', description: 'Πώς να ξεκινήσεις με το GeoTapp: ενεργοποίησε την εταιρεία, κάλεσε τους εργαζομένους, χτύπησε κάρτα, συγκέντρωσε αποδείξεις εργασίας και στείλε στον πελάτη μια αναφορά που μπορεί να επαληθεύσει μόνος του.' },
   ru: { title: 'Руководство пользователя GeoTapp - Начало работы | GeoTapp', description: 'Как начать работать с GeoTapp: активировать компанию, пригласить сотрудников, делать отметки, собирать доказательства работы и отправлять клиенту отчёт, который он проверяет сам.' },
 };
 

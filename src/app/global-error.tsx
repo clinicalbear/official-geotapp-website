@@ -11,6 +11,7 @@ const T: Record<string, { title: string; desc: string; retry: string }> = {
   da: { title: 'Kritisk fejl!', desc: 'Der opstod en kritisk fejl, som forhindrer layoutet i at indlæse.', retry: 'Prøv igen' },
   sv: { title: 'Kritiskt fel!', desc: 'Ett kritiskt fel uppstod som hindrar layouten från att laddas.', retry: 'Försök igen' },
   nb: { title: 'Kritisk feil!', desc: 'Det oppstod en kritisk feil som hindrer layouten i å lastes.', retry: 'Prøv igjen' },
+  el: { title: 'Κρίσιμο σφάλμα!', desc: 'Παρουσιάστηκε ένα κρίσιμο σφάλμα που εμποδίζει τη φόρτωση της διάταξης.', retry: 'Δοκίμασε ξανά' },
   ru: { title: 'Критическая ошибка!', desc: 'Произошла критическая ошибка, из-за которой макет не загружается.', retry: 'Повторить' },
 };
 

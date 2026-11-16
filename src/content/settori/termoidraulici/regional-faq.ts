@@ -14,6 +14,7 @@ export const REGIONAL_FAQ_TITLE: Partial<Record<AppLocale, string>> = {
   nl: 'Regels en documentatie in Nederland',
   da: 'Regler og dokumentation i Danmark',
   nb: 'Regler og dokumentasjon i Norge',
+  el: 'Κανονιστικό πλαίσιο και τεκμηρίωση στην Ελλάδα',
   ru: 'Нормативные требования и документация в России',
   sv: 'Regler och dokumentation i Sverige',
   'en-us': 'Regional rules and records',
@@ -134,6 +135,20 @@ export const REGIONAL_FAQ: Partial<Record<AppLocale, RegionalFaqItem[]>> = {
     {
       q: 'Fluorholdige gasser og teknikerens sertifikater?',
       a: 'GeoTapp håndterer verken sertifikater for arbeid med fluorholdige gasser eller anleggenes serviceregistre. Det registrerer klokkeslett, posisjon, bilder og notater for hvert oppdrag på kjeler og varmeanlegg, som du kan legge ved anleggets dokumentasjon.',
+    },
+  ],
+  el: [
+    {
+      q: "Ώρες και επεμβάσεις σύμφωνα με τη συλλογική σύμβαση;",
+      a: "Το GeoTapp καταγράφει σε κάθε χτύπημα κάρτας έναρξη, διαλείμματα και λήξη με τοποθεσία και ώρα, ανά τεχνικό και ανά έργο, και τα εξάγει σε Excel ή CSV για τον λογιστή. Ο υπολογισμός των αποδοχών, η εφαρμογή της συλλογικής σύμβασης (προσαυξήσεις, επιδόματα) και οι δηλώσεις προς το ΕΡΓΑΝΗ ΙΙ παραμένουν στον λογιστή ή υπεύθυνο μισθοδοσίας και στην εταιρεία. Το GeoTapp δεν συνδέεται με το ΕΡΓΑΝΗ ΙΙ και δεν αντικαθιστά την ψηφιακή κάρτα εργασίας (ν. 4808/2021, άρθρο 74) όπου αυτή είναι υποχρεωτική.",
+    },
+    {
+      q: "Γεωεντοπισμός και προστασία δεδομένων των εργαζομένων;",
+      a: "Τοποθεσία συνδεδεμένη με την επέμβαση και τη βάρδια, με ενημέρωση των εργαζομένων, τεκμηρίωση της νόμιμης βάσης (έννομο συμφέρον) και τήρηση του ΓΚΠΔ και του ν. 4624/2019 (άρθρο 27 για την επεξεργασία δεδομένων στις εργασιακές σχέσεις). Η εκτίμηση της νομιμότητας ανήκει στην εταιρεία και στον νομικό ή τον υπεύθυνο προστασίας δεδομένων της.",
+    },
+    {
+      q: "Φθοριούχα αέρια (Κανονισμός (ΕΕ) 2024/573) και βιβλίο εγκατάστασης;",
+      a: "Το GeoTapp δεν διαχειρίζεται τα πιστοποιητικά για τα φθοριούχα αέρια (F-gas) ούτε τα αρχεία της εγκατάστασης. Καταγράφει ώρα, τοποθεσία, φωτογραφίες και σημειώσεις κάθε επέμβασης σε λέβητες και θερμικές εγκαταστάσεις, για να επισυνάπτονται στα έγγραφα της εγκατάστασης.",
     },
   ],
   ru: [

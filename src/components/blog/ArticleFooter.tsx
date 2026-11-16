@@ -31,6 +31,7 @@ const FOOTER_LABELS: Record<string, { related: string; cta_title: string; cta_de
   da: { related: 'Relaterede artikler', cta_title: 'Prøv GeoTapp gratis i 14 dage', cta_desc: 'Intet kreditkort. Kom i gang på 2 minutter.', cta_btn: 'Start nu', read: 'Læs' },
   sv: { related: 'Relaterade artiklar', cta_title: 'Prova GeoTapp gratis i 14 dagar', cta_desc: 'Inget kreditkort. Kom igång på 2 minuter.', cta_btn: 'Börja nu', read: 'Läs' },
   nb: { related: 'Relaterte artikler', cta_title: 'Prøv GeoTapp gratis i 14 dager', cta_desc: 'Ingen kredittkort. Kom i gang på 2 minutter.', cta_btn: 'Start nå', read: 'Les' },
+  el: { related: 'Σχετικά άρθρα', cta_title: 'Δοκίμασε το GeoTapp δωρεάν για 14 ημέρες', cta_desc: 'Χωρίς πιστωτική κάρτα. Ξεκίνα σε 2 λεπτά.', cta_btn: 'Ξεκίνα τώρα', read: 'Διάβασε' },
   ru: { related: 'Похожие статьи', cta_title: 'Попробуйте GeoTapp бесплатно 14 дней', cta_desc: 'Без банковской карты. Запуск за 2 минуты.', cta_btn: 'Начать', read: 'Читать' },
 };
 

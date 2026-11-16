@@ -34,7 +34,7 @@ import { localizeEnglishDeep } from '@/lib/i18n/en-spelling';
 
 const LA_PROVA: Record<string, string> = {
   it: 'La prova', en: 'The proof', de: 'Der Beweis', fr: 'La preuve', es: 'La prueba',
-  pt: 'A prova', nl: 'Het bewijs', da: 'Beviset', sv: 'Beviset', nb: 'Beviset', ru: 'Доказательство',
+  pt: 'A prova', nl: 'Het bewijs', da: 'Beviset', sv: 'Beviset', nb: 'Beviset', el: 'Η απόδειξη', ru: 'Доказательство',
 };
 
 const CAROUSEL_SLIDES = [
@@ -334,6 +334,27 @@ const FLOW_COPY: Record<string, FlowCopy> = {
     legalKicker: 'Lokale regler',
     trial: 'Prøv Flow gratis i 14 dager',
   },
+  el: {
+    statusLabel: 'Πού χρησιμοποιείται',
+    releaseNote: 'Το Flow είναι διαδικτυακή εφαρμογή: το χρησιμοποιείς στο πρόγραμμα περιήγησης, σε υπολογιστή και tablet, χωρίς να εγκαταστήσεις τίποτα. Όσοι δουλεύουν στο πεδίο χρησιμοποιούν το GeoTapp TimeTracker, την εφαρμογή στο Google Play και στο App Store, και ό,τι καταγράφουν φτάνει στο Flow.',
+    doesTitle: 'Τι κάνει το GeoTapp Flow',
+    doesSub: 'Είναι το εργαλείο διαχείρισης του γραφείου και συγκεντρώνει επιπλέον την τεκμηρίωση της δουλειάς της ομάδας: προγραμματισμός, εργασία πεδίου, τελικός απολογισμός και αναφορές προς τον πελάτη.',
+    cards: [
+      { title: 'Επιχειρησιακό κέντρο και διοίκηση', description: 'Το Flow δίνει στο γραφείο ένα σημείο για πελάτες, έργα, ημερολόγιο, έγγραφα, άδειες, διοίκηση και συντονισμό των ομάδων.' },
+      { title: 'Τεκμηρίωση που μπορείς να δείξεις στον πελάτη', description: 'Φωτογραφίες, σημειώσεις και χτυπήματα κάρτας από το πεδίο συνδέονται με το έργο, ώστε το γραφείο να απαντά με γεγονότα και όχι με εικασίες.' },
+      { title: 'Ιστορικό και εξαγωγή του έργου', description: 'Για κάθε έργο μπορείς να κατεβάσεις το πακέτο με τη ροή των συμβάντων, τα χτυπήματα κάρτας με τις τοποθεσίες και τις φωτογραφίες, και να στείλεις στον πελάτη τη σφραγισμένη αναφορά.' },
+      { title: 'Ταχύτερη τιμολόγηση', description: 'Προσφορές, τιμολόγια και η σύνδεση με το Fatture in Cloud δουλεύουν με τα πραγματικά δεδομένα του έργου: ο τελικός απολογισμός είναι έτοιμος νωρίτερα και υπάρχουν λιγότερα να συζητηθούν.' },
+    ],
+    blocks: [
+      { title: 'Φτιαγμένο για γραφείο, διοίκηση και συντονισμό', description: 'Ιδιοκτήτες, διοίκηση και υπεύθυνοι χρησιμοποιούν το Flow όταν θέλουν λιγότερες εσωτερικές συζητήσεις, πιο καθαρούς ρόλους και σαφή εικόνα της δουλειάς που έγινε.' },
+      { title: 'Συνδεδεμένο με το TimeTracker', description: 'Τα χτυπήματα κάρτας, οι φωτογραφίες απόδειξης και η πρόοδος του έργου φτάνουν στο Flow μόλις τα καταγράψει ο εργαζόμενος, έτοιμα για την αναφορά και τον τελικό απολογισμό.' },
+    ],
+    complianceKicker: 'Ενημέρωση GPS',
+    complianceTagline: 'Πρώτα επιβεβαιώνεται η ενημέρωση, μετά χτυπάς κάρτα.*',
+    complianceFootnote: '* Σύμφωνα με τον ΓΚΠΔ (άρθρο 13) κάθε εργαζόμενος πρέπει να ενημερώνεται πριν καταγραφεί η τοποθεσία του. Αν το λογισμικό αφήνει αυτό το βήμα στον εργοδότη, ο κίνδυνος μένει στον εργοδότη. Το GeoTapp ετοιμάζει την ατομική ενημέρωση, την κάνει να επιβεβαιωθεί ως διαβασμένη στην εφαρμογή και δεν αφήνει τον εργαζόμενο να χτυπήσει κάρτα πριν από την επιβεβαίωση.',
+    legalKicker: 'Τοπικοί κανόνες',
+    trial: 'Δοκίμασε το Flow δωρεάν για 14 ημέρες',
+  },
   ru: {
     statusLabel: 'Где используется',
     releaseNote: 'Flow — это веб-приложение: вы используете его в браузере, на компьютере и планшете, ничего не устанавливая. В поле работают с GeoTapp TimeTracker — приложением, доступным в Google Play и App Store, и то, что отмечает сотрудник, попадает в Flow.',
@@ -505,6 +526,13 @@ const GPS_PRIVACY_CONTENT: Record<string, {
     p2: 'Det bekreftede dokumentet blir arkivert, og i Flow ser du hvem som har bekreftet og hvem som ikke har det. Ikke flere løse papirer: hver bekreftelse registreres med dato og klokkeslett. Bekreftelsen viser at informasjonen er utlevert; den er ikke et samtykke, og den trenger ikke å være det.',
     legal: 'I Norge skal de ansatte informeres før du registrerer posisjonen deres (GDPR art. 13), og arbeidsmiljøloven kapittel 9 stiller krav til kontrolltiltak: de må være saklig begrunnet, ikke uforholdsmessig inngripende, og drøftes med de tillitsvalgte. Datatilsynet har veiledning om kontroll av ansatte. Disse stegene er fortsatt arbeidsgiverens ansvar. GeoTapp er bygget for å holde seg innenfor rammene: posisjon bare ved stempling, aldri løpende.',
     tags: ['GDPR art. 13', 'Arbeidsmiljøloven kap. 9', 'Datatilsynet', 'Bekreftet som lest', 'Dokument arkivert', 'Ingen stempling før bekreftelsen', 'Ikke noe papir'],
+  },
+  el: {
+    title: 'Η ενημέρωση GPS, σε κάθε εργαζόμενο',
+    p1: 'Όταν καλείς έναν νέο εργαζόμενο, το Flow ετοιμάζει την ενημέρωση για την καταγραφή τοποθεσίας με τα στοιχεία της εταιρείας σου και του την στέλνει. Ο εργαζόμενος συμπληρώνει τα στοιχεία του, διαβάζει το έγγραφο και το επιβεβαιώνει ως διαβασμένο, όλα από το κινητό, χωρίς χαρτί. Όσο δεν έχει επιβεβαιωθεί, η εφαρμογή δεν αφήνει τον εργαζόμενο να χτυπήσει κάρτα.',
+    p2: 'Το επιβεβαιωμένο έγγραφο αρχειοθετείται και στο Flow βλέπεις ποιος το έχει επιβεβαιώσει και ποιος όχι. Όχι πια χαρτιά σκόρπια: κάθε επιβεβαίωση καταγράφεται με ημερομηνία και ώρα. Η επιβεβαίωση δείχνει ότι η ενημέρωση παραδόθηκε· δεν είναι συγκατάθεση και δεν χρειάζεται να είναι.',
+    legal: 'Η τοπική εργατική νομοθεσία για τον έλεγχο των εργαζομένων εκτός έδρας απαιτεί συνήθως προηγούμενη ενημέρωση του εργαζομένου (άρθρο 13 ΓΚΠΔ). Αυτά τα βήματα παραμένουν ευθύνη του εργοδότη. Το GeoTapp είναι φτιαγμένο για να μένει εντός των ορίων: τοποθεσία μόνο στο χτύπημα κάρτας, ποτέ συνεχώς.',
+    tags: ['ΓΚΠΔ άρθρο 13', 'Επιβεβαίωση ανάγνωσης', 'Έγγραφο αρχειοθετημένο', 'Κανένα χτύπημα κάρτας πριν από την επιβεβαίωση', 'Χωρίς χαρτί'],
   },
   ru: {
     title: 'Уведомление о GPS для каждого сотрудника',

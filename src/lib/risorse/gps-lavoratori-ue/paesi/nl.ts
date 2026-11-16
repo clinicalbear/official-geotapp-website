@@ -69,6 +69,7 @@ export const olanda: SchedaPaese = {
     sv: 'Nederländerna',
     nb: 'Nederland',
     ru: 'Нидерланды',
+    el: 'Κάτω Χώρες',
   },
   bandiera: '🇳🇱',
   federale: false,
@@ -91,6 +92,7 @@ export const olanda: SchedaPaese = {
       nb: 'Nederland har én nasjonal myndighet, AP; det finnes ingen regional inndeling.',
       nl: 'Nederland heeft een enkele nationale autoriteit, de AP; er is geen regionale verdeling.',
       ru: "В Нидерландах действует единый национальный орган, AP; региональное деление отсутствует.",
+      el: 'Οι Κάτω Χώρες έχουν μία μόνο εθνική αρχή, την AP· δεν υπάρχει περιφερειακός διαχωρισμός.',
     },
   },
 
@@ -108,6 +110,7 @@ export const olanda: SchedaPaese = {
         nb: 'Samtykke fra bedriftsutvalget (OR) før systemet installeres (WOR art. 27)',
         nl: 'Instemming van de ondernemingsraad (OR) voordat het systeem wordt geinstalleerd (WOR art. 27)',
         ru: "Согласие производственного совета (OR) до установки системы (WOR, ст. 27)",
+        el: 'Συναίνεση του εργασιακού συμβουλίου (OR) πριν από την εγκατάσταση του συστήματος (WOR άρθρο 27)',
       },
       risposta: 'dipende',
       dettaglio: {
@@ -122,6 +125,7 @@ export const olanda: SchedaPaese = {
         nb: 'Der det finnes et bedriftsutvalg (ondernemingsraad, OR), må arbeidsgiveren ha dets forhåndssamtykke (instemmingsrecht) før det innføres et system som behandler personaldata eller kontrollerer oppmøte, atferd eller prestasjoner (WOR art. 27, bokstavene k og l). Hvis OR ikke samtykker, kan arbeidsgiveren ikke gå videre, med mindre kantonretten (kantonrechter, art. 27 nr. 4) godkjenner beslutningen, noe den bare gjør hvis OR-ets avslag er urimelig eller tiltaket kreves av alvorlige organisatoriske, økonomiske eller sosiale grunner. OR-ets samtykke trengs ikke hvis saken allerede er regulert av en tariffavtale (art. 27 nr. 3). Dette gjelder der det finnes et OR: det er obligatorisk fra 50 ansatte.',
         nl: 'Waar een ondernemingsraad (OR) bestaat, heeft de werkgever de voorafgaande instemming (instemmingsrecht) ervan nodig voordat hij een systeem invoert dat personeelsgegevens verwerkt of de aanwezigheid, het gedrag of de prestaties controleert (WOR art. 27, onder k en l). Stemt de OR niet in, dan kan de werkgever niet doorgaan, tenzij de kantonrechter toestemming geeft (art. 27 lid 4); die geeft alleen toestemming als de weigering van de OR onredelijk is of het besluit wordt gevergd door zwaarwegende bedrijfsorganisatorische, bedrijfseconomische of bedrijfssociale redenen. Instemming is niet vereist als de aangelegenheid al inhoudelijk is geregeld in een cao (art. 27 lid 3). Dit geldt waar een OR bestaat: vanaf 50 werknemers is die verplicht.',
         ru: "Там, где есть производственный совет (ondernemingsraad, OR), работодателю нужно его предварительное согласие (instemmingsrecht) до внедрения системы, обрабатывающей данные персонала или контролирующей присутствие, поведение или результативность (WOR, ст. 27, п. k и l). Если OR не согласен, действовать нельзя, за исключением случая, когда решение разрешит кантональный суд (kantonrechter, ст. 27 ч. 4); он разрешает это, только если отказ OR необоснован или мера продиктована серьёзными организационными, экономическими или социальными причинами. Согласие OR не требуется, если вопрос уже урегулирован коллективным договором (ст. 27 ч. 3). Правило действует там, где OR существует: он обязателен начиная с 50 работников.",
+        el: 'Όπου υπάρχει εργασιακό συμβούλιο (ondernemingsraad, OR), ο εργοδότης χρειάζεται την προηγούμενη συναίνεσή του (instemmingsrecht) πριν εισαγάγει σύστημα που επεξεργάζεται δεδομένα του προσωπικού ή ελέγχει την παρουσία, τη συμπεριφορά ή την απόδοσή του (WOR άρθρο 27, στοιχ. k και l). Αν το OR δεν συναινέσει, δεν μπορείς να προχωρήσεις, εκτός αν το επιτρέψει ο κατώτερος δικαστής (kantonrechter, άρθρο 27 παρ. 4), κάτι που χορηγείται μόνο αν η άρνηση του OR είναι παράλογη ή αν το μέτρο επιβάλλεται από σοβαρούς οργανωτικούς, οικονομικούς ή κοινωνικούς λόγους. Η συναίνεση του OR δεν χρειάζεται αν το θέμα ρυθμίζεται ήδη από συλλογική σύμβαση (άρθρο 27 παρ. 3). Ισχύει όπου υπάρχει OR: είναι υποχρεωτικό από 50 εργαζομένους και άνω.',
       },
       fonte: FONTE_WOR_27,
     },
@@ -138,6 +142,7 @@ export const olanda: SchedaPaese = {
         nb: 'Tillatelse fra en arbeidsmyndighet før installasjon',
         nl: 'Toestemming van een arbeidsautoriteit voordat wordt geinstalleerd',
         ru: "Разрешение органа по труду до установки",
+        el: 'Άδεια αρχής εργασίας πριν από την εγκατάσταση',
       },
       risposta: 'no',
       dettaglio: {
@@ -152,6 +157,7 @@ export const olanda: SchedaPaese = {
         nb: 'Nederland krever ingen forhåndstillatelse fra en arbeidsmyndighet. De avgjørende rammene er OR-ets samtykke og GDPR. Tilsynsmyndigheten (AP) må bare rådspørres på forhånd i tilfellet etter art. 36 i GDPR, altså hvis personvernkonsekvensvurderingen (DPIA) viser en høy risiko som ikke kan reduseres.',
         nl: 'Nederland kent geen voorafgaande toestemming van een arbeidsautoriteit. De filters zijn de instemming van de OR en de AVG. De toezichthouder (AP) hoeft alleen vooraf te worden geraadpleegd in het geval van art. 36 AVG, dat wil zeggen als de DPIA een hoog risico aantoont dat niet kan worden beperkt.',
         ru: "Нидерланды не предусматривают предварительного разрешения органа по труду. Фильтрами служат согласие OR и GDPR. Орган по защите данных (AP) нужно консультировать заранее только в случае ст. 36 GDPR, то есть если DPIA выявляет высокий риск, который нельзя снизить.",
+        el: 'Οι Κάτω Χώρες δεν προβλέπουν προηγούμενη άδεια αρχής εργασίας. Τα φίλτρα είναι η συναίνεση του OR και ο ΓΚΠΔ. Η αρχή προστασίας δεδομένων (AP) συμβουλεύεται εκ των προτέρων μόνο στην περίπτωση του άρθρου 36 ΓΚΠΔ, δηλαδή αν η DPIA αναδείξει υψηλό κίνδυνο που δεν μπορεί να μετριαστεί.',
       },
       fonte: FONTE_AP_CONDIZIONI,
     },
@@ -168,6 +174,7 @@ export const olanda: SchedaPaese = {
         nb: 'Forhåndsinformasjon til de ansatte (art. 13 i GDPR)',
         nl: 'Voorafgaande informatie aan de werknemers (art. 13 AVG)',
         ru: "Предварительное информирование работников (ст. 13 GDPR)",
+        el: 'Προηγούμενη ενημέρωση των εργαζομένων (άρθρο 13 ΓΚΠΔ)',
       },
       risposta: 'si',
       dettaglio: {
@@ -182,6 +189,7 @@ export const olanda: SchedaPaese = {
         nb: 'De ansatte må informeres på forhånd og fullt ut om hva som overvåkes, og hvorfor.',
         nl: 'De werknemers moeten vooraf en volledig worden geinformeerd over wat wordt gecontroleerd en waarom.',
         ru: "Работников нужно заранее и в полном объёме информировать о том, что контролируется и зачем.",
+        el: 'Οι εργαζόμενοι πρέπει να ενημερώνονται εκ των προτέρων και πλήρως για το τι ελέγχεται και γιατί.',
       },
       fonte: FONTE_AP_CONDIZIONI,
     },
@@ -198,6 +206,7 @@ export const olanda: SchedaPaese = {
         nb: 'Gyldig rettslig grunnlag (berettiget interesse med avveining; de ansattes samtykke er normalt ikke gyldig) og forbud mot kontinuerlig sporing',
         nl: 'Geldige rechtsgrondslag (gerechtvaardigd belang met afweging; toestemming van de werknemer is doorgaans niet geldig) en verbod op continue tracering',
         ru: "Действительное правовое основание (законный интерес с балансированием; согласие работника, как правило, недействительно) и запрет непрерывного отслеживания",
+        el: 'Έγκυρη νομική βάση (έννομο συμφέρον με στάθμιση· η συγκατάθεση του εργαζομένου κατά κανόνα δεν ισχύει) και απαγόρευση συνεχούς παρακολούθησης',
       },
       risposta: 'si',
       dettaglio: {
@@ -212,6 +221,7 @@ export const olanda: SchedaPaese = {
         nb: 'For AP må overvåkingen være nødvendig og forholdsmessig; grunnlaget er normalt berettiget interesse med en avveining, ikke den ansattes samtykke (på grunn av ubalansen i maktforholdet). For GPS i firmabiler må den berettigede interessen (for eksempel å sende nærmeste bil til en kunde) være nødvendig og veie tyngre enn den ansattes rettigheter; hvis bilen også brukes privat, går den ansattes personvern normalt foran i privat tid, og mange virksomheter lar den ansatte slå av sporingen.',
         nl: 'Voor de AP moet de controle noodzakelijk en evenredig zijn; de grondslag is doorgaans het gerechtvaardigd belang met een afwegingstoets, niet de toestemming van de werknemer (vanwege de machtsongelijkheid). Bij gps in bedrijfsauto\'s moet het gerechtvaardigd belang (bijvoorbeeld de dichtstbijzijnde auto naar een klant sturen) noodzakelijk zijn en zwaarder wegen dan de rechten van de werknemer; wordt de auto ook privé gebruikt, dan weegt in privétijd het privacybelang meestal zwaarder en kunnen werknemers bij veel bedrijven de tracker uitzetten.',
         ru: "По позиции AP контроль должен быть необходимым и соразмерным. Основанием, как правило, служит законный интерес с тестом баланса, а не согласие работника (из-за неравенства сторон). Для GPS на служебных автомобилях законный интерес (например, отправить к клиенту ближайшую машину) должен быть необходимым и преобладать над правами работника. Если автомобиль используется и в личных целях, в личное время, как правило, преобладает приватность работника, и во многих компаниях работник может отключить трекер.",
+        el: 'Για την AP ο έλεγχος πρέπει να είναι αναγκαίος και αναλογικός· η βάση είναι κατά κανόνα το έννομο συμφέρον με έλεγχο στάθμισης, όχι η συγκατάθεση του εργαζομένου (λόγω ανισορροπίας ισχύος). Για το GPS στα εταιρικά αυτοκίνητα, το έννομο συμφέρον (για παράδειγμα να στέλνεται στον πελάτη το πιο κοντινό αυτοκίνητο) πρέπει να είναι αναγκαίο και να υπερισχύει των δικαιωμάτων του εργαζομένου· αν το αυτοκίνητο χρησιμοποιείται και ιδιωτικά, στον ιδιωτικό χρόνο κατά κανόνα υπερισχύει το απόρρητο του εργαζομένου, και σε πολλές εταιρείες ο εργαζόμενος μπορεί να σβήσει τον ιχνηλάτη.',
       },
       fonte: FONTE_AP_REMOTO,
     },
@@ -228,6 +238,7 @@ export const olanda: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (DPIA) for overvåking av ansatte og posisjonsdata',
         nl: 'Gegevensbeschermingseffectbeoordeling (DPIA) voor de monitoring van werknemers en locatiegegevens',
         ru: "Оценка воздействия (DPIA) при мониторинге работников и данных о местоположении",
+        el: 'Εκτίμηση αντικτύπου (DPIA) για την παρακολούθηση των εργαζομένων και τα δεδομένα θέσης',
       },
       risposta: 'si',
       dettaglio: {
@@ -242,6 +253,7 @@ export const olanda: SchedaPaese = {
         nb: 'APs DPIA-liste nevner uttrykkelig GPS-systemer i de ansattes kjøretøy og systematisk overvåking av de ansattes aktiviteter, samt behandling av posisjonsdata i stor skala: i disse tilfellene er DPIA obligatorisk.',
         nl: 'De DPIA-lijst van de AP noemt uitdrukkelijk GPS-systemen in de voertuigen van werknemers en het stelselmatig monitoren van de activiteiten van werknemers, naast de grootschalige verwerking van locatiegegevens: in die gevallen is de DPIA verplicht.',
         ru: "Перечень DPIA органа AP прямо называет системы GPS в автомобилях работников и систематический мониторинг деятельности работников, а также обработку данных о местоположении в крупном масштабе: в этих случаях DPIA обязательна.",
+        el: 'Ο κατάλογος DPIA της AP αναφέρει ρητά τα συστήματα GPS στα οχήματα των εργαζομένων και τη συστηματική παρακολούθηση των δραστηριοτήτων των εργαζομένων, καθώς και την επεξεργασία δεδομένων θέσης σε μεγάλη κλίμακα: σε αυτές τις περιπτώσεις η DPIA είναι υποχρεωτική.',
       },
       fonte: FONTE_AP_DPIA,
     },
@@ -262,6 +274,7 @@ export const olanda: SchedaPaese = {
         nb: 'Hvis det finnes et OR, må du innhente dets samtykke (instemmingsrecht) før du aktiverer systemet (WOR art. 27).',
         nl: 'Als er een OR is, verkrijg dan de instemming ervan (instemmingsrecht) voordat u het systeem activeert (WOR art. 27).',
         ru: "Если есть OR, получите его согласие (instemmingsrecht) до включения системы (WOR, ст. 27).",
+        el: 'Αν υπάρχει OR, πάρε τη συναίνεσή του (instemmingsrecht) πριν ενεργοποιήσεις το σύστημα (WOR άρθρο 27).',
       },
     },
     {
@@ -278,6 +291,7 @@ export const olanda: SchedaPaese = {
         nb: 'Finn et gyldig rettslig grunnlag etter GDPR: normalt berettiget interesse med en avveining, ikke den ansattes samtykke.',
         nl: 'Bepaal een geldige rechtsgrondslag op grond van de AVG: doorgaans het gerechtvaardigd belang met een afwegingstoets, niet de toestemming van de werknemer.',
         ru: "Определите действительное правовое основание по GDPR: как правило, законный интерес с тестом баланса, а не согласие работника.",
+        el: 'Βρες μια έγκυρη νομική βάση κατά τον ΓΚΠΔ: κατά κανόνα το έννομο συμφέρον με έλεγχο στάθμισης, όχι η συγκατάθεση του εργαζομένου.',
       },
     },
     {
@@ -294,6 +308,7 @@ export const olanda: SchedaPaese = {
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA): den kreves for GPS i de ansattes kjøretøy og for posisjonsdata i stor skala.',
         nl: 'Voer de effectbeoordeling (DPIA) uit: voor GPS op de voertuigen van werknemers en voor grootschalige locatiegegevens is die vereist.',
         ru: "Проведите оценку воздействия (DPIA): для GPS в автомобилях работников и для данных о местоположении в крупном масштабе она требуется.",
+        el: 'Κάνε την εκτίμηση αντικτύπου (DPIA): απαιτείται για το GPS στα οχήματα των εργαζομένων και για δεδομένα θέσης σε μεγάλη κλίμακα.',
       },
     },
     {
@@ -310,6 +325,7 @@ export const olanda: SchedaPaese = {
         nb: 'Informer de ansatte på forhånd og fullt ut (art. 13 i GDPR).',
         nl: 'Informeer de werknemers vooraf en volledig (art. 13 AVG).',
         ru: "Заранее и в полном объёме проинформируйте работников (ст. 13 GDPR).",
+        el: 'Ενημέρωσε τους εργαζομένους εκ των προτέρων και πλήρως (άρθρο 13 ΓΚΠΔ).',
       },
     },
     {
@@ -326,6 +342,7 @@ export const olanda: SchedaPaese = {
         nb: 'Konfigurer systemet med dataminimering: bare tjenestereiser, ingen kontinuerlig sporing eller sporing av private forflytninger.',
         nl: 'Configureer het systeem met dataminimalisatie: alleen zakelijke ritten, geen continue tracering of tracering van priveverplaatsingen.',
         ru: "Настройте систему с учётом минимизации данных: только рабочие поездки, без непрерывного отслеживания и без отслеживания личных перемещений.",
+        el: 'Ρύθμισε το σύστημα με ελαχιστοποίηση: μόνο επαγγελματικές διαδρομές, καμία συνεχής παρακολούθηση ούτε των ιδιωτικών μετακινήσεων.',
       },
     },
     {
@@ -342,6 +359,7 @@ export const olanda: SchedaPaese = {
         nb: 'Hvis DPIA-en viser en høy risiko som ikke kan reduseres, må du rådspørre AP på forhånd (art. 36 i GDPR).',
         nl: 'Als de DPIA een hoog risico aantoont dat niet kan worden beperkt, raadpleeg dan vooraf de AP (art. 36 AVG).',
         ru: "Если DPIA выявляет высокий риск, который нельзя снизить, заранее проконсультируйтесь с AP (ст. 36 GDPR).",
+        el: 'Αν η DPIA αναδείξει υψηλό κίνδυνο που δεν μπορεί να μετριαστεί, συμβουλεύσου εκ των προτέρων την AP (άρθρο 36 ΓΚΠΔ).',
       },
     },
     {
@@ -358,6 +376,7 @@ export const olanda: SchedaPaese = {
         nb: 'Hvis du bytter system eller overvåkingsprogramvare, må du oppdatere og utlevere personvernerklæringen på nytt, og sjekke om du igjen må informere eller rådføre deg med de ansattes representanter, der loven krever det. Ofte endres leverandøren (databehandleren), dataene som samles inn og metodene: informasjonen som ble utlevert tidligere, er ikke nok.',
         nl: 'Bij een systeemwissel: als u van monitoringsysteem of -software verandert, werkt u de privacyverklaring bij en verstrekt u deze opnieuw, en controleert u of u de werknemersvertegenwoordiging opnieuw moet informeren of raadplegen, waar de wet dat voorschrijft. Leverancier (verwerker), verzamelde gegevens en methoden veranderen vaak: de eerder verstrekte volstaat niet.',
         ru: "При смене системы или программы мониторинга обновите и повторно вручите уведомление о защите данных (informativa) и проверьте, нужно ли снова информировать представителей работников или консультироваться с ними, если это предусмотрено законом. Часто меняются поставщик (обработчик данных), собираемые данные и способы работы: ранее вручённого уведомления недостаточно.",
+        el: 'Αν αλλάξεις σύστημα ή λογισμικό παρακολούθησης, ενημέρωσε και παράδωσε ξανά την ενημέρωση, και έλεγξε αν πρέπει να ενημερώσεις ή να συμβουλευτείς ξανά τους εκπροσώπους των εργαζομένων, όπου το προβλέπει ο νόμος. Συχνά αλλάζουν ο πάροχος (εκτελών την επεξεργασία), τα δεδομένα που συλλέγονται και ο τρόπος λειτουργίας: η ενημέρωση που δόθηκε νωρίτερα δεν αρκεί.',
       },
     },
   ],
@@ -386,6 +405,7 @@ export const olanda: SchedaPaese = {
       nb: '725 000 € (redusert til 50 000 € etter innsigelse)',
       nl: '725.000 EUR (in bezwaar verlaagd naar 50.000 EUR)',
       ru: "725 000 € (снижен до 50 000 € при обжаловании)",
+      el: '725.000 € (μειώθηκε σε 50.000 € κατόπιν ένστασης)',
     },
     casoCitato: {
       it: "Sanzione dell'Autoriteit Persoonsgegevens a un'azienda per il trattamento delle impronte digitali dei dipendenti per la rilevazione delle presenze: dato biometrico (art. 9 GDPR) trattato senza una base valida, perché il consenso dei dipendenti non è considerato libero per lo squilibrio di potere. Non è un caso di GPS ma è il caso olandese più importante sul controllo presenze dei dipendenti. La multa iniziale di 725.000 € è stata ridotta a 50.000 € nel novembre 2020, in sede di opposizione, per la limitata capacità finanziaria dell'azienda durante la crisi da coronavirus.",
@@ -399,6 +419,7 @@ export const olanda: SchedaPaese = {
       nb: 'Bot fra Autoriteit Persoonsgegevens til et selskap for behandling av de ansattes fingeravtrykk til registrering av oppmøte: biometriske opplysninger (art. 9 i GDPR) behandlet uten gyldig grunnlag, fordi de ansattes samtykke ikke anses som frivillig på grunn av ubalansen i maktforholdet. Dette er ikke en GPS-sak, men det er den viktigste nederlandske saken om kontroll av de ansattes oppmøte. Den opprinnelige boten på 725 000 € ble redusert til 50 000 € i november 2020, etter innsigelse, på grunn av selskapets begrensede økonomiske evne under koronakrisen.',
       nl: "Boete van de Autoriteit Persoonsgegevens aan een bedrijf voor de verwerking van de vingerafdrukken van werknemers voor de aanwezigheidsregistratie: biometrisch gegeven (art. 9 AVG) verwerkt zonder een geldige grondslag, omdat de toestemming van de werknemers niet als vrij wordt beschouwd vanwege de machtsongelijkheid. Het is geen GPS-zaak, maar het is de Nederlandse richtinggevende zaak over de aanwezigheidscontrole van werknemers. De oorspronkelijke boete van 725.000 EUR is in november 2020 in bezwaar verlaagd naar 50.000 EUR, vanwege de beperkte draagkracht van het bedrijf tijdens de coronacrisis.",
       ru: "Санкция Autoriteit Persoonsgegevens в отношении компании за обработку отпечатков пальцев работников для учёта присутствия: биометрические данные (ст. 9 GDPR) обрабатывались без действительного основания, поскольку согласие работников не считается свободным из-за неравенства сторон. Это не дело о GPS, но самое значимое нидерландское дело о контроле присутствия работников. Первоначальный штраф в 725 000 € был снижен до 50 000 € в ноябре 2020 г. при обжаловании из-за ограниченной финансовой возможности компании в период кризиса, вызванного коронавирусом.",
+      el: 'Κύρωση της Autoriteit Persoonsgegevens σε εταιρεία για την επεξεργασία δακτυλικών αποτυπωμάτων των εργαζομένων για την καταγραφή παρουσιών: βιομετρικό δεδομένο (άρθρο 9 ΓΚΠΔ) που υποβλήθηκε σε επεξεργασία χωρίς έγκυρη βάση, επειδή η συγκατάθεση των εργαζομένων δεν θεωρείται ελεύθερη λόγω ανισορροπίας ισχύος. Δεν είναι υπόθεση GPS, αλλά είναι η σημαντικότερη ολλανδική υπόθεση για τον έλεγχο παρουσιών των εργαζομένων. Το αρχικό πρόστιμο των 725.000 € μειώθηκε σε 50.000 € τον Νοέμβριο του 2020, κατόπιν ένστασης, λόγω της περιορισμένης οικονομικής δυνατότητας της εταιρείας κατά την κρίση του κορονοϊού.',
     },
     urlFonte: FONTE_AP_IMPRONTE.url,
     tipoImporto: 'caso-affine',
