@@ -12,7 +12,7 @@ const copy: NovitaCopy = {
   },
   sections: {
     sicurezza: {
-      title: 'Nouveaux outils pour la sécurité privée : rondes, travailleur isolé, relèves et Urgences',
+      title: 'Nouveaux outils pour la sécurité privée : rondes, travailleur isolé, passation de consignes et Urgences',
       intro: 'Quand vous choisissez votre secteur, GeoTapp n\'active que les outils de votre métier. Pour la sécurité privée, il y en a trois, plus le module Urgences qui vaut pour tous les secteurs. Chacun a sa partie dans Flow, où vous décidez et contrôlez, et sa partie sur le téléphone de l\'agent.',
     },
     pulizie: {
@@ -28,7 +28,7 @@ const copy: NovitaCopy = {
       intro: 'Deux outils pour ceux qui coordonnent des chantiers avec des sous-traitants, afin d\'arriver aux rendez-vous avec des dossiers déjà en ordre. Ils s\'utilisent depuis Flow, dans le tableau de bord du dirigeant.',
     },
     idraulici: {
-      title: 'Nouveaux outils pour plombiers et chauffagistes : entretien des chaudières et fiches d\'intervention fluides frigorigènes',
+      title: 'Nouveaux outils pour plombiers et chauffagistes : entretien des chaudières et registre F-gaz',
       intro: 'Le travail qui revient chaque année et qu\'on oublie justement quand il faut y penser : relancer les clients pour l\'entretien de leur installation et garder en ordre les appareils contenant des fluides frigorigènes.',
     },
     installatori: {
@@ -36,7 +36,7 @@ const copy: NovitaCopy = {
       intro: 'Deux outils pour les deux choses qui vous font perdre du temps à chaque chantier : clôturer la remise avec le client et savoir ce qu\'il y a vraiment dans le véhicule.',
     },
     manutenzione: {
-      title: 'Nouveaux outils pour la maintenance : délais d\'intervention et QR sur les équipements',
+      title: 'Nouveaux outils pour la maintenance : délais d\'intervention et QR sur les appareils',
       intro: 'Pour ceux qui travaillent avec des contrats de service et de nombreux équipements répartis sur plusieurs bâtiments : savoir combien de temps il reste pour chaque demande et retrouver l\'historique d\'une machine en un geste.',
     },
     impianti: {
@@ -56,7 +56,7 @@ const copy: NovitaCopy = {
       note: 'Aucune position n\'est envoyée. C\'est un outil d\'appui : il ne remplace pas les mesures de prévention prévues pour le travail isolé.',
     },
     consegne_turno: {
-      title: 'Relève entre agents',
+      title: 'Passation de consignes',
       body: 'À six heures, l\'agent de nuit laisse le site à celui du matin. Avant, c\'étaient des clés dans une boîte et un message vocal ; maintenant, en fin de vacation, il note les consignes, les clés et les anomalies pour celui qui arrive, qui les prend en charge depuis son téléphone. Dans Flow, vous voyez les relèves pas encore prises et les anomalies ouvertes. L\'historique ne peut pas être modifié.',
     },
     emergenze: {
@@ -89,7 +89,7 @@ const copy: NovitaCopy = {
     },
     congruita: {
       title: 'Estimation de la main-d\'œuvre',
-      body: 'En fin de chantier, votre comptable ou votre conducteur de travaux vous demande quel poids pèse la main-d\'œuvre dans la valeur des travaux. Flow fait une estimation interne pour chaque chantier à partir des heures enregistrées et l\'exporte en CSV ou en PDF, prête à transmettre.',
+      body: 'En fin de chantier, votre comptable ou votre conducteur de travaux vous demande quel poids pèse la main-d\'œuvre dans la valeur des travaux. Flow fait une estimation interne pour chaque chantier à partir des heures enregistrées et l\'exporte en CSV ou en PDF, à transmettre.',
       note: 'C\'est une estimation interne, pas un calcul officiel : en France, aucun organisme n\'impose ce ratio, il sert seulement à votre pilotage.',
     },
     caldaie: {
@@ -98,7 +98,7 @@ const copy: NovitaCopy = {
       note: 'L\'attestation d\'entretien est remise par le technicien qui a fait le travail : GeoTapp rassemble et met en page les données, ne vérifie pas et ne garantit pas la conformité. Aucun registre national n\'est alimenté.',
     },
     fgas: {
-      title: 'Fiches d\'intervention fluides frigorigènes',
+      title: 'Registre F-gaz',
       body: 'Un équipement contenant des fluides frigorigènes a une charge, un équivalent CO2 et un historique d\'interventions. Dans Flow, vous voyez les équipements et ce qui doit être consigné ; depuis le téléphone, le technicien ouvre le dossier de l\'équipement et ajoute tout de suite la nouvelle intervention, sans tout recopier le soir.',
       note: 'La fiche d\'intervention (Cerfa 15497) est établie et signée par le technicien titulaire de l\'attestation de capacité : GeoTapp aide à la préparer, rien n\'est transmis à une administration.',
     },
@@ -115,7 +115,7 @@ const copy: NovitaCopy = {
       body: 'Le contrat avec le syndic dit sous quel délai prendre en charge une demande et sous quel délai la résoudre. Dans Flow, chaque demande affiche le temps qui reste pour l\'un et pour l\'autre, par contrat ; en fin de mois, il y a le rapport. Sur le téléphone, le technicien voit les demandes qui lui sont assignées, les prend en charge et les marque comme résolues.',
     },
     qr_apparecchi: {
-      title: 'QR sur les équipements',
+      title: 'QR sur les appareils',
       body: 'Devant une pompe ou un tableau, le technicien scanne l\'étiquette QR et a tout de suite l\'historique et les interventions de cet équipement. Celui qui scanne sans compte, un locataire par exemple, peut signaler un problème. Dans Flow, vous gérez les équipements et imprimez les étiquettes.',
     },
   },

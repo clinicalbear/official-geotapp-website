@@ -12,7 +12,7 @@ const copy: NovitaCopy = {
   },
   sections: {
     sicurezza: {
-      title: 'Nuovi strumenti per la vigilanza: ronda, lavoratore isolato, consegne e Emergenze',
+      title: 'Nuovi strumenti per la vigilanza: ronda, lavoratore isolato, consegne ed Emergenze',
       intro: 'Quando scegli il settore, GeoTapp accende solo gli strumenti del tuo mestiere. Per la vigilanza sono tre, più il modulo Emergenze che vale per tutti i settori. Ognuno ha la sua parte in Flow, dove decidi e controlli, e la sua parte sul telefono della guardia.',
     },
     pulizie: {
@@ -112,7 +112,7 @@ const copy: NovitaCopy = {
     },
     sla: {
       title: 'Tempi di intervento (SLA)',
-      body: 'Il contratto col condominio dice entro quanto prendere in carico una richiesta e entro quanto risolverla. In Flow ogni richiesta mostra il tempo che resta per l\'una e per l\'altra, per contratto; a fine mese c\'è il rapporto. Sul telefono il tecnico vede le richieste assegnate, le prende in carico e le segna come risolte.',
+      body: 'Il contratto col condominio dice entro quanto prendere in carico una richiesta ed entro quanto risolverla. In Flow ogni richiesta mostra il tempo che resta per l\'una e per l\'altra, per contratto; a fine mese c\'è il rapporto. Sul telefono il tecnico vede le richieste assegnate, le prende in carico e le segna come risolte.',
     },
     qr_apparecchi: {
       title: 'QR sugli apparecchi',

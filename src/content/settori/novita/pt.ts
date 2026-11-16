@@ -12,7 +12,7 @@ const copy: NovitaCopy = {
   },
   sections: {
     sicurezza: {
-      title: 'Novas ferramentas para a segurança privada: ronda, trabalhador isolado, passagem de turno e Emergências',
+      title: 'Novas ferramentas para a segurança privada: ronda, trabalho isolado, passagem de turno e Emergências',
       intro: 'Quando escolhe o setor, o GeoTapp ativa só as ferramentas do seu ofício. Na segurança privada são três, mais o módulo Emergências, que vale para todos os setores. Cada uma tem a sua parte no Flow, onde decide e controla, e a sua parte no telemóvel do vigilante.',
     },
     pulizie: {
@@ -51,7 +51,7 @@ const copy: NovitaCopy = {
       note: 'A posição só é lida no momento em que o vigilante toca em «Passagem»: entre um ponto e outro não se regista nada.',
     },
     lavoratore_isolato: {
-      title: 'Trabalhador isolado',
+      title: 'Trabalho isolado',
       body: 'Um vigilante sozinho num local, de noite. Para cada instalação escolhe um plano com o intervalo que preferir: a essas horas o telemóvel pergunta «Está tudo bem?» e, se a resposta não chegar, avisa o coordenador. No Flow vê os turnos em curso e o histórico de quem respondeu e quando.',
       note: 'Nenhuma posição é enviada. É uma ferramenta de apoio: não substitui as medidas de segurança previstas para quem trabalha sozinho.',
     },
@@ -112,7 +112,7 @@ const copy: NovitaCopy = {
     },
     sla: {
       title: 'Tempos de intervenção (SLA)',
-      body: 'O contrato com o condomínio diz em quanto tempo aceitar um pedido e em quanto tempo resolvê-lo. No Flow cada pedido mostra o tempo que resta para uma coisa e para a outra, por contrato; no fim do mês há o relatório. No telemóvel o técnico vê os pedidos atribuídos, aceita-os e marca-os como resolvidos.',
+      body: 'O contrato com o condomínio diz em quanto tempo aceitar um pedido e em quanto tempo resolvê-lo. No Flow cada pedido mostra o tempo que resta para uma coisa e para a outra, por contrato; no fim do mês há o relatório. No telemóvel o técnico vê os pedidos atribuídos, assume-os e marca-os como resolvidos.',
     },
     qr_apparecchi: {
       title: 'QR nos equipamentos',

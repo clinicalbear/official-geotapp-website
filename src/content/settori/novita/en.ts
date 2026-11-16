@@ -32,7 +32,7 @@ const copy: NovitaCopy = {
       intro: 'The work that comes round every year and gets forgotten exactly when it matters: calling clients back for their system check, and keeping track of equipment that contains fluorinated gases.',
     },
     installatori: {
-      title: 'New tools for installers: signed handover and van stock',
+      title: 'New tools for installers: handover with signature and van stock',
       intro: 'Two tools for the two things that eat your time on every job: closing the handover with the customer and knowing what is really in the van.',
     },
     manutenzione: {
@@ -40,8 +40,8 @@ const copy: NovitaCopy = {
       intro: 'For anyone working on service contracts with plenty of equipment spread across several buildings: knowing how much time is left on each request, and finding a machine\'s history in one tap.',
     },
     impianti: {
-      title: 'New tools for installation firms: signed handover and van stock',
-      intro: 'This page speaks to anyone who fits and hands over installations, of any kind, so here you find the two tools that suit everyone: signed handover and van stock. Electrical testing and boiler checks are trades of their own and have dedicated tools.',
+      title: 'New tools for installation firms: handover with signature and van stock',
+      intro: 'This page speaks to anyone who fits and hands over installations, of any kind, so here you find the two tools that suit everyone: handover with signature and van stock. Electrical testing and boiler checks are trades of their own and have dedicated tools.',
     },
   },
   tools: {
@@ -52,7 +52,7 @@ const copy: NovitaCopy = {
     },
     lavoratore_isolato: {
       title: 'Lone worker',
-      body: 'A guard alone on a site, at night. For each site you choose a plan with the interval you prefer: at those intervals the phone asks "All OK?" and, if no answer comes, alerts the coordinator. In Flow you see the shifts in progress and the history of who answered and when.',
+      body: 'A guard alone on a site, at night. For each site you choose a plan with the interval you prefer: at those intervals the phone asks "All good?" and, if no answer comes, alerts the coordinator. In Flow you see the shifts in progress and the history of who answered and when.',
       note: 'No position is sent. It is a support tool: it does not replace the safety measures required for people who work alone.',
     },
     consegne_turno: {
@@ -61,7 +61,7 @@ const copy: NovitaCopy = {
     },
     emergenze: {
       title: 'Emergencies and drills',
-      body: 'An evacuation drill in a building or at an event: the coordinator picks the scenario and taps the point of danger on the floor plan. Everyone on the team receives their role, what to do and the exits in order on their phone, and replies with a tap: present, on my way, can\'t. The dashboard shows who has replied and how long it took; the plans open even without a signal.',
+      body: 'An evacuation drill in a building or at an event: the coordinator picks the scenario and taps the point of danger on the floor plan. Everyone on the team receives their role, what to do and the exits in order on their phone, and replies with a tap: present, on my way, can\'t make it. The dashboard shows who has replied and how long it took; the plans open even without a signal.',
       note: 'It is a coordination and practice tool: it does not replace or validate your emergency plan, and a notification may not arrive, which is why everyone confirms.',
     },
     qualita_pulizie: {
@@ -73,7 +73,7 @@ const copy: NovitaCopy = {
       body: 'An inspector wants to see the safety data sheet for the product on the trolley. In Flow each site has its products, each with its sheet as a PDF, and you see the month\'s withdrawals and costs. On the phone the sheets can be read even where there is no signal, and the withdrawal is logged on the spot.',
     },
     verifiche_misure: {
-      title: 'Tests and measurements',
+      title: 'Checks and measurements',
       body: 'Board closed, last day on site: continuity, insulation, RCDs, earth. The electrician enters each reading from the phone with the result and a photo of the instrument; Flow gathers the tests by job and lays them out as attachments to the completion document your country requires.',
       note: 'GeoTapp collects and lays out: it does not test, validate or guarantee compliance. The certificate and the signature stay with the installing contractor.',
     },
@@ -83,7 +83,7 @@ const copy: NovitaCopy = {
       note: 'Your company enters the dates: GeoTapp reminds you, does not carry out the check and does not say whether it is valid.',
     },
     documenti_imprese: {
-      title: 'Subcontractor documents',
+      title: 'Contractor documents',
       body: 'Before letting a subcontractor onto site you want their paperwork in order, and to remember when it expires, such as insurance certificates. Flow keeps a schedule of the documents for each subcontractor or main contractor and warns you before the date.',
       note: 'It warns you before expiry, it does not say whether a document is valid: you check that, or your adviser does.',
     },
@@ -103,7 +103,7 @@ const copy: NovitaCopy = {
       note: 'Any report your national rules require is made by the engineer or the company: GeoTapp does not send it.',
     },
     consegna_firma: {
-      title: 'Signed handover',
+      title: 'Handover with signature',
       body: 'You have finished the installation. The engineer scans the barcode of each serial number with the phone, takes the final photos and has the customer sign on screen. Out comes a PDF handover record with your logo, your company details and the barcode of each serial number, which goes into the job report. In Flow you see the month\'s handovers and choose how the record looks: logo, details, wording, colour.',
     },
     magazzino_furgone: {
@@ -122,7 +122,7 @@ const copy: NovitaCopy = {
   shots: {
     flow_emergenze_attiva: 'Flow: the coordinator picks the scenario and taps the point of danger on the floor plan to start the drill',
     flow_emergenze_evento: 'Flow: dashboard of the drill in progress, with who has replied and how quickly',
-    flow_emergenze_evento_persone: 'Flow: the list of team members with their reply, present, on my way or can\'t',
+    flow_emergenze_evento_persone: 'Flow: the list of team members with their reply, present, on my way or can\'t make it',
     flow_emergenze_sito: 'Flow: the site floor plan with exits, equipment and zones',
     flow_emergenze_protocolli: 'Flow: the protocols by scenario and role',
     flow_emergenze_squadre: 'Flow: the teams with their certificates, and anyone missing is flagged',
@@ -130,7 +130,7 @@ const copy: NovitaCopy = {
     tt_emergenze_dashboard: 'Phone: the home screen with the drill alert',
     tt_emergenze_indicazioni: 'Phone: personal instructions, with the role and what to do',
     tt_emergenze_indicazioni_2: 'Phone: the exits in order, leaving out those that are blocked',
-    tt_emergenze_risposta: 'Phone: the one-tap reply, present, on my way or can\'t',
+    tt_emergenze_risposta: 'Phone: the one-tap reply, present, on my way or can\'t make it',
     tt_emergenze_piani: 'Phone: the plans, available even without a signal',
   },
   overrides: {
@@ -150,7 +150,7 @@ const copy: NovitaCopy = {
       },
       fgas: {
         body: 'A unit containing fluorinated gases has a charge, a CO2 equivalent and a history of interventions. In Flow you see the equipment and what has to be recorded under the F-gas Regulations 2015; from the phone the engineer opens the register and adds a new intervention straight away, without copying it up in the evening.',
-        note: 'The company and engineer certification, and the records, stay with them: GeoTapp does not certify anyone and does not send reports to any body.',
+        note: 'The company and engineer certification, and the records, stay with them: GeoTapp does not approve anyone\'s qualifications and does not send reports to any body.',
       },
     },
   },
