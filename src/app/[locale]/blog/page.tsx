@@ -9,7 +9,7 @@ import BlogClient, { type Post } from './BlogClient';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { detectPostLocale } from '@/lib/blog-locale';
 import { mapLimit, sharedPeek, sharedSWR } from '@/lib/shared-swr';
-import { wpImmagine } from '@/lib/wp-webp';
+import { aggiornaElencoWebp, wpImmagine } from '@/lib/wp-webp';
 
 const WP = 'https://blog.geotapp.com';
 const HEADERS = { host: 'blog.geotapp.com', 'x-geotapp-proxy': '1', 'x-forwarded-proto': 'https' };
@@ -307,6 +307,7 @@ function buildBlogJsonLd(locale: string, posts: Post[]): Record<string, unknown>
 }
 
 export default async function BlogPage({ params }: { params: Promise<{ locale: string }> }) {
+  await aggiornaElencoWebp();
   const { locale } = await params;
   const posts = await fetchPosts(locale);
   const blogLd = buildBlogJsonLd(locale, posts);

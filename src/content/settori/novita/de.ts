@@ -9,18 +9,24 @@ const copy: NovitaCopy = {
     altPhone: 'TimeTracker auf dem Handy: Ansicht von {tool}',
     flowOnly: 'Dieses Werkzeug nutzen Sie in Flow, am Rechner. Auf dem Handy Ihrer Leute ist dafür nichts nötig.',
     seeAlso: 'Für Elektroprüfungen, Heizungswartung und F-Gase gibt es eigene Werkzeuge:',
+    moreShots: 'Weitere Ansichten dieses Werkzeugs',
+    enlarge: 'Vergrößern: {name}',
+    close: 'Schließen',
+    prev: 'Zurück',
+    next: 'Weiter',
+    allSectors: 'Für alle Branchen',
   },
   sections: {
     sicurezza: {
-      title: 'Neue Werkzeuge für den Wachdienst: Rundgang, Alleinarbeit, Schichtübergabe und Notfälle',
+      title: 'Neue Werkzeuge für den Wachdienst: Kontrollgang, Alleinarbeit, Schichtübergabe und Notfälle',
       intro: 'Wenn Sie Ihre Branche wählen, schaltet GeoTapp nur die Werkzeuge für Ihr Handwerk frei. Für den Wachdienst sind es drei, dazu das Modul Notfälle, das für alle Branchen gilt. Jedes hat seinen Teil in Flow, wo Sie entscheiden und nachsehen, und seinen Teil auf dem Handy der Sicherheitskraft.',
     },
     pulizie: {
-      title: 'Neue Werkzeuge für die Gebäudereinigung: Qualitätskontrolle und Sicherheitsdatenblätter',
+      title: 'Neue Werkzeuge für die Gebäudereinigung: Qualitätskontrolle und Datenblätter',
       intro: 'Zwei Werkzeuge für das, was in der Reinigung jede Woche ansteht: Reklamationen des Kunden und Kontrollen vor Ort. Sie werden aktiv, sobald Sie Ihre Branche angeben, die übrigen bleiben ausgeblendet.',
     },
     elettricisti: {
-      title: 'Neue Werkzeuge für Elektrobetriebe: Messwerte nach Feierabend und Fristen für wiederkehrende Prüfungen',
+      title: 'Neue Werkzeuge für Elektrobetriebe: Messwerte zum Arbeitsende und Fristen für wiederkehrende Prüfungen',
       intro: 'Für alle, die eine Anlage abschließen, und für alle, die die Prüftermine ihrer Kunden im Blick behalten müssen. GeoTapp sammelt, setzt in Form und erinnert. Prüfung, Bestätigung und Unterschrift bleiben bei der Elektrofachkraft.',
     },
     edilizia: {
@@ -46,7 +52,7 @@ const copy: NovitaCopy = {
   },
   tools: {
     giro_ronda: {
-      title: 'Kontrollrundgang',
+      title: 'Kontrollgang',
       body: 'Drei Uhr nachts, und der Kunde will wissen, ob der Rundgang an allen Punkten des Lagers vorbeigekommen ist. In Flow zeichnen Sie die Punkte auf der Karte ein und legen die Runden mit ihren Uhrzeiten fest. Die Sicherheitskraft tippt unterwegs auf dem Handy «Durchgang». Am Morgen liegt der Bericht der Nacht fertig vor.',
       note: 'Die Position wird nur in dem Moment gelesen, in dem die Sicherheitskraft «Durchgang» antippt. Zwischen den Punkten wird nichts aufgezeichnet.',
     },
@@ -69,7 +75,7 @@ const copy: NovitaCopy = {
       body: 'Der Ansprechpartner des Kunden sagt, das dritte Stockwerk sei nicht richtig gereinigt worden. Die Vorarbeiterin geht den Bereich mit der Prüfliste ab, markiert jeden Punkt als in Ordnung, nicht in Ordnung oder nicht zutreffend und hängt ein Foto an. In Flow hat jeder Punkt eine Gewichtung von 1 bis 3, die Punktzahl des Monats gibt es je Objekt und Bereich, und am Monatsende entsteht das PDF für den Kunden, samt offenen Maßnahmen.',
     },
     schede_consumi: {
-      title: 'Sicherheitsdatenblätter und Verbrauch',
+      title: 'Datenblätter und Verbrauch',
       body: 'Wer kontrolliert, will das Sicherheitsdatenblatt des Mittels sehen, das auf dem Reinigungswagen steht. In Flow hat jedes Objekt seine Produkte, jedes mit dem Datenblatt als PDF, und Sie sehen Entnahmen und Kosten des Monats. Auf dem Handy lassen sich die Datenblätter auch ohne Netz lesen, und die Entnahme wird direkt erfasst.',
     },
     verifiche_misure: {
@@ -108,7 +114,7 @@ const copy: NovitaCopy = {
     },
     magazzino_furgone: {
       title: 'Lager im Transporter',
-      body: 'Der Techniker steht beim Kunden und merkt, dass der passende Fitting fehlt. Auf dem Handy sieht er, was im Transporter liegt und was zur Neige geht, und bucht das verbrauchte Material auf den Auftrag. In Flow legen Sie Mindestmengen je Fahrzeug fest, sehen, was nachzubestellen ist, und was das Material jedes Auftrags kostet.',
+      body: 'Der Techniker steht beim Kunden und merkt, dass das passende Fitting fehlt. Auf dem Handy sieht er, was im Transporter liegt und was zur Neige geht, und bucht das verbrauchte Material auf den Auftrag. In Flow legen Sie Mindestmengen je Fahrzeug fest, sehen, was nachzubestellen ist, und was das Material jedes Auftrags kostet.',
     },
     sla: {
       title: 'Reaktionszeiten (SLA)',

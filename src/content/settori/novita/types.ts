@@ -61,6 +61,16 @@ export interface NovitaCopy {
     flowOnly: string;
     /** Etichetta del link ad altre pagine di settore (solo impianti). */
     seeAlso: string;
+    /** Titolo della striscia di miniature sotto le schermate principali di uno strumento. */
+    moreShots: string;
+    /** Testo del pulsante che ingrandisce una schermata; {name} e' la sua descrizione. */
+    enlarge: string;
+    /** Etichette del visualizzatore ingrandito. */
+    close: string;
+    prev: string;
+    next: string;
+    /** Etichetta degli strumenti comuni a tutte le pagine di settore (Emergenze). */
+    allSectors: string;
   };
   sections: Record<NovitaSectionKey, { title: string; intro: string; outro?: string }>;
   tools: Record<ToolKey, NovitaToolText>;

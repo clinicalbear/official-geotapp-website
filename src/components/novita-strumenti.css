@@ -1,36 +1,108 @@
-/* Sezione "nuovi strumenti di settore" (16/11/2026). Colori dal tema del sito: niente navy sulla barra,
-   fondo chiaro, ombre neutre "da Mac" (--mac-sm da ibrida.css). */
-.nv-novita .nv-intro { max-width: 68ch; color: #475467; margin-top: 18px; }
-.nv-novita .nv-tool { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 52px; align-items: start; padding: 56px 0; border-top: 1px solid rgba(11, 23, 54, .14); }
-.nv-novita .nv-tool:first-of-type { margin-top: 44px; }
-.nv-novita .nv-tool h3 { font-family: var(--font-display); font-weight: 800; font-size: clamp(22px, 2.2vw, 30px); letter-spacing: -.01em; margin-bottom: 14px; overflow-wrap: break-word; hyphens: auto; }
-.nv-novita .nv-tool p { color: #344054; line-height: 1.65; max-width: 56ch; }
-.nv-novita .nv-tool p + p { margin-top: 12px; }
+/* Schermate vere dei prodotti sulle pagine di settore (riprogettazione del 16/11/2026).
+   Una sola idea forte: la composizione dell'hero (Flow + telefono) e le fasce degli strumenti
+   con le schermate al centro. Colori del brand: navy #0B1736, carta #F7F9FC, ciano #19B5D8 (solo
+   anello del focus), verde #22B573. Ombre "da Mac" come nel resto del sito (--mac-sm). */
+
+/* ── finestra Flow e cornice del telefono ── */
+.nv-win { display: block; border-radius: 10px; overflow: hidden; background: #fff; line-height: 0;
+  box-shadow: 0 0 0 1px rgba(11, 23, 54, .1), 0 2px 4px rgba(11, 23, 54, .06), 0 14px 30px -14px rgba(11, 23, 54, .28); }
+.nv-win img, .nv-phone img { display: block; width: 100%; height: auto; }
+.nv-phone { background: #0a0d14; border-radius: 24px; padding: 5px; line-height: 0;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .16), 0 0 0 1px rgba(11, 23, 54, .22), 0 14px 30px -12px rgba(11, 23, 54, .4); }
+.nv-phone-screen { position: relative; border-radius: 19px; overflow: hidden; background: #fff; }
+/* l'obiettivo frontale: un punto scuro in alto al centro */
+.nv-phone-screen::after { content: ''; position: absolute; top: 1.7%; left: 50%; width: 3.6%; aspect-ratio: 1;
+  transform: translateX(-50%); border-radius: 50%; background: #0a0d14; box-shadow: 0 0 0 1px rgba(255, 255, 255, .08); }
+
+/* ── hero: Flow grande, il telefono sfalsato in basso a destra ── */
+.nv-hero { position: relative; padding-bottom: 17%; }
+.nv-hero-solo { padding-bottom: 0; }
+.nv-hero-flow { box-shadow: 0 0 0 1px rgba(255, 255, 255, .14), 0 34px 70px -26px rgba(0, 0, 0, .7); }
+.nv-hero-phone { position: absolute; right: -1.5%; bottom: 0; width: 25%; border-radius: clamp(16px, 2.2vw, 26px);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2), 0 0 0 1px rgba(0, 0, 0, .5), 0 30px 54px -18px rgba(0, 0, 0, .75); }
+.nv-hero-phone .nv-phone-screen { border-radius: clamp(12px, 1.8vw, 21px); }
+@media (max-width: 900px) {
+  .nv-hero { padding-bottom: 15%; }
+  .nv-hero.nv-hero-solo { padding-bottom: 0; }
+  .nv-hero-phone { width: 30%; right: 0; padding: 4px; border-radius: 16px; }
+  .nv-hero-phone .nv-phone-screen { border-radius: 12px; }
+}
+
+/* ── sezione strumenti ── */
+.nv-novita .nv-head { margin-bottom: 0; }
+.nv-novita .nv-head h2 { max-width: none; font-size: clamp(26px, 2.8vw, 40px); }
+.nv-novita .nv-head .kk { margin-bottom: 18px; }
+.nv-novita .nv-intro { color: #475467; max-width: 60ch; }
+.nv-novita .nv-outro { margin-top: 40px; }
+.nv-novita .nv-tool { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 56px; align-items: center;
+  padding: 56px 0; border-top: 1px solid rgba(11, 23, 54, .14); margin-top: 44px; }
+.nv-novita .nv-tool + .nv-tool { margin-top: 0; }
+.nv-novita .nv-rev { grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); }
+.nv-novita .nv-rev .nv-text { order: 2; }
+.nv-novita .nv-tag { font-family: var(--font-mono, 'IBM Plex Mono', monospace); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--seal-testo); margin-bottom: 10px; }
+.nv-novita .nv-text h3 { font-size: clamp(22px, 2.1vw, 30px); letter-spacing: -.01em; margin-bottom: 14px; overflow-wrap: normal; hyphens: manual; }
+.nv-novita .nv-text p { color: #344054; line-height: 1.65; max-width: 52ch; }
+.nv-novita .nv-text p + p { margin-top: 12px; }
 .nv-novita .nv-note { font-size: 14px; color: #475467; border-left: 2px solid var(--seal-testo); padding-left: 12px; }
 .nv-novita .nv-flowonly { font-size: 13.5px; color: #667085; }
-.nv-novita .nv-shots { display: flex; gap: 22px; align-items: flex-start; min-width: 0; }
-.nv-novita .nv-flowcol { flex: 1 1 0; min-width: 0; display: grid; gap: 14px; }
-.nv-novita .nv-phonecol { flex: 0 0 min(210px, 30%); display: grid; gap: 14px; }
-.nv-novita .nv-fig { margin: 0; }
-.nv-novita .nv-fig img { display: block; width: 100%; height: auto; border-radius: 12px; box-shadow: var(--mac-sm); background: #fff; }
-.nv-novita .nv-fig figcaption { margin-top: 8px; font-size: 12.5px; color: #667085; }
-.nv-novita .nv-fig[hidden] { display: none; }
-.nv-novita .nv-more { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-/* Emergenze: galleria piu' larga, sotto il testo */
-.nv-novita .nv-tool.nv-wide { grid-template-columns: 1fr; }
-.nv-novita .nv-tool.nv-wide p { max-width: 78ch; }
-.nv-novita .nv-gal-flow { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-.nv-novita .nv-gal-flow .nv-fig:first-child { grid-column: 1 / -1; }
-.nv-novita .nv-gal-phone { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin-top: 28px; }
+
+/* schermate: Flow grande + telefono accanto */
+.nv-media { min-width: 0; }
+.nv-pair { display: flex; gap: 22px; align-items: flex-end; }
+.nv-fig { margin: 0; min-width: 0; }
+.nv-fig-flow { flex: 1 1 0; }
+.nv-fig-phone { flex: 0 0 clamp(120px, 21%, 188px); }
+.nv-fig figcaption { margin-top: 10px; font-family: var(--font-mono, 'IBM Plex Mono', monospace); font-size: 11px; letter-spacing: .08em;
+  text-transform: uppercase; color: #667085; line-height: 1.4; }
+.nv-zoom { display: block; width: 100%; padding: 0; margin: 0; border: 0; background: none; cursor: zoom-in; text-align: left; font: inherit; color: inherit; }
+.nv-zoom:focus-visible, .nv-th button:focus-visible, .nv-lb button:focus-visible { outline: 3px solid #19B5D8; outline-offset: 3px; }
+.nv-zoom.nv-win:focus-visible { outline-offset: 2px; }
+
+/* striscia di miniature per le altre schermate */
+.nv-more { margin-top: 28px; }
+.nv-more-t { font-family: var(--font-mono, 'IBM Plex Mono', monospace); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #667085; margin-bottom: 10px; }
+.nv-strip { display: flex; gap: 12px; align-items: flex-end; margin: 0; padding: 4px 4px 14px; list-style: none; overflow-x: auto;
+  scroll-snap-type: x proximity; scrollbar-width: thin; scrollbar-color: rgba(11, 23, 54, .3) transparent; }
+.nv-th { flex: 0 0 auto; scroll-snap-align: start; }
+.nv-th button { display: block; padding: 0; border: 0; background: none; cursor: zoom-in; height: 104px; border-radius: 7px; line-height: 0; }
+.nv-th img { display: block; height: 100%; width: auto; border-radius: 7px; background: #fff;
+  box-shadow: 0 0 0 1px rgba(11, 23, 54, .12), 0 6px 14px -8px rgba(11, 23, 54, .3); }
+@media (prefers-reduced-motion: no-preference) {
+  .nv-th img { transition: transform .25s ease; }
+  .nv-th button:hover img { transform: translateY(-2px); }
+}
+
 .nv-novita .nv-links { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: baseline; color: #475467; }
 .nv-novita .nv-links a { font-weight: 700; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ── visualizzatore ingrandito (<dialog>) ── */
+.nv-lb { border: 0; padding: 0; margin: 0; width: 100%; height: 100%; max-width: none; max-height: none; background: transparent; color: #fff; }
+.nv-lb::backdrop { background: rgba(11, 23, 54, .86); }
+.nv-lb[open] { display: grid; place-items: center; }
+html:has(dialog.nv-lb[open]) { overflow: hidden; }
+.nv-lb-in { display: grid; gap: 14px; justify-items: center; padding: 56px 16px 20px; max-width: 100vw; }
+.nv-lb-stage img { display: block; width: auto; height: auto; max-width: min(1200px, 92vw); max-height: calc(100vh - 190px);
+  border-radius: 10px; background: #fff; box-shadow: 0 30px 80px -20px rgba(0, 0, 0, .6); }
+.nv-lb-phone img { border-radius: 22px; }
+.nv-lb-cap { max-width: 70ch; text-align: center; font-size: 14.5px; line-height: 1.5; color: rgba(247, 249, 252, .88); }
+.nv-lb-nav { display: flex; gap: 18px; align-items: center; }
+.nv-lb-n { font-family: var(--font-mono, 'IBM Plex Mono', monospace); font-size: 12px; letter-spacing: .1em; color: rgba(247, 249, 252, .7); }
+.nv-lb button { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(247, 249, 252, .4); background: rgba(11, 23, 54, .6);
+  color: #fff; font-size: 22px; line-height: 1; cursor: pointer; display: grid; place-items: center; }
+.nv-lb button:hover { background: rgba(247, 249, 252, .16); }
+.nv-lb-x { position: fixed; top: 14px; right: 14px; }
+.nv-lb-nav button:focus-visible, .nv-lb-x:focus-visible { outline-offset: 2px; }
+
+/* ── telefono ── */
 @media (max-width: 1000px) {
-  .nv-novita .nv-tool { grid-template-columns: 1fr; gap: 28px; padding: 40px 0; }
-  .nv-novita .nv-gal-phone { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .nv-novita .nv-tool, .nv-novita .nv-rev { grid-template-columns: 1fr; gap: 28px; padding: 40px 0; }
+  .nv-novita .nv-rev .nv-text { order: 0; }
 }
 @media (max-width: 560px) {
-  .nv-novita .nv-shots { flex-direction: column; }
-  .nv-novita .nv-phonecol { flex-basis: auto; width: min(240px, 70%); grid-template-columns: 1fr; }
-  .nv-novita .nv-gal-flow { grid-template-columns: 1fr; }
-  .nv-novita .nv-gal-phone { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* Flow a tutta larghezza, il telefono piu' piccolo sovrapposto in basso a destra (come nell'hero) */
+  .nv-pair { display: block; }
+  .nv-fig-phone { width: 40%; margin: -19% 0 0 auto; position: relative; }
+  .nv-fig-flow figcaption { max-width: 55%; }
+  .nv-th button { height: 88px; }
+  .nv-lb-stage img { max-height: calc(100vh - 210px); }
 }

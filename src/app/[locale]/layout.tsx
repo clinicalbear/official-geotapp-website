@@ -654,6 +654,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <InternalTrafficBadge />
               </DictionaryBridge>
         <Script id="ibrida" src="/ibrida/ibrida.js" strategy="afterInteractive" />
+        <Script id="titoli-integri" src="/ibrida/titoli.js" strategy="afterInteractive" />
       </body>
     </html>
   );

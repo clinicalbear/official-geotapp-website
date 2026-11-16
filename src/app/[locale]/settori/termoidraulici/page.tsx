@@ -5,7 +5,7 @@ import { DEFAULT_LOCALE, type AppLocale } from '@/lib/i18n/config';
 import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
 import { getTermoidrauliciContent } from '@/content/settori/termoidraulici';
 import SettorePageLayout from '@/components/SettorePageLayout';
-import NovitaStrumenti from '@/components/NovitaStrumenti';
+import NovitaStrumenti, { NovitaHero } from '@/components/NovitaStrumenti';
 import BlogHighlights from '@/components/BlogHighlights';
 
 const pathname = '/settori/termoidraulici';
@@ -57,7 +57,7 @@ export default async function TermoidrauliciLocalePage({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <SettorePageLayout content={content} locale={resolvedLocale} settore="termoidraulici" novita={<NovitaStrumenti settore="termoidraulici" locale={resolvedLocale} />}>
+      <SettorePageLayout content={content} locale={resolvedLocale} settore="termoidraulici" novita={<NovitaStrumenti settore="termoidraulici" locale={resolvedLocale} />} heroVisual={<NovitaHero settore="termoidraulici" locale={resolvedLocale} />}>
         <BlogHighlights locale={resolvedLocale} categoryId={65} />
       </SettorePageLayout>
     </>

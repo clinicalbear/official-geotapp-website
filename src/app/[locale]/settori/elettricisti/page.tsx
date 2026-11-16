@@ -5,7 +5,7 @@ import { DEFAULT_LOCALE, type AppLocale } from '@/lib/i18n/config';
 import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
 import { getElettricistiContent } from '@/content/settori/elettricisti';
 import SettorePageLayout from '@/components/SettorePageLayout';
-import NovitaStrumenti from '@/components/NovitaStrumenti';
+import NovitaStrumenti, { NovitaHero } from '@/components/NovitaStrumenti';
 import BlogHighlights from '@/components/BlogHighlights';
 
 const pathname = '/settori/elettricisti';
@@ -57,7 +57,7 @@ export default async function ElettricistiLocalePage({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <SettorePageLayout content={content} locale={resolvedLocale} settore="elettricisti" novita={<NovitaStrumenti settore="elettricisti" locale={resolvedLocale} />}>
+      <SettorePageLayout content={content} locale={resolvedLocale} settore="elettricisti" novita={<NovitaStrumenti settore="elettricisti" locale={resolvedLocale} />} heroVisual={<NovitaHero settore="elettricisti" locale={resolvedLocale} />}>
         <BlogHighlights locale={resolvedLocale} categoryId={65} />
       </SettorePageLayout>
     </>

@@ -2,6 +2,10 @@
 // Sorgente: GSC Coverage 404 drilldown 2026-06-25 (128 post). Ognuno -> hub blog della sua lingua.
 // Generato per spegnere i 404 e recuperare l'equity residua. NON tocca i post vivi (match esatto).
 const voci = [
+  // 16/11/2026: doppione inglese del fac-simile informativa GPS (post 5753, 22/04), chiuso su richiesta di Mike.
+  // La versione collegata alle 11 lingue e' quella del 03/07 (post 11032); il 22/04 dava un hreflang senza ritorno (crawl Ahrefs 12/11).
+  { source: "/blog/en/2026/04/22/gps-employee-privacy-notice-template-2026/", destination: "/blog/en/2026/07/03/gps-employee-privacy-notice-template/", permanent: true },
+  { source: "/blog/en/2026/04/22/gps-employee-privacy-notice-template-2026", destination: "/blog/en/2026/07/03/gps-employee-privacy-notice-template/", permanent: true },
   // 27/10/2026: ri-sluggato (lost-revenue -> loss-of-turnover), stesso post vivo, stessa data.
   { source: "/blog/en/2026/03/20/gps-construction-sites-say-goodbye-to-disputes-and-lost-revenue/", destination: "/blog/en/2026/03/20/gps-construction-sites-say-goodbye-to-disputes-and-loss-of-turnover/", permanent: true },
   { source: "/blog/en/2026/03/20/gps-construction-sites-say-goodbye-to-disputes-and-lost-revenue", destination: "/blog/en/2026/03/20/gps-construction-sites-say-goodbye-to-disputes-and-loss-of-turnover/", permanent: true },

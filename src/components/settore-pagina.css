@@ -1,0 +1,125 @@
+/* Pagine di settore: ordine e ritmo (riprogettazione del 16/11/2026).
+   Due soli fondi che si alternano (carta #F7F9FC e grigio caldo #EAECF0), navy solo per
+   l'hero e la chiamata finale. Stessa spaziatura verticale in tutte le sezioni. */
+
+.lp-settore .sec { padding: 88px 0; }
+.lp-settore .st-alt { background: #EAECF0; }
+.lp-settore .st-sec + .st-sec { border-top: 1px solid rgba(11, 23, 54, .08); }
+.lp-settore .sec h2 { font-size: clamp(26px, 3.1vw, 46px); max-width: 22ch; }
+.lp-settore .sec h3 { overflow-wrap: normal; hyphens: manual; }
+
+/* intestazione di sezione: titolo a sinistra, testo a destra */
+.st-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: end; margin-bottom: 44px; }
+.st-head-one { grid-template-columns: minmax(0, 1fr); margin-bottom: 36px; }
+.st-head > p, .st-head > div p { color: #475467; max-width: 56ch; }
+
+/* ── hero ── */
+.lp-settore .st-hero { padding: 168px 0 88px; }
+.st-hero-grid { display: grid; grid-template-columns: minmax(0, 10fr) minmax(0, 12fr); gap: 56px; align-items: center; }
+.st-hero-solo { grid-template-columns: minmax(0, 1fr); }
+.lp-settore .st-hero h1 { font-size: clamp(30px, 3.2vw, 54px); max-width: none; }
+.lp-settore .st-hero .lede { font-size: 18px; }
+.st-hero-note { margin-top: 16px; font-size: 13.5px; color: rgba(247, 249, 252, .6); }
+.st-hero-price { margin-top: 14px; font-size: 14px; color: rgba(247, 249, 252, .65); }
+.st-hero-price b { color: var(--lime); font-family: var(--font-display); }
+.st-hero-vis { min-width: 0; }
+
+/* ── il problema ── */
+.st-pain { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
+.st-pain-i { border-top: 2px solid var(--ink); padding-top: 20px; }
+.st-pain-i h3 { font-size: 20px; letter-spacing: -.01em; margin-bottom: 10px; }
+.st-pain-i p { color: #475467; font-size: 15.5px; line-height: 1.6; }
+
+/* ── come funziona: la sola sequenza vera, numerata ── */
+.st-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; border: 0; }
+.st-steps li { padding: 20px 0 0; border: 0; border-top: 2px solid var(--seal); }
+.st-steps li::before { position: static; display: block; margin-bottom: 12px; font-size: 14px; letter-spacing: .06em; }
+
+/* ── la prova ── */
+.st-badge { margin-top: 20px; }
+.st-sub { font-family: var(--font-display); font-weight: 800; font-size: 18px; margin: 0 0 20px; }
+.st-sub span { display: block; margin-top: 4px; font-family: inherit; font-weight: 400; font-size: 15px; color: #475467; }
+.st-mocks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-bottom: 56px; }
+.st-mocks .mock { max-width: none; padding: 26px; }
+.st-case { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 20px 56px; align-items: center;
+  border-top: 1px solid rgba(11, 23, 54, .14); padding-top: 44px; }
+.st-case .kk { grid-column: 1 / -1; margin-bottom: 0; }
+.st-case .qt { max-width: none; }
+.st-case .qt p { font-size: clamp(19px, 1.9vw, 27px); }
+.st-resolution { font-family: var(--font-display); font-weight: 800; font-size: clamp(19px, 1.8vw, 24px); line-height: 1.25; letter-spacing: -.01em; }
+.st-testimonial { margin-top: 48px; max-width: 64ch; }
+.st-testimonial cite b { color: var(--ink); }
+
+/* ── il confronto ── */
+.st-ba { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; margin-bottom: 56px; }
+.st-ba-c .kk { margin-bottom: 14px; }
+.st-ba-c .rows li { color: #475467; }
+.st-ba-after .rows { border-top-color: var(--seal); }
+.st-ba-after .rows li { color: var(--ink); }
+.st-table-h { margin-bottom: 18px; }
+.st-table-h h3 { font-size: 20px; letter-spacing: -.01em; margin-bottom: 6px; }
+.st-table-h p, .st-table-sub { color: #475467; max-width: 68ch; }
+.st-table-sub { margin-bottom: 18px; }
+
+/* ── approfondimenti ripiegabili (il testo resta nel DOM) ── */
+.st-more { margin-top: 40px; }
+.st-deep .st-more { margin-top: 0; }
+.st-d summary { font-size: 17.5px; font-weight: 500; }
+.st-d summary:focus-visible, .st-faq summary:focus-visible { outline: 3px solid #19B5D8; outline-offset: -3px; }
+.st-d-b { padding: 4px 0 28px; }
+.st-d-b > p { color: #475467; max-width: 68ch; margin-bottom: 18px; }
+.st-prose p { max-width: 68ch; color: #475467; }
+.st-prose p + p { margin-top: 14px; }
+.st-dl > div + div { margin-top: 20px; }
+.st-dl dt { font-family: var(--font-display); font-weight: 800; font-size: 16px; margin-bottom: 4px; }
+.st-dl dd { margin: 0; color: #475467; font-size: 15.5px; line-height: 1.6; max-width: 68ch; }
+.st-dl-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 48px; }
+.st-dl-2 > div + div { margin-top: 0; }
+
+/* ── FAQ ── */
+.lp-settore .st-faq { padding: 88px 0; }
+.st-faq-reg { margin: 48px 0 8px; font-size: 18px; }
+
+/* ── chiamata finale ── */
+.lp-settore .end { padding: 104px 0 108px; }
+.lp-settore .end h2 { font-size: clamp(30px, 4.2vw, 68px); }
+.end .st-roi { font-size: 14.5px; opacity: .85; }
+
+/* ── altri settori e stampa, piccoli, in fondo ── */
+.st-others { padding: 56px 0 8px; }
+.st-others .kk { color: #475467; margin-bottom: 0; }
+.st-others .picker { margin-top: 16px; }
+.st-others .picker a { font-size: 13.5px; padding: 8px 14px; }
+.lp-settore .st-dirs { padding: 32px 0 64px; }
+
+/* ── schermi stretti ── */
+@media (max-width: 1000px) {
+  .lp-settore .sec, .lp-settore .st-faq { padding: 64px 0; }
+  .st-head { grid-template-columns: minmax(0, 1fr); gap: 20px; margin-bottom: 32px; }
+  /* sul telefono l'immagine del prodotto sta subito sotto il titolo, prima del testo lungo */
+  .st-hero-grid { display: flex; flex-direction: column; gap: 0; }
+  .st-hero-text { display: contents; }
+  .st-hero-text > .kk { order: 1; }
+  .st-hero-text > h1 { order: 2; }
+  .st-hero-vis { order: 3; margin: 32px 0 8px; }
+  .st-hero-text > .lede { order: 4; }
+  .st-hero-text > .acts { order: 5; }
+  .st-hero-text > .st-hero-note { order: 6; }
+  .st-hero-text > .st-hero-price { order: 7; }
+  .st-pain { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .st-mocks { grid-template-columns: minmax(0, 1fr); }
+  .st-case { grid-template-columns: minmax(0, 1fr); }
+  .st-ba { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .st-dl-2 { grid-template-columns: minmax(0, 1fr); }
+  .lp-settore .end { padding: 80px 0 84px; }
+}
+@media (max-width: 900px) {
+  .lp-settore .st-hero { padding: 160px 0 56px; }
+}
+
+/* Lingue con parole composte lunghe (vedligeholdelsesopgave, schoonmaakbedrijven): il titolo scende
+   ancora, cosi' la parola intera sta nella colonna dell'hero senza spezzarsi (regola di Mike). */
+@media (min-width: 1001px) {
+  :lang(de) .lp-settore .st-hero h1, :lang(nl) .lp-settore .st-hero h1, :lang(da) .lp-settore .st-hero h1,
+  :lang(sv) .lp-settore .st-hero h1, :lang(nb) .lp-settore .st-hero h1 { font-size: clamp(26px, 2.8vw, 44px); }
+}

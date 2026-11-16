@@ -9,6 +9,12 @@ const copy: NovitaCopy = {
     altPhone: 'TimeTracker en el móvil: pantalla de {tool}',
     flowOnly: 'Esta herramienta se usa desde el panel de Flow: no hace falta nada en el móvil de tus operarios.',
     seeAlso: 'Para las revisiones eléctricas, las calderas y los gases fluorados hay herramientas específicas:',
+    moreShots: 'Más pantallas de esta herramienta',
+    enlarge: 'Ampliar: {name}',
+    close: 'Cerrar',
+    prev: 'Anterior',
+    next: 'Siguiente',
+    allSectors: 'Para todos los sectores',
   },
   sections: {
     sicurezza: {
@@ -57,11 +63,11 @@ const copy: NovitaCopy = {
     },
     consegne_turno: {
       title: 'Relevo de turno',
-      body: 'A las seis, el vigilante de noche deja el puesto al de la mañana. Antes eran llaves en una caja y un mensaje de voz; ahora, al terminar el turno, escribe notas, llaves e incidencias para quien llega, que las recoge desde el móvil. En Flow ves los relevos pendientes de recoger y las incidencias abiertas. El historial no se puede modificar.',
+      body: 'A las seis, el vigilante de noche deja el puesto al de la mañana. Antes eran llaves en una caja y un mensaje de voz; ahora, al terminar el turno, escribe notas, llaves e incidencias para quien llega, que las recibe desde el móvil. En Flow ves los relevos pendientes de recibir y las incidencias abiertas. El historial no se puede modificar.',
     },
     emergenze: {
       title: 'Emergencias y simulacros',
-      body: 'Simulacro de evacuación en un edificio o en un evento: el coordinador elige el escenario y toca en el plano el punto del peligro. Cada persona del equipo recibe en el móvil su función, qué hacer y las salidas por orden, y responde con un toque: presente, voy de camino, no puedo. El panel muestra quién ha respondido y en cuánto tiempo; los planes se abren también sin cobertura.',
+      body: 'Simulacro de evacuación en un edificio o en un evento: el coordinador elige el escenario y toca en el plano el punto del peligro. Cada persona del equipo recibe en el móvil su función, qué hacer y las salidas por orden, y responde con un toque: presente, en camino, no puedo. El panel muestra quién ha respondido y en cuánto tiempo; los planes se abren también sin cobertura.',
       note: 'Es una herramienta de coordinación y de prueba: no sustituye ni valida tu plan de emergencia, y una notificación puede no llegar, por eso cada uno confirma.',
     },
     qualita_pulizie: {
@@ -70,10 +76,10 @@ const copy: NovitaCopy = {
     },
     schede_consumi: {
       title: 'Fichas de seguridad y consumos',
-      body: 'Quien inspecciona quiere ver la ficha de datos de seguridad del producto que hay en el carro. En Flow cada sede tiene sus productos, cada uno con su ficha en PDF, y ves las salidas y los costes del mes. En el móvil las fichas se leen también donde no hay cobertura, y la salida de producto se anota en el momento.',
+      body: 'Quien inspecciona quiere ver la ficha de datos de seguridad del producto que hay en el carro. En Flow cada sede tiene sus productos, cada uno con su ficha en PDF, y ves las retiradas y los costes del mes. En el móvil las fichas se leen también donde no hay cobertura, y la retirada de producto se anota en el momento.',
     },
     verifiche_misure: {
-      title: 'Comprobaciones y mediciones',
+      title: 'Verificaciones y mediciones',
       body: 'Cuadro cerrado, último día de obra: continuidad, aislamiento, diferenciales, tierra. El electricista introduce cada medición desde el móvil con el resultado y la foto del instrumento; Flow reúne las comprobaciones por obra y las maqueta como anexo para el certificado de instalación eléctrica (CIE, REBT).',
       note: 'GeoTapp recoge y maqueta: no comprueba, no valida y no garantiza la conformidad. El certificado y la firma siguen siendo de la empresa instaladora.',
     },
@@ -122,7 +128,7 @@ const copy: NovitaCopy = {
   shots: {
     flow_emergenze_attiva: 'Flow: el coordinador elige el escenario y toca en el plano el punto del peligro para activar el simulacro',
     flow_emergenze_evento: 'Flow: panel del simulacro en curso, con quién ha respondido y en cuánto tiempo',
-    flow_emergenze_evento_persone: 'Flow: la lista de personas del equipo con su respuesta: presente, voy de camino o no puedo',
+    flow_emergenze_evento_persone: 'Flow: la lista de personas del equipo con su respuesta: presente, en camino o no puedo',
     flow_emergenze_sito: 'Flow: el plano del recinto con salidas, medios de protección y zonas',
     flow_emergenze_protocolli: 'Flow: los protocolos por escenario y por función',
     flow_emergenze_squadre: 'Flow: los equipos con sus acreditaciones; a quien falta se le avisa',
@@ -130,7 +136,7 @@ const copy: NovitaCopy = {
     tt_emergenze_dashboard: 'Móvil: la pantalla de inicio con el aviso de simulacro',
     tt_emergenze_indicazioni: 'Móvil: las indicaciones personales, con la función y qué hacer',
     tt_emergenze_indicazioni_2: 'Móvil: las salidas por orden, sin las bloqueadas',
-    tt_emergenze_risposta: 'Móvil: la respuesta con un toque: presente, voy de camino o no puedo',
+    tt_emergenze_risposta: 'Móvil: la respuesta con un toque: presente, en camino o no puedo',
     tt_emergenze_piani: 'Móvil: los planes, consultables también sin cobertura',
   },
 };
