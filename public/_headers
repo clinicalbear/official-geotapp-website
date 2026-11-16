@@ -43,7 +43,7 @@
 # BYTE PER BYTE quello di cui pubblichiamo il checksum. Servito come text/html, Cloudflare gli
 # aggiunge in fondo lo script di rilevamento bot (/cdn-cgi/challenge-platform/scripts/jsd/main.js,
 # +938 byte il 22/10/2026) e l'hash non torna. Come file da scaricare non viene riscritto.
-# Dopo il deploy: curl -s URL | sha256sum deve dare lo stesso valore di geotapp-report-verifier/offline/SHA256SUMS (9f02ad23...2e12a).
+# Dopo il deploy: curl -s URL | sha256sum deve dare lo stesso valore di geotapp-report-verifier/offline/SHA256SUMS (82a41860...4a447).
 /downloads/verificatore-geotapp.html
   Content-Type: application/octet-stream
   Content-Disposition: attachment; filename="verificatore-geotapp.html"

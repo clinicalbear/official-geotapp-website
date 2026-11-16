@@ -12791,6 +12791,12 @@ async function readReportFromZipObject(zip) {
       }
     })
   );
+  const handoverFiles = /* @__PURE__ */ new Map();
+  await Promise.all(
+    Object.entries(zip.files).filter(([p, f]) => p.startsWith("consegne/") && !f.dir).map(async ([p, file]) => {
+      handoverFiles.set(p, new Uint8Array(await file.async("arraybuffer")));
+    })
+  );
   let sealJson = null;
   const sealFile = zip.file("metadata/seal.json");
   if (sealFile) {
@@ -12800,7 +12806,7 @@ async function readReportFromZipObject(zip) {
     } catch {
     }
   }
-  return { historyJson, reportMeta, sealJson, historyJsonBytes, photoFiles };
+  return { historyJson, reportMeta, sealJson, historyJsonBytes, photoFiles, handoverFiles };
 }
 
 // src/reader/folder-reader.ts
@@ -12844,7 +12850,20 @@ async function readReportFromFolder(folderPath) {
     }
   } catch {
   }
-  return { historyJson, reportMeta, sealJson, historyJsonBytes, photoFiles };
+  const handoverFiles = /* @__PURE__ */ new Map();
+  try {
+    const radice = import_node_path.default.join(folderPath, "consegne");
+    for (const dir of await import_promises2.default.readdir(radice, { withFileTypes: true })) {
+      if (!dir.isDirectory()) continue;
+      for (const f of await import_promises2.default.readdir(import_node_path.default.join(radice, dir.name), { withFileTypes: true })) {
+        if (!f.isFile()) continue;
+        const bytes = await import_promises2.default.readFile(import_node_path.default.join(radice, dir.name, f.name));
+        handoverFiles.set(`consegne/${dir.name}/${f.name}`, new Uint8Array(bytes));
+      }
+    }
+  } catch {
+  }
+  return { historyJson, reportMeta, sealJson, historyJsonBytes, photoFiles, handoverFiles };
 }
 
 // src/canonical.ts
@@ -13412,6 +13431,74 @@ function checkSignatureVerification(sealJson, publicKeyPem) {
   }
 }
 
+// src/checkers/handover-files.ts
+var MARCATORE = /\[consegna-sha256:([0-9a-f]{64})\]/;
+var PREFISSO = "consegne/";
+function computeHandoverBundleHash(files) {
+  const ordinati = [...files].sort((a, b) => a.path < b.path ? -1 : a.path > b.path ? 1 : 0).map((f) => ({ path: f.path, sha256: f.sha256.toLowerCase() }));
+  return sha256Hex(canonicalJson(ordinati));
+}
+function checkHandoverFiles(ctx) {
+  const eventi = ctx.artifact.historyJson.events.filter((e) => e.type === "handover");
+  const presenti = ctx.artifact.handoverFiles ?? /* @__PURE__ */ new Map();
+  if (eventi.length === 0 && presenti.size === 0) {
+    return { ok: true, skipped: true, warnings: [], errors: [] };
+  }
+  const errors = [];
+  const warnings = [];
+  const dichiarati = /* @__PURE__ */ new Set();
+  let verificati = 0;
+  for (const e of eventi) {
+    const id = String(e.metadata?.["handoverId"] ?? e.eventId);
+    const grezzo = e.metadata?.["handoverFiles"];
+    const file = Array.isArray(grezzo) ? grezzo.map((f) => ({
+      path: String(f["path"] ?? ""),
+      sha256: String(f["sha256"] ?? "").toLowerCase()
+    })) : [];
+    if (file.length === 0) {
+      errors.push(`Consegna ${id}: elenco dei file assente nella voce della catena`);
+      continue;
+    }
+    const marcatore = MARCATORE.exec(String(e.description ?? ""));
+    if (!marcatore) {
+      errors.push(`Consegna ${id}: impronta dei file assente nella descrizione firmata`);
+    } else if (marcatore[1] !== computeHandoverBundleHash(file)) {
+      errors.push(`Consegna ${id}: l'elenco dei file non coincide con l'impronta firmata nella catena`);
+    }
+    for (const f of file) {
+      dichiarati.add(f.path);
+      if (!f.path.startsWith(PREFISSO) || f.path.includes("..")) {
+        errors.push(`Consegna ${id}: percorso non ammesso ${f.path}`);
+        continue;
+      }
+      const byte = presenti.get(f.path);
+      if (!byte) {
+        errors.push(`Consegna ${id}: file mancante nel pacchetto (${f.path})`);
+        continue;
+      }
+      const calcolato = sha256HexBytes(byte);
+      if (calcolato !== f.sha256) {
+        errors.push(
+          `Consegna ${id}: impronta diversa per ${f.path} (calcolata ${calcolato.slice(0, 8)}\u2026, dichiarata ${f.sha256.slice(0, 8)}\u2026)`
+        );
+      } else {
+        verificati++;
+      }
+    }
+  }
+  for (const nome of presenti.keys()) {
+    if (!dichiarati.has(nome)) {
+      warnings.push(`File ${nome} nel pacchetto ma non dichiarato da nessuna consegna`);
+    }
+  }
+  return {
+    ok: errors.length === 0,
+    errors,
+    warnings,
+    details: { handovers: eventi.length, filesVerified: verificati }
+  };
+}
+
 // src/checkers/server-timestamp.ts
 function checkServerTimestamp(ctx) {
   const events = ctx.artifact.historyJson.events;
@@ -13475,7 +13562,8 @@ function getPublicKeyForSeal(keyId) {
 
 // src/classifier.ts
 function classifyStatus(checks) {
-  const criticalFailed = !checks.eventHashChain.ok || !checks.timelineHash.ok || !checks.reportRootHash.ok || !checks.signatureVerification.ok && !checks.signatureVerification.skipped;
+  const criticalFailed = !checks.eventHashChain.ok || !checks.timelineHash.ok || !checks.reportRootHash.ok || !checks.signatureVerification.ok && !checks.signatureVerification.skipped || // Un file di consegna alterato o mancante e' una prova toccata, non un dettaglio.
+  checks.handoverFiles !== void 0 && !checks.handoverFiles.ok;
   if (criticalFailed) return "invalid";
   const hasNonCriticalFailures = !checks.photoFiles.ok || !checks.archiveSeal.ok && !checks.archiveSeal.skipped || checks.eventHashChain.warnings.length > 0 || checks.timelineHash.warnings.length > 0;
   return hasNonCriticalFailures ? "degraded" : "valid";
@@ -13483,6 +13571,7 @@ function classifyStatus(checks) {
 function classifyIntegrityLevel(checks, storedLevel) {
   if (storedLevel === "legacy") return "legacy";
   if (!checks.eventHashChain.ok || !checks.reportRootHash.ok) return "invalid";
+  if (checks.handoverFiles !== void 0 && !checks.handoverFiles.ok) return "invalid";
   const sealOk = checks.archiveSeal.ok && !checks.archiveSeal.skipped;
   const photosOk = checks.photoFiles.ok;
   const signatureOk = checks.signatureVerification.ok && !checks.signatureVerification.skipped;
@@ -13504,6 +13593,7 @@ function verifyArtifact(artifact) {
   const photosBundleHash = checkPhotosBundleHash(ctx);
   const reportRootHash = checkReportRootHash(ctx);
   const photoFiles = checkPhotoFiles(ctx);
+  const handoverFiles = checkHandoverFiles(ctx);
   const archiveSeal = checkArchiveSeal(ctx);
   const sealJson = artifact.sealJson ?? null;
   const pubKeyPem = getPublicKeyForSeal(sealJson?.keyId) ?? "";
@@ -13525,7 +13615,8 @@ function verifyArtifact(artifact) {
     reportRootHash,
     archiveSeal,
     signatureVerification,
-    serverTimestamp: checkServerTimestamp(ctx)
+    serverTimestamp: checkServerTimestamp(ctx),
+    handoverFiles
   };
   const status = classifyStatus(checks);
   const storedLevel = artifact.reportMeta?.integrityLevel;
@@ -13533,7 +13624,7 @@ function verifyArtifact(artifact) {
   const allWarnings = Object.values(checks).flatMap((c) => c.warnings ?? []);
   const allErrors = Object.values(checks).flatMap((c) => c.errors ?? []);
   const missingPhotos = photoFiles.details?.["missing"] ?? 0;
-  const hashMismatches = (eventHashChain.details?.["failedCount"] ?? 0) + (photoFiles.errors?.length ?? 0);
+  const hashMismatches = (eventHashChain.details?.["failedCount"] ?? 0) + (photoFiles.errors?.length ?? 0) + (handoverFiles.errors?.length ?? 0);
   const sigStatusRaw = signatureVerification.details?.["signatureStatus"];
   const signatureStatus = sigStatusRaw === "verified" ? "verified" : sigStatusRaw === "invalid" ? "invalid" : "absent";
   const sealStatus = sealJson !== null ? sealJson.signature ? "sealed" : "hash-only" : "absent";
@@ -13618,6 +13709,10 @@ ${bar}
 `);
   process.stdout.write(`${icon(c.photoFiles)}  photo files          ${c.photoFiles.ok ? `${c.photoFiles.details?.["matched"] ?? 0}/${result.summary.photosCount} matched` : c.photoFiles.errors[0]}
 `);
+  if (c.handoverFiles && !c.handoverFiles.skipped) {
+    process.stdout.write(`${icon(c.handoverFiles)}  consegne firmate     ${c.handoverFiles.ok ? `${c.handoverFiles.details?.["filesVerified"] ?? 0} file verificati` : c.handoverFiles.errors[0]}
+`);
+  }
   process.stdout.write(`${icon(c.archiveSeal)}  archive seal         ${c.archiveSeal.skipped ? "not present" : c.archiveSeal.ok ? "OK" : c.archiveSeal.errors[0]}
 `);
   process.stdout.write(
