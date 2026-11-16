@@ -310,7 +310,7 @@ export const cipro: SchedaPaese = {
         nb: 'Informer de ansatte før overvåkingen begynner (art. 13).',
         nl: 'Informeer de werknemers voordat de monitoring begint (art. 13).',
         ru: "Проинформируйте работников до начала мониторинга (ст. 13).",
-        el: "Ενημέρωσε τους εργαζομένους πριν από την έναρξη της παρακολούθησης (άρθρο 13).",
+        el: "Ενημέρωσε τους εργαζόμενους πριν από την έναρξη της παρακολούθησης (άρθρο 13).",
       },
     },
     {

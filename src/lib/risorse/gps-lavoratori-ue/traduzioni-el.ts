@@ -40,7 +40,7 @@ export const TESTI_EL: Readonly<Record<string, string>> = {
   "Regolamento UE 2016/679 (GDPR)":
     "Κανονισμός (ΕΕ) 2016/679 (ΓΚΠΔ)",
   "Garante della Renania-Palatinato, guida sulla localizzazione GPS dei dipendenti":
-    "Αρχή προστασίας δεδομένων της Ρηνανίας-Παλατινάτου, οδηγός για τον εντοπισμό θέσης των εργαζομένων μέσω GPS",
+    "Αρχή προστασίας δεδομένων της Ρηνανίας-Παλατινάτου, οδηγός για τον εντοπισμό τοποθεσίας των εργαζομένων μέσω GPS",
   "Lista DSK dei trattamenti che richiedono una valutazione d'impatto (settore privato)":
     "Κατάλογος DSK των πράξεων επεξεργασίας που απαιτούν εκτίμηση αντικτύπου (ιδιωτικός τομέας)",
   "BfDI, elenco delle autorità garanti per la protezione dei dati dei Land":
@@ -114,7 +114,7 @@ export const TESTI_EL: Readonly<Record<string, string>> = {
   "IMY, controllo e sorveglianza dei dipendenti":
     "IMY, έλεγχος και παρακολούθηση των εργαζομένων",
   "IMY, come usare i servizi di localizzazione (GPS) sui dipendenti":
-    "IMY, πώς χρησιμοποιούνται οι υπηρεσίες εντοπισμού θέσης (GPS) στους εργαζομένους",
+    "IMY, πώς χρησιμοποιούνται οι υπηρεσίες εντοπισμού τοποθεσίας (GPS) στους εργαζόμενους",
   "IMY, quando svolgere una valutazione d'impatto":
     "IMY, πότε γίνεται εκτίμηση αντικτύπου",
   "IMY, presentare un reclamo":
@@ -206,7 +206,7 @@ export const TESTI_EL: Readonly<Record<string, string>> = {
   "UODO, presentare un reclamo":
     "UODO, υποβολή καταγγελίας",
   "UODO, sanzione Centrum Medyczne Ujastek (monitoraggio non comunicato ai dipendenti)":
-    "UODO, πρόστιμο στο Centrum Medyczne Ujastek (παρακολούθηση που δεν είχε γνωστοποιηθεί στους εργαζομένους)",
+    "UODO, πρόστιμο στο Centrum Medyczne Ujastek (παρακολούθηση που δεν είχε γνωστοποιηθεί στους εργαζόμενους)",
   "Zakonik prace (Codice del lavoro), art. 316":
     "Zákoník práce (Κώδικας Εργασίας), άρθρο 316",
   "Stanovisko 2/2017 sul trattamento dei dati sul posto di lavoro, pubblicato dall UOOU":
@@ -240,7 +240,7 @@ export const TESTI_EL: Readonly<Record<string, string>> = {
   "Garante finlandese, segnalare una violazione":
     "Φινλανδική αρχή προστασίας δεδομένων, αναφορά παράβασης",
   "Garante finlandese, sanzione per dati di localizzazione usati per la rilevazione orario (2021)":
-    "Φινλανδική αρχή προστασίας δεδομένων, πρόστιμο για δεδομένα θέσης που χρησιμοποιήθηκαν για την καταγραφή ωραρίου (2021)",
+    "Φινλανδική αρχή προστασίας δεδομένων, πρόστιμο για δεδομένα τοποθεσίας που χρησιμοποιήθηκαν για την καταγραφή ωραρίου (2021)",
   "Zakon o zaštiti na radu (legge sicurezza sul lavoro), art. 43 (dispositivi di sorveglianza)":
     "Zakon o zaštiti na radu (νόμος για την ασφάλεια στην εργασία), άρθρο 43 (συσκευές επιτήρησης)",
   "Zakon o radu (legge sul lavoro), art. 29 (dati dei lavoratori) e art. 150 (consultazione del consiglio dei lavoratori)":
@@ -258,7 +258,7 @@ export const TESTI_EL: Readonly<Record<string, string>> = {
   "IP-RS, parere 'Sledenje zaposlenim' (tracciamento dei dipendenti)":
     "IP-RS, γνωμοδότηση 'Sledenje zaposlenim' (εντοπισμός των εργαζομένων)",
   "IP-RS, comunicato del 15.04.2026: multa di 6.000 euro a un'azienda pubblica per GPS sui dipendenti":
-    "IP-RS, ανακοίνωση της 15.04.2026: πρόστιμο 6.000 ευρώ σε δημόσια επιχείρηση για GPS στους εργαζομένους",
+    "IP-RS, ανακοίνωση της 15.04.2026: πρόστιμο 6.000 ευρώ σε δημόσια επιχείρηση για GPS στους εργαζόμενους",
   "Zakon o delovnih razmerjih (ZDR-1), art. 48 (dati dei lavoratori)":
     "Zakon o delovnih razmerjih (ZDR-1), άρθρο 48 (δεδομένα των εργαζομένων)",
   "Zakon o sodelovanju delavcev pri upravljanju (ZSDU), art. 89-90 (informazione del consiglio dei lavoratori)":
@@ -418,7 +418,7 @@ export const TESTI_EL: Readonly<Record<string, string>> = {
   "Legge sulla protezione dei dati (LPDP, Gazzetta 42/20) - traduzione inglese non ufficiale pubblicata dall'AZLP":
     "Νόμος για την προστασία των δεδομένων (LPDP, Εφημερίδα 42/20) - ανεπίσημη αγγλική μετάφραση που δημοσιεύεται από την AZLP",
   "AZLP, lista dei trattamenti che richiedono la DPIA (11.05.2020, punti 10 e 12: posizione e spostamenti, dati dei lavoratori)":
-    "AZLP, κατάλογος των πράξεων επεξεργασίας που απαιτούν DPIA (11.05.2020, σημεία 10 και 12: θέση και μετακινήσεις, δεδομένα των εργαζομένων)",
+    "AZLP, κατάλογος των πράξεων επεξεργασίας που απαιτούν DPIA (11.05.2020, σημεία 10 και 12: τοποθεσία και μετακινήσεις, δεδομένα των εργαζομένων)",
   "AZLP, atti subordinati (regolamenti e liste), pagina ufficiale":
     "AZLP, δευτερογενείς πράξεις (κανονισμοί και κατάλογοι), επίσημη σελίδα",
   "AZLP (Garante macedone), pagina ufficiale e reclami":

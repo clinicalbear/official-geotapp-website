@@ -208,8 +208,8 @@ const T: Record<InfLocale, Template> = {
     sezioni: [
       { titolo: "1. Υπεύθυνος επεξεργασίας", testo: "Υπεύθυνος επεξεργασίας είναι η εταιρεία {azienda}." },
       { titolo: "2. Σκοπός και νομική βάση", testo: "Τα δεδομένα υποβάλλονται σε επεξεργασία για τον ακόλουθο σκοπό: {finalita}. {baseGiuridica}" },
-      { titolo: "3. Κατηγορίες δεδομένων", testo: "Υποβάλλονται σε επεξεργασία δεδομένα γεωεντοπισμού (θέση της συσκευής ή του οχήματος) που συνδέονται με τον εργαζόμενο.{integritaDispositivo}" },
-      { titolo: "4. Πότε και πώς", testo: "Η θέση καταγράφεται {quando}. Η επεξεργασία είναι ανάλογη προς τον σκοπό και δεν συνεπάγεται συνεχή εξ αποστάσεως έλεγχο των εργαζομένων." },
+      { titolo: "3. Κατηγορίες δεδομένων", testo: "Υποβάλλονται σε επεξεργασία δεδομένα γεωεντοπισμού (τοποθεσία της συσκευής ή του οχήματος) που συνδέονται με τον εργαζόμενο.{integritaDispositivo}" },
+      { titolo: "4. Πότε και πώς", testo: "Η τοποθεσία καταγράφεται {quando}. Η επεξεργασία είναι ανάλογη προς τον σκοπό και δεν συνεπάγεται συνεχή εξ αποστάσεως έλεγχο των εργαζομένων." },
       { titolo: "5. Αποδέκτες", testo: "Τα δεδομένα είναι προσβάσιμα στο εξουσιοδοτημένο προσωπικό και στους εκτελούντες την επεξεργασία (π.χ. τον πάροχο του λογισμικού), οι οποίοι τα επεξεργάζονται για λογαριασμό του υπευθύνου επεξεργασίας." },
       { titolo: "6. Διατήρηση", testo: "Τα δεδομένα διατηρούνται για {conservazione} και στη συνέχεια διαγράφονται ή ανωνυμοποιούνται.{conservazioneLegale}" },
       { titolo: "7. Δικαιώματα του υποκειμένου των δεδομένων", testo: "Ο εργαζόμενος μπορεί να ασκήσει τα δικαιώματα πρόσβασης, διόρθωσης, διαγραφής, περιορισμού, εναντίωσης και φορητότητας, καθώς και να υποβάλει καταγγελία στην εποπτική αρχή." },
@@ -381,7 +381,7 @@ const RETENTION_LEGAL_OVERRIDE: Record<string, Partial<Record<InfLocale, string>
     da: ' Den blotte arbejdstidsangivelse uden stedreference opbevares i de lovbestemte perioder, der gælder i Tyskland (§ 257 HGB, § 147 AO).',
     sv: ' Enbart arbetstidsuppgiften, utan positionsreferens, lagras under de lagstadgade tider som gäller i Tyskland (§ 257 HGB, § 147 AO).',
     nb: ' Selve arbeidstidsangivelsen, uten stedsreferanse, oppbevares i de lovbestemte fristene som gjelder i Tyskland (§ 257 HGB, § 147 AO).',
-    el: ' Μόνο το στοιχείο του ωραρίου εργασίας, χωρίς αναφορά θέσης, διατηρείται για τις νόμιμες προθεσμίες που ισχύουν στη Γερμανία (§ 257 HGB, § 147 AO).',
+    el: ' Μόνο το στοιχείο του ωραρίου εργασίας, χωρίς αναφορά τοποθεσίας, διατηρείται για τις νόμιμες προθεσμίες που ισχύουν στη Γερμανία (§ 257 HGB, § 147 AO).',
     ru: ' Сами сведения о рабочем времени, без привязки к местоположению, хранятся в течение установленных законом сроков, применимых в Германии (§ 257 HGB, § 147 AO).',
   },
 };
@@ -407,7 +407,7 @@ const INTEGRITA_DISPOSITIVO: Record<InfLocale, string> = {
   da: ' Der behandles desuden tekniske data om enhedens integritet (for eksempel angivelse af, at enheden er ændret, eller at positionen er simuleret), alene med det formål at kontrollere registreringens pålidelighed og ikke for at vurdere medarbejderen.',
   sv: ' Dessutom behandlas tekniska uppgifter om enhetens integritet (till exempel uppgift om att enheten har ändrats eller att positionen simuleras), uteslutande för att kontrollera registreringens tillförlitlighet och inte för att bedöma arbetstagaren.',
   nb: ' I tillegg behandles tekniske data om enhetens integritet (for eksempel angivelse av at enheten er endret, eller at posisjonen er simulert), utelukkende for å kontrollere påliteligheten av registreringen og ikke for å vurdere arbeidstakeren.',
-  el: ' Επεξεργάζονται επίσης τεχνικά δεδομένα για την ακεραιότητα της συσκευής (για παράδειγμα η ένδειξη ότι η συσκευή έχει τροποποιηθεί ή ότι η θέση προσομοιώνεται), αποκλειστικά για τον έλεγχο της αξιοπιστίας της καταγραφής και όχι για την αξιολόγηση του εργαζομένου.',
+  el: ' Επεξεργάζονται επίσης τεχνικά δεδομένα για την ακεραιότητα της συσκευής (για παράδειγμα η ένδειξη ότι η συσκευή έχει τροποποιηθεί ή ότι η τοποθεσία προσομοιώνεται), αποκλειστικά για τον έλεγχο της αξιοπιστίας της καταγραφής και όχι για την αξιολόγηση του εργαζομένου.',
   ru: ' Кроме того, обрабатываются технические данные о целостности устройства (например, признак того, что устройство изменено или местоположение имитируется), исключительно для проверки достоверности записи, а не для оценки работника.',
 };
 

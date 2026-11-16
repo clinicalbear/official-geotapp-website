@@ -243,7 +243,7 @@ export const ungheria: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (DPIA) for overvåking av arbeidstakernes posisjon og aktivitet (NAIHs liste)',
         nl: 'Gegevensbeschermingseffectbeoordeling (DPIA) voor de monitoring van de locatie en de activiteit van werknemers (NAIH-lijst)',
         ru: "Оценка воздействия (DPIA) для мониторинга местоположения и деятельности работников (перечень NAIH)",
-        el: "Εκτίμηση αντικτύπου (DPIA) για την παρακολούθηση της θέσης και της δραστηριότητας των εργαζομένων (κατάλογος NAIH)",
+        el: "Εκτίμηση αντικτύπου (DPIA) για την παρακολούθηση της τοποθεσίας και της δραστηριότητας των εργαζομένων (κατάλογος NAIH)",
       },
       risposta: 'si',
       dettaglio: {
@@ -258,7 +258,7 @@ export const ungheria: SchedaPaese = {
         nb: 'NAIHs liste tar med overvåking av de ansattes arbeid og behandling av posisjonsdata som innebærer systematisk overvåking blant tilfellene som krever en personvernkonsekvensvurdering.',
         nl: 'De NAIH-lijst omvat de monitoring van het werk van werknemers en de verwerking van locatiegegevens die op systematische monitoring wijst onder de gevallen die een effectbeoordeling vereisen.',
         ru: "Перечень NAIH включает мониторинг работы сотрудников и обработку данных о местоположении, указывающую на систематический мониторинг, среди случаев, требующих оценки воздействия.",
-        el: "Ο κατάλογος του NAIH περιλαμβάνει την παρακολούθηση της εργασίας των εργαζομένων και την επεξεργασία δεδομένων θέσης που υποδηλώνει συστηματική παρακολούθηση μεταξύ των περιπτώσεων που απαιτούν εκτίμηση αντικτύπου.",
+        el: "Ο κατάλογος του NAIH περιλαμβάνει την παρακολούθηση της εργασίας των εργαζομένων και την επεξεργασία δεδομένων τοποθεσίας που υποδηλώνει συστηματική παρακολούθηση μεταξύ των περιπτώσεων που απαιτούν εκτίμηση αντικτύπου.",
       },
       fonte: FONTE_NAIH_DPIA,
     },
@@ -296,7 +296,7 @@ export const ungheria: SchedaPaese = {
         nb: 'Informer arbeidstakerne skriftlig og på forhånd om overvåkingen og de tekniske midlene (art. 11/A + art. 13 GDPR).',
         nl: 'Informeer de werknemers schriftelijk en vooraf over de monitoring en de technische middelen (art. 11/A + art. 13 AVG).',
         ru: "Письменно и заранее проинформируйте работников о мониторинге и технических средствах (ст. 11/A + ст. 13 GDPR).",
-        el: "Ενημέρωσε γραπτώς και εκ των προτέρων τους εργαζομένους για την παρακολούθηση και τα τεχνικά μέσα (άρθρο 11/A + άρθρο 13 ΓΚΠΔ).",
+        el: "Ενημέρωσε γραπτώς και εκ των προτέρων τους εργαζόμενους για την παρακολούθηση και τα τεχνικά μέσα (άρθρο 11/A + άρθρο 13 ΓΚΠΔ).",
       },
     },
     {
@@ -313,7 +313,7 @@ export const ungheria: SchedaPaese = {
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) for overvåking av arbeidstakernes posisjon.',
         nl: 'Voer de gegevensbeschermingseffectbeoordeling (DPIA) uit voor de monitoring van de locatie van werknemers.',
         ru: "Проведите оценку воздействия (DPIA) для мониторинга местоположения работников.",
-        el: "Πραγματοποίησε την εκτίμηση αντικτύπου (DPIA) για την παρακολούθηση της θέσης των εργαζομένων.",
+        el: "Πραγματοποίησε την εκτίμηση αντικτύπου (DPIA) για την παρακολούθηση της τοποθεσίας των εργαζομένων.",
       },
     },
     {

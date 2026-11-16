@@ -32,7 +32,7 @@ export const REFERRER_COPY: Record<string, ReferrerCopy> = {
   da: { cta: 'Se hvordan GeoTapp virker', close: 'Luk' },
   sv: { cta: 'Se hur GeoTapp fungerar', close: 'Stäng' },
   nb: { cta: 'Se hvordan GeoTapp fungerer', close: 'Lukk' },
-  el: { cta: 'Δες πώς λειτουργεί η GeoTapp', close: 'Κλείσιμο' },
+  el: { cta: 'Δες πώς λειτουργεί το GeoTapp', close: 'Κλείσιμο' },
 };
 
 export function copyForLocale(locale: string): ReferrerCopy {

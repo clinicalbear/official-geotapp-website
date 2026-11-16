@@ -235,7 +235,7 @@ export const islanda: SchedaPaese = {
         nb: 'Bruk av fartsskrivere eller lokaliseringsenheter krever et særlig behov; først må det vurderes om mindre inngripende midler er nok, uten å gå lenger enn det som er strengt nødvendig (art. 4); hvis kjøretøyet også kan brukes privat, må det være mulig å slå av enheten, og den ansatte må informeres på en måte som kan dokumenteres (art. 13 nr. 2).',
         nl: 'Het gebruik van tachografen of locatieapparatuur vereist een bijzondere behoefte; eerst moet worden nagegaan of minder ingrijpende middelen volstaan, zonder verder te gaan dan strikt noodzakelijk (art. 4); mag het voertuig ook privé worden gebruikt, dan moet het apparaat kunnen worden uitgeschakeld en moet de werknemer aantoonbaar worden geïnformeerd (art. 13 lid 2).',
         ru: "Использование тахографов или устройств определения местоположения требует особой необходимости; сначала нужно проверить, достаточно ли менее инвазивных средств, и не выходить за пределы строго необходимого (ст. 4); если транспортное средство может использоваться и в личных целях, должна быть возможность выключить устройство, а работника следует проинформировать так, чтобы это можно было доказать (ст. 13 п. 2).",
-        el: 'Η χρήση ταχογράφων ή συσκευών εντοπισμού θέσης απαιτεί ιδιαίτερη ανάγκη· πρώτα πρέπει να ελεγχθεί αν αρκούν λιγότερο παρεμβατικά μέσα, χωρίς να ξεπεραστεί το απολύτως αναγκαίο (άρθρο 4)· αν το όχημα μπορεί να χρησιμοποιηθεί και ιδιωτικά, πρέπει να είναι δυνατή η απενεργοποίηση της συσκευής και ο εργαζόμενος να ενημερωθεί με αποδείξιμο τρόπο (άρθρο 13 παρ. 2).',
+        el: 'Η χρήση ταχογράφων ή συσκευών εντοπισμού τοποθεσίας απαιτεί ιδιαίτερη ανάγκη· πρώτα πρέπει να ελεγχθεί αν αρκούν λιγότερο παρεμβατικά μέσα, χωρίς να ξεπεραστεί το απολύτως αναγκαίο (άρθρο 4)· αν το όχημα μπορεί να χρησιμοποιηθεί και ιδιωτικά, πρέπει να είναι δυνατή η απενεργοποίηση της συσκευής και ο εργαζόμενος να ενημερωθεί με αποδείξιμο τρόπο (άρθρο 13 παρ. 2).',
       },
       fonte: FONTE_PERSUVERND_GPS,
     },
@@ -372,7 +372,7 @@ export const islanda: SchedaPaese = {
         nb: 'Informer de ansatte på forhånd, og merk det overvåkede området med skilt.',
         nl: 'Informeer werknemers vooraf en markeer het bewaakte gebied.',
         ru: "Заранее проинформируйте работников и обозначьте наблюдаемую зону.",
-        el: 'Ενημέρωσε εκ των προτέρων τους εργαζομένους και σήμανε τον επιτηρούμενο χώρο.',
+        el: 'Ενημέρωσε εκ των προτέρων τους εργαζόμενους και σήμανε τον επιτηρούμενο χώρο.',
       },
     },
     {

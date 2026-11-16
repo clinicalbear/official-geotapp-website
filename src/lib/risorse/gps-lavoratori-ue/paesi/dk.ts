@@ -251,7 +251,7 @@ export const danimarca: SchedaPaese = {
         nb: 'GPS bare til et legitimt formål, uten gjenbruk til å overvåke førerens atferd eller posisjon; kan slås av ved privat bruk',
         nl: 'GPS alleen voor een legitiem doel, zonder hergebruik om gedrag of locatie van de bestuurder te bewaken; uitschakelbaar bij privégebruik',
         ru: "GPS только для законной цели, без повторного использования для наблюдения за поведением или местонахождением водителя; возможность отключения при личном использовании",
-        el: "GPS μόνο για θεμιτό σκοπό, χωρίς επαναχρησιμοποίηση για την επιτήρηση της συμπεριφοράς ή της θέσης του οδηγού· δυνατότητα απενεργοποίησης στην ιδιωτική χρήση",
+        el: "GPS μόνο για θεμιτό σκοπό, χωρίς επαναχρησιμοποίηση για την επιτήρηση της συμπεριφοράς ή της τοποθεσίας του οδηγού· δυνατότητα απενεργοποίησης στην ιδιωτική χρήση",
       },
       risposta: 'si',
       dettaglio: {
@@ -266,7 +266,7 @@ export const danimarca: SchedaPaese = {
         nb: 'GPS i kjøretøy er tillatt for å planlegge ruter, overvåke transport eller for de ansattes sikkerhet, men opplysningene kan ikke gjenbrukes til å overvåke førerens atferd eller posisjon; hvis privat bruk er tillatt, må den ansatte kunne slå av GPS-en.',
         nl: 'GPS op voertuigen is toegestaan om routes te plannen, het vervoer te bewaken of voor de veiligheid van werknemers, maar de gegevens mogen niet worden hergebruikt om het gedrag of de locatie van de bestuurder te bewaken; als privégebruik is toegestaan, moet de werknemer de GPS kunnen uitschakelen.',
         ru: "GPS в транспортных средствах допускается для планирования маршрутов, мониторинга перевозок или обеспечения безопасности работников, но данные нельзя повторно использовать для наблюдения за поведением или местонахождением водителя; если личное использование разрешено, работник должен иметь возможность отключить GPS.",
-        el: "Το GPS στα οχήματα επιτρέπεται για τον προγραμματισμό των διαδρομών, την παρακολούθηση των μεταφορών ή για την ασφάλεια των εργαζομένων, αλλά τα δεδομένα δεν μπορούν να επαναχρησιμοποιηθούν για την επιτήρηση της συμπεριφοράς ή της θέσης του οδηγού· αν επιτρέπεται η ιδιωτική χρήση, ο εργαζόμενος πρέπει να μπορεί να απενεργοποιεί το GPS.",
+        el: "Το GPS στα οχήματα επιτρέπεται για τον προγραμματισμό των διαδρομών, την παρακολούθηση των μεταφορών ή για την ασφάλεια των εργαζομένων, αλλά τα δεδομένα δεν μπορούν να επαναχρησιμοποιηθούν για την επιτήρηση της συμπεριφοράς ή της τοποθεσίας του οδηγού· αν επιτρέπεται η ιδιωτική χρήση, ο εργαζόμενος πρέπει να μπορεί να απενεργοποιεί το GPS.",
       },
       fonte: FONTE_DATATILSYNET_GUIDA,
     },
@@ -283,7 +283,7 @@ export const danimarca: SchedaPaese = {
         nb: 'Personvernkonsekvensvurdering (DPIA) for posisjonsdata kombinert med et annet kriterium',
         nl: 'Effectbeoordeling (DPIA) voor locatiegegevens gecombineerd met een ander criterium',
         ru: "Оценка воздействия (DPIA) для данных о местоположении в сочетании с другим критерием",
-        el: "Εκτίμηση αντικτύπου (DPIA) για δεδομένα θέσης σε συνδυασμό με άλλο κριτήριο",
+        el: "Εκτίμηση αντικτύπου (DPIA) για δεδομένα τοποθεσίας σε συνδυασμό με άλλο κριτήριο",
       },
       risposta: 'si',
       dettaglio: {
@@ -298,7 +298,7 @@ export const danimarca: SchedaPaese = {
         nb: 'Den danske listen krever alltid en personvernkonsekvensvurdering for behandling av posisjonsdata i kombinasjon med minst ett annet kriterium (WP248-retningslinjene).',
         nl: 'De Deense lijst vereist altijd een effectbeoordeling voor de verwerking van locatiegegevens in combinatie met ten minste één ander criterium (richtsnoeren WP248).',
         ru: "Датский перечень всегда требует оценки воздействия при обработке данных о местоположении в сочетании по меньшей мере с одним другим критерием (руководство WP248).",
-        el: "Ο δανικός κατάλογος απαιτεί πάντα εκτίμηση αντικτύπου για την επεξεργασία δεδομένων θέσης σε συνδυασμό με τουλάχιστον ένα ακόμη κριτήριο (κατευθυντήριες γραμμές WP248).",
+        el: "Ο δανικός κατάλογος απαιτεί πάντα εκτίμηση αντικτύπου για την επεξεργασία δεδομένων τοποθεσίας σε συνδυασμό με τουλάχιστον ένα ακόμη κριτήριο (κατευθυντήριες γραμμές WP248).",
       },
       fonte: FONTE_DATATILSYNET_DPIA,
     },
@@ -353,7 +353,7 @@ export const danimarca: SchedaPaese = {
         nb: 'Informer de ansatte senest når overvåkingen aktiveres (art. 13 i GDPR).',
         nl: 'Informeer de werknemers uiterlijk bij de activering (art. 13 AVG).',
         ru: "Проинформируйте работников не позднее момента активации (ст. 13 GDPR).",
-        el: "Ενημέρωσε τους εργαζομένους το αργότερο κατά την ενεργοποίηση (άρθρο 13 ΓΚΠΔ).",
+        el: "Ενημέρωσε τους εργαζόμενους το αργότερο κατά την ενεργοποίηση (άρθρο 13 ΓΚΠΔ).",
       },
     },
     {
@@ -370,7 +370,7 @@ export const danimarca: SchedaPaese = {
         nb: 'Gjennomfør personvernkonsekvensvurderingen (DPIA) for posisjonsdata.',
         nl: 'Voer de effectbeoordeling (DPIA) voor de locatiegegevens uit.',
         ru: "Проведите оценку воздействия (DPIA) для данных о местоположении.",
-        el: "Πραγματοποίησε την εκτίμηση αντικτύπου (DPIA) για τα δεδομένα θέσης.",
+        el: "Πραγματοποίησε την εκτίμηση αντικτύπου (DPIA) για τα δεδομένα τοποθεσίας.",
       },
     },
     {

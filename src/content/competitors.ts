@@ -593,7 +593,7 @@ export const COMPETITORS: Competitor[] = [
       sv: 'Spansk HR-plattform för små och medelstora företag, som håller ordning på ledighet och frånvaro. Valfri geolokalisering vid instämpling, utan kontroll av falska positioner.',
       nb: 'Spansk HR-plattform for små og mellomstore bedrifter, med orden på ferie og fravær. Valgfri geolokalisering ved stempling, uten kontroll av simulerte posisjoner.',
       ru: 'Испанская HR-платформа для малого и среднего бизнеса, наводящая порядок в отпусках и отсутствиях. Необязательная геолокация при отметке, без проверки на поддельные координаты.',
-      el: 'Ισπανική πλατφόρμα HR για μικρομεσαίες επιχειρήσεις, με τις άδειες και τις απουσίες σε τάξη. Προαιρετικός εντοπισμός τοποθεσίας στο χτύπημα κάρτας, χωρίς έλεγχο για προσομοιωμένες θέσεις.',
+      el: 'Ισπανική πλατφόρμα HR για μικρομεσαίες επιχειρήσεις, με τις άδειες και τις απουσίες σε τάξη. Προαιρετικός εντοπισμός τοποθεσίας στο χτύπημα κάρτας, χωρίς έλεγχο για προσομοιωμένες τοποθεσίες.',
     },
     features: {
       gps_verified_at_site: true,

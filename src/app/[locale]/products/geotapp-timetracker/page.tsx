@@ -202,7 +202,7 @@ const APP_DESCRIPTION: Record<string, string> = {
   sv: 'GeoTapp TimeTracker är den inbyggda Android- och iOS-appen för tekniker på fältet: stämpling med position, bevisfoton, anteckningar och veckorapporter, kopplad till GeoTapp Flow. Om det saknas täckning sparas stämplingarna på telefonen och skickas när signalen kommer tillbaka.',
   da: 'GeoTapp TimeTracker er den native Android- og iOS-app til teknikere i marken: stempling med position, bevisfotos, noter og ugentlige rapporter, forbundet med GeoTapp Flow. Hvis der ikke er net, gemmes stemplingerne på telefonen og sendes, så snart signalet vender tilbage.',
   nb: 'GeoTapp TimeTracker er den native Android- og iOS-appen for teknikere i felt: stempling med posisjon, bevisbilder, notater og ukentlige rapporter, koblet til GeoTapp Flow. Hvis det ikke er nett, lagres stemplingene på telefonen og sendes så snart signalet er tilbake.',
-  el: 'Το GeoTapp TimeTracker είναι η εγγενής εφαρμογή Android και iOS για τεχνικούς πεδίου: χτύπημα κάρτας με τοποθεσία, φωτογραφίες απόδειξης, σημειώσεις και εβδομαδιαίες αναφορές, συνδεδεμένη με το GeoTapp Flow. Αν δεν υπάρχει δίκτυο, τα χτυπήματα κάρτας αποθηκεύονται στο κινητό και στέλνονται μόλις επανέλθει το σήμα.',
+  el: 'Το GeoTapp TimeTracker είναι η εφαρμογή για Android και iOS για τεχνικούς πεδίου: χτύπημα κάρτας με τοποθεσία, φωτογραφίες απόδειξης, σημειώσεις και εβδομαδιαίες αναφορές, συνδεδεμένη με το GeoTapp Flow. Αν δεν υπάρχει δίκτυο, τα χτυπήματα κάρτας αποθηκεύονται στο κινητό και στέλνονται μόλις επανέλθει το σήμα.',
   ru: 'GeoTapp TimeTracker — мобильное приложение для выездных техников: отметки с контролируемой геопозицией, фотодоказательства, еженедельные отчёты и передача данных в GeoTapp Flow. Работает офлайн.',
 };
 

@@ -135,7 +135,7 @@ export const NEWSLETTER: Record<NewsletterLocale, NewsletterContent> = {
     privacy: 'Adressen holder. Du melder deg av fra hvilken som helst e-post med ett klikk, og da er den borte.',
   },
   el: {
-    title: 'Το ενημερωτικό δελτίο της GeoTapp',
+    title: 'Το ενημερωτικό δελτίο του GeoTapp',
     intro: 'Μία φορά την εβδομάδα, πώς αποδεικνύεται μια εργασία που έγινε χωρίς να παρακολουθείς κανέναν, και τι λένε οι νόμοι και τα δικαστήρια όταν το θέμα καταλήγει άσχημα.',
     promise: 'Καμία διαφήμιση μεταμφιεσμένη σε συμβουλή. Τις εβδομάδες που δεν υπάρχει τίποτα να πούμε, δεν έρχεται τίποτα.',
     placeholder: 'Το email σου',

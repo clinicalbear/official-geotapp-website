@@ -153,7 +153,7 @@ export default function Footer({ localeFissa }: { localeFissa?: AppLocale } = {}
 
         <div className="bt">
           <span>&copy; 2026 GeoTapp. {dict.rights}</span>
-          <span className="fiscal">GeoTapp di Michele Angelo Petraroli · {({ en: 'VAT no.', de: 'USt-IdNr.', nl: 'BTW-nr.', fr: 'N° TVA', es: 'NIF/CIF', pt: 'NIF', da: 'Momsnr.', sv: 'VAT-nummer', nb: 'MVA-nummer', el: 'Αρ. ΦΠΑ', ru: 'ИНН' } as Record<string, string>)[currentLocale.split('-')[0]] ?? 'P.IVA'} IT04183990987</span>
+          <span className="fiscal">GeoTapp di Michele Angelo Petraroli · {({ en: 'VAT no.', de: 'USt-IdNr.', nl: 'BTW-nr.', fr: 'N° TVA', es: 'NIF/CIF', pt: 'NIF', da: 'Momsnr.', sv: 'VAT-nummer', nb: 'MVA-nummer', el: 'Αρ. ΦΠΑ (P.IVA)', ru: 'ИНН' } as Record<string, string>)[currentLocale.split('-')[0]] ?? 'P.IVA'} IT04183990987</span>
         </div>
       </div>
     </footer>

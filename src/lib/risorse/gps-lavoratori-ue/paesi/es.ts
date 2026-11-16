@@ -222,7 +222,7 @@ export const spagna: SchedaPaese = {
         nb: 'AEPD krever at geolokalisering er proporsjonal og ikke brukes til permanent overvåking; hvis formålet er tidsregistrering, kan opplysningene bare angi aktivitetens start og slutt, ikke posisjonen til enhver tid, og systemet skal ikke være i drift når arbeidsdagen er over.',
         nl: "De AEPD verlangt dat geolocatie evenredig is en niet wordt gebruikt voor permanente bewaking; als het doel tijdregistratie is, mogen de gegevens alleen het begin en het einde van de activiteit aangeven, niet de positie op elk moment, en mag het systeem na afloop van de werkdag niet in werking zijn.",
         ru: "AEPD требует, чтобы геолокация была соразмерной и не использовалась для постоянного наблюдения. Если цель состоит в учёте рабочего времени, данные могут показывать только начало и конец деятельности, а не местоположение в каждый момент, и по окончании рабочего дня система не должна работать.",
-        el: "Η AEPD απαιτεί ο γεωεντοπισμός να είναι αναλογικός και να μη χρησιμοποιείται για μόνιμη επιτήρηση· αν ο σκοπός είναι η καταγραφή του ωραρίου, τα δεδομένα μπορούν να δείχνουν μόνο την έναρξη και τη λήξη της δραστηριότητας, όχι τη θέση κάθε στιγμή, και το σύστημα δεν πρέπει να λειτουργεί μετά το τέλος της εργάσιμης ημέρας.",
+        el: "Η AEPD απαιτεί ο γεωεντοπισμός να είναι αναλογικός και να μη χρησιμοποιείται για μόνιμη επιτήρηση· αν ο σκοπός είναι η καταγραφή του ωραρίου, τα δεδομένα μπορούν να δείχνουν μόνο την έναρξη και τη λήξη της δραστηριότητας, όχι την τοποθεσία κάθε στιγμή, και το σύστημα δεν πρέπει να λειτουργεί μετά το τέλος της εργάσιμης ημέρας.",
       },
       fonte: FONTE_AEPD_GUIDA,
     },
@@ -307,7 +307,7 @@ export const spagna: SchedaPaese = {
         nb: 'Informer de ansatte uttrykkelig, klart og utvetydig før aktiveringen (art. 90 LOPDGDD).',
         nl: 'Informeer de werknemers uitdrukkelijk, duidelijk en ondubbelzinnig voor activering (art. 90 LOPDGDD).',
         ru: "Прямо, ясно и недвусмысленно проинформируйте работников до включения системы (ст. 90 LOPDGDD).",
-        el: "Ενημέρωσε τους εργαζομένους ρητά, σαφώς και κατηγορηματικά πριν από την ενεργοποίηση (άρθρο 90 LOPDGDD).",
+        el: "Ενημέρωσε τους εργαζόμενους ρητά, σαφώς και κατηγορηματικά πριν από την ενεργοποίηση (άρθρο 90 LOPDGDD).",
       },
     },
     {

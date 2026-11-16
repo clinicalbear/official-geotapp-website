@@ -296,7 +296,7 @@ export const bosnia: SchedaPaese = {
         nb: 'Informer de ansatte om behandlingen (herunder GPS).',
         nl: 'Informeer de werknemers over de verwerking (inclusief GPS).',
         ru: "Информируйте работников об обработке (включая GPS).",
-        el: "Ενημέρωσε τους εργαζομένους για την επεξεργασία (συμπεριλαμβανομένου του GPS).",
+        el: "Ενημέρωσε τους εργαζόμενους για την επεξεργασία (συμπεριλαμβανομένου του GPS).",
       },
     },
     {
@@ -407,7 +407,7 @@ export const bosnia: SchedaPaese = {
       nb: 'Det er ikke offentliggjort noen konkret AZLP-bot for GPS-sporing av ansatte. Etter den nye loven, som trådte i kraft i mars 2025 og er gjeldende fra 4. oktober 2025, er sanksjonene i GDPR-stil: inntil 40 millioner BAM eller 4 % av den samlede globale årsomsetningen. Med sitt vedtak av 10. november 2025 gjorde AZLP en personvernkonsekvensvurdering obligatorisk for overvåking av ansatte med systemer som følger arbeidet og bevegelsene deres (art. 113 nr. 5 i loven for beløpet).',
       nl: "Er is geen specifieke, gepubliceerde boete van de AZLP voor GPS-tracking van werknemers bekend. Met de nieuwe wet van 2025 zijn de sancties in AVG-stijl: tot 40 miljoen BAM of 4% van de wereldwijde jaaromzet. Met haar besluit van 10 november 2025 heeft de AZLP een effectbeoordeling verplicht gesteld voor het monitoren van werknemers met systemen die hun werk en verplaatsingen volgen (art. 113, lid 5 van de wet voor het bedrag).",
       ru: "Опубликованного штрафа AZLP конкретно за GPS на работниках не обнаружено. По новому закону, действующему с марта 2025 г. и применяемому с 4 октября 2025 г., санкции построены по образцу GDPR: до 40 млн BAM или 4% общемирового годового оборота. Решением от 10 ноября 2025 г. AZLP сделал оценку воздействия обязательной для мониторинга работников системами контроля работы и перемещений (ст. 113 ч. 5 закона для размера санкции).",
-      el: "Δεν προκύπτει δημοσιευμένο πρόστιμο της AZLP ειδικά για το GPS στους εργαζομένους. Με τον νέο νόμο, που ισχύει από τον Μάρτιο του 2025 και εφαρμόζεται από τις 4 Οκτωβρίου 2025, οι κυρώσεις είναι τύπου ΓΚΠΔ: έως 40 εκατ. BAM ή 4% του παγκόσμιου ετήσιου κύκλου εργασιών. Με την απόφαση της 10ης Νοεμβρίου 2025 η AZLP κατέστησε υποχρεωτική την εκτίμηση αντικτύπου για την παρακολούθηση των εργαζομένων με συστήματα ελέγχου της εργασίας και των μετακινήσεων (άρθρο 113 παρ. 5 του νόμου για το ποσό).",
+      el: "Δεν προκύπτει δημοσιευμένο πρόστιμο της AZLP ειδικά για το GPS στους εργαζόμενους. Με τον νέο νόμο, που ισχύει από τον Μάρτιο του 2025 και εφαρμόζεται από τις 4 Οκτωβρίου 2025, οι κυρώσεις είναι τύπου ΓΚΠΔ: έως 40 εκατ. BAM ή 4% του παγκόσμιου ετήσιου κύκλου εργασιών. Με την απόφαση της 10ης Νοεμβρίου 2025 η AZLP κατέστησε υποχρεωτική την εκτίμηση αντικτύπου για την παρακολούθηση των εργαζομένων με συστήματα ελέγχου της εργασίας και των μετακινήσεων (άρθρο 113 παρ. 5 του νόμου για το ποσό).",
     },
     urlFonte: 'https://www.sluzbenilist.ba/page/akt/aCRNh0ohz4nh78h77P7BE=',
     tipoImporto: 'massimale',

@@ -62,7 +62,7 @@ const FOUNDER_ALT: Record<string, string> = {
   da: 'Michele Angelo Petraroli, grundlægger af GeoTapp',
   sv: 'Michele Angelo Petraroli, grundare av GeoTapp',
   nb: 'Michele Angelo Petraroli, grunnlegger av GeoTapp',
-  el: 'Michele Angelo Petraroli, ιδρυτής της GeoTapp',
+  el: 'Michele Angelo Petraroli, ιδρυτής του GeoTapp',
   ru: 'Микеле Анджело Петрароли, основатель GeoTapp',
 };
 const FOUNDER_ALT_STAGE: Record<string, string> = {
@@ -76,7 +76,7 @@ const FOUNDER_ALT_STAGE: Record<string, string> = {
   da: 'Michele Angelo Petraroli, grundlægger af GeoTapp, på scenen',
   sv: 'Michele Angelo Petraroli, grundare av GeoTapp, på scen',
   nb: 'Michele Angelo Petraroli, grunnlegger av GeoTapp, på scenen',
-  el: 'Michele Angelo Petraroli, ιδρυτής της GeoTapp, στη σκηνή',
+  el: 'Michele Angelo Petraroli, ιδρυτής του GeoTapp, στη σκηνή',
   ru: 'Микеле Анджело Петрароли, основатель GeoTapp, на сцене',
 };
 const COPY_LABEL: Record<string, string> = { it: 'Copia', en: 'Copy', de: 'Kopieren', nl: 'Kopiëren', fr: 'Copier', es: 'Copiar', pt: 'Copiar', da: 'Kopiér', sv: 'Kopiera', nb: 'Kopier', el: 'Αντιγραφή', ru: 'Копировать' };

@@ -262,7 +262,7 @@ export const svizzera: SchedaPaese = {
         nb: 'nLPD/revFADP krever bare en personvernkonsekvensvurdering når behandlingen kan innebære høy risiko for personlighetsrettigheter eller grunnleggende rettigheter (art. 22 nr. 1). Loven nevner som eksempler behandling av sensitive opplysninger i stor skala og systematisk overvåking av store offentlige områder (nr. 2): GPS på ansatte er ikke nevnt, så det må vurderes fra sak til sak. Hvis høy risiko fortsatt foreligger etter avbøtende tiltak, må FDPIC høres (art. 23).',
         nl: 'De nLPD/revFADP vereist alleen een effectbeoordeling wanneer de verwerking een hoog risico kan inhouden voor de persoonlijkheid of de grondrechten (art. 22, lid 1). De wet noemt als voorbeelden grootschalige verwerking van gevoelige gegevens en systematische bewaking van grote openbare gebieden (lid 2): gps bij werknemers wordt niet genoemd en moet per geval worden beoordeeld. Blijft er na maatregelen een hoog risico, dan moet de FDPIC worden geraadpleegd (art. 23).',
         ru: "nLPD требует оценки воздействия, только когда обработка может создавать высокий риск для личности или основных прав (ст. 22 ч. 1). В качестве примеров закон называет обработку чувствительных данных в большом объёме и систематическое наблюдение за обширными общественными зонами (ч. 2): GPS-слежение за работниками там не упомянуто, поэтому его нужно оценивать в каждом конкретном случае. Если высокий риск сохраняется и после принятых мер, необходимо обратиться в IFPDT (ст. 23).",
-        el: "Ο nLPD (νέος ομοσπονδιακός νόμος για την προστασία δεδομένων) επιβάλλει εκτίμηση αντικτύπου μόνο όταν η επεξεργασία ενδέχεται να συνεπάγεται υψηλό κίνδυνο για την προσωπικότητα ή τα θεμελιώδη δικαιώματα (άρθρο 22 παρ. 1). Ο νόμος αναφέρει ως παραδείγματα την επεξεργασία ευαίσθητων δεδομένων σε μεγάλη κλίμακα και τη συστηματική παρακολούθηση εκτεταμένων δημόσιων χώρων (παρ. 2): το GPS στους εργαζομένους δεν αναφέρεται, επομένως πρέπει να αξιολογείται κατά περίπτωση. Αν ο υψηλός κίνδυνος παραμένει και μετά τα μέτρα, πρέπει να ακουστεί η IFPDT (άρθρο 23).",
+        el: "Ο nLPD (νέος ομοσπονδιακός νόμος για την προστασία δεδομένων) επιβάλλει εκτίμηση αντικτύπου μόνο όταν η επεξεργασία ενδέχεται να συνεπάγεται υψηλό κίνδυνο για την προσωπικότητα ή τα θεμελιώδη δικαιώματα (άρθρο 22 παρ. 1). Ο νόμος αναφέρει ως παραδείγματα την επεξεργασία ευαίσθητων δεδομένων σε μεγάλη κλίμακα και τη συστηματική παρακολούθηση εκτεταμένων δημόσιων χώρων (παρ. 2): το GPS στους εργαζόμενους δεν αναφέρεται, επομένως πρέπει να αξιολογείται κατά περίπτωση. Αν ο υψηλός κίνδυνος παραμένει και μετά τα μέτρα, πρέπει να ακουστεί η IFPDT (άρθρο 23).",
       },
       fonte: FONTE_NLPD,
     },
@@ -317,7 +317,7 @@ export const svizzera: SchedaPaese = {
         nb: 'Informer de ansatte på forhånd (der overvåkingen påvirker helsen, må du også høre dem: OLT 3 art. 6).',
         nl: 'Informeer de werknemers vooraf (raakt de controle de gezondheid, raadpleeg hen dan ook: OLT 3 art. 6).',
         ru: "Заранее проинформируйте работников (если наблюдение влияет на здоровье, проведите с ними консультацию: OLT 3 ст. 6).",
-        el: "Ενημέρωσε εκ των προτέρων τους εργαζομένους (όπου η επιτήρηση επηρεάζει την υγεία, συμβουλεύσου τους: OLT 3 άρθρο 6).",
+        el: "Ενημέρωσε εκ των προτέρων τους εργαζόμενους (όπου η επιτήρηση επηρεάζει την υγεία, συμβουλεύσου τους: OLT 3 άρθρο 6).",
       },
     },
     {

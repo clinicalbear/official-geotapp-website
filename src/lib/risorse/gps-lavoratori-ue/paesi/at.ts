@@ -213,7 +213,7 @@ export const austria: SchedaPaese = {
         nb: 'GPS på ansatte er bare tillatt hvis det er nødvendig: forbudt der formålet kan nås med mindre inngripende midler',
         nl: 'GPS bij werknemers alleen toegestaan als het noodzakelijk is: verboden als het doel met minder ingrijpende middelen kan worden bereikt',
         ru: "GPS на работниках допускается только при необходимости: запрещено, если цели можно достичь менее инвазивными средствами",
-        el: "Το GPS στους εργαζομένους επιτρέπεται μόνο αν είναι αναγκαίο: απαγορεύεται αν ο σκοπός επιτυγχάνεται με λιγότερο παρεμβατικά μέσα",
+        el: "Το GPS στους εργαζόμενους επιτρέπεται μόνο αν είναι αναγκαίο: απαγορεύεται αν ο σκοπός επιτυγχάνεται με λιγότερο παρεμβατικά μέσα",
       },
       risposta: 'si',
       dettaglio: {
@@ -260,7 +260,7 @@ export const austria: SchedaPaese = {
         nb: 'Den østerrikske DSFA-V-forskriften nevner ikke geolokalisering av ansatte. Den krever en personvernkonsekvensvurdering når ett av kriteriene i § 2 nr. 2 er oppfylt (herunder en rent automatisert vurdering av posisjon eller bevegelser med negative virkninger) eller to eller flere kriterier i § 2 nr. 3 (herunder opplysninger om ansatte, som regnes som sårbare personer, og posisjonsdata i TKGs forstand). Systematisk sporing av ansatte oppfyller vanligvis disse kravene, så en vurdering bør gjennomføres; artikkel 35 i GDPR har siste ord.',
         nl: 'De Oostenrijkse DSFA-V noemt de geolokalisatie van werknemers niet uitdrukkelijk. Zij vereist een effectbeoordeling als een van de criteria van § 2, lid 2 is vervuld (o.a. uitsluitend geautomatiseerde beoordeling van locatie of verplaatsingen met nadelige gevolgen) of twee of meer criteria van § 2, lid 3 (o.a. gegevens van werknemers als kwetsbare personen en locatiegegevens in de zin van de TKG). Systematische tracking van werknemers voldoet daar meestal aan, dus het is verstandig een beoordeling uit te voeren; artikel 35 AVG blijft doorslaggevend.',
         ru: "Австрийский регламент DSFA-V не называет геолокацию сотрудников. Он предусматривает оценку воздействия при наличии одного из критериев § 2 Abs. 2 (в том числе исключительно автоматизированная оценка местонахождения или перемещений с неблагоприятными последствиями) либо двух и более критериев § 2 Abs. 3 (в том числе данные работников, которые считаются уязвимыми лицами, и данные о местонахождении по смыслу TKG). Систематическое отслеживание сотрудников, как правило, отвечает этим требованиям, поэтому её целесообразно провести; последнее слово остаётся за ст. 35 GDPR.",
-        el: "Ο αυστριακός κανονισμός DSFA-V δεν αναφέρει τον γεωεντοπισμό των εργαζομένων. Προβλέπει εκτίμηση αντικτύπου όταν συντρέχει ένα από τα κριτήρια του § 2 παρ. 2 (μεταξύ άλλων η αξιολόγηση, μόνο αυτοματοποιημένη, τοποθεσίας ή μετακινήσεων με αρνητικά αποτελέσματα) ή δύο ή περισσότερα κριτήρια του § 2 παρ. 3 (μεταξύ άλλων τα δεδομένα εργαζομένων, που θεωρούνται ευάλωτα πρόσωπα, και τα δεδομένα θέσης κατά τον TKG). Η συστηματική παρακολούθηση των εργαζομένων συνήθως πληροί τις προϋποθέσεις, οπότε συμφέρει να γίνει· την τελευταία λέξη έχει το άρθρο 35 ΓΚΠΔ.",
+        el: "Ο αυστριακός κανονισμός DSFA-V δεν αναφέρει τον γεωεντοπισμό των εργαζομένων. Προβλέπει εκτίμηση αντικτύπου όταν συντρέχει ένα από τα κριτήρια του § 2 παρ. 2 (μεταξύ άλλων η αξιολόγηση, μόνο αυτοματοποιημένη, τοποθεσίας ή μετακινήσεων με αρνητικά αποτελέσματα) ή δύο ή περισσότερα κριτήρια του § 2 παρ. 3 (μεταξύ άλλων τα δεδομένα εργαζομένων, που θεωρούνται ευάλωτα πρόσωπα, και τα δεδομένα τοποθεσίας κατά τον TKG). Η συστηματική παρακολούθηση των εργαζομένων συνήθως πληροί τις προϋποθέσεις, οπότε συμφέρει να γίνει· την τελευταία λέξη έχει το άρθρο 35 ΓΚΠΔ.",
       },
       fonte: FONTE_DSFA_V,
     },
@@ -332,7 +332,7 @@ export const austria: SchedaPaese = {
         nb: 'Informer de ansatte, og finn et gyldig behandlingsgrunnlag (art. 6 i GDPR).',
         nl: 'Informeer de werknemers en bepaal een geldige rechtsgrondslag (art. 6 AVG).',
         ru: "Проинформируйте работников и определите действительное правовое основание (ст. 6 GDPR).",
-        el: "Ενημέρωσε τους εργαζομένους και βρες μια έγκυρη νομική βάση (άρθρο 6 ΓΚΠΔ).",
+        el: "Ενημέρωσε τους εργαζόμενους και βρες μια έγκυρη νομική βάση (άρθρο 6 ΓΚΠΔ).",
       },
     },
     {

@@ -207,7 +207,7 @@ export const lussemburgo: SchedaPaese = {
         nb: 'Grunnlag = et vilkår i art. 6 i GDPR og individuell informasjon; ingen permanent sporing hvis privat bruk er tillatt, mulig for den ansatte å slå av',
         nl: 'Grondslag = een voorwaarde van art. 6 AVG en individuele informatie; geen permanente tracering als prive-gebruik is toegestaan, door de werknemer uit te schakelen',
         ru: "Основание: одно из условий ст. 6 GDPR и индивидуальное информирование; никакого постоянного отслеживания, если допускается личное использование, с возможностью отключения работником",
-        el: 'Βάση = μία από τις προϋποθέσεις του άρθρου 6 ΓΚΠΔ και ατομική ενημέρωση· καμία μόνιμη παρακολούθηση θέσης αν επιτρέπεται η ιδιωτική χρήση, απενεργοποιήσιμη από τον εργαζόμενο',
+        el: 'Βάση = μία από τις προϋποθέσεις του άρθρου 6 ΓΚΠΔ και ατομική ενημέρωση· καμία μόνιμη παρακολούθηση τοποθεσίας αν επιτρέπεται η ιδιωτική χρήση, απενεργοποιήσιμη από τον εργαζόμενο',
       },
       risposta: 'si',
       dettaglio: {
@@ -239,7 +239,7 @@ export const lussemburgo: SchedaPaese = {
         nb: 'Vurdering av personvernkonsekvenser (AIPD) ved geolokalisering som regelmessig eller systematisk overvåker ansatte (for eksempel av arbeidstiden)',
         nl: 'Effectbeoordeling (DPIA) voor geolocatie die werknemers regelmatig of stelselmatig monitort (bijvoorbeeld voor de arbeidstijd)',
         ru: "Оценка воздействия (DPIA) для геолокации, которая регулярно или систематически контролирует сотрудников (например, для учёта рабочего времени)",
-        el: 'Εκτίμηση αντικτύπου (AIPD) για τον γεωγραφικό εντοπισμό που ελέγχει τακτικά ή συστηματικά τους εργαζομένους (π.χ. για τον χρόνο εργασίας)',
+        el: 'Εκτίμηση αντικτύπου (AIPD) για τον γεωγραφικό εντοπισμό που ελέγχει τακτικά ή συστηματικά τους εργαζόμενους (π.χ. για τον χρόνο εργασίας)',
       },
       risposta: 'dipende',
       dettaglio: {
@@ -254,7 +254,7 @@ export const lussemburgo: SchedaPaese = {
         nb: 'Ifølge CNPD kreves det en vurdering av personvernkonsekvenser hvis geolokaliseringen har som formål å overvåke de ansatte regelmessig og systematisk, eller innebærer en systematisk overvåking av dem (for eksempel for å følge arbeidstiden). Hvis den bare tjener til å optimalisere arbeidsprosesser uten å påvirke de ansatte, er den ikke nødvendigvis obligatorisk.',
         nl: 'Volgens de CNPD is een effectbeoordeling vereist als geolocatie bedoeld is om werknemers regelmatig en stelselmatig te controleren of tot stelselmatig toezicht leidt (bijvoorbeeld om de arbeidstijd te volgen). Dient ze alleen om werkprocessen te optimaliseren zonder de werknemers te raken, dan is ze niet noodzakelijk verplicht.',
         ru: "По мнению CNPD, оценка воздействия нужна, если геолокация предназначена для регулярного и систематического контроля сотрудников или влечёт за собой систематическое наблюдение за ними (например, для отслеживания рабочего времени). Если она служит лишь оптимизации рабочих процессов и не затрагивает сотрудников, она не обязательно является обязательной.",
-        el: 'Για την CNPD απαιτείται εκτίμηση αντικτύπου αν ο γεωγραφικός εντοπισμός έχει σκοπό να ελέγχει τακτικά και συστηματικά τους εργαζομένους ή συνεπάγεται συστηματική επιτήρησή τους (για παράδειγμα για την παρακολούθηση του χρόνου εργασίας). Αν εξυπηρετεί μόνο τη βελτιστοποίηση των διαδικασιών εργασίας χωρίς να επηρεάζει τους εργαζομένους, δεν είναι απαραίτητα υποχρεωτική.',
+        el: 'Για την CNPD απαιτείται εκτίμηση αντικτύπου αν ο γεωγραφικός εντοπισμός έχει σκοπό να ελέγχει τακτικά και συστηματικά τους εργαζόμενους ή συνεπάγεται συστηματική επιτήρησή τους (για παράδειγμα για την παρακολούθηση του χρόνου εργασίας). Αν εξυπηρετεί μόνο τη βελτιστοποίηση των διαδικασιών εργασίας χωρίς να επηρεάζει τους εργαζόμενους, δεν είναι απαραίτητα υποχρεωτική.',
       },
       fonte: FONTE_CNPD_AIPD,
     },
@@ -292,7 +292,7 @@ export const lussemburgo: SchedaPaese = {
         nb: 'Gi delegasjonen eller de ansatte mulighet til å be CNPD om en uttalelse innen 15 dager (oppsettende virkning).',
         nl: 'Geef de afvaardiging of de werknemers de mogelijkheid om binnen 15 dagen een advies aan de CNPD te vragen (schorsende werking).',
         ru: "Дайте представительству или работникам возможность запросить заключение CNPD в течение 15 дней (с приостанавливающим действием).",
-        el: 'Άφησε στην αντιπροσωπεία ή στους εργαζομένους τη δυνατότητα να ζητήσουν γνώμη της CNPD εντός 15 ημερών (ανασταλτικό αποτέλεσμα).',
+        el: 'Άφησε στην αντιπροσωπεία ή στους εργαζόμενους τη δυνατότητα να ζητήσουν γνώμη της CNPD εντός 15 ημερών (ανασταλτικό αποτέλεσμα).',
       },
     },
     {
@@ -309,7 +309,7 @@ export const lussemburgo: SchedaPaese = {
         nb: 'Finn et rettslig grunnlag etter art. 6 i GDPR, og informer de ansatte individuelt (art. 13).',
         nl: 'Bepaal een rechtsgrondslag op grond van art. 6 AVG en informeer de werknemers individueel (art. 13).',
         ru: "Определите правовое основание по ст. 6 GDPR и индивидуально проинформируйте работников (ст. 13).",
-        el: 'Βρες μια νομική βάση του άρθρου 6 ΓΚΠΔ και ενημέρωσε ατομικά τους εργαζομένους (άρθρο 13).',
+        el: 'Βρες μια νομική βάση του άρθρου 6 ΓΚΠΔ και ενημέρωσε ατομικά τους εργαζόμενους (άρθρο 13).',
       },
     },
     {
@@ -326,7 +326,7 @@ export const lussemburgo: SchedaPaese = {
         nb: 'Gjennomfør vurderingen av personvernkonsekvenser (AIPD) hvis geolokaliseringen regelmessig overvåker ansatte.',
         nl: 'Voer de effectbeoordeling (DPIA) uit als de geolocatie werknemers regelmatig monitort.',
         ru: "Проведите оценку воздействия (DPIA), если геолокация регулярно контролирует сотрудников.",
-        el: 'Κάνε την εκτίμηση αντικτύπου (AIPD) αν ο γεωγραφικός εντοπισμός ελέγχει τακτικά τους εργαζομένους.',
+        el: 'Κάνε την εκτίμηση αντικτύπου (AIPD) αν ο γεωγραφικός εντοπισμός ελέγχει τακτικά τους εργαζόμενους.',
       },
     },
     {
@@ -343,7 +343,7 @@ export const lussemburgo: SchedaPaese = {
         nb: 'Sett opp systemet: ingen permanent sporing hvis privat bruk er tillatt, mulig for den ansatte å slå av.',
         nl: 'Configureer het systeem: geen permanente tracering als prive-gebruik is toegestaan, door de werknemer uit te schakelen.',
         ru: "Настройте систему: никакого постоянного отслеживания, если допускается личное использование, с возможностью отключения работником.",
-        el: 'Ρύθμισε το σύστημα: καμία μόνιμη παρακολούθηση θέσης αν επιτρέπεται η ιδιωτική χρήση, απενεργοποιήσιμη από τον εργαζόμενο.',
+        el: 'Ρύθμισε το σύστημα: καμία μόνιμη παρακολούθηση τοποθεσίας αν επιτρέπεται η ιδιωτική χρήση, απενεργοποιήσιμη από τον εργαζόμενο.',
       },
     },
     {
