@@ -5,7 +5,7 @@ import { DEFAULT_LOCALE, type AppLocale } from '@/lib/i18n/config';
 import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
 import { getSicurezzaContent } from '@/content/settori/sicurezza';
 import SettorePageLayout from '@/components/SettorePageLayout';
-import NovitaStrumenti from '@/components/NovitaStrumenti';
+import NovitaStrumenti, { NovitaHero } from '@/components/NovitaStrumenti';
 import BlogHighlights from '@/components/BlogHighlights';
 
 const pathname = '/settori/sicurezza';
@@ -57,7 +57,7 @@ export default async function SicurezzaLocalePage({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <SettorePageLayout content={content} locale={resolvedLocale} settore="sicurezza" novita={<NovitaStrumenti settore="sicurezza" locale={resolvedLocale} />}>
+      <SettorePageLayout content={content} locale={resolvedLocale} settore="sicurezza" novita={<NovitaStrumenti settore="sicurezza" locale={resolvedLocale} />} heroVisual={<NovitaHero settore="sicurezza" locale={resolvedLocale} />}>
         <BlogHighlights locale={resolvedLocale} categoryId={9} />
       </SettorePageLayout>
     </>

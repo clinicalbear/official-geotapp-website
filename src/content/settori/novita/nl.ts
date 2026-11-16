@@ -9,6 +9,11 @@ const copy: NovitaCopy = {
     altPhone: 'TimeTracker op de telefoon: scherm van {tool}',
     flowOnly: 'Dit hulpmiddel gebruikt u in het Flow-paneel: op de telefoon van uw medewerkers hoeft u niets in te stellen.',
     seeAlso: 'Voor elektrische metingen, ketels en F-gassen zijn er aparte hulpmiddelen:',
+    moreShots: 'Meer schermen van dit hulpmiddel',
+    enlarge: 'Vergroten: {name}',
+    close: 'Sluiten',
+    prev: 'Vorige',
+    next: 'Volgende',
   },
   sections: {
     sicurezza: {

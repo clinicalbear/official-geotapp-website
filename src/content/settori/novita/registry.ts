@@ -63,6 +63,23 @@ export const SETTORE_TOOLS: Partial<Record<SettoreSlug, { section: NovitaSection
   impianti: { section: 'impianti', tools: ['consegna_firma', 'magazzino_furgone'] },
 };
 
+/**
+ * Strumento di apertura della pagina: la sua schermata Flow (grande) e la sua schermata del
+ * telefono (se esiste) compongono l'immagine dell'hero. Sempre uno strumento che sta anche in
+ * SETTORE_TOOLS della stessa pagina.
+ */
+export const HERO_TOOL: Partial<Record<SettoreSlug, ToolKey>> = {
+  sicurezza: 'giro_ronda',
+  pulizie: 'qualita_pulizie',
+  elettricisti: 'verifiche_misure',
+  edilizia: 'documenti_imprese',
+  idraulici: 'caldaie',
+  termoidraulici: 'caldaie',
+  installatori: 'consegna_firma',
+  impianti: 'consegna_firma',
+  manutenzione: 'sla',
+};
+
 /** Pagine di settore verso cui la sezione "impianti" rimanda. */
 export const IMPIANTI_RIMANDI: SettoreSlug[] = ['elettricisti', 'idraulici'];
 

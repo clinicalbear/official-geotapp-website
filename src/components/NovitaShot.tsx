@@ -3,34 +3,56 @@
 import { useEffect, useRef, useState } from 'react';
 
 /**
- * Una schermata. Se il file non c'e' (le immagini arrivano dopo il testo) la figura sparisce
- * invece di mostrare un'icona rotta: il controllo gira anche dopo l'idratazione, perche'
- * l'errore di un'immagine puo' arrivare prima che React abbia agganciato onError.
+ * Mattoni delle schermate vere dei prodotti (Flow 1440x813, telefono 540x1202): l'immagine
+ * (se il file non c'e' sparisce invece di mostrare un'icona rotta: il controllo gira anche dopo
+ * l'idratazione, perche' l'errore puo' arrivare prima che React agganci onError) e la cornice
+ * di telefono disegnata in CSS.
  */
-export default function NovitaShot({
-  src,
-  alt,
-  width,
-  height,
-  caption,
-}: {
+
+export interface Shot {
+  id: string;
   src: string;
   alt: string;
-  width: number;
-  height: number;
   caption?: string;
-}) {
+  kind: 'flow' | 'phone';
+}
+
+export const FLOW_SIZE = { w: 1440, h: 813 };
+export const PHONE_SIZE = { w: 540, h: 1202 };
+const size = (k: Shot['kind']) => (k === 'flow' ? FLOW_SIZE : PHONE_SIZE);
+
+export function Img({ shot, eager, className }: { shot: Shot; eager?: boolean; className?: string }) {
   const ref = useRef<HTMLImageElement>(null);
   const [broken, setBroken] = useState(false);
   useEffect(() => {
     const el = ref.current;
     if (el && el.complete && el.naturalWidth === 0) setBroken(true);
   }, []);
+  if (broken) return null;
+  const s = size(shot.kind);
   return (
-    <figure className="nv-fig" hidden={broken}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img ref={ref} src={src} alt={alt} width={width} height={height} loading="lazy" decoding="async" onError={() => setBroken(true)} />
-      {caption ? <figcaption>{caption}</figcaption> : null}
-    </figure>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      ref={ref}
+      className={className}
+      src={shot.src}
+      alt={shot.alt}
+      width={s.w}
+      height={s.h}
+      loading={eager ? 'eager' : 'lazy'}
+      decoding="async"
+      {...(eager ? { fetchPriority: 'high' as const } : {})}
+      onError={() => setBroken(true)}
+    />
   );
 }
+
+/** Cornice di telefono disegnata in CSS attorno a una schermata. */
+export function PhoneFrame({ children, className = '' }: { children: React.ReactNode; className?: string }) {
+  return (
+    <div className={`nv-phone ${className}`}>
+      <div className="nv-phone-screen">{children}</div>
+    </div>
+  );
+}
+

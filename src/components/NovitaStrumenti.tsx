@@ -5,70 +5,76 @@ import { localizePath } from '@/lib/i18n/locale-routing';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { SettoreSlug } from '@/content/settori/types';
 import { getNovitaCopy } from '@/content/settori/novita';
-import { IMPIANTI_RIMANDI, SETTORE_TOOLS, TOOL_SHOTS, shotSrc } from '@/content/settori/novita/registry';
+import { HERO_TOOL, IMPIANTI_RIMANDI, SETTORE_TOOLS, TOOL_SHOTS, shotSrc } from '@/content/settori/novita/registry';
 import type { NovitaCopy, ToolKey } from '@/content/settori/novita/types';
-import NovitaShot from './NovitaShot';
+import { HeroShots, ToolMedia, type Shot } from './NovitaMedia';
 
-const FLOW = { w: 1440, h: 813 };
-const PHONE = { w: 540, h: 1202 };
-
-function alts(tpl: string, tool: string, i: number, n: number) {
+function alt(tpl: string, tool: string, i: number, n: number) {
   const a = tpl.replace('{tool}', tool);
   return n > 1 ? `${a} (${i + 1}/${n})` : a;
 }
 
-function Tool({ k, copy, locale }: { k: ToolKey; copy: NovitaCopy; locale: AppLocale }) {
+/** Schermate di uno strumento, con testo alternativo e didascalia (dalla scheda comune, se c'e'). */
+function shotsOf(k: ToolKey, copy: NovitaCopy, locale: AppLocale): { flow: Shot[]; phone: Shot[] } {
+  const title = copy.tools[k].title;
+  const s = TOOL_SHOTS[k];
+  const make = (kind: Shot['kind'], ids: string[]): Shot[] =>
+    ids.map((id, i) => ({
+      id,
+      kind,
+      src: shotSrc(locale, id),
+      alt: copy.shots[id] ?? alt(kind === 'flow' ? copy.ui.altFlow : copy.ui.altPhone, title, i, ids.length),
+      caption: copy.shots[id],
+    }));
+  return { flow: make('flow', s.flow), phone: make('phone', s.phone) };
+}
+
+/**
+ * Immagine dell'hero: la schermata Flow dello strumento di apertura e, sfalsato in basso a
+ * destra, il telefono con la schermata TimeTracker dello stesso strumento.
+ */
+export async function NovitaHero({ settore, locale }: { settore: SettoreSlug; locale: AppLocale }) {
+  const k = HERO_TOOL[settore];
+  if (!k) return null;
+  const copy = await getNovitaCopy(locale);
+  const { flow, phone } = shotsOf(k, copy, locale);
+  if (!flow[0]) return null;
+  return <HeroShots flow={flow[0]} phone={phone[0]} />;
+}
+
+function Tool({ k, copy, locale, rev }: { k: ToolKey; copy: NovitaCopy; locale: AppLocale; rev: boolean }) {
   const t = copy.tools[k];
-  const shots = TOOL_SHOTS[k];
-  const wide = k === 'emergenze';
-  const flowFig = (id: string, i: number, withCaption: boolean) => (
-    <NovitaShot
-      key={id}
-      src={shotSrc(locale, id)}
-      alt={copy.shots[id] ?? alts(copy.ui.altFlow, t.title, i, shots.flow.length)}
-      width={FLOW.w}
-      height={FLOW.h}
-      caption={withCaption ? copy.shots[id] : undefined}
-    />
-  );
-  const phoneFig = (id: string, i: number, withCaption: boolean) => (
-    <NovitaShot
-      key={id}
-      src={shotSrc(locale, id)}
-      alt={copy.shots[id] ?? alts(copy.ui.altPhone, t.title, i, shots.phone.length)}
-      width={PHONE.w}
-      height={PHONE.h}
-      caption={withCaption ? copy.shots[id] : undefined}
-    />
-  );
+  const { flow, phone } = shotsOf(k, copy, locale);
+  const ui = copy.ui;
   return (
-    <article className={`nv-tool r${wide ? ' nv-wide' : ''}`} id={`strumento-${k}`}>
-      <div>
+    <article className={`nv-tool${rev ? ' nv-rev' : ''}`} id={`strumento-${k}`}>
+      <div className="nv-text">
         <h3>{t.title}</h3>
         <p>{t.body}</p>
         {t.note ? <p className="nv-note">{t.note}</p> : null}
-        {shots.phone.length === 0 ? <p className="nv-flowonly">{copy.ui.flowOnly}</p> : null}
+        {phone.length === 0 ? <p className="nv-flowonly">{ui.flowOnly}</p> : null}
       </div>
-      {wide ? (
-        <div>
-          <div className="nv-gal-flow">{shots.flow.map((id, i) => flowFig(id, i, true))}</div>
-          <div className="nv-gal-phone">{shots.phone.map((id, i) => phoneFig(id, i, true))}</div>
-        </div>
-      ) : (
-        <div className="nv-shots">
-          <div className="nv-flowcol">{shots.flow.map((id, i) => flowFig(id, i, false))}</div>
-          {shots.phone.length > 0 ? (
-            <div className="nv-phonecol">{shots.phone.map((id, i) => phoneFig(id, i, false))}</div>
-          ) : null}
-        </div>
-      )}
+      <ToolMedia
+        flow={flow}
+        phone={phone}
+        labels={{
+          moreShots: ui.moreShots,
+          enlarge: ui.enlarge,
+          close: ui.close,
+          prev: ui.prev,
+          next: ui.next,
+          flowCaption: ui.flowCaption,
+          phoneCaption: ui.phoneCaption,
+        }}
+      />
     </article>
   );
 }
 
 /**
- * Sezione "nuovi strumenti" di una pagina di settore. Server component: i testi per lingua
- * restano sul server (la pagina di settore e' un componente client e li riceve gia' resi).
+ * Cuore della pagina di settore: una fascia per strumento, con le schermate vere. Server
+ * component: i testi per lingua restano sul server (la pagina e' un componente client e li
+ * riceve gia' resi).
  */
 export default async function NovitaStrumenti({ settore, locale }: { settore: SettoreSlug; locale: AppLocale }) {
   const def = SETTORE_TOOLS[settore];
@@ -77,17 +83,21 @@ export default async function NovitaStrumenti({ settore, locale }: { settore: Se
   const sec = copy.sections[def.section];
   const dict = getDictionary(locale) as any;
   return (
-    <section className="sec nv-novita" id="nuovi-strumenti">
+    <section className="sec nv-novita st-alt" id="nuovi-strumenti">
       <div className="w">
-        <p className="kk k r">{copy.ui.kicker}</p>
-        <h2 className="r" style={{ maxWidth: '24ch' }}>{sec.title}</h2>
-        <p className="nv-intro r d1">{sec.intro}</p>
-        {def.tools.map((k) => (
-          <Tool key={k} k={k} copy={copy} locale={locale} />
+        <div className="st-head nv-head">
+          <div>
+            <p className="kk k">{copy.ui.kicker}</p>
+            <h2>{sec.title}</h2>
+          </div>
+          <p className="nv-intro">{sec.intro}</p>
+        </div>
+        {def.tools.map((k, i) => (
+          <Tool key={k} k={k} copy={copy} locale={locale} rev={i % 2 === 1} />
         ))}
-        {sec.outro ? <p className="nv-intro r">{sec.outro}</p> : null}
+        {sec.outro ? <p className="nv-intro nv-outro">{sec.outro}</p> : null}
         {def.section === 'impianti' ? (
-          <p className="nv-links r">
+          <p className="nv-links">
             <span>{copy.ui.seeAlso}</span>
             {IMPIANTI_RIMANDI.map((s) => (
               <Link key={s} href={localizePath(`/settori/${s}`, locale)}>

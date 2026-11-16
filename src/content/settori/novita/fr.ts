@@ -9,6 +9,11 @@ const copy: NovitaCopy = {
     altPhone: 'TimeTracker sur le téléphone : écran de {tool}',
     flowOnly: 'Cet outil s\'utilise depuis Flow : rien à installer sur le téléphone de vos équipes.',
     seeAlso: 'Pour les vérifications électriques, les chaudières et les fluides frigorigènes, il existe des outils dédiés :',
+    moreShots: 'Autres écrans de cet outil',
+    enlarge: 'Agrandir : {name}',
+    close: 'Fermer',
+    prev: 'Précédent',
+    next: 'Suivant',
   },
   sections: {
     sicurezza: {

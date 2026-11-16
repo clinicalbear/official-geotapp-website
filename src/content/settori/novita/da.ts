@@ -9,6 +9,11 @@ const copy: NovitaCopy = {
     altPhone: 'TimeTracker på telefonen: skærmbillede af {tool}',
     flowOnly: 'Dette værktøj bruger du fra Flow-panelet: dine medarbejdere skal ikke gøre noget på telefonen.',
     seeAlso: 'Til eftersyn af el, kedler og F-gas findes der egne værktøjer:',
+    moreShots: 'Flere skærmbilleder fra dette værktøj',
+    enlarge: 'Forstør: {name}',
+    close: 'Luk',
+    prev: 'Forrige',
+    next: 'Næste',
   },
   sections: {
     sicurezza: {

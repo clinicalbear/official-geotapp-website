@@ -9,6 +9,11 @@ const copy: NovitaCopy = {
     altPhone: 'TimeTracker en el móvil: pantalla de {tool}',
     flowOnly: 'Esta herramienta se usa desde el panel de Flow: no hace falta nada en el móvil de tus operarios.',
     seeAlso: 'Para las revisiones eléctricas, las calderas y los gases fluorados hay herramientas específicas:',
+    moreShots: 'Más pantallas de esta herramienta',
+    enlarge: 'Ampliar: {name}',
+    close: 'Cerrar',
+    prev: 'Anterior',
+    next: 'Siguiente',
   },
   sections: {
     sicurezza: {

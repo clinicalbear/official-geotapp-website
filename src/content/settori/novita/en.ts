@@ -9,6 +9,11 @@ const copy: NovitaCopy = {
     altPhone: 'TimeTracker on the phone: {tool} screen',
     flowOnly: 'This tool is used from the Flow dashboard: nothing is needed on your crew\'s phones.',
     seeAlso: 'For electrical checks, boilers and F-gas there are dedicated tools:',
+    moreShots: 'More screens from this tool',
+    enlarge: 'Enlarge: {name}',
+    close: 'Close',
+    prev: 'Previous',
+    next: 'Next',
   },
   sections: {
     sicurezza: {

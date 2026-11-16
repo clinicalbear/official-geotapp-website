@@ -6,12 +6,14 @@ import { featuredLabel } from '@/lib/press/labels';
 import Link from 'next/link';
 import Script from 'next/script';
 import { ShieldCheck, Camera, MapPin, Clock } from 'lucide-react';
+import './settore-pagina.css';
 import GeoBadge from '@/components/GeoBadge';
 import { localizePath } from '@/lib/i18n/locale-routing';
 import { getDictionary } from '@/lib/i18n/dictionaries';
 import type { AppLocale } from '@/lib/i18n/config';
 import type { SettoreContent, SettoreSlug } from '@/content/settori/types';
 import { haPaginaRisorse } from '@/content/settori/risorse-disponibili'
+import { SETTORE_TOOLS } from '@/content/settori/novita/registry';
 import { sezioneGuide } from '@/content/settori/guide';
 import {
   ALL_REGIONAL_FAQ,
@@ -36,24 +38,10 @@ interface Props {
   settore: SettoreSlug;
   /** Sezione "nuovi strumenti di settore" (server component, gia' resa dalla pagina). */
   novita?: React.ReactNode;
+  /** Composizione dell'hero: schermata Flow + telefono dello strumento di apertura (server component). */
+  heroVisual?: React.ReactNode;
   children?: React.ReactNode;
 }
-
-// Foto disponibili per le testate (guida REDESIGN-L-GUIDA.md): solo
-// bg1 (installatore) / bg2 (pulizie) / bg3 (sicurezza), riusate con
-// object-position diversa per dare identità ai settori senza foto propria.
-const SETTORE_BG: Record<SettoreSlug, { img: string; pos: string }> = {
-  installatori:         { img: '/settori/installatori.webp', pos: '62% 30%' },
-  pulizie:              { img: '/settori/pulizie.webp', pos: '74% 35%' },
-  sicurezza:            { img: '/settori/sicurezza.webp', pos: '62% 30%' },
-  elettricisti:         { img: '/settori/elettricisti.webp', pos: '67% 30%' },
-  idraulici:            { img: '/settori/idraulici.webp', pos: '72% 35%' },
-  termoidraulici:       { img: '/settori/termoidraulici.webp', pos: '72% 30%' },
-  edilizia:             { img: '/settori/edilizia.webp', pos: '55% 35%' },
-  impianti:             { img: '/settori/impianti.webp', pos: '72% 30%' },
-  manutenzione:         { img: '/settori/manutenzione.webp', pos: '47% 30%' },
-  'impresa-di-pulizie': { img: '/settori/pulizie.webp', pos: '74% 35%' },
-};
 
 const RISORSE_LABELS: Record<string, string> = {
   it: 'Guide e articoli →', en: 'Guides & articles →', de: 'Leitfäden & Artikel →',
@@ -92,6 +80,13 @@ function CmpTable({
   );
 }
 
+// Etichetta della sezione che raccoglie guida, contesto regionale, guide e norme.
+const DEEPEN_LABEL: Record<string, string> = {
+  it: 'Approfondisci', en: 'Go deeper', de: 'Mehr dazu', fr: 'Approfondir', es: 'Profundizar',
+  pt: 'Aprofundar', nl: 'Lees verder', sv: 'Läs vidare', da: 'Gå mere i dybden', nb: 'Gå dypere',
+  ru: 'Подробнее',
+};
+
 const CLASSIC_CLOCKIN: Record<string, string> = {
   it: 'App di timbratura classica',
   en: 'Classic clock-in app',
@@ -122,12 +117,11 @@ const mockupFallback = (locale: string, key: 'operator' | 'opening' | 'closing',
     : locale === 'ru' ? MOCKUP_FALLBACK_RU[key]
     : it;
 
-export default function SettorePageLayout({ content, locale, settore, novita, children }: Props) {
+export default function SettorePageLayout({ content, locale, settore, novita, heroVisual, children }: Props) {
   const trialLink = localizePath('/trial', locale);
   const pricingLink = localizePath('/pricing', locale);
   const dict = getDictionary(locale) as any;
   const sl = dict.settore_layout ?? {};
-  const bg = SETTORE_BG[settore];
   const sectorLabel: string = dict?.navbar?.sectors?.[settore] ?? content.schema_sector_name;
   const sectorsLabel: string = dict?.navbar?.sectors?.label ?? 'Settori';
 
@@ -319,6 +313,18 @@ export default function SettorePageLayout({ content, locale, settore, novita, ch
   const regionalItems = regionalItemsRaw ? localizeEnglishDeep(regionalItemsRaw, locale) : regionalItemsRaw;
   const regionalTitle = ALL_REGIONAL_FAQ_TITLES[settore]?.[locale] ?? 'Regional compliance';
 
+  // Il blocco "cosa_cambia" della pagina sicurezza parla del modulo Emergenze, che ha la sua
+  // fascia tra gli strumenti: qui non fa piu' una griglia a parte ma un approfondimento.
+  const cambiaEmergenze = !!SETTORE_TOOLS[settore]?.tools.includes('emergenze');
+  const cosaCambiaGenerico = content.cosa_cambia && !cambiaEmergenze ? content.cosa_cambia : null;
+  const cosaCambiaEmergenze = content.cosa_cambia && cambiaEmergenze ? content.cosa_cambia : null;
+  const deepenTitle = DEEPEN_LABEL[locale] ?? DEEPEN_LABEL[locale.split('-')[0]] ?? DEEPEN_LABEL.en;
+  const hasGuida = !!(content.guida && content.guida.length > 0);
+  const hasDeepen = hasGuida || !!content.regional_context || !!cosaCambiaEmergenze || content.features.items.length > 0 || guide.length > 0 || (normLinks && normLinks.length > 0);
+  const hasProof = !!(content.trust || content.scenario || content.prova_visiva || content.testimonial.fonte);
+  const hasConfronto = !!(content.prima_dopo || content.differenza);
+  const proofTitle = content.trust?.title ?? content.prova_visiva?.title ?? content.scenario?.title ?? '';
+
   return (
     <div className="lp-l lp-settore">
       <Script
@@ -374,180 +380,76 @@ export default function SettorePageLayout({ content, locale, settore, novita, ch
         </>
       )}
 
-      {/* ── HERO fotografico ── */}
-      <section className="ph img">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src={bg.img} srcSet={`${bg.img.replace('.webp', '-800.webp')} 800w, ${bg.img} 1600w`} sizes="100vw" alt="" aria-hidden="true" style={{ objectPosition: bg.pos }} loading="lazy" />
-        <div className="sc" />
+      {/* ── 1. HERO: titolo + schermata Flow con il telefono sovrapposto ── */}
+      <section className="ph st-hero">
         <div className="crumb">
           <div className="w">
             <Link href={localizePath('/', locale)}>Home</Link> / <Link href={localizePath('/settori', locale)}>{sectorsLabel}</Link> / {sectorLabel}
           </div>
         </div>
-        <div className="w">
-          <p className="kk k"><s></s>{content.hero.badge}</p>
-          <h1>{content.hero.h1_line1}<br /><em>{content.hero.h1_line2}</em></h1>
-          <p className="lede">{content.hero.subtitle}</p>
-          <div className="acts">
-            <Link
-              href={trialLink}
-              onClick={() => trackEvent('trial_click', { cta_source: `settore_${settore}_hero`, cta_locale: locale })}
-              className="b1"
-            >
-              {content.hero.cta_primary}
-            </Link>
-            {haPaginaRisorse(settore) && (
-              <Link href={localizePath(`/settori/${settore}/risorse/`, locale)} className="b2">
-                {RISORSE_LABELS[locale] ?? RISORSE_LABELS['en']}
+        <div className={`w st-hero-grid${heroVisual ? '' : ' st-hero-solo'}`}>
+          <div className="st-hero-text">
+            <p className="kk k"><s></s>{content.hero.badge}</p>
+            <h1>{content.hero.h1_line1}<br /><em>{content.hero.h1_line2}</em></h1>
+            <p className="lede">{content.hero.subtitle}</p>
+            <div className="acts">
+              <Link
+                href={trialLink}
+                onClick={() => trackEvent('trial_click', { cta_source: `settore_${settore}_hero`, cta_locale: locale })}
+                className="b1"
+              >
+                {content.hero.cta_primary}
               </Link>
+              {haPaginaRisorse(settore) && (
+                <Link href={localizePath(`/settori/${settore}/risorse/`, locale)} className="b2">
+                  {RISORSE_LABELS[locale] ?? RISORSE_LABELS['en']}
+                </Link>
+              )}
+            </div>
+            <p className="st-hero-note">{content.hero.cta_note}</p>
+            {content.pricing_hint && (
+              <p className="st-hero-price">
+                {content.pricing_hint.label}{' '}
+                <b>{standardRate.formatted}</b>{' '}
+                {content.pricing_hint.per} · {content.pricing_hint.note}
+              </p>
             )}
           </div>
-          <p style={{ marginTop: 16, fontSize: 13.5, color: 'rgba(247,249,252,.6)' }}>{content.hero.cta_note}</p>
-          {content.pricing_hint && (
-            <p style={{ marginTop: 18, fontSize: 14, color: 'rgba(247,249,252,.65)' }}>
-              {content.pricing_hint.label}{' '}
-              <b style={{ color: 'var(--lime)', fontFamily: 'var(--font-display)' }}>{standardRate.formatted}</b>{' '}
-              {content.pricing_hint.per} · {content.pricing_hint.note}
-            </p>
-          )}
+          {heroVisual ? <div className="st-hero-vis">{heroVisual}</div> : null}
         </div>
       </section>
 
-      {/* ── PROBLEMA: pain points numerati ── */}
-      <section className="sec">
+      {/* ── 2. IL PROBLEMA: tre punti, compatti (non sono una sequenza: niente numeri) ── */}
+      <section className="sec st-sec">
         <div className="w">
-          <div className="hd">
-            <h2 className="r">{content.pain.title}</h2>
-            <p className="r d1">{sl.pain_subtitle ?? "Clock-in apps record. They don't seal the proof. There's an enormous difference, and you feel it the moment a dispute arises."}</p>
+          <div className="st-head">
+            <h2>{content.pain.title}</h2>
+            <p>{sl.pain_subtitle ?? "Clock-in apps record. They don't seal the proof. There's an enormous difference, and you feel it the moment a dispute arises."}</p>
           </div>
-          <div className="mods">
+          <div className="st-pain">
             {content.pain.items.map((item, i) => (
-              <article key={i} className={`r d${Math.min(i + 1, 4)}`}>
-                <span className="nn">{String(i + 1).padStart(2, '0')}</span>
+              <div key={i} className="st-pain-i">
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
-              </article>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── PRIMA / DOPO ── */}
-      {content.prima_dopo && (
-        <section className="sec ink">
-          <div className="w">
-            <h2 className="r" style={{ textAlign: 'center', marginBottom: 52 }}>{content.prima_dopo.title}</h2>
-            <div className="grid2">
-              <div className="r">
-                <p className="kk k">{sl.before ?? 'Before'}</p>
-                <ul className="rows">
-                  {content.prima_dopo.prima.map((t, i) => <li key={i}>{t}</li>)}
-                </ul>
-              </div>
-              <div className="r d1">
-                <p className="kk k">{sl.after ?? 'With GeoTapp'}</p>
-                <ul className="rows">
-                  {content.prima_dopo.dopo.map((t, i) => <li key={i}>{t}</li>)}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
+      {/* ── 3. GLI STRUMENTI DEL TUO SETTORE (le schermate vere, componente server) ── */}
+      {novita}
 
-      {/* ── SCENARIO REALE ── */}
-      {content.scenario && (
-        <section className="sec warm">
-          <div className="w">
-            <p className="kk k r" style={{ textAlign: 'center' }}>{content.scenario.title}</p>
-            <div className="qt r-s d1" style={{ margin: '0 auto', maxWidth: '64ch' }}>
-              <p>&ldquo;{content.scenario.body}&rdquo;</p>
-            </div>
-            <p
-              className="r d2"
-              style={{ marginTop: 26, fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 26, textAlign: 'center' }}
-            >
-              {content.scenario.resolution}
-            </p>
-          </div>
-        </section>
-      )}
-
-      {/* ── TABELLA: Timbratura vs Certificazione ── */}
-      {content.differenza && (
-        <section className="sec">
-          <div className="w">
-            <div className="hd">
-              <h2 className="r">{content.differenza.title}</h2>
-              <p className="r d1">{content.differenza.subtitle}</p>
-            </div>
-            <CmpTable
-              headerLabel={CLASSIC_CLOCKIN[locale.split('-')[0]] ?? CLASSIC_CLOCKIN.en}
-              rows={content.differenza.rows.map((r) => ({ label: r.label, other: r.competitor, geotapp: r.geotapp }))}
-            />
-          </div>
-        </section>
-      )}
-
-      {/* ── TABELLA: Non è un gestionale ── */}
-      {content.non_gestionale && (
-        <section className="sec warm">
-          <div className="w">
-            <div className="hd">
-              <h2 className="r">{content.non_gestionale.title}</h2>
-              <p className="r d1">{content.non_gestionale.subtitle}</p>
-            </div>
-            <CmpTable
-              headerLabel={sl.classic_app ?? 'Generic app / Spreadsheet'}
-              rows={content.non_gestionale.items.map((r) => ({ label: r.label, other: r.gestionale, geotapp: r.geotapp }))}
-            />
-          </div>
-        </section>
-      )}
-
-      {/* ── ROI CALCULATOR CTA ── */}
-      <section className="sec">
-        <div className="wt" style={{ textAlign: 'center' }}>
-          <p className="kk k r" style={{ textAlign: 'center' }}>{sl.roi_badge ?? 'Calculate your ROI'}</p>
-          <h2 className="r d1">{sl.roi_title ?? 'How much would you save with GeoTapp?'}</h2>
-          <p className="r d2" style={{ margin: '20px auto 0', maxWidth: '52ch', color: '#475467' }}>
-            {sl.roi_desc ?? 'Enter your team size and get an estimated ROI in 30 seconds. No registration, no email.'}
-          </p>
-          <Link href={`/${locale}/roi-calculator/`} className="b1 r d3" style={{ marginTop: 30, display: 'inline-block' }}>
-            {sl.roi_cta ?? 'Calculate my ROI'}
-          </Link>
-        </div>
-      </section>
-
-      {/* ── CTA MID-PAGE ── */}
-      {content.cta_mid && (
-        <section className="sec">
-          <div className="w">
-            <div className="ctain r-s">
-              <b>{content.cta_mid.title}</b>
-              <p>{content.cta_mid.body}</p>
-              <Link
-                href={trialLink}
-                className="b1"
-                onClick={() => trackEvent('trial_click', { cta_source: `settore_${settore}`, cta_locale: locale })}
-              >
-                {content.cta_mid.cta}
-              </Link>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* ── COME FUNZIONA: passi numerati ── */}
-      <section className="sec">
+      {/* ── 4. COME FUNZIONA: una sequenza vera, numerata ── */}
+      <section className="sec st-sec">
         <div className="w">
-          <div className="hd">
-            <h2 className="r">{content.workflow.title}</h2>
-            <p className="r d1">{content.workflow.subtitle}</p>
+          <div className="st-head">
+            <h2>{content.workflow.title}</h2>
+            <p>{content.workflow.subtitle}</p>
           </div>
-          <ol className="steps">
+          <ol className="steps st-steps">
             {content.workflow.steps.map((step, i) => (
-              <li key={i} className={`r d${Math.min(i + 1, 4)}`}>
+              <li key={i}>
                 <b>{step.title}</b>
                 <p>{step.desc}</p>
               </li>
@@ -556,147 +458,229 @@ export default function SettorePageLayout({ content, locale, settore, novita, ch
         </div>
       </section>
 
-      {/* ── BENEFICI ── */}
-      <section className="sec warm">
-        <div className="w">
-          <h2 className="r" style={{ textAlign: 'center', marginBottom: 52 }}>{content.features.title}</h2>
-          <div className="grid3">
-            {content.features.items.map((item, i) => (
-              <article key={i} className={`cardn r d${Math.min((i % 4) + 1, 4)}`}>
-                <span className="nn">{String(i + 1).padStart(2, '0')}</span>
-                <b>{item.title}</b>
-                <p>{item.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── COSA CAMBIA DAVVERO ── */}
-      {content.cosa_cambia && (
-        <section className="sec ink">
+      {/* ── 5. LA PROVA: rapportino sigillato e caso reale in un'unica sezione ── */}
+      {hasProof && (
+        <section className="sec st-alt st-proof">
           <div className="w">
-            <h2 className="r" style={{ textAlign: 'center', marginBottom: 52, ...(content.cosa_cambia.title.length > 40 ? { maxWidth: 'none', fontSize: 'clamp(20px, 2vw, 32px)' } : {}) }}>{content.cosa_cambia.title}</h2>
-            <div className="grid3">
-              {content.cosa_cambia.items.map((item, i) => (
-                <article key={i} className={`cardn r d${Math.min(i + 1, 4)}`}>
-                  <span className="nn">{String(i + 1).padStart(2, '0')}</span>
-                  <b>{item.title}</b>
-                  <p>{item.desc}</p>
-                </article>
-              ))}
+            <div className="st-head">
+              <h2>{proofTitle}</h2>
+              {content.trust ? (
+                <div>
+                  <p>{content.trust.body}</p>
+                  <div className="st-badge"><GeoBadge>{content.trust.badge}</GeoBadge></div>
+                </div>
+              ) : content.prova_visiva ? (
+                <p>{content.prova_visiva.subtitle}</p>
+              ) : null}
             </div>
+
+            {content.prova_visiva && (
+              <>
+                {content.trust ? (
+                  <p className="st-sub">{content.prova_visiva.title} <span>{content.prova_visiva.subtitle}</span></p>
+                ) : null}
+                <div className="st-mocks">
+                  <div className="mock">
+                    <div className="row"><span><Clock size={13} style={{ display: 'inline', marginRight: 6, verticalAlign: -2, opacity: .7 }} />{sl.mockup_title ?? 'Job open'}</span><span>08:47</span></div>
+                    <div className="row"><span><MapPin size={13} style={{ display: 'inline', marginRight: 6, verticalAlign: -2, opacity: .7 }} />{sl.mockup_gps ?? 'Position at clock-in'}</span><span>45.4642°N</span></div>
+                    <div className="row"><span><Camera size={13} style={{ display: 'inline', marginRight: 6, verticalAlign: -2, opacity: .7 }} />{sl.mockup_photos ?? 'Photos'}</span><span>{sl.mockup_photos_count ?? '3 photos'}</span></div>
+                  </div>
+                  <div className="mock">
+                    <div className="row"><span>{sl.mockup_operator ?? mockupFallback(locale, 'operator', 'Operatore')}</span><span>Mario R.</span></div>
+                    <div className="row"><span>{sl.mockup_opening ?? mockupFallback(locale, 'opening', 'Apertura')}</span><span>08:47:03</span></div>
+                    <div className="row"><span>{sl.mockup_closing ?? mockupFallback(locale, 'closing', 'Chiusura')}</span><span>11:22:41</span></div>
+                    <p style={{ marginTop: 16, fontSize: 13, color: 'var(--lime)', fontWeight: 600 }}>
+                      <ShieldCheck size={14} style={{ display: 'inline', marginRight: 6, verticalAlign: -2 }} />
+                      {sl.mockup_sealed ?? 'Sealed after closure'}
+                    </p>
+                  </div>
+                  <div className="mock">
+                    <div className="row"><span>Luigi B.</span><span>{sl.mockup_status_active ?? 'Active'}</span></div>
+                    <div className="row"><span>Sara M.</span><span>{sl.mockup_status_active ?? 'Active'}</span></div>
+                    <div className="row"><span>Marco T.</span><span>{sl.mockup_status_completed ?? 'Completed'}</span></div>
+                    <p style={{ marginTop: 16, fontSize: 13, color: 'rgba(247,249,252,.6)' }}>{sl.mockup_status_summary ?? '4 operators active on 6 sites'}</p>
+                  </div>
+                </div>
+              </>
+            )}
+
+            {content.scenario && (
+              <div className="st-case">
+                {content.scenario.title !== proofTitle ? <p className="kk k">{content.scenario.title}</p> : null}
+                <div className="qt"><p>&ldquo;{content.scenario.body}&rdquo;</p></div>
+                <p className="st-resolution">{content.scenario.resolution}</p>
+              </div>
+            )}
+
+            {/* testimonianza: solo se ha una fonte verificabile */}
+            {content.testimonial.fonte && (
+              <div className="qt st-testimonial">
+                <p>&ldquo;{content.testimonial.quote}&rdquo;</p>
+                <cite>
+                  <b>{content.testimonial.author}</b>
+                  <span>{content.testimonial.role}</span>
+                </cite>
+              </div>
+            )}
           </div>
         </section>
       )}
 
-      {/* ── NUOVI STRUMENTI DI SETTORE (novembre 2026) ── */}
-      {novita}
-
-      {/* ── TESTIMONIAL: solo se ha una fonte verificabile ── */}
-      {content.testimonial.fonte && (
-      <section className="sec ink">
-        <div className="w">
-          <div className="qt r-s" style={{ margin: '0 auto', maxWidth: '64ch' }}>
-            <p>&ldquo;{content.testimonial.quote}&rdquo;</p>
-            <cite>
-              <b style={{ color: 'var(--lime)' }}>{content.testimonial.author}</b>
-              <span style={{ color: 'rgba(247,249,252,.7)' }}>{content.testimonial.role}</span>
-            </cite>
-          </div>
-        </div>
-      </section>
-      )}
-
-      {/* ── PROVA VISIVA ── */}
-      {content.prova_visiva && (
-        <section className="sec">
+      {/* ── 6. UN SOLO CONFRONTO: prima/dopo + tabella; il resto in <details> ── */}
+      {hasConfronto && (
+        <section className="sec st-sec">
           <div className="w">
-            <div className="hd">
-              <h2 className="r">{content.prova_visiva.title}</h2>
-              <p className="r d1">{content.prova_visiva.subtitle}</p>
+            <div className="st-head st-head-one">
+              <h2>{content.prima_dopo?.title ?? content.differenza?.title}</h2>
             </div>
-            <div className="grid3">
-              <div className="mock r-s d1">
-                <div className="row"><span><Clock size={13} style={{ display: 'inline', marginRight: 6, verticalAlign: -2, opacity: .7 }} />{sl.mockup_title ?? 'Job open'}</span><span>08:47</span></div>
-                <div className="row"><span><MapPin size={13} style={{ display: 'inline', marginRight: 6, verticalAlign: -2, opacity: .7 }} />{sl.mockup_gps ?? 'Position at clock-in'}</span><span>45.4642°N</span></div>
-                <div className="row"><span><Camera size={13} style={{ display: 'inline', marginRight: 6, verticalAlign: -2, opacity: .7 }} />{sl.mockup_photos ?? 'Photos'}</span><span>{sl.mockup_photos_count ?? '3 photos'}</span></div>
+            {content.prima_dopo && (
+              <div className="st-ba">
+                <div className="st-ba-c">
+                  <p className="kk k">{sl.before ?? 'Before'}</p>
+                  <ul className="rows">
+                    {content.prima_dopo.prima.map((x, i) => <li key={i}>{x}</li>)}
+                  </ul>
+                </div>
+                <div className="st-ba-c st-ba-after">
+                  <p className="kk k">{sl.after ?? 'With GeoTapp'}</p>
+                  <ul className="rows">
+                    {content.prima_dopo.dopo.map((x, i) => <li key={i}>{x}</li>)}
+                  </ul>
+                </div>
               </div>
-              <div className="mock r-s d2">
-                <div className="row"><span>{sl.mockup_operator ?? mockupFallback(locale, 'operator', 'Operatore')}</span><span>Mario R.</span></div>
-                <div className="row"><span>{sl.mockup_opening ?? mockupFallback(locale, 'opening', 'Apertura')}</span><span>08:47:03</span></div>
-                <div className="row"><span>{sl.mockup_closing ?? mockupFallback(locale, 'closing', 'Chiusura')}</span><span>11:22:41</span></div>
-                <p style={{ marginTop: 16, fontSize: 13, color: 'var(--lime)', fontWeight: 600 }}>
-                  <ShieldCheck size={14} style={{ display: 'inline', marginRight: 6, verticalAlign: -2 }} />
-                  {sl.mockup_sealed ?? 'Sealed after closure'}
-                </p>
+            )}
+            {content.differenza && (
+              <div className="st-table">
+                {content.prima_dopo ? (
+                  <div className="st-table-h">
+                    <h3>{content.differenza.title}</h3>
+                    <p>{content.differenza.subtitle}</p>
+                  </div>
+                ) : (
+                  <p className="st-table-sub">{content.differenza.subtitle}</p>
+                )}
+                <CmpTable
+                  headerLabel={CLASSIC_CLOCKIN[locale.split('-')[0]] ?? CLASSIC_CLOCKIN.en}
+                  rows={content.differenza.rows.map((r) => ({ label: r.label, other: r.competitor, geotapp: r.geotapp }))}
+                />
               </div>
-              <div className="mock r-s d3">
-                <div className="row"><span>Luigi B.</span><span>{sl.mockup_status_active ?? 'Active'}</span></div>
-                <div className="row"><span>Sara M.</span><span>{sl.mockup_status_active ?? 'Active'}</span></div>
-                <div className="row"><span>Marco T.</span><span>{sl.mockup_status_completed ?? 'Completed'}</span></div>
-                <p style={{ marginTop: 16, fontSize: 13, color: 'rgba(247,249,252,.6)' }}>{sl.mockup_status_summary ?? '4 operators active on 6 sites'}</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* ── TRUST / NON ALTERABILE ── */}
-      {content.trust && (
-        <section className="sec">
-          <div className="wt" style={{ textAlign: 'center' }}>
-            <ShieldCheck className="r" style={{ margin: '0 auto 22px', color: 'var(--seal-testo)' }} size={44} />
-            <h2 className="r d1">{content.trust.title}</h2>
-            <p className="r d2" style={{ margin: '20px auto 0', maxWidth: '64ch', color: '#475467' }}>{content.trust.body}</p>
-            <div className="r d3" style={{ marginTop: 28 }}><GeoBadge>{content.trust.badge}</GeoBadge></div>
-          </div>
-        </section>
-      )}
-
-      {/* ── GUIDA: sezioni di testo sull'intento di ricerca ── */}
-      {content.guida && content.guida.length > 0 && (
-        <section className="sec">
-          <div className="wt">
-            {content.guida.map((g, i) => (
-              <div key={i} className="r" style={{ marginTop: i === 0 ? 0 : 56 }}>
-                <h2>{g.h2}</h2>
-                {g.paras.map((t, j) => (
-                  <p key={j} style={{ marginTop: 16, maxWidth: '68ch', color: '#475467' }}>{t}</p>
-                ))}
-                {g.link && (
-                  <p style={{ marginTop: 16 }}>
-                    <Link href={g.link.href}>{g.link.label} &rarr;</Link>
-                  </p>
+            )}
+            {(content.non_gestionale || cosaCambiaGenerico) && (
+              <div className="st-more">
+                {content.non_gestionale && (
+                  <details className="st-d">
+                    <summary><h3>{content.non_gestionale.title}</h3></summary>
+                    <div className="st-d-b">
+                      <p>{content.non_gestionale.subtitle}</p>
+                      <CmpTable
+                        headerLabel={sl.classic_app ?? 'Generic app / Spreadsheet'}
+                        rows={content.non_gestionale.items.map((r) => ({ label: r.label, other: r.gestionale, geotapp: r.geotapp }))}
+                      />
+                    </div>
+                  </details>
+                )}
+                {cosaCambiaGenerico && (
+                  <details className="st-d">
+                    <summary><h3>{cosaCambiaGenerico.title}</h3></summary>
+                    <div className="st-d-b">
+                      <dl className="st-dl">
+                        {cosaCambiaGenerico.items.map((item, i) => (
+                          <div key={i}><dt>{item.title}</dt><dd>{item.desc}</dd></div>
+                        ))}
+                      </dl>
+                    </div>
+                  </details>
                 )}
               </div>
-            ))}
+            )}
           </div>
         </section>
       )}
 
-      {/* ── Contesto regionale (solo varianti EN: norma del paese) ── */}
-      {content.regional_context && (
-        <section className="fq">
-          <div className="w"><div className="g">
-            <h2 className="r">{content.regional_context.title}</h2>
-            <div>
-              {content.regional_context.paras.map((para, i) => (
-                <p key={i} className="r" style={{ marginBottom: 14, color: '#475467' }}>{para}</p>
+      {/* ── 7. APPROFONDISCI: testo di guida, contesto regionale, guide e norme (nel DOM, apribili) ── */}
+      {hasDeepen && (
+        <section className="sec st-alt st-deep" id="approfondisci">
+          <div className="w">
+            <div className="st-head st-head-one"><h2>{deepenTitle}</h2></div>
+            <div className="st-more">
+              {content.features.items.length > 0 && (
+                <details className="st-d">
+                  <summary><h3>{content.features.title}</h3></summary>
+                  <div className="st-d-b">
+                    <dl className="st-dl st-dl-2">
+                      {content.features.items.map((item, i) => (
+                        <div key={i}><dt>{item.title}</dt><dd>{item.desc}</dd></div>
+                      ))}
+                    </dl>
+                  </div>
+                </details>
+              )}
+              {cosaCambiaEmergenze && (
+                <details className="st-d">
+                  <summary><h3>{cosaCambiaEmergenze.title}</h3></summary>
+                  <div className="st-d-b">
+                    <dl className="st-dl st-dl-2">
+                      {cosaCambiaEmergenze.items.map((item, i) => (
+                        <div key={i}><dt>{item.title}</dt><dd>{item.desc}</dd></div>
+                      ))}
+                    </dl>
+                  </div>
+                </details>
+              )}
+              {hasGuida && content.guida!.map((g, i) => (
+                <details key={`g-${i}`} className="st-d">
+                  <summary><h3>{g.h2}</h3></summary>
+                  <div className="st-d-b st-prose">
+                    {g.paras.map((para, j) => <p key={j}>{para}</p>)}
+                    {g.link && <p><Link href={g.link.href}>{g.link.label} &rarr;</Link></p>}
+                  </div>
+                </details>
               ))}
+              {content.regional_context && (
+                <details className="st-d">
+                  <summary><h3>{content.regional_context.title}</h3></summary>
+                  <div className="st-d-b st-prose">
+                    {content.regional_context.paras.map((para, i) => <p key={i}>{para}</p>)}
+                  </div>
+                </details>
+              )}
+              {guide.length > 0 && (
+                <details className="st-d">
+                  <summary><h3>{guideTitolo}</h3></summary>
+                  <div className="st-d-b">
+                    <ul className="rows">
+                      {guide.map((g) => (
+                        <li key={g.href}><Link href={g.href}>{g.titolo} &rarr;</Link></li>
+                      ))}
+                    </ul>
+                  </div>
+                </details>
+              )}
+              {normLinks && normLinks.length > 0 && (
+                <details className="st-d">
+                  <summary><h3>{normTitle}</h3></summary>
+                  <div className="st-d-b">
+                    <ul className="rows">
+                      {normLinks.map((link, i) => (
+                        <li key={`norm-${i}`}><Link href={link.href}>{link.label} &rarr;</Link></li>
+                      ))}
+                    </ul>
+                  </div>
+                </details>
+              )}
             </div>
-          </div></div>
+          </div>
         </section>
       )}
 
-      {/* ── FAQ ── */}
-      <section className="fq">
+      {/* ── 8. FAQ (con quelle regionali) ── */}
+      <section className="fq st-faq">
         <div className="w"><div className="g">
-          <h2 className="r">{content.faq.title}</h2>
+          <h2>{content.faq.title}</h2>
           <div ref={fqRef}>
-            <p className="r d1" style={{ marginBottom: 20, color: '#475467' }}>{content.faq.subtitle}</p>
+            <p style={{ marginBottom: 20, color: '#475467' }}>{content.faq.subtitle}</p>
             {content.faq.items.map((item, i) => (
-              <details key={i} className="r" open={i === 0}>
+              <details key={i} open={i === 0}>
                 <summary><h3>{item.q}</h3></summary>
                 <div className="ct"><p>{item.a}</p></div>
               </details>
@@ -704,59 +688,22 @@ export default function SettorePageLayout({ content, locale, settore, novita, ch
 
             {regionalItems && regionalItems.length > 0 && (
               <>
-                <h3 style={{ marginTop: 56, marginBottom: 8 }}>{regionalTitle}</h3>
+                <h3 className="st-faq-reg">{regionalTitle}</h3>
                 {regionalItems.map((item, i) => (
-                  <details key={`regional-${i}`} className="r">
+                  <details key={`regional-${i}`}>
                     <summary><h3>{item.q}</h3></summary>
                     <div className="ct"><p>{item.a}</p></div>
                   </details>
                 ))}
               </>
             )}
-
-            {guide.length > 0 && (
-              <div style={{ marginTop: 56, paddingTop: 34, borderTop: '1px solid rgba(11,23,54,.16)' }}>
-                <h3 style={{ marginBottom: 16 }}>{guideTitolo}</h3>
-                <ul className="rows">
-                  {guide.map((g) => (
-                    <li key={g.href}>
-                      <Link href={g.href}>{g.titolo} &rarr;</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            {normLinks && normLinks.length > 0 && (
-              <div style={{ marginTop: 56, paddingTop: 34, borderTop: '1px solid rgba(11,23,54,.16)' }}>
-                <h3 style={{ marginBottom: 16 }}>{normTitle}</h3>
-                <ul className="rows">
-                  {normLinks.map((link, i) => (
-                    <li key={`norm-${i}`}>
-                      <Link href={link.href}>{link.label} &rarr;</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
           </div>
         </div></div>
       </section>
 
-      {/* ── ALTRI SETTORI ── */}
-      <section className="sec" style={{ paddingTop: 60, paddingBottom: 60 }}>
-        <div className="w" style={{ textAlign: 'center' }}>
-          <p className="kk k r" style={{ textAlign: 'center' }}>{CROSS_TITLE[locale] ?? 'Other sectors'}</p>
-          <div className="picker r d1" style={{ justifyContent: 'center' }}>
-            {otherSettori.map((s) => (
-              <Link key={s} href={localizePath(`/settori/${s}`, locale)}>{otherNames[s]}</Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── DEMO REPORT (nascosto finche' non c'e' un pacchetto valido: vedi lib/demo-report.ts) ── */}
       {DEMO_REPORT_DISPONIBILE && (
-      <section className="sec warm">
+      <section className="sec st-alt">
         <div className="wn">
           <p className="kk k" style={{ textAlign: 'center', marginBottom: 28 }}>{sl.see_real_report ?? 'See a real report'}</p>
           <DemoReportBanner />
@@ -764,7 +711,7 @@ export default function SettorePageLayout({ content, locale, settore, novita, ch
       </section>
       )}
 
-      {/* ── CTA FINALE ── */}
+      {/* ── 9. CTA FINALE, unica ── */}
       <section className="end">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className="bg" src="/bg2.webp" alt="" aria-hidden="true" loading="lazy" />
@@ -781,6 +728,7 @@ export default function SettorePageLayout({ content, locale, settore, novita, ch
               {content.cta.primary}
             </Link>
             <Link href={pricingLink} className="b2">{content.cta.secondary}</Link>
+            <Link href={`/${locale}/roi-calculator/`} className="b2 st-roi">{sl.roi_cta ?? 'Calculate my ROI'}</Link>
           </div>
           <p style={{ marginTop: 20, fontSize: 13.5, color: 'rgba(247,249,252,.55)' }}>
             {sl.cta_note ?? 'No lock-in. No contract. We set up on your real case.'}
@@ -788,9 +736,21 @@ export default function SettorePageLayout({ content, locale, settore, novita, ch
         </div>
       </section>
 
+      {/* ── 10. altri settori + citati su: piccoli, in fondo ── */}
+      <section className="st-others">
+        <div className="w">
+          <p className="kk k">{CROSS_TITLE[locale] ?? 'Other sectors'}</p>
+          <div className="picker">
+            {otherSettori.map((s) => (
+              <Link key={s} href={localizePath(`/settori/${s}`, locale)}>{otherNames[s]}</Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── citati su: solo stampa vera. "Presente su" (directory) resta nel footer, non si ripete qui ── */}
-      <section className="dirs">
-        <div className="w"><p className="kk k r dirs-kk">{featuredLabel(locale)}</p></div>
+      <section className="dirs st-dirs">
+        <div className="w"><p className="kk k dirs-kk">{featuredLabel(locale)}</p></div>
         <div className="host">
           <FeaturedIn locale={locale} />
         </div>

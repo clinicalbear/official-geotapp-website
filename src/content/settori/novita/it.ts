@@ -9,6 +9,11 @@ const copy: NovitaCopy = {
     altPhone: 'TimeTracker sul telefono: schermata di {tool}',
     flowOnly: 'Questo strumento si usa dal pannello Flow: non serve nulla sul telefono dei tuoi operai.',
     seeAlso: 'Per verifiche elettriche, caldaie e F-gas ci sono gli strumenti dedicati:',
+    moreShots: 'Altre schermate di questo strumento',
+    enlarge: 'Ingrandisci: {name}',
+    close: 'Chiudi',
+    prev: 'Precedente',
+    next: 'Successiva',
   },
   sections: {
     sicurezza: {

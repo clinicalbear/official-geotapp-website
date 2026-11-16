@@ -5,7 +5,7 @@ import { DEFAULT_LOCALE, type AppLocale } from '@/lib/i18n/config';
 import { buildLocaleAlternates, buildCanonicalUrl } from '@/lib/i18n/locale-metadata';
 import { getImpiantiContent } from '@/content/settori/impianti';
 import SettorePageLayout from '@/components/SettorePageLayout';
-import NovitaStrumenti from '@/components/NovitaStrumenti';
+import NovitaStrumenti, { NovitaHero } from '@/components/NovitaStrumenti';
 import BlogHighlights from '@/components/BlogHighlights';
 
 const pathname = '/settori/impianti';
@@ -57,7 +57,7 @@ export default async function ImpiantiLocalePage({
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <SettorePageLayout content={content} locale={resolvedLocale} settore="impianti" novita={<NovitaStrumenti settore="impianti" locale={resolvedLocale} />} />
+      <SettorePageLayout content={content} locale={resolvedLocale} settore="impianti" novita={<NovitaStrumenti settore="impianti" locale={resolvedLocale} />} heroVisual={<NovitaHero settore="impianti" locale={resolvedLocale} />} />
       <BlogHighlights locale={resolvedLocale} categoryId={65} />
     </>
   );
