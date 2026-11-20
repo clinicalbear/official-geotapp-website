@@ -246,6 +246,10 @@ const content: SettoreContent = {
         a: 'Sì. GeoTapp è usato da imprese di pulizie, multiservizi, facility management e ogni realtà con operatori distribuiti su più siti. Va bene dalla squadra di poche persone all\'azienda con centinaia di operatori, senza configurazioni complesse.',
       },
       {
+        q: "Cosa verificare prima di scegliere un'app per impresa di pulizie?",
+        a: "Tre cose, prima ancora del prezzo di listino. Che l'app registri anche senza segnale e sincronizzi appena torna la rete, perché seminterrati, parcheggi e magazzini spesso non hanno copertura e una timbratura persa è proprio la prova che mancherà alla prossima contestazione. Che sia semplice per gli operatori, perché un'app che richiede una formazione lunga viene abbandonata in due settimane. E il costo vero, calcolato sull'anno con il numero reale dei tuoi operatori, non sul piano base mostrato in vetrina.",
+      },
+      {
         q: "Quanto costa GeoTapp per un'impresa di pulizie?",
         a: 'GeoTapp Flow parte da 39 € al mese; le postazioni TimeTracker per gli operatori costano 3 € al mese ciascuna fino a 25, 2,50 € dalla ventiseiesima. Abbonamento minimo 12 mesi. Prima puoi provarlo gratis per 14 giorni, senza carta.',
       },
@@ -292,6 +296,10 @@ const content: SettoreContent = {
     {
       question: 'Funziona anche per il facility management e il multiservizi?',
       answer: 'Sì. GeoTapp va bene per imprese di pulizie, multiservizi e facility management, dalla squadra di poche persone all\'azienda con centinaia di operatori.',
+    },
+    {
+      question: "Cosa verificare prima di scegliere un'app per impresa di pulizie?",
+      answer: "Che registri anche senza segnale e sincronizzi appena torna la rete, che sia semplice per gli operatori, e il costo annuo calcolato sul numero reale di operatori, non sul piano base.",
     },
     {
       question: 'Quanto costa?',

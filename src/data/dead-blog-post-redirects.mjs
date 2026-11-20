@@ -2,6 +2,16 @@
 // Sorgente: GSC Coverage 404 drilldown 2026-06-25 (128 post). Ognuno -> hub blog della sua lingua.
 // Generato per spegnere i 404 e recuperare l'equity residua. NON tocca i post vivi (match esatto).
 const voci = [
+  // 20/11/2026: pulizie IT, quattro pagine nostre in concorrenza sulle stesse ricerche (GSC 21/10-17/11,
+  // posizioni 37-54). I tre articoli di aprile confluiscono nella pagina di settore, che ha preso la loro
+  // parte mancante ("cosa verificare prima di scegliere") nelle FAQ. Resta vivo il 18/03 (761, GDPR e
+  // CCNL Multiservizi, posizione 5). I post restano pubblicati su WordPress: niente salvataggi, per Polylang.
+  { source: "/blog/2026/04/07/app-per-impresa-di-pulizie-gestione-squadre-commesse/", destination: "/it/settori/pulizie/", permanent: true },
+  { source: "/blog/2026/04/07/app-per-impresa-di-pulizie-gestione-squadre-commesse", destination: "/it/settori/pulizie/", permanent: true },
+  { source: "/blog/2026/04/09/app-per-impresa-di-pulizie/", destination: "/it/settori/pulizie/", permanent: true },
+  { source: "/blog/2026/04/09/app-per-impresa-di-pulizie", destination: "/it/settori/pulizie/", permanent: true },
+  { source: "/blog/2026/04/21/app-per-impresa-di-pulizie-come-scegliere/", destination: "/it/settori/pulizie/", permanent: true },
+  { source: "/blog/2026/04/21/app-per-impresa-di-pulizie-come-scegliere", destination: "/it/settori/pulizie/", permanent: true },
   // 16/11/2026: doppione inglese del fac-simile informativa GPS (post 5753, 22/04), chiuso su richiesta di Mike.
   // La versione collegata alle 11 lingue e' quella del 03/07 (post 11032); il 22/04 dava un hreflang senza ritorno (crawl Ahrefs 12/11).
   { source: "/blog/en/2026/04/22/gps-employee-privacy-notice-template-2026/", destination: "/blog/en/2026/07/03/gps-employee-privacy-notice-template/", permanent: true },

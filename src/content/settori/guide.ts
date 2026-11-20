@@ -17,7 +17,7 @@ export type GuidaSettore = { titolo: string; href: string; solo?: string[] };
 export const GUIDE_SETTORE: Record<string, Partial<Record<SettoreSlug, GuidaSettore[]>>> = {
   "it": {
     "pulizie": [
-      { titolo: "Pulizie su più cantieri: gestire squadre e commesse senza Excel", href: "/blog/2026/04/07/app-per-impresa-di-pulizie-gestione-squadre-commesse/" },
+      { titolo: "Timbratura GPS per le pulizie: prove automatiche e zero contestazioni", href: "/blog/2026/03/18/app-per-imprese-di-pulizie-timbratura-geolocalizzata-gdpr/" },
       { titolo: "Tracciamento GPS addetti pulizie: cosa puoi fare davvero senza prendere multe", href: "/blog/2026/05/18/tracciamento-gps-addetti-pulizie/" },
       { titolo: "Quando il cliente nega: come bloccare le contestazioni sulle pulizie", href: "/blog/2026/05/11/contestazione-cliente-pulizie-non-eseguite/" },
       { titolo: "Decreto 25/2026: le nuove tabelle del costo del lavoro nelle pulizie", href: "/blog/2026/06/10/decreto-25-2026-tabelle-costo-lavoro/" },
