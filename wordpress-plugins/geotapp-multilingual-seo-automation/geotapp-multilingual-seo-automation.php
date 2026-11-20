@@ -53,7 +53,7 @@ function gtmsa_default_settings() {
 }
 
 function gtmsa_allowed_languages() {
-    return ['it', 'en', 'de', 'fr', 'es', 'pt', 'nl', 'sv', 'da', 'nb', 'ru'];
+    return ['it', 'en', 'de', 'fr', 'es', 'pt', 'nl', 'sv', 'da', 'nb', 'el', 'ru'];
 }
 
 function gtmsa_normalize_language($value, $fallback = 'it') {
@@ -570,6 +570,7 @@ function gtmsa_map_deepl_source($lang) {
         'sv' => 'SV',
         'da' => 'DA',
         'nb' => 'NB',
+        'el' => 'EL',
         'ru' => 'RU',
     ];
     return $map[$lang] ?? null;
@@ -588,6 +589,7 @@ function gtmsa_map_deepl_target($lang) {
         'sv' => 'SV',
         'da' => 'DA',
         'nb' => 'NB',
+        'el' => 'EL',
         'ru' => 'RU',
     ];
     return $map[$lang] ?? null;
@@ -1002,6 +1004,7 @@ function gtmsa_to_hreflang($lang) {
         'sv' => 'sv',
         'da' => 'da',
         'nb' => 'nb-NO',
+        'el' => 'el',
         'ru' => 'ru',
     ];
 

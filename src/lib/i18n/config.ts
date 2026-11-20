@@ -50,7 +50,7 @@ export const PUBLISHED_LOCALES: ReadonlyArray<AppLocale> = SUPPORTED_LOCALES.fil
  * Quando il blog avra' articoli in greco: togliere 'el' da qui e aggiungerlo a
  * NON_DEFAULT_LOCALES in lib/blog-locale.ts.
  */
-export const LOCALES_WITHOUT_BLOG: ReadonlyArray<AppLocale> = ['el'];
+export const LOCALES_WITHOUT_BLOG: ReadonlyArray<AppLocale> = [];
 
 export function hasBlogArticles(locale: string): boolean {
   return !(LOCALES_WITHOUT_BLOG as readonly string[]).includes(locale);

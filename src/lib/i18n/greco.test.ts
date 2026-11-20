@@ -22,12 +22,11 @@ describe('lingua greca (el)', () => {
     expect(alt.languages['el']).toBe('https://geotapp.com/el/pricing/');
   });
 
-  it('il blog non ha articoli greci: niente hreflang el, canonical dell hub sull inglese', () => {
+  it('il blog ha articoli greci (dal 20/11/2026): hreflang el, canonical dell hub sul greco', () => {
     const alt = buildLocaleAlternates('it', '/blog/') as { languages: Record<string, string> };
-    expect(alt.languages['el']).toBeUndefined();
-    expect(Object.values(alt.languages).some((u) => u.includes('/el/'))).toBe(false);
-    expect(buildCanonicalUrl('el', '/blog/')).toBe('https://geotapp.com/en/blog/');
+    expect(alt.languages['el']).toBe('https://geotapp.com/el/blog/');
+    expect(buildCanonicalUrl('el', '/blog/')).toBe('https://geotapp.com/el/blog/');
     expect(buildCanonicalUrl('el', '/pricing/')).toBe('https://geotapp.com/el/pricing/');
-    expect(toBlogLocale('el')).toBe('en');
+    expect(toBlogLocale('el')).toBe('el');
   });
 });

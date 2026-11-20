@@ -10,9 +10,8 @@
 // (`geotapp-nl`, `field-service-nl`, `nieuws-nl`, ...). Italian categories carry no such
 // suffix. We use the category suffix first, then fall back to the permalink prefix.
 
-// 'el' NON c'e': il blog WordPress non ha articoli in greco (vedi LOCALES_WITHOUT_BLOG in
-// lib/i18n/config.ts); toBlogLocale('el') ricade sull'inglese.
-export const NON_DEFAULT_LOCALES = ['en', 'de', 'nl', 'fr', 'es', 'pt', 'da', 'sv', 'nb', 'ru'];
+// 'el' dal 20/11/2026: i primi articoli greci (gli articoli europei pubblicati in tutte le lingue).
+export const NON_DEFAULT_LOCALES = ['en', 'de', 'nl', 'fr', 'es', 'pt', 'da', 'sv', 'nb', 'el', 'ru'];
 
 /**
  * Map an app locale onto one of the blog's 11 languages: the site has regional variants
